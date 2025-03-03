@@ -12,7 +12,7 @@ AnalogDelay::AnalogDelay() :
     _writePos(0),              // Posizione di scrittura nel buffer
     _readPos(0.0f),           // Posizione di lettura nel buffer (floating point per interpolazione)
     _currentDelayTime(0.5f),  // Tempo di delay corrente durante lo smoothing
-    _smoothingFactor(0.0001f),// Fattore di smoothing per transizioni graduali
+    _smoothingFactor(0.00005f),// Fattore di smoothing per transizioni graduali
     _delayBuffer(delayBufferStorage) {} // Inizializzazione del buffer del delay
 
 // Distruttore
@@ -29,17 +29,17 @@ void AnalogDelay::Init(float sampleRate) {
 
 // Imposta il feedback, limitandolo tra 0.0 e 0.9
 void AnalogDelay::setFeedback(float feedback) {
-    _feedback = fclamp(feedback, 0.0f, 0.9f);
+    _feedback = fclamp(feedback, 0.0f, 0.97f);
 }
 
 // Imposta il mix tra segnale originale e ritardato (0.0 - 1.0)
 void AnalogDelay::setMix(float mix) {
-    _mix = std::min(1.0f, std::max(0.0f, mix));
+    _mix = fclamp(mix, 0.0f, 1.0f);
 }
 
-// Imposta il tempo di delay, limitandolo tra 0.05 e 1.0 secondi
+// Imposta il tempo di delay, limitandolo tra 0.02 e 1.0 secondi
 void AnalogDelay::setDelayTime(float delayTime) {
-    _delayTime = std::min(1.0f, std::max(0.05f, delayTime));
+    _delayTime = fclamp(delayTime, 0.02f, 1.0f);
 }
 
 // Processa un singolo campione audio

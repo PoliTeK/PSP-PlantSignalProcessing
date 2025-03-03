@@ -11,6 +11,7 @@ using namespace daisysp;
 DaisySeed hw;           // Oggetto principale per gestire l'hardware Daisy
 AnalogDelay delay;      // Oggetto per gestire l'effetto delay
 
+
 AdcChannelConfig adcConfig[3]; // Array di configurazione per 3 canali ADC
 
 // Variabili per i parametri del delay
@@ -18,7 +19,12 @@ float delayTime;  // Tempo del delay
 float feedback;   // Quantità di feedback del delay
 float mix;        // Mix tra segnale dry/wet
 
-void InitADC() {
+// Aggiungi queste variabili globali
+uint32_t lastBlink;     // Ultimo momento di cambio stato LED
+bool ledState;          // Stato corrente del LED
+
+void InitHardware() {
+    
     // Inizializzazione dei tre pin ADC per i potenziometri
     adcConfig[0].InitSingle(hw.GetPin(15)); // Primo potenziometro
     adcConfig[1].InitSingle(hw.GetPin(16)); // Secondo potenziometro
@@ -27,26 +33,39 @@ void InitADC() {
     hw.adc.Start();                         // Avvio della conversione ADC
 }
 
+// Aggiungi questa funzione di utility prima di ReadControls()
+float LogScale(float pos, float min_value, float max_value) {
+    // Implementa una scala logaritmica tra min_value e max_value
+    float min_log = logf(min_value);
+    float max_log = logf(max_value);
+    float exp_scale = min_log + (max_log - min_log) * pos;
+    return expf(exp_scale);
+}
+
 void ReadControls() {
-    // Lettura dei valori dei potenziometri (range 0-1)
     float knob1 = hw.adc.GetFloat(0);
     float knob2 = hw.adc.GetFloat(1);
     float knob3 = hw.adc.GetFloat(2);
 
-    // Gestione non lineare del tempo di delay
-    if (knob3 < 0.5f) {
-        // Prima metà della corsa: risposta esponenziale
-        float normalized = knob3 * 2.0f;              // Normalizzazione a 0-1
-        float exponential = normalized * normalized;   // Curva quadratica
-        delayTime = 0.05f + exponential * 0.475f;    // Mapping a 0.05-0.525
-    } else {
-        // Seconda metà della corsa: risposta lineare
-        float normalized = (knob3 - 0.5f) * 2.0f;    // Normalizzazione a 0-1
-        delayTime = 0.525f + normalized * 0.475f;    // Mapping a 0.525-1.0
-    }
+    // Nuova implementazione del controllo delay time
+    const float MIN_DELAY = 0.02f;  // 20ms minimo delay
+    const float MAX_DELAY = 1.0f;   // 1000ms massimo delay
+    
+    // Applica la scala logaritmica al delay time
+    delayTime = LogScale(knob3, MIN_DELAY, MAX_DELAY);
+    
+    feedback = knob1 * 0.97f;
+    mix = knob2;
 
-    feedback = knob1 * 0.9f;    // Imposta il feedback (limitato a 0.9)
-    mix = knob2;                // Imposta il mix dry/wet
+    // Rimuovi il vecchio codice del LED e sostituiscilo con:
+    uint32_t now = System::GetNow();
+    uint32_t blinkInterval = static_cast<uint32_t>(delayTime * 1000); // Converti in millisecondi
+    
+    if(now - lastBlink >= blinkInterval) {
+        ledState = !ledState;
+        hw.SetLed(ledState);
+        lastBlink = now;
+    }
 }
 
 // Callback audio eseguito per ogni blocco audio
@@ -62,11 +81,10 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
         float inR = in[1][i];           // Canale destro input
         
         float wetL = delay.Process(inL);
-        float wetR = delay.Process(inR);
         
         // Output processed signal
         out[0][i] = wetL;
-        out[1][i] = wetR;
+        out[1][i] = wetL;
     }
 }
 
@@ -77,7 +95,11 @@ int main() {
     hw.SetAudioBlockSize(4);    // Imposta dimensione del blocco audio
     hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ); // Imposta sample rate a 48kHz
 
-    InitADC();          // Inizializza i convertitori analogico-digitali
+    InitHardware();     // Inizializza LED e ADC
+    
+    // Inizializza le variabili del LED
+    lastBlink = System::GetNow();
+    ledState = false;
 
     delay.Init(hw.AudioSampleRate()); // Inizializza il delay con il sample rate corrente
 

@@ -8,7 +8,7 @@ An analog-style delay effect for the Daisy platform.
 
 ### Features
 - Variable delay time 
-- Smooth parameter transitions 
+- Smooth delay time transitions 
 - Cubic interpolation 
 - Non-linear delay time control for precise adjustments
 - Feedback control 
@@ -20,16 +20,17 @@ An analog-style delay effect for the Daisy platform.
   - Pin A0: Feedback control (0-90%)
   - Pin A1: Mix control (0-100%)
   - Pin A2: Delay time (50ms-1000ms)
+  - Built-in Led blinking for delay timing
 
 ## Controls
-- **Delay Time**: Non-linear response curve
+- **Delay Time**: Logaritmic response curve
   - First half: Exponential (50ms-525ms)
   - Second half: Linear (525ms-1000ms)
 - **Feedback**: Controls the amount of delay signal fed back into the input
 - **Mix**: Balances between dry (original) and wet (delayed) signal
 
-## Future Implementations
-- LED indicators for delay timing
+## Next step
+- ✓ LED indicators for delay timing
 - Band pass filter
 - Memory usage optimization
 - Dub delay (Infinite feedback)

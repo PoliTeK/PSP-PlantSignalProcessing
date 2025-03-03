@@ -1,0 +1,1001 @@
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"AnalogDelay.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN11AnalogDelayC2Ev,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_ZN11AnalogDelayC2Ev
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
+  26              	_ZN11AnalogDelayC2Ev:
+  27              	.LVL0:
+  28              	.LFB4815:
+  29              		.file 1 "src/AnalogDelay.cpp"
+   1:src/AnalogDelay.cpp **** #include "AnalogDelay.h" // Include l'header file della classe AnalogDelay
+   2:src/AnalogDelay.cpp **** 
+   3:src/AnalogDelay.cpp **** // Alloca un buffer nella SDRAM per memorizzare i campioni del delay
+   4:src/AnalogDelay.cpp **** static float DSY_SDRAM_BSS delayBufferStorage[96000];
+   5:src/AnalogDelay.cpp **** 
+   6:src/AnalogDelay.cpp **** // Costruttore della classe AnalogDelay
+   7:src/AnalogDelay.cpp **** AnalogDelay::AnalogDelay() : 
+  30              		.loc 1 7 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  35              	.LBB24:
+   8:src/AnalogDelay.cpp ****     _sampleRate(48000.0f),     // Frequenza di campionamento di default
+   9:src/AnalogDelay.cpp ****     _delayTime(0.5f),         // Tempo di delay iniziale (0.5 secondi)
+  10:src/AnalogDelay.cpp ****     _feedback(0.4f),          // Quantità di segnale ritardato che viene rimandato in ingresso
+  11:src/AnalogDelay.cpp ****     _mix(0.5f),              // Bilanciamento tra segnale dry e wet
+  12:src/AnalogDelay.cpp ****     _writePos(0),              // Posizione di scrittura nel buffer
+  13:src/AnalogDelay.cpp ****     _readPos(0.0f),           // Posizione di lettura nel buffer (floating point per interpolazione
+  14:src/AnalogDelay.cpp ****     _currentDelayTime(0.5f),  // Tempo di delay corrente durante lo smoothing
+  15:src/AnalogDelay.cpp ****     _smoothingFactor(0.00005f),// Fattore di smoothing per transizioni graduali
+  16:src/AnalogDelay.cpp ****     _delayBuffer(delayBufferStorage) {} // Inizializzazione del buffer del delay
+  36              		.loc 1 16 36 is_stmt 0 view .LVU1
+  37 0000 0A49     		ldr	r1, .L3
+  38 0002 4FF07C52 		mov	r2, #1056964608
+  39 0006 DFF830C0 		ldr	ip, .L3+12
+  40 000a 8160     		str	r1, [r0, #8]	@ float
+  41 000c 0021     		movs	r1, #0
+  42 000e C0F800C0 		str	ip, [r0]	@ float
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 2
+
+
+  43 0012 4FF0000C 		mov	ip, #0
+  44 0016 4260     		str	r2, [r0, #4]	@ float
+  45 0018 C260     		str	r2, [r0, #12]	@ float
+  46 001a 0161     		str	r1, [r0, #16]
+  47 001c 8261     		str	r2, [r0, #24]	@ float
+  48 001e 0449     		ldr	r1, .L3+4
+  49 0020 044A     		ldr	r2, .L3+8
+  50 0022 C0F814C0 		str	ip, [r0, #20]	@ float
+  51 0026 C161     		str	r1, [r0, #28]	@ float
+  52 0028 0262     		str	r2, [r0, #32]
+  53              	.LBE24:
+  54              		.loc 1 16 39 view .LVU2
+  55 002a 7047     		bx	lr
+  56              	.L4:
+  57              		.align	2
+  58              	.L3:
+  59 002c CDCCCC3E 		.word	1053609165
+  60 0030 17B75138 		.word	944879383
+  61 0034 00000000 		.word	_ZL18delayBufferStorage
+  62 0038 00803B47 		.word	1195081728
+  63              		.cfi_endproc
+  64              	.LFE4815:
+  66              		.global	_ZN11AnalogDelayC1Ev
+  67              		.thumb_set _ZN11AnalogDelayC1Ev,_ZN11AnalogDelayC2Ev
+  68              		.section	.text._ZN11AnalogDelayD2Ev,"ax",%progbits
+  69              		.align	1
+  70              		.p2align 2,,3
+  71              		.global	_ZN11AnalogDelayD2Ev
+  72              		.syntax unified
+  73              		.thumb
+  74              		.thumb_func
+  75              		.fpu fpv5-d16
+  77              	_ZN11AnalogDelayD2Ev:
+  78              	.LVL1:
+  79              	.LFB4818:
+  17:src/AnalogDelay.cpp **** 
+  18:src/AnalogDelay.cpp **** // Distruttore
+  19:src/AnalogDelay.cpp **** AnalogDelay::~AnalogDelay() {}
+  80              		.loc 1 19 1 is_stmt 1 view -0
+  81              		.cfi_startproc
+  82              		@ args = 0, pretend = 0, frame = 0
+  83              		@ frame_needed = 0, uses_anonymous_args = 0
+  84              		@ link register save eliminated.
+  85              		.loc 1 19 30 is_stmt 0 view .LVU4
+  86 0000 7047     		bx	lr
+  87              		.cfi_endproc
+  88              	.LFE4818:
+  90              		.global	_ZN11AnalogDelayD1Ev
+  91              		.thumb_set _ZN11AnalogDelayD1Ev,_ZN11AnalogDelayD2Ev
+  92 0002 00BF     		.section	.text._ZN11AnalogDelay4InitEf,"ax",%progbits
+  93              		.align	1
+  94              		.p2align 2,,3
+  95              		.global	_ZN11AnalogDelay4InitEf
+  96              		.syntax unified
+  97              		.thumb
+  98              		.thumb_func
+  99              		.fpu fpv5-d16
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 3
+
+
+ 101              	_ZN11AnalogDelay4InitEf:
+ 102              	.LVL2:
+ 103              	.LFB4820:
+  20:src/AnalogDelay.cpp **** 
+  21:src/AnalogDelay.cpp **** // Inizializzazione del delay con il sample rate specificato
+  22:src/AnalogDelay.cpp **** void AnalogDelay::Init(float sampleRate) {
+ 104              		.loc 1 22 42 is_stmt 1 view -0
+ 105              		.cfi_startproc
+ 106              		@ args = 0, pretend = 0, frame = 0
+ 107              		@ frame_needed = 0, uses_anonymous_args = 0
+ 108              		@ link register save eliminated.
+  23:src/AnalogDelay.cpp ****     _sampleRate = sampleRate;
+ 109              		.loc 1 23 5 view .LVU6
+  22:src/AnalogDelay.cpp ****     _sampleRate = sampleRate;
+ 110              		.loc 1 22 42 is_stmt 0 view .LVU7
+ 111 0000 0346     		mov	r3, r0
+ 112              	.LBB25:
+  24:src/AnalogDelay.cpp ****     // Azzera tutto il buffer del delay
+  25:src/AnalogDelay.cpp ****     for(size_t i = 0; i < _delayBufferSize; i++) {
+  26:src/AnalogDelay.cpp ****         _delayBuffer[i] = 0.0f;
+ 113              		.loc 1 26 25 view .LVU8
+ 114 0002 034A     		ldr	r2, .L7
+ 115 0004 006A     		ldr	r0, [r0, #32]
+ 116              	.LVL3:
+ 117              		.loc 1 26 25 view .LVU9
+ 118 0006 0021     		movs	r1, #0
+ 119              	.LBE25:
+  23:src/AnalogDelay.cpp ****     // Azzera tutto il buffer del delay
+ 120              		.loc 1 23 17 view .LVU10
+ 121 0008 83ED000A 		vstr.32	s0, [r3]
+  25:src/AnalogDelay.cpp ****         _delayBuffer[i] = 0.0f;
+ 122              		.loc 1 25 5 is_stmt 1 view .LVU11
+ 123              	.LVL4:
+ 124              	.LBB26:
+  25:src/AnalogDelay.cpp ****         _delayBuffer[i] = 0.0f;
+ 125              		.loc 1 25 25 view .LVU12
+ 126              		.loc 1 26 25 is_stmt 0 view .LVU13
+ 127 000c FFF7FEBF 		b	memset
+ 128              	.LVL5:
+ 129              	.L8:
+ 130              		.loc 1 26 25 view .LVU14
+ 131              		.align	2
+ 132              	.L7:
+ 133 0010 00EE0200 		.word	192000
+ 134              	.LBE26:
+ 135              		.cfi_endproc
+ 136              	.LFE4820:
+ 138              		.section	.text._ZN11AnalogDelay11setFeedbackEf,"ax",%progbits
+ 139              		.align	1
+ 140              		.p2align 2,,3
+ 141              		.global	_ZN11AnalogDelay11setFeedbackEf
+ 142              		.syntax unified
+ 143              		.thumb
+ 144              		.thumb_func
+ 145              		.fpu fpv5-d16
+ 147              	_ZN11AnalogDelay11setFeedbackEf:
+ 148              	.LVL6:
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 4
+
+
+ 149              	.LFB4821:
+  27:src/AnalogDelay.cpp ****     }
+  28:src/AnalogDelay.cpp **** }
+  29:src/AnalogDelay.cpp **** 
+  30:src/AnalogDelay.cpp **** // Imposta il feedback, limitandolo tra 0.0 e 0.9
+  31:src/AnalogDelay.cpp **** void AnalogDelay::setFeedback(float feedback) {
+ 150              		.loc 1 31 47 is_stmt 1 view -0
+ 151              		.cfi_startproc
+ 152              		@ args = 0, pretend = 0, frame = 0
+ 153              		@ frame_needed = 0, uses_anonymous_args = 0
+ 154              		@ link register save eliminated.
+  32:src/AnalogDelay.cpp ****     _feedback = fclamp(feedback, 0.0f, 0.97f);
+ 155              		.loc 1 32 5 view .LVU16
+ 156              	.LBB27:
+ 157              	.LBI27:
+ 158              		.file 2 "../DaisySP/Source/Utility/dsp.h"
+   1:../DaisySP/Source/Utility/dsp.h **** /*
+   2:../DaisySP/Source/Utility/dsp.h **** Copyright (c) 2020 Electrosmith, Corp, Emilie Gillet
+   3:../DaisySP/Source/Utility/dsp.h **** 
+   4:../DaisySP/Source/Utility/dsp.h **** Use of this source code is governed by an MIT-style
+   5:../DaisySP/Source/Utility/dsp.h **** license that can be found in the LICENSE file or at
+   6:../DaisySP/Source/Utility/dsp.h **** https://opensource.org/licenses/MIT.
+   7:../DaisySP/Source/Utility/dsp.h **** */
+   8:../DaisySP/Source/Utility/dsp.h **** 
+   9:../DaisySP/Source/Utility/dsp.h **** /** Helpful defines, functions, and other utilities for use in/with daisysp modules.
+  10:../DaisySP/Source/Utility/dsp.h **** */
+  11:../DaisySP/Source/Utility/dsp.h **** #pragma once
+  12:../DaisySP/Source/Utility/dsp.h **** #ifndef DSY_CORE_DSP
+  13:../DaisySP/Source/Utility/dsp.h **** #define DSY_CORE_DSP
+  14:../DaisySP/Source/Utility/dsp.h **** #include <cassert>
+  15:../DaisySP/Source/Utility/dsp.h **** #include <cstdint>
+  16:../DaisySP/Source/Utility/dsp.h **** #include <random>
+  17:../DaisySP/Source/Utility/dsp.h **** #include <cmath>
+  18:../DaisySP/Source/Utility/dsp.h **** 
+  19:../DaisySP/Source/Utility/dsp.h **** /** PIs
+  20:../DaisySP/Source/Utility/dsp.h **** */
+  21:../DaisySP/Source/Utility/dsp.h **** #define PI_F 3.1415927410125732421875f
+  22:../DaisySP/Source/Utility/dsp.h **** #define TWOPI_F (2.0f * PI_F)
+  23:../DaisySP/Source/Utility/dsp.h **** #define HALFPI_F (PI_F * 0.5f)
+  24:../DaisySP/Source/Utility/dsp.h **** #define DSY_MIN(in, mn) (in < mn ? in : mn)
+  25:../DaisySP/Source/Utility/dsp.h **** #define DSY_MAX(in, mx) (in > mx ? in : mx)
+  26:../DaisySP/Source/Utility/dsp.h **** #define DSY_CLAMP(in, mn, mx) (DSY_MIN(DSY_MAX(in, mn), mx))
+  27:../DaisySP/Source/Utility/dsp.h **** #define DSY_COUNTOF(_arr) (sizeof(_arr) / sizeof(_arr[0]))
+  28:../DaisySP/Source/Utility/dsp.h **** 
+  29:../DaisySP/Source/Utility/dsp.h **** namespace daisysp
+  30:../DaisySP/Source/Utility/dsp.h **** {
+  31:../DaisySP/Source/Utility/dsp.h **** //Avoids division for random floats. e.g. rand() * kRandFrac
+  32:../DaisySP/Source/Utility/dsp.h **** static constexpr float kRandFrac = 1.f / (float)RAND_MAX;
+  33:../DaisySP/Source/Utility/dsp.h **** 
+  34:../DaisySP/Source/Utility/dsp.h **** //Convert from semitones to other units. e.g. 2 ^ (kOneTwelfth * x)
+  35:../DaisySP/Source/Utility/dsp.h **** static constexpr float kOneTwelfth = 1.f / 12.f;
+  36:../DaisySP/Source/Utility/dsp.h **** 
+  37:../DaisySP/Source/Utility/dsp.h **** /** efficient floating point min/max
+  38:../DaisySP/Source/Utility/dsp.h **** c/o stephen mccaul
+  39:../DaisySP/Source/Utility/dsp.h **** */
+  40:../DaisySP/Source/Utility/dsp.h **** inline float fmax(float a, float b)
+  41:../DaisySP/Source/Utility/dsp.h **** {
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 5
+
+
+  42:../DaisySP/Source/Utility/dsp.h ****     float r;
+  43:../DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
+  44:../DaisySP/Source/Utility/dsp.h ****     asm("vmaxnm.f32 %[d], %[n], %[m]" : [d] "=t"(r) : [n] "t"(a), [m] "t"(b) :);
+  45:../DaisySP/Source/Utility/dsp.h **** #else
+  46:../DaisySP/Source/Utility/dsp.h ****     r = (a > b) ? a : b;
+  47:../DaisySP/Source/Utility/dsp.h **** #endif // __arm__
+  48:../DaisySP/Source/Utility/dsp.h ****     return r;
+  49:../DaisySP/Source/Utility/dsp.h **** }
+  50:../DaisySP/Source/Utility/dsp.h **** 
+  51:../DaisySP/Source/Utility/dsp.h **** inline float fmin(float a, float b)
+  52:../DaisySP/Source/Utility/dsp.h **** {
+  53:../DaisySP/Source/Utility/dsp.h ****     float r;
+  54:../DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
+  55:../DaisySP/Source/Utility/dsp.h ****     asm("vminnm.f32 %[d], %[n], %[m]" : [d] "=t"(r) : [n] "t"(a), [m] "t"(b) :);
+  56:../DaisySP/Source/Utility/dsp.h **** #else
+  57:../DaisySP/Source/Utility/dsp.h ****     r = (a < b) ? a : b;
+  58:../DaisySP/Source/Utility/dsp.h **** #endif // __arm__
+  59:../DaisySP/Source/Utility/dsp.h ****     return r;
+  60:../DaisySP/Source/Utility/dsp.h **** }
+  61:../DaisySP/Source/Utility/dsp.h **** 
+  62:../DaisySP/Source/Utility/dsp.h **** /** quick fp clamp
+  63:../DaisySP/Source/Utility/dsp.h **** */
+  64:../DaisySP/Source/Utility/dsp.h **** inline float fclamp(float in, float min, float max)
+ 159              		.loc 2 64 14 view .LVU17
+ 160              	.LBE27:
+  65:../DaisySP/Source/Utility/dsp.h **** {
+  66:../DaisySP/Source/Utility/dsp.h ****     return fmin(fmax(in, min), max);
+ 161              		.loc 2 66 5 view .LVU18
+ 162              	.LBB36:
+ 163              	.LBB28:
+ 164              	.LBI28:
+  40:../DaisySP/Source/Utility/dsp.h **** {
+ 165              		.loc 2 40 14 view .LVU19
+ 166              	.LBB29:
+  42:../DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
+ 167              		.loc 2 42 5 view .LVU20
+  44:../DaisySP/Source/Utility/dsp.h **** #else
+ 168              		.loc 2 44 5 view .LVU21
+ 169 0000 9FED057A 		vldr.32	s14, .L10
+ 170              	.LBE29:
+ 171              	.LBE28:
+ 172              	.LBB31:
+ 173              	.LBB32:
+  55:../DaisySP/Source/Utility/dsp.h **** #else
+ 174              		.loc 2 55 5 is_stmt 0 view .LVU22
+ 175 0004 DFED057A 		vldr.32	s15, .L10+4
+ 176              	.LBE32:
+ 177              	.LBE31:
+ 178              	.LBB34:
+ 179              	.LBB30:
+  44:../DaisySP/Source/Utility/dsp.h **** #else
+ 180              		.loc 2 44 5 view .LVU23
+ 181              		.syntax unified
+ 182              	@ 44 "../DaisySP/Source/Utility/dsp.h" 1
+ 183 0008 80FE070A 		vmaxnm.f32 s0, s0, s14
+ 184              	@ 0 "" 2
+ 185              	.LVL7:
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 6
+
+
+  48:../DaisySP/Source/Utility/dsp.h **** }
+ 186              		.loc 2 48 5 is_stmt 1 view .LVU24
+  48:../DaisySP/Source/Utility/dsp.h **** }
+ 187              		.loc 2 48 5 is_stmt 0 view .LVU25
+ 188              		.thumb
+ 189              		.syntax unified
+ 190              	.LBE30:
+ 191              	.LBE34:
+ 192              	.LBB35:
+ 193              	.LBI31:
+  51:../DaisySP/Source/Utility/dsp.h **** {
+ 194              		.loc 2 51 14 is_stmt 1 view .LVU26
+ 195              	.LBB33:
+  53:../DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
+ 196              		.loc 2 53 5 view .LVU27
+  55:../DaisySP/Source/Utility/dsp.h **** #else
+ 197              		.loc 2 55 5 view .LVU28
+ 198              		.syntax unified
+ 199              	@ 55 "../DaisySP/Source/Utility/dsp.h" 1
+ 200 000c 80FE670A 		vminnm.f32 s0, s0, s15
+ 201              	@ 0 "" 2
+ 202              	.LVL8:
+  59:../DaisySP/Source/Utility/dsp.h **** }
+ 203              		.loc 2 59 5 view .LVU29
+  59:../DaisySP/Source/Utility/dsp.h **** }
+ 204              		.loc 2 59 5 is_stmt 0 view .LVU30
+ 205              		.thumb
+ 206              		.syntax unified
+ 207              	.LBE33:
+ 208              	.LBE35:
+ 209              	.LBE36:
+ 210              		.loc 1 32 15 view .LVU31
+ 211 0010 80ED020A 		vstr.32	s0, [r0, #8]
+  33:src/AnalogDelay.cpp **** }
+ 212              		.loc 1 33 1 view .LVU32
+ 213 0014 7047     		bx	lr
+ 214              	.L11:
+ 215 0016 00BF     		.align	2
+ 216              	.L10:
+ 217 0018 00000000 		.word	0
+ 218 001c EC51783F 		.word	1064849900
+ 219              		.cfi_endproc
+ 220              	.LFE4821:
+ 222              		.section	.text._ZN11AnalogDelay6setMixEf,"ax",%progbits
+ 223              		.align	1
+ 224              		.p2align 2,,3
+ 225              		.global	_ZN11AnalogDelay6setMixEf
+ 226              		.syntax unified
+ 227              		.thumb
+ 228              		.thumb_func
+ 229              		.fpu fpv5-d16
+ 231              	_ZN11AnalogDelay6setMixEf:
+ 232              	.LVL9:
+ 233              	.LFB4822:
+  34:src/AnalogDelay.cpp **** 
+  35:src/AnalogDelay.cpp **** // Imposta il mix tra segnale originale e ritardato (0.0 - 1.0)
+  36:src/AnalogDelay.cpp **** void AnalogDelay::setMix(float mix) {
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 7
+
+
+ 234              		.loc 1 36 37 is_stmt 1 view -0
+ 235              		.cfi_startproc
+ 236              		@ args = 0, pretend = 0, frame = 0
+ 237              		@ frame_needed = 0, uses_anonymous_args = 0
+ 238              		@ link register save eliminated.
+  37:src/AnalogDelay.cpp ****     _mix = fclamp(mix, 0.0f, 1.0f);
+ 239              		.loc 1 37 5 view .LVU34
+ 240              	.LBB37:
+ 241              	.LBI37:
+  64:../DaisySP/Source/Utility/dsp.h **** {
+ 242              		.loc 2 64 14 view .LVU35
+ 243              	.LBE37:
+ 244              		.loc 2 66 5 view .LVU36
+ 245              	.LBB46:
+ 246              	.LBB38:
+ 247              	.LBI38:
+  40:../DaisySP/Source/Utility/dsp.h **** {
+ 248              		.loc 2 40 14 view .LVU37
+ 249              	.LBB39:
+  42:../DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
+ 250              		.loc 2 42 5 view .LVU38
+  44:../DaisySP/Source/Utility/dsp.h **** #else
+ 251              		.loc 2 44 5 view .LVU39
+ 252              	.LBE39:
+ 253              	.LBE38:
+ 254              	.LBB41:
+ 255              	.LBB42:
+  55:../DaisySP/Source/Utility/dsp.h **** #else
+ 256              		.loc 2 55 5 is_stmt 0 view .LVU40
+ 257 0000 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 258              	.LBE42:
+ 259              	.LBE41:
+ 260              	.LBB44:
+ 261              	.LBB40:
+  44:../DaisySP/Source/Utility/dsp.h **** #else
+ 262              		.loc 2 44 5 view .LVU41
+ 263 0004 9FED047A 		vldr.32	s14, .L13
+ 264              		.syntax unified
+ 265              	@ 44 "../DaisySP/Source/Utility/dsp.h" 1
+ 266 0008 80FE070A 		vmaxnm.f32 s0, s0, s14
+ 267              	@ 0 "" 2
+ 268              	.LVL10:
+  48:../DaisySP/Source/Utility/dsp.h **** }
+ 269              		.loc 2 48 5 is_stmt 1 view .LVU42
+  48:../DaisySP/Source/Utility/dsp.h **** }
+ 270              		.loc 2 48 5 is_stmt 0 view .LVU43
+ 271              		.thumb
+ 272              		.syntax unified
+ 273              	.LBE40:
+ 274              	.LBE44:
+ 275              	.LBB45:
+ 276              	.LBI41:
+  51:../DaisySP/Source/Utility/dsp.h **** {
+ 277              		.loc 2 51 14 is_stmt 1 view .LVU44
+ 278              	.LBB43:
+  53:../DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
+ 279              		.loc 2 53 5 view .LVU45
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 8
+
+
+  55:../DaisySP/Source/Utility/dsp.h **** #else
+ 280              		.loc 2 55 5 view .LVU46
+ 281              		.syntax unified
+ 282              	@ 55 "../DaisySP/Source/Utility/dsp.h" 1
+ 283 000c 80FE670A 		vminnm.f32 s0, s0, s15
+ 284              	@ 0 "" 2
+ 285              	.LVL11:
+  59:../DaisySP/Source/Utility/dsp.h **** }
+ 286              		.loc 2 59 5 view .LVU47
+  59:../DaisySP/Source/Utility/dsp.h **** }
+ 287              		.loc 2 59 5 is_stmt 0 view .LVU48
+ 288              		.thumb
+ 289              		.syntax unified
+ 290              	.LBE43:
+ 291              	.LBE45:
+ 292              	.LBE46:
+ 293              		.loc 1 37 10 view .LVU49
+ 294 0010 80ED030A 		vstr.32	s0, [r0, #12]
+  38:src/AnalogDelay.cpp **** }
+ 295              		.loc 1 38 1 view .LVU50
+ 296 0014 7047     		bx	lr
+ 297              	.L14:
+ 298 0016 00BF     		.align	2
+ 299              	.L13:
+ 300 0018 00000000 		.word	0
+ 301              		.cfi_endproc
+ 302              	.LFE4822:
+ 304              		.section	.text._ZN11AnalogDelay12setDelayTimeEf,"ax",%progbits
+ 305              		.align	1
+ 306              		.p2align 2,,3
+ 307              		.global	_ZN11AnalogDelay12setDelayTimeEf
+ 308              		.syntax unified
+ 309              		.thumb
+ 310              		.thumb_func
+ 311              		.fpu fpv5-d16
+ 313              	_ZN11AnalogDelay12setDelayTimeEf:
+ 314              	.LVL12:
+ 315              	.LFB4823:
+  39:src/AnalogDelay.cpp **** 
+  40:src/AnalogDelay.cpp **** // Imposta il tempo di delay, limitandolo tra 0.02 e 1.0 secondi
+  41:src/AnalogDelay.cpp **** void AnalogDelay::setDelayTime(float delayTime) {
+ 316              		.loc 1 41 49 is_stmt 1 view -0
+ 317              		.cfi_startproc
+ 318              		@ args = 0, pretend = 0, frame = 0
+ 319              		@ frame_needed = 0, uses_anonymous_args = 0
+ 320              		@ link register save eliminated.
+  42:src/AnalogDelay.cpp ****     _delayTime = fclamp(delayTime, 0.02f, 1.0f);
+ 321              		.loc 1 42 5 view .LVU52
+ 322              	.LBB47:
+ 323              	.LBI47:
+  64:../DaisySP/Source/Utility/dsp.h **** {
+ 324              		.loc 2 64 14 view .LVU53
+ 325              	.LBE47:
+ 326              		.loc 2 66 5 view .LVU54
+ 327              	.LBB56:
+ 328              	.LBB48:
+ 329              	.LBI48:
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 9
+
+
+  40:../DaisySP/Source/Utility/dsp.h **** {
+ 330              		.loc 2 40 14 view .LVU55
+ 331              	.LBB49:
+  42:../DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
+ 332              		.loc 2 42 5 view .LVU56
+  44:../DaisySP/Source/Utility/dsp.h **** #else
+ 333              		.loc 2 44 5 view .LVU57
+ 334              	.LBE49:
+ 335              	.LBE48:
+ 336              	.LBB51:
+ 337              	.LBB52:
+  55:../DaisySP/Source/Utility/dsp.h **** #else
+ 338              		.loc 2 55 5 is_stmt 0 view .LVU58
+ 339 0000 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 340              	.LBE52:
+ 341              	.LBE51:
+ 342              	.LBB54:
+ 343              	.LBB50:
+  44:../DaisySP/Source/Utility/dsp.h **** #else
+ 344              		.loc 2 44 5 view .LVU59
+ 345 0004 9FED047A 		vldr.32	s14, .L16
+ 346              		.syntax unified
+ 347              	@ 44 "../DaisySP/Source/Utility/dsp.h" 1
+ 348 0008 80FE070A 		vmaxnm.f32 s0, s0, s14
+ 349              	@ 0 "" 2
+ 350              	.LVL13:
+  48:../DaisySP/Source/Utility/dsp.h **** }
+ 351              		.loc 2 48 5 is_stmt 1 view .LVU60
+  48:../DaisySP/Source/Utility/dsp.h **** }
+ 352              		.loc 2 48 5 is_stmt 0 view .LVU61
+ 353              		.thumb
+ 354              		.syntax unified
+ 355              	.LBE50:
+ 356              	.LBE54:
+ 357              	.LBB55:
+ 358              	.LBI51:
+  51:../DaisySP/Source/Utility/dsp.h **** {
+ 359              		.loc 2 51 14 is_stmt 1 view .LVU62
+ 360              	.LBB53:
+  53:../DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
+ 361              		.loc 2 53 5 view .LVU63
+  55:../DaisySP/Source/Utility/dsp.h **** #else
+ 362              		.loc 2 55 5 view .LVU64
+ 363              		.syntax unified
+ 364              	@ 55 "../DaisySP/Source/Utility/dsp.h" 1
+ 365 000c 80FE670A 		vminnm.f32 s0, s0, s15
+ 366              	@ 0 "" 2
+ 367              	.LVL14:
+  59:../DaisySP/Source/Utility/dsp.h **** }
+ 368              		.loc 2 59 5 view .LVU65
+  59:../DaisySP/Source/Utility/dsp.h **** }
+ 369              		.loc 2 59 5 is_stmt 0 view .LVU66
+ 370              		.thumb
+ 371              		.syntax unified
+ 372              	.LBE53:
+ 373              	.LBE55:
+ 374              	.LBE56:
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 10
+
+
+ 375              		.loc 1 42 16 view .LVU67
+ 376 0010 80ED010A 		vstr.32	s0, [r0, #4]
+  43:src/AnalogDelay.cpp **** }
+ 377              		.loc 1 43 1 view .LVU68
+ 378 0014 7047     		bx	lr
+ 379              	.L17:
+ 380 0016 00BF     		.align	2
+ 381              	.L16:
+ 382 0018 0AD7A33C 		.word	1017370378
+ 383              		.cfi_endproc
+ 384              	.LFE4823:
+ 386              		.section	.text._ZN11AnalogDelay7ProcessEf,"ax",%progbits
+ 387              		.align	1
+ 388              		.p2align 2,,3
+ 389              		.global	_ZN11AnalogDelay7ProcessEf
+ 390              		.syntax unified
+ 391              		.thumb
+ 392              		.thumb_func
+ 393              		.fpu fpv5-d16
+ 395              	_ZN11AnalogDelay7ProcessEf:
+ 396              	.LVL15:
+ 397              	.LFB4824:
+  44:src/AnalogDelay.cpp **** 
+  45:src/AnalogDelay.cpp **** // Processa un singolo campione audio
+  46:src/AnalogDelay.cpp **** float AnalogDelay::Process(float buffer_in) {
+ 398              		.loc 1 46 45 is_stmt 1 view -0
+ 399              		.cfi_startproc
+ 400              		@ args = 0, pretend = 0, frame = 0
+ 401              		@ frame_needed = 0, uses_anonymous_args = 0
+  47:src/AnalogDelay.cpp ****     // Calcola gradualmente il nuovo tempo di delay
+  48:src/AnalogDelay.cpp ****     float deltaTime = _delayTime - _currentDelayTime;
+ 402              		.loc 1 48 5 view .LVU70
+ 403              		.loc 1 48 36 is_stmt 0 view .LVU71
+ 404 0000 90ED067A 		vldr.32	s14, [r0, #24]
+ 405              	.LVL16:
+  49:src/AnalogDelay.cpp ****     _currentDelayTime += deltaTime * _smoothingFactor;
+ 406              		.loc 1 49 5 is_stmt 1 view .LVU72
+  48:src/AnalogDelay.cpp ****     _currentDelayTime += deltaTime * _smoothingFactor;
+ 407              		.loc 1 48 11 is_stmt 0 view .LVU73
+ 408 0004 D0ED016A 		vldr.32	s13, [r0, #4]
+ 409              		.loc 1 49 23 view .LVU74
+ 410 0008 D0ED075A 		vldr.32	s11, [r0, #28]
+  48:src/AnalogDelay.cpp ****     _currentDelayTime += deltaTime * _smoothingFactor;
+ 411              		.loc 1 48 11 view .LVU75
+ 412 000c 76EEC76A 		vsub.f32	s13, s13, s14
+ 413              	.LVL17:
+  50:src/AnalogDelay.cpp ****     
+  51:src/AnalogDelay.cpp ****     // Calcola la posizione di lettura in base al tempo di delay
+  52:src/AnalogDelay.cpp ****     float delaySamples = _sampleRate * _currentDelayTime;
+  53:src/AnalogDelay.cpp ****     _readPos = _writePos - delaySamples;
+ 414              		.loc 1 53 16 view .LVU76
+ 415 0010 0269     		ldr	r2, [r0, #16]
+ 416              		.loc 1 53 26 view .LVU77
+ 417 0012 90ED006A 		vldr.32	s12, [r0]
+ 418 0016 07EE902A 		vmov	s15, r2	@ int
+  49:src/AnalogDelay.cpp ****     
+ 419              		.loc 1 49 23 view .LVU78
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 11
+
+
+ 420 001a A5EEA67A 		vfma.f32	s14, s11, s13
+ 421              		.loc 1 53 26 view .LVU79
+ 422 001e F8EE677A 		vcvt.f32.u32	s15, s15
+  46:src/AnalogDelay.cpp ****     // Calcola gradualmente il nuovo tempo di delay
+ 423              		.loc 1 46 45 view .LVU80
+ 424 0022 70B5     		push	{r4, r5, r6, lr}
+ 425              		.cfi_def_cfa_offset 16
+ 426              		.cfi_offset 4, -16
+ 427              		.cfi_offset 5, -12
+ 428              		.cfi_offset 6, -8
+ 429              		.cfi_offset 14, -4
+ 430              		.loc 1 53 26 view .LVU81
+ 431 0024 E7EE467A 		vfms.f32	s15, s14, s12
+  49:src/AnalogDelay.cpp ****     
+ 432              		.loc 1 49 23 view .LVU82
+ 433 0028 80ED067A 		vstr.32	s14, [r0, #24]
+  52:src/AnalogDelay.cpp ****     _readPos = _writePos - delaySamples;
+ 434              		.loc 1 52 5 is_stmt 1 view .LVU83
+ 435              	.LVL18:
+ 436              		.loc 1 53 5 view .LVU84
+  54:src/AnalogDelay.cpp ****     while(_readPos < 0) _readPos += _delayBufferSize; // Wrap around se negativo
+ 437              		.loc 1 54 20 is_stmt 0 view .LVU85
+ 438 002c F5EEC07A 		vcmpe.f32	s15, #0
+  53:src/AnalogDelay.cpp ****     while(_readPos < 0) _readPos += _delayBufferSize; // Wrap around se negativo
+ 439              		.loc 1 53 14 view .LVU86
+ 440 0030 C0ED057A 		vstr.32	s15, [r0, #20]
+ 441              		.loc 1 54 5 is_stmt 1 view .LVU87
+ 442              		.loc 1 54 20 view .LVU88
+ 443 0034 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 444 0038 0AD5     		bpl	.L19
+ 445              	.LVL19:
+ 446              	.L21:
+ 447              		.loc 1 54 25 discriminator 1 view .LVU89
+ 448              		.loc 1 54 34 is_stmt 0 discriminator 1 view .LVU90
+ 449 003a 9FED397A 		vldr.32	s14, .L26
+ 450 003e 77EE877A 		vadd.f32	s15, s15, s14
+ 451              		.loc 1 54 5 is_stmt 1 discriminator 1 view .LVU91
+ 452              		.loc 1 54 20 discriminator 1 view .LVU92
+ 453 0042 F5EEC07A 		vcmpe.f32	s15, #0
+ 454 0046 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 455 004a F6D4     		bmi	.L21
+ 456 004c C0ED057A 		vstr.32	s15, [r0, #20]
+ 457              	.L19:
+  55:src/AnalogDelay.cpp ****     
+  56:src/AnalogDelay.cpp ****     // Calcola gli indici per l'interpolazione cubica
+  57:src/AnalogDelay.cpp ****     int readPos_i = (int)_readPos;
+ 458              		.loc 1 57 5 view .LVU93
+ 459              		.loc 1 57 9 is_stmt 0 view .LVU94
+ 460 0050 BDEEE77A 		vcvt.s32.f32	s14, s15
+ 461 0054 17EE103A 		vmov	r3, s14	@ int
+ 462              	.LVL20:
+  58:src/AnalogDelay.cpp ****     float frac = _readPos - readPos_i; // Parte frazionaria per l'interpolazione
+ 463              		.loc 1 58 5 is_stmt 1 view .LVU95
+ 464              		.loc 1 58 27 is_stmt 0 view .LVU96
+ 465 0058 B8EEC77A 		vcvt.f32.s32	s14, s14
+  59:src/AnalogDelay.cpp ****     
+  60:src/AnalogDelay.cpp ****     // Calcola gli indici dei punti adiacenti
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 12
+
+
+  61:src/AnalogDelay.cpp ****     int im1 = readPos_i - 1;
+  62:src/AnalogDelay.cpp ****     int ip1 = readPos_i + 1;
+  63:src/AnalogDelay.cpp ****     int ip2 = readPos_i + 2;
+  64:src/AnalogDelay.cpp ****     
+  65:src/AnalogDelay.cpp ****     // Gestisce il wrap around degli indici
+  66:src/AnalogDelay.cpp ****     if (im1 < 0) im1 += _delayBufferSize;
+ 466              		.loc 1 66 5 view .LVU97
+ 467 005c 5E1E     		subs	r6, r3, #1
+  62:src/AnalogDelay.cpp ****     int ip2 = readPos_i + 2;
+ 468              		.loc 1 62 9 view .LVU98
+ 469 005e 03F10105 		add	r5, r3, #1
+  58:src/AnalogDelay.cpp ****     float frac = _readPos - readPos_i; // Parte frazionaria per l'interpolazione
+ 470              		.loc 1 58 11 view .LVU99
+ 471 0062 77EEC77A 		vsub.f32	s15, s15, s14
+ 472              	.LVL21:
+  61:src/AnalogDelay.cpp ****     int ip1 = readPos_i + 1;
+ 473              		.loc 1 61 5 is_stmt 1 view .LVU100
+  62:src/AnalogDelay.cpp ****     int ip2 = readPos_i + 2;
+ 474              		.loc 1 62 5 view .LVU101
+  63:src/AnalogDelay.cpp ****     
+ 475              		.loc 1 63 5 view .LVU102
+  63:src/AnalogDelay.cpp ****     
+ 476              		.loc 1 63 9 is_stmt 0 view .LVU103
+ 477 0066 03F1020C 		add	ip, r3, #2
+ 478              	.LVL22:
+ 479              		.loc 1 66 5 is_stmt 1 view .LVU104
+ 480 006a 02D5     		bpl	.L23
+ 481              		.loc 1 66 18 discriminator 1 view .LVU105
+ 482              		.loc 1 66 22 is_stmt 0 discriminator 1 view .LVU106
+ 483 006c 4BF67F36 		movw	r6, #47999
+ 484              	.LVL23:
+ 485              		.loc 1 66 22 discriminator 1 view .LVU107
+ 486 0070 1E44     		add	r6, r6, r3
+ 487              	.LVL24:
+ 488              	.L23:
+  67:src/AnalogDelay.cpp ****     ip1 %= _delayBufferSize;
+ 489              		.loc 1 67 5 is_stmt 1 view .LVU108
+  68:src/AnalogDelay.cpp ****     ip2 %= _delayBufferSize;
+ 490              		.loc 1 68 5 view .LVU109
+  69:src/AnalogDelay.cpp ****     
+  70:src/AnalogDelay.cpp ****     // Legge i valori dei quattro punti per l'interpolazione
+  71:src/AnalogDelay.cpp ****     float xm1 = _delayBuffer[im1];
+ 491              		.loc 1 71 5 view .LVU110
+ 492              		.loc 1 71 17 is_stmt 0 view .LVU111
+ 493 0072 016A     		ldr	r1, [r0, #32]
+ 494              	.LVL25:
+  72:src/AnalogDelay.cpp ****     float x0 = _delayBuffer[readPos_i];
+ 495              		.loc 1 72 5 is_stmt 1 view .LVU112
+  67:src/AnalogDelay.cpp ****     ip2 %= _delayBufferSize;
+ 496              		.loc 1 67 9 is_stmt 0 view .LVU113
+ 497 0074 4BF6803E 		movw	lr, #48000
+ 498 0078 2A4C     		ldr	r4, .L26+4
+  73:src/AnalogDelay.cpp ****     float x1 = _delayBuffer[ip1];
+  74:src/AnalogDelay.cpp ****     float x2 = _delayBuffer[ip2];
+  75:src/AnalogDelay.cpp ****     
+  76:src/AnalogDelay.cpp ****     // Calcola i coefficienti per l'interpolazione cubica di Hermite
+  77:src/AnalogDelay.cpp ****     float c = (x1 - xm1) * 0.5f;
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 13
+
+
+  78:src/AnalogDelay.cpp ****     float v = x0 - x1;
+  79:src/AnalogDelay.cpp ****     float w = c + v;
+ 499              		.loc 1 79 11 view .LVU114
+ 500 007a B6EE004A 		vmov.f32	s8, #5.0e-1
+  71:src/AnalogDelay.cpp ****     float x0 = _delayBuffer[readPos_i];
+ 501              		.loc 1 71 11 view .LVU115
+ 502 007e 01EB8606 		add	r6, r1, r6, lsl #2
+ 503              	.LVL26:
+  80:src/AnalogDelay.cpp ****     float a = w + v + (x2 - x0) * 0.5f;
+  81:src/AnalogDelay.cpp ****     float b = w + a;
+  82:src/AnalogDelay.cpp ****     
+  83:src/AnalogDelay.cpp ****     // Calcola il valore interpolato
+  84:src/AnalogDelay.cpp ****     float delayed = ((((a * frac) - b) * frac + c) * frac + x0);
+  85:src/AnalogDelay.cpp ****     // Mixa il segnale originale con quello ritardato
+  86:src/AnalogDelay.cpp ****     float buffer_out = (1.0f - _mix) * buffer_in + _mix * delayed;
+ 504              		.loc 1 86 30 view .LVU116
+ 505 0082 F7EE004A 		vmov.f32	s9, #1.0e+0
+  72:src/AnalogDelay.cpp ****     float x1 = _delayBuffer[ip1];
+ 506              		.loc 1 72 11 view .LVU117
+ 507 0086 01EB8303 		add	r3, r1, r3, lsl #2
+ 508              	.LVL27:
+ 509              		.loc 1 86 32 view .LVU118
+ 510 008a D0ED035A 		vldr.32	s11, [r0, #12]
+  77:src/AnalogDelay.cpp ****     float v = x0 - x1;
+ 511              		.loc 1 77 19 view .LVU119
+ 512 008e 96ED005A 		vldr.32	s10, [r6]
+  72:src/AnalogDelay.cpp ****     float x1 = _delayBuffer[ip1];
+ 513              		.loc 1 72 11 view .LVU120
+ 514 0092 93ED006A 		vldr.32	s12, [r3]
+ 515              	.LVL28:
+  73:src/AnalogDelay.cpp ****     float x2 = _delayBuffer[ip2];
+ 516              		.loc 1 73 5 is_stmt 1 view .LVU121
+  67:src/AnalogDelay.cpp ****     ip2 %= _delayBufferSize;
+ 517              		.loc 1 67 9 is_stmt 0 view .LVU122
+ 518 0096 A4FB0563 		umull	r6, r3, r4, r5
+ 519              	.LVL29:
+  87:src/AnalogDelay.cpp ****     
+  88:src/AnalogDelay.cpp ****     // Aggiorna il buffer con il nuovo campione più il feedback
+  89:src/AnalogDelay.cpp ****     _delayBuffer[_writePos] = buffer_in + delayed * _feedback;
+ 520              		.loc 1 89 41 view .LVU123
+ 521 009a 90ED023A 		vldr.32	s6, [r0, #8]
+  86:src/AnalogDelay.cpp ****     
+ 522              		.loc 1 86 30 view .LVU124
+ 523 009e 74EEE54A 		vsub.f32	s9, s9, s11
+  67:src/AnalogDelay.cpp ****     ip2 %= _delayBufferSize;
+ 524              		.loc 1 67 9 view .LVU125
+ 525 00a2 9B0A     		lsrs	r3, r3, #10
+ 526 00a4 0EFB1355 		mls	r5, lr, r3, r5
+ 527              	.LVL30:
+  73:src/AnalogDelay.cpp ****     float x2 = _delayBuffer[ip2];
+ 528              		.loc 1 73 11 view .LVU126
+ 529 00a8 01EB8505 		add	r5, r1, r5, lsl #2
+ 530 00ac D5ED006A 		vldr.32	s13, [r5]
+ 531              	.LVL31:
+  74:src/AnalogDelay.cpp ****     
+ 532              		.loc 1 74 5 is_stmt 1 view .LVU127
+  77:src/AnalogDelay.cpp ****     float v = x0 - x1;
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 14
+
+
+ 533              		.loc 1 77 5 view .LVU128
+  68:src/AnalogDelay.cpp ****     
+ 534              		.loc 1 68 9 is_stmt 0 view .LVU129
+ 535 00b0 A4FB0C53 		umull	r5, r3, r4, ip
+  77:src/AnalogDelay.cpp ****     float v = x0 - x1;
+ 536              		.loc 1 77 19 view .LVU130
+ 537 00b4 36EEC55A 		vsub.f32	s10, s13, s10
+ 538              	.LVL32:
+  78:src/AnalogDelay.cpp ****     float w = c + v;
+ 539              		.loc 1 78 5 is_stmt 1 view .LVU131
+  68:src/AnalogDelay.cpp ****     
+ 540              		.loc 1 68 9 is_stmt 0 view .LVU132
+ 541 00b8 9B0A     		lsrs	r3, r3, #10
+  78:src/AnalogDelay.cpp ****     float w = c + v;
+ 542              		.loc 1 78 11 view .LVU133
+ 543 00ba 76EE666A 		vsub.f32	s13, s12, s13
+ 544              	.LVL33:
+  79:src/AnalogDelay.cpp ****     float a = w + v + (x2 - x0) * 0.5f;
+ 545              		.loc 1 79 5 is_stmt 1 view .LVU134
+  68:src/AnalogDelay.cpp ****     
+ 546              		.loc 1 68 9 is_stmt 0 view .LVU135
+ 547 00be 0EFB13CC 		mls	ip, lr, r3, ip
+ 548              	.LVL34:
+  79:src/AnalogDelay.cpp ****     float a = w + v + (x2 - x0) * 0.5f;
+ 549              		.loc 1 79 11 view .LVU136
+ 550 00c2 B0EE667A 		vmov.f32	s14, s13
+  74:src/AnalogDelay.cpp ****     
+ 551              		.loc 1 74 11 view .LVU137
+ 552 00c6 01EB8C0C 		add	ip, r1, ip, lsl #2
+ 553              		.loc 1 89 27 view .LVU138
+ 554 00ca 01EB8201 		add	r1, r1, r2, lsl #2
+  90:src/AnalogDelay.cpp ****     _writePos = (_writePos + 1) % _delayBufferSize; // Avanza la posizione di scrittura
+ 555              		.loc 1 90 28 view .LVU139
+ 556 00ce 0132     		adds	r2, r2, #1
+  80:src/AnalogDelay.cpp ****     float b = w + a;
+ 557              		.loc 1 80 27 view .LVU140
+ 558 00d0 DCED003A 		vldr.32	s7, [ip]
+  79:src/AnalogDelay.cpp ****     float a = w + v + (x2 - x0) * 0.5f;
+ 559              		.loc 1 79 11 view .LVU141
+ 560 00d4 A5EE047A 		vfma.f32	s14, s10, s8
+ 561              	.LVL35:
+  80:src/AnalogDelay.cpp ****     float b = w + a;
+ 562              		.loc 1 80 5 is_stmt 1 view .LVU142
+ 563              		.loc 1 90 33 is_stmt 0 view .LVU143
+ 564 00d8 A4FB0234 		umull	r3, r4, r4, r2
+  80:src/AnalogDelay.cpp ****     float b = w + a;
+ 565              		.loc 1 80 27 view .LVU144
+ 566 00dc 73EEC63A 		vsub.f32	s7, s7, s12
+ 567              		.loc 1 90 33 view .LVU145
+ 568 00e0 A40A     		lsrs	r4, r4, #10
+ 569 00e2 0EFB1422 		mls	r2, lr, r4, r2
+  80:src/AnalogDelay.cpp ****     float b = w + a;
+ 570              		.loc 1 80 17 view .LVU146
+ 571 00e6 76EE876A 		vadd.f32	s13, s13, s14
+ 572              	.LVL36:
+  80:src/AnalogDelay.cpp ****     float b = w + a;
+ 573              		.loc 1 80 11 view .LVU147
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 15
+
+
+ 574 00ea E3EE846A 		vfma.f32	s13, s7, s8
+ 575              	.LVL37:
+  81:src/AnalogDelay.cpp ****     
+ 576              		.loc 1 81 5 is_stmt 1 view .LVU148
+  84:src/AnalogDelay.cpp ****     // Mixa il segnale originale con quello ritardato
+ 577              		.loc 1 84 5 view .LVU149
+  81:src/AnalogDelay.cpp ****     
+ 578              		.loc 1 81 11 is_stmt 0 view .LVU150
+ 579 00ee 37EE267A 		vadd.f32	s14, s14, s13
+ 580              	.LVL38:
+  84:src/AnalogDelay.cpp ****     // Mixa il segnale originale con quello ritardato
+ 581              		.loc 1 84 35 view .LVU151
+ 582 00f2 97EEA67A 		vfnms.f32	s14, s15, s13
+ 583              	.LVL39:
+  84:src/AnalogDelay.cpp ****     // Mixa il segnale originale con quello ritardato
+ 584              		.loc 1 84 40 view .LVU152
+ 585 00f6 27EE277A 		vmul.f32	s14, s14, s15
+  84:src/AnalogDelay.cpp ****     // Mixa il segnale originale con quello ritardato
+ 586              		.loc 1 84 47 view .LVU153
+ 587 00fa A5EE047A 		vfma.f32	s14, s10, s8
+  84:src/AnalogDelay.cpp ****     // Mixa il segnale originale con quello ritardato
+ 588              		.loc 1 84 11 view .LVU154
+ 589 00fe A7EE276A 		vfma.f32	s12, s14, s15
+ 590              	.LVL40:
+  86:src/AnalogDelay.cpp ****     
+ 591              		.loc 1 86 5 is_stmt 1 view .LVU155
+  89:src/AnalogDelay.cpp ****     _writePos = (_writePos + 1) % _delayBufferSize; // Avanza la posizione di scrittura
+ 592              		.loc 1 89 41 is_stmt 0 view .LVU156
+ 593 0102 F0EE407A 		vmov.f32	s15, s0
+ 594              	.LVL41:
+  89:src/AnalogDelay.cpp ****     _writePos = (_writePos + 1) % _delayBufferSize; // Avanza la posizione di scrittura
+ 595              		.loc 1 89 41 view .LVU157
+ 596 0106 E3EE067A 		vfma.f32	s15, s6, s12
+  86:src/AnalogDelay.cpp ****     
+ 597              		.loc 1 86 57 view .LVU158
+ 598 010a 25EE866A 		vmul.f32	s12, s11, s12
+ 599              	.LVL42:
+  89:src/AnalogDelay.cpp ****     _writePos = (_writePos + 1) % _delayBufferSize; // Avanza la posizione di scrittura
+ 600              		.loc 1 89 5 is_stmt 1 view .LVU159
+  91:src/AnalogDelay.cpp **** 
+  92:src/AnalogDelay.cpp ****     return buffer_out; // Restituisce il campione processato
+  93:src/AnalogDelay.cpp **** }
+ 601              		.loc 1 93 1 is_stmt 0 view .LVU160
+ 602 010e A4EE806A 		vfma.f32	s12, s9, s0
+ 603              	.LVL43:
+  89:src/AnalogDelay.cpp ****     _writePos = (_writePos + 1) % _delayBufferSize; // Avanza la posizione di scrittura
+ 604              		.loc 1 89 29 view .LVU161
+ 605 0112 C1ED007A 		vstr.32	s15, [r1]
+ 606              	.LVL44:
+  90:src/AnalogDelay.cpp **** 
+ 607              		.loc 1 90 5 is_stmt 1 view .LVU162
+  90:src/AnalogDelay.cpp **** 
+ 608              		.loc 1 90 15 is_stmt 0 view .LVU163
+ 609 0116 0261     		str	r2, [r0, #16]
+  92:src/AnalogDelay.cpp **** }
+ 610              		.loc 1 92 5 is_stmt 1 view .LVU164
+ 611              		.loc 1 93 1 is_stmt 0 view .LVU165
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 16
+
+
+ 612 0118 B0EE460A 		vmov.f32	s0, s12
+ 613              	.LVL45:
+ 614              		.loc 1 93 1 view .LVU166
+ 615 011c 70BD     		pop	{r4, r5, r6, pc}
+ 616              	.L27:
+ 617 011e 00BF     		.align	2
+ 618              	.L26:
+ 619 0120 00803B47 		.word	1195081728
+ 620 0124 F1197605 		.word	91625969
+ 621              		.cfi_endproc
+ 622              	.LFE4824:
+ 624              		.section	.sdram_bss,"aw"
+ 625              		.align	2
+ 628              	_ZL18delayBufferStorage:
+ 629 0000 00000000 		.space	384000
+ 629      00000000 
+ 629      00000000 
+ 629      00000000 
+ 629      00000000 
+ 630              		.text
+ 631              	.Letext0:
+ 632              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 633              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 634              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 635              		.file 6 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 636              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 637              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 638              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 639              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 640              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 641              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 642              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 643              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 644              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 645              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 646              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 647              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 648              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 649              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 650              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 651              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 652              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
+ 653              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 654              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 655              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 656              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 657              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 658              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 659              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 660              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 661              		.file 32 "../libDaisy/src/daisy_core.h"
+ 662              		.file 33 "../libDaisy/src/util/wav_format.h"
+ 663              		.file 34 "../libDaisy/src/dev/sr_595.h"
+ 664              		.file 35 "../libDaisy/src/dev/max11300.h"
+ 665              		.file 36 "../libDaisy/src/daisy_seed.h"
+ 666              		.file 37 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 667              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 17
+
+
+ 668              		.file 39 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 669              		.file 40 "../DaisySP/Source/Control/adenv.h"
+ 670              		.file 41 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 671              		.file 42 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 672              		.file 43 "src/AnalogDelay.h"
+ 673              		.file 44 "<built-in>"
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccjWE55M.s 			page 18
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 AnalogDelay.cpp
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:17     .text._ZN11AnalogDelayC2Ev:00000000 $t
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:26     .text._ZN11AnalogDelayC2Ev:00000000 _ZN11AnalogDelayC2Ev
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:59     .text._ZN11AnalogDelayC2Ev:0000002c $d
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:628    .sdram_bss:00000000 _ZL18delayBufferStorage
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:26     .text._ZN11AnalogDelayC2Ev:00000000 _ZN11AnalogDelayC1Ev
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:69     .text._ZN11AnalogDelayD2Ev:00000000 $t
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:77     .text._ZN11AnalogDelayD2Ev:00000000 _ZN11AnalogDelayD2Ev
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:77     .text._ZN11AnalogDelayD2Ev:00000000 _ZN11AnalogDelayD1Ev
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:93     .text._ZN11AnalogDelay4InitEf:00000000 $t
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:101    .text._ZN11AnalogDelay4InitEf:00000000 _ZN11AnalogDelay4InitEf
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:133    .text._ZN11AnalogDelay4InitEf:00000010 $d
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:139    .text._ZN11AnalogDelay11setFeedbackEf:00000000 $t
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:147    .text._ZN11AnalogDelay11setFeedbackEf:00000000 _ZN11AnalogDelay11setFeedbackEf
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:217    .text._ZN11AnalogDelay11setFeedbackEf:00000018 $d
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:223    .text._ZN11AnalogDelay6setMixEf:00000000 $t
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:231    .text._ZN11AnalogDelay6setMixEf:00000000 _ZN11AnalogDelay6setMixEf
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:300    .text._ZN11AnalogDelay6setMixEf:00000018 $d
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:305    .text._ZN11AnalogDelay12setDelayTimeEf:00000000 $t
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:313    .text._ZN11AnalogDelay12setDelayTimeEf:00000000 _ZN11AnalogDelay12setDelayTimeEf
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:382    .text._ZN11AnalogDelay12setDelayTimeEf:00000018 $d
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:387    .text._ZN11AnalogDelay7ProcessEf:00000000 $t
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:395    .text._ZN11AnalogDelay7ProcessEf:00000000 _ZN11AnalogDelay7ProcessEf
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:619    .text._ZN11AnalogDelay7ProcessEf:00000120 $d
+C:\Users\39351\AppData\Local\Temp\ccjWE55M.s:625    .sdram_bss:00000000 $d
+
+UNDEFINED SYMBOLS
+memset
