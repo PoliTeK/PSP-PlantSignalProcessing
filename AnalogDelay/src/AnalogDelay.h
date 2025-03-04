@@ -30,8 +30,7 @@ private:
     float _delayTime;         // Tempo di delay
     float _feedback;          // Quantità di feedback
     float _mix;              // Rapporto tra segnale originale e processato
-    float _currentDelayTime;  // Tempo di delay corrente
-    float _smoothingFactor;   // Fattore di smoothing per evitare click
+
     
     // Oggetti per il processing del segnale
     DelayLine<float, MAX_DELAY_TIME * 48000> _delayLine; // Linea di delay (48000 samples per secondo)

@@ -1,13 +1,16 @@
 #include "AnalogDelay.h" // Include l'header file della classe AnalogDelay
 
+// Coefficiente per lo smoothing del delay time
+// Valori più bassi producono uno smoothing più lento
+const float SMOOTH_COEFF = 0.00008f;
+
 // Costruttore: inizializza tutti i parametri dell'effetto delay con valori predefiniti
 AnalogDelay::AnalogDelay() : 
     _sampleRate(48000.0f),     // Frequenza di campionamento standard (48kHz)
     _delayTime(0.5f),          // Tempo di delay iniziale (500ms)
     _feedback(0.4f),           // Quantità di feedback iniziale (40%)
-    _mix(0.5f),               // Mix tra segnale dry/wet (50%)
-    _currentDelayTime(0.5f),   // Tempo di delay corrente per smoothing
-    _smoothingFactor(0.00005f) {} // Fattore di smoothing per cambiamenti graduali
+    _mix(0.5f) {}               // Mix tra segnale dry/wet (50%)
+
 
 AnalogDelay::~AnalogDelay() {} // Distruttore (vuoto)
 
@@ -18,9 +21,9 @@ void AnalogDelay::Init(float sampleRate) {
     _crossfade.Init();           // Inizializza il modulo di crossfade
 }
 
-// Imposta il livello di feedback con limit tra 0 e 0.97
+// Imposta il livello di feedback con limit tra 0 e 0.99
 void AnalogDelay::setFeedback(float feedback) {
-    _feedback = fclamp(feedback, 0.0f, 0.97f); // Limita il feedback per evitare auto-oscillazioni
+    _feedback = fclamp(feedback, 0.0f, 0.99f); // Limita il feedback per evitare auto-oscillazioni
 }
 
 // Imposta il mix tra segnale dry e wet (0 = solo dry, 1 = solo wet)
@@ -36,9 +39,9 @@ void AnalogDelay::setDelayTime(float delayTime) {
 
 // Processa un singolo campione audio
 float AnalogDelay::Process(float buffer_in) {
-    // Calcola gradualmente il nuovo tempo di delay per evitare artefatti audio
-    float deltaTime = _delayTime - _currentDelayTime;
-    _currentDelayTime += deltaTime * _smoothingFactor;
+    // Applica smoothing al tempo di delay usando fonepole
+    float currentDelayTime;
+    fonepole(currentDelayTime, _delayTime, SMOOTH_COEFF);
     
     // Converte il tempo di delay da secondi a campioni
     float delaySamples = _sampleRate * _currentDelayTime;

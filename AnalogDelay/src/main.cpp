@@ -54,10 +54,10 @@ void ReadControls() {
     // Applica la scala logaritmica al delay time
     delayTime = LogScale(knob3, MIN_DELAY, MAX_DELAY);
     
-    feedback = knob1 * 0.97f;
+    feedback = knob1 * 0.99f;
     mix = knob2;
 
-    // Rimuovi il vecchio codice del LED e sostituiscilo con:
+    // Aggiorna i parametri del led
     uint32_t now = System::GetNow();
     uint32_t blinkInterval = static_cast<uint32_t>(delayTime * 1000); // Converti in millisecondi
     
