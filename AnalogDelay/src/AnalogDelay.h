@@ -1,40 +1,39 @@
-#pragma once  // Direttiva che assicura che questo header file venga incluso una sola volta
+#pragma once  // Direttiva che assicura che questo header file sia incluso una sola volta
 
-// Inclusione degli header necessari per il funzionamento con Daisy
-#include "daisy_seed.h"    // Include il core della piattaforma Daisy
-#include "daisysp.h"       // Include la libreria DSP di Daisy
+// Inclusione delle librerie necessarie per il progetto Daisy
+#include "daisy_seed.h"    // Include le funzionalità base della scheda Daisy
+#include "daisysp.h"       // Include le funzionalità DSP di Daisy
 
-#define MAX_DELAY_TIME 1 // Tempo massimo di delay in secondi
+// Definizione della costante per il tempo massimo di delay in secondi
+#define MAX_DELAY_TIME 1 
 
 // Utilizzo dei namespace per semplificare la scrittura del codice
-using namespace daisy;     // Namespace per le funzionalità core di Daisy
+using namespace daisy;     // Namespace per le funzionalità Daisy
 using namespace daisysp;   // Namespace per le funzionalità DSP
 
 // Definizione della classe AnalogDelay
 class AnalogDelay {
 public:
-    AnalogDelay();         // Costruttore della classe
-    ~AnalogDelay();        // Distruttore della classe
+    AnalogDelay();        // Costruttore della classe
+    ~AnalogDelay();       // Distruttore della classe
 
-    // Metodi pubblici
-    void Init(float sampleRate);              // Inizializza il delay con il sample rate specificato
-    float Process(float buffer_in);           // Processa un singolo campione audio
-    void setFeedback(float feedback);         // Imposta il valore di feedback del delay
-    void setMix(float mix);                   // Imposta il mix tra segnale dry e wet
+    // Metodi pubblici della classe
+    void Init(float sampleRate);              // Inizializza il delay con il sample rate
+    float Process(float buffer_in);           // Processa il segnale in ingresso
+    void setFeedback(float feedback);         // Imposta il feedback del delay
+    void setMix(float mix);                   // Imposta il mix tra segnale dry/wet
     void setDelayTime(float delayTime);       // Imposta il tempo di delay
 
 private:
-    // Costanti
-    static const size_t _delayBufferSize = 48000 * MAX_DELAY_TIME;  // Dimensione del buffer di delay (1 secondo a 48kHz)
-    
     // Variabili membro private
-    float _sampleRate;         // Frequenza di campionamento
-    float _delayTime;          // Tempo di delay desiderato
-    float _feedback;           // Quantità di feedback del delay
-    float _mix;                // Bilanciamento tra segnale dry e wet
-    uint32_t _writePos;        // Posizione di scrittura nel buffer
-    float _readPos;            // Posizione di lettura nel buffer (float per interpolazione)
-    float _currentDelayTime;   // Tempo di delay corrente durante lo smoothing
-    float _smoothingFactor;    // Fattore per lo smoothing del tempo di delay
-    float* _delayBuffer;       // Puntatore al buffer circolare del delay
+    float _sampleRate;        // Frequenza di campionamento
+    float _delayTime;         // Tempo di delay
+    float _feedback;          // Quantità di feedback
+    float _mix;              // Rapporto tra segnale originale e processato
+    float _currentDelayTime;  // Tempo di delay corrente
+    float _smoothingFactor;   // Fattore di smoothing per evitare click
+    
+    // Oggetti per il processing del segnale
+    DelayLine<float, MAX_DELAY_TIME * 48000> _delayLine; // Linea di delay (48000 samples per secondo)
+    CrossFade _crossfade;     // Oggetto per il crossfade tra segnale dry e wet
 };

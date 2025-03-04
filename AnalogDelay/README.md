@@ -9,7 +9,6 @@ An analog-style delay effect for the Daisy platform.
 ### Features
 - Variable delay time 
 - Smooth delay time transitions 
-- Cubic interpolation 
 - Non-linear delay time control for precise adjustments
 - Feedback control 
 - Dry/Wet mix control
@@ -24,9 +23,7 @@ An analog-style delay effect for the Daisy platform.
 
 ## Controls
 - **Delay Time**: Logaritmic response curve
-  - First half: Exponential (50ms-525ms)
-  - Second half: Linear (525ms-1000ms)
-- **Feedback**: Controls the amount of delay signal fed back into the input
+- **Feedback**: Controls the amount of delay signal feedback into the input
 - **Mix**: Balances between dry (original) and wet (delayed) signal
 
 ## Next step
@@ -48,15 +45,16 @@ using namespace daisy;
 using namespace daisysp;
 
 DaisySeed  hw;
-AnalogDelay delay;
+AnalogDelay delayL;
+AnalogDelay delayR;
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
     for(size_t i = 0; i < size; i++)
     {
         // Process each channel through the delay
-        float wetL = delay.Process(in[0][i]);
-        float wetR = delay.Process(in[1][i]);
+        float wetL = delayL.Process(in[0][i]);
+        float wetR = delayR.Process(in[1][i]);
         
         // Output processed signal
         out[0][i] = wetL;
@@ -71,11 +69,17 @@ int main(void)
     hw.Init();
     hw.SetAudioBlockSize(4);
     
-    // Initialize delay
-    delay.Init(hw.AudioSampleRate());
-    delay.SetDelayTime(0.5f);  // 500ms delay
-    delay.SetFeedback(0.7f);   // 70% feedback
-    delay.SetMix(0.5f);        // 50/50 dry/wet mix
+    // Initialize left delay
+    delayL.Init(hw.AudioSampleRate());
+    delayL.SetDelayTime(0.5f);  // 500ms delay
+    delayL.SetFeedback(0.7f);   // 70% feedback
+    delayL.SetMix(0.5f);        // 50/50 dry/wet mix
+
+    // Initialize right delay
+    delayR.Init(hw.AudioSampleRate());
+    delayR.SetDelayTime(0.5f);  // 500ms delay
+    delayR.SetFeedback(0.7f);   // 70% feedback
+    delayR.SetMix(0.5f);        // 50/50 dry/wet mix
     
     // Start audio
     hw.StartAudio(AudioCallback);
