@@ -40,11 +40,11 @@ void AnalogDelay::setDelayTime(float delayTime) {
 // Processa un singolo campione audio
 float AnalogDelay::Process(float buffer_in) {
     // Applica smoothing al tempo di delay usando fonepole
-    float currentDelayTime;
+    float currentDelayTime = 0.0f;
     fonepole(currentDelayTime, _delayTime, SMOOTH_COEFF);
     
     // Converte il tempo di delay da secondi a campioni
-    float delaySamples = _sampleRate * _currentDelayTime;
+    float delaySamples = _sampleRate * currentDelayTime;
     
     // Legge il campione ritardato dalla linea di delay
     float delayed = _delayLine.Read(delaySamples);
