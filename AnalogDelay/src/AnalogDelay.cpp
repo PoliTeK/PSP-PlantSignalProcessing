@@ -3,6 +3,7 @@
 // Coefficiente per lo smoothing del delay time
 // Valori più bassi producono uno smoothing più lento
 const float SMOOTH_COEFF = 0.00008f;
+float currentDelayTime = 0.0f;
 
 // Costruttore: inizializza tutti i parametri dell'effetto delay con valori predefiniti
 AnalogDelay::AnalogDelay() : 
@@ -40,7 +41,6 @@ void AnalogDelay::setDelayTime(float delayTime) {
 // Processa un singolo campione audio
 float AnalogDelay::Process(float buffer_in) {
     // Applica smoothing al tempo di delay usando fonepole
-    float currentDelayTime = 0.0f;
     fonepole(currentDelayTime, _delayTime, SMOOTH_COEFF);
     
     // Converte il tempo di delay da secondi a campioni
