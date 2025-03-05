@@ -82,7 +82,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
     delay.setDelayTime(delayTime);      // Imposta il tempo di delay
     delay.setFeedback(feedback);        // Imposta il feedback
     delay.setMix(mix);                  // Imposta il mix
-    delay.setSmoothFactor(depth);              // Imposta la profondità del pitch shifter
+    delay.setDepth(depth);              // Imposta la profondità del pitch shifter
     
     // Processo audio per ogni campione
     for(size_t i = 0; i < size; i++) {
