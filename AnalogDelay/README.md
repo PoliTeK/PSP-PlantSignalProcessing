@@ -31,6 +31,7 @@ An analog-style delay effect for the Daisy platform.
 - Band pass filter
 - Memory usage optimization
 - Dub delay (Infinite feedback)
+- ✓ Depth control
 
 ## Usage
 

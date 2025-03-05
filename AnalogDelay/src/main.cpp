@@ -3,6 +3,8 @@
 #include "daisysp.h"    // Libreria DSP per Daisy
 #include "AnalogDelay.h" // Libreria custom per l'effetto delay analogico
 
+#define ADC_CH 4 // Numero di canali ADC da utilizzare
+
 // Utilizzo dei namespace per semplificare la scrittura del codice
 using namespace daisy;
 using namespace daisysp;
@@ -12,12 +14,13 @@ DaisySeed hw;           // Oggetto principale per gestire l'hardware Daisy
 AnalogDelay delay;      // Oggetto per gestire l'effetto delay
 
 
-AdcChannelConfig adcConfig[3]; // Array di configurazione per 3 canali ADC
+AdcChannelConfig adcConfig[ADC_CH]; // Array di configurazione per 3 canali ADC
 
 // Variabili per i parametri del delay
 float delayTime;  // Tempo del delay
 float feedback;   // Quantità di feedback del delay
 float mix;        // Mix tra segnale dry/wet
+float depth;      // Profondità del pitch shifter
 
 // Aggiungi queste variabili globali
 uint32_t lastBlink;     // Ultimo momento di cambio stato LED
@@ -29,7 +32,8 @@ void InitHardware() {
     adcConfig[0].InitSingle(hw.GetPin(15)); // Primo potenziometro
     adcConfig[1].InitSingle(hw.GetPin(16)); // Secondo potenziometro
     adcConfig[2].InitSingle(hw.GetPin(17)); // Terzo potenziometro
-    hw.adc.Init(adcConfig, 3);              // Inizializzazione ADC con 3 canali
+    adcConfig[3].InitSingle(hw.GetPin(18)); // Quarto potenziometro
+    hw.adc.Init(adcConfig, ADC_CH);              // Inizializzazione ADC con 3 canali
     hw.adc.Start();                         // Avvio della conversione ADC
 }
 
@@ -46,6 +50,7 @@ void ReadControls() {
     float knob1 = hw.adc.GetFloat(0);
     float knob2 = hw.adc.GetFloat(1);
     float knob3 = hw.adc.GetFloat(2);
+    float knob4 = hw.adc.GetFloat(3);
 
     // Nuova implementazione del controllo delay time
     const float MIN_DELAY = 0.02f;  // 20ms minimo delay
@@ -56,6 +61,9 @@ void ReadControls() {
     
     feedback = knob1 * 0.99f;
     mix = knob2;
+
+    depth = knob4;
+
 
     // Aggiorna i parametri del led
     uint32_t now = System::GetNow();
@@ -74,11 +82,11 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
     delay.setDelayTime(delayTime);      // Imposta il tempo di delay
     delay.setFeedback(feedback);        // Imposta il feedback
     delay.setMix(mix);                  // Imposta il mix
+    delay.setSmoothFactor(depth);              // Imposta la profondità del pitch shifter
     
     // Processo audio per ogni campione
     for(size_t i = 0; i < size; i++) {
         float inL = in[0][i];           // Canale sinistro input
-        float inR = in[1][i];           // Canale destro input
         
         float wetL = delay.Process(inL);
         
