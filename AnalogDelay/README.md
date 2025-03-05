@@ -12,6 +12,7 @@ An analog-style delay effect for the Daisy platform.
 - Non-linear delay time control for precise adjustments
 - Feedback control 
 - Dry/Wet mix control
+- Depth control
 
 ## Hardware Setup
 - **Daisy Seed** board
@@ -19,12 +20,14 @@ An analog-style delay effect for the Daisy platform.
   - Pin A0: Feedback control (0-90%)
   - Pin A1: Mix control (0-100%)
   - Pin A2: Delay time (50ms-1000ms)
+  - Pin A3: Depth control (0-100%)
   - Built-in Led blinking for delay timing
 
 ## Controls
 - **Delay Time**: Logaritmic response curve
 - **Feedback**: Controls the amount of delay signal feedback into the input
 - **Mix**: Balances between dry (original) and wet (delayed) signal
+- **Depth**: Pitch modulation
 
 ## Next step
 - ✓ LED indicators for delay timing
@@ -72,15 +75,17 @@ int main(void)
     
     // Initialize left delay
     delayL.Init(hw.AudioSampleRate());
-    delayL.SetDelayTime(0.5f);  // 500ms delay
-    delayL.SetFeedback(0.7f);   // 70% feedback
-    delayL.SetMix(0.5f);        // 50/50 dry/wet mix
+    delayL.setDelayTime(0.5f);  // 500ms delay
+    delayL.setFeedback(0.7f);   // 70% feedback
+    delayL.setMix(0.5f);        // 50/50 dry/wet mix
+    delayL.setDepth(0.1f)       // 10% di modulazione
 
     // Initialize right delay
     delayR.Init(hw.AudioSampleRate());
-    delayR.SetDelayTime(0.5f);  // 500ms delay
-    delayR.SetFeedback(0.7f);   // 70% feedback
-    delayR.SetMix(0.5f);        // 50/50 dry/wet mix
+    delayR.setDelayTime(0.5f);  // 500ms delay
+    delayR.setFeedback(0.7f);   // 70% feedback
+    delayR.setMix(0.5f);        // 50/50 dry/wet mix
+    delayR.setDepth(0.1f)       // 10% di modulazione
     
     // Start audio
     hw.StartAudio(AudioCallback);
