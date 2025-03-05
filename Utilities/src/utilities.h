@@ -18,17 +18,8 @@ public:
         LAST_RES,
     };
     
-    void init(float sample_rate){
-
-    
-
-        _sr        = sample_rate;
-        _sr_recip  = 1.0f / sample_rate;
-        _res_type  = 1;
-
-    }
-
-    float SmoothAnalogRead(unsigned int Pin, unsigned int res_type);
+    void init(float sample_rate);
+    float SmoothAnalogRead(unsigned int Pin, unsigned int res_type, daisy::DaisySeed& hw);
 
 private:
     /* data */
