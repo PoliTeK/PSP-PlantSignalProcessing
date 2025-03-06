@@ -2,6 +2,7 @@
 #include "daisy_seed.h" // Libreria principale per la scheda Daisy Seed
 #include "daisysp.h"    // Libreria DSP per Daisy
 #include "AnalogDelay.h" // Libreria custom per l'effetto delay analogico
+#include "../../Utilities/src/Utilities.h" // Libreria custom per le utility
 
 #define ADC_CH 4 // Numero di canali ADC da utilizzare
 
@@ -12,6 +13,8 @@ using namespace daisysp;
 // Dichiarazione delle variabili globali
 DaisySeed hw;           // Oggetto principale per gestire l'hardware Daisy
 AnalogDelay delay;      // Oggetto per gestire l'effetto delay
+
+Utilities util;         // Oggetto per gestire le utility
 
 
 AdcChannelConfig adcConfig[ADC_CH]; // Array di configurazione per 3 canali ADC
@@ -47,7 +50,7 @@ float LogScale(float pos, float min_value, float max_value) {
 }
 
 void ReadControls() {
-    float knob1 = hw.adc.GetFloat(0);
+    float knob1 = util.SmoothAnalogRead(0, Utilities::LOW_RES, hw);
     float knob2 = hw.adc.GetFloat(1);
     float knob3 = hw.adc.GetFloat(2);
     float knob4 = hw.adc.GetFloat(3);
@@ -110,6 +113,7 @@ int main() {
     ledState = false;
 
     delay.Init(hw.AudioSampleRate()); // Inizializza il delay con il sample rate corrente
+    util.init(hw.AudioSampleRate()); // Inizializza le utility con il sample rate corrente
 
     hw.StartAudio(AudioCallback); // Avvia il processamento audio
 

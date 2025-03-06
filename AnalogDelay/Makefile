@@ -2,7 +2,7 @@
 TARGET = AnalogDelay
 
 # Sources
-CPP_SOURCES = src/main.cpp src/AnalogDelay.cpp
+CPP_SOURCES = src/main.cpp src/AnalogDelay.cpp ../Utilities/src/Utilities.cpp
 
 # Library Locations
 LIBDAISY_DIR = ../libDaisy

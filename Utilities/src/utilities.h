@@ -3,12 +3,12 @@
 #include "daisy_seed.h"    // Include le funzionalità base della scheda Daisy
 #include "daisysp.h"
 
-class utilities
+class Utilities
 {
 
 public:
-    utilities() {};
-    ~utilities() {};
+    Utilities();
+    ~Utilities();
 
     enum
     {
@@ -19,7 +19,7 @@ public:
     };
     
     void init(float sample_rate);
-    float SmoothAnalogRead(unsigned int Pin, unsigned int res_type, daisy::DaisySeed& hw);
+    float SmoothAnalogRead(unsigned int ADC_Channel, unsigned int res_type, daisy::DaisySeed& hw);
 
 private:
     /* data */

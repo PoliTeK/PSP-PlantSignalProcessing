@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   34              		@ link register save eliminated.
   35              	.LBB160:
   36              	.LBI160:
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 2
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 2
 
 
   37              		.file 2 "../libDaisy/src/dev/codec_ak4556.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   27:../libDaisy/src/sys/system.h ****             FREQ_400MHZ,
   28:../libDaisy/src/sys/system.h ****             FREQ_480MHZ,
   29:../libDaisy/src/sys/system.h ****         };
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 3
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 3
 
 
   30:../libDaisy/src/sys/system.h **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   84:../libDaisy/src/sys/system.h ****         } status;
   85:../libDaisy/src/sys/system.h ****         uint32_t data;
   86:../libDaisy/src/sys/system.h ****         enum class Version : uint32_t
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 4
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 4
 
 
   87:../libDaisy/src/sys/system.h ****         {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   38:../libDaisy/src/hid/usb.h ****     typedef void (*ReceiveCallback)(uint8_t* buff, uint32_t* len);
   39:../libDaisy/src/hid/usb.h **** 
   40:../libDaisy/src/hid/usb.h ****     UsbHandle() {}
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 5
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 5
 
 
   41:../libDaisy/src/hid/usb.h **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   47:../libDaisy/src/per/adc.h ****         SPEED_8CYCLES_5,
   48:../libDaisy/src/per/adc.h ****         SPEED_16CYCLES_5,
   49:../libDaisy/src/per/adc.h ****         SPEED_32CYCLES_5,
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 6
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 6
 
 
   50:../libDaisy/src/per/adc.h ****         SPEED_64CYCLES_5,
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  104:../libDaisy/src/per/adc.h ****         OVS_512,  /**< & */
  105:../libDaisy/src/per/adc.h ****         OVS_1024, /**< & */
  106:../libDaisy/src/per/adc.h ****         OVS_LAST, /**< & */
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 7
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 7
 
 
  107:../libDaisy/src/per/adc.h ****     };
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   45:../libDaisy/src/hid/audio.h ****     enum class Result
   46:../libDaisy/src/hid/audio.h ****     {
   47:../libDaisy/src/hid/audio.h ****         OK,
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 8
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 8
 
 
   48:../libDaisy/src/hid/audio.h ****         ERR,
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   76              		.syntax unified
   77              		.thumb
   78              		.thumb_func
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 9
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 9
 
 
   79              		.fpu fpv5-d16
@@ -489,58 +489,61 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
    2:src/main.cpp  **** #include "daisy_seed.h" // Libreria principale per la scheda Daisy Seed
    3:src/main.cpp  **** #include "daisysp.h"    // Libreria DSP per Daisy
    4:src/main.cpp  **** #include "AnalogDelay.h" // Libreria custom per l'effetto delay analogico
-   5:src/main.cpp  **** 
-   6:src/main.cpp  **** #define ADC_CH 4 // Numero di canali ADC da utilizzare
-   7:src/main.cpp  **** 
-   8:src/main.cpp  **** // Utilizzo dei namespace per semplificare la scrittura del codice
-   9:src/main.cpp  **** using namespace daisy;
-  10:src/main.cpp  **** using namespace daisysp;
-  11:src/main.cpp  **** 
-  12:src/main.cpp  **** // Dichiarazione delle variabili globali
-  13:src/main.cpp  **** DaisySeed hw;           // Oggetto principale per gestire l'hardware Daisy
-  14:src/main.cpp  **** AnalogDelay delay;      // Oggetto per gestire l'effetto delay
-  15:src/main.cpp  **** 
+   5:src/main.cpp  **** #include "../../Utilities/src/Utilities.h" // Libreria custom per le utility
+   6:src/main.cpp  **** 
+   7:src/main.cpp  **** #define ADC_CH 4 // Numero di canali ADC da utilizzare
+   8:src/main.cpp  **** 
+   9:src/main.cpp  **** // Utilizzo dei namespace per semplificare la scrittura del codice
+  10:src/main.cpp  **** using namespace daisy;
+  11:src/main.cpp  **** using namespace daisysp;
+  12:src/main.cpp  **** 
+  13:src/main.cpp  **** // Dichiarazione delle variabili globali
+  14:src/main.cpp  **** DaisySeed hw;           // Oggetto principale per gestire l'hardware Daisy
+  15:src/main.cpp  **** AnalogDelay delay;      // Oggetto per gestire l'effetto delay
   16:src/main.cpp  **** 
-  17:src/main.cpp  **** AdcChannelConfig adcConfig[ADC_CH]; // Array di configurazione per 3 canali ADC
+  17:src/main.cpp  **** Utilities util;         // Oggetto per gestire le utility
   18:src/main.cpp  **** 
-  19:src/main.cpp  **** // Variabili per i parametri del delay
-  20:src/main.cpp  **** float delayTime;  // Tempo del delay
-  21:src/main.cpp  **** float feedback;   // Quantità di feedback del delay
-  22:src/main.cpp  **** float mix;        // Mix tra segnale dry/wet
-  23:src/main.cpp  **** float depth;      // Profondità del pitch shifter
-  24:src/main.cpp  **** 
-  25:src/main.cpp  **** // Aggiungi queste variabili globali
-  26:src/main.cpp  **** uint32_t lastBlink;     // Ultimo momento di cambio stato LED
-  27:src/main.cpp  **** bool ledState;          // Stato corrente del LED
-  28:src/main.cpp  **** 
-  29:src/main.cpp  **** void InitHardware() {
-  84              		.loc 7 29 21 is_stmt 1 view -0
+  19:src/main.cpp  **** 
+  20:src/main.cpp  **** AdcChannelConfig adcConfig[ADC_CH]; // Array di configurazione per 3 canali ADC
+  21:src/main.cpp  **** 
+  22:src/main.cpp  **** // Variabili per i parametri del delay
+  23:src/main.cpp  **** float delayTime;  // Tempo del delay
+  24:src/main.cpp  **** float feedback;   // Quantità di feedback del delay
+  25:src/main.cpp  **** float mix;        // Mix tra segnale dry/wet
+  26:src/main.cpp  **** float depth;      // Profondità del pitch shifter
+  27:src/main.cpp  **** 
+  28:src/main.cpp  **** // Aggiungi queste variabili globali
+  29:src/main.cpp  **** uint32_t lastBlink;     // Ultimo momento di cambio stato LED
+  30:src/main.cpp  **** bool ledState;          // Stato corrente del LED
+  31:src/main.cpp  **** 
+  32:src/main.cpp  **** void InitHardware() {
+  84              		.loc 7 32 21 is_stmt 1 view -0
   85              		.cfi_startproc
   86              		@ args = 0, pretend = 0, frame = 16
   87              		@ frame_needed = 0, uses_anonymous_args = 0
-  30:src/main.cpp  ****     
-  31:src/main.cpp  ****     // Inizializzazione dei tre pin ADC per i potenziometri
-  32:src/main.cpp  ****     adcConfig[0].InitSingle(hw.GetPin(15)); // Primo potenziometro
-  88              		.loc 7 32 5 view .LVU13
-  29:src/main.cpp  ****     
-  89              		.loc 7 29 21 is_stmt 0 view .LVU14
+  33:src/main.cpp  ****     
+  34:src/main.cpp  ****     // Inizializzazione dei tre pin ADC per i potenziometri
+  35:src/main.cpp  ****     adcConfig[0].InitSingle(hw.GetPin(15)); // Primo potenziometro
+  88              		.loc 7 35 5 view .LVU13
+  32:src/main.cpp  ****     
+  89              		.loc 7 32 21 is_stmt 0 view .LVU14
   90 0000 30B5     		push	{r4, r5, lr}
   91              		.cfi_def_cfa_offset 12
   92              		.cfi_offset 4, -12
   93              		.cfi_offset 5, -8
   94              		.cfi_offset 14, -4
-  95              		.loc 7 32 28 view .LVU15
+  95              		.loc 7 35 28 view .LVU15
   96 0002 0F20     		movs	r0, #15
-  29:src/main.cpp  ****     
-  97              		.loc 7 29 21 view .LVU16
+  32:src/main.cpp  ****     
+  97              		.loc 7 32 21 view .LVU16
   98 0004 85B0     		sub	sp, sp, #20
   99              		.cfi_def_cfa_offset 32
- 100              		.loc 7 32 28 view .LVU17
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 10
+
+
+ 100              		.loc 7 35 28 view .LVU17
  101 0006 FFF7FEFF 		bl	_ZN5daisy9DaisySeed6GetPinEh
  102              	.LVL1:
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 10
-
-
  103 000a 0346     		mov	r3, r0	@ movhi
  104 000c 1A4C     		ldr	r4, .L5
  105 000e 0222     		movs	r2, #2
@@ -549,9 +552,9 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  108 0016 2046     		mov	r0, r4
  109 0018 FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleENS_3PinENS0_15ConversionSpeedE
  110              	.LVL2:
-  33:src/main.cpp  ****     adcConfig[1].InitSingle(hw.GetPin(16)); // Secondo potenziometro
- 111              		.loc 7 33 5 is_stmt 1 view .LVU18
- 112              		.loc 7 33 28 is_stmt 0 view .LVU19
+  36:src/main.cpp  ****     adcConfig[1].InitSingle(hw.GetPin(16)); // Secondo potenziometro
+ 111              		.loc 7 36 5 is_stmt 1 view .LVU18
+ 112              		.loc 7 36 28 is_stmt 0 view .LVU19
  113 001c 1020     		movs	r0, #16
  114 001e FFF7FEFF 		bl	_ZN5daisy9DaisySeed6GetPinEh
  115              	.LVL3:
@@ -559,19 +562,19 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  117 0026 0199     		ldr	r1, [sp, #4]
  118 0028 0222     		movs	r2, #2
  119 002a 04F15400 		add	r0, r4, #84
-  34:src/main.cpp  ****     adcConfig[2].InitSingle(hw.GetPin(17)); // Terzo potenziometro
-  35:src/main.cpp  ****     adcConfig[3].InitSingle(hw.GetPin(18)); // Quarto potenziometro
-  36:src/main.cpp  ****     hw.adc.Init(adcConfig, ADC_CH);              // Inizializzazione ADC con 3 canali
- 120              		.loc 7 36 16 view .LVU20
+  37:src/main.cpp  ****     adcConfig[2].InitSingle(hw.GetPin(17)); // Terzo potenziometro
+  38:src/main.cpp  ****     adcConfig[3].InitSingle(hw.GetPin(18)); // Quarto potenziometro
+  39:src/main.cpp  ****     hw.adc.Init(adcConfig, ADC_CH);              // Inizializzazione ADC con 3 canali
+ 120              		.loc 7 39 16 view .LVU20
  121 002e 134D     		ldr	r5, .L5+4
-  33:src/main.cpp  ****     adcConfig[1].InitSingle(hw.GetPin(16)); // Secondo potenziometro
- 122              		.loc 7 33 28 view .LVU21
+  36:src/main.cpp  ****     adcConfig[1].InitSingle(hw.GetPin(16)); // Secondo potenziometro
+ 122              		.loc 7 36 28 view .LVU21
  123 0030 FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleENS_3PinENS0_15ConversionSpeedE
  124              	.LVL4:
-  34:src/main.cpp  ****     adcConfig[2].InitSingle(hw.GetPin(17)); // Terzo potenziometro
- 125              		.loc 7 34 5 is_stmt 1 view .LVU22
-  34:src/main.cpp  ****     adcConfig[2].InitSingle(hw.GetPin(17)); // Terzo potenziometro
- 126              		.loc 7 34 28 is_stmt 0 view .LVU23
+  37:src/main.cpp  ****     adcConfig[2].InitSingle(hw.GetPin(17)); // Terzo potenziometro
+ 125              		.loc 7 37 5 is_stmt 1 view .LVU22
+  37:src/main.cpp  ****     adcConfig[2].InitSingle(hw.GetPin(17)); // Terzo potenziometro
+ 126              		.loc 7 37 28 is_stmt 0 view .LVU23
  127 0034 1120     		movs	r0, #17
  128 0036 FFF7FEFF 		bl	_ZN5daisy9DaisySeed6GetPinEh
  129              	.LVL5:
@@ -581,10 +584,10 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  133 0042 04F1A800 		add	r0, r4, #168
  134 0046 FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleENS_3PinENS0_15ConversionSpeedE
  135              	.LVL6:
-  35:src/main.cpp  ****     hw.adc.Init(adcConfig, ADC_CH);              // Inizializzazione ADC con 3 canali
- 136              		.loc 7 35 5 is_stmt 1 view .LVU24
-  35:src/main.cpp  ****     hw.adc.Init(adcConfig, ADC_CH);              // Inizializzazione ADC con 3 canali
- 137              		.loc 7 35 28 is_stmt 0 view .LVU25
+  38:src/main.cpp  ****     hw.adc.Init(adcConfig, ADC_CH);              // Inizializzazione ADC con 3 canali
+ 136              		.loc 7 38 5 is_stmt 1 view .LVU24
+  38:src/main.cpp  ****     hw.adc.Init(adcConfig, ADC_CH);              // Inizializzazione ADC con 3 canali
+ 137              		.loc 7 38 28 is_stmt 0 view .LVU25
  138 004a 1220     		movs	r0, #18
  139 004c FFF7FEFF 		bl	_ZN5daisy9DaisySeed6GetPinEh
  140              	.LVL7:
@@ -594,23 +597,23 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  144 005a 0222     		movs	r2, #2
  145 005c FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleENS_3PinENS0_15ConversionSpeedE
  146              	.LVL8:
- 147              		.loc 7 36 5 is_stmt 1 view .LVU26
- 148              		.loc 7 36 16 is_stmt 0 view .LVU27
+ 147              		.loc 7 39 5 is_stmt 1 view .LVU26
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 11
+
+
+ 148              		.loc 7 39 16 is_stmt 0 view .LVU27
  149 0060 0423     		movs	r3, #4
  150 0062 2846     		mov	r0, r5
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 11
-
-
  151 0064 2146     		mov	r1, r4
  152 0066 1A46     		mov	r2, r3
  153 0068 FFF7FEFF 		bl	_ZN5daisy9AdcHandle4InitEPNS_16AdcChannelConfigEjNS0_12OverSamplingE
  154              	.LVL9:
-  37:src/main.cpp  ****     hw.adc.Start();                         // Avvio della conversione ADC
- 155              		.loc 7 37 5 is_stmt 1 view .LVU28
- 156              		.loc 7 37 17 is_stmt 0 view .LVU29
+  40:src/main.cpp  ****     hw.adc.Start();                         // Avvio della conversione ADC
+ 155              		.loc 7 40 5 is_stmt 1 view .LVU28
+ 156              		.loc 7 40 17 is_stmt 0 view .LVU29
  157 006c 2846     		mov	r0, r5
-  38:src/main.cpp  **** }
- 158              		.loc 7 38 1 view .LVU30
+  41:src/main.cpp  **** }
+ 158              		.loc 7 41 1 view .LVU30
  159 006e 05B0     		add	sp, sp, #20
  160              		.cfi_def_cfa_offset 12
  161              		@ sp needed
@@ -619,8 +622,8 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  164              		.cfi_restore 5
  165              		.cfi_restore 4
  166              		.cfi_def_cfa_offset 0
-  37:src/main.cpp  ****     hw.adc.Start();                         // Avvio della conversione ADC
- 167              		.loc 7 37 17 view .LVU31
+  40:src/main.cpp  ****     hw.adc.Start();                         // Avvio della conversione ADC
+ 167              		.loc 7 40 17 view .LVU31
  168 0074 FFF7FEBF 		b	_ZN5daisy9AdcHandle5StartEv
  169              	.LVL10:
  170              	.L6:
@@ -641,65 +644,65 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  187              	_Z8LogScalefff:
  188              	.LVL11:
  189              	.LFB4818:
-  39:src/main.cpp  **** 
-  40:src/main.cpp  **** // Aggiungi questa funzione di utility prima di ReadControls()
-  41:src/main.cpp  **** float LogScale(float pos, float min_value, float max_value) {
- 190              		.loc 7 41 61 is_stmt 1 view -0
+  42:src/main.cpp  **** 
+  43:src/main.cpp  **** // Aggiungi questa funzione di utility prima di ReadControls()
+  44:src/main.cpp  **** float LogScale(float pos, float min_value, float max_value) {
+ 190              		.loc 7 44 61 is_stmt 1 view -0
  191              		.cfi_startproc
  192              		@ args = 0, pretend = 0, frame = 0
  193              		@ frame_needed = 0, uses_anonymous_args = 0
-  42:src/main.cpp  ****     // Implementa una scala logaritmica tra min_value e max_value
-  43:src/main.cpp  ****     float min_log = logf(min_value);
- 194              		.loc 7 43 5 view .LVU33
-  41:src/main.cpp  ****     // Implementa una scala logaritmica tra min_value e max_value
- 195              		.loc 7 41 61 is_stmt 0 view .LVU34
+  45:src/main.cpp  ****     // Implementa una scala logaritmica tra min_value e max_value
+  46:src/main.cpp  ****     float min_log = logf(min_value);
+ 194              		.loc 7 46 5 view .LVU33
+  44:src/main.cpp  ****     // Implementa una scala logaritmica tra min_value e max_value
+ 195              		.loc 7 44 61 is_stmt 0 view .LVU34
  196 0000 08B5     		push	{r3, lr}
  197              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 12
+
+
  198              		.cfi_offset 3, -8
  199              		.cfi_offset 14, -4
  200 0002 2DED048B 		vpush.64	{d8, d9}
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 12
-
-
  201              		.cfi_def_cfa_offset 24
  202              		.cfi_offset 80, -24
  203              		.cfi_offset 81, -20
  204              		.cfi_offset 82, -16
  205              		.cfi_offset 83, -12
-  41:src/main.cpp  ****     // Implementa una scala logaritmica tra min_value e max_value
- 206              		.loc 7 41 61 view .LVU35
+  44:src/main.cpp  ****     // Implementa una scala logaritmica tra min_value e max_value
+ 206              		.loc 7 44 61 view .LVU35
  207 0006 B0EE419A 		vmov.f32	s18, s2
  208 000a F0EE408A 		vmov.f32	s17, s0
- 209              		.loc 7 43 25 view .LVU36
+ 209              		.loc 7 46 25 view .LVU36
  210 000e B0EE600A 		vmov.f32	s0, s1
  211              	.LVL12:
- 212              		.loc 7 43 25 view .LVU37
+ 212              		.loc 7 46 25 view .LVU37
  213 0012 FFF7FEFF 		bl	logf
  214              	.LVL13:
- 215              		.loc 7 43 25 view .LVU38
+ 215              		.loc 7 46 25 view .LVU38
  216 0016 B0EE408A 		vmov.f32	s16, s0
-  44:src/main.cpp  ****     float max_log = logf(max_value);
- 217              		.loc 7 44 25 view .LVU39
+  47:src/main.cpp  ****     float max_log = logf(max_value);
+ 217              		.loc 7 47 25 view .LVU39
  218 001a B0EE490A 		vmov.f32	s0, s18
  219              	.LVL14:
- 220              		.loc 7 44 5 is_stmt 1 view .LVU40
- 221              		.loc 7 44 25 is_stmt 0 view .LVU41
+ 220              		.loc 7 47 5 is_stmt 1 view .LVU40
+ 221              		.loc 7 47 25 is_stmt 0 view .LVU41
  222 001e FFF7FEFF 		bl	logf
  223              	.LVL15:
-  45:src/main.cpp  ****     float exp_scale = min_log + (max_log - min_log) * pos;
- 224              		.loc 7 45 5 is_stmt 1 view .LVU42
- 225              		.loc 7 45 42 is_stmt 0 view .LVU43
+  48:src/main.cpp  ****     float exp_scale = min_log + (max_log - min_log) * pos;
+ 224              		.loc 7 48 5 is_stmt 1 view .LVU42
+ 225              		.loc 7 48 42 is_stmt 0 view .LVU43
  226 0022 30EE480A 		vsub.f32	s0, s0, s16
  227              	.LVL16:
-  46:src/main.cpp  ****     return expf(exp_scale);
- 228              		.loc 7 46 5 is_stmt 1 view .LVU44
- 229              		.loc 7 46 16 is_stmt 0 view .LVU45
+  49:src/main.cpp  ****     return expf(exp_scale);
+ 228              		.loc 7 49 5 is_stmt 1 view .LVU44
+ 229              		.loc 7 49 16 is_stmt 0 view .LVU45
  230 0026 A0EE288A 		vfma.f32	s16, s0, s17
  231              	.LVL17:
- 232              		.loc 7 46 16 view .LVU46
+ 232              		.loc 7 49 16 view .LVU46
  233 002a B0EE480A 		vmov.f32	s0, s16
-  47:src/main.cpp  **** }
- 234              		.loc 7 47 1 view .LVU47
+  50:src/main.cpp  **** }
+ 234              		.loc 7 50 1 view .LVU47
  235 002e BDEC048B 		vldm	sp!, {d8-d9}
  236              		.cfi_restore 82
  237              		.cfi_restore 83
@@ -707,20 +710,20 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  239              		.cfi_restore 81
  240              		.cfi_def_cfa_offset 8
  241              	.LVL18:
- 242              		.loc 7 47 1 view .LVU48
+ 242              		.loc 7 50 1 view .LVU48
  243 0032 BDE80840 		pop	{r3, lr}
  244              		.cfi_restore 14
  245              		.cfi_restore 3
  246              		.cfi_def_cfa_offset 0
-  46:src/main.cpp  ****     return expf(exp_scale);
- 247              		.loc 7 46 16 view .LVU49
+  49:src/main.cpp  ****     return expf(exp_scale);
+ 247              		.loc 7 49 16 view .LVU49
  248 0036 FFF7FEBF 		b	expf
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 13
+
+
  249              	.LVL19:
-  46:src/main.cpp  ****     return expf(exp_scale);
- 250              		.loc 7 46 16 view .LVU50
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 13
-
-
+  49:src/main.cpp  ****     return expf(exp_scale);
+ 250              		.loc 7 49 16 view .LVU50
  251              		.cfi_endproc
  252              	.LFE4818:
  254 003a 00BF     		.section	.text._Z12ReadControlsv,"ax",%progbits
@@ -733,634 +736,651 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  261              		.fpu fpv5-d16
  263              	_Z12ReadControlsv:
  264              	.LFB4819:
-  48:src/main.cpp  **** 
-  49:src/main.cpp  **** void ReadControls() {
- 265              		.loc 7 49 21 is_stmt 1 view -0
+  51:src/main.cpp  **** 
+  52:src/main.cpp  **** void ReadControls() {
+ 265              		.loc 7 52 21 is_stmt 1 view -0
  266              		.cfi_startproc
  267              		@ args = 0, pretend = 0, frame = 0
  268              		@ frame_needed = 0, uses_anonymous_args = 0
-  50:src/main.cpp  ****     float knob1 = hw.adc.GetFloat(0);
- 269              		.loc 7 50 5 view .LVU52
-  49:src/main.cpp  ****     float knob1 = hw.adc.GetFloat(0);
- 270              		.loc 7 49 21 is_stmt 0 view .LVU53
- 271 0000 38B5     		push	{r3, r4, r5, lr}
- 272              		.cfi_def_cfa_offset 16
- 273              		.cfi_offset 3, -16
- 274              		.cfi_offset 4, -12
- 275              		.cfi_offset 5, -8
- 276              		.cfi_offset 14, -4
- 277              		.loc 7 50 34 view .LVU54
- 278 0002 0021     		movs	r1, #0
- 279 0004 2948     		ldr	r0, .L13
-  51:src/main.cpp  ****     float knob2 = hw.adc.GetFloat(1);
-  52:src/main.cpp  ****     float knob3 = hw.adc.GetFloat(2);
-  53:src/main.cpp  ****     float knob4 = hw.adc.GetFloat(3);
-  54:src/main.cpp  **** 
-  55:src/main.cpp  ****     // Nuova implementazione del controllo delay time
-  56:src/main.cpp  ****     const float MIN_DELAY = 0.02f;  // 20ms minimo delay
-  57:src/main.cpp  ****     const float MAX_DELAY = 1.0f;   // 1000ms massimo delay
-  58:src/main.cpp  ****     
-  59:src/main.cpp  ****     // Applica la scala logaritmica al delay time
-  60:src/main.cpp  ****     delayTime = LogScale(knob3, MIN_DELAY, MAX_DELAY);
- 280              		.loc 7 60 15 view .LVU55
- 281 0006 2A4C     		ldr	r4, .L13+4
+  53:src/main.cpp  ****     float knob1 = util.SmoothAnalogRead(0, Utilities::LOW_RES, hw);
+ 269              		.loc 7 53 5 view .LVU52
+ 270              		.loc 7 53 40 is_stmt 0 view .LVU53
+ 271 0000 0022     		movs	r2, #0
+ 272 0002 2B48     		ldr	r0, .L13
+  52:src/main.cpp  ****     float knob1 = util.SmoothAnalogRead(0, Utilities::LOW_RES, hw);
+ 273              		.loc 7 52 21 view .LVU54
+ 274 0004 38B5     		push	{r3, r4, r5, lr}
+ 275              		.cfi_def_cfa_offset 16
+ 276              		.cfi_offset 3, -16
+ 277              		.cfi_offset 4, -12
+ 278              		.cfi_offset 5, -8
+ 279              		.cfi_offset 14, -4
+ 280              		.loc 7 53 40 view .LVU55
+ 281 0006 1146     		mov	r1, r2
+ 282 0008 2A4B     		ldr	r3, .L13+4
+  54:src/main.cpp  ****     float knob2 = hw.adc.GetFloat(1);
+  55:src/main.cpp  ****     float knob3 = hw.adc.GetFloat(2);
+  56:src/main.cpp  ****     float knob4 = hw.adc.GetFloat(3);
+  57:src/main.cpp  **** 
+  58:src/main.cpp  ****     // Nuova implementazione del controllo delay time
+  59:src/main.cpp  ****     const float MIN_DELAY = 0.02f;  // 20ms minimo delay
+  60:src/main.cpp  ****     const float MAX_DELAY = 1.0f;   // 1000ms massimo delay
   61:src/main.cpp  ****     
-  62:src/main.cpp  ****     feedback = knob1 * 0.99f;
-  63:src/main.cpp  ****     mix = knob2;
-  64:src/main.cpp  **** 
-  65:src/main.cpp  ****     depth = knob4;
-  66:src/main.cpp  **** 
+  62:src/main.cpp  ****     // Applica la scala logaritmica al delay time
+  63:src/main.cpp  ****     delayTime = LogScale(knob3, MIN_DELAY, MAX_DELAY);
+ 283              		.loc 7 63 15 view .LVU56
+ 284 000a 2B4C     		ldr	r4, .L13+8
+  64:src/main.cpp  ****     
+  65:src/main.cpp  ****     feedback = knob1 * 0.99f;
+  66:src/main.cpp  ****     mix = knob2;
   67:src/main.cpp  **** 
-  68:src/main.cpp  ****     // Aggiorna i parametri del led
-  69:src/main.cpp  ****     uint32_t now = System::GetNow();
-  70:src/main.cpp  ****     uint32_t blinkInterval = static_cast<uint32_t>(delayTime * 1000); // Converti in millisecondi
-  71:src/main.cpp  ****     
-  72:src/main.cpp  ****     if(now - lastBlink >= blinkInterval) {
- 282              		.loc 7 72 12 view .LVU56
- 283 0008 2A4D     		ldr	r5, .L13+8
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 14
+  68:src/main.cpp  ****     depth = knob4;
+  69:src/main.cpp  **** 
+  70:src/main.cpp  **** 
+  71:src/main.cpp  ****     // Aggiorna i parametri del led
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 14
 
 
-  49:src/main.cpp  ****     float knob1 = hw.adc.GetFloat(0);
- 284              		.loc 7 49 21 view .LVU57
- 285 000a 2DED048B 		vpush.64	{d8, d9}
- 286              		.cfi_def_cfa_offset 32
- 287              		.cfi_offset 80, -32
- 288              		.cfi_offset 81, -28
- 289              		.cfi_offset 82, -24
- 290              		.cfi_offset 83, -20
-  50:src/main.cpp  ****     float knob2 = hw.adc.GetFloat(1);
- 291              		.loc 7 50 34 view .LVU58
- 292 000e FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
- 293              	.LVL20:
-  51:src/main.cpp  ****     float knob3 = hw.adc.GetFloat(2);
- 294              		.loc 7 51 34 view .LVU59
- 295 0012 0121     		movs	r1, #1
- 296 0014 2548     		ldr	r0, .L13
-  50:src/main.cpp  ****     float knob2 = hw.adc.GetFloat(1);
- 297              		.loc 7 50 34 view .LVU60
- 298 0016 B0EE408A 		vmov.f32	s16, s0
- 299              	.LVL21:
-  51:src/main.cpp  ****     float knob3 = hw.adc.GetFloat(2);
- 300              		.loc 7 51 5 is_stmt 1 view .LVU61
-  51:src/main.cpp  ****     float knob3 = hw.adc.GetFloat(2);
- 301              		.loc 7 51 34 is_stmt 0 view .LVU62
- 302 001a FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
- 303              	.LVL22:
-  52:src/main.cpp  ****     float knob4 = hw.adc.GetFloat(3);
- 304              		.loc 7 52 34 view .LVU63
- 305 001e 0221     		movs	r1, #2
- 306 0020 2248     		ldr	r0, .L13
-  51:src/main.cpp  ****     float knob3 = hw.adc.GetFloat(2);
- 307              		.loc 7 51 34 view .LVU64
- 308 0022 B0EE409A 		vmov.f32	s18, s0
- 309              	.LVL23:
-  52:src/main.cpp  ****     float knob4 = hw.adc.GetFloat(3);
- 310              		.loc 7 52 5 is_stmt 1 view .LVU65
-  52:src/main.cpp  ****     float knob4 = hw.adc.GetFloat(3);
- 311              		.loc 7 52 34 is_stmt 0 view .LVU66
- 312 0026 FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
- 313              	.LVL24:
-  53:src/main.cpp  **** 
- 314              		.loc 7 53 34 view .LVU67
- 315 002a 0321     		movs	r1, #3
- 316 002c 1F48     		ldr	r0, .L13
-  52:src/main.cpp  ****     float knob4 = hw.adc.GetFloat(3);
- 317              		.loc 7 52 34 view .LVU68
- 318 002e F0EE409A 		vmov.f32	s19, s0
- 319              	.LVL25:
-  53:src/main.cpp  **** 
- 320              		.loc 7 53 5 is_stmt 1 view .LVU69
-  53:src/main.cpp  **** 
- 321              		.loc 7 53 34 is_stmt 0 view .LVU70
- 322 0032 FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
- 323              	.LVL26:
- 324              	.LBB167:
- 325              	.LBB168:
-  45:src/main.cpp  ****     return expf(exp_scale);
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 15
+  72:src/main.cpp  ****     uint32_t now = System::GetNow();
+  73:src/main.cpp  ****     uint32_t blinkInterval = static_cast<uint32_t>(delayTime * 1000); // Converti in millisecondi
+  74:src/main.cpp  ****     
+  75:src/main.cpp  ****     if(now - lastBlink >= blinkInterval) {
+ 285              		.loc 7 75 12 view .LVU57
+ 286 000c 2B4D     		ldr	r5, .L13+12
+  52:src/main.cpp  ****     float knob1 = util.SmoothAnalogRead(0, Utilities::LOW_RES, hw);
+ 287              		.loc 7 52 21 view .LVU58
+ 288 000e 2DED048B 		vpush.64	{d8, d9}
+ 289              		.cfi_def_cfa_offset 32
+ 290              		.cfi_offset 80, -32
+ 291              		.cfi_offset 81, -28
+ 292              		.cfi_offset 82, -24
+ 293              		.cfi_offset 83, -20
+  53:src/main.cpp  ****     float knob2 = hw.adc.GetFloat(1);
+ 294              		.loc 7 53 40 view .LVU59
+ 295 0012 FFF7FEFF 		bl	_ZN9Utilities16SmoothAnalogReadEjjRN5daisy9DaisySeedE
+ 296              	.LVL20:
+  54:src/main.cpp  ****     float knob3 = hw.adc.GetFloat(2);
+ 297              		.loc 7 54 34 view .LVU60
+ 298 0016 0121     		movs	r1, #1
+ 299 0018 2948     		ldr	r0, .L13+16
+  53:src/main.cpp  ****     float knob2 = hw.adc.GetFloat(1);
+ 300              		.loc 7 53 40 view .LVU61
+ 301 001a B0EE408A 		vmov.f32	s16, s0
+ 302              	.LVL21:
+  54:src/main.cpp  ****     float knob3 = hw.adc.GetFloat(2);
+ 303              		.loc 7 54 5 is_stmt 1 view .LVU62
+  54:src/main.cpp  ****     float knob3 = hw.adc.GetFloat(2);
+ 304              		.loc 7 54 34 is_stmt 0 view .LVU63
+ 305 001e FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
+ 306              	.LVL22:
+  55:src/main.cpp  ****     float knob4 = hw.adc.GetFloat(3);
+ 307              		.loc 7 55 34 view .LVU64
+ 308 0022 0221     		movs	r1, #2
+ 309 0024 2648     		ldr	r0, .L13+16
+  54:src/main.cpp  ****     float knob3 = hw.adc.GetFloat(2);
+ 310              		.loc 7 54 34 view .LVU65
+ 311 0026 B0EE409A 		vmov.f32	s18, s0
+ 312              	.LVL23:
+  55:src/main.cpp  ****     float knob4 = hw.adc.GetFloat(3);
+ 313              		.loc 7 55 5 is_stmt 1 view .LVU66
+  55:src/main.cpp  ****     float knob4 = hw.adc.GetFloat(3);
+ 314              		.loc 7 55 34 is_stmt 0 view .LVU67
+ 315 002a FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
+ 316              	.LVL24:
+  56:src/main.cpp  **** 
+ 317              		.loc 7 56 34 view .LVU68
+ 318 002e 0321     		movs	r1, #3
+ 319 0030 2348     		ldr	r0, .L13+16
+  55:src/main.cpp  ****     float knob4 = hw.adc.GetFloat(3);
+ 320              		.loc 7 55 34 view .LVU69
+ 321 0032 F0EE409A 		vmov.f32	s19, s0
+ 322              	.LVL25:
+  56:src/main.cpp  **** 
+ 323              		.loc 7 56 5 is_stmt 1 view .LVU70
+  56:src/main.cpp  **** 
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 15
 
 
- 326              		.loc 7 45 11 view .LVU71
- 327 0036 9FED207A 		vldr.32	s14, .L13+12
- 328 003a DFED207A 		vldr.32	s15, .L13+16
- 329              	.LBE168:
- 330              	.LBE167:
-  53:src/main.cpp  **** 
- 331              		.loc 7 53 34 view .LVU72
- 332 003e F0EE408A 		vmov.f32	s17, s0
- 333              	.LVL27:
-  56:src/main.cpp  ****     const float MAX_DELAY = 1.0f;   // 1000ms massimo delay
- 334              		.loc 7 56 5 is_stmt 1 view .LVU73
-  57:src/main.cpp  ****     
- 335              		.loc 7 57 5 view .LVU74
+ 324              		.loc 7 56 34 is_stmt 0 view .LVU71
+ 325 0036 FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
+ 326              	.LVL26:
+ 327              	.LBB167:
+ 328              	.LBB168:
+  48:src/main.cpp  ****     return expf(exp_scale);
+ 329              		.loc 7 48 11 view .LVU72
+ 330 003a 9FED227A 		vldr.32	s14, .L13+20
+ 331 003e DFED227A 		vldr.32	s15, .L13+24
+ 332              	.LBE168:
+ 333              	.LBE167:
+  56:src/main.cpp  **** 
+ 334              		.loc 7 56 34 view .LVU73
+ 335 0042 F0EE408A 		vmov.f32	s17, s0
+ 336              	.LVL27:
+  59:src/main.cpp  ****     const float MAX_DELAY = 1.0f;   // 1000ms massimo delay
+ 337              		.loc 7 59 5 is_stmt 1 view .LVU74
   60:src/main.cpp  ****     
- 336              		.loc 7 60 5 view .LVU75
- 337              	.LBB170:
- 338              	.LBI167:
-  41:src/main.cpp  ****     // Implementa una scala logaritmica tra min_value e max_value
- 339              		.loc 7 41 7 view .LVU76
- 340              	.LBB169:
-  43:src/main.cpp  ****     float max_log = logf(max_value);
- 341              		.loc 7 43 5 view .LVU77
-  44:src/main.cpp  ****     float exp_scale = min_log + (max_log - min_log) * pos;
- 342              		.loc 7 44 5 view .LVU78
-  45:src/main.cpp  ****     return expf(exp_scale);
- 343              		.loc 7 45 5 view .LVU79
-  46:src/main.cpp  **** }
- 344              		.loc 7 46 5 view .LVU80
-  46:src/main.cpp  **** }
- 345              		.loc 7 46 16 is_stmt 0 view .LVU81
- 346 0042 E9EE877A 		vfma.f32	s15, s19, s14
- 347              	.LVL28:
-  46:src/main.cpp  **** }
- 348              		.loc 7 46 16 view .LVU82
- 349 0046 B0EE670A 		vmov.f32	s0, s15
- 350              	.LVL29:
-  46:src/main.cpp  **** }
- 351              		.loc 7 46 16 view .LVU83
- 352 004a FFF7FEFF 		bl	expf
- 353              	.LVL30:
-  46:src/main.cpp  **** }
- 354              		.loc 7 46 16 view .LVU84
- 355              	.LBE169:
- 356              	.LBE170:
-  62:src/main.cpp  ****     mix = knob2;
- 357              		.loc 7 62 22 view .LVU85
- 358 004e DFED1C7A 		vldr.32	s15, .L13+20
-  62:src/main.cpp  ****     mix = knob2;
- 359              		.loc 7 62 14 view .LVU86
- 360 0052 1C4B     		ldr	r3, .L13+24
-  62:src/main.cpp  ****     mix = knob2;
- 361              		.loc 7 62 22 view .LVU87
- 362 0054 28EE278A 		vmul.f32	s16, s16, s15
- 363              	.LVL31:
-  65:src/main.cpp  **** 
- 364              		.loc 7 65 11 view .LVU88
- 365 0058 1B4A     		ldr	r2, .L13+28
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 16
+ 338              		.loc 7 60 5 view .LVU75
+  63:src/main.cpp  ****     
+ 339              		.loc 7 63 5 view .LVU76
+ 340              	.LBB170:
+ 341              	.LBI167:
+  44:src/main.cpp  ****     // Implementa una scala logaritmica tra min_value e max_value
+ 342              		.loc 7 44 7 view .LVU77
+ 343              	.LBB169:
+  46:src/main.cpp  ****     float max_log = logf(max_value);
+ 344              		.loc 7 46 5 view .LVU78
+  47:src/main.cpp  ****     float exp_scale = min_log + (max_log - min_log) * pos;
+ 345              		.loc 7 47 5 view .LVU79
+  48:src/main.cpp  ****     return expf(exp_scale);
+ 346              		.loc 7 48 5 view .LVU80
+  49:src/main.cpp  **** }
+ 347              		.loc 7 49 5 view .LVU81
+  49:src/main.cpp  **** }
+ 348              		.loc 7 49 16 is_stmt 0 view .LVU82
+ 349 0046 E9EE877A 		vfma.f32	s15, s19, s14
+ 350              	.LVL28:
+  49:src/main.cpp  **** }
+ 351              		.loc 7 49 16 view .LVU83
+ 352 004a B0EE670A 		vmov.f32	s0, s15
+ 353              	.LVL29:
+  49:src/main.cpp  **** }
+ 354              		.loc 7 49 16 view .LVU84
+ 355 004e FFF7FEFF 		bl	expf
+ 356              	.LVL30:
+  49:src/main.cpp  **** }
+ 357              		.loc 7 49 16 view .LVU85
+ 358              	.LBE169:
+ 359              	.LBE170:
+  65:src/main.cpp  ****     mix = knob2;
+ 360              		.loc 7 65 22 view .LVU86
+ 361 0052 DFED1E7A 		vldr.32	s15, .L13+28
+  65:src/main.cpp  ****     mix = knob2;
+ 362              		.loc 7 65 14 view .LVU87
+ 363 0056 1E4B     		ldr	r3, .L13+32
+  65:src/main.cpp  ****     mix = knob2;
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 16
 
 
-  63:src/main.cpp  **** 
- 366              		.loc 7 63 9 view .LVU89
- 367 005a 1C49     		ldr	r1, .L13+32
-  65:src/main.cpp  **** 
- 368              		.loc 7 65 11 view .LVU90
- 369 005c C2ED008A 		vstr.32	s17, [r2]
-  62:src/main.cpp  ****     mix = knob2;
- 370              		.loc 7 62 14 view .LVU91
- 371 0060 83ED008A 		vstr.32	s16, [r3]
-  60:src/main.cpp  ****     
- 372              		.loc 7 60 15 view .LVU92
- 373 0064 84ED000A 		vstr.32	s0, [r4]
-  62:src/main.cpp  ****     mix = knob2;
- 374              		.loc 7 62 5 is_stmt 1 view .LVU93
-  63:src/main.cpp  **** 
- 375              		.loc 7 63 5 view .LVU94
-  65:src/main.cpp  **** 
- 376              		.loc 7 65 5 view .LVU95
-  69:src/main.cpp  ****     uint32_t blinkInterval = static_cast<uint32_t>(delayTime * 1000); // Converti in millisecondi
- 377              		.loc 7 69 5 view .LVU96
-  63:src/main.cpp  **** 
- 378              		.loc 7 63 9 is_stmt 0 view .LVU97
- 379 0068 81ED009A 		vstr.32	s18, [r1]
-  69:src/main.cpp  ****     uint32_t blinkInterval = static_cast<uint32_t>(delayTime * 1000); // Converti in millisecondi
- 380              		.loc 7 69 34 view .LVU98
- 381 006c FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
- 382              	.LVL32:
-  70:src/main.cpp  ****     
- 383              		.loc 7 70 62 view .LVU99
- 384 0070 D4ED007A 		vldr.32	s15, [r4]
- 385 0074 9FED167A 		vldr.32	s14, .L13+36
- 386              		.loc 7 72 12 view .LVU100
- 387 0078 2B68     		ldr	r3, [r5]
- 388              	.LVL33:
-  70:src/main.cpp  ****     
- 389              		.loc 7 70 5 is_stmt 1 view .LVU101
- 390              		.loc 7 72 5 view .LVU102
-  70:src/main.cpp  ****     
- 391              		.loc 7 70 62 is_stmt 0 view .LVU103
- 392 007a 67EE877A 		vmul.f32	s15, s15, s14
- 393              	.LVL34:
- 394              		.loc 7 72 12 view .LVU104
- 395 007e C31A     		subs	r3, r0, r3
-  70:src/main.cpp  ****     
- 396              		.loc 7 70 14 view .LVU105
- 397 0080 FCEEE77A 		vcvt.u32.f32	s15, s15
- 398              		.loc 7 72 5 view .LVU106
- 399 0084 17EE902A 		vmov	r2, s15	@ int
- 400 0088 9342     		cmp	r3, r2
- 401 008a 02D2     		bcs	.L12
-  73:src/main.cpp  ****         ledState = !ledState;
-  74:src/main.cpp  ****         hw.SetLed(ledState);
-  75:src/main.cpp  ****         lastBlink = now;
-  76:src/main.cpp  ****     }
-  77:src/main.cpp  **** }
- 402              		.loc 7 77 1 view .LVU107
- 403 008c BDEC048B 		vldm	sp!, {d8-d9}
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 17
+ 364              		.loc 7 65 22 view .LVU88
+ 365 0058 28EE278A 		vmul.f32	s16, s16, s15
+ 366              	.LVL31:
+  68:src/main.cpp  **** 
+ 367              		.loc 7 68 11 view .LVU89
+ 368 005c 1D4A     		ldr	r2, .L13+36
+  66:src/main.cpp  **** 
+ 369              		.loc 7 66 9 view .LVU90
+ 370 005e 1E49     		ldr	r1, .L13+40
+  68:src/main.cpp  **** 
+ 371              		.loc 7 68 11 view .LVU91
+ 372 0060 C2ED008A 		vstr.32	s17, [r2]
+  65:src/main.cpp  ****     mix = knob2;
+ 373              		.loc 7 65 14 view .LVU92
+ 374 0064 83ED008A 		vstr.32	s16, [r3]
+  63:src/main.cpp  ****     
+ 375              		.loc 7 63 15 view .LVU93
+ 376 0068 84ED000A 		vstr.32	s0, [r4]
+  65:src/main.cpp  ****     mix = knob2;
+ 377              		.loc 7 65 5 is_stmt 1 view .LVU94
+  66:src/main.cpp  **** 
+ 378              		.loc 7 66 5 view .LVU95
+  68:src/main.cpp  **** 
+ 379              		.loc 7 68 5 view .LVU96
+  72:src/main.cpp  ****     uint32_t blinkInterval = static_cast<uint32_t>(delayTime * 1000); // Converti in millisecondi
+ 380              		.loc 7 72 5 view .LVU97
+  66:src/main.cpp  **** 
+ 381              		.loc 7 66 9 is_stmt 0 view .LVU98
+ 382 006c 81ED009A 		vstr.32	s18, [r1]
+  72:src/main.cpp  ****     uint32_t blinkInterval = static_cast<uint32_t>(delayTime * 1000); // Converti in millisecondi
+ 383              		.loc 7 72 34 view .LVU99
+ 384 0070 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
+ 385              	.LVL32:
+  73:src/main.cpp  ****     
+ 386              		.loc 7 73 62 view .LVU100
+ 387 0074 D4ED007A 		vldr.32	s15, [r4]
+ 388 0078 9FED187A 		vldr.32	s14, .L13+44
+ 389              		.loc 7 75 12 view .LVU101
+ 390 007c 2B68     		ldr	r3, [r5]
+ 391              	.LVL33:
+  73:src/main.cpp  ****     
+ 392              		.loc 7 73 5 is_stmt 1 view .LVU102
+ 393              		.loc 7 75 5 view .LVU103
+  73:src/main.cpp  ****     
+ 394              		.loc 7 73 62 is_stmt 0 view .LVU104
+ 395 007e 67EE877A 		vmul.f32	s15, s15, s14
+ 396              	.LVL34:
+ 397              		.loc 7 75 12 view .LVU105
+ 398 0082 C31A     		subs	r3, r0, r3
+  73:src/main.cpp  ****     
+ 399              		.loc 7 73 14 view .LVU106
+ 400 0084 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 401              		.loc 7 75 5 view .LVU107
+ 402 0088 17EE902A 		vmov	r2, s15	@ int
+ 403 008c 9342     		cmp	r3, r2
+ 404 008e 02D2     		bcs	.L12
+  76:src/main.cpp  ****         ledState = !ledState;
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 17
 
 
- 404              		.cfi_remember_state
- 405              		.cfi_restore 82
- 406              		.cfi_restore 83
- 407              		.cfi_restore 80
- 408              		.cfi_restore 81
- 409              		.cfi_def_cfa_offset 16
- 410              	.LVL35:
- 411              		.loc 7 77 1 view .LVU108
- 412 0090 38BD     		pop	{r3, r4, r5, pc}
- 413              	.LVL36:
- 414              	.L12:
- 415              		.cfi_restore_state
-  73:src/main.cpp  ****         ledState = !ledState;
- 416              		.loc 7 73 9 is_stmt 1 view .LVU109
-  73:src/main.cpp  ****         ledState = !ledState;
- 417              		.loc 7 73 20 is_stmt 0 view .LVU110
- 418 0092 104B     		ldr	r3, .L13+40
- 419 0094 0446     		mov	r4, r0
-  74:src/main.cpp  ****         lastBlink = now;
- 420              		.loc 7 74 18 view .LVU111
- 421 0096 1048     		ldr	r0, .L13+44
- 422              	.LVL37:
-  73:src/main.cpp  ****         ledState = !ledState;
- 423              		.loc 7 73 20 view .LVU112
- 424 0098 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
- 425 009a 81F00101 		eor	r1, r1, #1
-  73:src/main.cpp  ****         ledState = !ledState;
- 426              		.loc 7 73 18 view .LVU113
- 427 009e 1970     		strb	r1, [r3]
-  74:src/main.cpp  ****         lastBlink = now;
- 428              		.loc 7 74 9 is_stmt 1 view .LVU114
-  74:src/main.cpp  ****         lastBlink = now;
- 429              		.loc 7 74 18 is_stmt 0 view .LVU115
- 430 00a0 FFF7FEFF 		bl	_ZN5daisy9DaisySeed6SetLedEb
- 431              	.LVL38:
-  75:src/main.cpp  ****     }
- 432              		.loc 7 75 9 is_stmt 1 view .LVU116
-  75:src/main.cpp  ****     }
- 433              		.loc 7 75 19 is_stmt 0 view .LVU117
- 434 00a4 2C60     		str	r4, [r5]
- 435              		.loc 7 77 1 view .LVU118
- 436 00a6 BDEC048B 		vldm	sp!, {d8-d9}
- 437              		.cfi_restore 82
- 438              		.cfi_restore 83
- 439              		.cfi_restore 80
- 440              		.cfi_restore 81
- 441              		.cfi_def_cfa_offset 16
- 442              	.LVL39:
- 443              		.loc 7 77 1 view .LVU119
- 444 00aa 38BD     		pop	{r3, r4, r5, pc}
- 445              	.LVL40:
- 446              	.L14:
- 447              		.loc 7 77 1 view .LVU120
- 448              		.align	2
- 449              	.L13:
- 450 00ac 18000000 		.word	.LANCHOR1+24
- 451 00b0 00000000 		.word	.LANCHOR2
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 18
+  77:src/main.cpp  ****         hw.SetLed(ledState);
+  78:src/main.cpp  ****         lastBlink = now;
+  79:src/main.cpp  ****     }
+  80:src/main.cpp  **** }
+ 405              		.loc 7 80 1 view .LVU108
+ 406 0090 BDEC048B 		vldm	sp!, {d8-d9}
+ 407              		.cfi_remember_state
+ 408              		.cfi_restore 82
+ 409              		.cfi_restore 83
+ 410              		.cfi_restore 80
+ 411              		.cfi_restore 81
+ 412              		.cfi_def_cfa_offset 16
+ 413              	.LVL35:
+ 414              		.loc 7 80 1 view .LVU109
+ 415 0094 38BD     		pop	{r3, r4, r5, pc}
+ 416              	.LVL36:
+ 417              	.L12:
+ 418              		.cfi_restore_state
+  76:src/main.cpp  ****         ledState = !ledState;
+ 419              		.loc 7 76 9 is_stmt 1 view .LVU110
+  76:src/main.cpp  ****         ledState = !ledState;
+ 420              		.loc 7 76 20 is_stmt 0 view .LVU111
+ 421 0096 124B     		ldr	r3, .L13+48
+ 422 0098 0446     		mov	r4, r0
+  77:src/main.cpp  ****         lastBlink = now;
+ 423              		.loc 7 77 18 view .LVU112
+ 424 009a 0648     		ldr	r0, .L13+4
+ 425              	.LVL37:
+  76:src/main.cpp  ****         ledState = !ledState;
+ 426              		.loc 7 76 20 view .LVU113
+ 427 009c 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+ 428 009e 81F00101 		eor	r1, r1, #1
+  76:src/main.cpp  ****         ledState = !ledState;
+ 429              		.loc 7 76 18 view .LVU114
+ 430 00a2 1970     		strb	r1, [r3]
+  77:src/main.cpp  ****         lastBlink = now;
+ 431              		.loc 7 77 9 is_stmt 1 view .LVU115
+  77:src/main.cpp  ****         lastBlink = now;
+ 432              		.loc 7 77 18 is_stmt 0 view .LVU116
+ 433 00a4 FFF7FEFF 		bl	_ZN5daisy9DaisySeed6SetLedEb
+ 434              	.LVL38:
+  78:src/main.cpp  ****     }
+ 435              		.loc 7 78 9 is_stmt 1 view .LVU117
+  78:src/main.cpp  ****     }
+ 436              		.loc 7 78 19 is_stmt 0 view .LVU118
+ 437 00a8 2C60     		str	r4, [r5]
+ 438              		.loc 7 80 1 view .LVU119
+ 439 00aa BDEC048B 		vldm	sp!, {d8-d9}
+ 440              		.cfi_restore 82
+ 441              		.cfi_restore 83
+ 442              		.cfi_restore 80
+ 443              		.cfi_restore 81
+ 444              		.cfi_def_cfa_offset 16
+ 445              	.LVL39:
+ 446              		.loc 7 80 1 view .LVU120
+ 447 00ae 38BD     		pop	{r3, r4, r5, pc}
+ 448              	.LVL40:
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 18
 
 
- 452 00b4 00000000 		.word	.LANCHOR6
- 453 00b8 965E7A40 		.word	1081761430
- 454 00bc 965E7AC0 		.word	-1065722218
- 455 00c0 A4707D3F 		.word	1065185444
- 456 00c4 00000000 		.word	.LANCHOR3
- 457 00c8 00000000 		.word	.LANCHOR5
- 458 00cc 00000000 		.word	.LANCHOR4
- 459 00d0 00007A44 		.word	1148846080
- 460 00d4 00000000 		.word	.LANCHOR7
- 461 00d8 00000000 		.word	.LANCHOR1
- 462              		.cfi_endproc
- 463              	.LFE4819:
- 465              		.section	.text._Z13AudioCallbackPKPKfPPfj,"ax",%progbits
- 466              		.align	1
- 467              		.p2align 2,,3
- 468              		.global	_Z13AudioCallbackPKPKfPPfj
- 469              		.syntax unified
- 470              		.thumb
- 471              		.thumb_func
- 472              		.fpu fpv5-d16
- 474              	_Z13AudioCallbackPKPKfPPfj:
- 475              	.LVL41:
- 476              	.LFB4820:
-  78:src/main.cpp  **** 
-  79:src/main.cpp  **** // Callback audio eseguito per ogni blocco audio
-  80:src/main.cpp  **** void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size) {
- 477              		.loc 7 80 93 is_stmt 1 view -0
- 478              		.cfi_startproc
- 479              		@ args = 0, pretend = 0, frame = 0
- 480              		@ frame_needed = 0, uses_anonymous_args = 0
-  81:src/main.cpp  ****     ReadControls();                     // Aggiorna i controlli
- 481              		.loc 7 81 5 view .LVU122
-  80:src/main.cpp  ****     ReadControls();                     // Aggiorna i controlli
- 482              		.loc 7 80 93 is_stmt 0 view .LVU123
- 483 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
- 484              		.cfi_def_cfa_offset 24
- 485              		.cfi_offset 4, -24
- 486              		.cfi_offset 5, -20
- 487              		.cfi_offset 6, -16
- 488              		.cfi_offset 7, -12
- 489              		.cfi_offset 8, -8
- 490              		.cfi_offset 14, -4
-  80:src/main.cpp  ****     ReadControls();                     // Aggiorna i controlli
- 491              		.loc 7 80 93 view .LVU124
- 492 0004 1546     		mov	r5, r2
- 493 0006 8846     		mov	r8, r1
- 494 0008 0646     		mov	r6, r0
- 495              		.loc 7 81 17 view .LVU125
- 496 000a FFF7FEFF 		bl	_Z12ReadControlsv
- 497              	.LVL42:
-  82:src/main.cpp  ****     delay.setDelayTime(delayTime);      // Imposta il tempo di delay
- 498              		.loc 7 82 5 is_stmt 1 view .LVU126
- 499              		.loc 7 82 23 is_stmt 0 view .LVU127
- 500 000e 184B     		ldr	r3, .L23
- 501 0010 1848     		ldr	r0, .L23+4
- 502 0012 93ED000A 		vldr.32	s0, [r3]
- 503 0016 FFF7FEFF 		bl	_ZN11AnalogDelay12setDelayTimeEf
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 19
+ 449              	.L14:
+ 450              		.loc 7 80 1 view .LVU121
+ 451              		.align	2
+ 452              	.L13:
+ 453 00b0 00000000 		.word	.LANCHOR2
+ 454 00b4 00000000 		.word	.LANCHOR1
+ 455 00b8 00000000 		.word	.LANCHOR3
+ 456 00bc 00000000 		.word	.LANCHOR7
+ 457 00c0 18000000 		.word	.LANCHOR1+24
+ 458 00c4 965E7A40 		.word	1081761430
+ 459 00c8 965E7AC0 		.word	-1065722218
+ 460 00cc A4707D3F 		.word	1065185444
+ 461 00d0 00000000 		.word	.LANCHOR4
+ 462 00d4 00000000 		.word	.LANCHOR6
+ 463 00d8 00000000 		.word	.LANCHOR5
+ 464 00dc 00007A44 		.word	1148846080
+ 465 00e0 00000000 		.word	.LANCHOR8
+ 466              		.cfi_endproc
+ 467              	.LFE4819:
+ 469              		.section	.text._Z13AudioCallbackPKPKfPPfj,"ax",%progbits
+ 470              		.align	1
+ 471              		.p2align 2,,3
+ 472              		.global	_Z13AudioCallbackPKPKfPPfj
+ 473              		.syntax unified
+ 474              		.thumb
+ 475              		.thumb_func
+ 476              		.fpu fpv5-d16
+ 478              	_Z13AudioCallbackPKPKfPPfj:
+ 479              	.LVL41:
+ 480              	.LFB4820:
+  81:src/main.cpp  **** 
+  82:src/main.cpp  **** // Callback audio eseguito per ogni blocco audio
+  83:src/main.cpp  **** void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size) {
+ 481              		.loc 7 83 93 is_stmt 1 view -0
+ 482              		.cfi_startproc
+ 483              		@ args = 0, pretend = 0, frame = 0
+ 484              		@ frame_needed = 0, uses_anonymous_args = 0
+  84:src/main.cpp  ****     ReadControls();                     // Aggiorna i controlli
+ 485              		.loc 7 84 5 view .LVU123
+  83:src/main.cpp  ****     ReadControls();                     // Aggiorna i controlli
+ 486              		.loc 7 83 93 is_stmt 0 view .LVU124
+ 487 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 488              		.cfi_def_cfa_offset 24
+ 489              		.cfi_offset 4, -24
+ 490              		.cfi_offset 5, -20
+ 491              		.cfi_offset 6, -16
+ 492              		.cfi_offset 7, -12
+ 493              		.cfi_offset 8, -8
+ 494              		.cfi_offset 14, -4
+  83:src/main.cpp  ****     ReadControls();                     // Aggiorna i controlli
+ 495              		.loc 7 83 93 view .LVU125
+ 496 0004 1546     		mov	r5, r2
+ 497 0006 8846     		mov	r8, r1
+ 498 0008 0646     		mov	r6, r0
+ 499              		.loc 7 84 17 view .LVU126
+ 500 000a FFF7FEFF 		bl	_Z12ReadControlsv
+ 501              	.LVL42:
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 19
 
 
- 504              	.LVL43:
-  83:src/main.cpp  ****     delay.setFeedback(feedback);        // Imposta il feedback
- 505              		.loc 7 83 5 is_stmt 1 view .LVU128
- 506              		.loc 7 83 22 is_stmt 0 view .LVU129
- 507 001a 174B     		ldr	r3, .L23+8
- 508 001c 1548     		ldr	r0, .L23+4
- 509 001e 93ED000A 		vldr.32	s0, [r3]
- 510 0022 FFF7FEFF 		bl	_ZN11AnalogDelay11setFeedbackEf
- 511              	.LVL44:
-  84:src/main.cpp  ****     delay.setMix(mix);                  // Imposta il mix
- 512              		.loc 7 84 5 is_stmt 1 view .LVU130
- 513              		.loc 7 84 17 is_stmt 0 view .LVU131
- 514 0026 154B     		ldr	r3, .L23+12
- 515 0028 1248     		ldr	r0, .L23+4
- 516 002a 93ED000A 		vldr.32	s0, [r3]
- 517 002e FFF7FEFF 		bl	_ZN11AnalogDelay6setMixEf
- 518              	.LVL45:
-  85:src/main.cpp  ****     delay.setSmoothFactor(depth);              // Imposta la profondità del pitch shifter
- 519              		.loc 7 85 5 is_stmt 1 view .LVU132
- 520              		.loc 7 85 26 is_stmt 0 view .LVU133
- 521 0032 134B     		ldr	r3, .L23+16
- 522 0034 0F48     		ldr	r0, .L23+4
- 523 0036 93ED000A 		vldr.32	s0, [r3]
- 524 003a FFF7FEFF 		bl	_ZN11AnalogDelay15setSmoothFactorEf
- 525              	.LVL46:
-  86:src/main.cpp  ****     
-  87:src/main.cpp  ****     // Processo audio per ogni campione
-  88:src/main.cpp  ****     for(size_t i = 0; i < size; i++) {
- 526              		.loc 7 88 5 is_stmt 1 view .LVU134
- 527              	.LBB171:
- 528              		.loc 7 88 25 view .LVU135
- 529 003e ADB1     		cbz	r5, .L15
- 530              		.loc 7 88 16 is_stmt 0 view .LVU136
- 531 0040 0024     		movs	r4, #0
- 532              	.LVL47:
- 533              	.L17:
- 534              	.LBB172:
-  89:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
- 535              		.loc 7 89 9 is_stmt 1 discriminator 2 view .LVU137
- 536              		.loc 7 89 15 is_stmt 0 discriminator 2 view .LVU138
- 537 0042 3268     		ldr	r2, [r6]
- 538 0044 A700     		lsls	r7, r4, #2
- 539              	.LVL48:
-  90:src/main.cpp  ****         
-  91:src/main.cpp  ****         float wetL = delay.Process(inL);
- 540              		.loc 7 91 9 is_stmt 1 discriminator 2 view .LVU139
- 541              		.loc 7 91 35 is_stmt 0 discriminator 2 view .LVU140
- 542 0046 0B48     		ldr	r0, .L23+4
-  89:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
- 543              		.loc 7 89 15 discriminator 2 view .LVU141
- 544 0048 02EB8402 		add	r2, r2, r4, lsl #2
- 545              	.LVL49:
-  89:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
- 546              		.loc 7 89 15 discriminator 2 view .LVU142
- 547              	.LBE172:
-  88:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
- 548              		.loc 7 88 5 discriminator 2 view .LVU143
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 20
+  85:src/main.cpp  ****     delay.setDelayTime(delayTime);      // Imposta il tempo di delay
+ 502              		.loc 7 85 5 is_stmt 1 view .LVU127
+ 503              		.loc 7 85 23 is_stmt 0 view .LVU128
+ 504 000e 184B     		ldr	r3, .L23
+ 505 0010 1848     		ldr	r0, .L23+4
+ 506 0012 93ED000A 		vldr.32	s0, [r3]
+ 507 0016 FFF7FEFF 		bl	_ZN11AnalogDelay12setDelayTimeEf
+ 508              	.LVL43:
+  86:src/main.cpp  ****     delay.setFeedback(feedback);        // Imposta il feedback
+ 509              		.loc 7 86 5 is_stmt 1 view .LVU129
+ 510              		.loc 7 86 22 is_stmt 0 view .LVU130
+ 511 001a 174B     		ldr	r3, .L23+8
+ 512 001c 1548     		ldr	r0, .L23+4
+ 513 001e 93ED000A 		vldr.32	s0, [r3]
+ 514 0022 FFF7FEFF 		bl	_ZN11AnalogDelay11setFeedbackEf
+ 515              	.LVL44:
+  87:src/main.cpp  ****     delay.setMix(mix);                  // Imposta il mix
+ 516              		.loc 7 87 5 is_stmt 1 view .LVU131
+ 517              		.loc 7 87 17 is_stmt 0 view .LVU132
+ 518 0026 154B     		ldr	r3, .L23+12
+ 519 0028 1248     		ldr	r0, .L23+4
+ 520 002a 93ED000A 		vldr.32	s0, [r3]
+ 521 002e FFF7FEFF 		bl	_ZN11AnalogDelay6setMixEf
+ 522              	.LVL45:
+  88:src/main.cpp  ****     delay.setDepth(depth);              // Imposta la profondità del pitch shifter
+ 523              		.loc 7 88 5 is_stmt 1 view .LVU133
+ 524              		.loc 7 88 19 is_stmt 0 view .LVU134
+ 525 0032 134B     		ldr	r3, .L23+16
+ 526 0034 0F48     		ldr	r0, .L23+4
+ 527 0036 93ED000A 		vldr.32	s0, [r3]
+ 528 003a FFF7FEFF 		bl	_ZN11AnalogDelay8setDepthEf
+ 529              	.LVL46:
+  89:src/main.cpp  ****     
+  90:src/main.cpp  ****     // Processo audio per ogni campione
+  91:src/main.cpp  ****     for(size_t i = 0; i < size; i++) {
+ 530              		.loc 7 91 5 is_stmt 1 view .LVU135
+ 531              	.LBB171:
+ 532              		.loc 7 91 25 view .LVU136
+ 533 003e ADB1     		cbz	r5, .L15
+ 534              		.loc 7 91 16 is_stmt 0 view .LVU137
+ 535 0040 0024     		movs	r4, #0
+ 536              	.LVL47:
+ 537              	.L17:
+ 538              	.LBB172:
+  92:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
+ 539              		.loc 7 92 9 is_stmt 1 discriminator 2 view .LVU138
+ 540              		.loc 7 92 15 is_stmt 0 discriminator 2 view .LVU139
+ 541 0042 3268     		ldr	r2, [r6]
+ 542 0044 A700     		lsls	r7, r4, #2
+ 543              	.LVL48:
+  93:src/main.cpp  ****         
+  94:src/main.cpp  ****         float wetL = delay.Process(inL);
+ 544              		.loc 7 94 9 is_stmt 1 discriminator 2 view .LVU140
+ 545              		.loc 7 94 35 is_stmt 0 discriminator 2 view .LVU141
+ 546 0046 0B48     		ldr	r0, .L23+4
+  92:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
+ 547              		.loc 7 92 15 discriminator 2 view .LVU142
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 20
 
 
- 549 004c 0134     		adds	r4, r4, #1
- 550              	.LVL50:
- 551              	.LBB173:
- 552              		.loc 7 91 35 discriminator 2 view .LVU144
- 553 004e 92ED000A 		vldr.32	s0, [r2]
- 554 0052 FFF7FEFF 		bl	_ZN11AnalogDelay7ProcessEf
- 555              	.LVL51:
- 556              		.loc 7 91 35 discriminator 2 view .LVU145
- 557              	.LBE173:
-  88:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
- 558              		.loc 7 88 25 discriminator 2 view .LVU146
- 559 0056 A542     		cmp	r5, r4
- 560              	.LBB174:
-  92:src/main.cpp  ****         
-  93:src/main.cpp  ****         // Output processed signal
-  94:src/main.cpp  ****         out[0][i] = wetL;
- 561              		.loc 7 94 19 discriminator 2 view .LVU147
- 562 0058 D8E90023 		ldrd	r2, r3, [r8]
- 563 005c 02EB070C 		add	ip, r2, r7
-  95:src/main.cpp  ****         out[1][i] = wetL;
- 564              		.loc 7 95 19 discriminator 2 view .LVU148
- 565 0060 3B44     		add	r3, r3, r7
-  94:src/main.cpp  ****         out[1][i] = wetL;
- 566              		.loc 7 94 19 discriminator 2 view .LVU149
- 567 0062 8CED000A 		vstr.32	s0, [ip]
- 568              		.loc 7 95 9 is_stmt 1 discriminator 2 view .LVU150
- 569              		.loc 7 95 19 is_stmt 0 discriminator 2 view .LVU151
- 570 0066 83ED000A 		vstr.32	s0, [r3]
- 571              	.LBE174:
-  88:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
- 572              		.loc 7 88 5 is_stmt 1 discriminator 2 view .LVU152
- 573              	.LVL52:
-  88:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
- 574              		.loc 7 88 25 discriminator 2 view .LVU153
- 575 006a EAD1     		bne	.L17
- 576              	.LVL53:
- 577              	.L15:
-  88:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
- 578              		.loc 7 88 25 is_stmt 0 discriminator 2 view .LVU154
- 579              	.LBE171:
-  96:src/main.cpp  ****     }
-  97:src/main.cpp  **** }
- 580              		.loc 7 97 1 view .LVU155
- 581 006c BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
- 582              	.LVL54:
- 583              	.L24:
- 584              		.loc 7 97 1 view .LVU156
- 585              		.align	2
- 586              	.L23:
- 587 0070 00000000 		.word	.LANCHOR2
- 588 0074 00000000 		.word	delay
- 589 0078 00000000 		.word	.LANCHOR3
- 590 007c 00000000 		.word	.LANCHOR4
- 591 0080 00000000 		.word	.LANCHOR5
- 592              		.cfi_endproc
- 593              	.LFE4820:
- 595              		.section	.text.startup.main,"ax",%progbits
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 21
+ 548 0048 02EB8402 		add	r2, r2, r4, lsl #2
+ 549              	.LVL49:
+  92:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
+ 550              		.loc 7 92 15 discriminator 2 view .LVU143
+ 551              	.LBE172:
+  91:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
+ 552              		.loc 7 91 5 discriminator 2 view .LVU144
+ 553 004c 0134     		adds	r4, r4, #1
+ 554              	.LVL50:
+ 555              	.LBB173:
+ 556              		.loc 7 94 35 discriminator 2 view .LVU145
+ 557 004e 92ED000A 		vldr.32	s0, [r2]
+ 558 0052 FFF7FEFF 		bl	_ZN11AnalogDelay7ProcessEf
+ 559              	.LVL51:
+ 560              		.loc 7 94 35 discriminator 2 view .LVU146
+ 561              	.LBE173:
+  91:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
+ 562              		.loc 7 91 25 discriminator 2 view .LVU147
+ 563 0056 A542     		cmp	r5, r4
+ 564              	.LBB174:
+  95:src/main.cpp  ****         
+  96:src/main.cpp  ****         // Output processed signal
+  97:src/main.cpp  ****         out[0][i] = wetL;
+ 565              		.loc 7 97 19 discriminator 2 view .LVU148
+ 566 0058 D8E90023 		ldrd	r2, r3, [r8]
+ 567 005c 02EB070C 		add	ip, r2, r7
+  98:src/main.cpp  ****         out[1][i] = wetL;
+ 568              		.loc 7 98 19 discriminator 2 view .LVU149
+ 569 0060 3B44     		add	r3, r3, r7
+  97:src/main.cpp  ****         out[1][i] = wetL;
+ 570              		.loc 7 97 19 discriminator 2 view .LVU150
+ 571 0062 8CED000A 		vstr.32	s0, [ip]
+ 572              		.loc 7 98 9 is_stmt 1 discriminator 2 view .LVU151
+ 573              		.loc 7 98 19 is_stmt 0 discriminator 2 view .LVU152
+ 574 0066 83ED000A 		vstr.32	s0, [r3]
+ 575              	.LBE174:
+  91:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
+ 576              		.loc 7 91 5 is_stmt 1 discriminator 2 view .LVU153
+ 577              	.LVL52:
+  91:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
+ 578              		.loc 7 91 25 discriminator 2 view .LVU154
+ 579 006a EAD1     		bne	.L17
+ 580              	.LVL53:
+ 581              	.L15:
+  91:src/main.cpp  ****         float inL = in[0][i];           // Canale sinistro input
+ 582              		.loc 7 91 25 is_stmt 0 discriminator 2 view .LVU155
+ 583              	.LBE171:
+  99:src/main.cpp  ****     }
+ 100:src/main.cpp  **** }
+ 584              		.loc 7 100 1 view .LVU156
+ 585 006c BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 586              	.LVL54:
+ 587              	.L24:
+ 588              		.loc 7 100 1 view .LVU157
+ 589              		.align	2
+ 590              	.L23:
+ 591 0070 00000000 		.word	.LANCHOR3
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 21
 
 
- 596              		.align	1
- 597              		.p2align 2,,3
- 598              		.global	main
- 599              		.syntax unified
- 600              		.thumb
- 601              		.thumb_func
- 602              		.fpu fpv5-d16
- 604              	main:
- 605              	.LFB4821:
-  98:src/main.cpp  **** 
-  99:src/main.cpp  **** int main() {
- 606              		.loc 7 99 12 is_stmt 1 view -0
- 607              		.cfi_startproc
- 608              		@ Volatile: function does not return.
- 609              		@ args = 0, pretend = 0, frame = 0
- 610              		@ frame_needed = 0, uses_anonymous_args = 0
- 100:src/main.cpp  ****     hw.Configure();      // Configurazione hardware
- 611              		.loc 7 100 5 view .LVU158
-  99:src/main.cpp  ****     hw.Configure();      // Configurazione hardware
- 612              		.loc 7 99 12 is_stmt 0 view .LVU159
- 613 0000 08B5     		push	{r3, lr}
- 614              		.cfi_def_cfa_offset 8
- 615              		.cfi_offset 3, -8
- 616              		.cfi_offset 14, -4
- 617              		.loc 7 100 17 view .LVU160
- 618 0002 1348     		ldr	r0, .L28
- 619 0004 FFF7FEFF 		bl	_ZN5daisy9DaisySeed9ConfigureEv
- 620              	.LVL55:
- 101:src/main.cpp  ****     hw.Init();          // Inizializzazione hardware
- 621              		.loc 7 101 5 is_stmt 1 view .LVU161
- 622              		.loc 7 101 12 is_stmt 0 view .LVU162
- 623 0008 0021     		movs	r1, #0
- 624 000a 1148     		ldr	r0, .L28
- 625 000c FFF7FEFF 		bl	_ZN5daisy9DaisySeed4InitEb
- 626              	.LVL56:
- 102:src/main.cpp  **** 
- 103:src/main.cpp  ****     hw.SetAudioBlockSize(4);    // Imposta dimensione del blocco audio
- 627              		.loc 7 103 5 is_stmt 1 view .LVU163
- 628              		.loc 7 103 25 is_stmt 0 view .LVU164
- 629 0010 0421     		movs	r1, #4
- 630 0012 0F48     		ldr	r0, .L28
- 631 0014 FFF7FEFF 		bl	_ZN5daisy9DaisySeed17SetAudioBlockSizeEj
- 632              	.LVL57:
- 104:src/main.cpp  ****     hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ); // Imposta sample rate a 48kHz
- 633              		.loc 7 104 5 is_stmt 1 view .LVU165
- 634              		.loc 7 104 26 is_stmt 0 view .LVU166
- 635 0018 0321     		movs	r1, #3
- 636 001a 0D48     		ldr	r0, .L28
- 637 001c FFF7FEFF 		bl	_ZN5daisy9DaisySeed18SetAudioSampleRateENS_9SaiHandle6Config10SampleRateE
- 638              	.LVL58:
+ 592 0074 00000000 		.word	delay
+ 593 0078 00000000 		.word	.LANCHOR4
+ 594 007c 00000000 		.word	.LANCHOR5
+ 595 0080 00000000 		.word	.LANCHOR6
+ 596              		.cfi_endproc
+ 597              	.LFE4820:
+ 599              		.section	.text.startup.main,"ax",%progbits
+ 600              		.align	1
+ 601              		.p2align 2,,3
+ 602              		.global	main
+ 603              		.syntax unified
+ 604              		.thumb
+ 605              		.thumb_func
+ 606              		.fpu fpv5-d16
+ 608              	main:
+ 609              	.LFB4821:
+ 101:src/main.cpp  **** 
+ 102:src/main.cpp  **** int main() {
+ 610              		.loc 7 102 12 is_stmt 1 view -0
+ 611              		.cfi_startproc
+ 612              		@ Volatile: function does not return.
+ 613              		@ args = 0, pretend = 0, frame = 0
+ 614              		@ frame_needed = 0, uses_anonymous_args = 0
+ 103:src/main.cpp  ****     hw.Configure();      // Configurazione hardware
+ 615              		.loc 7 103 5 view .LVU159
+ 102:src/main.cpp  ****     hw.Configure();      // Configurazione hardware
+ 616              		.loc 7 102 12 is_stmt 0 view .LVU160
+ 617 0000 08B5     		push	{r3, lr}
+ 618              		.cfi_def_cfa_offset 8
+ 619              		.cfi_offset 3, -8
+ 620              		.cfi_offset 14, -4
+ 621              		.loc 7 103 17 view .LVU161
+ 622 0002 1648     		ldr	r0, .L28
+ 623 0004 FFF7FEFF 		bl	_ZN5daisy9DaisySeed9ConfigureEv
+ 624              	.LVL55:
+ 104:src/main.cpp  ****     hw.Init();          // Inizializzazione hardware
+ 625              		.loc 7 104 5 is_stmt 1 view .LVU162
+ 626              		.loc 7 104 12 is_stmt 0 view .LVU163
+ 627 0008 0021     		movs	r1, #0
+ 628 000a 1448     		ldr	r0, .L28
+ 629 000c FFF7FEFF 		bl	_ZN5daisy9DaisySeed4InitEb
+ 630              	.LVL56:
  105:src/main.cpp  **** 
- 106:src/main.cpp  ****     InitHardware();     // Inizializza LED e ADC
- 639              		.loc 7 106 5 is_stmt 1 view .LVU167
- 640              		.loc 7 106 17 is_stmt 0 view .LVU168
- 641 0020 FFF7FEFF 		bl	_Z12InitHardwarev
- 642              	.LVL59:
- 107:src/main.cpp  ****     
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 22
+ 106:src/main.cpp  ****     hw.SetAudioBlockSize(4);    // Imposta dimensione del blocco audio
+ 631              		.loc 7 106 5 is_stmt 1 view .LVU164
+ 632              		.loc 7 106 25 is_stmt 0 view .LVU165
+ 633 0010 0421     		movs	r1, #4
+ 634 0012 1248     		ldr	r0, .L28
+ 635 0014 FFF7FEFF 		bl	_ZN5daisy9DaisySeed17SetAudioBlockSizeEj
+ 636              	.LVL57:
+ 107:src/main.cpp  ****     hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ); // Imposta sample rate a 48kHz
+ 637              		.loc 7 107 5 is_stmt 1 view .LVU166
+ 638              		.loc 7 107 26 is_stmt 0 view .LVU167
+ 639 0018 0321     		movs	r1, #3
+ 640 001a 1048     		ldr	r0, .L28
+ 641 001c FFF7FEFF 		bl	_ZN5daisy9DaisySeed18SetAudioSampleRateENS_9SaiHandle6Config10SampleRateE
+ 642              	.LVL58:
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 22
 
 
- 108:src/main.cpp  ****     // Inizializza le variabili del LED
- 109:src/main.cpp  ****     lastBlink = System::GetNow();
- 643              		.loc 7 109 5 is_stmt 1 view .LVU169
- 644              		.loc 7 109 31 is_stmt 0 view .LVU170
- 645 0024 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
- 646              	.LVL60:
- 647              		.loc 7 109 15 view .LVU171
- 648 0028 0A49     		ldr	r1, .L28+4
- 110:src/main.cpp  ****     ledState = false;
- 649              		.loc 7 110 14 view .LVU172
- 650 002a 0B4B     		ldr	r3, .L28+8
- 651 002c 0022     		movs	r2, #0
- 109:src/main.cpp  ****     ledState = false;
- 652              		.loc 7 109 31 view .LVU173
- 653 002e 0446     		mov	r4, r0
- 111:src/main.cpp  **** 
- 112:src/main.cpp  ****     delay.Init(hw.AudioSampleRate()); // Inizializza il delay con il sample rate corrente
- 654              		.loc 7 112 15 view .LVU174
- 655 0030 0748     		ldr	r0, .L28
- 110:src/main.cpp  **** 
- 656              		.loc 7 110 14 view .LVU175
- 657 0032 1A70     		strb	r2, [r3]
- 109:src/main.cpp  ****     ledState = false;
- 658              		.loc 7 109 15 view .LVU176
- 659 0034 0C60     		str	r4, [r1]
- 110:src/main.cpp  **** 
- 660              		.loc 7 110 5 is_stmt 1 view .LVU177
- 661              		.loc 7 112 5 view .LVU178
- 662              		.loc 7 112 15 is_stmt 0 view .LVU179
- 663 0036 FFF7FEFF 		bl	_ZN5daisy9DaisySeed15AudioSampleRateEv
- 664              	.LVL61:
- 665 003a 0848     		ldr	r0, .L28+12
- 666 003c FFF7FEFF 		bl	_ZN11AnalogDelay4InitEf
- 667              	.LVL62:
+ 108:src/main.cpp  **** 
+ 109:src/main.cpp  ****     InitHardware();     // Inizializza LED e ADC
+ 643              		.loc 7 109 5 is_stmt 1 view .LVU168
+ 644              		.loc 7 109 17 is_stmt 0 view .LVU169
+ 645 0020 FFF7FEFF 		bl	_Z12InitHardwarev
+ 646              	.LVL59:
+ 110:src/main.cpp  ****     
+ 111:src/main.cpp  ****     // Inizializza le variabili del LED
+ 112:src/main.cpp  ****     lastBlink = System::GetNow();
+ 647              		.loc 7 112 5 is_stmt 1 view .LVU170
+ 648              		.loc 7 112 31 is_stmt 0 view .LVU171
+ 649 0024 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
+ 650              	.LVL60:
+ 651              		.loc 7 112 15 view .LVU172
+ 652 0028 0D49     		ldr	r1, .L28+4
+ 113:src/main.cpp  ****     ledState = false;
+ 653              		.loc 7 113 14 view .LVU173
+ 654 002a 0E4B     		ldr	r3, .L28+8
+ 655 002c 0022     		movs	r2, #0
+ 112:src/main.cpp  ****     ledState = false;
+ 656              		.loc 7 112 31 view .LVU174
+ 657 002e 0446     		mov	r4, r0
+ 114:src/main.cpp  **** 
+ 115:src/main.cpp  ****     delay.Init(hw.AudioSampleRate()); // Inizializza il delay con il sample rate corrente
+ 658              		.loc 7 115 15 view .LVU175
+ 659 0030 0A48     		ldr	r0, .L28
  113:src/main.cpp  **** 
- 114:src/main.cpp  ****     hw.StartAudio(AudioCallback); // Avvia il processamento audio
- 668              		.loc 7 114 5 is_stmt 1 view .LVU180
- 669              		.loc 7 114 18 is_stmt 0 view .LVU181
- 670 0040 0749     		ldr	r1, .L28+16
- 671 0042 0348     		ldr	r0, .L28
- 672 0044 FFF7FEFF 		bl	_ZN5daisy9DaisySeed10StartAudioEPFvPKPKfPPfjE
- 673              	.LVL63:
- 674              	.L26:
- 115:src/main.cpp  **** 
- 116:src/main.cpp  ****     // Loop infinito per mantenere il programma in esecuzione
- 117:src/main.cpp  ****     while(1) {
- 675              		.loc 7 117 5 is_stmt 1 discriminator 1 view .LVU182
- 118:src/main.cpp  ****         // Attendi 1ms per ridurre l'utilizzo della CPU
- 119:src/main.cpp  ****         System::Delay(1);
- 676              		.loc 7 119 9 discriminator 1 view .LVU183
- 677              		.loc 7 119 22 is_stmt 0 discriminator 1 view .LVU184
- 678 0048 0120     		movs	r0, #1
- 679 004a FFF7FEFF 		bl	_ZN5daisy6System5DelayEm
- 680              	.LVL64:
- 117:src/main.cpp  ****         // Attendi 1ms per ridurre l'utilizzo della CPU
- 681              		.loc 7 117 5 is_stmt 1 discriminator 1 view .LVU185
- 682 004e FBE7     		b	.L26
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 23
+ 660              		.loc 7 113 14 view .LVU176
+ 661 0032 1A70     		strb	r2, [r3]
+ 112:src/main.cpp  ****     ledState = false;
+ 662              		.loc 7 112 15 view .LVU177
+ 663 0034 0C60     		str	r4, [r1]
+ 113:src/main.cpp  **** 
+ 664              		.loc 7 113 5 is_stmt 1 view .LVU178
+ 665              		.loc 7 115 5 view .LVU179
+ 666              		.loc 7 115 15 is_stmt 0 view .LVU180
+ 667 0036 FFF7FEFF 		bl	_ZN5daisy9DaisySeed15AudioSampleRateEv
+ 668              	.LVL61:
+ 669 003a 0B48     		ldr	r0, .L28+12
+ 670 003c FFF7FEFF 		bl	_ZN11AnalogDelay4InitEf
+ 671              	.LVL62:
+ 116:src/main.cpp  ****     util.init(hw.AudioSampleRate()); // Inizializza le utility con il sample rate corrente
+ 672              		.loc 7 116 5 is_stmt 1 view .LVU181
+ 673              		.loc 7 116 14 is_stmt 0 view .LVU182
+ 674 0040 0648     		ldr	r0, .L28
+ 675 0042 FFF7FEFF 		bl	_ZN5daisy9DaisySeed15AudioSampleRateEv
+ 676              	.LVL63:
+ 677 0046 0948     		ldr	r0, .L28+16
+ 678 0048 FFF7FEFF 		bl	_ZN9Utilities4initEf
+ 679              	.LVL64:
+ 117:src/main.cpp  **** 
+ 118:src/main.cpp  ****     hw.StartAudio(AudioCallback); // Avvia il processamento audio
+ 680              		.loc 7 118 5 is_stmt 1 view .LVU183
+ 681              		.loc 7 118 18 is_stmt 0 view .LVU184
+ 682 004c 0849     		ldr	r1, .L28+20
+ 683 004e 0348     		ldr	r0, .L28
+ 684 0050 FFF7FEFF 		bl	_ZN5daisy9DaisySeed10StartAudioEPFvPKPKfPPfjE
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 23
 
 
- 683              	.L29:
- 684              		.align	2
- 685              	.L28:
- 686 0050 00000000 		.word	.LANCHOR1
- 687 0054 00000000 		.word	.LANCHOR6
- 688 0058 00000000 		.word	.LANCHOR7
- 689 005c 00000000 		.word	delay
- 690 0060 00000000 		.word	_Z13AudioCallbackPKPKfPPfj
- 691              		.cfi_endproc
- 692              	.LFE4821:
- 694              		.section	.text.startup._GLOBAL__sub_I_hw,"ax",%progbits
- 695              		.align	1
- 696              		.p2align 2,,3
- 697              		.syntax unified
- 698              		.thumb
- 699              		.thumb_func
- 700              		.fpu fpv5-d16
- 702              	_GLOBAL__sub_I_hw:
- 703              	.LFB5384:
- 120:src/main.cpp  ****     }
- 121:src/main.cpp  **** }
- 704              		.loc 7 121 1 view -0
- 705              		.cfi_startproc
- 706              		@ args = 0, pretend = 0, frame = 0
- 707              		@ frame_needed = 0, uses_anonymous_args = 0
- 708              	.LBB260:
- 709              	.LBI260:
- 710              		.loc 7 121 1 view .LVU187
- 711              	.LVL65:
- 712              	.LBB261:
- 713              	.LBB262:
- 714              	.LBI262:
+ 685              	.LVL65:
+ 686              	.L26:
+ 119:src/main.cpp  **** 
+ 120:src/main.cpp  ****     // Loop infinito per mantenere il programma in esecuzione
+ 121:src/main.cpp  ****     while(1) {
+ 687              		.loc 7 121 5 is_stmt 1 discriminator 1 view .LVU185
+ 122:src/main.cpp  ****         // Attendi 1ms per ridurre l'utilizzo della CPU
+ 123:src/main.cpp  ****         System::Delay(1);
+ 688              		.loc 7 123 9 discriminator 1 view .LVU186
+ 689              		.loc 7 123 22 is_stmt 0 discriminator 1 view .LVU187
+ 690 0054 0120     		movs	r0, #1
+ 691 0056 FFF7FEFF 		bl	_ZN5daisy6System5DelayEm
+ 692              	.LVL66:
+ 121:src/main.cpp  ****         // Attendi 1ms per ridurre l'utilizzo della CPU
+ 693              		.loc 7 121 5 is_stmt 1 discriminator 1 view .LVU188
+ 694 005a FBE7     		b	.L26
+ 695              	.L29:
+ 696              		.align	2
+ 697              	.L28:
+ 698 005c 00000000 		.word	.LANCHOR1
+ 699 0060 00000000 		.word	.LANCHOR7
+ 700 0064 00000000 		.word	.LANCHOR8
+ 701 0068 00000000 		.word	delay
+ 702 006c 00000000 		.word	.LANCHOR2
+ 703 0070 00000000 		.word	_Z13AudioCallbackPKPKfPPfj
+ 704              		.cfi_endproc
+ 705              	.LFE4821:
+ 707              		.section	.text.startup._GLOBAL__sub_I_hw,"ax",%progbits
+ 708              		.align	1
+ 709              		.p2align 2,,3
+ 710              		.syntax unified
+ 711              		.thumb
+ 712              		.thumb_func
+ 713              		.fpu fpv5-d16
+ 715              	_GLOBAL__sub_I_hw:
+ 716              	.LFB5384:
+ 124:src/main.cpp  ****     }
+ 125:src/main.cpp  **** }
+ 717              		.loc 7 125 1 view -0
+ 718              		.cfi_startproc
+ 719              		@ args = 0, pretend = 0, frame = 0
+ 720              		@ frame_needed = 0, uses_anonymous_args = 0
+ 721              	.LBB260:
+ 722              	.LBI260:
+ 723              		.loc 7 125 1 view .LVU190
+ 724              	.LVL67:
+ 725              	.LBB261:
+ 726              	.LBB262:
+ 727              	.LBI262:
   21:../libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
- 715              		.loc 1 21 5 view .LVU188
- 716              	.LBB263:
- 717              	.LBB264:
- 718              	.LBI264:
- 719              		.file 8 "../libDaisy/src/per/qspi.h"
+ 728              		.loc 1 21 5 view .LVU191
+ 729              	.LBB263:
+ 730              	.LBB264:
+ 731              	.LBI264:
+ 732              		.file 8 "../libDaisy/src/per/qspi.h"
    1:../libDaisy/src/per/qspi.h **** #ifndef DSY_QSPI
    2:../libDaisy/src/per/qspi.h **** #define DSY_QSPI /**< Macro */
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 24
+
+
    3:../libDaisy/src/per/qspi.h **** 
    4:../libDaisy/src/per/qspi.h **** #ifndef UNIT_TEST // for unit tests, a dummy implementation
    5:../libDaisy/src/per/qspi.h **** 
@@ -1378,9 +1398,6 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   17:../libDaisy/src/per/qspi.h ****     __attribute__((section( \
   18:../libDaisy/src/per/qspi.h ****         ".qspiflash_bss"))) /**< used for reading memory in memory_mapped mode. */
   19:../libDaisy/src/per/qspi.h **** 
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 24
-
-
   20:../libDaisy/src/per/qspi.h **** namespace daisy
   21:../libDaisy/src/per/qspi.h **** {
   22:../libDaisy/src/per/qspi.h **** /** @addtogroup serial
@@ -1421,6 +1438,9 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   57:../libDaisy/src/per/qspi.h ****     /** Configuration structure for interfacing with QSPI Driver */
   58:../libDaisy/src/per/qspi.h ****     struct Config
   59:../libDaisy/src/per/qspi.h ****     {
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 25
+
+
   60:../libDaisy/src/per/qspi.h ****         /** Flash Devices supported. (Both of these are more-or-less the same, just different sizes
   61:../libDaisy/src/per/qspi.h ****         enum Device
   62:../libDaisy/src/per/qspi.h ****         {
@@ -1438,9 +1458,6 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   74:../libDaisy/src/per/qspi.h ****         */
   75:../libDaisy/src/per/qspi.h ****         enum Mode
   76:../libDaisy/src/per/qspi.h ****         {
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 25
-
-
   77:../libDaisy/src/per/qspi.h ****             MEMORY_MAPPED,    /**< & */
   78:../libDaisy/src/per/qspi.h ****             INDIRECT_POLLING, /**< & */
   79:../libDaisy/src/per/qspi.h ****             MODE_LAST,
@@ -1481,6 +1498,9 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  114:../libDaisy/src/per/qspi.h ****     Result DeInit();
  115:../libDaisy/src/per/qspi.h **** 
  116:../libDaisy/src/per/qspi.h ****     /** 
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 26
+
+
  117:../libDaisy/src/per/qspi.h ****         Writes a single page to to the specified address on the QSPI chip.
  118:../libDaisy/src/per/qspi.h ****         For IS25LP*, page size is 256 bytes.
  119:../libDaisy/src/per/qspi.h ****         \param address Address to write to
@@ -1498,9 +1518,6 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  131:../libDaisy/src/per/qspi.h ****         \return Result::OK or Result::ERR
  132:../libDaisy/src/per/qspi.h ****         */
  133:../libDaisy/src/per/qspi.h ****     Result Write(uint32_t address, uint32_t size, uint8_t* buffer);
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 26
-
-
  134:../libDaisy/src/per/qspi.h **** 
  135:../libDaisy/src/per/qspi.h ****     /** 
  136:../libDaisy/src/per/qspi.h ****         Erases the area specified on the chip.
@@ -1535,20 +1552,23 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  165:../libDaisy/src/per/qspi.h ****     void* GetData(uint32_t offset = 0);
  166:../libDaisy/src/per/qspi.h **** 
  167:../libDaisy/src/per/qspi.h ****     QSPIHandle() : pimpl_(nullptr) {}
- 720              		.loc 8 167 5 view .LVU189
- 721              		.loc 8 167 5 is_stmt 0 view .LVU190
- 722              	.LBE264:
- 723              	.LBB267:
- 724              	.LBI267:
+ 733              		.loc 8 167 5 view .LVU192
+ 734              		.loc 8 167 5 is_stmt 0 view .LVU193
+ 735              	.LBE264:
+ 736              	.LBB267:
+ 737              	.LBI267:
   58:../libDaisy/src/per/qspi.h ****     {
- 725              		.loc 8 58 12 is_stmt 1 view .LVU191
- 726              	.LBB268:
- 727              	.LBI268:
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 27
+
+
+ 738              		.loc 8 58 12 is_stmt 1 view .LVU194
+ 739              	.LBB268:
+ 740              	.LBI268:
   84:../libDaisy/src/per/qspi.h ****             Pin io0; /**< & */
- 728              		.loc 8 84 9 view .LVU192
- 729              	.LBB269:
- 730              	.LBI269:
- 731              		.file 9 "../libDaisy/src/daisy_core.h"
+ 741              		.loc 8 84 9 view .LVU195
+ 742              	.LBB269:
+ 743              	.LBI269:
+ 744              		.file 9 "../libDaisy/src/daisy_core.h"
    1:../libDaisy/src/daisy_core.h **** #pragma once
    2:../libDaisy/src/daisy_core.h **** #ifndef DSY_CORE_HW_H
    3:../libDaisy/src/daisy_core.h **** #define DSY_CORE_HW_H /**< & */
@@ -1558,9 +1578,6 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
    7:../libDaisy/src/daisy_core.h **** #if defined(_MSC_VER)
    8:../libDaisy/src/daisy_core.h **** #define FORCE_INLINE __forceinline /**< & */
    9:../libDaisy/src/daisy_core.h **** #elif defined(__clang__)
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 27
-
-
   10:../libDaisy/src/daisy_core.h **** #define FORCE_INLINE inline __attribute__((always_inline)) /**< & */
   11:../libDaisy/src/daisy_core.h **** #pragma clang diagnostic ignored "-Wduplicate-decl-specifier"
   12:../libDaisy/src/daisy_core.h **** #elif defined(__GNUC__)
@@ -1601,6 +1618,9 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   47:../libDaisy/src/daisy_core.h **** 
   48:../libDaisy/src/daisy_core.h **** /** shorthand macro for simplifying the reading of the left 
   49:../libDaisy/src/daisy_core.h ****  *  channel of a non-interleaved output buffer named out */
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 28
+
+
   50:../libDaisy/src/daisy_core.h **** #define OUT_L out[0]
   51:../libDaisy/src/daisy_core.h **** 
   52:../libDaisy/src/daisy_core.h **** /** shorthand macro for simplifying the reading of the right 
@@ -1618,9 +1638,6 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   64:../libDaisy/src/daisy_core.h **** /** 
   65:../libDaisy/src/daisy_core.h ****     Computes cube.
   66:../libDaisy/src/daisy_core.h ****     \param x Number to be cubed
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 28
-
-
   67:../libDaisy/src/daisy_core.h ****     \return x ^ 3
   68:../libDaisy/src/daisy_core.h **** */
   69:../libDaisy/src/daisy_core.h **** FORCE_INLINE float cube(float x)
@@ -1661,6 +1678,9 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  104:../libDaisy/src/daisy_core.h **** 
  105:../libDaisy/src/daisy_core.h **** /**
  106:../libDaisy/src/daisy_core.h ****     Converts float to Signed 8-bit
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 29
+
+
  107:../libDaisy/src/daisy_core.h **** */
  108:../libDaisy/src/daisy_core.h **** FORCE_INLINE int8_t f2s8(float x)
  109:../libDaisy/src/daisy_core.h **** {
@@ -1678,9 +1698,6 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  121:../libDaisy/src/daisy_core.h **** {
  122:../libDaisy/src/daisy_core.h ****     return (float)x * S162F_SCALE;
  123:../libDaisy/src/daisy_core.h **** }
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 29
-
-
  124:../libDaisy/src/daisy_core.h **** 
  125:../libDaisy/src/daisy_core.h **** /**
  126:../libDaisy/src/daisy_core.h ****     Converts float to Signed 16-bit
@@ -1721,6 +1738,9 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  161:../libDaisy/src/daisy_core.h ****     Converts float to Signed 24-bit
  162:../libDaisy/src/daisy_core.h ****  */
  163:../libDaisy/src/daisy_core.h **** FORCE_INLINE int32_t f2s32(float x)
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 30
+
+
  164:../libDaisy/src/daisy_core.h **** {
  165:../libDaisy/src/daisy_core.h ****     x = x <= FBIPMIN ? FBIPMIN : x;
  166:../libDaisy/src/daisy_core.h ****     x = x >= FBIPMAX ? FBIPMAX : x;
@@ -1738,9 +1758,6 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  178:../libDaisy/src/daisy_core.h ****     PORTB, /**< Port B */
  179:../libDaisy/src/daisy_core.h ****     PORTC, /**< Port C */
  180:../libDaisy/src/daisy_core.h ****     PORTD, /**< Port D */
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 30
-
-
  181:../libDaisy/src/daisy_core.h ****     PORTE, /**< Port E */
  182:../libDaisy/src/daisy_core.h ****     PORTF, /**< Port F */
  183:../libDaisy/src/daisy_core.h ****     PORTG, /**< Port G */
@@ -1765,56 +1782,56 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  202:../libDaisy/src/daisy_core.h **** 
  203:../libDaisy/src/daisy_core.h ****     /** @brief Basic Constructor creates an invalid Pin object */
  204:../libDaisy/src/daisy_core.h ****     constexpr Pin() : port(PORTX), pin(255) {}
- 732              		.loc 9 204 15 view .LVU193
- 733              		.loc 9 204 15 is_stmt 0 view .LVU194
- 734              	.LBE269:
- 735              	.LBB270:
- 736              	.LBI270:
- 737              		.loc 9 204 15 is_stmt 1 view .LVU195
- 738              		.loc 9 204 15 is_stmt 0 view .LVU196
- 739              	.LBE270:
- 740              	.LBB271:
- 741              	.LBI271:
- 742              		.loc 9 204 15 is_stmt 1 view .LVU197
- 743              		.loc 9 204 15 is_stmt 0 view .LVU198
- 744              	.LBE271:
- 745              	.LBB272:
- 746              	.LBI272:
- 747              		.loc 9 204 15 is_stmt 1 view .LVU199
- 748              		.loc 9 204 15 is_stmt 0 view .LVU200
- 749              	.LBE272:
- 750              	.LBB273:
- 751              	.LBI273:
- 752              		.loc 9 204 15 is_stmt 1 view .LVU201
- 753              		.loc 9 204 15 is_stmt 0 view .LVU202
- 754              	.LBE273:
- 755              	.LBB274:
- 756              	.LBI274:
- 757              		.loc 9 204 15 is_stmt 1 view .LVU203
- 758              		.loc 9 204 15 is_stmt 0 view .LVU204
- 759              	.LBE274:
- 760              	.LBE268:
- 761              	.LBE267:
- 762              	.LBB275:
- 763              	.LBI275:
-  87:../libDaisy/src/hid/audio.h ****     ~AudioHandle() {}
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 31
+ 745              		.loc 9 204 15 view .LVU196
+ 746              		.loc 9 204 15 is_stmt 0 view .LVU197
+ 747              	.LBE269:
+ 748              	.LBB270:
+ 749              	.LBI270:
+ 750              		.loc 9 204 15 is_stmt 1 view .LVU198
+ 751              		.loc 9 204 15 is_stmt 0 view .LVU199
+ 752              	.LBE270:
+ 753              	.LBB271:
+ 754              	.LBI271:
+ 755              		.loc 9 204 15 is_stmt 1 view .LVU200
+ 756              		.loc 9 204 15 is_stmt 0 view .LVU201
+ 757              	.LBE271:
+ 758              	.LBB272:
+ 759              	.LBI272:
+ 760              		.loc 9 204 15 is_stmt 1 view .LVU202
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 31
 
 
- 764              		.loc 6 87 5 is_stmt 1 view .LVU205
+ 761              		.loc 9 204 15 is_stmt 0 view .LVU203
+ 762              	.LBE272:
+ 763              	.LBB273:
+ 764              	.LBI273:
+ 765              		.loc 9 204 15 is_stmt 1 view .LVU204
+ 766              		.loc 9 204 15 is_stmt 0 view .LVU205
+ 767              	.LBE273:
+ 768              	.LBB274:
+ 769              	.LBI274:
+ 770              		.loc 9 204 15 is_stmt 1 view .LVU206
+ 771              		.loc 9 204 15 is_stmt 0 view .LVU207
+ 772              	.LBE274:
+ 773              	.LBE268:
+ 774              	.LBE267:
+ 775              	.LBB275:
+ 776              	.LBI275:
   87:../libDaisy/src/hid/audio.h ****     ~AudioHandle() {}
- 765              		.loc 6 87 5 is_stmt 0 view .LVU206
- 766              	.LBE275:
- 767              	.LBB278:
- 768              	.LBI278:
+ 777              		.loc 6 87 5 is_stmt 1 view .LVU208
+  87:../libDaisy/src/hid/audio.h ****     ~AudioHandle() {}
+ 778              		.loc 6 87 5 is_stmt 0 view .LVU209
+ 779              	.LBE275:
+ 780              	.LBB278:
+ 781              	.LBI278:
  109:../libDaisy/src/per/adc.h ****     ~AdcHandle() {}
- 769              		.loc 5 109 5 is_stmt 1 view .LVU207
+ 782              		.loc 5 109 5 is_stmt 1 view .LVU210
  109:../libDaisy/src/per/adc.h ****     ~AdcHandle() {}
- 770              		.loc 5 109 5 is_stmt 0 view .LVU208
- 771              	.LBE278:
- 772              	.LBB279:
- 773              	.LBI279:
- 774              		.file 10 "../libDaisy/src/per/dac.h"
+ 783              		.loc 5 109 5 is_stmt 0 view .LVU211
+ 784              	.LBE278:
+ 785              	.LBB279:
+ 786              	.LBI279:
+ 787              		.file 10 "../libDaisy/src/per/dac.h"
    1:../libDaisy/src/per/dac.h **** #pragma once
    2:../libDaisy/src/per/dac.h **** #ifndef DSY_DAC_H
    3:../libDaisy/src/per/dac.h **** #define DSY_DAC_H
@@ -1841,6 +1858,9 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   24:../libDaisy/src/per/dac.h ****     /** Return Values for the DacHandle class */
   25:../libDaisy/src/per/dac.h ****     enum class Result
   26:../libDaisy/src/per/dac.h ****     {
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 32
+
+
   27:../libDaisy/src/per/dac.h ****         OK,
   28:../libDaisy/src/per/dac.h ****         ERR,
   29:../libDaisy/src/per/dac.h ****     };
@@ -1858,9 +1878,6 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   41:../libDaisy/src/per/dac.h ****      ** Polling mode uses the blocking mode to transmit a single value at a time.
   42:../libDaisy/src/per/dac.h ****      **
   43:../libDaisy/src/per/dac.h ****      ** DMA mode uses a buffer, and periodically transmits it triggering a 
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 32
-
-
   44:../libDaisy/src/per/dac.h ****      ** callback to fill the buffer when it is ready for more samples.
   45:../libDaisy/src/per/dac.h ****      ***/
   46:../libDaisy/src/per/dac.h ****     enum class Mode
@@ -1901,26 +1918,26 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   81:../libDaisy/src/per/dac.h ****         BufferState buff_state;
   82:../libDaisy/src/per/dac.h ****     };
   83:../libDaisy/src/per/dac.h **** 
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 33
+
+
   84:../libDaisy/src/per/dac.h ****     DacHandle() : pimpl_(nullptr) {}
- 775              		.loc 10 84 5 is_stmt 1 view .LVU209
- 776              		.loc 10 84 5 is_stmt 0 view .LVU210
- 777              	.LBE279:
- 778              	.LBB282:
- 779              	.LBI282:
+ 788              		.loc 10 84 5 is_stmt 1 view .LVU212
+ 789              		.loc 10 84 5 is_stmt 0 view .LVU213
+ 790              	.LBE279:
+ 791              	.LBB282:
+ 792              	.LBI282:
   40:../libDaisy/src/hid/usb.h **** 
- 780              		.loc 4 40 5 is_stmt 1 view .LVU211
+ 793              		.loc 4 40 5 is_stmt 1 view .LVU214
   40:../libDaisy/src/hid/usb.h **** 
- 781              		.loc 4 40 5 is_stmt 0 view .LVU212
- 782              	.LBE282:
- 783              	.LBB283:
- 784              	.LBI283:
- 785              		.file 11 "../libDaisy/src/per/gpio.h"
+ 794              		.loc 4 40 5 is_stmt 0 view .LVU215
+ 795              	.LBE282:
+ 796              	.LBB283:
+ 797              	.LBI283:
+ 798              		.file 11 "../libDaisy/src/per/gpio.h"
    1:../libDaisy/src/per/gpio.h **** #pragma once
    2:../libDaisy/src/per/gpio.h **** #ifndef DSY_GPIO_H
    3:../libDaisy/src/per/gpio.h **** #define DSY_GPIO_H
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 33
-
-
    4:../libDaisy/src/per/gpio.h **** #include "daisy_core.h"
    5:../libDaisy/src/per/gpio.h **** 
    6:../libDaisy/src/per/gpio.h **** #ifdef __cplusplus
@@ -1961,6 +1978,9 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   41:../libDaisy/src/per/gpio.h ****     enum class Pull
   42:../libDaisy/src/per/gpio.h ****     {
   43:../libDaisy/src/per/gpio.h ****         NOPULL,   /**< No pull up resistor */
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 34
+
+
   44:../libDaisy/src/per/gpio.h ****         PULLUP,   /**< Internal pull up enabled */
   45:../libDaisy/src/per/gpio.h ****         PULLDOWN, /**< Internal pull down enabled*/
   46:../libDaisy/src/per/gpio.h ****     };
@@ -1978,9 +1998,6 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   58:../libDaisy/src/per/gpio.h ****     struct Config
   59:../libDaisy/src/per/gpio.h ****     {
   60:../libDaisy/src/per/gpio.h ****         Pin   pin;
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 34
-
-
   61:../libDaisy/src/per/gpio.h ****         Mode  mode;
   62:../libDaisy/src/per/gpio.h ****         Pull  pull;
   63:../libDaisy/src/per/gpio.h ****         Speed speed;
@@ -1995,82 +2012,82 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   72:../libDaisy/src/per/gpio.h ****     };
   73:../libDaisy/src/per/gpio.h **** 
   74:../libDaisy/src/per/gpio.h ****     GPIO() {}
- 786              		.loc 11 74 5 is_stmt 1 view .LVU213
- 787              	.LBB284:
- 788              	.LBB285:
- 789              	.LBI285:
+ 799              		.loc 11 74 5 is_stmt 1 view .LVU216
+ 800              	.LBB284:
+ 801              	.LBB285:
+ 802              	.LBI285:
   68:../libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
- 790              		.loc 11 68 9 view .LVU214
- 791              	.LBB286:
- 792              	.LBB287:
- 793              	.LBB288:
- 794              	.LBI288:
- 795              		.loc 9 204 15 view .LVU215
- 796              		.loc 9 204 15 is_stmt 0 view .LVU216
- 797              	.LBE288:
- 798              	.LBE287:
- 799              	.LBE286:
- 800              	.LBE285:
- 801              	.LBE284:
- 802              	.LBE283:
- 803              	.LBB297:
- 804              	.LBI297:
- 805              		.loc 11 74 5 is_stmt 1 view .LVU217
- 806              	.LBB298:
- 807              	.LBB299:
- 808              	.LBI299:
+ 803              		.loc 11 68 9 view .LVU217
+ 804              	.LBB286:
+ 805              	.LBB287:
+ 806              	.LBB288:
+ 807              	.LBI288:
+ 808              		.loc 9 204 15 view .LVU218
+ 809              		.loc 9 204 15 is_stmt 0 view .LVU219
+ 810              	.LBE288:
+ 811              	.LBE287:
+ 812              	.LBE286:
+ 813              	.LBE285:
+ 814              	.LBE284:
+ 815              	.LBE283:
+ 816              	.LBB297:
+ 817              	.LBI297:
+ 818              		.loc 11 74 5 is_stmt 1 view .LVU220
+ 819              	.LBB298:
+ 820              	.LBB299:
+ 821              	.LBI299:
   68:../libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
- 809              		.loc 11 68 9 view .LVU218
- 810              	.LBB300:
- 811              	.LBB301:
- 812              	.LBB302:
- 813              	.LBI302:
- 814              		.loc 9 204 15 view .LVU219
- 815              		.loc 9 204 15 is_stmt 0 view .LVU220
- 816              	.LBE302:
- 817              	.LBE301:
- 818              	.LBE300:
- 819              	.LBE299:
- 820              	.LBE298:
- 821              	.LBE297:
- 822              	.LBB311:
- 823              	.LBI311:
-  96:../libDaisy/src/sys/system.h ****     ~System() {}
- 824              		.loc 3 96 5 is_stmt 1 view .LVU221
-  96:../libDaisy/src/sys/system.h ****     ~System() {}
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 35
+ 822              		.loc 11 68 9 view .LVU221
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 35
 
 
- 825              		.loc 3 96 5 is_stmt 0 view .LVU222
- 826              	.LBE311:
- 827              	.LBB312:
- 828              	.LBI312:
+ 823              	.LBB300:
+ 824              	.LBB301:
+ 825              	.LBB302:
+ 826              	.LBI302:
+ 827              		.loc 9 204 15 view .LVU222
+ 828              		.loc 9 204 15 is_stmt 0 view .LVU223
+ 829              	.LBE302:
+ 830              	.LBE301:
+ 831              	.LBE300:
+ 832              	.LBE299:
+ 833              	.LBE298:
+ 834              	.LBE297:
+ 835              	.LBB311:
+ 836              	.LBI311:
+  96:../libDaisy/src/sys/system.h ****     ~System() {}
+ 837              		.loc 3 96 5 is_stmt 1 view .LVU224
+  96:../libDaisy/src/sys/system.h ****     ~System() {}
+ 838              		.loc 3 96 5 is_stmt 0 view .LVU225
+ 839              	.LBE311:
+ 840              	.LBB312:
+ 841              	.LBI312:
   20:../libDaisy/src/dev/codec_ak4556.h ****     ~Ak4556() {}
- 829              		.loc 2 20 5 is_stmt 1 view .LVU223
- 830              	.LBB313:
- 831              	.LBI313:
- 832              		.loc 11 74 5 view .LVU224
- 833              	.LBB314:
- 834              	.LBB315:
- 835              	.LBI315:
+ 842              		.loc 2 20 5 is_stmt 1 view .LVU226
+ 843              	.LBB313:
+ 844              	.LBI313:
+ 845              		.loc 11 74 5 view .LVU227
+ 846              	.LBB314:
+ 847              	.LBB315:
+ 848              	.LBI315:
   68:../libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
- 836              		.loc 11 68 9 view .LVU225
- 837              	.LBB316:
- 838              	.LBB317:
- 839              	.LBB318:
- 840              	.LBI318:
- 841              		.loc 9 204 15 view .LVU226
- 842              		.loc 9 204 15 is_stmt 0 view .LVU227
- 843              	.LBE318:
- 844              	.LBE317:
- 845              	.LBE316:
- 846              	.LBE315:
- 847              	.LBE314:
- 848              	.LBE313:
- 849              	.LBE312:
- 850              	.LBB329:
- 851              	.LBI329:
- 852              		.file 12 "../libDaisy/src/per/sai.h"
+ 849              		.loc 11 68 9 view .LVU228
+ 850              	.LBB316:
+ 851              	.LBB317:
+ 852              	.LBB318:
+ 853              	.LBI318:
+ 854              		.loc 9 204 15 view .LVU229
+ 855              		.loc 9 204 15 is_stmt 0 view .LVU230
+ 856              	.LBE318:
+ 857              	.LBE317:
+ 858              	.LBE316:
+ 859              	.LBE315:
+ 860              	.LBE314:
+ 861              	.LBE313:
+ 862              	.LBE312:
+ 863              	.LBB329:
+ 864              	.LBI329:
+ 865              		.file 12 "../libDaisy/src/per/sai.h"
    1:../libDaisy/src/per/sai.h **** #pragma once
    2:../libDaisy/src/per/sai.h **** #ifndef DSY_SAI_H
    3:../libDaisy/src/per/sai.h **** #define DSY_SAI_H
@@ -2081,6 +2098,9 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
    8:../libDaisy/src/per/sai.h **** namespace daisy
    9:../libDaisy/src/per/sai.h **** {
   10:../libDaisy/src/per/sai.h **** /** 
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 36
+
+
   11:../libDaisy/src/per/sai.h ****  * Support for I2S Audio Protocol with different bit-depth, samplerate options
   12:../libDaisy/src/per/sai.h ****  * Allows for master or slave, as well as freedom of selecting direction, 
   13:../libDaisy/src/per/sai.h ****  * and other behavior for each peripheral, and block.
@@ -2098,9 +2118,6 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   25:../libDaisy/src/per/sai.h ****  *  sai_config.periph          = SaiHandle::Config::Peripheral::SAI_1;
   26:../libDaisy/src/per/sai.h ****  *  sai_config.sr              = SaiHandle::Config::SampleRate::SAI_48KHZ;
   27:../libDaisy/src/per/sai.h ****  *  sai_config.bit_depth       = SaiHandle::Config::BitDepth::SAI_24BIT;
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 36
-
-
   28:../libDaisy/src/per/sai.h ****  *  sai_config.a_sync          = SaiHandle::Config::Sync::MASTER;
   29:../libDaisy/src/per/sai.h ****  *  sai_config.b_sync          = SaiHandle::Config::Sync::SLAVE;
   30:../libDaisy/src/per/sai.h ****  *  sai_config.a_dir           = SaiHandle::Config::Direction::RECEIVE;
@@ -2141,6 +2158,9 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   65:../libDaisy/src/per/sai.h **** 
   66:../libDaisy/src/per/sai.h ****         /** Bit Depth that the hardware expects to be transferred to/from the device. */
   67:../libDaisy/src/per/sai.h ****         enum class BitDepth
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 37
+
+
   68:../libDaisy/src/per/sai.h ****         {
   69:../libDaisy/src/per/sai.h ****             SAI_16BIT,
   70:../libDaisy/src/per/sai.h ****             SAI_24BIT,
@@ -2158,9 +2178,6 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
   82:../libDaisy/src/per/sai.h ****         };
   83:../libDaisy/src/per/sai.h **** 
   84:../libDaisy/src/per/sai.h ****         /** Specifies the direction for each peripheral block. */
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 37
-
-
   85:../libDaisy/src/per/sai.h ****         enum class Direction
   86:../libDaisy/src/per/sai.h ****         {
   87:../libDaisy/src/per/sai.h ****             TRANSMIT,
@@ -2186,513 +2203,536 @@ ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 1
  107:../libDaisy/src/per/sai.h ****     };
  108:../libDaisy/src/per/sai.h **** 
  109:../libDaisy/src/per/sai.h ****     SaiHandle() : pimpl_(nullptr) {}
- 853              		.loc 12 109 5 is_stmt 1 view .LVU228
- 854              	.LBE329:
- 855              	.LBE263:
- 856              	.LBE262:
- 857              	.LBE261:
- 858              	.LBE260:
- 859              		.loc 7 121 1 is_stmt 0 view .LVU229
- 860 0000 10B5     		push	{r4, lr}
- 861              		.cfi_def_cfa_offset 8
- 862              		.cfi_offset 4, -8
- 863              		.cfi_offset 14, -4
- 864              	.LBB373:
- 865              	.LBB372:
- 866              	.LBB345:
- 867              	.LBB342:
- 868              	.LBB332:
- 869              	.LBB265:
- 870              	.LBB266:
- 871              		.loc 8 167 34 view .LVU230
- 872 0002 2448     		ldr	r0, .L36
- 873 0004 0023     		movs	r3, #0
- 874              	.LBE266:
- 875              	.LBE265:
- 876              	.LBE332:
+ 866              		.loc 12 109 5 is_stmt 1 view .LVU231
+ 867              	.LBE329:
+ 868              	.LBE263:
+ 869              	.LBE262:
+ 870              	.LBE261:
+ 871              	.LBE260:
+ 872              		.loc 7 125 1 is_stmt 0 view .LVU232
+ 873 0000 10B5     		push	{r4, lr}
+ 874              		.cfi_def_cfa_offset 8
+ 875              		.cfi_offset 4, -8
+ 876              		.cfi_offset 14, -4
+ 877              	.LBB373:
+ 878              	.LBB372:
+ 879              	.LBB345:
+ 880              	.LBB342:
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 38
+
+
+ 881              	.LBB332:
+ 882              	.LBB265:
+ 883              	.LBB266:
+ 884              		.loc 8 167 34 view .LVU233
+ 885 0002 0023     		movs	r3, #0
+ 886 0004 2748     		ldr	r0, .L36
+ 887              	.LBE266:
+ 888              	.LBE265:
+ 889              	.LBE332:
   21:../libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
- 877              		.loc 1 21 17 view .LVU231
- 878 0006 4FF60B71 		movw	r1, #65291
- 879 000a 6FF0F414 		mvn	r4, #15991028
- 880              	.LBE342:
- 881              	.LBE345:
-  13:src/main.cpp  **** AnalogDelay delay;      // Oggetto per gestire l'effetto delay
- 882              		.loc 7 13 11 view .LVU232
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 38
-
-
- 883 000e 224A     		ldr	r2, .L36+4
- 884              	.LBB346:
- 885              	.LBB343:
- 886              	.LBB333:
- 887              	.LBB276:
- 888              	.LBB277:
+ 890              		.loc 1 21 17 view .LVU234
+ 891 0006 4FF60B71 		movw	r1, #65291
+ 892 000a 6FF0F414 		mvn	r4, #15991028
+ 893              	.LBB333:
+ 894              	.LBB276:
+ 895              	.LBB277:
   87:../libDaisy/src/hid/audio.h ****     ~AudioHandle() {}
- 889              		.loc 6 87 35 view .LVU233
- 890 0010 4361     		str	r3, [r0, #20]
- 891              	.LBE277:
- 892              	.LBE276:
- 893              	.LBE333:
- 894              	.LBB334:
- 895              	.LBB280:
- 896              	.LBB281:
- 897              		.loc 10 84 33 view .LVU234
- 898 0012 0362     		str	r3, [r0, #32]
- 899              	.LBE281:
- 900              	.LBE280:
- 901              	.LBE334:
- 902              	.LBB335:
- 903              	.LBB327:
- 904              	.LBB325:
- 905              	.LBB323:
- 906              	.LBB321:
- 907              	.LBB319:
+ 896              		.loc 6 87 35 view .LVU235
+ 897 000e 4361     		str	r3, [r0, #20]
+ 898              	.LBE277:
+ 899              	.LBE276:
+ 900              	.LBE333:
+ 901              	.LBB334:
+ 902              	.LBB280:
+ 903              	.LBB281:
+ 904              		.loc 10 84 33 view .LVU236
+ 905 0010 0362     		str	r3, [r0, #32]
+ 906              	.LBE281:
+ 907              	.LBE280:
+ 908              	.LBE334:
+ 909              	.LBB335:
+ 910              	.LBB327:
+ 911              	.LBB325:
+ 912              	.LBB323:
+ 913              	.LBB321:
+ 914              	.LBB319:
   69:../libDaisy/src/per/gpio.h ****         {
- 908              		.loc 11 69 73 view .LVU235
- 909 0014 4366     		str	r3, [r0, #100]
- 910              	.LBE319:
- 911              	.LBE321:
- 912              	.LBE323:
- 913              	.LBE325:
- 914              	.LBE327:
- 915              	.LBE335:
- 916              	.LBB336:
- 917              	.LBB330:
- 918              	.LBB331:
- 919              		.loc 12 109 33 view .LVU236
- 920 0016 0367     		str	r3, [r0, #112]
- 921              	.LVL66:
- 922              		.loc 12 109 33 view .LVU237
- 923              	.LBE331:
- 924              	.LBE330:
- 925              	.LBE336:
+ 915              		.loc 11 69 73 view .LVU237
+ 916 0012 4366     		str	r3, [r0, #100]
+ 917              	.LBE319:
+ 918              	.LBE321:
+ 919              	.LBE323:
+ 920              	.LBE325:
+ 921              	.LBE327:
+ 922              	.LBE335:
+ 923              	.LBB336:
+ 924              	.LBB330:
+ 925              	.LBB331:
+ 926              		.loc 12 109 33 view .LVU238
+ 927 0014 0367     		str	r3, [r0, #112]
+ 928              	.LVL68:
+ 929              		.loc 12 109 33 view .LVU239
+ 930              	.LBE331:
+ 931              	.LBE330:
+ 932              	.LBE336:
+ 933              	.LBE342:
+ 934              	.LBE345:
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 39
+
+
+  14:src/main.cpp  **** AnalogDelay delay;      // Oggetto per gestire l'effetto delay
+ 935              		.loc 7 14 11 view .LVU240
+ 936 0016 244A     		ldr	r2, .L36+4
+ 937              	.LBB346:
+ 938              	.LBB343:
   21:../libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
- 926              		.loc 1 21 17 view .LVU238
- 927 0018 8165     		str	r1, [r0, #88]
- 928              	.LBB337:
- 929              	.LBB295:
- 930              	.LBB293:
- 931              	.LBB291:
- 932              	.LBB289:
+ 939              		.loc 1 21 17 view .LVU241
+ 940 0018 8165     		str	r1, [r0, #88]
+ 941              	.LBB337:
+ 942              	.LBB295:
+ 943              	.LBB293:
+ 944              	.LBB291:
+ 945              	.LBB289:
   69:../libDaisy/src/per/gpio.h ****         {
- 933              		.loc 11 69 73 view .LVU239
- 934 001a C0E90A13 		strd	r1, r3, [r0, #40]
- 935              	.LBE289:
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 39
-
-
- 936              	.LBE291:
- 937              	.LBE293:
- 938              	.LBE295:
- 939              	.LBE337:
- 940              	.LBB338:
- 941              	.LBB309:
- 942              	.LBB307:
- 943              	.LBB305:
- 944              	.LBB303:
- 945 001e C0E90F13 		strd	r1, r3, [r0, #60]
- 946              	.LBE303:
- 947              	.LBE305:
- 948              	.LBE307:
- 949              	.LBE309:
- 950              	.LBE338:
+ 946              		.loc 11 69 73 view .LVU242
+ 947 001a C0E90A13 		strd	r1, r3, [r0, #40]
+ 948              	.LBE289:
+ 949              	.LBE291:
+ 950              	.LBE293:
+ 951              	.LBE295:
+ 952              	.LBE337:
+ 953              	.LBB338:
+ 954              	.LBB309:
+ 955              	.LBB307:
+ 956              	.LBB305:
+ 957              	.LBB303:
+ 958 001e C0E90F13 		strd	r1, r3, [r0, #60]
+ 959              	.LBE303:
+ 960              	.LBE305:
+ 961              	.LBE307:
+ 962              	.LBE309:
+ 963              	.LBE338:
   21:../libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
- 951              		.loc 1 21 17 view .LVU240
- 952 0022 C0E90034 		strd	r3, r4, [r0]
- 953              	.LBE343:
- 954              	.LBE346:
-  13:src/main.cpp  **** AnalogDelay delay;      // Oggetto per gestire l'effetto delay
- 955              		.loc 7 13 11 view .LVU241
- 956 0026 1D49     		ldr	r1, .L36+8
- 957              	.LBB347:
- 958              	.LBB344:
- 959              	.LBB339:
- 960              	.LBB296:
- 961              	.LBB294:
- 962              	.LBB292:
- 963              	.LBB290:
+ 964              		.loc 1 21 17 view .LVU243
+ 965 0022 C0E90034 		strd	r3, r4, [r0]
+ 966              	.LBB339:
+ 967              	.LBB296:
+ 968              	.LBB294:
+ 969              	.LBB292:
+ 970              	.LBB290:
   69:../libDaisy/src/per/gpio.h ****         {
- 964              		.loc 11 69 73 view .LVU242
- 965 0028 C0E90C33 		strd	r3, r3, [r0, #48]
- 966              	.LBE290:
- 967              	.LBE292:
- 968              	.LBE294:
- 969              	.LBE296:
- 970              	.LBE339:
- 971              	.LBB340:
- 972              	.LBB310:
- 973              	.LBB308:
- 974              	.LBB306:
- 975              	.LBB304:
- 976 002c C0E91133 		strd	r3, r3, [r0, #68]
- 977              	.LBE304:
- 978              	.LBE306:
- 979              	.LBE308:
- 980              	.LBE310:
- 981              	.LBE340:
- 982              	.LBB341:
- 983              	.LBB328:
- 984              	.LBB326:
- 985              	.LBB324:
- 986              	.LBB322:
- 987              	.LBB320:
- 988 0030 C0E91733 		strd	r3, r3, [r0, #92]
- 989              	.LBE320:
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 40
+ 971              		.loc 11 69 73 view .LVU244
+ 972 0026 C0E90C33 		strd	r3, r3, [r0, #48]
+ 973              	.LBE290:
+ 974              	.LBE292:
+ 975              	.LBE294:
+ 976              	.LBE296:
+ 977              	.LBE339:
+ 978              	.LBB340:
+ 979              	.LBB310:
+ 980              	.LBB308:
+ 981              	.LBB306:
+ 982              	.LBB304:
+ 983 002a C0E91133 		strd	r3, r3, [r0, #68]
+ 984              	.LBE304:
+ 985              	.LBE306:
+ 986              	.LBE308:
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 40
 
 
- 990              	.LBE322:
- 991              	.LBE324:
- 992              	.LBE326:
- 993              	.LBE328:
- 994              	.LBE341:
+ 987              	.LBE310:
+ 988              	.LBE340:
+ 989              	.LBB341:
+ 990              	.LBB328:
+ 991              	.LBB326:
+ 992              	.LBB324:
+ 993              	.LBB322:
+ 994              	.LBB320:
+ 995 002e C0E91733 		strd	r3, r3, [r0, #92]
+ 996              	.LBE320:
+ 997              	.LBE322:
+ 998              	.LBE324:
+ 999              	.LBE326:
+ 1000              	.LBE328:
+ 1001              	.LBE341:
+ 1002              	.LBE343:
+ 1003              	.LBE346:
+  14:src/main.cpp  **** AnalogDelay delay;      // Oggetto per gestire l'effetto delay
+ 1004              		.loc 7 14 11 view .LVU245
+ 1005 0032 1E49     		ldr	r1, .L36+8
+ 1006              	.LBB347:
+ 1007              	.LBB344:
   21:../libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
- 995              		.loc 1 21 17 view .LVU243
- 996 0034 C0E90244 		strd	r4, r4, [r0, #8]
- 997              	.LBE344:
- 998              	.LBE347:
-  13:src/main.cpp  **** AnalogDelay delay;      // Oggetto per gestire l'effetto delay
- 999              		.loc 7 13 11 view .LVU244
- 1000 0038 FFF7FEFF 		bl	__aeabi_atexit
- 1001              	.LVL67:
-  14:src/main.cpp  **** 
- 1002              		.loc 7 14 13 view .LVU245
- 1003 003c 1848     		ldr	r0, .L36+12
- 1004 003e FFF7FEFF 		bl	_ZN11AnalogDelayC1Ev
- 1005              	.LVL68:
- 1006 0042 154A     		ldr	r2, .L36+4
- 1007 0044 1749     		ldr	r1, .L36+16
- 1008 0046 1648     		ldr	r0, .L36+12
- 1009 0048 FFF7FEFF 		bl	__aeabi_atexit
- 1010              	.LVL69:
+ 1008              		.loc 1 21 17 view .LVU246
+ 1009 0034 C0E90244 		strd	r4, r4, [r0, #8]
+ 1010              	.LBE344:
+ 1011              	.LBE347:
+  14:src/main.cpp  **** AnalogDelay delay;      // Oggetto per gestire l'effetto delay
+ 1012              		.loc 7 14 11 view .LVU247
+ 1013 0038 FFF7FEFF 		bl	__aeabi_atexit
+ 1014              	.LVL69:
+  15:src/main.cpp  **** 
+ 1015              		.loc 7 15 13 view .LVU248
+ 1016 003c 1C48     		ldr	r0, .L36+12
+ 1017 003e FFF7FEFF 		bl	_ZN11AnalogDelayC1Ev
+ 1018              	.LVL70:
+ 1019 0042 194A     		ldr	r2, .L36+4
+ 1020 0044 1B49     		ldr	r1, .L36+16
+ 1021 0046 1A48     		ldr	r0, .L36+12
+ 1022 0048 FFF7FEFF 		bl	__aeabi_atexit
+ 1023              	.LVL71:
   17:src/main.cpp  **** 
- 1011              		.loc 7 17 34 is_stmt 1 view .LVU246
- 1012 004c 164A     		ldr	r2, .L36+20
- 1013 004e 02F5A87E 		add	lr, r2, #336
- 1014              	.L32:
- 1015              	.LVL70:
- 1016              	.LBB348:
- 1017              	.LBI348:
+ 1024              		.loc 7 17 11 view .LVU249
+ 1025 004c 1A48     		ldr	r0, .L36+20
+ 1026 004e FFF7FEFF 		bl	_ZN9UtilitiesC1Ev
+ 1027              	.LVL72:
+ 1028 0052 154A     		ldr	r2, .L36+4
+ 1029 0054 1949     		ldr	r1, .L36+24
+ 1030 0056 1848     		ldr	r0, .L36+20
+ 1031 0058 FFF7FEFF 		bl	__aeabi_atexit
+ 1032              	.LVL73:
+  20:src/main.cpp  **** 
+ 1033              		.loc 7 20 34 is_stmt 1 view .LVU250
+ 1034 005c 184A     		ldr	r2, .L36+28
+ 1035 005e 02F5A87E 		add	lr, r2, #336
+ 1036              	.L32:
+ 1037              	.LVL74:
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 41
+
+
+ 1038              	.LBB348:
+ 1039              	.LBI348:
   31:../libDaisy/src/per/adc.h **** {
- 1018              		.loc 5 31 8 view .LVU247
- 1019              	.LBB349:
- 1020              	.LBB350:
- 1021              	.LBI350:
- 1022              		.loc 11 74 5 view .LVU248
- 1023              	.LBB351:
- 1024              	.LBI351:
+ 1040              		.loc 5 31 8 view .LVU251
+ 1041              	.LBB349:
+ 1042              	.LBB350:
+ 1043              	.LBI350:
+ 1044              		.loc 11 74 5 view .LVU252
+ 1045              	.LBB351:
+ 1046              	.LBI351:
   68:../libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
- 1025              		.loc 11 68 9 view .LVU249
- 1026              	.LBB352:
- 1027              	.LBB353:
- 1028              	.LBI353:
- 1029              		.loc 9 204 15 view .LVU250
- 1030              	.LBE353:
+ 1047              		.loc 11 68 9 view .LVU253
+ 1048              	.LBB352:
+ 1049              	.LBB353:
+ 1050              	.LBI353:
+ 1051              		.loc 9 204 15 view .LVU254
+ 1052              	.LBE353:
   69:../libDaisy/src/per/gpio.h ****         {
- 1031              		.loc 11 69 73 is_stmt 0 view .LVU251
- 1032 0052 0021     		movs	r1, #0
- 1033              	.LBB356:
- 1034              	.LBB354:
- 1035              		.loc 9 204 43 view .LVU252
- 1036 0054 4FF00B0C 		mov	ip, #11
- 1037 0058 FF20     		movs	r0, #255
- 1038 005a A2F13C03 		sub	r3, r2, #60
- 1039 005e 02F850CC 		strb	ip, [r2, #-80]
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 41
-
-
- 1040              	.LBE354:
- 1041              	.LBE356:
+ 1053              		.loc 11 69 73 is_stmt 0 view .LVU255
+ 1054 0062 0021     		movs	r1, #0
+ 1055              	.LBB356:
+ 1056              	.LBB354:
+ 1057              		.loc 9 204 43 view .LVU256
+ 1058 0064 4FF00B0C 		mov	ip, #11
+ 1059 0068 FF20     		movs	r0, #255
+ 1060 006a A2F13C03 		sub	r3, r2, #60
+ 1061 006e 02F850CC 		strb	ip, [r2, #-80]
+ 1062              	.LBE354:
+ 1063              	.LBE356:
   69:../libDaisy/src/per/gpio.h ****         {
- 1042              		.loc 11 69 73 view .LVU253
- 1043 0062 42F84C1C 		str	r1, [r2, #-76]
- 1044              	.LBB357:
- 1045              	.LBB355:
- 1046              		.loc 9 204 43 view .LVU254
- 1047 0066 02F84F0C 		strb	r0, [r2, #-79]
- 1048              	.LVL71:
- 1049              		.loc 9 204 43 view .LVU255
- 1050              	.LBE355:
- 1051              	.LBE357:
+ 1064              		.loc 11 69 73 view .LVU257
+ 1065 0072 42F84C1C 		str	r1, [r2, #-76]
+ 1066              	.LBB357:
+ 1067              	.LBB355:
+ 1068              		.loc 9 204 43 view .LVU258
+ 1069 0076 02F84F0C 		strb	r0, [r2, #-79]
+ 1070              	.LVL75:
+ 1071              		.loc 9 204 43 view .LVU259
+ 1072              	.LBE355:
+ 1073              	.LBE357:
   69:../libDaisy/src/per/gpio.h ****         {
- 1052              		.loc 11 69 73 view .LVU256
- 1053 006a 42E91211 		strd	r1, r1, [r2, #-72]
- 1054              	.LVL72:
+ 1074              		.loc 11 69 73 view .LVU260
+ 1075 007a 42E91211 		strd	r1, r1, [r2, #-72]
+ 1076              	.LVL76:
   69:../libDaisy/src/per/gpio.h ****         {
- 1055              		.loc 11 69 73 view .LVU257
- 1056              	.LBE352:
- 1057              	.LBE351:
- 1058              	.LBE350:
+ 1077              		.loc 11 69 73 view .LVU261
+ 1078              	.LBE352:
+ 1079              	.LBE351:
+ 1080              	.LBE350:
   31:../libDaisy/src/per/adc.h **** {
- 1059              		.loc 5 31 8 is_stmt 1 view .LVU258
- 1060              	.L31:
- 1061              	.LBB358:
- 1062              	.LBI358:
- 1063              		.loc 11 74 5 view .LVU259
- 1064              	.LBB359:
- 1065              	.LBI359:
+ 1081              		.loc 5 31 8 is_stmt 1 view .LVU262
+ 1082              	.L31:
+ 1083              	.LBB358:
+ 1084              	.LBI358:
+ 1085              		.loc 11 74 5 view .LVU263
+ 1086              	.LBB359:
+ 1087              	.LBI359:
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 42
+
+
   68:../libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
- 1066              		.loc 11 68 9 view .LVU260
- 1067              	.LBB360:
- 1068              	.LBB361:
- 1069              	.LBI361:
- 1070              		.loc 9 204 15 view .LVU261
- 1071              	.LBE361:
- 1072              	.LBE360:
- 1073              	.LBE359:
- 1074              	.LBE358:
+ 1088              		.loc 11 68 9 view .LVU264
+ 1089              	.LBB360:
+ 1090              	.LBB361:
+ 1091              	.LBI361:
+ 1092              		.loc 9 204 15 view .LVU265
+ 1093              	.LBE361:
+ 1094              	.LBE360:
+ 1095              	.LBE359:
+ 1096              	.LBE358:
   31:../libDaisy/src/per/adc.h **** {
- 1075              		.loc 5 31 8 is_stmt 0 view .LVU262
- 1076 006e 1433     		adds	r3, r3, #20
- 1077              	.LVL73:
- 1078              	.LBB370:
- 1079              	.LBB368:
- 1080              	.LBB366:
+ 1097              		.loc 5 31 8 is_stmt 0 view .LVU266
+ 1098 007e 1433     		adds	r3, r3, #20
+ 1099              	.LVL77:
+ 1100              	.LBB370:
+ 1101              	.LBB368:
+ 1102              	.LBB366:
   69:../libDaisy/src/per/gpio.h ****         {
- 1081              		.loc 11 69 73 view .LVU263
- 1082 0070 0021     		movs	r1, #0
- 1083              	.LBB364:
- 1084              	.LBB362:
- 1085              		.loc 9 204 43 view .LVU264
- 1086 0072 4FF00B0C 		mov	ip, #11
- 1087 0076 FF20     		movs	r0, #255
- 1088              	.LBE362:
- 1089              	.LBE364:
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 42
-
-
- 1090              	.LBE366:
- 1091              	.LBE368:
- 1092              	.LBE370:
+ 1103              		.loc 11 69 73 view .LVU267
+ 1104 0080 0021     		movs	r1, #0
+ 1105              	.LBB364:
+ 1106              	.LBB362:
+ 1107              		.loc 9 204 43 view .LVU268
+ 1108 0082 4FF00B0C 		mov	ip, #11
+ 1109 0086 FF20     		movs	r0, #255
+ 1110              	.LBE362:
+ 1111              	.LBE364:
+ 1112              	.LBE366:
+ 1113              	.LBE368:
+ 1114              	.LBE370:
   31:../libDaisy/src/per/adc.h **** {
- 1093              		.loc 5 31 8 view .LVU265
- 1094 0078 9A42     		cmp	r2, r3
- 1095              	.LBB371:
- 1096              	.LBB369:
- 1097              	.LBB367:
+ 1115              		.loc 5 31 8 view .LVU269
+ 1116 0088 9A42     		cmp	r2, r3
+ 1117              	.LBB371:
+ 1118              	.LBB369:
+ 1119              	.LBB367:
   69:../libDaisy/src/per/gpio.h ****         {
- 1098              		.loc 11 69 73 view .LVU266
- 1099 007a 43F8101C 		str	r1, [r3, #-16]
- 1100              	.LBB365:
- 1101              	.LBB363:
- 1102              		.loc 9 204 43 view .LVU267
- 1103 007e 03F814CC 		strb	ip, [r3, #-20]
- 1104 0082 03F8130C 		strb	r0, [r3, #-19]
- 1105              	.LVL74:
- 1106              		.loc 9 204 43 view .LVU268
- 1107              	.LBE363:
- 1108              	.LBE365:
+ 1120              		.loc 11 69 73 view .LVU270
+ 1121 008a 43F8101C 		str	r1, [r3, #-16]
+ 1122              	.LBB365:
+ 1123              	.LBB363:
+ 1124              		.loc 9 204 43 view .LVU271
+ 1125 008e 03F814CC 		strb	ip, [r3, #-20]
+ 1126 0092 03F8130C 		strb	r0, [r3, #-19]
+ 1127              	.LVL78:
+ 1128              		.loc 9 204 43 view .LVU272
+ 1129              	.LBE363:
+ 1130              	.LBE365:
   69:../libDaisy/src/per/gpio.h ****         {
- 1109              		.loc 11 69 73 view .LVU269
- 1110 0086 43E90311 		strd	r1, r1, [r3, #-12]
- 1111              	.LVL75:
+ 1131              		.loc 11 69 73 view .LVU273
+ 1132 0096 43E90311 		strd	r1, r1, [r3, #-12]
+ 1133              	.LVL79:
   69:../libDaisy/src/per/gpio.h ****         {
- 1112              		.loc 11 69 73 view .LVU270
- 1113              	.LBE367:
- 1114              	.LBE369:
- 1115              	.LBE371:
+ 1134              		.loc 11 69 73 view .LVU274
+ 1135              	.LBE367:
+ 1136              	.LBE369:
+ 1137              	.LBE371:
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 43
+
+
   31:../libDaisy/src/per/adc.h **** {
- 1116              		.loc 5 31 8 is_stmt 1 view .LVU271
+ 1138              		.loc 5 31 8 is_stmt 1 view .LVU275
   31:../libDaisy/src/per/adc.h **** {
- 1117              		.loc 5 31 8 view .LVU272
- 1118 008a F0D1     		bne	.L31
- 1119              	.LVL76:
+ 1139              		.loc 5 31 8 view .LVU276
+ 1140 009a F0D1     		bne	.L31
+ 1141              	.LVL80:
   31:../libDaisy/src/per/adc.h **** {
- 1120              		.loc 5 31 8 is_stmt 0 view .LVU273
- 1121              	.LBE349:
- 1122              	.LBE348:
-  17:src/main.cpp  **** 
- 1123              		.loc 7 17 34 is_stmt 1 view .LVU274
-  17:src/main.cpp  **** 
- 1124              		.loc 7 17 34 view .LVU275
- 1125 008c 5432     		adds	r2, r2, #84
- 1126 008e 7245     		cmp	r2, lr
- 1127 0090 DFD1     		bne	.L32
- 1128              	.LBE372:
- 1129              	.LBE373:
- 1130              		.loc 7 121 1 is_stmt 0 view .LVU276
- 1131 0092 10BD     		pop	{r4, pc}
- 1132              	.L37:
- 1133              		.align	2
- 1134              	.L36:
- 1135 0094 00000000 		.word	.LANCHOR1
- 1136 0098 00000000 		.word	__dso_handle
- 1137 009c 00000000 		.word	_ZN5daisy9DaisySeedD1Ev
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 43
+ 1142              		.loc 5 31 8 is_stmt 0 view .LVU277
+ 1143              	.LBE349:
+ 1144              	.LBE348:
+  20:src/main.cpp  **** 
+ 1145              		.loc 7 20 34 is_stmt 1 view .LVU278
+  20:src/main.cpp  **** 
+ 1146              		.loc 7 20 34 view .LVU279
+ 1147 009c 5432     		adds	r2, r2, #84
+ 1148 009e 7245     		cmp	r2, lr
+ 1149 00a0 DFD1     		bne	.L32
+ 1150              	.LBE372:
+ 1151              	.LBE373:
+ 1152              		.loc 7 125 1 is_stmt 0 view .LVU280
+ 1153 00a2 10BD     		pop	{r4, pc}
+ 1154              	.L37:
+ 1155              		.align	2
+ 1156              	.L36:
+ 1157 00a4 00000000 		.word	.LANCHOR1
+ 1158 00a8 00000000 		.word	__dso_handle
+ 1159 00ac 00000000 		.word	_ZN5daisy9DaisySeedD1Ev
+ 1160 00b0 00000000 		.word	delay
+ 1161 00b4 00000000 		.word	_ZN11AnalogDelayD1Ev
+ 1162 00b8 00000000 		.word	.LANCHOR2
+ 1163 00bc 00000000 		.word	_ZN9UtilitiesD1Ev
+ 1164 00c0 50000000 		.word	.LANCHOR0+80
+ 1165              		.cfi_endproc
+ 1166              	.LFE5384:
+ 1168              		.section	.init_array,"aw",%init_array
+ 1169              		.align	2
+ 1170 0000 00000000 		.word	_GLOBAL__sub_I_hw(target1)
+ 1171              		.global	ledState
+ 1172              		.global	lastBlink
+ 1173              		.global	depth
+ 1174              		.global	mix
+ 1175              		.global	feedback
+ 1176              		.global	delayTime
+ 1177              		.global	adcConfig
+ 1178              		.global	util
+ 1179              		.global	delay
+ 1180              		.global	hw
+ 1181              		.section	.bss.adcConfig,"aw",%nobits
+ 1182              		.align	2
+ 1183              		.set	.LANCHOR0,. + 0
+ 1186              	adcConfig:
+ 1187 0000 00000000 		.space	336
+ 1187      00000000 
+ 1187      00000000 
+ 1187      00000000 
+ 1187      00000000 
+ 1188              		.section	.bss.delay,"aw",%nobits
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 44
 
 
- 1138 00a0 00000000 		.word	delay
- 1139 00a4 00000000 		.word	_ZN11AnalogDelayD1Ev
- 1140 00a8 50000000 		.word	.LANCHOR0+80
- 1141              		.cfi_endproc
- 1142              	.LFE5384:
- 1144              		.section	.init_array,"aw",%init_array
- 1145              		.align	2
- 1146 0000 00000000 		.word	_GLOBAL__sub_I_hw(target1)
- 1147              		.global	ledState
- 1148              		.global	lastBlink
- 1149              		.global	depth
- 1150              		.global	mix
- 1151              		.global	feedback
- 1152              		.global	delayTime
- 1153              		.global	adcConfig
- 1154              		.global	delay
- 1155              		.global	hw
- 1156              		.section	.bss.adcConfig,"aw",%nobits
- 1157              		.align	2
- 1158              		.set	.LANCHOR0,. + 0
- 1161              	adcConfig:
- 1162 0000 00000000 		.space	336
- 1162      00000000 
- 1162      00000000 
- 1162      00000000 
- 1162      00000000 
- 1163              		.section	.bss.delay,"aw",%nobits
- 1164              		.align	2
- 1167              	delay:
- 1168 0000 00000000 		.space	323344
- 1168      00000000 
- 1168      00000000 
- 1168      00000000 
- 1168      00000000 
- 1169              		.section	.bss.delayTime,"aw",%nobits
- 1170              		.align	2
- 1171              		.set	.LANCHOR2,. + 0
- 1174              	delayTime:
- 1175 0000 00000000 		.space	4
- 1176              		.section	.bss.depth,"aw",%nobits
- 1177              		.align	2
- 1178              		.set	.LANCHOR5,. + 0
- 1181              	depth:
- 1182 0000 00000000 		.space	4
- 1183              		.section	.bss.feedback,"aw",%nobits
- 1184              		.align	2
- 1185              		.set	.LANCHOR3,. + 0
- 1188              	feedback:
- 1189 0000 00000000 		.space	4
- 1190              		.section	.bss.hw,"aw",%nobits
- 1191              		.align	2
- 1192              		.set	.LANCHOR1,. + 0
- 1195              	hw:
- 1196 0000 00000000 		.space	116
- 1196      00000000 
- 1196      00000000 
- 1196      00000000 
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 44
+ 1189              		.align	2
+ 1192              	delay:
+ 1193 0000 00000000 		.space	323344
+ 1193      00000000 
+ 1193      00000000 
+ 1193      00000000 
+ 1193      00000000 
+ 1194              		.section	.bss.delayTime,"aw",%nobits
+ 1195              		.align	2
+ 1196              		.set	.LANCHOR3,. + 0
+ 1199              	delayTime:
+ 1200 0000 00000000 		.space	4
+ 1201              		.section	.bss.depth,"aw",%nobits
+ 1202              		.align	2
+ 1203              		.set	.LANCHOR6,. + 0
+ 1206              	depth:
+ 1207 0000 00000000 		.space	4
+ 1208              		.section	.bss.feedback,"aw",%nobits
+ 1209              		.align	2
+ 1210              		.set	.LANCHOR4,. + 0
+ 1213              	feedback:
+ 1214 0000 00000000 		.space	4
+ 1215              		.section	.bss.hw,"aw",%nobits
+ 1216              		.align	2
+ 1217              		.set	.LANCHOR1,. + 0
+ 1220              	hw:
+ 1221 0000 00000000 		.space	116
+ 1221      00000000 
+ 1221      00000000 
+ 1221      00000000 
+ 1221      00000000 
+ 1222              		.section	.bss.lastBlink,"aw",%nobits
+ 1223              		.align	2
+ 1224              		.set	.LANCHOR7,. + 0
+ 1227              	lastBlink:
+ 1228 0000 00000000 		.space	4
+ 1229              		.section	.bss.ledState,"aw",%nobits
+ 1230              		.set	.LANCHOR8,. + 0
+ 1233              	ledState:
+ 1234 0000 00       		.space	1
+ 1235              		.section	.bss.mix,"aw",%nobits
+ 1236              		.align	2
+ 1237              		.set	.LANCHOR5,. + 0
+ 1240              	mix:
+ 1241 0000 00000000 		.space	4
+ 1242              		.section	.bss.util,"aw",%nobits
+ 1243              		.align	2
+ 1244              		.set	.LANCHOR2,. + 0
+ 1247              	util:
+ 1248 0000 00000000 		.space	12
+ 1248      00000000 
+ 1248      00000000 
+ 1249              		.text
+ 1250              	.Letext0:
+ 1251              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 1252              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 1253              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 45
 
 
- 1196      00000000 
- 1197              		.section	.bss.lastBlink,"aw",%nobits
- 1198              		.align	2
- 1199              		.set	.LANCHOR6,. + 0
- 1202              	lastBlink:
- 1203 0000 00000000 		.space	4
- 1204              		.section	.bss.ledState,"aw",%nobits
- 1205              		.set	.LANCHOR7,. + 0
- 1208              	ledState:
- 1209 0000 00       		.space	1
- 1210              		.section	.bss.mix,"aw",%nobits
- 1211              		.align	2
- 1212              		.set	.LANCHOR4,. + 0
- 1215              	mix:
- 1216 0000 00000000 		.space	4
- 1217              		.text
- 1218              	.Letext0:
- 1219              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
- 1220              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
- 1221              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
- 1222              		.file 16 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
- 1223              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
- 1224              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
- 1225              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
- 1226              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
- 1227              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
- 1228              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
- 1229              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
- 1230              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
- 1231              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
- 1232              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
- 1233              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
- 1234              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
- 1235              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
- 1236              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
- 1237              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
- 1238              		.file 32 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
- 1239              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
- 1240              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
- 1241              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
- 1242              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
- 1243              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
- 1244              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
- 1245              		.file 39 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
- 1246              		.file 40 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
- 1247              		.file 41 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
- 1248              		.file 42 "../libDaisy/src/per/tim.h"
- 1249              		.file 43 "../libDaisy/src/util/wav_format.h"
- 1250              		.file 44 "../libDaisy/src/dev/sr_595.h"
- 1251              		.file 45 "../libDaisy/src/dev/max11300.h"
- 1252              		.file 46 "../libDaisy/src/dev/sdram.h"
- 1253              		.file 47 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
- 1254              		.file 48 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
- 1255              		.file 49 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
- 1256              		.file 50 "../DaisySP/Source/Control/adenv.h"
- 1257              		.file 51 "../DaisySP/Source/Control/phasor.h"
- 1258              		.file 52 "../DaisySP/Source/Utility/dsp.h"
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 45
-
-
- 1259              		.file 53 "../DaisySP/Source/Synthesis/oscillator.h"
- 1260              		.file 54 "../DaisySP/Source/Dynamics/crossfade.h"
- 1261              		.file 55 "../DaisySP/Source/Utility/delayline.h"
- 1262              		.file 56 "../DaisySP/Source/Effects/pitchshifter.h"
- 1263              		.file 57 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
- 1264              		.file 58 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
- 1265              		.file 59 "src/AnalogDelay.h"
- 1266              		.file 60 "<built-in>"
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 46
+ 1254              		.file 16 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 1255              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 1256              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 1257              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 1258              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 1259              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 1260              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 1261              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 1262              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 1263              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 1264              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 1265              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 1266              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 1267              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 1268              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 1269              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 1270              		.file 32 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 1271              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
+ 1272              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 1273              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 1274              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 1275              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 1276              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 1277              		.file 39 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 1278              		.file 40 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 1279              		.file 41 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 1280              		.file 42 "../libDaisy/src/per/tim.h"
+ 1281              		.file 43 "../libDaisy/src/util/wav_format.h"
+ 1282              		.file 44 "../libDaisy/src/dev/sr_595.h"
+ 1283              		.file 45 "../libDaisy/src/dev/max11300.h"
+ 1284              		.file 46 "../libDaisy/src/dev/sdram.h"
+ 1285              		.file 47 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 1286              		.file 48 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 1287              		.file 49 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 1288              		.file 50 "../DaisySP/Source/Control/adenv.h"
+ 1289              		.file 51 "../DaisySP/Source/Control/phasor.h"
+ 1290              		.file 52 "../DaisySP/Source/Utility/dsp.h"
+ 1291              		.file 53 "../DaisySP/Source/Synthesis/oscillator.h"
+ 1292              		.file 54 "../DaisySP/Source/Dynamics/crossfade.h"
+ 1293              		.file 55 "../DaisySP/Source/Utility/delayline.h"
+ 1294              		.file 56 "../DaisySP/Source/Effects/pitchshifter.h"
+ 1295              		.file 57 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 1296              		.file 58 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 1297              		.file 59 "src/AnalogDelay.h"
+ 1298              		.file 60 "src/../../Utilities/src/Utilities.h"
+ 1299              		.file 61 "<built-in>"
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 46
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.cpp
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:73     .text._Z12InitHardwarev:00000000 $t
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:81     .text._Z12InitHardwarev:00000000 _Z12InitHardwarev
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:173    .text._Z12InitHardwarev:00000078 $d
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:179    .text._Z8LogScalefff:00000000 $t
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:187    .text._Z8LogScalefff:00000000 _Z8LogScalefff
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:255    .text._Z12ReadControlsv:00000000 $t
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:263    .text._Z12ReadControlsv:00000000 _Z12ReadControlsv
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:450    .text._Z12ReadControlsv:000000ac $d
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:466    .text._Z13AudioCallbackPKPKfPPfj:00000000 $t
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:474    .text._Z13AudioCallbackPKPKfPPfj:00000000 _Z13AudioCallbackPKPKfPPfj
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:587    .text._Z13AudioCallbackPKPKfPPfj:00000070 $d
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1167   .bss.delay:00000000 delay
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:596    .text.startup.main:00000000 $t
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:604    .text.startup.main:00000000 main
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:686    .text.startup.main:00000050 $d
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:695    .text.startup._GLOBAL__sub_I_hw:00000000 $t
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:702    .text.startup._GLOBAL__sub_I_hw:00000000 _GLOBAL__sub_I_hw
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1135   .text.startup._GLOBAL__sub_I_hw:00000094 $d
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1145   .init_array:00000000 $d
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1208   .bss.ledState:00000000 ledState
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1202   .bss.lastBlink:00000000 lastBlink
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1181   .bss.depth:00000000 depth
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1215   .bss.mix:00000000 mix
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1188   .bss.feedback:00000000 feedback
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1174   .bss.delayTime:00000000 delayTime
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1161   .bss.adcConfig:00000000 adcConfig
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1195   .bss.hw:00000000 hw
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1157   .bss.adcConfig:00000000 $d
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1164   .bss.delay:00000000 $d
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1170   .bss.delayTime:00000000 $d
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1177   .bss.depth:00000000 $d
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1184   .bss.feedback:00000000 $d
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1191   .bss.hw:00000000 $d
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1198   .bss.lastBlink:00000000 $d
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1209   .bss.ledState:00000000 $d
-C:\Users\39351\AppData\Local\Temp\ccRd4dou.s:1211   .bss.mix:00000000 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:73     .text._Z12InitHardwarev:00000000 $t
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:81     .text._Z12InitHardwarev:00000000 _Z12InitHardwarev
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:173    .text._Z12InitHardwarev:00000078 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:179    .text._Z8LogScalefff:00000000 $t
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:187    .text._Z8LogScalefff:00000000 _Z8LogScalefff
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:255    .text._Z12ReadControlsv:00000000 $t
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:263    .text._Z12ReadControlsv:00000000 _Z12ReadControlsv
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:453    .text._Z12ReadControlsv:000000b0 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:470    .text._Z13AudioCallbackPKPKfPPfj:00000000 $t
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:478    .text._Z13AudioCallbackPKPKfPPfj:00000000 _Z13AudioCallbackPKPKfPPfj
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:591    .text._Z13AudioCallbackPKPKfPPfj:00000070 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1192   .bss.delay:00000000 delay
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:600    .text.startup.main:00000000 $t
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:608    .text.startup.main:00000000 main
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:698    .text.startup.main:0000005c $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:708    .text.startup._GLOBAL__sub_I_hw:00000000 $t
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:715    .text.startup._GLOBAL__sub_I_hw:00000000 _GLOBAL__sub_I_hw
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1157   .text.startup._GLOBAL__sub_I_hw:000000a4 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1169   .init_array:00000000 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1233   .bss.ledState:00000000 ledState
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1227   .bss.lastBlink:00000000 lastBlink
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1206   .bss.depth:00000000 depth
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1240   .bss.mix:00000000 mix
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1213   .bss.feedback:00000000 feedback
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1199   .bss.delayTime:00000000 delayTime
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1186   .bss.adcConfig:00000000 adcConfig
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1247   .bss.util:00000000 util
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1220   .bss.hw:00000000 hw
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1182   .bss.adcConfig:00000000 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1189   .bss.delay:00000000 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1195   .bss.delayTime:00000000 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1202   .bss.depth:00000000 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1209   .bss.feedback:00000000 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1216   .bss.hw:00000000 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1223   .bss.lastBlink:00000000 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1234   .bss.ledState:00000000 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1236   .bss.mix:00000000 $d
+C:\Users\39351\AppData\Local\Temp\cc33Zy42.s:1243   .bss.util:00000000 $d
                            .group:00000000 _ZN5daisy9DaisySeedD5Ev
 
 UNDEFINED SYMBOLS
@@ -2702,16 +2742,17 @@ _ZN5daisy9AdcHandle4InitEPNS_16AdcChannelConfigEjNS0_12OverSamplingE
 _ZN5daisy9AdcHandle5StartEv
 logf
 expf
+_ZN9Utilities16SmoothAnalogReadEjjRN5daisy9DaisySeedE
 _ZNK5daisy9AdcHandle8GetFloatEh
 _ZN5daisy6System6GetNowEv
 _ZN5daisy9DaisySeed6SetLedEb
 _ZN11AnalogDelay12setDelayTimeEf
+ARM GAS  C:\Users\39351\AppData\Local\Temp\cc33Zy42.s 			page 47
+
+
 _ZN11AnalogDelay11setFeedbackEf
 _ZN11AnalogDelay6setMixEf
-_ZN11AnalogDelay15setSmoothFactorEf
-ARM GAS  C:\Users\39351\AppData\Local\Temp\ccRd4dou.s 			page 47
-
-
+_ZN11AnalogDelay8setDepthEf
 _ZN11AnalogDelay7ProcessEf
 _ZN5daisy9DaisySeed9ConfigureEv
 _ZN5daisy9DaisySeed4InitEb
@@ -2719,9 +2760,12 @@ _ZN5daisy9DaisySeed17SetAudioBlockSizeEj
 _ZN5daisy9DaisySeed18SetAudioSampleRateENS_9SaiHandle6Config10SampleRateE
 _ZN5daisy9DaisySeed15AudioSampleRateEv
 _ZN11AnalogDelay4InitEf
+_ZN9Utilities4initEf
 _ZN5daisy9DaisySeed10StartAudioEPFvPKPKfPPfjE
 _ZN5daisy6System5DelayEm
 __aeabi_atexit
 _ZN11AnalogDelayC1Ev
+_ZN9UtilitiesC1Ev
 __dso_handle
 _ZN11AnalogDelayD1Ev
+_ZN9UtilitiesD1Ev

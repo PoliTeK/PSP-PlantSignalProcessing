@@ -1,0 +1,372 @@
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"Utilities.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN9UtilitiesC2Ev,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_ZN9UtilitiesC2Ev
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
+  26              	_ZN9UtilitiesC2Ev:
+  27              	.LVL0:
+  28              	.LFB4815:
+  29              		.file 1 "../Utilities/src/Utilities.cpp"
+   1:../Utilities/src/Utilities.cpp **** #include "utilities.h"
+   2:../Utilities/src/Utilities.cpp **** 
+   3:../Utilities/src/Utilities.cpp **** using namespace daisysp;
+   4:../Utilities/src/Utilities.cpp **** 
+   5:../Utilities/src/Utilities.cpp **** Utilities::Utilities():
+  30              		.loc 1 5 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  35              	.LBB2:
+   6:../Utilities/src/Utilities.cpp ****     _sr(48000.0f),
+   7:../Utilities/src/Utilities.cpp ****     _sr_recip(1.0f/48000.0f),
+   8:../Utilities/src/Utilities.cpp ****     _res_type(1)
+  36              		.loc 1 8 16 is_stmt 0 view .LVU1
+  37 0000 DFF814C0 		ldr	ip, .L3+4
+  38 0004 0122     		movs	r2, #1
+  39 0006 0349     		ldr	r1, .L3
+  40 0008 C0F800C0 		str	ip, [r0]	@ float
+  41 000c 4160     		str	r1, [r0, #4]	@ float
+  42 000e 8260     		str	r2, [r0, #8]
+  43              	.LBE2:
+   9:../Utilities/src/Utilities.cpp **** {}
+  44              		.loc 1 9 2 view .LVU2
+  45 0010 7047     		bx	lr
+  46              	.L4:
+  47 0012 00BF     		.align	2
+  48              	.L3:
+  49 0014 3EC3AE37 		.word	934200126
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s 			page 2
+
+
+  50 0018 00803B47 		.word	1195081728
+  51              		.cfi_endproc
+  52              	.LFE4815:
+  54              		.global	_ZN9UtilitiesC1Ev
+  55              		.thumb_set _ZN9UtilitiesC1Ev,_ZN9UtilitiesC2Ev
+  56              		.section	.text._ZN9UtilitiesD2Ev,"ax",%progbits
+  57              		.align	1
+  58              		.p2align 2,,3
+  59              		.global	_ZN9UtilitiesD2Ev
+  60              		.syntax unified
+  61              		.thumb
+  62              		.thumb_func
+  63              		.fpu fpv5-d16
+  65              	_ZN9UtilitiesD2Ev:
+  66              	.LVL1:
+  67              	.LFB4818:
+  10:../Utilities/src/Utilities.cpp **** 
+  11:../Utilities/src/Utilities.cpp **** Utilities::~Utilities() {}
+  68              		.loc 1 11 1 is_stmt 1 view -0
+  69              		.cfi_startproc
+  70              		@ args = 0, pretend = 0, frame = 0
+  71              		@ frame_needed = 0, uses_anonymous_args = 0
+  72              		@ link register save eliminated.
+  73              		.loc 1 11 26 is_stmt 0 view .LVU4
+  74 0000 7047     		bx	lr
+  75              		.cfi_endproc
+  76              	.LFE4818:
+  78              		.global	_ZN9UtilitiesD1Ev
+  79              		.thumb_set _ZN9UtilitiesD1Ev,_ZN9UtilitiesD2Ev
+  80 0002 00BF     		.section	.text._ZN9Utilities4initEf,"ax",%progbits
+  81              		.align	1
+  82              		.p2align 2,,3
+  83              		.global	_ZN9Utilities4initEf
+  84              		.syntax unified
+  85              		.thumb
+  86              		.thumb_func
+  87              		.fpu fpv5-d16
+  89              	_ZN9Utilities4initEf:
+  90              	.LVL2:
+  91              	.LFB4820:
+  12:../Utilities/src/Utilities.cpp **** 
+  13:../Utilities/src/Utilities.cpp **** void Utilities::init(float sample_rate){
+  92              		.loc 1 13 40 is_stmt 1 view -0
+  93              		.cfi_startproc
+  94              		@ args = 0, pretend = 0, frame = 0
+  95              		@ frame_needed = 0, uses_anonymous_args = 0
+  96              		@ link register save eliminated.
+  14:../Utilities/src/Utilities.cpp ****     _sr        = sample_rate;
+  97              		.loc 1 14 5 view .LVU6
+  15:../Utilities/src/Utilities.cpp ****     _sr_recip  = 1.0f / sample_rate;
+  98              		.loc 1 15 23 is_stmt 0 view .LVU7
+  99 0000 B7EE007A 		vmov.f32	s14, #1.0e+0
+  16:../Utilities/src/Utilities.cpp ****     _res_type  = 1;
+ 100              		.loc 1 16 16 view .LVU8
+ 101 0004 0123     		movs	r3, #1
+  14:../Utilities/src/Utilities.cpp ****     _sr        = sample_rate;
+ 102              		.loc 1 14 16 view .LVU9
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s 			page 3
+
+
+ 103 0006 80ED000A 		vstr.32	s0, [r0]
+  15:../Utilities/src/Utilities.cpp ****     _sr_recip  = 1.0f / sample_rate;
+ 104              		.loc 1 15 5 is_stmt 1 view .LVU10
+ 105              		.loc 1 16 16 is_stmt 0 view .LVU11
+ 106 000a 8360     		str	r3, [r0, #8]
+  15:../Utilities/src/Utilities.cpp ****     _sr_recip  = 1.0f / sample_rate;
+ 107              		.loc 1 15 23 view .LVU12
+ 108 000c C7EE007A 		vdiv.f32	s15, s14, s0
+  15:../Utilities/src/Utilities.cpp ****     _sr_recip  = 1.0f / sample_rate;
+ 109              		.loc 1 15 16 view .LVU13
+ 110 0010 C0ED017A 		vstr.32	s15, [r0, #4]
+ 111              		.loc 1 16 5 is_stmt 1 view .LVU14
+  17:../Utilities/src/Utilities.cpp **** }
+ 112              		.loc 1 17 1 is_stmt 0 view .LVU15
+ 113 0014 7047     		bx	lr
+ 114              		.cfi_endproc
+ 115              	.LFE4820:
+ 117 0016 00BF     		.section	.text._ZN9Utilities16SmoothAnalogReadEjjRN5daisy9DaisySeedE,"ax",%progbits
+ 118              		.align	1
+ 119              		.p2align 2,,3
+ 120              		.global	_ZN9Utilities16SmoothAnalogReadEjjRN5daisy9DaisySeedE
+ 121              		.syntax unified
+ 122              		.thumb
+ 123              		.thumb_func
+ 124              		.fpu fpv5-d16
+ 126              	_ZN9Utilities16SmoothAnalogReadEjjRN5daisy9DaisySeedE:
+ 127              	.LVL3:
+ 128              	.LFB4821:
+  18:../Utilities/src/Utilities.cpp **** 
+  19:../Utilities/src/Utilities.cpp **** float Utilities::SmoothAnalogRead(unsigned int ADC_Channel, unsigned int res_type, daisy::DaisySeed
+ 129              		.loc 1 19 105 is_stmt 1 view -0
+ 130              		.cfi_startproc
+ 131              		@ args = 0, pretend = 0, frame = 0
+ 132              		@ frame_needed = 0, uses_anonymous_args = 0
+  20:../Utilities/src/Utilities.cpp ****     _res_type = res_type < LAST_RES ? res_type : LOW_RES; // se res type non è tra i scelti metti 
+ 133              		.loc 1 20 5 view .LVU17
+ 134              		.loc 1 20 37 is_stmt 0 view .LVU18
+ 135 0000 022A     		cmp	r2, #2
+  19:../Utilities/src/Utilities.cpp ****     _res_type = res_type < LAST_RES ? res_type : LOW_RES; // se res type non è tra i scelti metti 
+ 136              		.loc 1 19 105 view .LVU19
+ 137 0002 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 138              		.cfi_def_cfa_offset 24
+ 139              		.cfi_offset 3, -24
+ 140              		.cfi_offset 4, -20
+ 141              		.cfi_offset 5, -16
+ 142              		.cfi_offset 6, -12
+ 143              		.cfi_offset 7, -8
+ 144              		.cfi_offset 14, -4
+ 145 0004 2DED028B 		vpush.64	{d8}
+ 146              		.cfi_def_cfa_offset 32
+ 147              		.cfi_offset 80, -32
+ 148              		.cfi_offset 81, -28
+ 149              		.loc 1 20 37 view .LVU20
+ 150 0008 22D8     		bhi	.L10
+  21:../Utilities/src/Utilities.cpp **** 
+  22:../Utilities/src/Utilities.cpp ****     float sum, out = 0.0f;
+  23:../Utilities/src/Utilities.cpp ****     unsigned int k = 16*4^_res_type; // k = 16 se res_type = 0 , 64 se // = 1 , 256 se // = 2
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s 			page 4
+
+
+ 151              		.loc 1 23 18 view .LVU21
+ 152 000a 82F04007 		eor	r7, r2, #64
+ 153 000e 08EE907A 		vmov	s17, r7	@ int
+ 154              	.LVL4:
+ 155              	.L8:
+ 156              	.LBB3:
+  24:../Utilities/src/Utilities.cpp **** 
+  25:../Utilities/src/Utilities.cpp ****     for (int i = 0; i < k; i++){
+  26:../Utilities/src/Utilities.cpp ****         sum += hw.adc.Get(ADC_Channel); // hw è l'oggetto che contiene tutte le periferiche, Come 
+ 157              		.loc 1 26 26 discriminator 4 view .LVU22
+ 158 0012 03F11806 		add	r6, r3, #24
+ 159 0016 CDB2     		uxtb	r5, r1
+  25:../Utilities/src/Utilities.cpp ****         sum += hw.adc.Get(ADC_Channel); // hw è l'oggetto che contiene tutte le periferiche, Come 
+ 160              		.loc 1 25 14 discriminator 4 view .LVU23
+ 161 0018 0024     		movs	r4, #0
+ 162              	.LBE3:
+  20:../Utilities/src/Utilities.cpp **** 
+ 163              		.loc 1 20 15 discriminator 4 view .LVU24
+ 164 001a 8260     		str	r2, [r0, #8]
+  22:../Utilities/src/Utilities.cpp ****     unsigned int k = 16*4^_res_type; // k = 16 se res_type = 0 , 64 se // = 1 , 256 se // = 2
+ 165              		.loc 1 22 5 is_stmt 1 discriminator 4 view .LVU25
+ 166              	.LVL5:
+  23:../Utilities/src/Utilities.cpp **** 
+ 167              		.loc 1 23 5 discriminator 4 view .LVU26
+  25:../Utilities/src/Utilities.cpp ****         sum += hw.adc.Get(ADC_Channel); // hw è l'oggetto che contiene tutte le periferiche, Come 
+ 168              		.loc 1 25 5 discriminator 4 view .LVU27
+ 169              	.LBB4:
+  25:../Utilities/src/Utilities.cpp ****         sum += hw.adc.Get(ADC_Channel); // hw è l'oggetto che contiene tutte le periferiche, Come 
+ 170              		.loc 1 25 23 discriminator 4 view .LVU28
+ 171              	.L9:
+ 172              		.loc 1 26 9 discriminator 2 view .LVU29
+ 173              		.loc 1 26 26 is_stmt 0 discriminator 2 view .LVU30
+ 174 001c 2946     		mov	r1, r5
+ 175 001e 3046     		mov	r0, r6
+ 176 0020 FFF7FEFF 		bl	_ZNK5daisy9AdcHandle3GetEh
+ 177              	.LVL6:
+ 178              		.loc 1 26 13 discriminator 2 view .LVU31
+ 179 0024 07EE900A 		vmov	s15, r0	@ int
+  25:../Utilities/src/Utilities.cpp ****         sum += hw.adc.Get(ADC_Channel); // hw è l'oggetto che contiene tutte le periferiche, Come 
+ 180              		.loc 1 25 5 discriminator 2 view .LVU32
+ 181 0028 0134     		adds	r4, r4, #1
+ 182              	.LVL7:
+ 183              		.loc 1 26 13 discriminator 2 view .LVU33
+ 184 002a F8EEE77A 		vcvt.f32.s32	s15, s15
+  25:../Utilities/src/Utilities.cpp ****         sum += hw.adc.Get(ADC_Channel); // hw è l'oggetto che contiene tutte le periferiche, Come 
+ 185              		.loc 1 25 23 discriminator 2 view .LVU34
+ 186 002e BC42     		cmp	r4, r7
+ 187              		.loc 1 26 13 discriminator 2 view .LVU35
+ 188 0030 38EE278A 		vadd.f32	s16, s16, s15
+ 189              	.LVL8:
+  25:../Utilities/src/Utilities.cpp ****         sum += hw.adc.Get(ADC_Channel); // hw è l'oggetto che contiene tutte le periferiche, Come 
+ 190              		.loc 1 25 5 is_stmt 1 discriminator 2 view .LVU36
+  25:../Utilities/src/Utilities.cpp ****         sum += hw.adc.Get(ADC_Channel); // hw è l'oggetto che contiene tutte le periferiche, Come 
+ 191              		.loc 1 25 23 discriminator 2 view .LVU37
+ 192 0034 F2D1     		bne	.L9
+ 193              	.LBE4:
+  27:../Utilities/src/Utilities.cpp ****     }
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s 			page 5
+
+
+  28:../Utilities/src/Utilities.cpp ****     out = (sum*100)/k;
+ 194              		.loc 1 28 5 view .LVU38
+ 195              	.LVL9:
+  29:../Utilities/src/Utilities.cpp ****     return out/100;
+ 196              		.loc 1 29 5 view .LVU39
+  28:../Utilities/src/Utilities.cpp ****     return out/100;
+ 197              		.loc 1 28 15 is_stmt 0 view .LVU40
+ 198 0036 DFED097A 		vldr.32	s15, .L13
+  28:../Utilities/src/Utilities.cpp ****     return out/100;
+ 199              		.loc 1 28 20 view .LVU41
+ 200 003a F8EEE88A 		vcvt.f32.s32	s17, s17
+ 201              	.LVL10:
+  28:../Utilities/src/Utilities.cpp ****     return out/100;
+ 202              		.loc 1 28 15 view .LVU42
+ 203 003e 28EE278A 		vmul.f32	s16, s16, s15
+ 204              	.LVL11:
+  28:../Utilities/src/Utilities.cpp ****     return out/100;
+ 205              		.loc 1 28 9 view .LVU43
+ 206 0042 88EE280A 		vdiv.f32	s0, s16, s17
+ 207              	.LVL12:
+  30:../Utilities/src/Utilities.cpp **** }
+ 208              		.loc 1 30 1 view .LVU44
+ 209 0046 BDEC028B 		vldm	sp!, {d8}
+ 210              		.cfi_remember_state
+ 211              		.cfi_restore 80
+ 212              		.cfi_restore 81
+ 213              		.cfi_def_cfa_offset 24
+ 214 004a 80EE270A 		vdiv.f32	s0, s0, s15
+ 215              	.LVL13:
+ 216              		.loc 1 30 1 view .LVU45
+ 217 004e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 218              	.LVL14:
+ 219              	.L10:
+ 220              		.cfi_restore_state
+ 221              		.loc 1 30 1 view .LVU46
+ 222 0050 4027     		movs	r7, #64
+  20:../Utilities/src/Utilities.cpp **** 
+ 223              		.loc 1 20 37 view .LVU47
+ 224 0052 0022     		movs	r2, #0
+ 225              	.LVL15:
+  20:../Utilities/src/Utilities.cpp **** 
+ 226              		.loc 1 20 37 view .LVU48
+ 227 0054 08EE907A 		vmov	s17, r7	@ int
+ 228 0058 DBE7     		b	.L8
+ 229              	.L14:
+ 230 005a 00BF     		.align	2
+ 231              	.L13:
+ 232 005c 0000C842 		.word	1120403456
+ 233              		.cfi_endproc
+ 234              	.LFE4821:
+ 236              		.text
+ 237              	.Letext0:
+ 238              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 239              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 240              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 241              		.file 5 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 242              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s 			page 6
+
+
+ 243              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 244              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 245              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 246              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 247              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 248              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 249              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 250              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 251              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 252              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 253              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 254              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 255              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 256              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 257              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 258              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
+ 259              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 260              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 261              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 262              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 263              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 264              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 265              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 266              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 267              		.file 31 "../libDaisy/src/daisy_core.h"
+ 268              		.file 32 "../libDaisy/src/per/tim.h"
+ 269              		.file 33 "../libDaisy/src/sys/system.h"
+ 270              		.file 34 "../libDaisy/src/per/qspi.h"
+ 271              		.file 35 "../libDaisy/src/per/dac.h"
+ 272              		.file 36 "../libDaisy/src/per/gpio.h"
+ 273              		.file 37 "../libDaisy/src/per/sai.h"
+ 274              		.file 38 "../libDaisy/src/hid/audio.h"
+ 275              		.file 39 "../libDaisy/src/per/adc.h"
+ 276              		.file 40 "../libDaisy/src/hid/usb.h"
+ 277              		.file 41 "../libDaisy/src/util/wav_format.h"
+ 278              		.file 42 "../libDaisy/src/dev/sr_595.h"
+ 279              		.file 43 "../libDaisy/src/dev/codec_ak4556.h"
+ 280              		.file 44 "../libDaisy/src/dev/max11300.h"
+ 281              		.file 45 "../libDaisy/src/daisy_seed.h"
+ 282              		.file 46 "../libDaisy/src/dev/sdram.h"
+ 283              		.file 47 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 284              		.file 48 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 285              		.file 49 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 286              		.file 50 "../DaisySP/Source/Control/adenv.h"
+ 287              		.file 51 "../DaisySP/Source/Utility/dsp.h"
+ 288              		.file 52 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 289              		.file 53 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 290              		.file 54 "../Utilities/src/utilities.h"
+ 291              		.file 55 "<built-in>"
+ARM GAS  C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Utilities.cpp
+C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s:17     .text._ZN9UtilitiesC2Ev:00000000 $t
+C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s:26     .text._ZN9UtilitiesC2Ev:00000000 _ZN9UtilitiesC2Ev
+C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s:49     .text._ZN9UtilitiesC2Ev:00000014 $d
+C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s:26     .text._ZN9UtilitiesC2Ev:00000000 _ZN9UtilitiesC1Ev
+C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s:57     .text._ZN9UtilitiesD2Ev:00000000 $t
+C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s:65     .text._ZN9UtilitiesD2Ev:00000000 _ZN9UtilitiesD2Ev
+C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s:65     .text._ZN9UtilitiesD2Ev:00000000 _ZN9UtilitiesD1Ev
+C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s:81     .text._ZN9Utilities4initEf:00000000 $t
+C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s:89     .text._ZN9Utilities4initEf:00000000 _ZN9Utilities4initEf
+C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s:118    .text._ZN9Utilities16SmoothAnalogReadEjjRN5daisy9DaisySeedE:00000000 $t
+C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s:126    .text._ZN9Utilities16SmoothAnalogReadEjjRN5daisy9DaisySeedE:00000000 _ZN9Utilities16SmoothAnalogReadEjjRN5daisy9DaisySeedE
+C:\Users\39351\AppData\Local\Temp\ccYJEWAR.s:232    .text._ZN9Utilities16SmoothAnalogReadEjjRN5daisy9DaisySeedE:0000005c $d
+
+UNDEFINED SYMBOLS
+_ZNK5daisy9AdcHandle3GetEh
