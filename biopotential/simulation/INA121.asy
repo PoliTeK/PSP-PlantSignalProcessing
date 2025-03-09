@@ -1,0 +1,32 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal -32 -72 48 72
+WINDOW 0 8 -72 Bottom 2
+WINDOW 3 8 72 Top 2
+SYMATTR Prefix X
+SYMATTR Value INA121
+SYMATTR ModelFile C:\Users\emanu\Documents\POLITO\PROGETTI\PSP-PlantSignalProcessing\biopotential\simulation\INA121.lib
+PIN -32 -48 LEFT 8
+PINATTR PinName V+
+PINATTR SpiceOrder 1
+PIN -32 -16 LEFT 8
+PINATTR PinName V-
+PINATTR SpiceOrder 2
+PIN -32 16 LEFT 8
+PINATTR PinName +
+PINATTR SpiceOrder 3
+PIN -32 48 LEFT 8
+PINATTR PinName -
+PINATTR SpiceOrder 4
+PIN 48 -48 RIGHT 8
+PINATTR PinName Vo
+PINATTR SpiceOrder 5
+PIN 48 -16 RIGHT 8
+PINATTR PinName Ref
+PINATTR SpiceOrder 6
+PIN 48 16 RIGHT 8
+PINATTR PinName G1
+PINATTR SpiceOrder 7
+PIN 48 48 RIGHT 8
+PINATTR PinName G2
+PINATTR SpiceOrder 8

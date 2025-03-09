@@ -1,0 +1,195 @@
+LTspice 24.1.4 for Windows
+Circuit: C:\Users\emanu\Documents\POLITO\PROGETTI\PSP-PlantSignalProcessing\biopotential\simulation\amp_stage_2.net
+Start Time: Sun Mar  9 12:19:55 2025
+solver = Normal
+Maximum thread count: 12
+tnom = 27
+temp = 27
+method = trap
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 5.5165
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+vernier = 0.0078125
+Gmin = 5.49501
+vernier = 0.00390625
+vernier = 0.00195312
+vernier = 0.000976562
+vernier = 0.000488281
+Gmin = 5.50104
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+vernier = 0.25
+Source Step = 3.79084%
+Source Step = 3.82043%
+Source Step = 3.85002%
+Source Step = 3.87962%
+Source Step = 3.90921%
+Source Step = 3.9388%
+vernier = 0.00146484
+Source Step = 3.98171%
+Source Step = 4.0261%
+Source Step = 4.07049%
+Source Step = 4.11488%
+Source Step = 4.15927%
+vernier = 0.00219727
+Source Step = 4.22141%
+Source Step = 4.288%
+Source Step = 4.35458%
+Source Step = 4.42116%
+Source Step = 4.48775%
+vernier = 0.0032959
+Source Step = 4.57764%
+Source Step = 4.67751%
+Source Step = 4.77739%
+Source Step = 4.87726%
+Source Step = 4.97714%
+vernier = 0.00494385
+Source Step = 5.10698%
+Source Step = 5.25679%
+Source Step = 5.40661%
+Source Step = 5.55642%
+Source Step = 5.70623%
+vernier = 0.00741577
+Source Step = 5.8935%
+Source Step = 6.11822%
+Source Step = 6.34294%
+Source Step = 6.56766%
+Source Step = 6.79238%
+vernier = 0.0111237
+Source Step = 7.06205%
+Source Step = 7.39913%
+Source Step = 7.73621%
+Source Step = 8.07329%
+Source Step = 8.41037%
+vernier = 0.0166855
+Source Step = 8.79801%
+Source Step = 9.30363%
+Source Step = 9.80925%
+Source Step = 10.3149%
+Source Step = 10.8205%
+vernier = 0.0250282
+Source Step = 11.3767%
+Source Step = 12.1351%
+Source Step = 12.8935%
+Source Step = 13.652%
+Source Step = 14.4104%
+vernier = 0.0375423
+Source Step = 15.2068%
+Source Step = 16.3444%
+Source Step = 17.482%
+Source Step = 18.6197%
+Source Step = 19.7573%
+Source Step = 20.895%
+vernier = 0.0563135
+Source Step = 22.6015%
+Source Step = 23.0361%
+Source Step = 23.0627%
+Source Step = 23.0894%
+Source Step = 23.1161%
+Source Step = 23.1427%
+vernier = 0.00131985
+Source Step = 23.1721%
+Source Step = 23.2121%
+Source Step = 23.252%
+Source Step = 23.292%
+Source Step = 23.332%
+vernier = 0.00197977
+Source Step = 23.374%
+Source Step = 23.434%
+Source Step = 23.494%
+Source Step = 23.554%
+Source Step = 23.614%
+Source Step = 23.674%
+vernier = 0.00296966
+Source Step = 23.764%
+Source Step = 23.854%
+Source Step = 23.944%
+Source Step = 24.034%
+Source Step = 24.1239%
+vernier = 0.00445449
+Source Step = 24.2544%
+Source Step = 24.3894%
+Source Step = 24.5244%
+Source Step = 24.6594%
+Source Step = 24.7944%
+vernier = 0.00668173
+Source Step = 24.9833%
+Source Step = 25.1858%
+Source Step = 25.3883%
+Source Step = 25.5908%
+Source Step = 25.7933%
+vernier = 0.0100226
+Source Step = 26.0666%
+Source Step = 26.3703%
+Source Step = 26.674%
+Source Step = 26.9777%
+Source Step = 27.2815%
+vernier = 0.0150339
+Source Step = 27.6763%
+Source Step = 28.1319%
+Source Step = 28.5874%
+Source Step = 29.043%
+Source Step = 29.4986%
+vernier = 0.0225508
+Source Step = 30.068%
+Source Step = 30.7514%
+Source Step = 31.4348%
+Source Step = 32.1181%
+Source Step = 32.8015%
+vernier = 0.0338263
+Source Step = 33.6215%
+Source Step = 34.6465%
+Source Step = 35.6716%
+Source Step = 36.6966%
+Source Step = 37.7217%
+vernier = 0.0507394
+Source Step = 38.9005%
+Source Step = 40.438%
+Source Step = 41.9756%
+Source Step = 43.5131%
+Source Step = 45.0507%
+vernier = 0.0761091
+Source Step = 46.742%
+Source Step = 49.0483%
+Source Step = 51.3547%
+Source Step = 53.661%
+Source Step = 55.9673%
+vernier = 0.114164
+Source Step = 58.389%
+Source Step = 61.8485%
+Source Step = 65.308%
+Source Step = 68.7675%
+Source Step = 72.227%
+Source Step = 75.6865%
+vernier = 0.171245
+Source Step = 80.8758%
+Source Step = 86.065%
+Source Step = 91.2543%
+vernier = 0.0428114
+Source Step = 90.8002%
+Source Step = 90.8813%
+Starting source stepping with srcstepmethod=1
+Source Step = 3.0303%
+vernier = 0.25
+Source Step = 1.78741%
+Source stepping failed
+
+Pseudo Transient succeeded in finding the operating point at 10.5644 s.
+Total elapsed time: 2.831 seconds.
+
+Files loaded:
+C:\Users\emanu\Documents\POLITO\PROGETTI\PSP-PlantSignalProcessing\biopotential\simulation\amp_stage_2.net
+C:\Users\emanu\Documents\POLITO\PROGETTI\PSP-PlantSignalProcessing\biopotential\simulation\INA121.lib
+C:\Users\emanu\Documents\POLITO\PROGETTI\PSP-PlantSignalProcessing\biopotential\simulation\TL072.lib
+
