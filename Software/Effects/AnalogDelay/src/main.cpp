@@ -2,7 +2,7 @@
 #include "daisy_seed.h" // Libreria principale per la scheda Daisy Seed
 #include "daisysp.h"    // Libreria DSP per Daisy
 #include "AnalogDelay.h" // Libreria custom per l'effetto delay analogico
-#include "../../Utilities/src/Utilities.h" // Libreria custom per le utility
+#include "../../../Utilities/Utilities.h" // Libreria custom per le utility
 
 #define ADC_CH 4 // Numero di canali ADC da utilizzare
 
