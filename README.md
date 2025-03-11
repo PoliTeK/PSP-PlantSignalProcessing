@@ -1,13 +1,13 @@
 # PSP-PlantSignalProcessing
 
-## Setup
+## Configurazione
 ```bash
 git clone https://github.com/PoliTeK/PSP-PlantSignalProcessing.git
 cd PSP-PlantSignalProcessing
 git submodule update --init --recursive
 ```
 
-## Project Structure
+## Struttura del Progetto
 ```
 PSP/
 ├── Hardware/
@@ -16,34 +16,34 @@ PSP/
 │   └── Componenti/
 │
 └── Software/
-    ├── Test/                 # Temporary testing directory
-    │   ├── Arduino/         # Arduino test files
-    │   ├── Vari/           # Miscellaneous tests
-    │   └── Template/       # Template folder for new classes
+    ├── Test/                 # Directory temporanea per i test
+    │   ├── Arduino/         # File di test Arduino
+    │   ├── Vari/           # Test vari
+    │   └── Template/       # Cartella template per nuove classi
     │
-    ├── src/                 # Main Daisy source files
-    ├── Utility/            # Utility classes (sensors, smoothing)
-    ├── Effects/            # Audio effects
-    ├── Synth/             # Audio engine
-    └── libs/              # External libraries
+    ├── src/                 # File principali progetto
+    ├── Utility/            # Classi di utilità (sensori, smoothing)
+    ├── Effects/            # Effetti audio
+    ├── Synth/             # Motore audio
+    └── libs/              # Librerie esterne
 ```
 
-## Build Instructions
+## Istruzioni di Build
 
-### Prerequisites
-- VS Code installed 
-- Follow [Initial Setup Guide](https://github.com/electro-smith/DaisyWiki/wiki#1-upload-an-example-program) for VS Code and Daisy environment
-- Make sure DFU USB drivers are installed for your Daisy board (**Warning: this step is known to cause severe headaches and testing one's patience!**)
+### Prerequisiti
+- VS Code installato 
+- Seguire la [Guida di Configurazione Iniziale](https://github.com/electro-smith/DaisyWiki/wiki#1-upload-an-example-program) per VS Code e l'ambiente Daisy
+- Assicurarsi che i driver USB DFU siano installati per la scheda Daisy (**Attenzione: questo passaggio è spesso fonte di bestemmie!**)
 
-### Building the Project
-1. Open the project in VSCode and open the terminal
-2. Navigate to Software/src folder: `cd Software/src`
-3. For first-time compilation, you need to build the libraries using the command `make all`
-4. If everything compiled successfully, connect the Daisy Seed to your PC via USB, put it in DFU mode using the boot and reset buttons, then run `make program-dfu` to upload the program
+### Compilazione del Progetto
+1. Aprire il progetto in VSCode e aprire il terminale
+2. Navigare nella cartella Software/src: `cd Software/src`
+3. Per la prima compilazione, è necessario buildare le librerie usando il comando `make all`
+4. Se tutto è compilato con successo, collegare il Daisy Seed al PC via USB, metterla in modalità DFU usando i pulsanti boot e reset, quindi eseguire `make program-dfu` per caricare il programma
 
-### Building Libraries
-Sometimes the `make all` command fails to compile libraries. In this case, build them manually:
-1. Navigate to the libs directory:
+### Compilazione delle Librerie
+A volte il comando `make all` non riesce a compilare le librerie. In questo caso, compilarle manualmente:
+1. Navigare nella directory libs:
    ```bash
    cd Software/libs
    cd DaisySP
@@ -54,77 +54,89 @@ Sometimes the `make all` command fails to compile libraries. In this case, build
    make clean
    make
    ```
-2. If no errors occur, proceed with project compilation
+2. Se non si verificano errori, procedere con la compilazione del progetto
 
-## Development Guidelines
+## Linee Guida per lo Sviluppo
 
-### Adding New Classes
-1. Start by copying the template folder:
+### Aggiunta di Nuove Classi
+1. Iniziare copiando la cartella template:
    ```bash
-   cp -r Software/Test/Template Software/[destination_folder]/[new_class_name]
+   cp -r Software/Test/Template Software/[cartella_destinazione]/[nome_nuova_classe]
    ```
-2. Rename the files inside the new folder:
-   - `template.cpp` → `[new_class_name].cpp`
-   - `template.h` → `[new_class_name].h`
+2. Rinominare i file nella nuova cartella:
+   - `template.cpp` → `[nome_nuova_classe].cpp`
+   - `template.h` → `[nome_nuova_classe].h`
 
-3. Update the class name in both files to match your new class name
+3. Aggiornare il nome della classe in entrambi i file
 
-4. Use main.cpp to test the class on the DaisySeed board by creating a usage example
+4. Utilizzare main.cpp per testare la classe sulla scheda DaisySeed creando un esempio di utilizzo
 
-5. To compile the example, make sure to properly update the Makefile and then follow the same build instructions as the main project, but in your working directory
+5. Per compilare l'esempio, assicurarsi di aggiornare correttamente il Makefile e seguire le stesse istruzioni di build del progetto principale
 
-6. CREATE A README FILE TO EXPLAIN HOW TO USE THE CLASS AND ITS PUBLIC METHODS
+6. CREARE UN FILE README PER SPIEGARE COME UTILIZZARE LA CLASSE E I SUOI METODI PUBBLICI
 
-7. If working correctly, add your implementation in the following locations:
-   - Effects go in the `Software/Effects` folder
-   - Synth components go in the `Software/Synth` folder
-   - Utilities go in the `Software/Utility` folder
+7. Se funziona correttamente, aggiungere l'implementazione nelle seguenti posizioni:
+   - Gli effetti vanno nella cartella `Software/Effects`
+   - I componenti del sintetizzatore vanno in `Software/Synth`
+   - Le utilità vanno in `Software/Utility`
 
-8. Include your new files in the main project if needed
+8. Includere i nuovi file nel progetto principale se necessario
 
-### Code Style
-- Use camelCase for method names
-- Use PascalCase for class names
-- Prefix private members with underscore (e.g., _privateVariable, _privateMethod)
-- Include documentation for public methods
+### Stile del Codice
+- **camelCase** per i nomi dei metodi
+  - La prima lettera è minuscola
+  - Ogni parola successiva inizia con la maiuscola
+  - Esempi: 
+    - `setFrequency()`
+    - `setVolume()`
+    - `readSensorValue()`
 
-### Git Workflow Guidelines
-- Before starting to work, always pull the latest changes:
+- **PascalCase** per i nomi delle classi
+  - Ogni parola, inclusa la prima, inizia con la maiuscola
+  - Esempi:
+    - `class CapacitiveSensor`
+    - `class ReverbEffect`
+
+- Prefissare i membri privati con underscore (es. `_variabilePrivata`, `_metodoPrivato`)
+- Includere documentazione per i metodi pubblici
+
+### Linee Guida per l'Uso di Git
+- Prima di iniziare a lavorare, aggiornare sempre con gli ultimi cambiamenti:
   ```bash
   git pull origin main
   ```
 
-- Create a new branch for your feature/fix:
+- Creare un nuovo branch per la feature/fix:
   ```bash
-  git checkout -b feature/your-feature-name
-  # or
-  git checkout -b fix/your-fix-name
+  git checkout -b feature/nome-feature
+  # oppure
+  git checkout -b fix/nome-fix
   ```
 
-- Commit your changes frequently with meaningful messages:
+- Committare frequentemente con messaggi significativi:
   ```bash
   git add .
-  git commit -m "Description of your changes"
+  git commit -m "Descrizione delle modifiche"
   ```
 
-- Keep your branch updated with main:
+- Mantenere il branch aggiornato con il main:
   ```bash
   git checkout main
   git pull origin main
-  git checkout your-branch-name
+  git checkout nome-branch
   git merge main
   ```
 
-- When ready to share your work:
+- Quando si è pronti a condividere il lavoro:
   ```bash
-  git push origin your-branch-name
+  git push origin nome-branch
   ```
-  Then create a Pull Request on GitHub
+  Quindi creare una Pull Request su GitHub
 
-- Best Practices:
-  - Pull changes at the start of each working session
-  - Commit frequently with clear messages
-  - Test your changes before pushing
-  - Review your code before creating a Pull Request
-  - Resolve conflicts locally before pushing
-  - Keep commits focused and atomic
+- Migliori Pratiche:
+  - Fare pull all'inizio di ogni sessione di lavoro
+  - Committare frequentemente con messaggi chiari
+  - Testare le modifiche prima del push
+  - Rivedere il codice prima di creare una Pull Request
+  - Risolvere i conflitti localmente prima del push
+  - Mantenere i commit focalizzati e atomici
