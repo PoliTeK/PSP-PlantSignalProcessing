@@ -139,4 +139,4 @@ A volte il comando `make all` non riesce a compilare le librerie. In questo caso
   - Testare le modifiche prima del push
   - Rivedere il codice prima di creare una Pull Request
   - Risolvere i conflitti localmente prima del push
-  - Mantenere i commit focalizzati e atomici
+  - Mantenere i commit focalizzati e fotonici
