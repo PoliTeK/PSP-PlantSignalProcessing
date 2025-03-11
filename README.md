@@ -8,24 +8,25 @@ git submodule update --init --recursive
 ```
 
 ## Project Structure
-
-- PSP
-  |
-  |--- Hardware
-  |   |-- Schema a blocchi 
-  |   |-- Biopotential
-  |   |-- Componenti
-  |
-  |--- Software
-  |   |--|Test        // Temporanea
-  |   |  |--Arduino   // File arduino temp
-  |   |  |--Vari      // File test vari
-  |   |  |--Template  // Cartella template da clonare 
-  |   |-- src          // file main daisy
-  |   |-- Utility      // classi utili (sensori, smooth)
-  |   |-- Effects      // Effetti
-  |   |-- Synth        // Motore audio
-  |   |-- libs         // librerie
+```
+PSP/
+├── Hardware/
+│   ├── Schema_a_blocchi/
+│   ├── Biopotential/
+│   └── Componenti/
+│
+└── Software/
+    ├── Test/                 # Temporary testing directory
+    │   ├── Arduino/         # Arduino test files
+    │   ├── Vari/           # Miscellaneous tests
+    │   └── Template/       # Template folder for new classes
+    │
+    ├── src/                 # Main Daisy source files
+    ├── Utility/            # Utility classes (sensors, smoothing)
+    ├── Effects/            # Audio effects
+    ├── Synth/             # Audio engine
+    └── libs/              # External libraries
+```
 
 ## Build Instructions
 
