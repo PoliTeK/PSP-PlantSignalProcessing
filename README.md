@@ -33,6 +33,7 @@ PSP/
 ### Prerequisiti
 - VS Code installato 
 - Seguire la [Guida di Configurazione Iniziale](https://github.com/electro-smith/DaisyWiki/wiki#1-upload-an-example-program) per VS Code e l'ambiente Daisy
+- Seguire la guida al link https://registry.platformio.org/libraries/adafruit/Adafruit%20MPR121/installation per l'installazione della libreria per il sensore capacitivo utilizzando l'ambiente PlatformIO su VSCode
 - Assicurarsi che i driver USB DFU siano installati per la scheda Daisy (**Attenzione: questo passaggio è spesso fonte di bestemmie!**)
 
 ### Compilazione del Progetto
