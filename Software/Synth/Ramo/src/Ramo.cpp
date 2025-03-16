@@ -16,23 +16,21 @@ void Ramo::Init(float sample_rate) // initialization
 {
     _sr = sample_rate;
     _sr_recip = 1.0f / sample_rate;
-    //__addgsbyte = 100.0f;
     _freq = 100.0f;
     _phase_inc[0] = CalcPhaseInc(_freq);
     _phase_inc[1] = CalcPhaseInc(_freq);
-    
+    _pw = 0.5f;
+    _shape = 0.0f;
+    _mshape = 0.5f - _shape;
+    _correctorGain = 1 / (1 - 2 * _shape);
     
 
     for (int i = 0; i < 2; i++) {
         _amp[i] = 0.5f;
-        _pw = 0.5f;
-        _shape = 0.0f;
-        _mshape = 0.5f - _shape;
         _phase[i] = 0.0f;
         _waveform[i] = WAVE_SIN;
         _eoc[i] = true;
         _eor[i] = true;
-        _correctorGain = 1 / (1 - 2 * _shape);
     }
 
 }
@@ -92,10 +90,13 @@ float Ramo::CalcPhaseInc(float f)
     return f * _sr_recip;
 }
 
-void Ramo::SetWaveforms(uint8_t wf1, uint8_t wf2)
-{
-    _waveform[0] = wf1 < WAVE_LAST ? wf1 : WAVE_SIN;
-    _waveform[1] = wf2 < WAVE_LAST ? wf2 : WAVE_SIN;
+void Ramo::SetWaveforms(uint8_t wf[])
+{   
+    for(int i = 0; i < n; i++)
+    {
+        _waveform[i] = wf[i] < WAVE_LAST ? wf[i] : WAVE_SIN;
+    }
+    
 }
 
 void Ramo::SetFreq( const float f)
@@ -107,18 +108,23 @@ void Ramo::SetFreq( const float f)
     }
 }
 
-void Ramo::SetDetune(float ef1,float ef2)
+void Ramo::SetDetune(float ef[])
 {
-    _phase_inc[0] = CalcPhaseInc(_freq) * ef1;
-    _phase_inc[1] = CalcPhaseInc(_freq) * ef2;
+    for (int i = 0; i < n; i++)
+    {
+        _phase_inc[i] = CalcPhaseInc(_freq) * ef[i];
+    }
 }
 
 
 
-void Ramo::SetAmp(float g1, float g2)
+
+void Ramo::SetAmp(float g[])
 {
-    _amp[0] = g1;
-    _amp[1] = g2;
+    for (int i = 0; i < n; i++)
+    {
+        _amp[i] = g[i];
+    }
 }
 
 void Ramo::SetShape(float s)

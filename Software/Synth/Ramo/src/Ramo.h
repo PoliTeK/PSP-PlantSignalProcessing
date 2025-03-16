@@ -30,15 +30,15 @@ public:
 
     float Process(); // Processing function
 
-    void SetWaveforms(uint8_t wf1, uint8_t wf2); // Set the waveforms
+    void SetWaveforms(uint8_t wf[]); // Set the waveforms
 
     void SetFreq(const float f); // Set the frequency
 
-    void SetDetune(float ef1, float ef2); // Set the detune as a ratio between the two waveforms
+    void SetDetune(float ef[]); // Set the detune as a ratio between the two waveforms
 
-    void SetAmp(float g1, float g2); // Set the amplitude for each waveform
+    void SetAmp(float g[]); // Set the amplitude for each waveform
 
-    void SetShape(float s1); // Set the shape for each waveform
+    void SetShape(float s); // Set the shape for each waveform
 
 private:
     // Private member variables (prefixed with _)

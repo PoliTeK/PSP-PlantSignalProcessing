@@ -1,74 +1,73 @@
-// Inclusione delle librerie necessarie
-#include "daisy_seed.h" // Libreria principale per la scheda Daisy Seed
-#include "daisysp.h"    // Libreria DSP per Daisy
-#include "Ramo.h"       // Libreria per il synth Ramo
+// Inclusion of necessary libraries
+#include "daisy_seed.h" // Main library for the Daisy Seed board
+#include "daisysp.h"    // DSP library for Daisy
+#include "Ramo.h"       // Library for the Ramo synth
 
-// Utilizzo dei namespace per semplificare la scrittura del codice
+#define ADC_CHANNEL_NUM 2 // Number of ADC channels
+
+// Using namespaces to simplify code writing
 using namespace daisy;
 using namespace daisysp;
 
+// Initialization of objects and global variables
+static DaisySeed hw;                                             // Main object for managing Daisy hardware
+static Ramo ramo;                                                // Object for the Ramo synth
 
+uint8_t wf[n] = {1, 1};                                          // Array for waveforms
+float ef[n] = {1, 1};                                            // Array for detune
+float g[n] = {0.5f, 0.5f};                                       // Array for amplitude
 
-// Dichiarazione delle variabili globali
-static DaisySeed hw;           // Oggetto principale per gestire l'hardware Daisy
-static Ramo ramo;              // Oggetto per il synth Ramo
+float f;                                                         // Frequency
+float shape;                                                     // Shape modulation
 
-AdcChannelConfig adcConfig[3]; // Array di configurazione per 3 canali ADC
-
-float f;
-float shape;
-
+// ADC configuration
+AdcChannelConfig adcConfig[ADC_CHANNEL_NUM];                     // Configuration array for ADC channels
 
 void InitHardware() {
-    
-    // Inizializzazione dei tre pin ADC per i potenziometri
-    adcConfig[0].InitSingle(hw.GetPin(15)); // Primo potenziometro per il pitch
-    adcConfig[1].InitSingle(hw.GetPin(16)); // Secondo potenziometro per shape1
-    adcConfig[2].InitSingle(hw.GetPin(17)); // Terzo potenziometro   per shape 2
-    hw.adc.Init(adcConfig, 3);              // Inizializzazione ADC con 3 canali
-    hw.adc.Start();                         // Avvio della conversione ADC
+    // Initialize the ADC pins for the potentiometers
+    for (int i = 0; i < ADC_CHANNEL_NUM; i++) {
+        adcConfig[i].InitSingle(hw.GetPin(15 + i));
+    }
+    hw.adc.Init(adcConfig, ADC_CHANNEL_NUM);                     // Initialize ADC with N channels
+    hw.adc.Start();                                              // Start ADC conversion
 }
 
-
-// Callback audio eseguito per ogni blocco audio
+// Audio callback executed for each audio block
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size) {
     float sig;
-    ramo.SetFreq(f);                                                            // Imposta la frequenza
-    ramo.SetShape(shape);                                              // Imposta la forma d'onda
+    ramo.SetFreq(f);                                              // Set frequency
+    ramo.SetShape(shape);                                         // Set waveform shape
 
-    for(size_t i = 0; i < size; i++) {
-        sig = ramo.Process();                                                        // Processa il segnale audio
-        // Output processed signal
-        out[0][i] = sig;
-        out[1][i] = sig;
+    for (size_t i = 0; i < size; i++) {
+        sig = ramo.Process();                                     // Process the audio signal
+        out[0][i] = sig;                                         // Output processed signal (left channel)
+        out[1][i] = sig;                                         // Output processed signal (right channel)
     }
 }
 
 int main() {
-    hw.Configure();                                                             // Configurazione hardware
-    hw.Init();                                                                  // Inizializzazione hardware
+    hw.Configure();                                                             // Hardware configuration
+    hw.Init();                                                                  // Hardware initialization
 
-    hw.SetAudioBlockSize(4);                                                    // Imposta dimensione del blocco audio
-    hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);            // Imposta sample rate a 48kHz
+    hw.SetAudioBlockSize(4);                                                    // Set audio block size
+    hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);            // Set sample rate to 48kHz
 
+    ramo.Init(hw.AudioSampleRate());                                            // Initialize the Ramo synth
+    ramo.SetWaveforms(wf);                                                      // Set waveforms
+    ramo.SetFreq(440.0f);                                                       // Set frequency
+    ramo.SetDetune(ef);                                                         // Set detune
+    ramo.SetAmp(g);                                                             // Set amplitude
+    ramo.SetShape(0.5f);                                                        // Set shape modulation
 
-    ramo.Init(hw.AudioSampleRate());                                            // Inizializza il synth Ramo
-    ramo.SetWaveforms(1,1);                                   // Imposta le forme d'onda
-    ramo.SetFreq(440.0f);                                                   // Imposta la frequenza
-    ramo.SetDetune(1,1);                                                  // Imposta il detune
-    ramo.SetAmp(0.5f, 0.5f);                                                // Imposta l'ampiezza
-    ramo.SetShape(0.5f);                                              // Imposta shape
-    
-    InitHardware();                                                             // Inizializza i potenziometri
-    hw.StartAudio(AudioCallback);                              // Avvia il callback audio
+    InitHardware();                                                             // Initialize potentiometers
+    hw.StartAudio(AudioCallback);                                               // Start the audio callback
 
-    // Loop infinito per mantenere il programma in esecuzione
-    while(1) {
+    // Infinite loop to keep the program running
+    while (1) {
+        f = 220.0f + 220.0f * hw.adc.GetFloat(0);                                // Read potentiometer 1 and calculate frequency
+        shape = hw.adc.GetFloat(1);                                              // Read potentiometer 2 and calculate waveform modulation
 
-        f = 220.0f + 220.0f * hw.adc.GetFloat(0);
-        shape = hw.adc.GetFloat(1);
-        
-        // Attendi 1ms per ridurre l'utilizzo della CPU
+        // Wait 1ms to reduce CPU usage
         System::Delay(1);
     }
 }
