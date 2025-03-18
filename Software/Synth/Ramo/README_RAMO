@@ -1,3 +1,55 @@
+# Ramo Block for PSP
+
+## Author
+Skipiti_Leo
+
+## Description
+The main sound block of the PSP
+
+### Features
+- Semi variable number of oscilaltors
+- Variable frequency shared for all the oscillators
+- Variable shape shared for all the oscilaltors
+  -TRI => wavefolder 
+    - DC_MAX sets the maximum DC to fold the triangular wave, 0.25 correspond to a total fold and doubles the frequency
+  -SQUARE => PWM 
+- Detuning of the oscillators
+
+
+## Hardware Setup
+- **Daisy Seed** board
+- 2 potentiometers connected to:
+  - Pin A0: Frequncy (220-440)Hz
+  - Pin A1: Shape control (0-100%)
+
+## Controls
+- **Frequncy**: set the pitch of the oscillators
+- **Shape**: Controls the color of the sound
+
+## Next step
+- Correcting the wavefolder
+- Adding shape controls for sinewave
+- Adding shape controls for Saw
+- adding a CV somewhere
+- total control of the number of oscillators(template class)
+
+
+## Usage
+
+The `AnalogDelay` class can be incorporated in your Daisy projects:
+
+```cpp
+// In the file ramo.h, there is the variable n, which indicates the number of waveforms—
+// in this case, 2, but it can be modified to have more waveforms.
+
+// In the file ramo.h, there is the variable DC_MAX, which indicates the maximum folding value—
+// in this case, 0.2, but it can be modified (at your own risk).
+
+// The vectors wf, ef, and g are respectively for waveforms, detune, and amplitude,
+// and they have a size of n. If you change n, make sure to adjust them accordingly.
+
+
+
 // Inclusion of necessary libraries
 #include "daisy_seed.h" // Main library for the Daisy Seed board
 #include "daisysp.h"    // DSP library for Daisy
