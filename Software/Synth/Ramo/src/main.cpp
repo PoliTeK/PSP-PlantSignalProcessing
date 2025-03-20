@@ -13,7 +13,7 @@ using namespace daisysp;
 static DaisySeed hw;                                             // Main object for managing Daisy hardware
 static Ramo ramo;                                                // Object for the Ramo synth
 
-uint8_t wf[n] = {1, 1};                                          // Array for waveforms
+uint8_t wf[n] = {3, 3};                                          // Array for waveforms
 float ef[n] = {1, 1};                                            // Array for detune
 float g[n] = {0.5f, 0.5f};                                       // Array for amplitude
 
