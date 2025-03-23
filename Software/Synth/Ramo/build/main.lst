@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   34              		@ link register save eliminated.
   35              	.LBB160:
   36              	.LBI160:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 2
 
 
   37              		.file 2 "../../libs/libDaisy/src/dev/codec_ak4556.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   27:../../libs/libDaisy/src/sys/system.h ****             FREQ_400MHZ,
   28:../../libs/libDaisy/src/sys/system.h ****             FREQ_480MHZ,
   29:../../libs/libDaisy/src/sys/system.h ****         };
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 3
 
 
   30:../../libs/libDaisy/src/sys/system.h **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   84:../../libs/libDaisy/src/sys/system.h ****         } status;
   85:../../libs/libDaisy/src/sys/system.h ****         uint32_t data;
   86:../../libs/libDaisy/src/sys/system.h ****         enum class Version : uint32_t
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 4
 
 
   87:../../libs/libDaisy/src/sys/system.h ****         {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   38:../../libs/libDaisy/src/hid/usb.h ****     typedef void (*ReceiveCallback)(uint8_t* buff, uint32_t* len);
   39:../../libs/libDaisy/src/hid/usb.h **** 
   40:../../libs/libDaisy/src/hid/usb.h ****     UsbHandle() {}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 5
 
 
   41:../../libs/libDaisy/src/hid/usb.h **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   47:../../libs/libDaisy/src/per/adc.h ****         SPEED_8CYCLES_5,
   48:../../libs/libDaisy/src/per/adc.h ****         SPEED_16CYCLES_5,
   49:../../libs/libDaisy/src/per/adc.h ****         SPEED_32CYCLES_5,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 6
 
 
   50:../../libs/libDaisy/src/per/adc.h ****         SPEED_64CYCLES_5,
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  104:../../libs/libDaisy/src/per/adc.h ****         OVS_512,  /**< & */
  105:../../libs/libDaisy/src/per/adc.h ****         OVS_1024, /**< & */
  106:../../libs/libDaisy/src/per/adc.h ****         OVS_LAST, /**< & */
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 7
 
 
  107:../../libs/libDaisy/src/per/adc.h ****     };
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   45:../../libs/libDaisy/src/hid/audio.h ****     enum class Result
   46:../../libs/libDaisy/src/hid/audio.h ****     {
   47:../../libs/libDaisy/src/hid/audio.h ****         OK,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 8
 
 
   48:../../libs/libDaisy/src/hid/audio.h ****         ERR,
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   76              		.syntax unified
   77              		.thumb
   78              		.thumb_func
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 9
 
 
   79              		.fpu fpv5-d16
@@ -501,7 +501,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   13:src/main.cpp  **** static DaisySeed hw;                                             // Main object for managing Daisy 
   14:src/main.cpp  **** static Ramo ramo;                                                // Object for the Ramo synth
   15:src/main.cpp  **** 
-  16:src/main.cpp  **** uint8_t wf[n] = {1, 1};                                          // Array for waveforms
+  16:src/main.cpp  **** uint8_t wf[n] = {3, 3};                                          // Array for waveforms
   17:src/main.cpp  **** float ef[n] = {1, 1};                                            // Array for detune
   18:src/main.cpp  **** float g[n] = {0.5f, 0.5f};                                       // Array for amplitude
   19:src/main.cpp  **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   96 0004 93ED000A 		vldr.32	s0, [r3]
   36:src/main.cpp  ****     float sig;
   97              		.loc 7 36 93 view .LVU17
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 10
 
 
   98 0008 70B5     		push	{r4, r5, r6, lr}
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  141              		.loc 7 43 19 discriminator 2 view .LVU32
  142 0036 80ED000A 		vstr.32	s0, [r0]
  143              		.loc 7 44 9 is_stmt 1 discriminator 2 view .LVU33
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 11
 
 
   41:src/main.cpp  ****         sig = ramo.Process();                                     // Process the audio signal
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   26:src/main.cpp  ****     // Initialize the ADC pins for the potentiometers
  190              		.loc 7 26 21 is_stmt 0 view .LVU45
  191 0000 30B5     		push	{r4, r5, lr}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 12
 
 
  192              		.cfi_def_cfa_offset 12
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  235              	.LBE169:
   31:src/main.cpp  ****     hw.adc.Start();                                              // Start ADC conversion
  236              		.loc 7 31 5 view .LVU57
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 13
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 13
 
 
   31:src/main.cpp  ****     hw.adc.Start();                                              // Start ADC conversion
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  284              		.loc 7 48 12 is_stmt 0 view .LVU65
  285 0000 08B5     		push	{r3, lr}
  286              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 14
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 14
 
 
  287              		.cfi_offset 3, -8
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  332              		.loc 7 58 19 is_stmt 0 view .LVU80
  333 003e 1849     		ldr	r1, .L20+16
  334 0040 1448     		ldr	r0, .L20+4
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 15
 
 
  335 0042 FFF7FEFF 		bl	_ZN4Ramo9SetDetuneEPf
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  377 007c C5ED007A 		vstr.32	s15, [r5]
  378              		.loc 7 68 9 is_stmt 1 discriminator 1 view .LVU96
  379              		.loc 7 68 32 is_stmt 0 discriminator 1 view .LVU97
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 16
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 16
 
 
  380 0080 FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  429              	.LBI257:
   21:../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
  430              		.loc 1 21 5 view .LVU105
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 17
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 17
 
 
  431              	.LBB258:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   51:../../libs/libDaisy/src/per/qspi.h ****         GOOD = 0,
   52:../../libs/libDaisy/src/per/qspi.h ****         E_HAL_ERROR,
   53:../../libs/libDaisy/src/per/qspi.h ****         E_SWITCHING_MODES,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 18
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 18
 
 
   54:../../libs/libDaisy/src/per/qspi.h ****         E_INVALID_MODE,
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  108:../../libs/libDaisy/src/per/qspi.h ****     // would make manually calling it unnecessary.
  109:../../libs/libDaisy/src/per/qspi.h ****     /** 
  110:../../libs/libDaisy/src/per/qspi.h ****         Deinitializes the peripheral
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 19
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 19
 
 
  111:../../libs/libDaisy/src/per/qspi.h ****         This should be called before reinitializing QSPI in a different mode.
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  165:../../libs/libDaisy/src/per/qspi.h ****     void* GetData(uint32_t offset = 0);
  166:../../libs/libDaisy/src/per/qspi.h **** 
  167:../../libs/libDaisy/src/per/qspi.h ****     QSPIHandle() : pimpl_(nullptr) {}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 20
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 20
 
 
  435              		.loc 8 167 5 view .LVU106
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   41:../../libs/libDaisy/src/daisy_core.h **** #define F2S24_SCALE 8388608.0f        /**< 2 ** 23 */
   42:../../libs/libDaisy/src/daisy_core.h **** #define S242F_SCALE 1.192092896e-07f  /**< 1 / (2 ** 23) */
   43:../../libs/libDaisy/src/daisy_core.h **** #define S24SIGN 0x800000              /**< 2 ** 23 */
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 21
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 21
 
 
   44:../../libs/libDaisy/src/daisy_core.h **** #define S322F_SCALE 4.6566129e-10f    /**< 1 / (2** 31) */
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   98:../../libs/libDaisy/src/daisy_core.h ****     \return Scaled number.
   99:../../libs/libDaisy/src/daisy_core.h **** */
  100:../../libs/libDaisy/src/daisy_core.h **** FORCE_INLINE float s82f(int8_t x)
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 22
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 22
 
 
  101:../../libs/libDaisy/src/daisy_core.h **** {
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  155:../../libs/libDaisy/src/daisy_core.h ****  */
  156:../../libs/libDaisy/src/daisy_core.h **** FORCE_INLINE float s322f(int32_t x)
  157:../../libs/libDaisy/src/daisy_core.h **** {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 23
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 23
 
 
  158:../../libs/libDaisy/src/daisy_core.h ****     return (float)x * S322F_SCALE;
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  454              	.LBE265:
  455              	.LBB266:
  456              	.LBI266:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 24
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 24
 
 
  457              		.loc 9 204 15 is_stmt 1 view .LVU114
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   18:../../libs/libDaisy/src/per/dac.h ****  ** other modules. However, it is still important to not try to use the DAC pins for anything else.
   19:../../libs/libDaisy/src/per/dac.h ****  ** DAC Channel 1 is on PA4, and DAC Channel 2 is on PA5
   20:../../libs/libDaisy/src/per/dac.h ****  ***/
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 25
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 25
 
 
   21:../../libs/libDaisy/src/per/dac.h **** class DacHandle
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   75:../../libs/libDaisy/src/per/dac.h ****          ** otherwise the driver will attempt meet the target.*/
   76:../../libs/libDaisy/src/per/dac.h ****         uint32_t target_samplerate;
   77:../../libs/libDaisy/src/per/dac.h **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 26
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 26
 
 
   78:../../libs/libDaisy/src/per/dac.h ****         Channel     chn;
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   35:../../libs/libDaisy/src/per/gpio.h ****      * Internal Pull up/down resistors are typically 40k ohms, and will be between
   36:../../libs/libDaisy/src/per/gpio.h ****      * 30k and 50k
   37:../../libs/libDaisy/src/per/gpio.h ****      * 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 27
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 27
 
 
   38:../../libs/libDaisy/src/per/gpio.h ****      * When the Pin is configured in Analog mode, the pull up/down resistors are
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  517              	.LBE278:
  518              	.LBB292:
  519              	.LBI292:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 28
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 28
 
 
  520              		.loc 11 74 5 is_stmt 1 view .LVU134
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
    2:../../libs/libDaisy/src/per/sai.h **** #ifndef DSY_SAI_H
    3:../../libs/libDaisy/src/per/sai.h **** #define DSY_SAI_H
    4:../../libs/libDaisy/src/per/sai.h **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 29
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 29
 
 
    5:../../libs/libDaisy/src/per/sai.h **** #include "util/hal_map.h"
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
   59:../../libs/libDaisy/src/per/sai.h ****             SAI_8KHZ,
   60:../../libs/libDaisy/src/per/sai.h ****             SAI_16KHZ,
   61:../../libs/libDaisy/src/per/sai.h ****             SAI_32KHZ,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 30
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 30
 
 
   62:../../libs/libDaisy/src/per/sai.h ****             SAI_48KHZ,
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  574              		.loc 7 73 1 is_stmt 0 view .LVU146
  575 0000 10B5     		push	{r4, lr}
  576              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 31
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 31
 
 
  577              		.cfi_offset 4, -8
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  627              	.LBE318:
  628              	.LBE320:
  629              	.LBE322:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 32
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 32
 
 
  630              	.LBE330:
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  679              		.loc 11 69 73 view .LVU159
  680 0028 C0E90C33 		strd	r3, r3, [r0, #48]
  681              	.LBE285:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 33
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 33
 
 
  682              	.LBE287:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  732              	.LBI343:
   31:../../libs/libDaisy/src/per/adc.h **** {
  733              		.loc 5 31 8 view .LVU164
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 34
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 34
 
 
  734              	.LBB344:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  781              		.loc 11 68 9 view .LVU177
  782              	.LBB355:
  783              	.LBB356:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 35
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 35
 
 
  784              	.LBI356:
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  831              		.loc 5 31 8 is_stmt 1 view .LVU188
   31:../../libs/libDaisy/src/per/adc.h **** {
  832              		.loc 5 31 8 view .LVU189
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 36
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 36
 
 
  833 0088 F0D1     		bne	.L23
@@ -2151,14 +2151,14 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  876              		.align	2
  877              		.set	.LANCHOR1,. + 0
  880              	_ZL4ramo:
- 881 0000 00000000 		.space	68
+ 881 0000 00000000 		.space	56
  881      00000000 
  881      00000000 
  881      00000000 
  881      00000000 
  882              		.section	.bss.adcConfig,"aw",%nobits
  883              		.align	2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 37
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 37
 
 
  884              		.set	.LANCHOR3,. + 0
@@ -2194,7 +2194,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  920              		.align	2
  921              		.set	.LANCHOR5,. + 0
  924              	wf:
- 925 0000 0101     		.ascii	"\001\001"
+ 925 0000 0303     		.ascii	"\003\003"
  926              		.text
  927              	.Letext0:
  928              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  946              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
  947              		.file 32 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
  948              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 38
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 38
 
 
  949              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
@@ -2243,43 +2243,43 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 1
  968              		.file 53 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
  969              		.file 54 "src/Ramo.h"
  970              		.file 55 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 39
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 39
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.cpp
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:73     .text._Z13AudioCallbackPKPKfPPfj:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:81     .text._Z13AudioCallbackPKPKfPPfj:00000000 _Z13AudioCallbackPKPKfPPfj
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:163    .text._Z13AudioCallbackPKPKfPPfj:00000044 $d
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:170    .text._Z12InitHardwarev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:178    .text._Z12InitHardwarev:00000000 _Z12InitHardwarev
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:262    .text._Z12InitHardwarev:0000004c $d
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:268    .text.startup.main:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:276    .text.startup.main:00000000 main
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:395    .text.startup.main:00000090 $d
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:410    .text.startup._GLOBAL__sub_I_wf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:417    .text.startup._GLOBAL__sub_I_wf:00000000 _GLOBAL__sub_I_wf
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:850    .text.startup._GLOBAL__sub_I_wf:00000094 $d
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:860    .init_array:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:887    .bss.adcConfig:00000000 adcConfig
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:901    .bss.shape:00000000 shape
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:894    .bss.f:00000000 f
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:916    .data.g:00000000 g
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:908    .data.ef:00000000 ef
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:924    .data.wf:00000000 wf
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:869    .bss._ZL2hw:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:873    .bss._ZL2hw:00000000 _ZL2hw
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:876    .bss._ZL4ramo:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:880    .bss._ZL4ramo:00000000 _ZL4ramo
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:883    .bss.adcConfig:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:890    .bss.f:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:897    .bss.shape:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:904    .data.ef:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:912    .data.g:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s:920    .data.wf:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:73     .text._Z13AudioCallbackPKPKfPPfj:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:81     .text._Z13AudioCallbackPKPKfPPfj:00000000 _Z13AudioCallbackPKPKfPPfj
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:163    .text._Z13AudioCallbackPKPKfPPfj:00000044 $d
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:170    .text._Z12InitHardwarev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:178    .text._Z12InitHardwarev:00000000 _Z12InitHardwarev
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:262    .text._Z12InitHardwarev:0000004c $d
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:268    .text.startup.main:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:276    .text.startup.main:00000000 main
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:395    .text.startup.main:00000090 $d
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:410    .text.startup._GLOBAL__sub_I_wf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:417    .text.startup._GLOBAL__sub_I_wf:00000000 _GLOBAL__sub_I_wf
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:850    .text.startup._GLOBAL__sub_I_wf:00000094 $d
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:860    .init_array:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:887    .bss.adcConfig:00000000 adcConfig
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:901    .bss.shape:00000000 shape
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:894    .bss.f:00000000 f
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:916    .data.g:00000000 g
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:908    .data.ef:00000000 ef
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:924    .data.wf:00000000 wf
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:869    .bss._ZL2hw:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:873    .bss._ZL2hw:00000000 _ZL2hw
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:876    .bss._ZL4ramo:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:880    .bss._ZL4ramo:00000000 _ZL4ramo
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:883    .bss.adcConfig:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:890    .bss.f:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:897    .bss.shape:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:904    .data.ef:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:912    .data.g:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s:920    .data.wf:00000000 $d
                            .group:00000000 _ZN5daisy9DaisySeedD5Ev
 
 UNDEFINED SYMBOLS
@@ -2303,7 +2303,7 @@ _ZN5daisy9DaisySeed10StartAudioEPFvPKPKfPPfjE
 _ZNK5daisy9AdcHandle8GetFloatEh
 _ZN5daisy6System5DelayEm
 __aeabi_atexit
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFUqpef.s 			page 40
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWKF6xa.s 			page 40
 
 
 _ZN4RamoC1Ev

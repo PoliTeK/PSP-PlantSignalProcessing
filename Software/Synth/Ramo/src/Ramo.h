@@ -4,7 +4,7 @@
 #include <cstdint>
 
 #define n 2        // Number of waveforms for each block
-#define DC_MAX 0.2 // decide quanto folda (vedi documentazione). Se = 0.5 hai raddoppiato la freq
+#define Th_MAX 0.6 // decide quanto folda (vedi documentazione). Se = 0.5 hai raddoppiato la freq
 
 /**
  * @brief Ramo class for PSP
@@ -46,9 +46,7 @@ private:
     uint8_t _waveform[n];
     float _amp[n];
     float _freq;
-    float _pw, _shape, _mshape;
-    float _correctorGain;
+    float _pw, _tresh,_c;
     float _sr, _sr_recip, _phase[n], _phase_inc[n];
-    float _last_out, _last_freq;
     bool _eor[n], _eoc[n];
 };

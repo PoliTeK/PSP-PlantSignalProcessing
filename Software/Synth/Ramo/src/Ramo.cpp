@@ -20,9 +20,8 @@ void Ramo::Init(float sample_rate) // initialization
     _phase_inc[0] = CalcPhaseInc(_freq);
     _phase_inc[1] = CalcPhaseInc(_freq);
     _pw = 0.5f;
-    _shape = 0.0f;
-    _mshape = 0.5f - _shape;
-    _correctorGain = 1 / (1 - 2 * _shape);
+    _tresh = 1.0f;
+    
     
 
     for (int i = 0; i < 2; i++) {
@@ -37,7 +36,7 @@ void Ramo::Init(float sample_rate) // initialization
 
 float Ramo::Process()
 {
-    float out[n], t[n];
+    float out[n], t[n], s[n];
     for (int i = 0; i < n; i++)
     {
         switch (_waveform[i])
@@ -47,19 +46,24 @@ float Ramo::Process()
             break;
         case WAVE_TRI:
             t[i] = abs(-1.0f + (2.0f * _phase[i]));
-            if (abs(_phase[i] - 0.5) > _mshape)
+            t[i] = 2 *  (t[i] - 0.5f); 
+            if (t[i] > _tresh)
             {
-                t[i] -= 4 * t[i]; // qui c'è il problema, non è 4t la funzione corretta da somamre/aggiungere
+                out[i] = (- t[i] + 2 * _tresh) * 1/_tresh;
             }
-            if (abs(_phase[i] - 0.5) < _shape)
+            else if (t[i] < -_tresh)
             {
-                t[i] += 4 * t[i];
+                out[i] = (- t[i] - 2 * _tresh) * 1/_tresh;
             }
-            out[i] = _correctorGain *  (t[i] - 0.5f); // moltiplico per il gain correttivo  
+            else
+            {
+                out[i] = t[i] *  1/_tresh;
+            }
 
             break;
         case WAVE_SAW:
             out[i] = -1.0f * (((_phase[i] * 2.0f)) - 1.0f);
+            out[i] = (-0.5+s[n])*2;
             break;
         case WAVE_SQUARE:
             out[i] = _phase[i] < _pw ? (1.0f) : -1.0f;
@@ -129,8 +133,7 @@ void Ramo::SetAmp(float g[])
 
 void Ramo::SetShape(float s)
 {
-    _shape = s * DC_MAX;
-    _mshape = 0.5 - _shape;
-    _correctorGain = 2 / (1 - 4 * _shape);
+    _tresh = Th_MAX + s *(1-Th_MAX); ;
     _pw =0.05 +  s*0.75;
+    _c = s;
 }
