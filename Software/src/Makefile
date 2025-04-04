@@ -2,7 +2,7 @@
 TARGET = Ramo
 
 # Sources (inserisci tutti i file .cpp da compilare)
-CPP_SOURCES = Classes/Ramo.cpp  Classes/main.cpp 
+CPP_SOURCES = ../Synth/Ramo/src/Ramo.cpp  main.cpp 
 
 
 
