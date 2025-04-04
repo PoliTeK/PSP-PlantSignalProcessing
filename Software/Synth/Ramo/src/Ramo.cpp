@@ -62,8 +62,13 @@ float Ramo::Process()
 
             break;
         case WAVE_SAW:
-            out[i] = -1.0f * (((_phase[i] * 2.0f)) - 1.0f);
-            out[i] = (-0.5+s[n])*2;
+        if (_phase[i] > _c-0.05 && _phase[i] < 0.95-_c || _c==0)
+        {
+            out[i] =- 1.0f+((_phase[i] * 2.0f));
+        }else{
+            out[i] = 1.0f-(_phase[i] * 2.0f);
+        }
+            
             break;
         case WAVE_SQUARE:
             out[i] = _phase[i] < _pw ? (1.0f) : -1.0f;
@@ -134,6 +139,6 @@ void Ramo::SetAmp(float g[])
 void Ramo::SetShape(float s)
 {
     _tresh = Th_MAX + s *(1-Th_MAX); ;
-    _pw =0.05 +  s*0.75;
-    _c = s;
+    _pw =  0.5f + s * 0.35f;
+    _c = s* 0.25;
 }

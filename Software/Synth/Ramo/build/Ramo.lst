@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
   49              		.fpu fpv5-d16
   51              	_ZN4RamoD2Ev:
   52              	.LVL1:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 2
 
 
   53              	.LFB4818:
@@ -110,7 +110,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
   22:src/Ramo.cpp  ****     _pw = 0.5f;
   88              		.loc 1 22 9 view .LVU8
   89 0008 4FF07C53 		mov	r3, #1056964608
-  90              	.LBB18:
+  90              	.LBB16:
   23:src/Ramo.cpp  ****     _tresh = 1.0f;
   24:src/Ramo.cpp  ****     
   25:src/Ramo.cpp  ****     
@@ -118,29 +118,29 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
   27:src/Ramo.cpp  ****     for (int i = 0; i < 2; i++) {
   28:src/Ramo.cpp  ****         _amp[i] = 0.5f;
   29:src/Ramo.cpp  ****         _phase[i] = 0.0f;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 3
 
 
   91              		.loc 1 29 19 view .LVU9
   92 000c 0022     		movs	r2, #0
-  93              	.LBE18:
+  93              	.LBE16:
   19:src/Ramo.cpp  ****     _phase_inc[0] = CalcPhaseInc(_freq);
   94              		.loc 1 19 11 view .LVU10
   95 000e C0ED037A 		vstr.32	s15, [r0, #12]
-  96              	.LBB19:
+  96              	.LBB17:
   30:src/Ramo.cpp  ****         _waveform[i] = WAVE_SIN;
   97              		.loc 1 30 22 view .LVU11
   98 0012 4FF0000C 		mov	ip, #0
-  99              	.LBE19:
+  99              	.LBE17:
   18:src/Ramo.cpp  ****     _freq = 100.0f;
  100              		.loc 1 18 22 view .LVU12
  101 0016 86EE807A 		vdiv.f32	s14, s13, s0
- 102              	.LBB20:
+ 102              	.LBB18:
   31:src/Ramo.cpp  ****         _eoc[i] = true;
   32:src/Ramo.cpp  ****         _eor[i] = true;
  103              		.loc 1 32 17 view .LVU13
  104 001a 4FF00131 		mov	r1, #16843009
- 105              	.LBE20:
+ 105              	.LBE18:
   17:src/Ramo.cpp  ****     _sr_recip = 1.0f / sample_rate;
  106              		.loc 1 17 9 view .LVU14
  107 001e 80ED070A 		vstr.32	s0, [r0, #28]
@@ -152,7 +152,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
   23:src/Ramo.cpp  ****     
  111              		.loc 1 23 12 view .LVU17
  112 0024 C0ED056A 		vstr.32	s13, [r0, #20]
- 113              	.LBB21:
+ 113              	.LBB19:
   28:src/Ramo.cpp  ****         _phase[i] = 0.0f;
  114              		.loc 1 28 17 view .LVU18
  115 0028 4360     		str	r3, [r0, #4]	@ float
@@ -170,15 +170,15 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
  123 0030 A0F800C0 		strh	ip, [r0]	@ movhi
  124              		.loc 1 32 17 view .LVU23
  125 0034 4163     		str	r1, [r0, #52]
- 126              	.LBE21:
- 127              	.LBB22:
- 128              	.LBB23:
+ 126              	.LBE19:
+ 127              	.LBB20:
+ 128              	.LBB21:
   33:src/Ramo.cpp  ****     }
   34:src/Ramo.cpp  **** 
   35:src/Ramo.cpp  **** }
   36:src/Ramo.cpp  **** 
   37:src/Ramo.cpp  **** float Ramo::Process()
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 4
 
 
   38:src/Ramo.cpp  **** {
@@ -208,44 +208,48 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
   62:src/Ramo.cpp  **** 
   63:src/Ramo.cpp  ****             break;
   64:src/Ramo.cpp  ****         case WAVE_SAW:
-  65:src/Ramo.cpp  ****             //out[i] = -1.0f * (((_phase[i] * 2.0f)) - 1.0f);
-  66:src/Ramo.cpp  ****             s[n] = (1-_c)*sqrt(1-(_phase[i]-1)*(_phase[i]-1));
-  67:src/Ramo.cpp  ****             out[i] = (-0.5+s[n])*2;
-  68:src/Ramo.cpp  ****             break;
-  69:src/Ramo.cpp  ****         case WAVE_SQUARE:
-  70:src/Ramo.cpp  ****             out[i] = _phase[i] < _pw ? (1.0f) : -1.0f;
-  71:src/Ramo.cpp  ****             break;
-  72:src/Ramo.cpp  ****         default:
-  73:src/Ramo.cpp  ****             out[i] = 0.0f;
-  74:src/Ramo.cpp  ****             break;
-  75:src/Ramo.cpp  ****         }
-  76:src/Ramo.cpp  ****         _phase[i] += _phase_inc[i];
-  77:src/Ramo.cpp  **** 
-  78:src/Ramo.cpp  ****         if (_phase[i] > 1.0f)
-  79:src/Ramo.cpp  ****         {
-  80:src/Ramo.cpp  ****             _phase[i] -= 1.0f;
-  81:src/Ramo.cpp  ****             _eoc[i] = true;
-  82:src/Ramo.cpp  ****         }
-  83:src/Ramo.cpp  ****         else
-  84:src/Ramo.cpp  ****         {
-  85:src/Ramo.cpp  ****             _eoc[i] = false;
+  65:src/Ramo.cpp  ****         if (_phase[i] > _c-0.05 && _phase[i] < 0.95-_c || _c==0)
+  66:src/Ramo.cpp  ****         {
+  67:src/Ramo.cpp  ****             out[i] =- 1.0f+((_phase[i] * 2.0f));
+  68:src/Ramo.cpp  ****         }else{
+  69:src/Ramo.cpp  ****             out[i] = 1.0f-(_phase[i] * 2.0f);
+  70:src/Ramo.cpp  ****         }
+  71:src/Ramo.cpp  ****             
+  72:src/Ramo.cpp  ****             break;
+  73:src/Ramo.cpp  ****         case WAVE_SQUARE:
+  74:src/Ramo.cpp  ****             out[i] = _phase[i] < _pw ? (1.0f) : -1.0f;
+  75:src/Ramo.cpp  ****             break;
+  76:src/Ramo.cpp  ****         default:
+  77:src/Ramo.cpp  ****             out[i] = 0.0f;
+  78:src/Ramo.cpp  ****             break;
+  79:src/Ramo.cpp  ****         }
+  80:src/Ramo.cpp  ****         _phase[i] += _phase_inc[i];
+  81:src/Ramo.cpp  **** 
+  82:src/Ramo.cpp  ****         if (_phase[i] > 1.0f)
+  83:src/Ramo.cpp  ****         {
+  84:src/Ramo.cpp  ****             _phase[i] -= 1.0f;
+  85:src/Ramo.cpp  ****             _eoc[i] = true;
   86:src/Ramo.cpp  ****         }
-  87:src/Ramo.cpp  ****         _eor[i] = (_phase[i] - _phase_inc[i] < 0.5f && _phase[i] >= 0.5f);
-  88:src/Ramo.cpp  ****     }
-  89:src/Ramo.cpp  **** 
-  90:src/Ramo.cpp  ****     return out[0] * _amp[0] + out[1] * _amp[1];
-  91:src/Ramo.cpp  **** }
-  92:src/Ramo.cpp  **** 
-  93:src/Ramo.cpp  **** float Ramo::CalcPhaseInc(float f)
-  94:src/Ramo.cpp  **** {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 5
+  87:src/Ramo.cpp  ****         else
+  88:src/Ramo.cpp  ****         {
+  89:src/Ramo.cpp  ****             _eoc[i] = false;
+  90:src/Ramo.cpp  ****         }
+  91:src/Ramo.cpp  ****         _eor[i] = (_phase[i] - _phase_inc[i] < 0.5f && _phase[i] >= 0.5f);
+  92:src/Ramo.cpp  ****     }
+  93:src/Ramo.cpp  **** 
+  94:src/Ramo.cpp  ****     return out[0] * _amp[0] + out[1] * _amp[1];
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 5
 
 
-  95:src/Ramo.cpp  ****     return f * _sr_recip;
- 129              		.loc 1 95 16 view .LVU24
+  95:src/Ramo.cpp  **** }
+  96:src/Ramo.cpp  **** 
+  97:src/Ramo.cpp  **** float Ramo::CalcPhaseInc(float f)
+  98:src/Ramo.cpp  **** {
+  99:src/Ramo.cpp  ****     return f * _sr_recip;
+ 129              		.loc 1 99 16 view .LVU24
  130 0036 67EE277A 		vmul.f32	s15, s14, s15
- 131              	.LBE23:
- 132              	.LBE22:
+ 131              	.LBE21:
+ 132              	.LBE20:
   18:src/Ramo.cpp  ****     _freq = 100.0f;
  133              		.loc 1 18 15 view .LVU25
  134 003a 80ED087A 		vstr.32	s14, [r0, #32]
@@ -254,22 +258,22 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
   20:src/Ramo.cpp  ****     _phase_inc[1] = CalcPhaseInc(_freq);
  136              		.loc 1 20 5 view .LVU27
  137              	.LVL3:
- 138              	.LBB25:
- 139              	.LBI22:
-  93:src/Ramo.cpp  **** {
- 140              		.loc 1 93 7 view .LVU28
- 141              	.LBB24:
- 142              		.loc 1 95 5 view .LVU29
- 143              		.loc 1 95 5 is_stmt 0 view .LVU30
- 144              	.LBE24:
- 145              	.LBE25:
+ 138              	.LBB23:
+ 139              	.LBI20:
+  97:src/Ramo.cpp  **** {
+ 140              		.loc 1 97 7 view .LVU28
+ 141              	.LBB22:
+ 142              		.loc 1 99 5 view .LVU29
+ 143              		.loc 1 99 5 is_stmt 0 view .LVU30
+ 144              	.LBE22:
+ 145              	.LBE23:
   20:src/Ramo.cpp  ****     _phase_inc[1] = CalcPhaseInc(_freq);
  146              		.loc 1 20 19 view .LVU31
  147 003e C0ED0B7A 		vstr.32	s15, [r0, #44]
   21:src/Ramo.cpp  ****     _pw = 0.5f;
  148              		.loc 1 21 5 is_stmt 1 view .LVU32
  149              	.LVL4:
- 150              		.loc 1 95 5 view .LVU33
+ 150              		.loc 1 99 5 view .LVU33
   21:src/Ramo.cpp  ****     _pw = 0.5f;
  151              		.loc 1 21 19 is_stmt 0 view .LVU34
  152 0042 C0ED0C7A 		vstr.32	s15, [r0, #48]
@@ -280,7 +284,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
   27:src/Ramo.cpp  ****         _amp[i] = 0.5f;
  155              		.loc 1 27 5 view .LVU37
  156              	.LVL5:
- 157              	.LBB26:
+ 157              	.LBB24:
   27:src/Ramo.cpp  ****         _amp[i] = 0.5f;
  158              		.loc 1 27 23 view .LVU38
   28:src/Ramo.cpp  ****         _phase[i] = 0.0f;
@@ -294,13 +298,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
   32:src/Ramo.cpp  ****     }
  163              		.loc 1 32 9 view .LVU43
   27:src/Ramo.cpp  ****         _amp[i] = 0.5f;
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 6
+
+
  164              		.loc 1 27 5 view .LVU44
   27:src/Ramo.cpp  ****         _amp[i] = 0.5f;
  165              		.loc 1 27 23 view .LVU45
   28:src/Ramo.cpp  ****         _phase[i] = 0.0f;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 6
-
-
  166              		.loc 1 28 9 view .LVU46
   29:src/Ramo.cpp  ****         _waveform[i] = WAVE_SIN;
  167              		.loc 1 29 9 view .LVU47
@@ -314,7 +318,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
  171              		.loc 1 27 5 view .LVU51
   27:src/Ramo.cpp  ****         _amp[i] = 0.5f;
  172              		.loc 1 27 23 view .LVU52
- 173              	.LBE26:
+ 173              	.LBE24:
   35:src/Ramo.cpp  **** 
  174              		.loc 1 35 1 is_stmt 0 view .LVU53
  175 0046 7047     		bx	lr
@@ -338,771 +342,268 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
   38:src/Ramo.cpp  ****     float out[n], t[n], s[n];
  195              		.loc 1 38 1 is_stmt 1 view -0
  196              		.cfi_startproc
- 197              		@ args = 0, pretend = 0, frame = 16
+ 197              		@ args = 0, pretend = 0, frame = 8
  198              		@ frame_needed = 0, uses_anonymous_args = 0
   39:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
  199              		.loc 1 39 5 view .LVU55
   40:src/Ramo.cpp  ****     {
  200              		.loc 1 40 5 view .LVU56
- 201              	.LBB27:
+ 201              	.LBB25:
   40:src/Ramo.cpp  ****     {
  202              		.loc 1 40 23 view .LVU57
- 203              	.LBE27:
+ 203              	.LBE25:
   38:src/Ramo.cpp  ****     float out[n], t[n], s[n];
  204              		.loc 1 38 1 is_stmt 0 view .LVU58
  205 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
  206              		.cfi_def_cfa_offset 24
  207              		.cfi_offset 4, -24
  208              		.cfi_offset 5, -20
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 7
+
+
  209              		.cfi_offset 6, -16
  210              		.cfi_offset 7, -12
  211              		.cfi_offset 8, -8
  212              		.cfi_offset 14, -4
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 7
-
-
  213 0004 2DED028B 		vpush.64	{d8}
  214              		.cfi_def_cfa_offset 32
  215              		.cfi_offset 80, -32
  216              		.cfi_offset 81, -28
- 217 0008 84B0     		sub	sp, sp, #16
- 218              		.cfi_def_cfa_offset 48
+ 217 0008 82B0     		sub	sp, sp, #8
+ 218              		.cfi_def_cfa_offset 40
   38:src/Ramo.cpp  ****     float out[n], t[n], s[n];
  219              		.loc 1 38 1 view .LVU59
  220 000a 0646     		mov	r6, r0
  221 000c 451E     		subs	r5, r0, #1
  222 000e 00F12404 		add	r4, r0, #36
- 223 0012 02AF     		add	r7, sp, #8
+ 223 0012 6F46     		mov	r7, sp
  224              	.LVL7:
- 225              	.L28:
- 226              	.LBB38:
+ 225              	.L29:
+ 226              	.LBB30:
   42:src/Ramo.cpp  ****         {
  227              		.loc 1 42 9 is_stmt 1 view .LVU60
  228 0014 A846     		mov	r8, r5
  229 0016 15F8013F 		ldrb	r3, [r5, #1]!	@ zero_extendqisi2
  230 001a 032B     		cmp	r3, #3
- 231 001c 00F2BD80 		bhi	.L8
+ 231 001c 00F2C280 		bhi	.L8
  232 0020 DFE803F0 		tbb	[pc, r3]
  233              	.L10:
- 234 0024 91       		.byte	(.L13-.L10)/2
- 235 0025 73       		.byte	(.L12-.L10)/2
- 236 0026 61       		.byte	(.L11-.L10)/2
+ 234 0024 92       		.byte	(.L13-.L10)/2
+ 235 0025 74       		.byte	(.L12-.L10)/2
+ 236 0026 26       		.byte	(.L11-.L10)/2
  237 0027 02       		.byte	(.L9-.L10)/2
  238              		.p2align 1
  239              	.L9:
-  64:src/Ramo.cpp  ****             //out[i] = -1.0f * (((_phase[i] * 2.0f)) - 1.0f);
+  64:src/Ramo.cpp  ****         if (_phase[i] > _c-0.05 && _phase[i] < 0.95-_c || _c==0)
  240              		.loc 1 64 9 view .LVU61
-  66:src/Ramo.cpp  ****             out[i] = (-0.5+s[n])*2;
- 241              		.loc 1 66 13 view .LVU62
-  66:src/Ramo.cpp  ****             out[i] = (-0.5+s[n])*2;
- 242              		.loc 1 66 22 is_stmt 0 view .LVU63
- 243 0028 B7EE000A 		vmov.f32	s0, #1.0e+0
-  66:src/Ramo.cpp  ****             out[i] = (-0.5+s[n])*2;
- 244              		.loc 1 66 43 view .LVU64
+  65:src/Ramo.cpp  ****         {
+ 241              		.loc 1 65 9 view .LVU62
+  65:src/Ramo.cpp  ****         {
+ 242              		.loc 1 65 25 is_stmt 0 view .LVU63
+ 243 0028 D6ED066A 		vldr.32	s13, [r6, #24]
+  65:src/Ramo.cpp  ****         {
+ 244              		.loc 1 65 21 view .LVU64
  245 002c 94ED008A 		vldr.32	s16, [r4]
-  66:src/Ramo.cpp  ****             out[i] = (-0.5+s[n])*2;
- 246              		.loc 1 66 22 view .LVU65
- 247 0030 96ED067A 		vldr.32	s14, [r6, #24]
-  66:src/Ramo.cpp  ****             out[i] = (-0.5+s[n])*2;
- 248              		.loc 1 66 44 view .LVU66
- 249 0034 78EE407A 		vsub.f32	s15, s16, s0
-  66:src/Ramo.cpp  ****             out[i] = (-0.5+s[n])*2;
- 250              		.loc 1 66 22 view .LVU67
- 251 0038 30EE477A 		vsub.f32	s14, s0, s14
-  66:src/Ramo.cpp  ****             out[i] = (-0.5+s[n])*2;
- 252              		.loc 1 66 31 view .LVU68
- 253 003c A7EEE70A 		vfms.f32	s0, s15, s15
- 254              	.LVL8:
- 255              	.LBB28:
- 256              	.LBI28:
- 257              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
-   1:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // -*- C++ -*- C forwarding header.
-   2:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 8
+  65:src/Ramo.cpp  ****         {
+ 246              		.loc 1 65 25 view .LVU65
+ 247 0030 B7EEE64A 		vcvt.f64.f32	d4, s13
+  65:src/Ramo.cpp  ****         {
+ 248              		.loc 1 65 21 view .LVU66
+ 249 0034 B7EEC85A 		vcvt.f64.f32	d5, s16
+  65:src/Ramo.cpp  ****         {
+ 250              		.loc 1 65 27 view .LVU67
+ 251 0038 9FED5D7B 		vldr.64	d7, .L43
+ 252 003c 34EE477B 		vsub.f64	d7, d4, d7
+  65:src/Ramo.cpp  ****         {
+ 253              		.loc 1 65 9 view .LVU68
+ 254 0040 B4EEC75B 		vcmpe.f64	d5, d7
+ 255 0044 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 8
 
 
-   3:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // Copyright (C) 1997-2020 Free Software Foundation, Inc.
-   4:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** //
-   5:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // This file is part of the GNU ISO C++ Library.  This library is free
-   6:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // software; you can redistribute it and/or modify it under the
-   7:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // terms of the GNU General Public License as published by the
-   8:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // Free Software Foundation; either version 3, or (at your option)
-   9:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // any later version.
-  10:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-  11:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // This library is distributed in the hope that it will be useful,
-  12:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
-  13:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  14:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // GNU General Public License for more details.
-  15:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-  16:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // Under Section 7 of GPL version 3, you are granted additional
-  17:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // permissions described in the GCC Runtime Library Exception, version
-  18:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // 3.1, as published by the Free Software Foundation.
-  19:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-  20:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // You should have received a copy of the GNU General Public License and
-  21:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // a copy of the GCC Runtime Library Exception along with this program;
-  22:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-  23:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // <http://www.gnu.org/licenses/>.
-  24:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-  25:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** /** @file include/cmath
-  26:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****  *  This is a Standard C++ Library file.  You should @c \#include this file
-  27:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****  *  in your programs, rather than any of the @a *.h implementation files.
-  28:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****  *
-  29:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****  *  This is the C++ version of the Standard C Library header @c math.h,
-  30:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****  *  and its contents are (mostly) the same as that header, but are all
-  31:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****  *  contained in the namespace @c std (except for names which are defined
-  32:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****  *  as macros in C).
-  33:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****  */
-  34:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-  35:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** //
-  36:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // ISO C++ 14882: 26.5  C library
-  37:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** //
-  38:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-  39:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #pragma GCC system_header
-  40:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-  41:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #include <bits/c++config.h>
-  42:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #include <bits/cpp_type_traits.h>
-  43:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #include <ext/type_traits.h>
-  44:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #define _GLIBCXX_INCLUDE_NEXT_C_HEADERS
-  45:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #include_next <math.h>
-  46:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef _GLIBCXX_INCLUDE_NEXT_C_HEADERS
-  47:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #include <bits/std_abs.h>
-  48:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-  49:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef _GLIBCXX_CMATH
-  50:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #define _GLIBCXX_CMATH 1
-  51:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-  52:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // Get rid of those macros defined in <math.h> in lieu of real functions.
-  53:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef div
-  54:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef acos
-  55:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef asin
-  56:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef atan
-  57:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef atan2
-  58:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef ceil
-  59:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef cos
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 9
+ 256 0048 40F38980 		ble	.L19
+  65:src/Ramo.cpp  ****         {
+ 257              		.loc 1 65 52 discriminator 1 view .LVU69
+ 258 004c 9FED5A7B 		vldr.64	d7, .L43+8
+ 259 0050 37EE444B 		vsub.f64	d4, d7, d4
+  65:src/Ramo.cpp  ****         {
+ 260              		.loc 1 65 33 discriminator 1 view .LVU70
+ 261 0054 B4EEC45B 		vcmpe.f64	d5, d4
+ 262 0058 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 263 005c 7FD5     		bpl	.L19
+ 264              	.L21:
+  67:src/Ramo.cpp  ****         }else{
+ 265              		.loc 1 67 13 is_stmt 1 view .LVU71
+  67:src/Ramo.cpp  ****         }else{
+ 266              		.loc 1 67 27 is_stmt 0 view .LVU72
+ 267 005e B0EE007A 		vmov.f32	s14, #2.0e+0
+ 268 0062 FFEE007A 		vmov.f32	s15, #-1.0e+0
+ 269 0066 E8EE077A 		vfma.f32	s15, s16, s14
+  67:src/Ramo.cpp  ****         }else{
+ 270              		.loc 1 67 20 view .LVU73
+ 271 006a C7ED007A 		vstr.32	s15, [r7]
+ 272 006e 10E0     		b	.L14
+ 273              	.L11:
+  73:src/Ramo.cpp  ****             out[i] = _phase[i] < _pw ? (1.0f) : -1.0f;
+ 274              		.loc 1 73 9 is_stmt 1 view .LVU74
+  74:src/Ramo.cpp  ****             break;
+ 275              		.loc 1 74 13 view .LVU75
+  74:src/Ramo.cpp  ****             break;
+ 276              		.loc 1 74 30 is_stmt 0 view .LVU76
+ 277 0070 94ED008A 		vldr.32	s16, [r4]
+  74:src/Ramo.cpp  ****             break;
+ 278              		.loc 1 74 38 view .LVU77
+ 279 0074 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 280 0078 D6ED046A 		vldr.32	s13, [r6, #16]
+ 281 007c BFEE007A 		vmov.f32	s14, #-1.0e+0
+ 282 0080 B4EEE68A 		vcmpe.f32	s16, s13
+ 283 0084 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 284 0088 58BF     		it	pl
+ 285 008a F0EE477A 		vmovpl.f32	s15, s14
+  74:src/Ramo.cpp  ****             break;
+ 286              		.loc 1 74 20 view .LVU78
+ 287 008e C7ED007A 		vstr.32	s15, [r7]
+  75:src/Ramo.cpp  ****         default:
+ 288              		.loc 1 75 13 is_stmt 1 view .LVU79
+ 289              	.L14:
+  80:src/Ramo.cpp  **** 
+ 290              		.loc 1 80 9 view .LVU80
+  80:src/Ramo.cpp  **** 
+ 291              		.loc 1 80 34 is_stmt 0 view .LVU81
+ 292 0092 94ED027A 		vldr.32	s14, [r4, #8]
+  82:src/Ramo.cpp  ****         {
+ 293              		.loc 1 82 9 view .LVU82
+ 294 0096 F7EE006A 		vmov.f32	s13, #1.0e+0
+  80:src/Ramo.cpp  **** 
+ 295              		.loc 1 80 19 view .LVU83
+ 296 009a 77EE087A 		vadd.f32	s15, s14, s16
+  82:src/Ramo.cpp  ****         {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 9
 
 
-  60:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef cosh
-  61:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef exp
-  62:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef fabs
-  63:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef floor
-  64:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef fmod
-  65:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef frexp
-  66:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef ldexp
-  67:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef log
-  68:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef log10
-  69:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef modf
-  70:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef pow
-  71:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef sin
-  72:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef sinh
-  73:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef sqrt
-  74:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef tan
-  75:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #undef tanh
-  76:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-  77:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** extern "C++"
-  78:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** {
-  79:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** namespace std _GLIBCXX_VISIBILITY(default)
-  80:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** {
-  81:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
-  82:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-  83:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::acos;
-  84:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-  85:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
-  86:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
-  87:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   acos(float __x)
-  88:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_acosf(__x); }
-  89:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-  90:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
-  91:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   acos(long double __x)
-  92:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_acosl(__x); }
-  93:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
-  94:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-  95:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
-  96:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
-  97:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value, 
-  98:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
-  99:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     acos(_Tp __x)
- 100:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_acos(__x); }
- 101:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 102:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::asin;
- 103:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 104:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 105:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 106:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   asin(float __x)
- 107:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_asinf(__x); }
- 108:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 109:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 110:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   asin(long double __x)
- 111:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_asinl(__x); }
- 112:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 113:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 114:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
- 115:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 116:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 10
-
-
- 117:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
- 118:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     asin(_Tp __x)
- 119:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_asin(__x); }
- 120:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 121:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::atan;
- 122:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 123:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 124:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 125:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   atan(float __x)
- 126:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_atanf(__x); }
- 127:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 128:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 129:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   atan(long double __x)
- 130:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_atanl(__x); }
- 131:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 132:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 133:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
- 134:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 135:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
- 136:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
- 137:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     atan(_Tp __x)
- 138:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_atan(__x); }
- 139:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 140:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::atan2;
- 141:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 142:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 143:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 144:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   atan2(float __y, float __x)
- 145:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_atan2f(__y, __x); }
- 146:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 147:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 148:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   atan2(long double __y, long double __x)
- 149:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_atan2l(__y, __x); }
- 150:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 151:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 152:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp, typename _Up>
- 153:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 154:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
- 155:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     atan2(_Tp __y, _Up __x)
- 156:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     {
- 157:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****       typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
- 158:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****       return atan2(__type(__y), __type(__x));
- 159:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     }
- 160:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 161:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::ceil;
- 162:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 163:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 164:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 165:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   ceil(float __x)
- 166:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_ceilf(__x); }
- 167:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 168:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 169:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   ceil(long double __x)
- 170:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_ceill(__x); }
- 171:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 172:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 173:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 11
-
-
- 174:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 175:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value, 
- 176:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
- 177:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     ceil(_Tp __x)
- 178:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_ceil(__x); }
- 179:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 180:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::cos;
- 181:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 182:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 183:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 184:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   cos(float __x)
- 185:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_cosf(__x); }
- 186:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 187:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 188:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   cos(long double __x)
- 189:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_cosl(__x); }
- 190:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 191:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 192:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
- 193:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 194:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
- 195:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
- 196:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     cos(_Tp __x)
- 197:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_cos(__x); }
- 198:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 199:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::cosh;
- 200:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 201:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 202:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 203:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   cosh(float __x)
- 204:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_coshf(__x); }
- 205:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 206:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 207:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   cosh(long double __x)
- 208:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_coshl(__x); }
- 209:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 210:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 211:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
- 212:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 213:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
- 214:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
- 215:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     cosh(_Tp __x)
- 216:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_cosh(__x); }
- 217:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 218:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::exp;
- 219:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 220:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 221:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 222:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   exp(float __x)
- 223:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_expf(__x); }
- 224:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 225:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 226:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   exp(long double __x)
- 227:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_expl(__x); }
- 228:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 229:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 230:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 12
-
-
- 231:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 232:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
- 233:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
- 234:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     exp(_Tp __x)
- 235:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_exp(__x); }
- 236:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 237:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::fabs;
- 238:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 239:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 240:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 241:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   fabs(float __x)
- 242:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_fabsf(__x); }
- 243:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 244:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 245:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   fabs(long double __x)
- 246:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_fabsl(__x); }
- 247:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 248:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 249:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
- 250:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 251:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
- 252:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
- 253:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     fabs(_Tp __x)
- 254:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_fabs(__x); }
- 255:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 256:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::floor;
- 257:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 258:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 259:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 260:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   floor(float __x)
- 261:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_floorf(__x); }
- 262:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 263:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 264:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   floor(long double __x)
- 265:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_floorl(__x); }
- 266:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 267:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 268:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
- 269:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 270:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
- 271:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
- 272:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     floor(_Tp __x)
- 273:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_floor(__x); }
- 274:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 275:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::fmod;
- 276:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 277:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 278:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 279:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   fmod(float __x, float __y)
- 280:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_fmodf(__x, __y); }
- 281:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 282:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 283:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   fmod(long double __x, long double __y)
- 284:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_fmodl(__x, __y); }
- 285:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 286:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 287:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp, typename _Up>
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 13
-
-
- 288:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 289:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
- 290:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     fmod(_Tp __x, _Up __y)
- 291:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     {
- 292:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****       typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
- 293:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****       return fmod(__type(__x), __type(__y));
- 294:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     }
- 295:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 296:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::frexp;
- 297:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 298:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 299:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline float
- 300:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   frexp(float __x, int* __exp)
- 301:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_frexpf(__x, __exp); }
- 302:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 303:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline long double
- 304:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   frexp(long double __x, int* __exp)
- 305:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_frexpl(__x, __exp); }
- 306:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 307:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 308:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
- 309:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 310:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value, 
- 311:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
- 312:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     frexp(_Tp __x, int* __exp)
- 313:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_frexp(__x, __exp); }
- 314:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 315:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::ldexp;
- 316:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 317:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 318:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 319:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   ldexp(float __x, int __exp)
- 320:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_ldexpf(__x, __exp); }
- 321:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 322:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 323:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   ldexp(long double __x, int __exp)
- 324:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_ldexpl(__x, __exp); }
- 325:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 326:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 327:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
- 328:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 329:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value, 
- 330:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
- 331:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     ldexp(_Tp __x, int __exp)
- 332:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_ldexp(__x, __exp); }
- 333:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 334:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::log;
- 335:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 336:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 337:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 338:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   log(float __x)
- 339:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_logf(__x); }
- 340:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 341:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 342:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   log(long double __x)
- 343:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_logl(__x); }
- 344:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 14
-
-
- 345:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 346:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
- 347:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 348:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value, 
- 349:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
- 350:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     log(_Tp __x)
- 351:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_log(__x); }
- 352:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 353:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::log10;
- 354:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 355:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 356:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 357:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   log10(float __x)
- 358:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_log10f(__x); }
- 359:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 360:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 361:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   log10(long double __x)
- 362:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_log10l(__x); }
- 363:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 364:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 365:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
- 366:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 367:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
- 368:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
- 369:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     log10(_Tp __x)
- 370:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_log10(__x); }
- 371:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 372:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::modf;
- 373:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 374:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 375:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline float
- 376:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   modf(float __x, float* __iptr)
- 377:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_modff(__x, __iptr); }
- 378:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 379:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline long double
- 380:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   modf(long double __x, long double* __iptr)
- 381:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_modfl(__x, __iptr); }
- 382:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 383:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 384:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::pow;
- 385:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 386:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 387:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 388:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   pow(float __x, float __y)
- 389:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_powf(__x, __y); }
- 390:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 391:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 392:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   pow(long double __x, long double __y)
- 393:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_powl(__x, __y); }
- 394:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 395:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #if __cplusplus < 201103L
- 396:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   // _GLIBCXX_RESOLVE_LIB_DEFECTS
- 397:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   // DR 550. What should the return type of pow(float,int) be?
- 398:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline double
- 399:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   pow(double __x, int __i)
- 400:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_powi(__x, __i); }
- 401:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 15
-
-
- 402:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline float
- 403:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   pow(float __x, int __n)
- 404:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_powif(__x, __n); }
- 405:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 406:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline long double
- 407:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   pow(long double __x, int __n)
- 408:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_powil(__x, __n); }
- 409:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 410:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 411:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 412:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp, typename _Up>
- 413:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 414:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
- 415:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     pow(_Tp __x, _Up __y)
- 416:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     {
- 417:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****       typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
- 418:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****       return pow(__type(__x), __type(__y));
- 419:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     }
- 420:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 421:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::sin;
- 422:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 423:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 424:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 425:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   sin(float __x)
- 426:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_sinf(__x); }
- 427:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 428:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 429:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   sin(long double __x)
- 430:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_sinl(__x); }
- 431:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 432:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 433:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
- 434:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 435:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value, 
- 436:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
- 437:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     sin(_Tp __x)
- 438:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_sin(__x); }
- 439:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 440:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::sinh;
- 441:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 442:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 443:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 444:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   sinh(float __x)
- 445:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_sinhf(__x); }
- 446:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 447:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
- 448:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   sinh(long double __x)
- 449:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_sinhl(__x); }
- 450:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #endif
- 451:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 452:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   template<typename _Tp>
- 453:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     inline _GLIBCXX_CONSTEXPR
- 454:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value, 
- 455:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****                                     double>::__type
- 456:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     sinh(_Tp __x)
- 457:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_sinh(__x); }
- 458:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 16
-
-
- 459:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::sqrt;
- 460:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
- 461:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
- 462:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
- 463:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   sqrt(float __x)
- 258              		.loc 2 463 3 is_stmt 1 view .LVU69
- 259              	.LBB29:
- 464:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_sqrtf(__x); }
- 260              		.loc 2 464 5 view .LVU70
- 261 0040 B5EE400A 		vcmp.f32	s0, #0
- 262 0044 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 263 0048 00F19C80 		bmi	.L39
- 264              		.loc 2 464 27 is_stmt 0 view .LVU71
- 265 004c F1EEC07A 		vsqrt.f32	s15, s0
- 266              	.LVL9:
- 267              	.L21:
- 268              		.loc 2 464 27 view .LVU72
- 269              	.LBE29:
- 270              	.LBE28:
-  67:src/Ramo.cpp  ****             break;
- 271              		.loc 1 67 13 is_stmt 1 view .LVU73
-  66:src/Ramo.cpp  ****             out[i] = (-0.5+s[n])*2;
- 272              		.loc 1 66 26 is_stmt 0 view .LVU74
- 273 0050 27EE277A 		vmul.f32	s14, s14, s15
-  67:src/Ramo.cpp  ****             break;
- 274              		.loc 1 67 27 view .LVU75
- 275 0054 B6EE006B 		vmov.f64	d6, #5.0e-1
-  67:src/Ramo.cpp  ****             break;
- 276              		.loc 1 67 31 view .LVU76
- 277 0058 B7EEC77A 		vcvt.f64.f32	d7, s14
-  67:src/Ramo.cpp  ****             break;
- 278              		.loc 1 67 27 view .LVU77
- 279 005c 37EE467B 		vsub.f64	d7, d7, d6
-  67:src/Ramo.cpp  ****             break;
- 280              		.loc 1 67 33 view .LVU78
- 281 0060 37EE077B 		vadd.f64	d7, d7, d7
- 282 0064 B7EEC77B 		vcvt.f32.f64	s14, d7
- 283 0068 87ED007A 		vstr.32	s14, [r7]
-  68:src/Ramo.cpp  ****         case WAVE_SQUARE:
- 284              		.loc 1 68 13 is_stmt 1 view .LVU79
- 285              	.L14:
-  76:src/Ramo.cpp  **** 
- 286              		.loc 1 76 9 view .LVU80
-  76:src/Ramo.cpp  **** 
- 287              		.loc 1 76 34 is_stmt 0 view .LVU81
- 288 006c 94ED027A 		vldr.32	s14, [r4, #8]
-  78:src/Ramo.cpp  ****         {
- 289              		.loc 1 78 9 view .LVU82
- 290 0070 F7EE006A 		vmov.f32	s13, #1.0e+0
-  76:src/Ramo.cpp  **** 
- 291              		.loc 1 76 19 view .LVU83
- 292 0074 77EE087A 		vadd.f32	s15, s14, s16
-  78:src/Ramo.cpp  ****         {
- 293              		.loc 1 78 9 view .LVU84
- 294 0078 F4EEE67A 		vcmpe.f32	s15, s13
-  76:src/Ramo.cpp  **** 
- 295              		.loc 1 76 19 view .LVU85
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 17
-
-
- 296 007c C4ED007A 		vstr.32	s15, [r4]
-  78:src/Ramo.cpp  ****         {
- 297              		.loc 1 78 9 is_stmt 1 view .LVU86
- 298 0080 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 299 0084 6CDD     		ble	.L40
-  80:src/Ramo.cpp  ****             _eoc[i] = true;
- 300              		.loc 1 80 13 view .LVU87
-  80:src/Ramo.cpp  ****             _eoc[i] = true;
- 301              		.loc 1 80 23 is_stmt 0 view .LVU88
- 302 0086 77EEE67A 		vsub.f32	s15, s15, s13
-  81:src/Ramo.cpp  ****         }
- 303              		.loc 1 81 21 view .LVU89
- 304 008a 0123     		movs	r3, #1
-  80:src/Ramo.cpp  ****             _eoc[i] = true;
- 305              		.loc 1 80 23 view .LVU90
- 306 008c C4ED007A 		vstr.32	s15, [r4]
-  81:src/Ramo.cpp  ****         }
- 307              		.loc 1 81 13 is_stmt 1 view .LVU91
-  81:src/Ramo.cpp  ****         }
- 308              		.loc 1 81 21 is_stmt 0 view .LVU92
- 309 0090 85F83630 		strb	r3, [r5, #54]
- 310              	.L25:
-  87:src/Ramo.cpp  ****     }
- 311              		.loc 1 87 9 is_stmt 1 view .LVU93
-  87:src/Ramo.cpp  ****     }
- 312              		.loc 1 87 30 is_stmt 0 view .LVU94
- 313 0094 37EEC77A 		vsub.f32	s14, s15, s14
-  87:src/Ramo.cpp  ****     }
- 314              		.loc 1 87 53 view .LVU95
- 315 0098 F6EE006A 		vmov.f32	s13, #5.0e-1
- 316 009c B4EEE67A 		vcmpe.f32	s14, s13
- 317 00a0 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 318 00a4 5AD5     		bpl	.L41
-  87:src/Ramo.cpp  ****     }
- 319              		.loc 1 87 53 discriminator 1 view .LVU96
- 320 00a6 F4EEE67A 		vcmpe.f32	s15, s13
- 321 00aa F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 322 00ae ACBF     		ite	ge
- 323 00b0 0123     		movge	r3, #1
- 324 00b2 0023     		movlt	r3, #0
- 325              	.L26:
+ 297              		.loc 1 82 9 view .LVU84
+ 298 009e F4EEE67A 		vcmpe.f32	s15, s13
+  80:src/Ramo.cpp  **** 
+ 299              		.loc 1 80 19 view .LVU85
+ 300 00a2 C4ED007A 		vstr.32	s15, [r4]
+  82:src/Ramo.cpp  ****         {
+ 301              		.loc 1 82 9 is_stmt 1 view .LVU86
+ 302 00a6 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 303 00aa 69DD     		ble	.L40
+  84:src/Ramo.cpp  ****             _eoc[i] = true;
+ 304              		.loc 1 84 13 view .LVU87
+  84:src/Ramo.cpp  ****             _eoc[i] = true;
+ 305              		.loc 1 84 23 is_stmt 0 view .LVU88
+ 306 00ac 77EEE67A 		vsub.f32	s15, s15, s13
+  85:src/Ramo.cpp  ****         }
+ 307              		.loc 1 85 21 view .LVU89
+ 308 00b0 0123     		movs	r3, #1
+  84:src/Ramo.cpp  ****             _eoc[i] = true;
+ 309              		.loc 1 84 23 view .LVU90
+ 310 00b2 C4ED007A 		vstr.32	s15, [r4]
+  85:src/Ramo.cpp  ****         }
+ 311              		.loc 1 85 13 is_stmt 1 view .LVU91
+  85:src/Ramo.cpp  ****         }
+ 312              		.loc 1 85 21 is_stmt 0 view .LVU92
+ 313 00b6 85F83630 		strb	r3, [r5, #54]
+ 314              	.L26:
+  91:src/Ramo.cpp  ****     }
+ 315              		.loc 1 91 9 is_stmt 1 view .LVU93
+  91:src/Ramo.cpp  ****     }
+ 316              		.loc 1 91 30 is_stmt 0 view .LVU94
+ 317 00ba 37EEC77A 		vsub.f32	s14, s15, s14
+  91:src/Ramo.cpp  ****     }
+ 318              		.loc 1 91 53 view .LVU95
+ 319 00be F6EE006A 		vmov.f32	s13, #5.0e-1
+ 320 00c2 B4EEE67A 		vcmpe.f32	s14, s13
+ 321 00c6 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 322 00ca 57D5     		bpl	.L41
+  91:src/Ramo.cpp  ****     }
+ 323              		.loc 1 91 53 discriminator 1 view .LVU96
+ 324 00cc F4EEE67A 		vcmpe.f32	s15, s13
+ 325 00d0 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 326 00d4 ACBF     		ite	ge
+ 327 00d6 0123     		movge	r3, #1
+ 328 00d8 0023     		movlt	r3, #0
+ 329              	.L27:
   40:src/Ramo.cpp  ****     {
- 326              		.loc 1 40 23 discriminator 6 view .LVU97
- 327 00b4 4645     		cmp	r6, r8
- 328 00b6 04F10404 		add	r4, r4, #4
- 329 00ba 07F10407 		add	r7, r7, #4
-  87:src/Ramo.cpp  ****     }
- 330              		.loc 1 87 17 discriminator 6 view .LVU98
- 331 00be 85F83430 		strb	r3, [r5, #52]
+ 330              		.loc 1 40 23 discriminator 6 view .LVU97
+ 331 00da 4645     		cmp	r6, r8
+ 332 00dc 04F10404 		add	r4, r4, #4
+ 333 00e0 07F10407 		add	r7, r7, #4
+  91:src/Ramo.cpp  ****     }
+ 334              		.loc 1 91 17 discriminator 6 view .LVU98
+ 335 00e4 85F83430 		strb	r3, [r5, #52]
   40:src/Ramo.cpp  ****     {
- 332              		.loc 1 40 5 is_stmt 1 discriminator 6 view .LVU99
- 333              	.LVL10:
+ 336              		.loc 1 40 5 is_stmt 1 discriminator 6 view .LVU99
+ 337              	.LVL8:
   40:src/Ramo.cpp  ****     {
- 334              		.loc 1 40 23 discriminator 6 view .LVU100
- 335 00c2 A7D1     		bne	.L28
- 336              	.LBE38:
-  90:src/Ramo.cpp  **** }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 18
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 10
 
 
- 337              		.loc 1 90 5 view .LVU101
-  90:src/Ramo.cpp  **** }
- 338              		.loc 1 90 38 is_stmt 0 view .LVU102
- 339 00c4 9DED030A 		vldr.32	s0, [sp, #12]
- 340 00c8 D6ED026A 		vldr.32	s13, [r6, #8]
-  90:src/Ramo.cpp  **** }
- 341              		.loc 1 90 46 view .LVU103
- 342 00cc 9DED027A 		vldr.32	s14, [sp, #8]
-  90:src/Ramo.cpp  **** }
- 343              		.loc 1 90 38 view .LVU104
- 344 00d0 20EE260A 		vmul.f32	s0, s0, s13
-  90:src/Ramo.cpp  **** }
- 345              		.loc 1 90 46 view .LVU105
- 346 00d4 D6ED017A 		vldr.32	s15, [r6, #4]
-  91:src/Ramo.cpp  **** 
- 347              		.loc 1 91 1 view .LVU106
- 348 00d8 A7EE270A 		vfma.f32	s0, s14, s15
- 349 00dc 04B0     		add	sp, sp, #16
- 350              		.cfi_remember_state
- 351              		.cfi_def_cfa_offset 32
- 352              		@ sp needed
- 353 00de BDEC028B 		vldm	sp!, {d8}
- 354              		.cfi_restore 80
- 355              		.cfi_restore 81
- 356              		.cfi_def_cfa_offset 24
- 357 00e2 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
- 358              	.LVL11:
- 359              	.L11:
- 360              		.cfi_restore_state
- 361              	.LBB39:
-  69:src/Ramo.cpp  ****             out[i] = _phase[i] < _pw ? (1.0f) : -1.0f;
- 362              		.loc 1 69 9 is_stmt 1 view .LVU107
-  70:src/Ramo.cpp  ****             break;
- 363              		.loc 1 70 13 view .LVU108
-  70:src/Ramo.cpp  ****             break;
- 364              		.loc 1 70 30 is_stmt 0 view .LVU109
- 365 00e6 94ED008A 		vldr.32	s16, [r4]
-  70:src/Ramo.cpp  ****             break;
- 366              		.loc 1 70 38 view .LVU110
- 367 00ea F7EE007A 		vmov.f32	s15, #1.0e+0
- 368 00ee D6ED046A 		vldr.32	s13, [r6, #16]
- 369 00f2 BFEE007A 		vmov.f32	s14, #-1.0e+0
- 370 00f6 B4EEE68A 		vcmpe.f32	s16, s13
- 371 00fa F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 372 00fe 58BF     		it	pl
- 373 0100 F0EE477A 		vmovpl.f32	s15, s14
-  70:src/Ramo.cpp  ****             break;
- 374              		.loc 1 70 20 view .LVU111
- 375 0104 C7ED007A 		vstr.32	s15, [r7]
-  71:src/Ramo.cpp  ****         default:
- 376              		.loc 1 71 13 is_stmt 1 view .LVU112
- 377 0108 B0E7     		b	.L14
- 378              	.L12:
+ 338              		.loc 1 40 23 discriminator 6 view .LVU100
+ 339 00e8 94D1     		bne	.L29
+ 340              	.LBE30:
+  94:src/Ramo.cpp  **** }
+ 341              		.loc 1 94 5 view .LVU101
+  94:src/Ramo.cpp  **** }
+ 342              		.loc 1 94 38 is_stmt 0 view .LVU102
+ 343 00ea 9DED010A 		vldr.32	s0, [sp, #4]
+ 344 00ee D6ED026A 		vldr.32	s13, [r6, #8]
+  94:src/Ramo.cpp  **** }
+ 345              		.loc 1 94 46 view .LVU103
+ 346 00f2 9DED007A 		vldr.32	s14, [sp]
+  94:src/Ramo.cpp  **** }
+ 347              		.loc 1 94 38 view .LVU104
+ 348 00f6 20EE260A 		vmul.f32	s0, s0, s13
+  94:src/Ramo.cpp  **** }
+ 349              		.loc 1 94 46 view .LVU105
+ 350 00fa D6ED017A 		vldr.32	s15, [r6, #4]
+  95:src/Ramo.cpp  **** 
+ 351              		.loc 1 95 1 view .LVU106
+ 352 00fe A7EE270A 		vfma.f32	s0, s14, s15
+ 353 0102 02B0     		add	sp, sp, #8
+ 354              		.cfi_remember_state
+ 355              		.cfi_def_cfa_offset 32
+ 356              		@ sp needed
+ 357 0104 BDEC028B 		vldm	sp!, {d8}
+ 358              		.cfi_restore 80
+ 359              		.cfi_restore 81
+ 360              		.cfi_def_cfa_offset 24
+ 361 0108 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 362              	.LVL9:
+ 363              	.L12:
+ 364              		.cfi_restore_state
+ 365              	.LBB31:
   47:src/Ramo.cpp  ****             t[i] = abs(-1.0f + (2.0f * _phase[i]));
- 379              		.loc 1 47 9 view .LVU113
+ 366              		.loc 1 47 9 is_stmt 1 view .LVU107
   48:src/Ramo.cpp  ****             t[i] = 2 *  (t[i] - 0.5f); 
- 380              		.loc 1 48 13 view .LVU114
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 19
-
-
+ 367              		.loc 1 48 13 view .LVU108
   48:src/Ramo.cpp  ****             t[i] = 2 *  (t[i] - 0.5f); 
- 381              		.loc 1 48 23 is_stmt 0 view .LVU115
- 382 010a F0EE006A 		vmov.f32	s13, #2.0e+0
+ 368              		.loc 1 48 23 is_stmt 0 view .LVU109
+ 369 010c F0EE006A 		vmov.f32	s13, #2.0e+0
   48:src/Ramo.cpp  ****             t[i] = 2 *  (t[i] - 0.5f); 
- 383              		.loc 1 48 48 view .LVU116
- 384 010e 94ED008A 		vldr.32	s16, [r4]
+ 370              		.loc 1 48 48 view .LVU110
+ 371 0110 94ED008A 		vldr.32	s16, [r4]
   48:src/Ramo.cpp  ****             t[i] = 2 *  (t[i] - 0.5f); 
- 385              		.loc 1 48 23 view .LVU117
- 386 0112 FFEE007A 		vmov.f32	s15, #-1.0e+0
+ 372              		.loc 1 48 23 view .LVU111
+ 373 0114 FFEE007A 		vmov.f32	s15, #-1.0e+0
   50:src/Ramo.cpp  ****             {
- 387              		.loc 1 50 24 view .LVU118
- 388 0116 96ED057A 		vldr.32	s14, [r6, #20]
+ 374              		.loc 1 50 24 view .LVU112
+ 375 0118 96ED057A 		vldr.32	s14, [r6, #20]
   49:src/Ramo.cpp  ****             if (t[i] > _tresh)
- 389              		.loc 1 49 31 view .LVU119
- 390 011a B6EE006A 		vmov.f32	s12, #5.0e-1
+ 376              		.loc 1 49 31 view .LVU113
+ 377 011c B6EE006A 		vmov.f32	s12, #5.0e-1
   48:src/Ramo.cpp  ****             t[i] = 2 *  (t[i] - 0.5f); 
- 391              		.loc 1 48 23 view .LVU120
- 392 011e E8EE267A 		vfma.f32	s15, s16, s13
- 393              	.LVL12:
- 394              	.LBB32:
- 395              	.LBI32:
- 396              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 378              		.loc 1 48 23 view .LVU114
+ 379 0120 E8EE267A 		vfma.f32	s15, s16, s13
+ 380              	.LVL10:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 11
+
+
+ 381              	.LBB26:
+ 382              	.LBI26:
+ 383              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
    1:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // -*- C++ -*- C library enhancements header.
    2:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
    3:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // Copyright (C) 2016-2020 Free Software Foundation, Inc.
@@ -1138,9 +639,6 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
   33:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #pragma GCC system_header
   34:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
   35:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #include <bits/c++config.h>
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 20
-
-
   36:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
   37:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #define _GLIBCXX_INCLUDE_NEXT_C_HEADERS
   38:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #include_next <stdlib.h>
@@ -1160,6 +658,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
   52:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   using ::abs;
   53:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
   54:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #ifndef __CORRECT_ISO_CPP_STDLIB_H_PROTO
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 12
+
+
   55:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   inline long
   56:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   abs(long __i) { return __builtin_labs(__i); }
   57:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #endif
@@ -1181,647 +682,640 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 1
   73:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
   74:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   inline _GLIBCXX_CONSTEXPR float
   75:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   abs(float __x)
- 397              		.loc 3 75 3 is_stmt 1 view .LVU121
- 398              	.LBB33:
+ 384              		.loc 2 75 3 is_stmt 1 view .LVU115
+ 385              	.LBB27:
   76:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   { return __builtin_fabsf(__x); }
- 399              		.loc 3 76 5 view .LVU122
- 400              		.loc 3 76 5 is_stmt 0 view .LVU123
- 401              	.LBE33:
- 402              	.LBE32:
+ 386              		.loc 2 76 5 view .LVU116
+ 387              		.loc 2 76 5 is_stmt 0 view .LVU117
+ 388              	.LBE27:
+ 389              	.LBE26:
   49:src/Ramo.cpp  ****             if (t[i] > _tresh)
- 403              		.loc 1 49 13 is_stmt 1 view .LVU124
- 404              	.LBB35:
- 405              	.LBB34:
- 406              		.loc 3 76 31 is_stmt 0 view .LVU125
- 407 0122 F0EEE77A 		vabs.f32	s15, s15
- 408              	.LBE34:
- 409              	.LBE35:
+ 390              		.loc 1 49 13 is_stmt 1 view .LVU118
+ 391              	.LBB29:
+ 392              	.LBB28:
+ 393              		.loc 2 76 31 is_stmt 0 view .LVU119
+ 394 0124 F0EEE77A 		vabs.f32	s15, s15
+ 395              	.LBE28:
+ 396              	.LBE29:
   49:src/Ramo.cpp  ****             if (t[i] > _tresh)
- 410              		.loc 1 49 31 view .LVU126
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 21
-
-
- 411 0126 77EEC67A 		vsub.f32	s15, s15, s12
+ 397              		.loc 1 49 31 view .LVU120
+ 398 0128 77EEC67A 		vsub.f32	s15, s15, s12
   49:src/Ramo.cpp  ****             if (t[i] > _tresh)
- 412              		.loc 1 49 22 view .LVU127
- 413 012a 77EEA77A 		vadd.f32	s15, s15, s15
+ 399              		.loc 1 49 22 view .LVU121
+ 400 012c 77EEA77A 		vadd.f32	s15, s15, s15
   50:src/Ramo.cpp  ****             {
- 414              		.loc 1 50 13 is_stmt 1 view .LVU128
- 415 012e F4EEC77A 		vcmpe.f32	s15, s14
- 416 0132 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 417 0136 17DD     		ble	.L37
+ 401              		.loc 1 50 13 is_stmt 1 view .LVU122
+ 402 0130 F4EEC77A 		vcmpe.f32	s15, s14
+ 403 0134 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 404 0138 26DD     		ble	.L38
   52:src/Ramo.cpp  ****             }
- 418              		.loc 1 52 17 view .LVU129
+ 405              		.loc 1 52 17 view .LVU123
   52:src/Ramo.cpp  ****             }
- 419              		.loc 1 52 34 is_stmt 0 view .LVU130
- 420 0138 D7EE267A 		vfnms.f32	s15, s14, s13
+ 406              		.loc 1 52 34 is_stmt 0 view .LVU124
+ 407 013a D7EE267A 		vfnms.f32	s15, s14, s13
   52:src/Ramo.cpp  ****             }
- 421              		.loc 1 52 51 view .LVU131
- 422 013c C7EE876A 		vdiv.f32	s13, s15, s14
+ 408              		.loc 1 52 51 view .LVU125
+ 409 013e C7EE876A 		vdiv.f32	s13, s15, s14
   52:src/Ramo.cpp  ****             }
- 423              		.loc 1 52 24 view .LVU132
- 424 0140 C7ED006A 		vstr.32	s13, [r7]
- 425 0144 92E7     		b	.L14
- 426              	.L13:
+ 410              		.loc 1 52 24 view .LVU126
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 13
+
+
+ 411 0142 C7ED006A 		vstr.32	s13, [r7]
+ 412 0146 A4E7     		b	.L14
+ 413              	.L13:
   44:src/Ramo.cpp  ****             out[i] = sinf(_phase[i] * TWOPI_F);
- 427              		.loc 1 44 9 is_stmt 1 view .LVU133
+ 414              		.loc 1 44 9 is_stmt 1 view .LVU127
   45:src/Ramo.cpp  ****             break;
- 428              		.loc 1 45 13 view .LVU134
+ 415              		.loc 1 45 13 view .LVU128
   45:src/Ramo.cpp  ****             break;
- 429              		.loc 1 45 35 is_stmt 0 view .LVU135
- 430 0146 94ED008A 		vldr.32	s16, [r4]
+ 416              		.loc 1 45 35 is_stmt 0 view .LVU129
+ 417 0148 94ED008A 		vldr.32	s16, [r4]
   45:src/Ramo.cpp  ****             break;
- 431              		.loc 1 45 26 view .LVU136
- 432 014a 9FED160A 		vldr.32	s0, .L43
- 433 014e 28EE000A 		vmul.f32	s0, s16, s0
- 434 0152 FFF7FEFF 		bl	sinf
- 435              	.LVL13:
+ 418              		.loc 1 45 26 view .LVU130
+ 419 014c 9FED1C0A 		vldr.32	s0, .L43+16
+ 420 0150 28EE000A 		vmul.f32	s0, s16, s0
+ 421 0154 FFF7FEFF 		bl	sinf
+ 422              	.LVL11:
   45:src/Ramo.cpp  ****             break;
- 436              		.loc 1 45 20 view .LVU137
- 437 0156 87ED000A 		vstr.32	s0, [r7]
+ 423              		.loc 1 45 20 view .LVU131
+ 424 0158 87ED000A 		vstr.32	s0, [r7]
   46:src/Ramo.cpp  ****         case WAVE_TRI:
- 438              		.loc 1 46 13 is_stmt 1 view .LVU138
- 439 015a 87E7     		b	.L14
+ 425              		.loc 1 46 13 is_stmt 1 view .LVU132
+ 426 015c 99E7     		b	.L14
+ 427              	.L19:
+  65:src/Ramo.cpp  ****         {
+ 428              		.loc 1 65 56 is_stmt 0 discriminator 3 view .LVU133
+ 429 015e F5EE406A 		vcmp.f32	s13, #0
+ 430 0162 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 431 0166 3FF47AAF 		beq	.L21
+  69:src/Ramo.cpp  ****         }
+ 432              		.loc 1 69 13 is_stmt 1 view .LVU134
+  69:src/Ramo.cpp  ****         }
+ 433              		.loc 1 69 26 is_stmt 0 view .LVU135
+ 434 016a B0EE007A 		vmov.f32	s14, #2.0e+0
+ 435 016e F7EE007A 		vmov.f32	s15, #1.0e+0
+ 436 0172 E8EE477A 		vfms.f32	s15, s16, s14
+  69:src/Ramo.cpp  ****         }
+ 437              		.loc 1 69 20 view .LVU136
+ 438 0176 C7ED007A 		vstr.32	s15, [r7]
+ 439 017a 8AE7     		b	.L14
  440              	.L41:
-  87:src/Ramo.cpp  ****     }
- 441              		.loc 1 87 53 is_stmt 0 view .LVU139
- 442 015c 0023     		movs	r3, #0
- 443 015e A9E7     		b	.L26
+  91:src/Ramo.cpp  ****     }
+ 441              		.loc 1 91 53 view .LVU137
+ 442 017c 0023     		movs	r3, #0
+ 443 017e ACE7     		b	.L27
  444              	.L40:
-  85:src/Ramo.cpp  ****         }
- 445              		.loc 1 85 13 is_stmt 1 view .LVU140
-  85:src/Ramo.cpp  ****         }
- 446              		.loc 1 85 21 is_stmt 0 view .LVU141
- 447 0160 0023     		movs	r3, #0
- 448 0162 85F83630 		strb	r3, [r5, #54]
- 449 0166 95E7     		b	.L25
- 450              	.L37:
+  89:src/Ramo.cpp  ****         }
+ 445              		.loc 1 89 13 is_stmt 1 view .LVU138
+  89:src/Ramo.cpp  ****         }
+ 446              		.loc 1 89 21 is_stmt 0 view .LVU139
+ 447 0180 0023     		movs	r3, #0
+ 448 0182 85F83630 		strb	r3, [r5, #54]
+ 449 0186 98E7     		b	.L26
+ 450              	.L38:
   54:src/Ramo.cpp  ****             {
- 451              		.loc 1 54 18 is_stmt 1 view .LVU142
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 22
+ 451              		.loc 1 54 18 is_stmt 1 view .LVU140
+  56:src/Ramo.cpp  ****             }
+ 452              		.loc 1 56 17 view .LVU141
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 14
 
 
-  56:src/Ramo.cpp  ****             }
- 452              		.loc 1 56 17 view .LVU143
   54:src/Ramo.cpp  ****             {
- 453              		.loc 1 54 29 is_stmt 0 view .LVU144
- 454 0168 B1EE476A 		vneg.f32	s12, s14
+ 453              		.loc 1 54 29 is_stmt 0 view .LVU142
+ 454 0188 B1EE476A 		vneg.f32	s12, s14
   54:src/Ramo.cpp  ****             {
- 455              		.loc 1 54 18 view .LVU145
- 456 016c F4EEC67A 		vcmpe.f32	s15, s12
- 457 0170 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 455              		.loc 1 54 18 view .LVU143
+ 456 018c F4EEC67A 		vcmpe.f32	s15, s12
+ 457 0190 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
   56:src/Ramo.cpp  ****             }
- 458              		.loc 1 56 34 view .LVU146
- 459 0174 48BF     		it	mi
- 460 0176 D6EE267A 		vfnmsmi.f32	s15, s12, s13
+ 458              		.loc 1 56 34 view .LVU144
+ 459 0194 48BF     		it	mi
+ 460 0196 D6EE267A 		vfnmsmi.f32	s15, s12, s13
   60:src/Ramo.cpp  ****             }
- 461              		.loc 1 60 17 is_stmt 1 view .LVU147
+ 461              		.loc 1 60 17 is_stmt 1 view .LVU145
   60:src/Ramo.cpp  ****             }
- 462              		.loc 1 60 35 is_stmt 0 view .LVU148
- 463 017a C7EE876A 		vdiv.f32	s13, s15, s14
+ 462              		.loc 1 60 35 is_stmt 0 view .LVU146
+ 463 019a C7EE876A 		vdiv.f32	s13, s15, s14
   60:src/Ramo.cpp  ****             }
- 464              		.loc 1 60 24 view .LVU149
- 465 017e C7ED006A 		vstr.32	s13, [r7]
- 466 0182 73E7     		b	.L14
- 467              	.LVL14:
- 468              	.L39:
-  60:src/Ramo.cpp  ****             }
- 469              		.loc 1 60 24 view .LVU150
- 470 0184 8DED017A 		vstr.32	s14, [sp, #4]	@ int
- 471              	.LBB36:
- 472              	.LBB30:
- 473              		.loc 2 464 27 view .LVU151
- 474 0188 FFF7FEFF 		bl	sqrtf
- 475              	.LVL15:
- 476              		.loc 2 464 27 view .LVU152
- 477              	.LBE30:
- 478              	.LBE36:
-  76:src/Ramo.cpp  **** 
- 479              		.loc 1 76 19 view .LVU153
- 480 018c 94ED008A 		vldr.32	s16, [r4]
- 481              	.LVL16:
- 482              	.LBB37:
- 483              	.LBB31:
- 484              		.loc 2 464 27 view .LVU154
- 485 0190 F0EE407A 		vmov.f32	s15, s0
+ 464              		.loc 1 60 24 view .LVU147
+ 465 019e C7ED006A 		vstr.32	s13, [r7]
+ 466 01a2 76E7     		b	.L14
+ 467              	.L8:
+  76:src/Ramo.cpp  ****             out[i] = 0.0f;
+ 468              		.loc 1 76 9 is_stmt 1 view .LVU148
+  77:src/Ramo.cpp  ****             break;
+ 469              		.loc 1 77 13 view .LVU149
+  77:src/Ramo.cpp  ****             break;
+ 470              		.loc 1 77 20 is_stmt 0 view .LVU150
+ 471 01a4 0023     		movs	r3, #0
+  45:src/Ramo.cpp  ****             break;
+ 472              		.loc 1 45 35 view .LVU151
+ 473 01a6 94ED008A 		vldr.32	s16, [r4]
+  77:src/Ramo.cpp  ****             break;
+ 474              		.loc 1 77 20 view .LVU152
+ 475 01aa 3B60     		str	r3, [r7]	@ float
+  78:src/Ramo.cpp  ****         }
+ 476              		.loc 1 78 13 is_stmt 1 view .LVU153
+ 477 01ac 71E7     		b	.L14
+ 478              	.L44:
+ 479 01ae 00BF     		.align	3
+ 480              	.L43:
+ 481 01b0 9A999999 		.word	-1717986918
+ 482 01b4 9999A93F 		.word	1068079513
+ 483 01b8 66666666 		.word	1717986918
+ 484 01bc 6666EE3F 		.word	1072588390
+ 485 01c0 DB0FC940 		.word	1086918619
  486              	.LBE31:
- 487              	.LBE37:
-  76:src/Ramo.cpp  **** 
- 488              		.loc 1 76 19 view .LVU155
- 489 0194 9DED017A 		vldr.32	s14, [sp, #4]	@ int
- 490 0198 5AE7     		b	.L21
- 491              	.L8:
-  72:src/Ramo.cpp  ****             out[i] = 0.0f;
- 492              		.loc 1 72 9 is_stmt 1 view .LVU156
-  73:src/Ramo.cpp  ****             break;
- 493              		.loc 1 73 13 view .LVU157
-  73:src/Ramo.cpp  ****             break;
- 494              		.loc 1 73 20 is_stmt 0 view .LVU158
- 495 019a 0023     		movs	r3, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 23
+ 487              		.cfi_endproc
+ 488              	.LFE4821:
+ 490              		.section	.text._ZN4Ramo12CalcPhaseIncEf,"ax",%progbits
+ 491              		.align	1
+ 492              		.p2align 2,,3
+ 493              		.global	_ZN4Ramo12CalcPhaseIncEf
+ 494              		.syntax unified
+ 495              		.thumb
+ 496              		.thumb_func
+ 497              		.fpu fpv5-d16
+ 499              	_ZN4Ramo12CalcPhaseIncEf:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 15
 
 
-  76:src/Ramo.cpp  **** 
- 496              		.loc 1 76 19 view .LVU159
- 497 019c 94ED008A 		vldr.32	s16, [r4]
-  73:src/Ramo.cpp  ****             break;
- 498              		.loc 1 73 20 view .LVU160
- 499 01a0 3B60     		str	r3, [r7]	@ float
-  74:src/Ramo.cpp  ****         }
- 500              		.loc 1 74 13 is_stmt 1 view .LVU161
- 501 01a2 63E7     		b	.L14
- 502              	.L44:
- 503              		.align	2
- 504              	.L43:
- 505 01a4 DB0FC940 		.word	1086918619
- 506              	.LBE39:
- 507              		.cfi_endproc
- 508              	.LFE4821:
- 510              		.section	.text._ZN4Ramo12CalcPhaseIncEf,"ax",%progbits
- 511              		.align	1
- 512              		.p2align 2,,3
- 513              		.global	_ZN4Ramo12CalcPhaseIncEf
- 514              		.syntax unified
- 515              		.thumb
- 516              		.thumb_func
- 517              		.fpu fpv5-d16
- 519              	_ZN4Ramo12CalcPhaseIncEf:
- 520              	.LVL17:
- 521              	.LFB4822:
-  94:src/Ramo.cpp  ****     return f * _sr_recip;
- 522              		.loc 1 94 1 view -0
- 523              		.cfi_startproc
- 524              		@ args = 0, pretend = 0, frame = 0
- 525              		@ frame_needed = 0, uses_anonymous_args = 0
- 526              		@ link register save eliminated.
- 527              		.loc 1 95 5 view .LVU163
- 528              		.loc 1 95 16 is_stmt 0 view .LVU164
- 529 0000 D0ED087A 		vldr.32	s15, [r0, #32]
-  96:src/Ramo.cpp  **** }
- 530              		.loc 1 96 1 view .LVU165
- 531 0004 20EE270A 		vmul.f32	s0, s0, s15
- 532              	.LVL18:
- 533              		.loc 1 96 1 view .LVU166
- 534 0008 7047     		bx	lr
- 535              		.cfi_endproc
- 536              	.LFE4822:
- 538 000a 00BF     		.section	.text._ZN4Ramo12SetWaveformsEPh,"ax",%progbits
- 539              		.align	1
- 540              		.p2align 2,,3
- 541              		.global	_ZN4Ramo12SetWaveformsEPh
- 542              		.syntax unified
- 543              		.thumb
- 544              		.thumb_func
- 545              		.fpu fpv5-d16
- 547              	_ZN4Ramo12SetWaveformsEPh:
- 548              	.LVL19:
- 549              	.LFB4823:
-  97:src/Ramo.cpp  **** 
-  98:src/Ramo.cpp  **** void Ramo::SetWaveforms(uint8_t wf[])
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 24
+ 500              	.LVL12:
+ 501              	.LFB4822:
+  98:src/Ramo.cpp  ****     return f * _sr_recip;
+ 502              		.loc 1 98 1 view -0
+ 503              		.cfi_startproc
+ 504              		@ args = 0, pretend = 0, frame = 0
+ 505              		@ frame_needed = 0, uses_anonymous_args = 0
+ 506              		@ link register save eliminated.
+ 507              		.loc 1 99 5 view .LVU155
+ 508              		.loc 1 99 16 is_stmt 0 view .LVU156
+ 509 0000 D0ED087A 		vldr.32	s15, [r0, #32]
+ 100:src/Ramo.cpp  **** }
+ 510              		.loc 1 100 1 view .LVU157
+ 511 0004 20EE270A 		vmul.f32	s0, s0, s15
+ 512              	.LVL13:
+ 513              		.loc 1 100 1 view .LVU158
+ 514 0008 7047     		bx	lr
+ 515              		.cfi_endproc
+ 516              	.LFE4822:
+ 518 000a 00BF     		.section	.text._ZN4Ramo12SetWaveformsEPh,"ax",%progbits
+ 519              		.align	1
+ 520              		.p2align 2,,3
+ 521              		.global	_ZN4Ramo12SetWaveformsEPh
+ 522              		.syntax unified
+ 523              		.thumb
+ 524              		.thumb_func
+ 525              		.fpu fpv5-d16
+ 527              	_ZN4Ramo12SetWaveformsEPh:
+ 528              	.LVL14:
+ 529              	.LFB4823:
+ 101:src/Ramo.cpp  **** 
+ 102:src/Ramo.cpp  **** void Ramo::SetWaveforms(uint8_t wf[])
+ 103:src/Ramo.cpp  **** {   
+ 530              		.loc 1 103 1 is_stmt 1 view -0
+ 531              		.cfi_startproc
+ 532              		@ args = 0, pretend = 0, frame = 0
+ 533              		@ frame_needed = 0, uses_anonymous_args = 0
+ 534              		@ link register save eliminated.
+ 104:src/Ramo.cpp  ****     for(int i = 0; i < n; i++)
+ 535              		.loc 1 104 5 view .LVU160
+ 536              	.LBB32:
+ 537              		.loc 1 104 22 view .LVU161
+ 105:src/Ramo.cpp  ****     {
+ 106:src/Ramo.cpp  ****         _waveform[i] = wf[i] < WAVE_LAST ? wf[i] : WAVE_SIN;
+ 538              		.loc 1 106 9 view .LVU162
+ 539              		.loc 1 106 28 is_stmt 0 view .LVU163
+ 540 0000 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
+ 541              		.loc 1 106 22 view .LVU164
+ 542 0002 042B     		cmp	r3, #4
+ 543 0004 28BF     		it	cs
+ 544 0006 0023     		movcs	r3, #0
+ 545 0008 0370     		strb	r3, [r0]
+ 104:src/Ramo.cpp  ****     for(int i = 0; i < n; i++)
+ 546              		.loc 1 104 5 is_stmt 1 view .LVU165
+ 547              	.LVL15:
+ 104:src/Ramo.cpp  ****     for(int i = 0; i < n; i++)
+ 548              		.loc 1 104 22 view .LVU166
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 16
 
 
-  99:src/Ramo.cpp  **** {   
- 550              		.loc 1 99 1 is_stmt 1 view -0
- 551              		.cfi_startproc
- 552              		@ args = 0, pretend = 0, frame = 0
- 553              		@ frame_needed = 0, uses_anonymous_args = 0
- 554              		@ link register save eliminated.
- 100:src/Ramo.cpp  ****     for(int i = 0; i < n; i++)
- 555              		.loc 1 100 5 view .LVU168
- 556              	.LBB40:
- 557              		.loc 1 100 22 view .LVU169
- 101:src/Ramo.cpp  ****     {
- 102:src/Ramo.cpp  ****         _waveform[i] = wf[i] < WAVE_LAST ? wf[i] : WAVE_SIN;
- 558              		.loc 1 102 9 view .LVU170
- 559              		.loc 1 102 28 is_stmt 0 view .LVU171
- 560 0000 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
- 561              		.loc 1 102 22 view .LVU172
- 562 0002 042B     		cmp	r3, #4
- 563 0004 28BF     		it	cs
- 564 0006 0023     		movcs	r3, #0
- 565 0008 0370     		strb	r3, [r0]
- 100:src/Ramo.cpp  ****     for(int i = 0; i < n; i++)
- 566              		.loc 1 100 5 is_stmt 1 view .LVU173
- 567              	.LVL20:
- 100:src/Ramo.cpp  ****     for(int i = 0; i < n; i++)
- 568              		.loc 1 100 22 view .LVU174
- 569              		.loc 1 102 9 view .LVU175
- 570              		.loc 1 102 28 is_stmt 0 view .LVU176
- 571 000a 4B78     		ldrb	r3, [r1, #1]	@ zero_extendqisi2
- 572              		.loc 1 102 22 view .LVU177
- 573 000c 042B     		cmp	r3, #4
- 574 000e 28BF     		it	cs
- 575 0010 0023     		movcs	r3, #0
- 576 0012 4370     		strb	r3, [r0, #1]
- 100:src/Ramo.cpp  ****     for(int i = 0; i < n; i++)
- 577              		.loc 1 100 5 is_stmt 1 view .LVU178
- 578              	.LVL21:
- 100:src/Ramo.cpp  ****     for(int i = 0; i < n; i++)
- 579              		.loc 1 100 22 view .LVU179
- 580              	.LBE40:
- 103:src/Ramo.cpp  ****     }
- 104:src/Ramo.cpp  ****     
- 105:src/Ramo.cpp  **** }
- 581              		.loc 1 105 1 is_stmt 0 view .LVU180
- 582 0014 7047     		bx	lr
- 583              		.cfi_endproc
- 584              	.LFE4823:
- 586 0016 00BF     		.section	.text._ZN4Ramo7SetFreqEf,"ax",%progbits
- 587              		.align	1
- 588              		.p2align 2,,3
- 589              		.global	_ZN4Ramo7SetFreqEf
- 590              		.syntax unified
- 591              		.thumb
- 592              		.thumb_func
- 593              		.fpu fpv5-d16
- 595              	_ZN4Ramo7SetFreqEf:
- 596              	.LVL22:
- 597              	.LFB4824:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 25
+ 549              		.loc 1 106 9 view .LVU167
+ 550              		.loc 1 106 28 is_stmt 0 view .LVU168
+ 551 000a 4B78     		ldrb	r3, [r1, #1]	@ zero_extendqisi2
+ 552              		.loc 1 106 22 view .LVU169
+ 553 000c 042B     		cmp	r3, #4
+ 554 000e 28BF     		it	cs
+ 555 0010 0023     		movcs	r3, #0
+ 556 0012 4370     		strb	r3, [r0, #1]
+ 104:src/Ramo.cpp  ****     for(int i = 0; i < n; i++)
+ 557              		.loc 1 104 5 is_stmt 1 view .LVU170
+ 558              	.LVL16:
+ 104:src/Ramo.cpp  ****     for(int i = 0; i < n; i++)
+ 559              		.loc 1 104 22 view .LVU171
+ 560              	.LBE32:
+ 107:src/Ramo.cpp  ****     }
+ 108:src/Ramo.cpp  ****     
+ 109:src/Ramo.cpp  **** }
+ 561              		.loc 1 109 1 is_stmt 0 view .LVU172
+ 562 0014 7047     		bx	lr
+ 563              		.cfi_endproc
+ 564              	.LFE4823:
+ 566 0016 00BF     		.section	.text._ZN4Ramo7SetFreqEf,"ax",%progbits
+ 567              		.align	1
+ 568              		.p2align 2,,3
+ 569              		.global	_ZN4Ramo7SetFreqEf
+ 570              		.syntax unified
+ 571              		.thumb
+ 572              		.thumb_func
+ 573              		.fpu fpv5-d16
+ 575              	_ZN4Ramo7SetFreqEf:
+ 576              	.LVL17:
+ 577              	.LFB4824:
+ 110:src/Ramo.cpp  **** 
+ 111:src/Ramo.cpp  **** void Ramo::SetFreq( const float f)
+ 112:src/Ramo.cpp  **** {
+ 578              		.loc 1 112 1 is_stmt 1 view -0
+ 579              		.cfi_startproc
+ 580              		@ args = 0, pretend = 0, frame = 0
+ 581              		@ frame_needed = 0, uses_anonymous_args = 0
+ 582              		@ link register save eliminated.
+ 113:src/Ramo.cpp  ****     _freq = f;
+ 583              		.loc 1 113 5 view .LVU174
+ 584              	.LBB33:
+ 585              	.LBB34:
+ 586              	.LBB35:
+  99:src/Ramo.cpp  **** }
+ 587              		.loc 1 99 16 is_stmt 0 view .LVU175
+ 588 0000 D0ED087A 		vldr.32	s15, [r0, #32]
+ 589              	.LBE35:
+ 590              	.LBE34:
+ 591              	.LBE33:
+ 592              		.loc 1 113 11 view .LVU176
+ 593 0004 80ED030A 		vstr.32	s0, [r0, #12]
+ 114:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
+ 594              		.loc 1 114 5 is_stmt 1 view .LVU177
+ 595              	.LVL18:
+ 596              	.LBB40:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 17
 
 
- 106:src/Ramo.cpp  **** 
- 107:src/Ramo.cpp  **** void Ramo::SetFreq( const float f)
- 108:src/Ramo.cpp  **** {
- 598              		.loc 1 108 1 is_stmt 1 view -0
- 599              		.cfi_startproc
- 600              		@ args = 0, pretend = 0, frame = 0
- 601              		@ frame_needed = 0, uses_anonymous_args = 0
- 602              		@ link register save eliminated.
- 109:src/Ramo.cpp  ****     _freq = f;
- 603              		.loc 1 109 5 view .LVU182
- 604              	.LBB41:
- 605              	.LBB42:
- 606              	.LBB43:
-  95:src/Ramo.cpp  **** }
- 607              		.loc 1 95 16 is_stmt 0 view .LVU183
- 608 0000 D0ED087A 		vldr.32	s15, [r0, #32]
- 609              	.LBE43:
- 610              	.LBE42:
- 611              	.LBE41:
- 612              		.loc 1 109 11 view .LVU184
- 613 0004 80ED030A 		vstr.32	s0, [r0, #12]
- 110:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
- 614              		.loc 1 110 5 is_stmt 1 view .LVU185
- 615              	.LVL23:
- 616              	.LBB48:
- 617              		.loc 1 110 23 view .LVU186
- 111:src/Ramo.cpp  ****     {
- 112:src/Ramo.cpp  ****         _phase_inc[i] = CalcPhaseInc(f);
- 618              		.loc 1 112 9 view .LVU187
- 619              	.LBB46:
- 620              	.LBI42:
-  93:src/Ramo.cpp  **** {
- 621              		.loc 1 93 7 view .LVU188
- 622              	.LBB44:
-  95:src/Ramo.cpp  **** }
- 623              		.loc 1 95 5 view .LVU189
-  95:src/Ramo.cpp  **** }
- 624              		.loc 1 95 16 is_stmt 0 view .LVU190
- 625 0008 20EE270A 		vmul.f32	s0, s0, s15
- 626              	.LVL24:
-  95:src/Ramo.cpp  **** }
- 627              		.loc 1 95 16 view .LVU191
- 628              	.LBE44:
- 629              	.LBE46:
- 630              		.loc 1 112 23 view .LVU192
- 631 000c 80ED0B0A 		vstr.32	s0, [r0, #44]
- 110:src/Ramo.cpp  ****     {
- 632              		.loc 1 110 5 is_stmt 1 view .LVU193
- 633              	.LVL25:
- 110:src/Ramo.cpp  ****     {
- 634              		.loc 1 110 23 view .LVU194
- 635              		.loc 1 112 9 view .LVU195
- 636              	.LBB47:
-  93:src/Ramo.cpp  **** {
- 637              		.loc 1 93 7 view .LVU196
- 638              	.LBB45:
-  95:src/Ramo.cpp  **** }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 26
+ 597              		.loc 1 114 23 view .LVU178
+ 115:src/Ramo.cpp  ****     {
+ 116:src/Ramo.cpp  ****         _phase_inc[i] = CalcPhaseInc(f);
+ 598              		.loc 1 116 9 view .LVU179
+ 599              	.LBB38:
+ 600              	.LBI34:
+  97:src/Ramo.cpp  **** {
+ 601              		.loc 1 97 7 view .LVU180
+ 602              	.LBB36:
+  99:src/Ramo.cpp  **** }
+ 603              		.loc 1 99 5 view .LVU181
+  99:src/Ramo.cpp  **** }
+ 604              		.loc 1 99 16 is_stmt 0 view .LVU182
+ 605 0008 20EE270A 		vmul.f32	s0, s0, s15
+ 606              	.LVL19:
+  99:src/Ramo.cpp  **** }
+ 607              		.loc 1 99 16 view .LVU183
+ 608              	.LBE36:
+ 609              	.LBE38:
+ 610              		.loc 1 116 23 view .LVU184
+ 611 000c 80ED0B0A 		vstr.32	s0, [r0, #44]
+ 114:src/Ramo.cpp  ****     {
+ 612              		.loc 1 114 5 is_stmt 1 view .LVU185
+ 613              	.LVL20:
+ 114:src/Ramo.cpp  ****     {
+ 614              		.loc 1 114 23 view .LVU186
+ 615              		.loc 1 116 9 view .LVU187
+ 616              	.LBB39:
+  97:src/Ramo.cpp  **** {
+ 617              		.loc 1 97 7 view .LVU188
+ 618              	.LBB37:
+  99:src/Ramo.cpp  **** }
+ 619              		.loc 1 99 5 view .LVU189
+  99:src/Ramo.cpp  **** }
+ 620              		.loc 1 99 5 is_stmt 0 view .LVU190
+ 621              	.LBE37:
+ 622              	.LBE39:
+ 623              		.loc 1 116 23 view .LVU191
+ 624 0010 80ED0C0A 		vstr.32	s0, [r0, #48]
+ 114:src/Ramo.cpp  ****     {
+ 625              		.loc 1 114 5 is_stmt 1 view .LVU192
+ 626              	.LVL21:
+ 114:src/Ramo.cpp  ****     {
+ 627              		.loc 1 114 23 view .LVU193
+ 628              	.LBE40:
+ 117:src/Ramo.cpp  ****     }
+ 118:src/Ramo.cpp  **** }
+ 629              		.loc 1 118 1 is_stmt 0 view .LVU194
+ 630 0014 7047     		bx	lr
+ 631              		.cfi_endproc
+ 632              	.LFE4824:
+ 634 0016 00BF     		.section	.text._ZN4Ramo9SetDetuneEPf,"ax",%progbits
+ 635              		.align	1
+ 636              		.p2align 2,,3
+ 637              		.global	_ZN4Ramo9SetDetuneEPf
+ 638              		.syntax unified
+ 639              		.thumb
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 18
 
 
- 639              		.loc 1 95 5 view .LVU197
-  95:src/Ramo.cpp  **** }
- 640              		.loc 1 95 5 is_stmt 0 view .LVU198
- 641              	.LBE45:
- 642              	.LBE47:
- 643              		.loc 1 112 23 view .LVU199
- 644 0010 80ED0C0A 		vstr.32	s0, [r0, #48]
- 110:src/Ramo.cpp  ****     {
- 645              		.loc 1 110 5 is_stmt 1 view .LVU200
- 646              	.LVL26:
- 110:src/Ramo.cpp  ****     {
- 647              		.loc 1 110 23 view .LVU201
- 648              	.LBE48:
- 113:src/Ramo.cpp  ****     }
- 114:src/Ramo.cpp  **** }
- 649              		.loc 1 114 1 is_stmt 0 view .LVU202
- 650 0014 7047     		bx	lr
- 651              		.cfi_endproc
- 652              	.LFE4824:
- 654 0016 00BF     		.section	.text._ZN4Ramo9SetDetuneEPf,"ax",%progbits
- 655              		.align	1
- 656              		.p2align 2,,3
- 657              		.global	_ZN4Ramo9SetDetuneEPf
- 658              		.syntax unified
- 659              		.thumb
- 660              		.thumb_func
- 661              		.fpu fpv5-d16
- 663              	_ZN4Ramo9SetDetuneEPf:
- 664              	.LVL27:
- 665              	.LFB4825:
- 115:src/Ramo.cpp  **** 
- 116:src/Ramo.cpp  **** void Ramo::SetDetune(float ef[])
- 117:src/Ramo.cpp  **** {
- 666              		.loc 1 117 1 is_stmt 1 view -0
- 667              		.cfi_startproc
- 668              		@ args = 0, pretend = 0, frame = 0
- 669              		@ frame_needed = 0, uses_anonymous_args = 0
- 670              		@ link register save eliminated.
- 118:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
- 671              		.loc 1 118 5 view .LVU204
- 672              	.LBB49:
- 673              		.loc 1 118 23 view .LVU205
- 119:src/Ramo.cpp  ****     {
- 120:src/Ramo.cpp  ****         _phase_inc[i] = CalcPhaseInc(_freq) * ef[i];
- 674              		.loc 1 120 9 view .LVU206
- 675              	.LBB50:
- 676              	.LBI50:
-  93:src/Ramo.cpp  **** {
- 677              		.loc 1 93 7 view .LVU207
- 678              	.LBB51:
-  95:src/Ramo.cpp  **** }
- 679              		.loc 1 95 5 view .LVU208
-  95:src/Ramo.cpp  **** }
- 680              		.loc 1 95 16 is_stmt 0 view .LVU209
- 681 0000 D0ED037A 		vldr.32	s15, [r0, #12]
- 682 0004 D0ED086A 		vldr.32	s13, [r0, #32]
- 683              	.LBE51:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 27
+ 640              		.thumb_func
+ 641              		.fpu fpv5-d16
+ 643              	_ZN4Ramo9SetDetuneEPf:
+ 644              	.LVL22:
+ 645              	.LFB4825:
+ 119:src/Ramo.cpp  **** 
+ 120:src/Ramo.cpp  **** void Ramo::SetDetune(float ef[])
+ 121:src/Ramo.cpp  **** {
+ 646              		.loc 1 121 1 is_stmt 1 view -0
+ 647              		.cfi_startproc
+ 648              		@ args = 0, pretend = 0, frame = 0
+ 649              		@ frame_needed = 0, uses_anonymous_args = 0
+ 650              		@ link register save eliminated.
+ 122:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
+ 651              		.loc 1 122 5 view .LVU196
+ 652              	.LBB41:
+ 653              		.loc 1 122 23 view .LVU197
+ 123:src/Ramo.cpp  ****     {
+ 124:src/Ramo.cpp  ****         _phase_inc[i] = CalcPhaseInc(_freq) * ef[i];
+ 654              		.loc 1 124 9 view .LVU198
+ 655              	.LBB42:
+ 656              	.LBI42:
+  97:src/Ramo.cpp  **** {
+ 657              		.loc 1 97 7 view .LVU199
+ 658              	.LBB43:
+  99:src/Ramo.cpp  **** }
+ 659              		.loc 1 99 5 view .LVU200
+  99:src/Ramo.cpp  **** }
+ 660              		.loc 1 99 16 is_stmt 0 view .LVU201
+ 661 0000 D0ED037A 		vldr.32	s15, [r0, #12]
+ 662 0004 D0ED086A 		vldr.32	s13, [r0, #32]
+ 663              	.LBE43:
+ 664              	.LBE42:
+ 665              		.loc 1 124 45 view .LVU202
+ 666 0008 91ED007A 		vldr.32	s14, [r1]
+ 667              	.LBB46:
+ 668              	.LBB44:
+  99:src/Ramo.cpp  **** }
+ 669              		.loc 1 99 16 view .LVU203
+ 670 000c 67EEA67A 		vmul.f32	s15, s15, s13
+ 671              	.LVL23:
+  99:src/Ramo.cpp  **** }
+ 672              		.loc 1 99 16 view .LVU204
+ 673              	.LBE44:
+ 674              	.LBE46:
+ 675              		.loc 1 124 45 view .LVU205
+ 676 0010 27EE277A 		vmul.f32	s14, s14, s15
+ 677              		.loc 1 124 23 view .LVU206
+ 678 0014 80ED0B7A 		vstr.32	s14, [r0, #44]
+ 122:src/Ramo.cpp  ****     {
+ 679              		.loc 1 122 5 is_stmt 1 view .LVU207
+ 680              	.LVL24:
+ 122:src/Ramo.cpp  ****     {
+ 681              		.loc 1 122 23 view .LVU208
+ 682              		.loc 1 124 9 view .LVU209
+ 683              	.LBB47:
+  97:src/Ramo.cpp  **** {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 19
 
 
- 684              	.LBE50:
- 685              		.loc 1 120 45 view .LVU210
- 686 0008 91ED007A 		vldr.32	s14, [r1]
- 687              	.LBB54:
- 688              	.LBB52:
-  95:src/Ramo.cpp  **** }
- 689              		.loc 1 95 16 view .LVU211
- 690 000c 67EEA67A 		vmul.f32	s15, s15, s13
- 691              	.LVL28:
-  95:src/Ramo.cpp  **** }
- 692              		.loc 1 95 16 view .LVU212
- 693              	.LBE52:
- 694              	.LBE54:
- 695              		.loc 1 120 45 view .LVU213
- 696 0010 27EE277A 		vmul.f32	s14, s14, s15
- 697              		.loc 1 120 23 view .LVU214
- 698 0014 80ED0B7A 		vstr.32	s14, [r0, #44]
- 118:src/Ramo.cpp  ****     {
- 699              		.loc 1 118 5 is_stmt 1 view .LVU215
- 700              	.LVL29:
- 118:src/Ramo.cpp  ****     {
- 701              		.loc 1 118 23 view .LVU216
- 702              		.loc 1 120 9 view .LVU217
- 703              	.LBB55:
-  93:src/Ramo.cpp  **** {
- 704              		.loc 1 93 7 view .LVU218
- 705              	.LBB53:
-  95:src/Ramo.cpp  **** }
- 706              		.loc 1 95 5 view .LVU219
-  95:src/Ramo.cpp  **** }
- 707              		.loc 1 95 5 is_stmt 0 view .LVU220
- 708              	.LBE53:
- 709              	.LBE55:
- 710              		.loc 1 120 45 view .LVU221
- 711 0018 91ED017A 		vldr.32	s14, [r1, #4]
- 712 001c 67EE277A 		vmul.f32	s15, s14, s15
- 713              		.loc 1 120 23 view .LVU222
- 714 0020 C0ED0C7A 		vstr.32	s15, [r0, #48]
- 118:src/Ramo.cpp  ****     {
- 715              		.loc 1 118 5 is_stmt 1 view .LVU223
- 716              	.LVL30:
- 118:src/Ramo.cpp  ****     {
- 717              		.loc 1 118 23 view .LVU224
- 718              	.LBE49:
- 121:src/Ramo.cpp  ****     }
- 122:src/Ramo.cpp  **** }
- 719              		.loc 1 122 1 is_stmt 0 view .LVU225
- 720 0024 7047     		bx	lr
- 721              		.cfi_endproc
- 722              	.LFE4825:
- 724 0026 00BF     		.section	.text._ZN4Ramo6SetAmpEPf,"ax",%progbits
- 725              		.align	1
- 726              		.p2align 2,,3
- 727              		.global	_ZN4Ramo6SetAmpEPf
- 728              		.syntax unified
- 729              		.thumb
- 730              		.thumb_func
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 28
+ 684              		.loc 1 97 7 view .LVU210
+ 685              	.LBB45:
+  99:src/Ramo.cpp  **** }
+ 686              		.loc 1 99 5 view .LVU211
+  99:src/Ramo.cpp  **** }
+ 687              		.loc 1 99 5 is_stmt 0 view .LVU212
+ 688              	.LBE45:
+ 689              	.LBE47:
+ 690              		.loc 1 124 45 view .LVU213
+ 691 0018 91ED017A 		vldr.32	s14, [r1, #4]
+ 692 001c 67EE277A 		vmul.f32	s15, s14, s15
+ 693              		.loc 1 124 23 view .LVU214
+ 694 0020 C0ED0C7A 		vstr.32	s15, [r0, #48]
+ 122:src/Ramo.cpp  ****     {
+ 695              		.loc 1 122 5 is_stmt 1 view .LVU215
+ 696              	.LVL25:
+ 122:src/Ramo.cpp  ****     {
+ 697              		.loc 1 122 23 view .LVU216
+ 698              	.LBE41:
+ 125:src/Ramo.cpp  ****     }
+ 126:src/Ramo.cpp  **** }
+ 699              		.loc 1 126 1 is_stmt 0 view .LVU217
+ 700 0024 7047     		bx	lr
+ 701              		.cfi_endproc
+ 702              	.LFE4825:
+ 704 0026 00BF     		.section	.text._ZN4Ramo6SetAmpEPf,"ax",%progbits
+ 705              		.align	1
+ 706              		.p2align 2,,3
+ 707              		.global	_ZN4Ramo6SetAmpEPf
+ 708              		.syntax unified
+ 709              		.thumb
+ 710              		.thumb_func
+ 711              		.fpu fpv5-d16
+ 713              	_ZN4Ramo6SetAmpEPf:
+ 714              	.LVL26:
+ 715              	.LFB4826:
+ 127:src/Ramo.cpp  **** 
+ 128:src/Ramo.cpp  **** 
+ 129:src/Ramo.cpp  **** 
+ 130:src/Ramo.cpp  **** 
+ 131:src/Ramo.cpp  **** void Ramo::SetAmp(float g[])
+ 132:src/Ramo.cpp  **** {
+ 716              		.loc 1 132 1 is_stmt 1 view -0
+ 717              		.cfi_startproc
+ 718              		@ args = 0, pretend = 0, frame = 0
+ 719              		@ frame_needed = 0, uses_anonymous_args = 0
+ 720              		@ link register save eliminated.
+ 133:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
+ 721              		.loc 1 133 5 view .LVU219
+ 722              	.LBB48:
+ 723              		.loc 1 133 23 view .LVU220
+ 134:src/Ramo.cpp  ****     {
+ 135:src/Ramo.cpp  ****         _amp[i] = g[i];
+ 724              		.loc 1 135 9 view .LVU221
+ 725              		.loc 1 135 22 is_stmt 0 view .LVU222
+ 726 0000 0B68     		ldr	r3, [r1]	@ float
+ 727              		.loc 1 135 17 view .LVU223
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 20
 
 
- 731              		.fpu fpv5-d16
- 733              	_ZN4Ramo6SetAmpEPf:
- 734              	.LVL31:
- 735              	.LFB4826:
- 123:src/Ramo.cpp  **** 
- 124:src/Ramo.cpp  **** 
- 125:src/Ramo.cpp  **** 
- 126:src/Ramo.cpp  **** 
- 127:src/Ramo.cpp  **** void Ramo::SetAmp(float g[])
- 128:src/Ramo.cpp  **** {
- 736              		.loc 1 128 1 is_stmt 1 view -0
- 737              		.cfi_startproc
- 738              		@ args = 0, pretend = 0, frame = 0
- 739              		@ frame_needed = 0, uses_anonymous_args = 0
- 740              		@ link register save eliminated.
- 129:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
- 741              		.loc 1 129 5 view .LVU227
- 742              	.LBB56:
- 743              		.loc 1 129 23 view .LVU228
- 130:src/Ramo.cpp  ****     {
- 131:src/Ramo.cpp  ****         _amp[i] = g[i];
- 744              		.loc 1 131 9 view .LVU229
- 745              		.loc 1 131 22 is_stmt 0 view .LVU230
- 746 0000 0B68     		ldr	r3, [r1]	@ float
- 747              		.loc 1 131 17 view .LVU231
- 748 0002 4360     		str	r3, [r0, #4]	@ float
- 129:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
- 749              		.loc 1 129 5 is_stmt 1 view .LVU232
- 750              	.LVL32:
- 129:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
- 751              		.loc 1 129 23 view .LVU233
- 752              		.loc 1 131 9 view .LVU234
- 753              		.loc 1 131 22 is_stmt 0 view .LVU235
- 754 0004 4B68     		ldr	r3, [r1, #4]	@ float
- 755              		.loc 1 131 17 view .LVU236
- 756 0006 8360     		str	r3, [r0, #8]	@ float
- 129:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
- 757              		.loc 1 129 5 is_stmt 1 view .LVU237
- 758              	.LVL33:
- 129:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
- 759              		.loc 1 129 23 view .LVU238
- 760              	.LBE56:
- 132:src/Ramo.cpp  ****     }
- 133:src/Ramo.cpp  **** }
- 761              		.loc 1 133 1 is_stmt 0 view .LVU239
- 762 0008 7047     		bx	lr
- 763              		.cfi_endproc
- 764              	.LFE4826:
- 766 000a 00BF     		.section	.text._ZN4Ramo8SetShapeEf,"ax",%progbits
- 767              		.align	1
- 768              		.p2align 2,,3
- 769              		.global	_ZN4Ramo8SetShapeEf
- 770              		.syntax unified
- 771              		.thumb
- 772              		.thumb_func
- 773              		.fpu fpv5-d16
- 775              	_ZN4Ramo8SetShapeEf:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 29
+ 728 0002 4360     		str	r3, [r0, #4]	@ float
+ 133:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
+ 729              		.loc 1 133 5 is_stmt 1 view .LVU224
+ 730              	.LVL27:
+ 133:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
+ 731              		.loc 1 133 23 view .LVU225
+ 732              		.loc 1 135 9 view .LVU226
+ 733              		.loc 1 135 22 is_stmt 0 view .LVU227
+ 734 0004 4B68     		ldr	r3, [r1, #4]	@ float
+ 735              		.loc 1 135 17 view .LVU228
+ 736 0006 8360     		str	r3, [r0, #8]	@ float
+ 133:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
+ 737              		.loc 1 133 5 is_stmt 1 view .LVU229
+ 738              	.LVL28:
+ 133:src/Ramo.cpp  ****     for (int i = 0; i < n; i++)
+ 739              		.loc 1 133 23 view .LVU230
+ 740              	.LBE48:
+ 136:src/Ramo.cpp  ****     }
+ 137:src/Ramo.cpp  **** }
+ 741              		.loc 1 137 1 is_stmt 0 view .LVU231
+ 742 0008 7047     		bx	lr
+ 743              		.cfi_endproc
+ 744              	.LFE4826:
+ 746 000a 00BF     		.section	.text._ZN4Ramo8SetShapeEf,"ax",%progbits
+ 747              		.align	1
+ 748              		.p2align 2,,3
+ 749              		.global	_ZN4Ramo8SetShapeEf
+ 750              		.syntax unified
+ 751              		.thumb
+ 752              		.thumb_func
+ 753              		.fpu fpv5-d16
+ 755              	_ZN4Ramo8SetShapeEf:
+ 756              	.LVL29:
+ 757              	.LFB4827:
+ 138:src/Ramo.cpp  **** 
+ 139:src/Ramo.cpp  **** void Ramo::SetShape(float s)
+ 140:src/Ramo.cpp  **** {
+ 758              		.loc 1 140 1 is_stmt 1 view -0
+ 759              		.cfi_startproc
+ 760              		@ args = 0, pretend = 0, frame = 0
+ 761              		@ frame_needed = 0, uses_anonymous_args = 0
+ 762              		@ link register save eliminated.
+ 141:src/Ramo.cpp  ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
+ 763              		.loc 1 141 5 view .LVU233
+ 764              		.loc 1 141 23 is_stmt 0 view .LVU234
+ 765 0000 B7EEC04A 		vcvt.f64.f32	d4, s0
+ 142:src/Ramo.cpp  ****     _pw =  0.5f + s * 0.35f;
+ 766              		.loc 1 142 17 view .LVU235
+ 767 0004 DFED103A 		vldr.32	s7, .L55+16
+ 768 0008 F6EE006A 		vmov.f32	s13, #5.0e-1
+ 143:src/Ramo.cpp  ****     _c = s* 0.25;
+ 769              		.loc 1 143 11 view .LVU236
+ 770 000c B5EE006A 		vmov.f32	s12, #2.5e-1
+ 141:src/Ramo.cpp  ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
+ 771              		.loc 1 141 21 view .LVU237
+ 772 0010 9FED095B 		vldr.64	d5, .L55
+ 773 0014 9FED0A7B 		vldr.64	d7, .L55+8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 21
 
 
- 776              	.LVL34:
- 777              	.LFB4827:
- 134:src/Ramo.cpp  **** 
- 135:src/Ramo.cpp  **** void Ramo::SetShape(float s)
- 136:src/Ramo.cpp  **** {
- 778              		.loc 1 136 1 is_stmt 1 view -0
- 779              		.cfi_startproc
- 780              		@ args = 0, pretend = 0, frame = 0
- 781              		@ frame_needed = 0, uses_anonymous_args = 0
- 782              		@ link register save eliminated.
- 137:src/Ramo.cpp  ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
- 783              		.loc 1 137 5 view .LVU241
- 784              		.loc 1 137 23 is_stmt 0 view .LVU242
- 785 0000 B7EEC05A 		vcvt.f64.f32	d5, s0
- 138:src/Ramo.cpp  ****     _pw =0.05 +  s*0.75;
- 139:src/Ramo.cpp  ****     _c = s;
- 786              		.loc 1 139 8 view .LVU243
- 787 0004 80ED060A 		vstr.32	s0, [r0, #24]
- 138:src/Ramo.cpp  ****     _pw =0.05 +  s*0.75;
- 788              		.loc 1 138 15 view .LVU244
- 789 0008 B6EE084B 		vmov.f64	d4, #7.5e-1
- 137:src/Ramo.cpp  ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
- 790              		.loc 1 137 21 view .LVU245
- 791 000c 9FED0A3B 		vldr.64	d3, .L55
- 792 0010 9FED0B6B 		vldr.64	d6, .L55+8
- 138:src/Ramo.cpp  ****     _pw =0.05 +  s*0.75;
- 793              		.loc 1 138 15 view .LVU246
- 794 0014 9FED0C7B 		vldr.64	d7, .L55+16
- 137:src/Ramo.cpp  ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
- 795              		.loc 1 137 21 view .LVU247
- 796 0018 A5EE036B 		vfma.f64	d6, d5, d3
- 138:src/Ramo.cpp  ****     _pw =0.05 +  s*0.75;
- 797              		.loc 1 138 15 view .LVU248
- 798 001c A5EE047B 		vfma.f64	d7, d5, d4
- 137:src/Ramo.cpp  ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
- 799              		.loc 1 137 21 view .LVU249
- 800 0020 B7EEC66B 		vcvt.f32.f64	s12, d6
- 801 0024 80ED056A 		vstr.32	s12, [r0, #20]
- 137:src/Ramo.cpp  ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
- 802              		.loc 1 137 38 is_stmt 1 view .LVU250
- 138:src/Ramo.cpp  ****     _pw =0.05 +  s*0.75;
- 803              		.loc 1 138 5 view .LVU251
- 138:src/Ramo.cpp  ****     _pw =0.05 +  s*0.75;
- 804              		.loc 1 138 15 is_stmt 0 view .LVU252
- 805 0028 B7EEC77B 		vcvt.f32.f64	s14, d7
- 806 002c 80ED047A 		vstr.32	s14, [r0, #16]
- 807              		.loc 1 139 5 is_stmt 1 view .LVU253
- 140:src/Ramo.cpp  **** }
- 808              		.loc 1 140 1 is_stmt 0 view .LVU254
- 809 0030 7047     		bx	lr
- 810              	.L56:
- 811 0032 00BFAFF3 		.align	3
- 811      0080
- 812              	.L55:
- 813 0038 9A999999 		.word	-1717986918
- 814 003c 9999D93F 		.word	1071225241
- 815 0040 33333333 		.word	858993459
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 30
+ 142:src/Ramo.cpp  ****     _pw =  0.5f + s * 0.35f;
+ 774              		.loc 1 142 17 view .LVU238
+ 775 0018 E0EE236A 		vfma.f32	s13, s0, s7
+ 776              		.loc 1 143 11 view .LVU239
+ 777 001c 20EE060A 		vmul.f32	s0, s0, s12
+ 778              	.LVL30:
+ 141:src/Ramo.cpp  ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
+ 779              		.loc 1 141 21 view .LVU240
+ 780 0020 A4EE057B 		vfma.f64	d7, d4, d5
+ 781              		.loc 1 143 8 view .LVU241
+ 782 0024 80ED060A 		vstr.32	s0, [r0, #24]
+ 142:src/Ramo.cpp  ****     _pw =  0.5f + s * 0.35f;
+ 783              		.loc 1 142 9 view .LVU242
+ 784 0028 C0ED046A 		vstr.32	s13, [r0, #16]
+ 141:src/Ramo.cpp  ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
+ 785              		.loc 1 141 21 view .LVU243
+ 786 002c B7EEC77B 		vcvt.f32.f64	s14, d7
+ 787 0030 80ED057A 		vstr.32	s14, [r0, #20]
+ 141:src/Ramo.cpp  ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
+ 788              		.loc 1 141 38 is_stmt 1 view .LVU244
+ 142:src/Ramo.cpp  ****     _pw =  0.5f + s * 0.35f;
+ 789              		.loc 1 142 5 view .LVU245
+ 790              		.loc 1 143 5 view .LVU246
+ 144:src/Ramo.cpp  **** }
+ 791              		.loc 1 144 1 is_stmt 0 view .LVU247
+ 792 0034 7047     		bx	lr
+ 793              	.L56:
+ 794 0036 00BF     		.align	3
+ 795              	.L55:
+ 796 0038 9A999999 		.word	-1717986918
+ 797 003c 9999D93F 		.word	1071225241
+ 798 0040 33333333 		.word	858993459
+ 799 0044 3333E33F 		.word	1071854387
+ 800 0048 3333B33E 		.word	1051931443
+ 801              		.cfi_endproc
+ 802              	.LFE4827:
+ 804              		.text
+ 805              	.Letext0:
+ 806              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 807              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 808              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 809              		.file 6 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 810              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 811              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 812              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 813              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 814              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 815              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 816              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 817              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 818              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 819              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 820              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 821              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 822              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\charconv.h
+ 823              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 824              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 22
 
 
- 816 0044 3333E33F 		.word	1071854387
- 817 0048 9A999999 		.word	-1717986918
- 818 004c 9999A93F 		.word	1068079513
- 819              		.cfi_endproc
- 820              	.LFE4827:
- 822              		.text
- 823              	.Letext0:
- 824              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
- 825              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
- 826              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
- 827              		.file 7 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
- 828              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
- 829              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
- 830              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
- 831              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
- 832              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
- 833              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
- 834              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
- 835              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
- 836              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
- 837              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
- 838              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
- 839              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\charconv.h
- 840              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
- 841              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
- 842              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
- 843              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
- 844              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
- 845              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
- 846              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
- 847              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
- 848              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
- 849              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
- 850              		.file 30 "../../libs/DaisySP/Source/Control/adenv.h"
- 851              		.file 31 "../../libs/DaisySP/Source/Utility/dsp.h"
- 852              		.file 32 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
- 853              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
- 854              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
- 855              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
- 856              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
- 857              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
- 858              		.file 38 "../../libs/libDaisy/src/daisy_core.h"
- 859              		.file 39 "../../libs/libDaisy/src/util/wav_format.h"
- 860              		.file 40 "../../libs/libDaisy/src/dev/sr_595.h"
- 861              		.file 41 "../../libs/libDaisy/src/dev/max11300.h"
- 862              		.file 42 "../../libs/libDaisy/src/daisy_seed.h"
- 863              		.file 43 "src/Ramo.h"
- 864              		.file 44 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s 			page 31
+ 825              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 826              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 827              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 828              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 829              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 830              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 831              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 832              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 833              		.file 30 "../../libs/DaisySP/Source/Control/adenv.h"
+ 834              		.file 31 "../../libs/DaisySP/Source/Utility/dsp.h"
+ 835              		.file 32 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 836              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 837              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 838              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 839              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 840              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 841              		.file 38 "../../libs/libDaisy/src/daisy_core.h"
+ 842              		.file 39 "../../libs/libDaisy/src/util/wav_format.h"
+ 843              		.file 40 "../../libs/libDaisy/src/dev/sr_595.h"
+ 844              		.file 41 "../../libs/libDaisy/src/dev/max11300.h"
+ 845              		.file 42 "../../libs/libDaisy/src/daisy_seed.h"
+ 846              		.file 43 "src/Ramo.h"
+ 847              		.file 44 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s 			page 23
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Ramo.cpp
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:17     .text._ZN4RamoC2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:26     .text._ZN4RamoC2Ev:00000000 _ZN4RamoC2Ev
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:26     .text._ZN4RamoC2Ev:00000000 _ZN4RamoC1Ev
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:43     .text._ZN4RamoD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:51     .text._ZN4RamoD2Ev:00000000 _ZN4RamoD2Ev
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:51     .text._ZN4RamoD2Ev:00000000 _ZN4RamoD1Ev
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:67     .text._ZN4Ramo4InitEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:75     .text._ZN4Ramo4InitEf:00000000 _ZN4Ramo4InitEf
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:179    .text._ZN4Ramo4InitEf:00000048 $d
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:184    .text._ZN4Ramo7ProcessEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:192    .text._ZN4Ramo7ProcessEv:00000000 _ZN4Ramo7ProcessEv
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:234    .text._ZN4Ramo7ProcessEv:00000024 $d
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:238    .text._ZN4Ramo7ProcessEv:00000028 $t
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:505    .text._ZN4Ramo7ProcessEv:000001a4 $d
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:511    .text._ZN4Ramo12CalcPhaseIncEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:519    .text._ZN4Ramo12CalcPhaseIncEf:00000000 _ZN4Ramo12CalcPhaseIncEf
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:539    .text._ZN4Ramo12SetWaveformsEPh:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:547    .text._ZN4Ramo12SetWaveformsEPh:00000000 _ZN4Ramo12SetWaveformsEPh
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:587    .text._ZN4Ramo7SetFreqEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:595    .text._ZN4Ramo7SetFreqEf:00000000 _ZN4Ramo7SetFreqEf
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:655    .text._ZN4Ramo9SetDetuneEPf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:663    .text._ZN4Ramo9SetDetuneEPf:00000000 _ZN4Ramo9SetDetuneEPf
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:725    .text._ZN4Ramo6SetAmpEPf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:733    .text._ZN4Ramo6SetAmpEPf:00000000 _ZN4Ramo6SetAmpEPf
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:767    .text._ZN4Ramo8SetShapeEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:775    .text._ZN4Ramo8SetShapeEf:00000000 _ZN4Ramo8SetShapeEf
-C:\Users\skipi\AppData\Local\Temp\ccHPl4IX.s:813    .text._ZN4Ramo8SetShapeEf:00000038 $d
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:17     .text._ZN4RamoC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:26     .text._ZN4RamoC2Ev:00000000 _ZN4RamoC2Ev
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:26     .text._ZN4RamoC2Ev:00000000 _ZN4RamoC1Ev
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:43     .text._ZN4RamoD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:51     .text._ZN4RamoD2Ev:00000000 _ZN4RamoD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:51     .text._ZN4RamoD2Ev:00000000 _ZN4RamoD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:67     .text._ZN4Ramo4InitEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:75     .text._ZN4Ramo4InitEf:00000000 _ZN4Ramo4InitEf
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:179    .text._ZN4Ramo4InitEf:00000048 $d
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:184    .text._ZN4Ramo7ProcessEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:192    .text._ZN4Ramo7ProcessEv:00000000 _ZN4Ramo7ProcessEv
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:234    .text._ZN4Ramo7ProcessEv:00000024 $d
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:238    .text._ZN4Ramo7ProcessEv:00000028 $t
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:481    .text._ZN4Ramo7ProcessEv:000001b0 $d
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:491    .text._ZN4Ramo12CalcPhaseIncEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:499    .text._ZN4Ramo12CalcPhaseIncEf:00000000 _ZN4Ramo12CalcPhaseIncEf
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:519    .text._ZN4Ramo12SetWaveformsEPh:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:527    .text._ZN4Ramo12SetWaveformsEPh:00000000 _ZN4Ramo12SetWaveformsEPh
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:567    .text._ZN4Ramo7SetFreqEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:575    .text._ZN4Ramo7SetFreqEf:00000000 _ZN4Ramo7SetFreqEf
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:635    .text._ZN4Ramo9SetDetuneEPf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:643    .text._ZN4Ramo9SetDetuneEPf:00000000 _ZN4Ramo9SetDetuneEPf
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:705    .text._ZN4Ramo6SetAmpEPf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:713    .text._ZN4Ramo6SetAmpEPf:00000000 _ZN4Ramo6SetAmpEPf
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:747    .text._ZN4Ramo8SetShapeEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:755    .text._ZN4Ramo8SetShapeEf:00000000 _ZN4Ramo8SetShapeEf
+C:\Users\skipi\AppData\Local\Temp\ccbf8u4J.s:796    .text._ZN4Ramo8SetShapeEf:00000038 $d
 
 UNDEFINED SYMBOLS
 sinf
-sqrtf
