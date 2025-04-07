@@ -15,7 +15,7 @@ static Ramo ramo;                                                // Object for t
 
 uint8_t wf[n] = {1,1};                                          // Array for waveforms
 float ef[n] = {1, 1};                                            // Array for detune
-float g[n] = {0.5f, 0.5f};                                       // Array for amplitude
+float a[n] = {0.5f, 0.5f};                                       // Array for amplitude
 
 float f;                                                         // Frequency
 float shape;                                                     // Shape modulation
@@ -56,8 +56,9 @@ int main() {
     ramo.SetWaveforms(wf);                                                      // Set waveforms
     ramo.SetFreq(440.0f);                                                       // Set frequency
     ramo.SetDetune(ef);                                                         // Set detune
-    ramo.SetAmp(g);                                                             // Set amplitude
+    ramo.SetAmp(a);                                                             // Set amplitude
     ramo.SetShape(0.5f);                                                        // Set shape modulation
+    ramo.SetGain(0.5f);                                                       // Set gain
 
     InitHardware();                                                             // Initialize potentiometers
     hw.StartAudio(AudioCallback);                                               // Start the audio callback
