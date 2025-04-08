@@ -43,8 +43,11 @@ static Svf filter_Pad;                                           // Filter objec
 
 
 float Raw_Pluck, Raw_Bass, Raw_Pad;                                   // Raw signal variables
-float out_noFX, out_FX;                                                       // Output signal variable
+float out_noFX;                                                       // Output signal variable
                                                      
+
+
+
 
 float now_f_lfo_Bass ;
 float now_f_lfo_Pluck ;
@@ -113,7 +116,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 //------------------------------------------------------------------------------------------------------Somma tutto con guadagni
     out_noFX = filter_Pluck.Low() * mix_amp_Pluck + filter_Bass.Low() * mix_amp_Bass + filter_Pad.Low() * mix_amp_Pad; // Output processed signal (left channel)
 //-------------------------------------------------------------------------------------------------------Applica effetto
-    // out_FX = delay.Process(out_noFX); // Process the output signal with the delay effect
+    //float out_FX = delay.Process(out_noFX); // Process the output signal with the delay effect
 
 //-------------------------------------------------------------------------------------------------------Output
         out[0][i] = out_noFX;                                         // Output processed signal (left channel)
@@ -308,9 +311,9 @@ int main() {
 			hw.PrintLine ( "effect %d gate %f",i, effect[i].getGate());
 			hw.PrintLine ( "effect %d value %f",i, effect[i].getValue());
 		}
-        //Gate_Pluck = penta[0].getGate(); // Get the gate value for Pluck
-        //Gate_Bass = penta[1].getGate(); // Get the gate value for Bass
-        //Gate_Pad = penta[2].getGate(); // Get the gate value for Pad    
+        Gate_Pluck = penta[0].getGate(); // Get the gate value for Pluck
+        Gate_Bass = penta[1].getGate(); // Get the gate value for Bass
+        Gate_Pad = penta[2].getGate(); // Get the gate value for Pad    
 
         knob1 = (float) penta[0].getRaw()/65535.0f;
         knob2 = (float) penta[1].getRaw()/65535.0f;
@@ -324,9 +327,16 @@ int main() {
         now_f_lfo_Pluck = knob5*f_lfo_Bass; // Frequency of LFO for Pluck
         now_f_lfo_Pad = knob3*f_lfo_Pad; // Frequency of LFO for Pad
 
-        now_f_Pluck = f_Pluck + knob6*f_Pluck; // Frequency of Pluck
-        now_f_Bass = f_Bass + knob2*f_Bass; // Frequency of Bass
-        now_f_Pad = f_Pad + knob4*f_Pad; // Frequency of Pad
+        now_f_Pluck = f_Pluck+ knob6*f_Pluck; // Frequency of Pluck
+        now_f_Bass = f_Bass+ knob2*f_Bass; // Frequency of Bass
+        now_f_Pad = f_Pad+ knob4*f_Pad; // Frequency of Pad
+
+        //Gate_Pluck = ..
+        //Gate_Bass = ..
+        //Gate_Pad = ..
+
+        //time =..
+        //delayTime =logscale(time, MIN_DELAY, MAX_DELAY); // Imposta il tempo di delay
         
 
         // Wait 1ms to reduce CPU usage

@@ -5,8 +5,8 @@ TARGET = i2cComm
 CPP_SOURCES = i2cComm.cpp 
 
 # Library Locations
-LIBDAISY_DIR = ../../libDaisy/
-DAISYSP_DIR = ../../DaisySP/
+LIBDAISY_DIR = ../../../libs/libDaisy
+DAISYSP_DIR = ../../../libs/DaisySP
 
 # Core location, and generic Makefile.
 SYSTEM_FILES_DIR = $(LIBDAISY_DIR)/core
