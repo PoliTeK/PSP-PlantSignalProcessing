@@ -28,7 +28,7 @@ int main(void)
 	Pin pin_sda = {PORTB, 9};
 
 
-	I2CHandle::Result res1;
+	//I2CHandle::Result res1;
 	I2CHandle::Config i2c_conf;
 	i2c_conf.periph = I2CHandle::Config::Peripheral::I2C_1;
 	i2c_conf.speed  = I2CHandle::Config::Speed::I2C_400KHZ;
@@ -37,7 +37,7 @@ int main(void)
 	i2c_conf.pin_config.sda  = pin_sda; // D12
 	// initialise the peripheral
 	I2CHandle i2c;
-	res1 = i2c.Init(i2c_conf);
+	//res1 = i2c.Init(i2c_conf);
 	
 	/* FOR DEBUG*/
 	/*
@@ -54,13 +54,13 @@ int main(void)
 	daisy::Mpr121I2C mpr121Obj;
 
 	// creates variable to check output of functions
-	daisy::Mpr121I2C::Result res;
+	//daisy::Mpr121I2C::Result res;
 	// creates config for mpr121 (constructor sets all to deafult)
 	daisy::Mpr121I2C::Config mpr121ObjConf;
 
 	// init the object and checks return val
 	// check not working
-	res = mpr121Obj.Init(mpr121ObjConf);
+	//res = mpr121Obj.Init(mpr121ObjConf);
 
 	//TEST
 	//mpr121Obj.SetI2cHandle(i2c);

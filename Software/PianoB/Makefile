@@ -1,8 +1,8 @@
 # Project Name
-TARGET = Ramo
+TARGET = PianoB
 
 # Sources (inserisci tutti i file .cpp da compilare)
-CPP_SOURCES = ../Synth/Ramo/src/Ramo.cpp  main.cpp 
+CPP_SOURCES = src/Ramo.cpp  src/PianoB.cpp 
 
 
 

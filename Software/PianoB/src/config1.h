@@ -2,7 +2,7 @@
 
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\PLUCK
 //Parametri Oscillatori---------------------Parametri AmpEG-----------------Parametri FilterEG
-float wf_Pluck[n] = {2,1};                  float amp_env_Pluck;            float filt_env_Pluck;              
+uint8_t wf_Pluck[n] = {2,1};                               
 
 float ef_Pluck[n] = {1, 1};                                                  float f_EG_pluck = 2000.0f;                                                                                                  
 
@@ -10,7 +10,7 @@ float g_Pluck[n]  = {0.5f, 0.5f};
 
 float f_Pluck = 440.0f;
 
-float shape_Pluck; 
+
 
 //Parametri LFO-----------------Parametri Filter------------------Gate
 float f_lfo_Pluck = 10;         float ft_pluck = 3000.0f;         bool Gate_Pluck;
@@ -26,7 +26,7 @@ float mix_amp_Pluck = 0.33;
 
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\PADS
 //Parametri Oscillatori---------------------Parametri AmpEG-----------------Parametri FilterEG
-uint8_t wf_Pad[n] = {3,2};                  float amp_env_Pad;              float filt_env_Pad;
+uint8_t wf_Pad[n] = {3,2};                  
 
 float ef_Pad[n] = {1, 1};                                                   float f_EG_pad = 8000.0f;
 
@@ -34,7 +34,7 @@ float g_Pad[n] = {0.5f, 0.5f};
 
 float f_Pad = 220.0f; 
 
-float shape_Pad;
+
 
 //Parametri LFO-----------------Parametri Filter------------------Gate
 float f_lfo_Pad   = 10;         float ft_pad = 500.0f;            bool Gate_Pad;
@@ -52,7 +52,7 @@ float mix_amp_Pad = 0.33;
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\BASS
 //Parametri Oscillatori---------------------Parametri AmpEG-----------------Parametri FilterEG
 
-uint8_t wf_Bass[n] = {1,3};                 float  amp_env_Bass;            float filt_env_Bass;
+uint8_t wf_Bass[n] = {1,3};                 
 
 float ef_Bass[n] = {1, 1};                                                  float f_EG_bass = 5000.0f;
 
@@ -60,7 +60,7 @@ float g_Bass[n] = {0.5f, 0.5f};
 
 float f_Bass = 55.0f;
 
-float shape_Bass;
+
 
 // Parametri LFO-----------------Parametri Filter------------------Gate
 
@@ -77,7 +77,7 @@ float mix_amp_Bass = 0.33;
 
 
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\DELAY
-float time,
+float time;
 float delayTime;
 
 
