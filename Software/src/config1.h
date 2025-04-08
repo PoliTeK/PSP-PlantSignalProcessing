@@ -71,3 +71,18 @@ float mix_amp_Bass = 0.33;
                                             
 
 
+
+float time,
+float delayTime;
+
+
+const float MIN_DELAY = 0.02f;  // 20ms minimo delay
+const float MAX_DELAY = 1.0f;   // 1000ms massimo delay
+
+float LogScale(float pos, float min_value, float max_value) {
+    // Implementa una scala logaritmica tra min_value e max_value
+    float min_log = logf(min_value);
+    float max_log = logf(max_value);
+    float exp_scale = min_log + (max_log - min_log) * pos;
+    return expf(exp_scale);
+}
