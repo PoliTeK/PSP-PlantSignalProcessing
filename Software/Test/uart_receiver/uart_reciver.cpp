@@ -1,12 +1,13 @@
 #include "daisy_seed.h"
-#include "daisysp.h"
+// #include "daisysp.h"
 #include "pentaPianta.h"
 #include "Effect.h"
 using namespace daisy;
-using namespace daisysp;
+// using namespace daisysp;
 
-DaisySeed hw;
 UartHandler uart;
+UartHandler::Config config;
+DaisySeed hw;
 pentaPianta penta[3]; // Array of pentaPianta objects
 Effect effect[4]; // Array of Effect objects
 void getData()
@@ -15,7 +16,7 @@ void getData()
 	uint8_t data[3];
 	while (start_bit != 'B') // Wait for the start bit
 	{
-		uart.BlockingReceive(&start_bit, sizeof(start_bit), 100);
+		uart.BlockingReceive((uint8_t*)&start_bit, sizeof(start_bit), 100);
 	}
 	for (size_t i = 0; i < 3; i++)
 	{
@@ -50,7 +51,16 @@ void getData()
 int main(void)
 {
 	hw.Init();
-	uart.Init();
+	config.baudrate = 9600 ;
+ 	config.periph   = UartHandler::Config::Peripheral::USART_1;
+	config.stopbits      = UartHandler::Config::StopBits::BITS_1;
+	config.parity        = UartHandler::Config::Parity::NONE;
+	config.mode          = UartHandler::Config::Mode::RX;
+	config.wordlength    = UartHandler::Config::WordLength::BITS_8;
+	//config.pin_config.rx = {DSY_GPIOB, 7};  // (USART_1 RX) Daisy pin 15
+	//config.pin_config.tx = {DSY_GPIOB, 6};  // (USART_1 TX) Daisy pin 14
+	uart.Init(config);
+
 	uint8_t start_bit = 'S';
 	while (start_bit != 'I') // Wait for the start bit
 	{
