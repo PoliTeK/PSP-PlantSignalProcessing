@@ -21,9 +21,11 @@ float Pluck_Amp_ADSR[4] = {0.05f, 0.27f, 0.0f, 1.0f}; // Attack, Decay, Sustain,
 float Pluck_Filter_ADSR[4] = {0.1f, 0.03f, 0.0f, 1.0f}; // Attack, Decay, Sustain, Release
 
 float mix_amp_Pluck = 0.33;
+
+
+
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\PADS
 //Parametri Oscillatori---------------------Parametri AmpEG-----------------Parametri FilterEG
-
 uint8_t wf_Pad[n] = {3,2};                  float amp_env_Pad;              float filt_env_Pad;
 
 float ef_Pad[n] = {1, 1};                                                   float f_EG_pad = 8000.0f;
@@ -35,15 +37,18 @@ float f_Pad = 220.0f;
 float shape_Pad;
 
 //Parametri LFO-----------------Parametri Filter------------------Gate
-
 float f_lfo_Pad   = 10;         float ft_pad = 500.0f;            bool Gate_Pad;
-float amp_lfo_Pad = 0.3;        float res_pad = 0.1f; // Resonance for filter
-                                float drive_pad = 0.5f; // Drive for filter
+float amp_lfo_Pad = 0.3;        float res_pad = 0.1f; 
+                                float drive_pad = 0.5f; 
 //-------------------------------------------------------------------------------------ADSR PADS
 float Pad_Amp_ADSR[4] = {12.0f, 0.5f, 0.4f, 1.0f}; // Attack, Decay, Sustain, Release
 float Pad_Filter_ADSR[4] = {9.0f, 0.4f, 0.0f, 1.0f}; // Attack, Decay, Sustain, Release
 
 float mix_amp_Pad = 0.33;
+
+
+
+
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\BASS
 //Parametri Oscillatori---------------------Parametri AmpEG-----------------Parametri FilterEG
 
@@ -71,7 +76,7 @@ float mix_amp_Bass = 0.33;
                                             
 
 
-
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\DELAY
 float time,
 float delayTime;
 
@@ -86,3 +91,5 @@ float LogScale(float pos, float min_value, float max_value) {
     float exp_scale = min_log + (max_log - min_log) * pos;
     return expf(exp_scale);
 }
+
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\REVERB
