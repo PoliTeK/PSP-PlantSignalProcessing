@@ -29,14 +29,14 @@ int main(void)
 
 
 	//I2CHandle::Result res1;
-	I2CHandle::Config i2c_conf;
-	i2c_conf.periph = I2CHandle::Config::Peripheral::I2C_1;
-	i2c_conf.speed  = I2CHandle::Config::Speed::I2C_400KHZ;
-	i2c_conf.mode   = I2CHandle::Config::Mode::I2C_MASTER;
-	i2c_conf.pin_config.scl  = pin_scl; // D11
-	i2c_conf.pin_config.sda  = pin_sda; // D12
+	//I2CHandle::Config i2c_conf;
+	//i2c_conf.periph = I2CHandle::Config::Peripheral::I2C_1;
+	//i2c_conf.speed  = I2CHandle::Config::Speed::I2C_400KHZ;
+	//i2c_conf.mode   = I2CHandle::Config::Mode::I2C_MASTER;
+	//i2c_conf.pin_config.scl  = pin_scl; // D11
+	//i2c_conf.pin_config.sda  = pin_sda; // D12
 	// initialise the peripheral
-	I2CHandle i2c;
+	//I2CHandle i2c;
 	//res1 = i2c.Init(i2c_conf);
 	
 	/* FOR DEBUG*/
@@ -75,10 +75,10 @@ int main(void)
 	}
 	*/
 	// hw.PrintLine("test");
+	mpr121Obj.Init(mpr121ObjConf);
 	while(1) {
 		// questo ritorna il registro relativo ai gate, 
 		hw.PrintLine ("Gate register: %d ", mpr121Obj.Touched());
-		hw.PrintLine("test");
 		hw.DelayMs(10);
 	}
 }
