@@ -21,6 +21,9 @@ public:
     void zeroCount() { _count = 0; } //reset the count of the number of times the sensor has been read
     void setRawValue(uint16_t value) { _raw_value = value; } //set the raw value of the sensor
     int getFreq();
+    int getCount() { return _count; } //get the count of the number of times the sensor has been read
+    int getRawValue() { return _raw_value; } //get the raw value of the sensor
+    int getGate() { return _count > 0; } //get the gate of the sensor
     private:
     int* _soglie;
     int _f0;

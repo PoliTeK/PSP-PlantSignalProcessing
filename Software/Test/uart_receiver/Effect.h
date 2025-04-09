@@ -4,7 +4,6 @@
 
 #ifndef EFFECT_H
 #define EFFECT_H
-#include <iostream>
 #include <stdint.h>
 
 

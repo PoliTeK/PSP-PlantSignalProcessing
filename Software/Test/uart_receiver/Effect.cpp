@@ -2,15 +2,13 @@
 
 
     void Effect::begin(int* thresholdsI){
-        if (sizeof(_thresholds) / sizeof(_thresholds[0]) != 7){         //controls that the size of the input array is right when calibrating the sensor 
-            std::cout<<"Numero sbagliato di soglie"<<std::endl;
-        } else {
+        
             _thresholds = thresholdsI;
             _gate = false; //initialize the gate to false
             _raw_value = 0; //initialize the raw value to 0
         }
         
-    }
+    
 
 
 
