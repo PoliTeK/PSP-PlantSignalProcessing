@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -56,9 +56,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   32              		@ args = 0, pretend = 0, frame = 0
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		@ link register save eliminated.
-  35              	.LBB257:
-  36              	.LBI257:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 2
+  35              	.LBB259:
+  36              	.LBI259:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 2
 
 
   37              		.file 2 "../../../libs/libDaisy/src/dev/codec_ak4556.h"
@@ -85,9 +85,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   21:../../../libs/libDaisy/src/dev/codec_ak4556.h ****     ~Ak4556() {}
   38              		.loc 2 21 5 view .LVU1
   39              		.loc 2 21 5 is_stmt 0 view .LVU2
-  40              	.LBE257:
-  41              	.LBB258:
-  42              	.LBI258:
+  40              	.LBE259:
+  41              	.LBB260:
+  42              	.LBI260:
   43              		.file 3 "../../../libs/libDaisy/src/sys/system.h"
    1:../../../libs/libDaisy/src/sys/system.h **** #ifndef DSY_SYSTEM_H
    2:../../../libs/libDaisy/src/sys/system.h **** #define DSY_SYSTEM_H
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   27:../../../libs/libDaisy/src/sys/system.h ****             FREQ_400MHZ,
   28:../../../libs/libDaisy/src/sys/system.h ****             FREQ_480MHZ,
   29:../../../libs/libDaisy/src/sys/system.h ****         };
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 3
 
 
   30:../../../libs/libDaisy/src/sys/system.h **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   84:../../../libs/libDaisy/src/sys/system.h ****         } status;
   85:../../../libs/libDaisy/src/sys/system.h ****         uint32_t data;
   86:../../../libs/libDaisy/src/sys/system.h ****         enum class Version : uint32_t
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 4
 
 
   87:../../../libs/libDaisy/src/sys/system.h ****         {
@@ -194,9 +194,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   97:../../../libs/libDaisy/src/sys/system.h ****     ~System() {}
   44              		.loc 3 97 5 is_stmt 1 view .LVU3
   45              		.loc 3 97 5 is_stmt 0 view .LVU4
-  46              	.LBE258:
-  47              	.LBB259:
-  48              	.LBI259:
+  46              	.LBE260:
+  47              	.LBB261:
+  48              	.LBI261:
   49              		.file 4 "../../../libs/libDaisy/src/hid/usb.h"
    1:../../../libs/libDaisy/src/hid/usb.h **** #pragma once
    2:../../../libs/libDaisy/src/hid/usb.h **** #ifndef DSY_HID_USB_H
@@ -238,16 +238,16 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   38:../../../libs/libDaisy/src/hid/usb.h ****     typedef void (*ReceiveCallback)(uint8_t* buff, uint32_t* len);
   39:../../../libs/libDaisy/src/hid/usb.h **** 
   40:../../../libs/libDaisy/src/hid/usb.h ****     UsbHandle() {}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 5
 
 
   41:../../../libs/libDaisy/src/hid/usb.h **** 
   42:../../../libs/libDaisy/src/hid/usb.h ****     ~UsbHandle() {}
   50              		.loc 4 42 5 is_stmt 1 view .LVU5
   51              		.loc 4 42 5 is_stmt 0 view .LVU6
-  52              	.LBE259:
-  53              	.LBB260:
-  54              	.LBI260:
+  52              	.LBE261:
+  53              	.LBB262:
+  54              	.LBI262:
   55              		.file 5 "../../../libs/libDaisy/src/per/adc.h"
    1:../../../libs/libDaisy/src/per/adc.h **** #pragma once
    2:../../../libs/libDaisy/src/per/adc.h **** #ifndef DSY_ADC_H
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   47:../../../libs/libDaisy/src/per/adc.h ****         SPEED_8CYCLES_5,
   48:../../../libs/libDaisy/src/per/adc.h ****         SPEED_16CYCLES_5,
   49:../../../libs/libDaisy/src/per/adc.h ****         SPEED_32CYCLES_5,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 6
 
 
   50:../../../libs/libDaisy/src/per/adc.h ****         SPEED_64CYCLES_5,
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  104:../../../libs/libDaisy/src/per/adc.h ****         OVS_512,  /**< & */
  105:../../../libs/libDaisy/src/per/adc.h ****         OVS_1024, /**< & */
  106:../../../libs/libDaisy/src/per/adc.h ****         OVS_LAST, /**< & */
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 7
 
 
  107:../../../libs/libDaisy/src/per/adc.h ****     };
@@ -367,9 +367,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  110:../../../libs/libDaisy/src/per/adc.h ****     ~AdcHandle() {}
   56              		.loc 5 110 5 is_stmt 1 view .LVU7
   57              		.loc 5 110 5 is_stmt 0 view .LVU8
-  58              	.LBE260:
-  59              	.LBB261:
-  60              	.LBI261:
+  58              	.LBE262:
+  59              	.LBB263:
+  60              	.LBI263:
   61              		.file 6 "../../../libs/libDaisy/src/hid/audio.h"
    1:../../../libs/libDaisy/src/hid/audio.h **** #ifndef DSY_AUDIO_H
    2:../../../libs/libDaisy/src/hid/audio.h **** #define DSY_AUDIO_H /**< & */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   45:../../../libs/libDaisy/src/hid/audio.h ****     enum class Result
   46:../../../libs/libDaisy/src/hid/audio.h ****     {
   47:../../../libs/libDaisy/src/hid/audio.h ****         OK,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 8
 
 
   48:../../../libs/libDaisy/src/hid/audio.h ****         ERR,
@@ -464,7 +464,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   88:../../../libs/libDaisy/src/hid/audio.h ****     ~AudioHandle() {}
   62              		.loc 6 88 5 is_stmt 1 view .LVU9
   63              		.loc 6 88 5 is_stmt 0 view .LVU10
-  64              	.LBE261:
+  64              	.LBE263:
   65              		.loc 1 22 19 view .LVU11
   66 0000 7047     		bx	lr
   67              		.cfi_endproc
@@ -478,21 +478,25 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   75      20726567 
   75      69737465 
   75      723A2025 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 9
 
 
   75      642000
-  76              		.section	.text.startup.main,"ax",%progbits
-  77              		.align	1
-  78              		.p2align 2,,3
-  79              		.global	main
-  80              		.syntax unified
-  81              		.thumb
-  82              		.thumb_func
-  83              		.fpu fpv5-d16
-  85              	main:
-  86              	.LFB4814:
-  87              		.file 7 "i2cComm.cpp"
+  76 0013 00       		.align	2
+  77              	.LC3:
+  78 0014 74657374 		.ascii	"test\000"
+  78      00
+  79              		.section	.text.startup.main,"ax",%progbits
+  80              		.align	1
+  81              		.p2align 2,,3
+  82              		.global	main
+  83              		.syntax unified
+  84              		.thumb
+  85              		.thumb_func
+  86              		.fpu fpv5-d16
+  88              	main:
+  89              	.LFB4814:
+  90              		.file 7 "i2cComm.cpp"
    1:i2cComm.cpp   **** #include "daisy_seed.h"
    2:i2cComm.cpp   **** #include "daisysp.h"
    3:i2cComm.cpp   **** 
@@ -512,37 +516,37 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   17:i2cComm.cpp   **** 
   18:i2cComm.cpp   **** int main(void)
   19:i2cComm.cpp   **** {
-  88              		.loc 7 19 1 is_stmt 1 view -0
-  89              		.cfi_startproc
-  90              		@ Volatile: function does not return.
-  91              		@ args = 0, pretend = 0, frame = 56
-  92              		@ frame_needed = 0, uses_anonymous_args = 0
+  91              		.loc 7 19 1 is_stmt 1 view -0
+  92              		.cfi_startproc
+  93              		@ Volatile: function does not return.
+  94              		@ args = 0, pretend = 0, frame = 56
+  95              		@ frame_needed = 0, uses_anonymous_args = 0
   20:i2cComm.cpp   **** 	hw.Init();
-  93              		.loc 7 20 2 view .LVU13
+  96              		.loc 7 20 2 view .LVU13
   19:i2cComm.cpp   **** 	hw.Init();
-  94              		.loc 7 19 1 is_stmt 0 view .LVU14
-  95 0000 00B5     		push	{lr}
-  96              		.cfi_def_cfa_offset 4
-  97              		.cfi_offset 14, -4
-  98              		.loc 7 20 9 view .LVU15
-  99 0002 0021     		movs	r1, #0
+  97              		.loc 7 19 1 is_stmt 0 view .LVU14
+  98 0000 00B5     		push	{lr}
+  99              		.cfi_def_cfa_offset 4
+ 100              		.cfi_offset 14, -4
+ 101              		.loc 7 20 9 view .LVU15
+ 102 0002 0021     		movs	r1, #0
   19:i2cComm.cpp   **** 	hw.Init();
- 100              		.loc 7 19 1 view .LVU16
- 101 0004 91B0     		sub	sp, sp, #68
- 102              		.cfi_def_cfa_offset 72
- 103              		.loc 7 20 9 view .LVU17
- 104 0006 2748     		ldr	r0, .L6
- 105              	.LBB318:
- 106              	.LBB319:
- 107              	.LBB320:
- 108              	.LBB321:
- 109              	.LBB322:
- 110              	.LBB323:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 10
+ 103              		.loc 7 19 1 view .LVU16
+ 104 0004 91B0     		sub	sp, sp, #68
+ 105              		.cfi_def_cfa_offset 72
+ 106              		.loc 7 20 9 view .LVU17
+ 107 0006 2948     		ldr	r0, .L6
+ 108              	.LBB322:
+ 109              	.LBB323:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 10
 
 
- 111              	.LBB324:
- 112              		.file 8 "../../../libs/libDaisy/src/dev/mpr121.h"
+ 110              	.LBB324:
+ 111              	.LBB325:
+ 112              	.LBB326:
+ 113              	.LBB327:
+ 114              	.LBB328:
+ 115              		.file 8 "../../../libs/libDaisy/src/dev/mpr121.h"
    1:../../../libs/libDaisy/src/dev/mpr121.h **** #pragma once
    2:../../../libs/libDaisy/src/dev/mpr121.h **** #ifndef DSY_MPR121_H
    3:../../../libs/libDaisy/src/dev/mpr121.h **** #define DSY_MPR121_H
@@ -580,27 +584,27 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   35:../../../libs/libDaisy/src/dev/mpr121.h ****         {
   36:../../../libs/libDaisy/src/dev/mpr121.h ****             periph = I2CHandle::Config::Peripheral::I2C_1;
   37:../../../libs/libDaisy/src/dev/mpr121.h ****             speed  = I2CHandle::Config::Speed::I2C_400KHZ;
- 113              		.loc 8 37 20 view .LVU18
- 114 0008 0124     		movs	r4, #1
- 115              	.LBE324:
- 116              	.LBE323:
- 117              	.LBE322:
- 118              	.LBE321:
- 119              	.LBE320:
- 120              	.LBE319:
- 121              	.LBE318:
- 122              		.loc 7 20 9 view .LVU19
- 123 000a FFF7FEFF 		bl	_ZN5daisy9DaisySeed4InitEb
- 124              	.LVL1:
+ 116              		.loc 8 37 20 view .LVU18
+ 117 0008 0124     		movs	r4, #1
+ 118              	.LBE328:
+ 119              	.LBE327:
+ 120              	.LBE326:
+ 121              	.LBE325:
+ 122              	.LBE324:
+ 123              	.LBE323:
+ 124              	.LBE322:
+ 125              		.loc 7 20 9 view .LVU19
+ 126 000a FFF7FEFF 		bl	_ZN5daisy9DaisySeed4InitEb
+ 127              	.LVL1:
   21:i2cComm.cpp   **** 	hw.StartLog (true); /* true == wait for PC: will block until a terminal is connected */
- 125              		.loc 7 21 2 is_stmt 1 view .LVU20
- 126              	.LBB360:
- 127              	.LBI360:
+ 128              		.loc 7 21 2 is_stmt 1 view .LVU20
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 11
+
+
+ 129              	.LBB364:
+ 130              	.LBI364:
   23:../../../libs/libDaisy/src/daisy_seed.h **** 
   24:../../../libs/libDaisy/src/daisy_seed.h ****     /** This function used to provide a pre-initialization configuraiton 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 11
-
-
   25:../../../libs/libDaisy/src/daisy_seed.h ****      *  it has since been deprecated, and does nothing.
   26:../../../libs/libDaisy/src/daisy_seed.h ****      */
   27:../../../libs/libDaisy/src/daisy_seed.h ****     void Configure();
@@ -654,13 +658,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   75:../../../libs/libDaisy/src/daisy_seed.h ****      */
   76:../../../libs/libDaisy/src/daisy_seed.h ****     void ChangeAudioCallback(AudioHandle::AudioCallback cb);
   77:../../../libs/libDaisy/src/daisy_seed.h **** 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 12
+
+
   78:../../../libs/libDaisy/src/daisy_seed.h ****     /** Stops the audio if it is running. */
   79:../../../libs/libDaisy/src/daisy_seed.h ****     void StopAudio();
   80:../../../libs/libDaisy/src/daisy_seed.h **** 
   81:../../../libs/libDaisy/src/daisy_seed.h ****     /** Updates the Audio Sample Rate, and reinitializes.
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 12
-
-
   82:../../../libs/libDaisy/src/daisy_seed.h ****      ** Audio must be stopped for this to work.
   83:../../../libs/libDaisy/src/daisy_seed.h ****      */
   84:../../../libs/libDaisy/src/daisy_seed.h ****     void SetAudioSampleRate(SaiHandle::Config::SampleRate samplerate);
@@ -713,44 +717,44 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  131:../../../libs/libDaisy/src/daisy_seed.h ****     /** Start the logging session. Optionally wait for terminal connection before proceeding.
  132:../../../libs/libDaisy/src/daisy_seed.h ****     */
  133:../../../libs/libDaisy/src/daisy_seed.h ****     static void StartLog(bool wait_for_pc = false)
- 128              		.loc 1 133 17 view .LVU21
- 129              	.LBB361:
+ 131              		.loc 1 133 17 view .LVU21
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 13
+
+
+ 132              	.LBB365:
  134:../../../libs/libDaisy/src/daisy_seed.h ****     {
  135:../../../libs/libDaisy/src/daisy_seed.h ****         Log::StartLog(wait_for_pc);
- 130              		.loc 1 135 9 view .LVU22
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 13
-
-
- 131              		.loc 1 135 22 is_stmt 0 view .LVU23
- 132 000e 0120     		movs	r0, #1
- 133 0010 FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE8StartLogEb
- 134              	.LVL2:
- 135              		.loc 1 135 22 view .LVU24
- 136              	.LBE361:
- 137              	.LBE360:
+ 133              		.loc 1 135 9 view .LVU22
+ 134              		.loc 1 135 22 is_stmt 0 view .LVU23
+ 135 000e 0120     		movs	r0, #1
+ 136 0010 FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE8StartLogEb
+ 137              	.LVL2:
+ 138              		.loc 1 135 22 view .LVU24
+ 139              	.LBE365:
+ 140              	.LBE364:
   22:i2cComm.cpp   **** 	hw.DelayMs(100);
- 138              		.loc 7 22 2 is_stmt 1 view .LVU25
- 139              		.loc 7 22 12 is_stmt 0 view .LVU26
- 140 0014 6421     		movs	r1, #100
- 141 0016 2348     		ldr	r0, .L6
- 142 0018 FFF7FEFF 		bl	_ZN5daisy9DaisySeed7DelayMsEj
- 143              	.LVL3:
+ 141              		.loc 7 22 2 is_stmt 1 view .LVU25
+ 142              		.loc 7 22 12 is_stmt 0 view .LVU26
+ 143 0014 6421     		movs	r1, #100
+ 144 0016 2548     		ldr	r0, .L6
+ 145 0018 FFF7FEFF 		bl	_ZN5daisy9DaisySeed7DelayMsEj
+ 146              	.LVL3:
   23:i2cComm.cpp   **** /*
   24:i2cComm.cpp   **** 	// se da problemi di compilazione la parte di config.scl e 
   25:i2cComm.cpp   **** 	// config.sda, scommentare qua sotto e assegnare questi pin
   26:i2cComm.cpp   **** 	al post di {dsy_gpio_b*/
   27:i2cComm.cpp   **** 	Pin pin_scl = {PORTB, 8};
- 144              		.loc 7 27 2 is_stmt 1 view .LVU27
+ 147              		.loc 7 27 2 is_stmt 1 view .LVU27
   28:i2cComm.cpp   **** 	Pin pin_sda = {PORTB, 9};
- 145              		.loc 7 28 2 view .LVU28
+ 148              		.loc 7 28 2 view .LVU28
   29:i2cComm.cpp   **** 
   30:i2cComm.cpp   **** 
   31:i2cComm.cpp   **** 	//I2CHandle::Result res1;
   32:i2cComm.cpp   **** 	I2CHandle::Config i2c_conf;
- 146              		.loc 7 32 2 view .LVU29
- 147              	.LBB362:
- 148              	.LBI362:
- 149              		.file 9 "../../../libs/libDaisy/src/per/i2c.h"
+ 149              		.loc 7 32 2 view .LVU29
+ 150              	.LBB366:
+ 151              	.LBI366:
+ 152              		.file 9 "../../../libs/libDaisy/src/per/i2c.h"
    1:../../../libs/libDaisy/src/per/i2c.h **** #pragma once
    2:../../../libs/libDaisy/src/per/i2c.h **** #include "util/hal_map.h"
    3:../../../libs/libDaisy/src/per/i2c.h **** #include "daisy_core.h"
@@ -774,18 +778,18 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   21:../../../libs/libDaisy/src/per/i2c.h ****  *      i2c.Init(i2c_conf);
   22:../../../libs/libDaisy/src/per/i2c.h ****  *      // now i2c points to the corresponding peripheral and can be used.
   23:../../../libs/libDaisy/src/per/i2c.h ****  *      i2c.TransmitBlocking( ... );
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 14
+
+
   24:../../../libs/libDaisy/src/per/i2c.h ****  */
   25:../../../libs/libDaisy/src/per/i2c.h **** class I2CHandle
   26:../../../libs/libDaisy/src/per/i2c.h **** {
   27:../../../libs/libDaisy/src/per/i2c.h ****   public:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 14
-
-
   28:../../../libs/libDaisy/src/per/i2c.h ****     /** Contains settings for initialising an I2C interface. */
   29:../../../libs/libDaisy/src/per/i2c.h ****     struct Config
- 150              		.loc 9 29 12 view .LVU30
- 151              	.LBB363:
- 152              	.LBI363:
+ 153              		.loc 9 29 12 view .LVU30
+ 154              	.LBB367:
+ 155              	.LBI367:
   30:../../../libs/libDaisy/src/per/i2c.h ****     {
   31:../../../libs/libDaisy/src/per/i2c.h ****         /** Specifies whether the interface will operate in master or slave mode. */
   32:../../../libs/libDaisy/src/per/i2c.h ****         enum class Mode
@@ -816,10 +820,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   57:../../../libs/libDaisy/src/per/i2c.h ****         Peripheral periph; /**< & */
   58:../../../libs/libDaisy/src/per/i2c.h ****         struct
   59:../../../libs/libDaisy/src/per/i2c.h ****         {
- 153              		.loc 9 59 9 view .LVU31
- 154              	.LBB364:
- 155              	.LBI364:
- 156              		.file 10 "../../../libs/libDaisy/src/daisy_core.h"
+ 156              		.loc 9 59 9 view .LVU31
+ 157              	.LBB368:
+ 158              	.LBI368:
+ 159              		.file 10 "../../../libs/libDaisy/src/daisy_core.h"
    1:../../../libs/libDaisy/src/daisy_core.h **** #pragma once
    2:../../../libs/libDaisy/src/daisy_core.h **** #ifndef DSY_CORE_HW_H
    3:../../../libs/libDaisy/src/daisy_core.h **** #define DSY_CORE_HW_H /**< & */
@@ -834,13 +838,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   12:../../../libs/libDaisy/src/daisy_core.h **** #elif defined(__GNUC__)
   13:../../../libs/libDaisy/src/daisy_core.h **** #define FORCE_INLINE inline __attribute__((always_inline)) /**< & */
   14:../../../libs/libDaisy/src/daisy_core.h **** #else
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 15
+
+
   15:../../../libs/libDaisy/src/daisy_core.h **** #error unknown compiler
   16:../../../libs/libDaisy/src/daisy_core.h **** #endif
   17:../../../libs/libDaisy/src/daisy_core.h **** 
   18:../../../libs/libDaisy/src/daisy_core.h **** /** @addtogroup utility
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 15
-
-
   19:../../../libs/libDaisy/src/daisy_core.h ****     @{
   20:../../../libs/libDaisy/src/daisy_core.h **** */
   21:../../../libs/libDaisy/src/daisy_core.h **** 
@@ -894,13 +898,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   69:../../../libs/libDaisy/src/daisy_core.h **** FORCE_INLINE float cube(float x)
   70:../../../libs/libDaisy/src/daisy_core.h **** {
   71:../../../libs/libDaisy/src/daisy_core.h ****     return (x * x) * x;
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 16
+
+
   72:../../../libs/libDaisy/src/daisy_core.h **** }
   73:../../../libs/libDaisy/src/daisy_core.h **** 
   74:../../../libs/libDaisy/src/daisy_core.h **** /** 
   75:../../../libs/libDaisy/src/daisy_core.h ****     Converts unsigned 8-bit to float
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 16
-
-
   76:../../../libs/libDaisy/src/daisy_core.h ****     \param x Number to be scaled.
   77:../../../libs/libDaisy/src/daisy_core.h ****     \return Scaled number.
   78:../../../libs/libDaisy/src/daisy_core.h **** */
@@ -954,13 +958,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  126:../../../libs/libDaisy/src/daisy_core.h ****     Converts float to Signed 16-bit
  127:../../../libs/libDaisy/src/daisy_core.h **** */
  128:../../../libs/libDaisy/src/daisy_core.h **** FORCE_INLINE int16_t f2s16(float x)
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 17
+
+
  129:../../../libs/libDaisy/src/daisy_core.h **** {
  130:../../../libs/libDaisy/src/daisy_core.h ****     x = x <= FBIPMIN ? FBIPMIN : x;
  131:../../../libs/libDaisy/src/daisy_core.h ****     x = x >= FBIPMAX ? FBIPMAX : x;
  132:../../../libs/libDaisy/src/daisy_core.h ****     return (int32_t)(x * F2S16_SCALE);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 17
-
-
  133:../../../libs/libDaisy/src/daisy_core.h **** }
  134:../../../libs/libDaisy/src/daisy_core.h **** 
  135:../../../libs/libDaisy/src/daisy_core.h **** /**
@@ -1014,13 +1018,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  183:../../../libs/libDaisy/src/daisy_core.h ****     PORTG, /**< Port G */
  184:../../../libs/libDaisy/src/daisy_core.h ****     PORTH, /**< Port H */
  185:../../../libs/libDaisy/src/daisy_core.h ****     PORTI, /**< Port I */
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 18
+
+
  186:../../../libs/libDaisy/src/daisy_core.h ****     PORTJ, /**< Port J */
  187:../../../libs/libDaisy/src/daisy_core.h ****     PORTK, /**< Port K */
  188:../../../libs/libDaisy/src/daisy_core.h ****     PORTX, /**< Used as a dummy port to signal an invalid pin. */
  189:../../../libs/libDaisy/src/daisy_core.h **** };
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 18
-
-
  190:../../../libs/libDaisy/src/daisy_core.h **** 
  191:../../../libs/libDaisy/src/daisy_core.h **** /** @brief representation of hardware port/pin combination */
  192:../../../libs/libDaisy/src/daisy_core.h **** struct Pin
@@ -1036,31 +1040,31 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  202:../../../libs/libDaisy/src/daisy_core.h **** 
  203:../../../libs/libDaisy/src/daisy_core.h ****     /** @brief Basic Constructor creates an invalid Pin object */
  204:../../../libs/libDaisy/src/daisy_core.h ****     constexpr Pin() : port(PORTX), pin(255) {}
- 157              		.loc 10 204 15 view .LVU32
- 158              		.loc 10 204 15 is_stmt 0 view .LVU33
- 159              	.LBE364:
- 160              	.LBB365:
- 161              	.LBI365:
- 162              		.loc 10 204 15 is_stmt 1 view .LVU34
- 163              		.loc 10 204 15 is_stmt 0 view .LVU35
- 164              	.LBE365:
- 165              	.LBE363:
- 166              	.LBE362:
+ 160              		.loc 10 204 15 view .LVU32
+ 161              		.loc 10 204 15 is_stmt 0 view .LVU33
+ 162              	.LBE368:
+ 163              	.LBB369:
+ 164              	.LBI369:
+ 165              		.loc 10 204 15 is_stmt 1 view .LVU34
+ 166              		.loc 10 204 15 is_stmt 0 view .LVU35
+ 167              	.LBE369:
+ 168              	.LBE367:
+ 169              	.LBE366:
   33:i2cComm.cpp   **** 	i2c_conf.periph = I2CHandle::Config::Peripheral::I2C_1;
- 167              		.loc 7 33 2 is_stmt 1 view .LVU36
+ 170              		.loc 7 33 2 is_stmt 1 view .LVU36
   34:i2cComm.cpp   **** 	i2c_conf.speed  = I2CHandle::Config::Speed::I2C_400KHZ;
- 168              		.loc 7 34 2 view .LVU37
+ 171              		.loc 7 34 2 view .LVU37
   35:i2cComm.cpp   **** 	i2c_conf.mode   = I2CHandle::Config::Mode::I2C_MASTER;
- 169              		.loc 7 35 2 view .LVU38
+ 172              		.loc 7 35 2 view .LVU38
   36:i2cComm.cpp   **** 	i2c_conf.pin_config.scl  = pin_scl; // D11
- 170              		.loc 7 36 2 view .LVU39
+ 173              		.loc 7 36 2 view .LVU39
   37:i2cComm.cpp   **** 	i2c_conf.pin_config.sda  = pin_sda; // D12
- 171              		.loc 7 37 2 view .LVU40
+ 174              		.loc 7 37 2 view .LVU40
   38:i2cComm.cpp   **** 	// initialise the peripheral
   39:i2cComm.cpp   **** 	I2CHandle i2c;
- 172              		.loc 7 39 2 view .LVU41
- 173              	.LBB366:
- 174              	.LBI366:
+ 175              		.loc 7 39 2 view .LVU41
+ 176              	.LBB370:
+ 177              	.LBI370:
   60:../../../libs/libDaisy/src/per/i2c.h ****             Pin scl;  /**< & */
   61:../../../libs/libDaisy/src/per/i2c.h ****             Pin sda;  /**< & */
   62:../../../libs/libDaisy/src/per/i2c.h ****         } pin_config; /**< & */
@@ -1074,13 +1078,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   70:../../../libs/libDaisy/src/per/i2c.h ****     /** Return values for I2C functions. */
   71:../../../libs/libDaisy/src/per/i2c.h ****     enum class Result
   72:../../../libs/libDaisy/src/per/i2c.h ****     {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 19
+
+
   73:../../../libs/libDaisy/src/per/i2c.h ****         OK, /**< & */
   74:../../../libs/libDaisy/src/per/i2c.h ****         ERR /**< & */
   75:../../../libs/libDaisy/src/per/i2c.h ****     };
   76:../../../libs/libDaisy/src/per/i2c.h **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 19
-
-
   77:../../../libs/libDaisy/src/per/i2c.h ****     enum class Direction
   78:../../../libs/libDaisy/src/per/i2c.h ****     {
   79:../../../libs/libDaisy/src/per/i2c.h ****         TRANSMIT, /**< & */
@@ -1088,9 +1092,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   81:../../../libs/libDaisy/src/per/i2c.h ****     };
   82:../../../libs/libDaisy/src/per/i2c.h **** 
   83:../../../libs/libDaisy/src/per/i2c.h ****     I2CHandle() : pimpl_(nullptr) {}
- 175              		.loc 9 83 5 view .LVU42
- 176              		.loc 9 83 5 is_stmt 0 view .LVU43
- 177              	.LBE366:
+ 178              		.loc 9 83 5 view .LVU42
+ 179              		.loc 9 83 5 is_stmt 0 view .LVU43
+ 180              	.LBE370:
   40:i2cComm.cpp   **** 	//res1 = i2c.Init(i2c_conf);
   41:i2cComm.cpp   **** 	
   42:i2cComm.cpp   **** 	/* FOR DEBUG*/
@@ -1106,9 +1110,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   52:i2cComm.cpp   **** 
   53:i2cComm.cpp   **** 	// creates object for mpr121
   54:i2cComm.cpp   **** 	daisy::Mpr121I2C mpr121Obj;
- 178              		.loc 7 54 2 is_stmt 1 view .LVU44
- 179              	.LBB367:
- 180              	.LBI318:
+ 181              		.loc 7 54 2 is_stmt 1 view .LVU44
+ 182              	.LBB371:
+ 183              	.LBI322:
   38:../../../libs/libDaisy/src/dev/mpr121.h **** 
   39:../../../libs/libDaisy/src/dev/mpr121.h ****             scl = Pin(PORTB, 8);
   40:../../../libs/libDaisy/src/dev/mpr121.h ****             sda = Pin(PORTB, 9);
@@ -1134,13 +1138,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   60:../../../libs/libDaisy/src/dev/mpr121.h ****     }
   61:../../../libs/libDaisy/src/dev/mpr121.h **** 
   62:../../../libs/libDaisy/src/dev/mpr121.h ****     /** \return Did the transaction error? i.e. Return true if error, false if ok */
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 20
+
+
   63:../../../libs/libDaisy/src/dev/mpr121.h ****     bool Write(uint8_t *data, uint16_t size)
   64:../../../libs/libDaisy/src/dev/mpr121.h ****     {
   65:../../../libs/libDaisy/src/dev/mpr121.h ****         return I2CHandle::Result::OK
   66:../../../libs/libDaisy/src/dev/mpr121.h ****                != i2c_.TransmitBlocking(config_.dev_addr, data, size, 10);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 20
-
-
   67:../../../libs/libDaisy/src/dev/mpr121.h ****     }
   68:../../../libs/libDaisy/src/dev/mpr121.h **** 
   69:../../../libs/libDaisy/src/dev/mpr121.h ****     /** \return Did the transaction error? i.e. Return true if error, false if ok */
@@ -1165,10 +1169,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   88:../../../libs/libDaisy/src/dev/mpr121.h **** {
   89:../../../libs/libDaisy/src/dev/mpr121.h ****   public:
   90:../../../libs/libDaisy/src/dev/mpr121.h ****     Mpr121() {}
- 181              		.loc 8 90 5 view .LVU45
- 182              	.LBB359:
- 183              	.LBB341:
- 184              	.LBI320:
+ 184              		.loc 8 90 5 view .LVU45
+ 185              	.LBB363:
+ 186              	.LBB345:
+ 187              	.LBI324:
   91:../../../libs/libDaisy/src/dev/mpr121.h ****     ~Mpr121() {}
   92:../../../libs/libDaisy/src/dev/mpr121.h **** 
   93:../../../libs/libDaisy/src/dev/mpr121.h ****     struct Config
@@ -1178,183 +1182,183 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   97:../../../libs/libDaisy/src/dev/mpr121.h ****         uint8_t                    release_threshold;
   98:../../../libs/libDaisy/src/dev/mpr121.h **** 
   99:../../../libs/libDaisy/src/dev/mpr121.h ****         Config()
- 185              		.loc 8 99 9 view .LVU46
- 186              	.LBB338:
- 187              	.LBB335:
- 188              	.LBI322:
+ 188              		.loc 8 99 9 view .LVU46
+ 189              	.LBB342:
+ 190              	.LBB339:
+ 191              	.LBI326:
   34:../../../libs/libDaisy/src/dev/mpr121.h ****         {
- 189              		.loc 8 34 9 view .LVU47
- 190              	.LBB332:
- 191              	.LBB329:
- 192              	.LBB325:
- 193              	.LBI325:
- 194              		.loc 10 204 15 view .LVU48
- 195              		.loc 10 204 15 is_stmt 0 view .LVU49
- 196              	.LBE325:
- 197              	.LBB326:
- 198              	.LBI326:
- 199              		.loc 10 204 15 is_stmt 1 view .LVU50
- 200              		.loc 10 204 15 is_stmt 0 view .LVU51
- 201              	.LBE326:
+ 192              		.loc 8 34 9 view .LVU47
+ 193              	.LBB336:
+ 194              	.LBB333:
+ 195              	.LBB329:
+ 196              	.LBI329:
+ 197              		.loc 10 204 15 view .LVU48
+ 198              		.loc 10 204 15 is_stmt 0 view .LVU49
+ 199              	.LBE329:
+ 200              	.LBB330:
+ 201              	.LBI330:
+ 202              		.loc 10 204 15 is_stmt 1 view .LVU50
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 21
+
+
+ 203              		.loc 10 204 15 is_stmt 0 view .LVU51
+ 204              	.LBE330:
   36:../../../libs/libDaisy/src/dev/mpr121.h ****             speed  = I2CHandle::Config::Speed::I2C_400KHZ;
- 202              		.loc 8 36 13 is_stmt 1 view .LVU52
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 21
-
-
+ 205              		.loc 8 36 13 is_stmt 1 view .LVU52
   37:../../../libs/libDaisy/src/dev/mpr121.h **** 
- 203              		.loc 8 37 13 view .LVU53
+ 206              		.loc 8 37 13 view .LVU53
   39:../../../libs/libDaisy/src/dev/mpr121.h ****             sda = Pin(PORTB, 9);
- 204              		.loc 8 39 13 view .LVU54
- 205              	.LBB327:
- 206              	.LBI327:
+ 207              		.loc 8 39 13 view .LVU54
+ 208              	.LBB331:
+ 209              	.LBI331:
  201:../../../libs/libDaisy/src/daisy_core.h **** 
- 207              		.loc 10 201 15 view .LVU55
+ 210              		.loc 10 201 15 view .LVU55
  201:../../../libs/libDaisy/src/daisy_core.h **** 
- 208              		.loc 10 201 15 is_stmt 0 view .LVU56
- 209              	.LBE327:
+ 211              		.loc 10 201 15 is_stmt 0 view .LVU56
+ 212              	.LBE331:
   40:../../../libs/libDaisy/src/dev/mpr121.h **** 
- 210              		.loc 8 40 13 is_stmt 1 view .LVU57
- 211              	.LBB328:
- 212              	.LBI328:
+ 213              		.loc 8 40 13 is_stmt 1 view .LVU57
+ 214              	.LBB332:
+ 215              	.LBI332:
  201:../../../libs/libDaisy/src/daisy_core.h **** 
- 213              		.loc 10 201 15 view .LVU58
+ 216              		.loc 10 201 15 view .LVU58
  201:../../../libs/libDaisy/src/daisy_core.h **** 
- 214              		.loc 10 201 15 is_stmt 0 view .LVU59
- 215              	.LBE328:
+ 217              		.loc 10 201 15 is_stmt 0 view .LVU59
+ 218              	.LBE332:
   42:../../../libs/libDaisy/src/dev/mpr121.h ****         }
- 216              		.loc 8 42 13 is_stmt 1 view .LVU60
+ 219              		.loc 8 42 13 is_stmt 1 view .LVU60
   42:../../../libs/libDaisy/src/dev/mpr121.h ****         }
- 217              		.loc 8 42 13 is_stmt 0 view .LVU61
- 218              	.LBE329:
- 219              	.LBE332:
- 220              	.LBE335:
- 221              	.LBE338:
- 222              	.LBE341:
- 223              	.LBB342:
- 224              	.LBI342:
+ 220              		.loc 8 42 13 is_stmt 0 view .LVU61
+ 221              	.LBE333:
+ 222              	.LBE336:
+ 223              	.LBE339:
+ 224              	.LBE342:
+ 225              	.LBE345:
+ 226              	.LBB346:
+ 227              	.LBI346:
   20:../../../libs/libDaisy/src/dev/mpr121.h ****     ~Mpr121I2CTransport() {}
- 225              		.loc 8 20 5 is_stmt 1 view .LVU62
- 226              	.LBB343:
- 227              	.LBB344:
- 228              	.LBI344:
- 229              		.loc 9 83 5 view .LVU63
- 230              		.loc 9 83 5 is_stmt 0 view .LVU64
- 231              	.LBE344:
- 232              	.LBB345:
- 233              	.LBI345:
+ 228              		.loc 8 20 5 is_stmt 1 view .LVU62
+ 229              	.LBB347:
+ 230              	.LBB348:
+ 231              	.LBI348:
+ 232              		.loc 9 83 5 view .LVU63
+ 233              		.loc 9 83 5 is_stmt 0 view .LVU64
+ 234              	.LBE348:
+ 235              	.LBB349:
+ 236              	.LBI349:
   34:../../../libs/libDaisy/src/dev/mpr121.h ****         {
- 234              		.loc 8 34 9 is_stmt 1 view .LVU65
- 235              	.LBB346:
- 236              	.LBB347:
- 237              	.LBB348:
- 238              	.LBI348:
- 239              		.loc 10 204 15 view .LVU66
- 240              		.loc 10 204 15 is_stmt 0 view .LVU67
- 241              	.LBE348:
- 242              	.LBB349:
- 243              	.LBI349:
- 244              		.loc 10 204 15 is_stmt 1 view .LVU68
- 245              		.loc 10 204 15 is_stmt 0 view .LVU69
- 246              	.LBE349:
+ 237              		.loc 8 34 9 is_stmt 1 view .LVU65
+ 238              	.LBB350:
+ 239              	.LBB351:
+ 240              	.LBB352:
+ 241              	.LBI352:
+ 242              		.loc 10 204 15 view .LVU66
+ 243              		.loc 10 204 15 is_stmt 0 view .LVU67
+ 244              	.LBE352:
+ 245              	.LBB353:
+ 246              	.LBI353:
+ 247              		.loc 10 204 15 is_stmt 1 view .LVU68
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 22
+
+
+ 248              		.loc 10 204 15 is_stmt 0 view .LVU69
+ 249              	.LBE353:
   36:../../../libs/libDaisy/src/dev/mpr121.h ****             speed  = I2CHandle::Config::Speed::I2C_400KHZ;
- 247              		.loc 8 36 13 is_stmt 1 view .LVU70
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 22
-
-
+ 250              		.loc 8 36 13 is_stmt 1 view .LVU70
   37:../../../libs/libDaisy/src/dev/mpr121.h **** 
- 248              		.loc 8 37 13 view .LVU71
+ 251              		.loc 8 37 13 view .LVU71
   39:../../../libs/libDaisy/src/dev/mpr121.h ****             sda = Pin(PORTB, 9);
- 249              		.loc 8 39 13 view .LVU72
- 250              	.LBB350:
- 251              	.LBI350:
+ 252              		.loc 8 39 13 view .LVU72
+ 253              	.LBB354:
+ 254              	.LBI354:
  201:../../../libs/libDaisy/src/daisy_core.h **** 
- 252              		.loc 10 201 15 view .LVU73
+ 255              		.loc 10 201 15 view .LVU73
  201:../../../libs/libDaisy/src/daisy_core.h **** 
- 253              		.loc 10 201 15 is_stmt 0 view .LVU74
- 254              	.LBE350:
+ 256              		.loc 10 201 15 is_stmt 0 view .LVU74
+ 257              	.LBE354:
   40:../../../libs/libDaisy/src/dev/mpr121.h **** 
- 255              		.loc 8 40 13 is_stmt 1 view .LVU75
- 256              	.LBB351:
- 257              	.LBI351:
+ 258              		.loc 8 40 13 is_stmt 1 view .LVU75
+ 259              	.LBB355:
+ 260              	.LBI355:
  201:../../../libs/libDaisy/src/daisy_core.h **** 
- 258              		.loc 10 201 15 view .LVU76
+ 261              		.loc 10 201 15 view .LVU76
  201:../../../libs/libDaisy/src/daisy_core.h **** 
- 259              		.loc 10 201 15 is_stmt 0 view .LVU77
- 260              	.LBE351:
+ 262              		.loc 10 201 15 is_stmt 0 view .LVU77
+ 263              	.LBE355:
   42:../../../libs/libDaisy/src/dev/mpr121.h ****         }
- 261              		.loc 8 42 13 is_stmt 1 view .LVU78
- 262              	.LBE347:
- 263              	.LBE346:
- 264              	.LBE345:
- 265              	.LBE343:
- 266              	.LBE342:
+ 264              		.loc 8 42 13 is_stmt 1 view .LVU78
+ 265              	.LBE351:
+ 266              	.LBE350:
+ 267              	.LBE349:
+ 268              	.LBE347:
+ 269              	.LBE346:
   90:../../../libs/libDaisy/src/dev/mpr121.h ****     ~Mpr121() {}
- 267              		.loc 8 90 5 is_stmt 0 view .LVU79
- 268 001c 5A23     		movs	r3, #90
- 269 001e 40F20C61 		movw	r1, #1548
- 270              	.LBB356:
- 271              	.LBB339:
- 272              	.LBB336:
- 273              	.LBB333:
- 274              	.LBB330:
+ 270              		.loc 8 90 5 is_stmt 0 view .LVU79
+ 271 001c 5A23     		movs	r3, #90
+ 272 001e 40F20C61 		movw	r1, #1548
+ 273              	.LBB360:
+ 274              	.LBB343:
+ 275              	.LBB340:
+ 276              	.LBB337:
+ 277              	.LBB334:
   36:../../../libs/libDaisy/src/dev/mpr121.h ****             speed  = I2CHandle::Config::Speed::I2C_400KHZ;
- 275              		.loc 8 36 20 view .LVU80
- 276 0022 0022     		movs	r2, #0
- 277              	.LBE330:
- 278              	.LBE333:
- 279              	.LBE336:
- 280              	.LBE339:
- 281              	.LBE356:
+ 278              		.loc 8 36 20 view .LVU80
+ 279 0022 0022     		movs	r2, #0
+ 280              	.LBE334:
+ 281              	.LBE337:
+ 282              	.LBE340:
+ 283              	.LBE343:
+ 284              	.LBE360:
   90:../../../libs/libDaisy/src/dev/mpr121.h ****     ~Mpr121() {}
- 282              		.loc 8 90 5 view .LVU81
- 283 0024 2048     		ldr	r0, .L6+4
- 284 0026 0E93     		str	r3, [sp, #56]
- 285              	.LVL4:
+ 285              		.loc 8 90 5 view .LVU81
+ 286 0024 2248     		ldr	r0, .L6+4
+ 287 0026 0E93     		str	r3, [sp, #56]
+ 288              	.LVL4:
   90:../../../libs/libDaisy/src/dev/mpr121.h ****     ~Mpr121() {}
- 286              		.loc 8 90 5 view .LVU82
- 287 0028 0590     		str	r0, [sp, #20]
- 288 002a CDE90731 		strd	r3, r1, [sp, #28]
-  90:../../../libs/libDaisy/src/dev/mpr121.h ****     ~Mpr121() {}
- 289              		.loc 8 90 15 view .LVU83
- 290 002e 1946     		mov	r1, r3
- 291              	.LBB357:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 23
+ 289              		.loc 8 90 5 view .LVU82
+ 290 0028 0590     		str	r0, [sp, #20]
+ 291 002a CDE90731 		strd	r3, r1, [sp, #28]
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 23
 
 
- 292              	.LBB340:
- 293              	.LBB337:
- 294              	.LBB334:
- 295              	.LBB331:
+  90:../../../libs/libDaisy/src/dev/mpr121.h ****     ~Mpr121() {}
+ 292              		.loc 8 90 15 view .LVU83
+ 293 002e 1946     		mov	r1, r3
+ 294              	.LBB361:
+ 295              	.LBB344:
+ 296              	.LBB341:
+ 297              	.LBB338:
+ 298              	.LBB335:
   37:../../../libs/libDaisy/src/dev/mpr121.h **** 
- 296              		.loc 8 37 20 view .LVU84
- 297 0030 CDE90324 		strd	r2, r4, [sp, #12]
- 298              	.LBE331:
- 299              	.LBE334:
- 300              	.LBE337:
- 301              	.LBE340:
- 302              	.LBE357:
- 303              	.LBB358:
- 304              	.LBB355:
- 305              	.LBB354:
- 306              	.LBB353:
- 307              	.LBB352:
+ 299              		.loc 8 37 20 view .LVU84
+ 300 0030 CDE90324 		strd	r2, r4, [sp, #12]
+ 301              	.LBE335:
+ 302              	.LBE338:
+ 303              	.LBE341:
+ 304              	.LBE344:
+ 305              	.LBE361:
+ 306              	.LBB362:
+ 307              	.LBB359:
+ 308              	.LBB358:
+ 309              	.LBB357:
+ 310              	.LBB356:
   36:../../../libs/libDaisy/src/dev/mpr121.h ****             speed  = I2CHandle::Config::Speed::I2C_400KHZ;
- 308              		.loc 8 36 20 view .LVU85
- 309 0034 CDE90922 		strd	r2, r2, [sp, #36]
- 310              	.LBE352:
- 311              	.LBE353:
- 312              	.LBE354:
- 313              	.LBE355:
- 314              	.LBE358:
+ 311              		.loc 8 36 20 view .LVU85
+ 312 0034 CDE90922 		strd	r2, r2, [sp, #36]
+ 313              	.LBE356:
+ 314              	.LBE357:
+ 315              	.LBE358:
+ 316              	.LBE359:
+ 317              	.LBE362:
   90:../../../libs/libDaisy/src/dev/mpr121.h ****     ~Mpr121() {}
- 315              		.loc 8 90 5 view .LVU86
- 316 0038 CDE90B40 		strd	r4, r0, [sp, #44]
- 317              	.LVL5:
- 318              	.L4:
+ 318              		.loc 8 90 5 view .LVU86
+ 319 0038 CDE90B40 		strd	r4, r0, [sp, #44]
+ 320              	.LVL5:
+ 321              	.L4:
   90:../../../libs/libDaisy/src/dev/mpr121.h ****     ~Mpr121() {}
- 319              		.loc 8 90 5 view .LVU87
- 320              	.LBE359:
- 321              	.LBE367:
+ 322              		.loc 8 90 5 view .LVU87
+ 323              	.LBE363:
+ 324              	.LBE371:
   55:i2cComm.cpp   **** 
   56:i2cComm.cpp   **** 	// creates variable to check output of functions
   57:i2cComm.cpp   **** 	//daisy::Mpr121I2C::Result res;
@@ -1374,20 +1378,20 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   71:i2cComm.cpp   **** 	}
   72:i2cComm.cpp   **** 	else {
   73:i2cComm.cpp   **** 		hw.PrintLine("mpr121 init ERROR");
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 24
+
+
   74:i2cComm.cpp   **** 		while(1){}
   75:i2cComm.cpp   **** 	}
   76:i2cComm.cpp   **** 	*/
   77:i2cComm.cpp   **** 	// hw.PrintLine("test");
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 24
-
-
   78:i2cComm.cpp   **** 	while(1) {
- 322              		.loc 7 78 2 is_stmt 1 discriminator 1 view .LVU88
+ 325              		.loc 7 78 2 is_stmt 1 discriminator 1 view .LVU88
   79:i2cComm.cpp   **** 		// questo ritorna il registro relativo ai gate, 
   80:i2cComm.cpp   **** 		hw.PrintLine ("Gate register: %d ", mpr121Obj.Touched());
- 323              		.loc 7 80 3 discriminator 1 view .LVU89
- 324              	.LBB368:
- 325              	.LBI368:
+ 326              		.loc 7 80 3 discriminator 1 view .LVU89
+ 327              	.LBB372:
+ 328              	.LBI372:
  100:../../../libs/libDaisy/src/dev/mpr121.h ****         {
  101:../../../libs/libDaisy/src/dev/mpr121.h ****             touch_threshold   = MPR121_TOUCH_THRESHOLD_DEFAULT;
  102:../../../libs/libDaisy/src/dev/mpr121.h ****             release_threshold = MPR121_RELEASE_THRESHOLD_DEFAULT;
@@ -1434,13 +1438,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  143:../../../libs/libDaisy/src/dev/mpr121.h **** 
  144:../../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NHDT, 0x00);
  145:../../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NCLT, 0x00);
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 25
+
+
  146:../../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_FDLT, 0x00);
  147:../../../libs/libDaisy/src/dev/mpr121.h **** 
  148:../../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_DEBOUNCE, 0);
  149:../../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_CONFIG1, 0x10); // default, 16uA charge current
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 25
-
-
  150:../../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_CONFIG2, 0x20); // 0.5uS encoding, 1ms period
  151:../../../libs/libDaisy/src/dev/mpr121.h **** 
  152:../../../libs/libDaisy/src/dev/mpr121.h ****         // autoconfig
@@ -1494,13 +1498,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  200:../../../libs/libDaisy/src/dev/mpr121.h ****     }
  201:../../../libs/libDaisy/src/dev/mpr121.h **** 
  202:../../../libs/libDaisy/src/dev/mpr121.h ****     /** Read the baseline value for the channel. The 3rd level filtered
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 26
+
+
  203:../../../libs/libDaisy/src/dev/mpr121.h ****         result is internally 10bit but only high 8 bits are readable
  204:../../../libs/libDaisy/src/dev/mpr121.h ****         from registers 0x1E~0x2A as the baseline value output for each channel.
  205:../../../libs/libDaisy/src/dev/mpr121.h ****         \param      t the channel to read.
  206:../../../libs/libDaisy/src/dev/mpr121.h ****         \returns    the baseline data that was read
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 26
-
-
  207:../../../libs/libDaisy/src/dev/mpr121.h ****     */
  208:../../../libs/libDaisy/src/dev/mpr121.h ****     uint16_t BaselineData(uint8_t t)
  209:../../../libs/libDaisy/src/dev/mpr121.h ****     {
@@ -1516,28 +1520,28 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  219:../../../libs/libDaisy/src/dev/mpr121.h ****         device is currently deemed to be touched.
  220:../../../libs/libDaisy/src/dev/mpr121.h ****     */
  221:../../../libs/libDaisy/src/dev/mpr121.h ****     uint16_t Touched()
- 326              		.loc 8 221 14 discriminator 1 view .LVU90
- 327              	.LBB369:
- 328              	.LBB370:
- 329              	.LBB371:
- 330              	.LBB372:
- 331              	.LBB373:
+ 329              		.loc 8 221 14 discriminator 1 view .LVU90
+ 330              	.LBB373:
+ 331              	.LBB374:
+ 332              	.LBB375:
+ 333              	.LBB376:
+ 334              	.LBB377:
   66:../../../libs/libDaisy/src/dev/mpr121.h ****     }
- 332              		.loc 8 66 40 is_stmt 0 discriminator 1 view .LVU91
- 333 003c 0A24     		movs	r4, #10
- 334 003e 4FF0000C 		mov	ip, #0
- 335 0042 0123     		movs	r3, #1
- 336 0044 0DF10902 		add	r2, sp, #9
- 337 0048 09A8     		add	r0, sp, #36
- 338 004a 0094     		str	r4, [sp]
- 339 004c 8DF809C0 		strb	ip, [sp, #9]
- 340              	.LVL6:
+ 335              		.loc 8 66 40 is_stmt 0 discriminator 1 view .LVU91
+ 336 003c 0A24     		movs	r4, #10
+ 337 003e 4FF0000C 		mov	ip, #0
+ 338 0042 0123     		movs	r3, #1
+ 339 0044 0DF10902 		add	r2, sp, #9
+ 340 0048 09A8     		add	r0, sp, #36
+ 341 004a 0094     		str	r4, [sp]
+ 342 004c 8DF809C0 		strb	ip, [sp, #9]
+ 343              	.LVL6:
   66:../../../libs/libDaisy/src/dev/mpr121.h ****     }
- 341              		.loc 8 66 40 discriminator 1 view .LVU92
- 342              	.LBE373:
- 343              	.LBE372:
- 344              	.LBE371:
- 345              	.LBI370:
+ 344              		.loc 8 66 40 discriminator 1 view .LVU92
+ 345              	.LBE377:
+ 346              	.LBE376:
+ 347              	.LBE375:
+ 348              	.LBI374:
  222:../../../libs/libDaisy/src/dev/mpr121.h ****     {
  223:../../../libs/libDaisy/src/dev/mpr121.h ****         uint16_t t = ReadRegister16(MPR121_TOUCHSTATUS_L);
  224:../../../libs/libDaisy/src/dev/mpr121.h ****         return t & 0x0FFF;
@@ -1554,35 +1558,35 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  235:../../../libs/libDaisy/src/dev/mpr121.h ****         SetTransportErr(transport_.Read(&buff, 1));
  236:../../../libs/libDaisy/src/dev/mpr121.h **** 
  237:../../../libs/libDaisy/src/dev/mpr121.h ****         return buff;
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 27
+
+
  238:../../../libs/libDaisy/src/dev/mpr121.h ****     }
  239:../../../libs/libDaisy/src/dev/mpr121.h **** 
  240:../../../libs/libDaisy/src/dev/mpr121.h ****     /** Read the contents of a 16 bit device register.
  241:../../../libs/libDaisy/src/dev/mpr121.h ****         \param      reg the register address to read from
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 27
-
-
  242:../../../libs/libDaisy/src/dev/mpr121.h ****         \returns    the 16 bit value that was read.
  243:../../../libs/libDaisy/src/dev/mpr121.h ****     */
  244:../../../libs/libDaisy/src/dev/mpr121.h ****     uint16_t ReadRegister16(uint8_t reg)
- 346              		.loc 8 244 14 is_stmt 1 discriminator 1 view .LVU93
- 347              	.LBB399:
- 348              	.LBB376:
- 349              	.LBI372:
+ 349              		.loc 8 244 14 is_stmt 1 discriminator 1 view .LVU93
+ 350              	.LBB403:
+ 351              	.LBB380:
+ 352              	.LBI376:
   63:../../../libs/libDaisy/src/dev/mpr121.h ****     {
- 350              		.loc 8 63 10 discriminator 1 view .LVU94
- 351              	.LBB374:
+ 353              		.loc 8 63 10 discriminator 1 view .LVU94
+ 354              	.LBB378:
   65:../../../libs/libDaisy/src/dev/mpr121.h ****                != i2c_.TransmitBlocking(config_.dev_addr, data, size, 10);
- 352              		.loc 8 65 9 discriminator 1 view .LVU95
+ 355              		.loc 8 65 9 discriminator 1 view .LVU95
   66:../../../libs/libDaisy/src/dev/mpr121.h ****     }
- 353              		.loc 8 66 40 is_stmt 0 discriminator 1 view .LVU96
- 354 0050 FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
- 355              	.LVL7:
+ 356              		.loc 8 66 40 is_stmt 0 discriminator 1 view .LVU96
+ 357 0050 FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
+ 358              	.LVL7:
   66:../../../libs/libDaisy/src/dev/mpr121.h ****     }
- 356              		.loc 8 66 40 discriminator 1 view .LVU97
- 357              	.LBE374:
- 358              	.LBE376:
- 359              	.LBB377:
- 360              	.LBI377:
+ 359              		.loc 8 66 40 discriminator 1 view .LVU97
+ 360              	.LBE378:
+ 361              	.LBE380:
+ 362              	.LBB381:
+ 363              	.LBI381:
  245:../../../libs/libDaisy/src/dev/mpr121.h ****     {
  246:../../../libs/libDaisy/src/dev/mpr121.h ****         uint16_t buff;
  247:../../../libs/libDaisy/src/dev/mpr121.h ****         SetTransportErr(transport_.Write(&reg, 1));
@@ -1614,13 +1618,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  273:../../../libs/libDaisy/src/dev/mpr121.h ****         }
  274:../../../libs/libDaisy/src/dev/mpr121.h **** 
  275:../../../libs/libDaisy/src/dev/mpr121.h ****         if(stop_required)
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 28
+
+
  276:../../../libs/libDaisy/src/dev/mpr121.h ****         {
  277:../../../libs/libDaisy/src/dev/mpr121.h ****             // clear this register to set stop mode
  278:../../../libs/libDaisy/src/dev/mpr121.h ****             SetTransportErr(transport_.Write(buff, 2));
  279:../../../libs/libDaisy/src/dev/mpr121.h ****         }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 28
-
-
  280:../../../libs/libDaisy/src/dev/mpr121.h **** 
  281:../../../libs/libDaisy/src/dev/mpr121.h ****         buff[0] = reg;
  282:../../../libs/libDaisy/src/dev/mpr121.h ****         buff[1] = value;
@@ -1674,13 +1678,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  330:../../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_GPIOSET    = 0x78,
  331:../../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_GPIOCLR    = 0x79,
  332:../../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_GPIOTOGGLE = 0x7A,
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 29
+
+
  333:../../../libs/libDaisy/src/dev/mpr121.h **** 
  334:../../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_SOFTRESET = 0x80,
  335:../../../libs/libDaisy/src/dev/mpr121.h ****     };
  336:../../../libs/libDaisy/src/dev/mpr121.h **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 29
-
-
  337:../../../libs/libDaisy/src/dev/mpr121.h ****   private:
  338:../../../libs/libDaisy/src/dev/mpr121.h ****     Config    config_;
  339:../../../libs/libDaisy/src/dev/mpr121.h ****     Transport transport_;
@@ -1688,216 +1692,235 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  341:../../../libs/libDaisy/src/dev/mpr121.h **** 
  342:../../../libs/libDaisy/src/dev/mpr121.h ****     /** Set the global transport_error_ bool */
  343:../../../libs/libDaisy/src/dev/mpr121.h ****     void SetTransportErr(bool err) { transport_error_ |= err; }
- 361              		.loc 8 343 10 is_stmt 1 discriminator 1 view .LVU98
- 362              	.LBB378:
- 363              		.loc 8 343 55 is_stmt 0 discriminator 1 view .LVU99
- 364 0054 9DF83CC0 		ldrb	ip, [sp, #60]	@ zero_extendqisi2
- 365              	.LBE378:
- 366              	.LBE377:
- 367              	.LBB381:
- 368              	.LBB382:
+ 364              		.loc 8 343 10 is_stmt 1 discriminator 1 view .LVU98
+ 365              	.LBB382:
+ 366              		.loc 8 343 55 is_stmt 0 discriminator 1 view .LVU99
+ 367 0054 9DF83CC0 		ldrb	ip, [sp, #60]	@ zero_extendqisi2
+ 368              	.LBE382:
+ 369              	.LBE381:
+ 370              	.LBB385:
+ 371              	.LBB386:
   73:../../../libs/libDaisy/src/dev/mpr121.h ****     }
- 369              		.loc 8 73 39 discriminator 1 view .LVU100
- 370 0058 0223     		movs	r3, #2
- 371 005a 0DEB0402 		add	r2, sp, r4
- 372 005e 9DF83810 		ldrb	r1, [sp, #56]	@ zero_extendqisi2
- 373              	.LBE382:
- 374              	.LBE381:
- 375              	.LBB386:
- 376              	.LBB379:
- 377              		.loc 8 343 55 discriminator 1 view .LVU101
- 378 0062 0028     		cmp	r0, #0
- 379 0064 18BF     		it	ne
- 380 0066 4CF0010C 		orrne	ip, ip, #1
- 381              	.LBE379:
- 382              	.LBE386:
- 383              	.LBB387:
- 384              	.LBB383:
+ 372              		.loc 8 73 39 discriminator 1 view .LVU100
+ 373 0058 0223     		movs	r3, #2
+ 374 005a 0DEB0402 		add	r2, sp, r4
+ 375 005e 9DF83810 		ldrb	r1, [sp, #56]	@ zero_extendqisi2
+ 376              	.LBE386:
+ 377              	.LBE385:
+ 378              	.LBB390:
+ 379              	.LBB383:
+ 380              		.loc 8 343 55 discriminator 1 view .LVU101
+ 381 0062 0028     		cmp	r0, #0
+ 382 0064 18BF     		it	ne
+ 383 0066 4CF0010C 		orrne	ip, ip, #1
+ 384              	.LBE383:
+ 385              	.LBE390:
+ 386              	.LBB391:
+ 387              	.LBB387:
   73:../../../libs/libDaisy/src/dev/mpr121.h ****     }
- 385              		.loc 8 73 39 discriminator 1 view .LVU102
- 386 006a 0094     		str	r4, [sp]
- 387 006c 09A8     		add	r0, sp, #36
- 388              	.LVL8:
+ 388              		.loc 8 73 39 discriminator 1 view .LVU102
+ 389 006a 0094     		str	r4, [sp]
+ 390 006c 09A8     		add	r0, sp, #36
+ 391              	.LVL8:
   73:../../../libs/libDaisy/src/dev/mpr121.h ****     }
- 389              		.loc 8 73 39 discriminator 1 view .LVU103
- 390              	.LBE383:
- 391              	.LBE387:
- 392              	.LBB388:
- 393              	.LBB380:
- 394              		.loc 8 343 55 discriminator 1 view .LVU104
- 395 006e 8DF83CC0 		strb	ip, [sp, #60]
- 396              	.LVL9:
- 397              		.loc 8 343 55 discriminator 1 view .LVU105
- 398              	.LBE380:
- 399              	.LBE388:
- 400              	.LBB389:
- 401              	.LBI381:
+ 392              		.loc 8 73 39 discriminator 1 view .LVU103
+ 393              	.LBE387:
+ 394              	.LBE391:
+ 395              	.LBB392:
+ 396              	.LBB384:
+ 397              		.loc 8 343 55 discriminator 1 view .LVU104
+ 398 006e 8DF83CC0 		strb	ip, [sp, #60]
+ 399              	.LVL9:
+ 400              		.loc 8 343 55 discriminator 1 view .LVU105
+ 401              	.LBE384:
+ 402              	.LBE392:
+ 403              	.LBB393:
+ 404              	.LBI385:
   70:../../../libs/libDaisy/src/dev/mpr121.h ****     {
- 402              		.loc 8 70 10 is_stmt 1 discriminator 1 view .LVU106
- 403              	.LBB384:
+ 405              		.loc 8 70 10 is_stmt 1 discriminator 1 view .LVU106
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 30
+
+
+ 406              	.LBB388:
   72:../../../libs/libDaisy/src/dev/mpr121.h ****                != i2c_.ReceiveBlocking(config_.dev_addr, data, size, 10);
- 404              		.loc 8 72 9 discriminator 1 view .LVU107
+ 407              		.loc 8 72 9 discriminator 1 view .LVU107
   73:../../../libs/libDaisy/src/dev/mpr121.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 30
-
-
- 405              		.loc 8 73 39 is_stmt 0 discriminator 1 view .LVU108
- 406 0072 FFF7FEFF 		bl	_ZN5daisy9I2CHandle15ReceiveBlockingEtPhtm
- 407              	.LVL10:
+ 408              		.loc 8 73 39 is_stmt 0 discriminator 1 view .LVU108
+ 409 0072 FFF7FEFF 		bl	_ZN5daisy9I2CHandle15ReceiveBlockingEtPhtm
+ 410              	.LVL10:
   73:../../../libs/libDaisy/src/dev/mpr121.h ****     }
- 408              		.loc 8 73 39 discriminator 1 view .LVU109
- 409              	.LBE384:
- 410              	.LBE389:
- 411              	.LBB390:
- 412              	.LBB391:
- 413              		.loc 8 343 55 discriminator 1 view .LVU110
- 414 0076 9DF83C30 		ldrb	r3, [sp, #60]	@ zero_extendqisi2
- 415              	.LBE391:
- 416              	.LBE390:
- 417              	.LBB394:
- 418              	.LBB385:
+ 411              		.loc 8 73 39 discriminator 1 view .LVU109
+ 412              	.LBE388:
+ 413              	.LBE393:
+ 414              	.LBB394:
+ 415              	.LBB395:
+ 416              		.loc 8 343 55 discriminator 1 view .LVU110
+ 417 0076 9DF83C30 		ldrb	r3, [sp, #60]	@ zero_extendqisi2
+ 418              	.LBE395:
+ 419              	.LBE394:
+ 420              	.LBB398:
+ 421              	.LBB389:
   73:../../../libs/libDaisy/src/dev/mpr121.h ****     }
- 419              		.loc 8 73 39 discriminator 1 view .LVU111
- 420 007a 0246     		mov	r2, r0
- 421              	.LVL11:
+ 422              		.loc 8 73 39 discriminator 1 view .LVU111
+ 423 007a 0246     		mov	r2, r0
+ 424              	.LVL11:
   73:../../../libs/libDaisy/src/dev/mpr121.h ****     }
- 422              		.loc 8 73 39 discriminator 1 view .LVU112
- 423              	.LBE385:
- 424              	.LBE394:
- 425              	.LBB395:
- 426              	.LBI390:
- 427              		.loc 8 343 10 is_stmt 1 discriminator 1 view .LVU113
- 428              	.LBE395:
+ 425              		.loc 8 73 39 discriminator 1 view .LVU112
+ 426              	.LBE389:
+ 427              	.LBE398:
+ 428              	.LBB399:
+ 429              	.LBI394:
+ 430              		.loc 8 343 10 is_stmt 1 discriminator 1 view .LVU113
+ 431              	.LBE399:
  250:../../../libs/libDaisy/src/dev/mpr121.h ****     }
- 429              		.loc 8 250 16 is_stmt 0 discriminator 1 view .LVU114
- 430 007c BDF80A10 		ldrh	r1, [sp, #10]
- 431              	.LBB396:
- 432              	.LBB392:
- 433              		.loc 8 343 55 discriminator 1 view .LVU115
- 434 0080 002A     		cmp	r2, #0
- 435 0082 18BF     		it	ne
- 436 0084 43F00103 		orrne	r3, r3, #1
- 437              	.LBE392:
- 438              	.LBE396:
- 439              	.LBE399:
- 440              	.LBE370:
- 441              	.LBE369:
- 442              	.LBE368:
- 443              	.LBB406:
- 444              	.LBB407:
+ 432              		.loc 8 250 16 is_stmt 0 discriminator 1 view .LVU114
+ 433 007c BDF80A10 		ldrh	r1, [sp, #10]
+ 434              	.LBB400:
+ 435              	.LBB396:
+ 436              		.loc 8 343 55 discriminator 1 view .LVU115
+ 437 0080 002A     		cmp	r2, #0
+ 438 0082 18BF     		it	ne
+ 439 0084 43F00103 		orrne	r3, r3, #1
+ 440              	.LBE396:
+ 441              	.LBE400:
+ 442              	.LBE403:
+ 443              	.LBE374:
+ 444              	.LBE373:
+ 445              	.LBE372:
+ 446              	.LBB410:
+ 447              	.LBB411:
  128:../../../libs/libDaisy/src/daisy_seed.h ****     }
- 445              		.loc 1 128 23 discriminator 1 view .LVU116
- 446 0088 0848     		ldr	r0, .L6+8
- 447              	.LVL12:
+ 448              		.loc 1 128 23 discriminator 1 view .LVU116
+ 449 0088 0A48     		ldr	r0, .L6+8
+ 450              	.LVL12:
  128:../../../libs/libDaisy/src/daisy_seed.h ****     }
- 448              		.loc 1 128 23 discriminator 1 view .LVU117
- 449 008a C1F30B01 		ubfx	r1, r1, #0, #12
- 450              	.LBE407:
- 451              	.LBE406:
- 452              	.LBB409:
- 453              	.LBB404:
- 454              	.LBB402:
- 455              	.LBB400:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 31
+ 451              		.loc 1 128 23 discriminator 1 view .LVU117
+ 452 008a C1F30B01 		ubfx	r1, r1, #0, #12
+ 453              	.LBE411:
+ 454              	.LBE410:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 31
 
 
- 456              	.LBB397:
- 457              	.LBB393:
- 458              		.loc 8 343 55 discriminator 1 view .LVU118
- 459 008e 8DF83C30 		strb	r3, [sp, #60]
- 460              	.LVL13:
- 461              		.loc 8 343 55 discriminator 1 view .LVU119
- 462              	.LBE393:
- 463              	.LBE397:
- 464              	.LBE400:
- 465              	.LBE402:
- 466              	.LBE404:
- 467              	.LBE409:
- 468              	.LBB410:
- 469              	.LBI406:
+ 455              	.LBB413:
+ 456              	.LBB408:
+ 457              	.LBB406:
+ 458              	.LBB404:
+ 459              	.LBB401:
+ 460              	.LBB397:
+ 461              		.loc 8 343 55 discriminator 1 view .LVU118
+ 462 008e 8DF83C30 		strb	r3, [sp, #60]
+ 463              	.LVL13:
+ 464              		.loc 8 343 55 discriminator 1 view .LVU119
+ 465              	.LBE397:
+ 466              	.LBE401:
+ 467              	.LBE404:
+ 468              	.LBE406:
+ 469              	.LBE408:
+ 470              	.LBE413:
+ 471              	.LBB414:
+ 472              	.LBI410:
  126:../../../libs/libDaisy/src/daisy_seed.h ****     {
- 470              		.loc 1 126 17 is_stmt 1 discriminator 1 view .LVU120
- 471              	.LBB408:
+ 473              		.loc 1 126 17 is_stmt 1 discriminator 1 view .LVU120
+ 474              	.LBB412:
  128:../../../libs/libDaisy/src/daisy_seed.h ****     }
- 472              		.loc 1 128 23 is_stmt 0 discriminator 1 view .LVU121
- 473 0092 FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
- 474              	.LVL14:
+ 475              		.loc 1 128 23 is_stmt 0 discriminator 1 view .LVU121
+ 476 0092 FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
+ 477              	.LVL14:
  128:../../../libs/libDaisy/src/daisy_seed.h ****     }
- 475              		.loc 1 128 23 discriminator 1 view .LVU122
- 476              	.LBE408:
- 477              	.LBE410:
-  81:i2cComm.cpp   **** 		
+ 478              		.loc 1 128 23 discriminator 1 view .LVU122
+ 479              	.LBE412:
+ 480              	.LBE414:
+  81:i2cComm.cpp   **** 		hw.PrintLine("test");
+ 481              		.loc 7 81 3 is_stmt 1 discriminator 1 view .LVU123
+ 482              	.LBB415:
+ 483              	.LBI415:
+ 126:../../../libs/libDaisy/src/daisy_seed.h ****     {
+ 484              		.loc 1 126 17 discriminator 1 view .LVU124
+ 485              	.LBB416:
+ 128:../../../libs/libDaisy/src/daisy_seed.h ****     }
+ 486              		.loc 1 128 23 is_stmt 0 discriminator 1 view .LVU125
+ 487 0096 0848     		ldr	r0, .L6+12
+ 488 0098 FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
+ 489              	.LVL15:
+ 128:../../../libs/libDaisy/src/daisy_seed.h ****     }
+ 490              		.loc 1 128 23 discriminator 1 view .LVU126
+ 491              	.LBE416:
+ 492              	.LBE415:
   82:i2cComm.cpp   **** 		hw.DelayMs(10);
- 478              		.loc 7 82 3 is_stmt 1 discriminator 1 view .LVU123
- 479              		.loc 7 82 13 is_stmt 0 discriminator 1 view .LVU124
- 480 0096 2146     		mov	r1, r4
- 481 0098 0248     		ldr	r0, .L6
- 482 009a FFF7FEFF 		bl	_ZN5daisy9DaisySeed7DelayMsEj
- 483              	.LVL15:
+ 493              		.loc 7 82 3 is_stmt 1 discriminator 1 view .LVU127
+ 494              		.loc 7 82 13 is_stmt 0 discriminator 1 view .LVU128
+ 495 009c 2146     		mov	r1, r4
+ 496 009e 0348     		ldr	r0, .L6
+ 497 00a0 FFF7FEFF 		bl	_ZN5daisy9DaisySeed7DelayMsEj
+ 498              	.LVL16:
   78:i2cComm.cpp   **** 		// questo ritorna il registro relativo ai gate, 
- 484              		.loc 7 78 2 is_stmt 1 discriminator 1 view .LVU125
- 485              	.LBB411:
- 486              	.LBB405:
- 487              	.LBB403:
- 488              	.LBB401:
- 489              	.LBB398:
- 490              	.LBB375:
+ 499              		.loc 7 78 2 is_stmt 1 discriminator 1 view .LVU129
+ 500              	.LBB417:
+ 501              	.LBB409:
+ 502              	.LBB407:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 32
+
+
+ 503              	.LBB405:
+ 504              	.LBB402:
+ 505              	.LBB379:
   66:../../../libs/libDaisy/src/dev/mpr121.h ****     }
- 491              		.loc 8 66 49 is_stmt 0 discriminator 1 view .LVU126
- 492 009e 9DF83810 		ldrb	r1, [sp, #56]	@ zero_extendqisi2
- 493 00a2 CBE7     		b	.L4
- 494              	.L7:
- 495              		.align	2
- 496              	.L6:
- 497 00a4 00000000 		.word	.LANCHOR0
- 498 00a8 01080109 		.word	151062529
- 499 00ac 00000000 		.word	.LC2
- 500              	.LBE375:
- 501              	.LBE398:
- 502              	.LBE401:
- 503              	.LBE403:
- 504              	.LBE405:
- 505              	.LBE411:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 32
-
-
- 506              		.cfi_endproc
- 507              	.LFE4814:
- 509              		.section	.text.startup._GLOBAL__sub_I_hw,"ax",%progbits
- 510              		.align	1
- 511              		.p2align 2,,3
- 512              		.syntax unified
- 513              		.thumb
- 514              		.thumb_func
- 515              		.fpu fpv5-d16
- 517              	_GLOBAL__sub_I_hw:
- 518              	.LFB5390:
+ 506              		.loc 8 66 49 is_stmt 0 discriminator 1 view .LVU130
+ 507 00a4 9DF83810 		ldrb	r1, [sp, #56]	@ zero_extendqisi2
+ 508 00a8 C8E7     		b	.L4
+ 509              	.L7:
+ 510 00aa 00BF     		.align	2
+ 511              	.L6:
+ 512 00ac 00000000 		.word	.LANCHOR0
+ 513 00b0 01080109 		.word	151062529
+ 514 00b4 00000000 		.word	.LC2
+ 515 00b8 14000000 		.word	.LC3
+ 516              	.LBE379:
+ 517              	.LBE402:
+ 518              	.LBE405:
+ 519              	.LBE407:
+ 520              	.LBE409:
+ 521              	.LBE417:
+ 522              		.cfi_endproc
+ 523              	.LFE4814:
+ 525              		.section	.text.startup._GLOBAL__sub_I_hw,"ax",%progbits
+ 526              		.align	1
+ 527              		.p2align 2,,3
+ 528              		.syntax unified
+ 529              		.thumb
+ 530              		.thumb_func
+ 531              		.fpu fpv5-d16
+ 533              	_GLOBAL__sub_I_hw:
+ 534              	.LFB5391:
   83:i2cComm.cpp   **** 	}
   84:i2cComm.cpp   **** }
- 519              		.loc 7 84 1 is_stmt 1 view -0
- 520              		.cfi_startproc
- 521              		@ args = 0, pretend = 0, frame = 0
- 522              		@ frame_needed = 0, uses_anonymous_args = 0
- 523              		@ link register save eliminated.
- 524              	.LBB478:
- 525              	.LBI478:
- 526              		.loc 7 84 1 view .LVU128
- 527              	.LVL16:
- 528              	.LBB479:
- 529              	.LBB480:
- 530              	.LBI480:
+ 535              		.loc 7 84 1 is_stmt 1 view -0
+ 536              		.cfi_startproc
+ 537              		@ args = 0, pretend = 0, frame = 0
+ 538              		@ frame_needed = 0, uses_anonymous_args = 0
+ 539              		@ link register save eliminated.
+ 540              	.LBB484:
+ 541              	.LBI484:
+ 542              		.loc 7 84 1 view .LVU132
+ 543              	.LVL17:
+ 544              	.LBB485:
+ 545              	.LBB486:
+ 546              	.LBI486:
   21:../../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
- 531              		.loc 1 21 5 view .LVU129
- 532              	.LBB481:
- 533              	.LBB482:
- 534              	.LBI482:
- 535              		.file 11 "../../../libs/libDaisy/src/per/qspi.h"
+ 547              		.loc 1 21 5 view .LVU133
+ 548              	.LBB487:
+ 549              	.LBB488:
+ 550              	.LBI488:
+ 551              		.file 11 "../../../libs/libDaisy/src/per/qspi.h"
    1:../../../libs/libDaisy/src/per/qspi.h **** #ifndef DSY_QSPI
    2:../../../libs/libDaisy/src/per/qspi.h **** #define DSY_QSPI /**< Macro */
    3:../../../libs/libDaisy/src/per/qspi.h **** 
    4:../../../libs/libDaisy/src/per/qspi.h **** #ifndef UNIT_TEST // for unit tests, a dummy implementation
    5:../../../libs/libDaisy/src/per/qspi.h **** 
    6:../../../libs/libDaisy/src/per/qspi.h **** #include <cstdint>
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 33
+
+
    7:../../../libs/libDaisy/src/per/qspi.h **** #include "daisy_core.h"
    8:../../../libs/libDaisy/src/per/qspi.h **** #include "util/hal_map.h"
    9:../../../libs/libDaisy/src/per/qspi.h **** 
@@ -1918,9 +1941,6 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   24:../../../libs/libDaisy/src/per/qspi.h **** */
   25:../../../libs/libDaisy/src/per/qspi.h **** 
   26:../../../libs/libDaisy/src/per/qspi.h **** /** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 33
-
-
   27:../../../libs/libDaisy/src/per/qspi.h ****  Driver for QSPI peripheral to interface with external flash memory. \n 
   28:../../../libs/libDaisy/src/per/qspi.h ****     Currently supported QSPI Devices: \n 
   29:../../../libs/libDaisy/src/per/qspi.h ****     * IS25LP080D
@@ -1958,6 +1978,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   61:../../../libs/libDaisy/src/per/qspi.h ****         enum Device
   62:../../../libs/libDaisy/src/per/qspi.h ****         {
   63:../../../libs/libDaisy/src/per/qspi.h ****             IS25LP080D,  /**< & */
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 34
+
+
   64:../../../libs/libDaisy/src/per/qspi.h ****             IS25LP064A,  /**< & */
   65:../../../libs/libDaisy/src/per/qspi.h ****             DEVICE_LAST, /**< & */
   66:../../../libs/libDaisy/src/per/qspi.h ****         };
@@ -1978,9 +2001,6 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   81:../../../libs/libDaisy/src/per/qspi.h **** 
   82:../../../libs/libDaisy/src/per/qspi.h ****         //SCK,  CE# (active low)
   83:../../../libs/libDaisy/src/per/qspi.h ****         struct
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 34
-
-
   84:../../../libs/libDaisy/src/per/qspi.h ****         {
   85:../../../libs/libDaisy/src/per/qspi.h ****             Pin io0; /**< & */
   86:../../../libs/libDaisy/src/per/qspi.h ****             Pin io1; /**< & */
@@ -2018,6 +2038,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  118:../../../libs/libDaisy/src/per/qspi.h ****         For IS25LP*, page size is 256 bytes.
  119:../../../libs/libDaisy/src/per/qspi.h ****         \param address Address to write to
  120:../../../libs/libDaisy/src/per/qspi.h ****         \param size Buffer size
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 35
+
+
  121:../../../libs/libDaisy/src/per/qspi.h ****         \param buffer Buffer to write
  122:../../../libs/libDaisy/src/per/qspi.h ****         \return Result::OK or Result::ERR
  123:../../../libs/libDaisy/src/per/qspi.h ****         */
@@ -2038,9 +2061,6 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  138:../../../libs/libDaisy/src/per/qspi.h ****         Smallest erase possible is 4kB at a time. (on IS25LP*)
  139:../../../libs/libDaisy/src/per/qspi.h ****         \param start_addr Address to begin erasing from
  140:../../../libs/libDaisy/src/per/qspi.h ****         \param end_addr  Address to stop erasing at
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 35
-
-
  141:../../../libs/libDaisy/src/per/qspi.h ****         \return Result::OK or Result::ERR
  142:../../../libs/libDaisy/src/per/qspi.h ****         */
  143:../../../libs/libDaisy/src/per/qspi.h ****     Result Erase(uint32_t start_addr, uint32_t end_addr);
@@ -2068,69 +2088,69 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  165:../../../libs/libDaisy/src/per/qspi.h ****     void* GetData(uint32_t offset = 0);
  166:../../../libs/libDaisy/src/per/qspi.h **** 
  167:../../../libs/libDaisy/src/per/qspi.h ****     QSPIHandle() : pimpl_(nullptr) {}
- 536              		.loc 11 167 5 view .LVU130
- 537              		.loc 11 167 5 is_stmt 0 view .LVU131
- 538              	.LBE482:
- 539              	.LBB487:
- 540              	.LBI487:
+ 552              		.loc 11 167 5 view .LVU134
+ 553              		.loc 11 167 5 is_stmt 0 view .LVU135
+ 554              	.LBE488:
+ 555              	.LBB493:
+ 556              	.LBI493:
   58:../../../libs/libDaisy/src/per/qspi.h ****     {
- 541              		.loc 11 58 12 is_stmt 1 view .LVU132
- 542              	.LBB488:
- 543              	.LBI488:
+ 557              		.loc 11 58 12 is_stmt 1 view .LVU136
+ 558              	.LBB494:
+ 559              	.LBI494:
   84:../../../libs/libDaisy/src/per/qspi.h ****             Pin io0; /**< & */
- 544              		.loc 11 84 9 view .LVU133
- 545              	.LBB489:
- 546              	.LBI489:
- 547              		.loc 10 204 15 view .LVU134
- 548              		.loc 10 204 15 is_stmt 0 view .LVU135
- 549              	.LBE489:
- 550              	.LBB490:
- 551              	.LBI490:
- 552              		.loc 10 204 15 is_stmt 1 view .LVU136
- 553              		.loc 10 204 15 is_stmt 0 view .LVU137
- 554              	.LBE490:
- 555              	.LBB491:
- 556              	.LBI491:
- 557              		.loc 10 204 15 is_stmt 1 view .LVU138
- 558              		.loc 10 204 15 is_stmt 0 view .LVU139
- 559              	.LBE491:
- 560              	.LBB492:
- 561              	.LBI492:
- 562              		.loc 10 204 15 is_stmt 1 view .LVU140
- 563              		.loc 10 204 15 is_stmt 0 view .LVU141
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 36
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 36
 
 
- 564              	.LBE492:
- 565              	.LBB493:
- 566              	.LBI493:
- 567              		.loc 10 204 15 is_stmt 1 view .LVU142
- 568              		.loc 10 204 15 is_stmt 0 view .LVU143
- 569              	.LBE493:
- 570              	.LBB494:
- 571              	.LBI494:
- 572              		.loc 10 204 15 is_stmt 1 view .LVU144
- 573              		.loc 10 204 15 is_stmt 0 view .LVU145
- 574              	.LBE494:
- 575              	.LBE488:
- 576              	.LBE487:
- 577              	.LBB495:
- 578              	.LBI495:
+ 560              		.loc 11 84 9 view .LVU137
+ 561              	.LBB495:
+ 562              	.LBI495:
+ 563              		.loc 10 204 15 view .LVU138
+ 564              		.loc 10 204 15 is_stmt 0 view .LVU139
+ 565              	.LBE495:
+ 566              	.LBB496:
+ 567              	.LBI496:
+ 568              		.loc 10 204 15 is_stmt 1 view .LVU140
+ 569              		.loc 10 204 15 is_stmt 0 view .LVU141
+ 570              	.LBE496:
+ 571              	.LBB497:
+ 572              	.LBI497:
+ 573              		.loc 10 204 15 is_stmt 1 view .LVU142
+ 574              		.loc 10 204 15 is_stmt 0 view .LVU143
+ 575              	.LBE497:
+ 576              	.LBB498:
+ 577              	.LBI498:
+ 578              		.loc 10 204 15 is_stmt 1 view .LVU144
+ 579              		.loc 10 204 15 is_stmt 0 view .LVU145
+ 580              	.LBE498:
+ 581              	.LBB499:
+ 582              	.LBI499:
+ 583              		.loc 10 204 15 is_stmt 1 view .LVU146
+ 584              		.loc 10 204 15 is_stmt 0 view .LVU147
+ 585              	.LBE499:
+ 586              	.LBB500:
+ 587              	.LBI500:
+ 588              		.loc 10 204 15 is_stmt 1 view .LVU148
+ 589              		.loc 10 204 15 is_stmt 0 view .LVU149
+ 590              	.LBE500:
+ 591              	.LBE494:
+ 592              	.LBE493:
+ 593              	.LBB501:
+ 594              	.LBI501:
   87:../../../libs/libDaisy/src/hid/audio.h ****     ~AudioHandle() {}
- 579              		.loc 6 87 5 is_stmt 1 view .LVU146
+ 595              		.loc 6 87 5 is_stmt 1 view .LVU150
   87:../../../libs/libDaisy/src/hid/audio.h ****     ~AudioHandle() {}
- 580              		.loc 6 87 5 is_stmt 0 view .LVU147
- 581              	.LBE495:
- 582              	.LBB498:
- 583              	.LBI498:
+ 596              		.loc 6 87 5 is_stmt 0 view .LVU151
+ 597              	.LBE501:
+ 598              	.LBB504:
+ 599              	.LBI504:
  109:../../../libs/libDaisy/src/per/adc.h ****     ~AdcHandle() {}
- 584              		.loc 5 109 5 is_stmt 1 view .LVU148
+ 600              		.loc 5 109 5 is_stmt 1 view .LVU152
  109:../../../libs/libDaisy/src/per/adc.h ****     ~AdcHandle() {}
- 585              		.loc 5 109 5 is_stmt 0 view .LVU149
- 586              	.LBE498:
- 587              	.LBB499:
- 588              	.LBI499:
- 589              		.file 12 "../../../libs/libDaisy/src/per/dac.h"
+ 601              		.loc 5 109 5 is_stmt 0 view .LVU153
+ 602              	.LBE504:
+ 603              	.LBB505:
+ 604              	.LBI505:
+ 605              		.file 12 "../../../libs/libDaisy/src/per/dac.h"
    1:../../../libs/libDaisy/src/per/dac.h **** #pragma once
    2:../../../libs/libDaisy/src/per/dac.h **** #ifndef DSY_DAC_H
    3:../../../libs/libDaisy/src/per/dac.h **** #define DSY_DAC_H
@@ -2138,6 +2158,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
    5:../../../libs/libDaisy/src/per/dac.h **** #include "daisy_core.h"
    6:../../../libs/libDaisy/src/per/dac.h **** 
    7:../../../libs/libDaisy/src/per/dac.h **** namespace daisy
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 37
+
+
    8:../../../libs/libDaisy/src/per/dac.h **** {
    9:../../../libs/libDaisy/src/per/dac.h **** /** @brief DAC handle for Built-in DAC Peripheral 
   10:../../../libs/libDaisy/src/per/dac.h ****  *  @ingroup per_analog
@@ -2158,9 +2181,6 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   25:../../../libs/libDaisy/src/per/dac.h ****     enum class Result
   26:../../../libs/libDaisy/src/per/dac.h ****     {
   27:../../../libs/libDaisy/src/per/dac.h ****         OK,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 37
-
-
   28:../../../libs/libDaisy/src/per/dac.h ****         ERR,
   29:../../../libs/libDaisy/src/per/dac.h ****     };
   30:../../../libs/libDaisy/src/per/dac.h **** 
@@ -2198,6 +2218,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   62:../../../libs/libDaisy/src/per/dac.h ****     /** Sets whether the DAC output is buffered for higher drive ability. */
   63:../../../libs/libDaisy/src/per/dac.h ****     enum class BufferState
   64:../../../libs/libDaisy/src/per/dac.h ****     {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 38
+
+
   65:../../../libs/libDaisy/src/per/dac.h ****         ENABLED,
   66:../../../libs/libDaisy/src/per/dac.h ****         DISABLED,
   67:../../../libs/libDaisy/src/per/dac.h ****     };
@@ -2218,22 +2241,19 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   82:../../../libs/libDaisy/src/per/dac.h ****     };
   83:../../../libs/libDaisy/src/per/dac.h **** 
   84:../../../libs/libDaisy/src/per/dac.h ****     DacHandle() : pimpl_(nullptr) {}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 38
-
-
- 590              		.loc 12 84 5 is_stmt 1 view .LVU150
- 591              		.loc 12 84 5 is_stmt 0 view .LVU151
- 592              	.LBE499:
- 593              	.LBB502:
- 594              	.LBI502:
+ 606              		.loc 12 84 5 is_stmt 1 view .LVU154
+ 607              		.loc 12 84 5 is_stmt 0 view .LVU155
+ 608              	.LBE505:
+ 609              	.LBB508:
+ 610              	.LBI508:
   40:../../../libs/libDaisy/src/hid/usb.h **** 
- 595              		.loc 4 40 5 is_stmt 1 view .LVU152
+ 611              		.loc 4 40 5 is_stmt 1 view .LVU156
   40:../../../libs/libDaisy/src/hid/usb.h **** 
- 596              		.loc 4 40 5 is_stmt 0 view .LVU153
- 597              	.LBE502:
- 598              	.LBB503:
- 599              	.LBI503:
- 600              		.file 13 "../../../libs/libDaisy/src/per/gpio.h"
+ 612              		.loc 4 40 5 is_stmt 0 view .LVU157
+ 613              	.LBE508:
+ 614              	.LBB509:
+ 615              	.LBI509:
+ 616              		.file 13 "../../../libs/libDaisy/src/per/gpio.h"
    1:../../../libs/libDaisy/src/per/gpio.h **** #pragma once
    2:../../../libs/libDaisy/src/per/gpio.h **** #ifndef DSY_GPIO_H
    3:../../../libs/libDaisy/src/per/gpio.h **** #define DSY_GPIO_H
@@ -2258,6 +2278,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   22:../../../libs/libDaisy/src/per/gpio.h **** {
   23:../../../libs/libDaisy/src/per/gpio.h ****   public:
   24:../../../libs/libDaisy/src/per/gpio.h ****     /** @brief Mode of operation for the specified GPIO */
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 39
+
+
   25:../../../libs/libDaisy/src/per/gpio.h ****     enum class Mode
   26:../../../libs/libDaisy/src/per/gpio.h ****     {
   27:../../../libs/libDaisy/src/per/gpio.h ****         INPUT,      /**< Input for reading state of pin */
@@ -2278,9 +2301,6 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   42:../../../libs/libDaisy/src/per/gpio.h ****     {
   43:../../../libs/libDaisy/src/per/gpio.h ****         NOPULL,   /**< No pull up resistor */
   44:../../../libs/libDaisy/src/per/gpio.h ****         PULLUP,   /**< Internal pull up enabled */
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 39
-
-
   45:../../../libs/libDaisy/src/per/gpio.h ****         PULLDOWN, /**< Internal pull down enabled*/
   46:../../../libs/libDaisy/src/per/gpio.h ****     };
   47:../../../libs/libDaisy/src/per/gpio.h **** 
@@ -2311,82 +2331,85 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   72:../../../libs/libDaisy/src/per/gpio.h ****     };
   73:../../../libs/libDaisy/src/per/gpio.h **** 
   74:../../../libs/libDaisy/src/per/gpio.h ****     GPIO() {}
- 601              		.loc 13 74 5 is_stmt 1 view .LVU154
- 602              	.LBB504:
- 603              	.LBB505:
- 604              	.LBI505:
+ 617              		.loc 13 74 5 is_stmt 1 view .LVU158
+ 618              	.LBB510:
+ 619              	.LBB511:
+ 620              	.LBI511:
   68:../../../libs/libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
- 605              		.loc 13 68 9 view .LVU155
- 606              	.LBB506:
- 607              	.LBB507:
- 608              	.LBB508:
- 609              	.LBI508:
- 610              		.loc 10 204 15 view .LVU156
- 611              		.loc 10 204 15 is_stmt 0 view .LVU157
- 612              	.LBE508:
- 613              	.LBE507:
- 614              	.LBE506:
- 615              	.LBE505:
- 616              	.LBE504:
- 617              	.LBE503:
- 618              	.LBB517:
- 619              	.LBI517:
- 620              		.loc 13 74 5 is_stmt 1 view .LVU158
- 621              	.LBB518:
- 622              	.LBB519:
- 623              	.LBI519:
-  68:../../../libs/libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
- 624              		.loc 13 68 9 view .LVU159
- 625              	.LBB520:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 40
+ 621              		.loc 13 68 9 view .LVU159
+ 622              	.LBB512:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 40
 
 
- 626              	.LBB521:
- 627              	.LBB522:
- 628              	.LBI522:
- 629              		.loc 10 204 15 view .LVU160
- 630              		.loc 10 204 15 is_stmt 0 view .LVU161
- 631              	.LBE522:
- 632              	.LBE521:
- 633              	.LBE520:
- 634              	.LBE519:
- 635              	.LBE518:
- 636              	.LBE517:
- 637              	.LBB531:
- 638              	.LBI531:
-  96:../../../libs/libDaisy/src/sys/system.h ****     ~System() {}
- 639              		.loc 3 96 5 is_stmt 1 view .LVU162
-  96:../../../libs/libDaisy/src/sys/system.h ****     ~System() {}
- 640              		.loc 3 96 5 is_stmt 0 view .LVU163
- 641              	.LBE531:
- 642              	.LBB532:
- 643              	.LBI532:
-  20:../../../libs/libDaisy/src/dev/codec_ak4556.h ****     ~Ak4556() {}
- 644              		.loc 2 20 5 is_stmt 1 view .LVU164
- 645              	.LBB533:
- 646              	.LBI533:
- 647              		.loc 13 74 5 view .LVU165
- 648              	.LBB534:
- 649              	.LBB535:
- 650              	.LBI535:
+ 623              	.LBB513:
+ 624              	.LBB514:
+ 625              	.LBI514:
+ 626              		.loc 10 204 15 view .LVU160
+ 627              		.loc 10 204 15 is_stmt 0 view .LVU161
+ 628              	.LBE514:
+ 629              	.LBE513:
+ 630              	.LBE512:
+ 631              	.LBE511:
+ 632              	.LBE510:
+ 633              	.LBE509:
+ 634              	.LBB523:
+ 635              	.LBI523:
+ 636              		.loc 13 74 5 is_stmt 1 view .LVU162
+ 637              	.LBB524:
+ 638              	.LBB525:
+ 639              	.LBI525:
   68:../../../libs/libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
- 651              		.loc 13 68 9 view .LVU166
- 652              	.LBB536:
+ 640              		.loc 13 68 9 view .LVU163
+ 641              	.LBB526:
+ 642              	.LBB527:
+ 643              	.LBB528:
+ 644              	.LBI528:
+ 645              		.loc 10 204 15 view .LVU164
+ 646              		.loc 10 204 15 is_stmt 0 view .LVU165
+ 647              	.LBE528:
+ 648              	.LBE527:
+ 649              	.LBE526:
+ 650              	.LBE525:
+ 651              	.LBE524:
+ 652              	.LBE523:
  653              	.LBB537:
- 654              	.LBB538:
- 655              	.LBI538:
- 656              		.loc 10 204 15 view .LVU167
- 657              		.loc 10 204 15 is_stmt 0 view .LVU168
- 658              	.LBE538:
- 659              	.LBE537:
- 660              	.LBE536:
- 661              	.LBE535:
- 662              	.LBE534:
- 663              	.LBE533:
- 664              	.LBE532:
- 665              	.LBB549:
- 666              	.LBI549:
- 667              		.file 14 "../../../libs/libDaisy/src/per/sai.h"
+ 654              	.LBI537:
+  96:../../../libs/libDaisy/src/sys/system.h ****     ~System() {}
+ 655              		.loc 3 96 5 is_stmt 1 view .LVU166
+  96:../../../libs/libDaisy/src/sys/system.h ****     ~System() {}
+ 656              		.loc 3 96 5 is_stmt 0 view .LVU167
+ 657              	.LBE537:
+ 658              	.LBB538:
+ 659              	.LBI538:
+  20:../../../libs/libDaisy/src/dev/codec_ak4556.h ****     ~Ak4556() {}
+ 660              		.loc 2 20 5 is_stmt 1 view .LVU168
+ 661              	.LBB539:
+ 662              	.LBI539:
+ 663              		.loc 13 74 5 view .LVU169
+ 664              	.LBB540:
+ 665              	.LBB541:
+ 666              	.LBI541:
+  68:../../../libs/libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
+ 667              		.loc 13 68 9 view .LVU170
+ 668              	.LBB542:
+ 669              	.LBB543:
+ 670              	.LBB544:
+ 671              	.LBI544:
+ 672              		.loc 10 204 15 view .LVU171
+ 673              		.loc 10 204 15 is_stmt 0 view .LVU172
+ 674              	.LBE544:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 41
+
+
+ 675              	.LBE543:
+ 676              	.LBE542:
+ 677              	.LBE541:
+ 678              	.LBE540:
+ 679              	.LBE539:
+ 680              	.LBE538:
+ 681              	.LBB555:
+ 682              	.LBI555:
+ 683              		.file 14 "../../../libs/libDaisy/src/per/sai.h"
    1:../../../libs/libDaisy/src/per/sai.h **** #pragma once
    2:../../../libs/libDaisy/src/per/sai.h **** #ifndef DSY_SAI_H
    3:../../../libs/libDaisy/src/per/sai.h **** #define DSY_SAI_H
@@ -2398,9 +2421,6 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
    9:../../../libs/libDaisy/src/per/sai.h **** {
   10:../../../libs/libDaisy/src/per/sai.h **** /** 
   11:../../../libs/libDaisy/src/per/sai.h ****  * Support for I2S Audio Protocol with different bit-depth, samplerate options
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 41
-
-
   12:../../../libs/libDaisy/src/per/sai.h ****  * Allows for master or slave, as well as freedom of selecting direction, 
   13:../../../libs/libDaisy/src/per/sai.h ****  * and other behavior for each peripheral, and block.
   14:../../../libs/libDaisy/src/per/sai.h ****  * 
@@ -2438,6 +2458,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   46:../../../libs/libDaisy/src/per/sai.h ****     /** Contains settings for initialising an SAI Interface */
   47:../../../libs/libDaisy/src/per/sai.h ****     struct Config
   48:../../../libs/libDaisy/src/per/sai.h ****     {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 42
+
+
   49:../../../libs/libDaisy/src/per/sai.h ****         /** Specifies the internal peripheral to use (mapped to different hardware pins) */
   50:../../../libs/libDaisy/src/per/sai.h ****         enum class Peripheral
   51:../../../libs/libDaisy/src/per/sai.h ****         {
@@ -2458,9 +2481,6 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
   66:../../../libs/libDaisy/src/per/sai.h ****         /** Bit Depth that the hardware expects to be transferred to/from the device. */
   67:../../../libs/libDaisy/src/per/sai.h ****         enum class BitDepth
   68:../../../libs/libDaisy/src/per/sai.h ****         {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 42
-
-
   69:../../../libs/libDaisy/src/per/sai.h ****             SAI_16BIT,
   70:../../../libs/libDaisy/src/per/sai.h ****             SAI_24BIT,
   71:../../../libs/libDaisy/src/per/sai.h ****             SAI_32BIT,
@@ -2498,277 +2518,280 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 1
  103:../../../libs/libDaisy/src/per/sai.h ****     enum class Result
  104:../../../libs/libDaisy/src/per/sai.h ****     {
  105:../../../libs/libDaisy/src/per/sai.h ****         OK,
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 43
+
+
  106:../../../libs/libDaisy/src/per/sai.h ****         ERR,
  107:../../../libs/libDaisy/src/per/sai.h ****     };
  108:../../../libs/libDaisy/src/per/sai.h **** 
  109:../../../libs/libDaisy/src/per/sai.h ****     SaiHandle() : pimpl_(nullptr) {}
- 668              		.loc 14 109 5 is_stmt 1 view .LVU169
- 669              	.LBE549:
- 670              	.LBB552:
- 671              	.LBB483:
- 672              	.LBB484:
- 673              		.loc 11 167 34 is_stmt 0 view .LVU170
- 674 0000 0F48     		ldr	r0, .L10
- 675              	.LBE484:
- 676              	.LBE483:
- 677              	.LBE552:
+ 684              		.loc 14 109 5 is_stmt 1 view .LVU173
+ 685              	.LBE555:
+ 686              	.LBB558:
+ 687              	.LBB489:
+ 688              	.LBB490:
+ 689              		.loc 11 167 34 is_stmt 0 view .LVU174
+ 690 0000 0F48     		ldr	r0, .L10
+ 691              	.LBE490:
+ 692              	.LBE489:
+ 693              	.LBE558:
   21:../../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
- 678              		.loc 1 21 17 view .LVU171
- 679 0002 4FF60B71 		movw	r1, #65291
- 680              	.LBB553:
- 681              	.LBB486:
- 682              	.LBB485:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 43
-
-
- 683              		.loc 11 167 34 view .LVU172
- 684 0006 0023     		movs	r3, #0
- 685              	.LBE485:
- 686              	.LBE486:
- 687              	.LBE553:
- 688              	.LBE481:
- 689              	.LBE480:
+ 694              		.loc 1 21 17 view .LVU175
+ 695 0002 4FF60B71 		movw	r1, #65291
+ 696              	.LBB559:
+ 697              	.LBB492:
+ 698              	.LBB491:
+ 699              		.loc 11 167 34 view .LVU176
+ 700 0006 0023     		movs	r3, #0
+ 701              	.LBE491:
+ 702              	.LBE492:
+ 703              	.LBE559:
+ 704              	.LBE487:
+ 705              	.LBE486:
    8:i2cComm.cpp   **** /*
- 690              		.loc 7 8 11 view .LVU173
- 691 0008 0E4A     		ldr	r2, .L10+4
- 692              	.LBE479:
- 693              	.LBE478:
- 694              		.loc 7 84 1 view .LVU174
- 695 000a 10B4     		push	{r4}
- 696              		.cfi_def_cfa_offset 4
- 697              		.cfi_offset 4, -4
- 698              	.LBB569:
- 699              	.LBB567:
- 700              	.LBB565:
- 701              	.LBB563:
+ 706              		.loc 7 8 11 view .LVU177
+ 707 0008 0E4A     		ldr	r2, .L10+4
+ 708              	.LBE485:
+ 709              	.LBE484:
+ 710              		.loc 7 84 1 view .LVU178
+ 711 000a 10B4     		push	{r4}
+ 712              		.cfi_def_cfa_offset 4
+ 713              		.cfi_offset 4, -4
+ 714              	.LBB575:
+ 715              	.LBB573:
+ 716              	.LBB571:
+ 717              	.LBB569:
   21:../../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
- 702              		.loc 1 21 17 view .LVU175
- 703 000c 6FF0F414 		mvn	r4, #15991028
- 704 0010 8165     		str	r1, [r0, #88]
- 705              	.LBB554:
- 706              	.LBB496:
- 707              	.LBB497:
+ 718              		.loc 1 21 17 view .LVU179
+ 719 000c 6FF0F414 		mvn	r4, #15991028
+ 720 0010 8165     		str	r1, [r0, #88]
+ 721              	.LBB560:
+ 722              	.LBB502:
+ 723              	.LBB503:
   87:../../../libs/libDaisy/src/hid/audio.h ****     ~AudioHandle() {}
- 708              		.loc 6 87 35 view .LVU176
- 709 0012 4361     		str	r3, [r0, #20]
- 710              	.LBE497:
- 711              	.LBE496:
- 712              	.LBE554:
- 713              	.LBB555:
- 714              	.LBB500:
- 715              	.LBB501:
- 716              		.loc 12 84 33 view .LVU177
- 717 0014 0362     		str	r3, [r0, #32]
- 718              	.LBE501:
- 719              	.LBE500:
- 720              	.LBE555:
- 721              	.LBB556:
- 722              	.LBB547:
- 723              	.LBB545:
- 724              	.LBB543:
- 725              	.LBB541:
- 726              	.LBB539:
-  69:../../../libs/libDaisy/src/per/gpio.h ****         {
- 727              		.loc 13 69 73 view .LVU178
- 728 0016 4366     		str	r3, [r0, #100]
- 729              	.LBE539:
- 730              	.LBE541:
- 731              	.LBE543:
- 732              	.LBE545:
- 733              	.LBE547:
- 734              	.LBE556:
- 735              	.LBB557:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 44
+ 724              		.loc 6 87 35 view .LVU180
+ 725 0012 4361     		str	r3, [r0, #20]
+ 726              	.LBE503:
+ 727              	.LBE502:
+ 728              	.LBE560:
+ 729              	.LBB561:
+ 730              	.LBB506:
+ 731              	.LBB507:
+ 732              		.loc 12 84 33 view .LVU181
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 44
 
 
- 736              	.LBB550:
- 737              	.LBB551:
- 738              		.loc 14 109 33 view .LVU179
- 739 0018 0367     		str	r3, [r0, #112]
- 740              	.LVL17:
- 741              		.loc 14 109 33 view .LVU180
- 742              	.LBE551:
- 743              	.LBE550:
- 744              	.LBE557:
- 745              	.LBB558:
- 746              	.LBB515:
- 747              	.LBB513:
- 748              	.LBB511:
- 749              	.LBB509:
+ 733 0014 0362     		str	r3, [r0, #32]
+ 734              	.LBE507:
+ 735              	.LBE506:
+ 736              	.LBE561:
+ 737              	.LBB562:
+ 738              	.LBB553:
+ 739              	.LBB551:
+ 740              	.LBB549:
+ 741              	.LBB547:
+ 742              	.LBB545:
   69:../../../libs/libDaisy/src/per/gpio.h ****         {
- 750              		.loc 13 69 73 view .LVU181
- 751 001a C0E90A13 		strd	r1, r3, [r0, #40]
- 752              	.LBE509:
- 753              	.LBE511:
- 754              	.LBE513:
- 755              	.LBE515:
- 756              	.LBE558:
- 757              	.LBB559:
- 758              	.LBB529:
- 759              	.LBB527:
- 760              	.LBB525:
- 761              	.LBB523:
- 762 001e C0E90F13 		strd	r1, r3, [r0, #60]
- 763              	.LBE523:
- 764              	.LBE525:
- 765              	.LBE527:
- 766              	.LBE529:
- 767              	.LBE559:
+ 743              		.loc 13 69 73 view .LVU182
+ 744 0016 4366     		str	r3, [r0, #100]
+ 745              	.LBE545:
+ 746              	.LBE547:
+ 747              	.LBE549:
+ 748              	.LBE551:
+ 749              	.LBE553:
+ 750              	.LBE562:
+ 751              	.LBB563:
+ 752              	.LBB556:
+ 753              	.LBB557:
+ 754              		.loc 14 109 33 view .LVU183
+ 755 0018 0367     		str	r3, [r0, #112]
+ 756              	.LVL18:
+ 757              		.loc 14 109 33 view .LVU184
+ 758              	.LBE557:
+ 759              	.LBE556:
+ 760              	.LBE563:
+ 761              	.LBB564:
+ 762              	.LBB521:
+ 763              	.LBB519:
+ 764              	.LBB517:
+ 765              	.LBB515:
+  69:../../../libs/libDaisy/src/per/gpio.h ****         {
+ 766              		.loc 13 69 73 view .LVU185
+ 767 001a C0E90A13 		strd	r1, r3, [r0, #40]
+ 768              	.LBE515:
+ 769              	.LBE517:
+ 770              	.LBE519:
+ 771              	.LBE521:
+ 772              	.LBE564:
+ 773              	.LBB565:
+ 774              	.LBB535:
+ 775              	.LBB533:
+ 776              	.LBB531:
+ 777              	.LBB529:
+ 778 001e C0E90F13 		strd	r1, r3, [r0, #60]
+ 779              	.LBE529:
+ 780              	.LBE531:
+ 781              	.LBE533:
+ 782              	.LBE535:
+ 783              	.LBE565:
   21:../../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
- 768              		.loc 1 21 17 view .LVU182
- 769 0022 C0E90034 		strd	r3, r4, [r0]
- 770 0026 C0E90244 		strd	r4, r4, [r0, #8]
- 771              	.LBE563:
- 772              	.LBE565:
+ 784              		.loc 1 21 17 view .LVU186
+ 785 0022 C0E90034 		strd	r3, r4, [r0]
+ 786 0026 C0E90244 		strd	r4, r4, [r0, #8]
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 45
+
+
+ 787              	.LBE569:
+ 788              	.LBE571:
    8:i2cComm.cpp   **** /*
- 773              		.loc 7 8 11 view .LVU183
- 774 002a 0749     		ldr	r1, .L10+8
- 775              	.LBE567:
- 776              	.LBE569:
- 777              		.loc 7 84 1 view .LVU184
- 778 002c 5DF8044B 		ldr	r4, [sp], #4
- 779              		.cfi_restore 4
- 780              		.cfi_def_cfa_offset 0
- 781              	.LBB570:
- 782              	.LBB568:
- 783              	.LBB566:
- 784              	.LBB564:
- 785              	.LBB560:
- 786              	.LBB516:
- 787              	.LBB514:
- 788              	.LBB512:
- 789              	.LBB510:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 45
-
-
+ 789              		.loc 7 8 11 view .LVU187
+ 790 002a 0749     		ldr	r1, .L10+8
+ 791              	.LBE573:
+ 792              	.LBE575:
+ 793              		.loc 7 84 1 view .LVU188
+ 794 002c 5DF8044B 		ldr	r4, [sp], #4
+ 795              		.cfi_restore 4
+ 796              		.cfi_def_cfa_offset 0
+ 797              	.LBB576:
+ 798              	.LBB574:
+ 799              	.LBB572:
+ 800              	.LBB570:
+ 801              	.LBB566:
+ 802              	.LBB522:
+ 803              	.LBB520:
+ 804              	.LBB518:
+ 805              	.LBB516:
   69:../../../libs/libDaisy/src/per/gpio.h ****         {
- 790              		.loc 13 69 73 view .LVU185
- 791 0030 C0E90C33 		strd	r3, r3, [r0, #48]
- 792              	.LBE510:
- 793              	.LBE512:
- 794              	.LBE514:
- 795              	.LBE516:
- 796              	.LBE560:
- 797              	.LBB561:
- 798              	.LBB530:
- 799              	.LBB528:
- 800              	.LBB526:
- 801              	.LBB524:
- 802 0034 C0E91133 		strd	r3, r3, [r0, #68]
- 803              	.LBE524:
- 804              	.LBE526:
- 805              	.LBE528:
- 806              	.LBE530:
- 807              	.LBE561:
- 808              	.LBB562:
- 809              	.LBB548:
- 810              	.LBB546:
- 811              	.LBB544:
- 812              	.LBB542:
- 813              	.LBB540:
- 814 0038 C0E91733 		strd	r3, r3, [r0, #92]
- 815              	.LBE540:
- 816              	.LBE542:
- 817              	.LBE544:
- 818              	.LBE546:
- 819              	.LBE548:
- 820              	.LBE562:
- 821              	.LBE564:
- 822              	.LBE566:
+ 806              		.loc 13 69 73 view .LVU189
+ 807 0030 C0E90C33 		strd	r3, r3, [r0, #48]
+ 808              	.LBE516:
+ 809              	.LBE518:
+ 810              	.LBE520:
+ 811              	.LBE522:
+ 812              	.LBE566:
+ 813              	.LBB567:
+ 814              	.LBB536:
+ 815              	.LBB534:
+ 816              	.LBB532:
+ 817              	.LBB530:
+ 818 0034 C0E91133 		strd	r3, r3, [r0, #68]
+ 819              	.LBE530:
+ 820              	.LBE532:
+ 821              	.LBE534:
+ 822              	.LBE536:
+ 823              	.LBE567:
+ 824              	.LBB568:
+ 825              	.LBB554:
+ 826              	.LBB552:
+ 827              	.LBB550:
+ 828              	.LBB548:
+ 829              	.LBB546:
+ 830 0038 C0E91733 		strd	r3, r3, [r0, #92]
+ 831              	.LBE546:
+ 832              	.LBE548:
+ 833              	.LBE550:
+ 834              	.LBE552:
+ 835              	.LBE554:
+ 836              	.LBE568:
+ 837              	.LBE570:
+ 838              	.LBE572:
    8:i2cComm.cpp   **** /*
- 823              		.loc 7 8 11 view .LVU186
- 824 003c FFF7FEBF 		b	__aeabi_atexit
- 825              	.LVL18:
- 826              	.L11:
- 827              		.align	2
- 828              	.L10:
- 829 0040 00000000 		.word	.LANCHOR0
- 830 0044 00000000 		.word	__dso_handle
- 831 0048 00000000 		.word	_ZN5daisy9DaisySeedD1Ev
- 832              	.LBE568:
- 833              	.LBE570:
- 834              		.cfi_endproc
- 835              	.LFE5390:
- 837              		.section	.init_array,"aw",%init_array
- 838              		.align	2
- 839 0000 00000000 		.word	_GLOBAL__sub_I_hw(target1)
- 840              		.global	hw
- 841              		.section	.bss.hw,"aw",%nobits
- 842              		.align	2
- 843              		.set	.LANCHOR0,. + 0
- 846              	hw:
- 847 0000 00000000 		.space	116
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 46
+ 839              		.loc 7 8 11 view .LVU190
+ 840 003c FFF7FEBF 		b	__aeabi_atexit
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 46
 
 
- 847      00000000 
- 847      00000000 
- 847      00000000 
- 847      00000000 
- 848              		.text
- 849              	.Letext0:
- 850              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
- 851              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
- 852              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
- 853              		.file 18 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
- 854              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
- 855              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
- 856              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
- 857              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
- 858              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
- 859              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
- 860              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
- 861              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
- 862              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
- 863              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
- 864              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
- 865              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
- 866              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
- 867              		.file 32 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
- 868              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
- 869              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
- 870              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
- 871              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
- 872              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
- 873              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
- 874              		.file 39 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
- 875              		.file 40 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
- 876              		.file 41 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
- 877              		.file 42 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
- 878              		.file 43 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
- 879              		.file 44 "../../../libs/libDaisy/src/per/tim.h"
- 880              		.file 45 "../../../libs/libDaisy/src/hid/logger_impl.h"
- 881              		.file 46 "../../../libs/libDaisy/src/util/wav_format.h"
- 882              		.file 47 "../../../libs/libDaisy/src/dev/sr_595.h"
- 883              		.file 48 "../../../libs/libDaisy/src/dev/max11300.h"
- 884              		.file 49 "../../../libs/libDaisy/src/hid/logger.h"
- 885              		.file 50 "../../../libs/libDaisy/src/dev/sdram.h"
- 886              		.file 51 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
- 887              		.file 52 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
- 888              		.file 53 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
- 889              		.file 54 "../../../libs/DaisySP/Source/Control/adenv.h"
- 890              		.file 55 "../../../libs/DaisySP/Source/Utility/dsp.h"
- 891              		.file 56 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
- 892              		.file 57 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
- 893              		.file 58 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s 			page 47
+ 841              	.LVL19:
+ 842              	.L11:
+ 843              		.align	2
+ 844              	.L10:
+ 845 0040 00000000 		.word	.LANCHOR0
+ 846 0044 00000000 		.word	__dso_handle
+ 847 0048 00000000 		.word	_ZN5daisy9DaisySeedD1Ev
+ 848              	.LBE574:
+ 849              	.LBE576:
+ 850              		.cfi_endproc
+ 851              	.LFE5391:
+ 853              		.section	.init_array,"aw",%init_array
+ 854              		.align	2
+ 855 0000 00000000 		.word	_GLOBAL__sub_I_hw(target1)
+ 856              		.global	hw
+ 857              		.section	.bss.hw,"aw",%nobits
+ 858              		.align	2
+ 859              		.set	.LANCHOR0,. + 0
+ 862              	hw:
+ 863 0000 00000000 		.space	116
+ 863      00000000 
+ 863      00000000 
+ 863      00000000 
+ 863      00000000 
+ 864              		.text
+ 865              	.Letext0:
+ 866              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 867              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 868              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 869              		.file 18 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 870              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 871              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 872              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 873              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 874              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 875              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 876              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 877              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 878              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 879              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 880              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 881              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 882              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 883              		.file 32 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 884              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 885              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 886              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
+ 887              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 888              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 889              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 890              		.file 39 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 891              		.file 40 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 892              		.file 41 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 893              		.file 42 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 894              		.file 43 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 895              		.file 44 "../../../libs/libDaisy/src/per/tim.h"
+ 896              		.file 45 "../../../libs/libDaisy/src/hid/logger_impl.h"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 47
+
+
+ 897              		.file 46 "../../../libs/libDaisy/src/util/wav_format.h"
+ 898              		.file 47 "../../../libs/libDaisy/src/dev/sr_595.h"
+ 899              		.file 48 "../../../libs/libDaisy/src/dev/max11300.h"
+ 900              		.file 49 "../../../libs/libDaisy/src/hid/logger.h"
+ 901              		.file 50 "../../../libs/libDaisy/src/dev/sdram.h"
+ 902              		.file 51 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 903              		.file 52 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 904              		.file 53 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 905              		.file 54 "../../../libs/DaisySP/Source/Control/adenv.h"
+ 906              		.file 55 "../../../libs/DaisySP/Source/Utility/dsp.h"
+ 907              		.file 56 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 908              		.file 57 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 909              		.file 58 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s 			page 48
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 i2cComm.cpp
-C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
-C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
-C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s:73     .rodata.main.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s:77     .text.startup.main:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s:85     .text.startup.main:00000000 main
-C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s:497    .text.startup.main:000000a4 $d
-C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s:510    .text.startup._GLOBAL__sub_I_hw:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s:517    .text.startup._GLOBAL__sub_I_hw:00000000 _GLOBAL__sub_I_hw
-C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s:829    .text.startup._GLOBAL__sub_I_hw:00000040 $d
-C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s:838    .init_array:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s:846    .bss.hw:00000000 hw
-C:\Users\skipi\AppData\Local\Temp\ccSbPLEI.s:842    .bss.hw:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s:73     .rodata.main.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s:80     .text.startup.main:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s:88     .text.startup.main:00000000 main
+C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s:512    .text.startup.main:000000ac $d
+C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s:526    .text.startup._GLOBAL__sub_I_hw:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s:533    .text.startup._GLOBAL__sub_I_hw:00000000 _GLOBAL__sub_I_hw
+C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s:845    .text.startup._GLOBAL__sub_I_hw:00000040 $d
+C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s:854    .init_array:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s:862    .bss.hw:00000000 hw
+C:\Users\skipi\AppData\Local\Temp\ccUVcB1f.s:858    .bss.hw:00000000 $d
                            .group:00000000 _ZN5daisy9DaisySeedD5Ev
 
 UNDEFINED SYMBOLS

@@ -78,7 +78,7 @@ int main(void)
 	while(1) {
 		// questo ritorna il registro relativo ai gate, 
 		hw.PrintLine ("Gate register: %d ", mpr121Obj.Touched());
-		
+		hw.PrintLine("test");
 		hw.DelayMs(10);
 	}
 }
