@@ -18,7 +18,7 @@ Yellow for SCL
 int main(void)
 {
 	hw.Init();
-	hw.StartLog (true); /* true == wait for PC: will block until a terminal is connected */
+	hw.StartLog (); /* true == wait for PC: will block until a terminal is connected */
 	hw.DelayMs(100);
 /*
 	// se da problemi di compilazione la parte di config.scl e 
@@ -26,7 +26,6 @@ int main(void)
 	al post di {dsy_gpio_b*/
 	Pin pin_scl = {PORTB, 8};
 	Pin pin_sda = {PORTB, 9};
-
 
 	I2CHandle::Result res1;
 	I2CHandle::Config i2c_conf;
@@ -39,31 +38,31 @@ int main(void)
 	res1 = i2c.Init(i2c_conf);
 	
 	/* FOR DEBUG*/
-	/*
+	
 	if (res1 == I2CHandle::Result::OK){
 		hw.PrintLine("I2C handler Init OK");
 	}
 	else {
 		hw.PrintLine("I2c handler init not ok");
-		while (1);
 	}
-	*/
+	
 
 	// creates object for mpr121
+	daisy::Mpr121I2C::Config mpr121ObjConf;
 	daisy::Mpr121I2C mpr121Obj;
 	daisy::Mpr121I2C::Result res;
 
 	// creates variable to check output of functions
 	//daisy::Mpr121I2C::Result res;
 	// creates config for mpr121 (constructor sets all to deafult)
-	daisy::Mpr121I2C::Config mpr121ObjConf;
+	
 
 	// init the object and checks return val
 	// check not working
 	res = mpr121Obj.Init(mpr121ObjConf);
 
 	//TEST
-	//mpr121Obj.SetI2cHandle(i2c);
+	//mpr121Obj.SetI2cHandle();
 
 	// DEBUG
 	if (res == daisy::Mpr121I2C::Result::OK){
@@ -71,14 +70,14 @@ int main(void)
 	}
 	else {
 		hw.PrintLine("mpr121 init ERROR");
-		while(1){}
+		
 	}
 	
 	// hw.PrintLine("test");
 	mpr121Obj.Init(mpr121ObjConf);
 	while(1) {
 		// questo ritorna il registro relativo ai gate, 
-		hw.PrintLine ("Gate register: %d ", mpr121Obj.Touched());
+		hw.PrintLine ("Gate register: %d ", mpr121Obj.FilteredData(0));
 		hw.DelayMs(10);
 	}
 }
