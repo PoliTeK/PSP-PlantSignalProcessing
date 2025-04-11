@@ -20,23 +20,37 @@
                                                      /*The function compares the read value against the thresholds 
                                                      and consequently assigns a tone in the pentatonic scale we're using
                                                       */
-        if(soglie[0]<=value && value <soglie[2])     //soglie[0] otherwise we can have glith on small value
-        {
-            frequenza= f0;
-        }else if(soglie[2]<=value && value<soglie[3])
-        {
-            frequenza= f0*6/5;
-        }else if(soglie[3]<=value && value<soglie[4])
-        {
-            frequenza= f0*4/3;
-        }else if(soglie[4]<=value && value<soglie[5])
-        {
-            frequenza= f0*3/2;
-        }else if(soglie[5]<=value )
-        {
-            frequenza= f0*9/5;
-        }//mandare nello switch
-        return frequenza;
+      if (soglie[0] <= value && value < soglie[2]) // soglie[0] otherwise we can have glitch on small value
+{
+    frequenza = f0;
+}
+else if (soglie[2] <= value && value < soglie[3])
+{
+    frequenza = f0 * 1.12;
+}
+else if (soglie[3] <= value && value < soglie[4])
+{
+    frequenza = f0 * 1.19;
+}
+else if (soglie[4] <= value && value < soglie[5])
+{
+    frequenza = f0 * 1.49;
+}
+else if (soglie[5] <= value && value < soglie[6])
+{
+    frequenza = f0 * 1.58;
+}
+else if (soglie[6] <= value && value < soglie[7])
+{
+    frequenza = f0 * 1.88;
+}
+else if (soglie[7] <= value)
+{
+    frequenza = f0 * 2.0;
+}
+
+return frequenza;
+
     }
 
     uint16_t pentaPianta::analogFreq(uint16_t value) {

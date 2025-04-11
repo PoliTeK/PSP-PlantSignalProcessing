@@ -1,275 +1,271 @@
-// Title: oscillator
-// Description: Control a sine wave freq with a knob
-// Hardware: Daisy Seed
-// Author: Ben Sergentanis
-// Breadboard
-// https://raw.githubusercontent.com/electro-smith/DaisyExamples/master/seed/Osc/resources/Osc_bb.png
-// Schematic:
-// https://raw.githubusercontent.com/electro-smith/DaisyExamples/master/seed/Osc/resources/Osc_schem.png
-
+#include <Wire.h>
+#include "Adafruit_MPR121.h"
 #include "DaisyDuino.h"
+#include "pentaPianta.h"
+#include "AnalogDelay.h"
+#include "config.h"
+
+#ifndef _BV  //used to mask registers' bits related to the channel
+#define _BV(bit) (1 << (bit)) 
+#endif
+Adafruit_MPR121 cap = Adafruit_MPR121();
+int soglie[8] = {2,0,65, 70, 80, 90,100, 105};
+pentaPianta p_pluck(soglie,f_pluck), p_pad(soglie,f_pad), p_bass(soglie,f_bass);
 
 DaisyHardware hw;
+//Pluck
+Oscillator pluck, pad, bass;
+Oscillator pluck_modulator;
+Adsr amp_eg_pluck, amp_eg_pad, amp_eg_bass;
+Adsr filt_eg_pluck, filt_eg_pad, filt_eg_bass;
+MoogLadder VCF_pluck, VCF_pad, VCF_bass;
 
-size_t num_channels;
+uint16_t value_pluck, value_pad, value_bass;
+float now_f_pluck, now_f_pad, now_f_bass;
+bool Gate_pluck, Gate_pad, Gate_bass;
 
-static Oscillator Pluck1, Pluck2, Pluck3, Pluck4,;
-static VariableShapeOscillator  Pad5, Pad6, Bass7, Bass8;
-
-static Oscillator lfo_Pluck1, lfo_Pluck2, lfo_Pluck3, lfo_Pluck4;                                 // LFO object for modulation
-static Oscillator lfo_Bass1, lfo_Bass2;
-static Oscillator lfo_Pad1, lfo_Pad2;                                          // LFO object for modulation
-
-static Adsr AmpEnv_Pluck;                                          // Envelope object for amplitude
-static Adsr AmpEnv_Bass;
-static Adsr AmpEnv_Pad;                                            // Envelope object for amplitude
-
-static Adsr FilterEnv_Pluck ;                                       
-static Adsr FilterEnv_Bass;
-static Adsr FilterEnv_Pad;                                        // Envelope object for filter
-
-static Svf filter_Pluck1, filter_Pluck2, filter_Pluck3, filter_Pluck4;                                 // Filter object for the synth
-static Svf filter_Bass1, filter_Bass2;
-static Svf filter_Pad1, filter_Pad2;                                          // Filter object for the synth;                                          
-
-
-
-float Raw_Pluck1, Raw_Pluck2, Raw_Pluck3, Raw_Pluck4;                                   // Raw signal variables
-float Raw_Bass1, Raw_Bass2;                                   // Raw signal variables
-float Raw_Pad1, Raw_Pad2;                            // Raw signal variables
-float out_noFX;                                                       // Output signal variable
-                                                     
+AnalogDelay Delay;
 
 
 
 
-float now_f_lfo_Bass1, now_f_lfo_Bass2; // Frequency of LFO for Bass;
-float now_f_lfo_Pluck1, now_f_lfo_Pluck2, now_f_lfo_Pluck3, now_f_lfo_Pluck4; // Frequency of LFO for Pluck
-float now_f_lfo_Pad1, now_f_lfo_Pad2; // Frequency of LFO for Pad;  
-
-float now_f_Pluck1, now_f_Pluck2, now_f_Pluck3, now_f_Pluck4; // Frequency of Pluck
-float now_f_Bass1, now_f_Bass2; // Frequency of Bass;
-float now_f_Pad1, now_f_Pad2; // Frequency of Pad;
-
-float shape_Pluck1, shape_Pluck2, shape_Pluck3, shape_Pluck4; // Shape modulation for Pluck
-float shape_Bass1, shape_Bass2; // Shape modulation for Bass
-float shape_Pad1, shape_Pad2; // Shape modulation for Pad
-
-float amp_env_Pluck1, amp_env_Pluck2, amp_env_Pluck3, amp_env_Pluck4; // Amplitude envelope for Pluck
-float amp_env_Bass1, amp_env_Bass2; // Amplitude envelope for Bass
-float amp_env_Pad1, amp_env_Pad2; // Amplitude envelope for Pad
-
-float filt_env_Pluck1, filt_env_Pluck2, filt_env_Pluck3, filt_env_Pluck4; // Filter envelope for Pluck
-float filt_env_Bass1, filt_env_Bass2; // Filter envelope for Bass
-float filt_env_Pad1, filt_env_Pad2; // Filter envelope for Pad
 
 
 
-float Gate[8]; // Gate variables for the synths
-
-float knob[8]; 
 
 
+float out_mix;
 
-void MyCallback(float **in, float **out, size_t size) {
-  // Convert Pitchknob MIDI Note Number to frequency
 
+
+void AudioCallback(float **in, float **out, size_t size) {
+  pluck_modulator.SetFreq(now_f_pluck * ratio);
   for (size_t i = 0; i < size; i++) {
-  
 
-    for (size_t chn = 0; chn < num_channels; chn++) {
-      out[chn][i] = sig;
-    }
+    float amp_env_pluck = amp_eg_pluck.Process(Gate_pluck);                 //crea inviluppo ampiezza pluck
+    float amp_env_pad = amp_eg_pad.Process(Gate_pad);
+    float amp_env_bass = amp_eg_bass.Process(Gate_bass); // Process amplitude envelope for bass
+
+    float filt_env_pluck = filt_eg_pluck.Process(Gate_pluck);
+    float filt_env_pad = filt_eg_pad.Process(Gate_pad);                     //crea inviluppo ampiezza pad
+    float filt_env_bass = filt_eg_bass.Process(Gate_bass); // Process filter envelope for bass
+
+                      
+    float raw_pluck = pluck.Process()*pluck_modulator.Process()*5;                                    //ho il suono del  pluck
+    float raw_pad = pad.Process();                                        // ho il suono del pad
+    float raw_bass = bass.Process(); // Process raw sound for bass
+
+    VCF_pluck.SetFreq(ft_pluck - filt_env_pluck*f_EG_pluck);       //applico l'inviluppo al filtro del pluck
+    VCF_pad.SetFreq(ft_pad + filt_env_pad*f_EG_pad);               //applico l'inviluppo al filtro del pad
+    VCF_bass.SetFreq(ft_bass + filt_env_bass * f_EG_bass); // Apply filter envelope to bass
+
+    float filt_pluck =VCF_pluck.Process(raw_pluck)* amp_env_pluck;       //filtro e applico inviluppo ampiezza al pluck
+    float filt_pad =VCF_pad.Process(raw_pad)* amp_env_pad;               //filtro e applico inviluppo ampiezza al pad
+    float filt_bass = VCF_bass.Process(raw_bass) * amp_env_bass; // Filter and apply amplitude envelope to bass
+
+    raw_pluck *= amp_env_pluck;                      //non filtro e applico inviluppo
+    raw_pad *= amp_env_pad;                      //non filtro e applico inviluppo
+
+
+    float delay_pluck = Delay.Process(filt_pluck);
+    float out_mix = (delay_pluck + filt_pad + filt_bass) * master; ;
+    
+    
+    out[0][i] = out[1][i] = out_mix;
   }
 }
 
 void setup() {
-  float sample_rate;
   hw = DAISY.init(DAISY_SEED, AUDIO_SR_48K);
-  num_channels = hw.num_channels;
-  sample_rate = DAISY.get_samplerate();
+  float sample_rate = DAISY.get_samplerate();
+//-----------------------------------------------------------PLUCK
+//OSC
+  pluck.Init(sample_rate);
+  pluck.SetWaveform(pluck.WAVE_TRI);
+  pluck.SetFreq(f_pluck);
+  pluck.SetAmp(mix_amp_pluck);
 
-    Pluck1.Init(sample_rate);
-    Pluck2.Init(sample_rate);                                            // Initialize the Ramo synth
-    Pluck3.Init(sample_rate);                                            // Initialize the Ramo synth
-    Pluck4.Init(sample_rate));                                            // Initialize the Ramo synth
-    Bass1.Init(sample_rate);                                            // Initialize the Ramo synth
-    Bass2.Init(sample_rate);                                            // Initialize the Ramo synth
-    Pad1.Init(sample_rate);                                            // Initialize the Ramo synth
-    Pad2.Init(sample_rate);                                            // Initialize the Ramo synth                                        // Initialize the Ramo synth
+//amp_envelope
+  amp_eg_pluck.Init(sample_rate);
 
-    Pluck1.SetWaveforms(wf_Pluck);                                                      
-    Pluck2.SetWaveforms(wf_Pluck);                                                      // Set waveforms
-    Pluck3.SetWaveforms(wf_Pluck);                                                      // Set waveforms
-    Pluck4.SetWaveforms(wf_Pluck);                                                      // Set waveforms
-    Bass1.SetWaveforms(wf_Bass);                                                      // Set waveforms
-    Bass2.SetWaveforms(wf_Bass);                                                      // Set waveforms
-    Pad1.SetWaveforms(wf_Pad);                                                      // Set waveforms
-    Pad2.SetWaveforms(wf_Pad);                                                      // Set waveforms
-
-                                            
-    Pluck1.SetFreq(f_Pluck);                                                    
-    Pluck2.SetFreq(f_Pluck);                                                       // Set frequency
-    Pluck3.SetFreq(f_Pluck);                                                       // Set frequency
-    Pluck4.SetFreq(f_Pluck);                                                       // Set frequency
-    Bass1.SetFreq(f_Bass);                                                       // Set frequency
-    Bass2.SetFreq(f_Bass);                                                       // Set frequency
-    Pad1.SetFreq(f_Pad);                                                       // Set frequency
-    Pad2.SetFreq(f_Pad);                                                       // Set frequency
-
-                                              
-
-    Pluck1.SetAmp(g_Pluck);                             
-    Pluck2.SetAmp(g_Pluck);                                                       // Set amplitude
-    Pluck3.SetAmp(g_Pluck);                                                       // Set amplitude
-    Pluck4.SetAmp(g_Pluck);
-    Bass1.SetAmp(g_Bass);                                                       // Set amplitude
-    Bass2.SetAmp(g_Bass);                                                       // Set amplitude
-    Pad1.SetAmp(g_Pad);                                                       // Set amplitude
-    Pad2.SetAmp(g_Pad);                                                       // Set amplitude
+  amp_eg_pluck.SetTime(ADSR_SEG_ATTACK, pluck_Amp_ADSR[0]);
+  amp_eg_pluck.SetTime(ADSR_SEG_DECAY, pluck_Amp_ADSR[1]);  
+  amp_eg_pluck.SetSustainLevel(pluck_Amp_ADSR[2]);
+  amp_eg_pluck.SetTime(ADSR_SEG_RELEASE, pluck_Amp_ADSR[3]); 
 
 
-    Pluck1.SetShape(0);                                                        // Set shape modulation
-    Pluck2.SetShape(0);
-    Pluck3.SetShape(0);
-    Pluck4.SetShape(0);
-    Bass1.SetShape(0);
-    Bass2.SetShape(0);
-    Pad1.SetShape(0);
-    Pad2.SetShape(0);
+//filter_envelope
+  filt_eg_pluck.Init(sample_rate);
 
-//----------------------------------------------------------------------------------Inizializza LFO e parametri
-    lfo_Pluck1.Init(sample_rate);                                      
-    lfo_Pluck2.Init(sample_rate);                                          // Initialize LFO
-    lfo_Pluck3.Init(sample_rate);                                          // Initialize LFO
-    lfo_Pluck4.Init(sample_rate);                                          // Initialize LFO
-    lfo_Bass1.Init(sample_rate);                                          // Initialize LFO
-    lfo_Bass2.Init(sample_rate);                                          // Initialize LFO
-    lfo_Pad1.Init(sample_rate);                                          // Initialize LFO
-    lfo_Pad2.Init(sample_rate);                                          // Initialize LFO
-
-   
-
-    lfo_Pluck1.SetWaveform(WAVE_SIN);                                 // Set LFO waveform
-    lfo_Pluck2.SetWaveform(WAVE_SIN);                                 // Set LFO waveform
-    lfo_Pluck3.SetWaveform(WAVE_SIN);                                 // Set LFO waveform
-    lfo_Pluck4.SetWaveform(WAVE_SIN);                                 // Set LFO waveform
-    lfo_Bass1.SetWaveform(WAVE_SIN);                                 // Set LFO waveform
-    lfo_Bass2.SetWaveform(WAVE_SIN);                                 // Set LFO waveform
-    lfo_Pad1.SetWaveform(WAVE_SIN);                                 // Set LFO waveform
-    lfo_Pad2.SetWaveform(WAVE_SIN);                                 // Set LFO waveform
-
-    
-
-    lfo_Pluck1.SetFreq(f_lfo_Pluck);                                                    // Set LFO frequency
-    lfo_Pluck2.SetFreq(f_lfo_Pluck);                                                    // Set LFO frequency
-    lfo_Pluck3.SetFreq(f_lfo_Pluck);
-    lfo_Pluck4.SetFreq(f_lfo_Pluck);                                                    // Set LFO frequency
-    lfo_Bass1.SetFreq(f_lfo_Bass);
-    lfo_Bass2.SetFreq(f_lfo_Bass);                                                    // Set LFO frequency
-    lfo_Pad1.SetFreq(f_lfo_Pad);                                                    // Set LFO frequency
-    lfo_Pad2.SetFreq(f_lfo_Pad);                                                    // Set LFO frequency
-                                                 // Set LFO frequency
-
-    lfo_Pluck1.SetAmp(amp_lfo_Pluck);                                                    // Set LFO amplitude
-    lfo_Pluck2.SetAmp(amp_lfo_Pluck);                                                    // Set LFO amplitude
-    lfo_Pluck3.SetAmp(amp_lfo_Pluck);                                                    // Set LFO amplitude
-    lfo_Pluck4.SetAmp(amp_lfo_Pluck);                                                    // Set LFO amplitude
-    lfo_Bass1.SetAmp(amp_lfo_Bass);                                                    // Set LFO amplitude
-    lfo_Bass2.SetAmp(amp_lfo_Bass);                                                    // Set LFO amplitude
-    lfo_Pad1.SetAmp(amp_lfo_Pad);                                                    // Set LFO amplitude
-    lfo_Pad2.SetAmp(amp_lfo_Pad);                                                    // Set LFO amplitude
+  filt_eg_pluck.SetTime(ADSR_SEG_ATTACK, pluck_Filter_ADSR[0]);
+  filt_eg_pluck.SetTime(ADSR_SEG_DECAY, pluck_Filter_ADSR[1]);  
+  filt_eg_pluck.SetSustainLevel(pluck_Filter_ADSR[2]);
+  filt_eg_pluck.SetTime(ADSR_SEG_RELEASE, pluck_Filter_ADSR[3]); 
 
 
-//-----------------------------------------------------------------------------Inizializza AMP ADSR e parametri
-    AmpEnv_Pluck.Init(sample_rate);                                       // Initialize envelope
-    AmpEnv_Bass.Init(sample_rate);                                       // Initialize envelope
-    AmpEnv_Pad.Init(sample_rate);                                       // Initialize envelope
-
-    AmpEnv_Pluck.SetTime(ADSR_SEG_ATTACK, Pluck_Amp_ADSR[0]);                                  // Set attack time
-    AmpEnv_Bass.SetTime(ADSR_SEG_ATTACK, Bass_Amp_ADSR[0]);                                  // Set attack time
-    AmpEnv_Pad.SetTime(ADSR_SEG_ATTACK, Pad_Amp_ADSR[0]);                                  // Set attack time
-
-    AmpEnv_Pluck.SetTime(ADSR_SEG_DECAY, Pluck_Amp_ADSR[1]);                                   // Set decay time
-    AmpEnv_Bass.SetTime(ADSR_SEG_DECAY, Bass_Amp_ADSR[1]);                                   // Set decay time
-    AmpEnv_Pad.SetTime(ADSR_SEG_DECAY, Pad_Amp_ADSR[1]);                                   // Set decay time
-
-    AmpEnv_Pluck.SetSustainLevel(Pluck_Amp_ADSR[2]);                                          // Set sustain level
-    AmpEnv_Bass.SetSustainLevel(Bass_Amp_ADSR[2]);                                          // Set sustain level
-    AmpEnv_Pad.SetSustainLevel(Pad_Amp_ADSR[2]);                                          // Set sustain level
-
-    AmpEnv_Pluck.SetTime(ADSR_SEG_RELEASE, Pluck_Amp_ADSR[3]);                              // Set release time
-    AmpEnv_Bass.SetTime(ADSR_SEG_RELEASE, Bass_Amp_ADSR[3]);                              // Set release time
-    AmpEnv_Pad.SetTime(ADSR_SEG_RELEASE, Pad_Amp_ADSR[3]);                              // Set release time
-    
-//-----------------------------------------------------------------------------------Inizializza FILTER e parametri
-    filter_Pluck1.Init(sample_rate);                                        // Initialize filter
-    filter_Pluck2.Init(sample_rate);                                        // Initialize filter
-    filter_Pluck3.Init(sample_rate);                                        // Initialize filter
-    filter_Pluck4.Init(sample_rate);                                        // Initialize filter
-    filter_Bass1.Init(sample_rate);                                        // Initialize filter
-    filter_Bass2.Init(sample_rate);                                        // Initialize filter
-    filter_Pad1.Init(sample_rate);                                        // Initialize filter
-    filter_Pad2.Init(sample_rate);                                        // Initialize filter
-
-    filter_Pluck1.SetFreq(ft_pluck);                                               // Set cutoff frequency
-    filter_Pluck2.SetFreq(ft_pluck);                                               // Set cutoff frequency
-    filter_Bass1.SetFreq(ft_bass);                                               // Set cutoff frequency
-    filter_Bass2.SetFreq(ft_bass);                                               // Set cutoff frequency
-    filter_Pad1.SetFreq(ft_pad);                                               // Set cutoff frequency
-    filter_Pad2.SetFreq(ft_pad);                                               // Set cutoff frequency
-
-    filter_Pluck1.SetRes(res_pluck);                                             // Set resonance
-    filter_Pluck2.SetRes(res_pluck);                                             // Set resonance
-    filter_Pluck3.SetRes(res_pluck);                                             // Set resonance
-    filter_Pluck4.SetRes(res_pluck);                                             // Set resonance
-    filter_Bass1.SetRes(res_bass);                                             // Set resonance
-    filter_Bass2.SetRes(res_bass);                                             // Set resonance
-    filter_Pad1.SetRes(res_pad);                                             // Set resonance
-    filter_Pad2.SetRes(res_pad);                                             // Set resonance
-
-                                      
-
-    filter_Pluck1.SetDrive(drive_pluck);                                               // Set filter amplitude
-    filter_Pluck2.SetDrive(drive_pluck);                                               // Set filter amplitude
-    filter_Pluck3.SetDrive(drive_pluck);                                               // Set filter amplitude
-    filter_Pluck4.SetDrive(drive_pluck);                                               // Set filter amplitude
-    filter_Bass1.SetDrive(drive_bass);                                               // Set filter amplitude
-    filter_Bass2.SetDrive(drive_bass);                                               // Set filter amplitude
-    filter_Pad1.SetDrive(drive_pad);                                               // Set filter amplitude
-    filter_Pad2.SetDrive(drive_pad);                                               // Set filter amplitude
-
-//-----------------------------------------------------------------------------------Inizializza FILTER ADSR e parametri
-    FilterEnv_Pluck.Init(sample_rate);                                   // Initialize envelope
-    FilterEnv_Bass.Init(sample_rate);                                   // Initialize envelope
-    FilterEnv_Pad.Init(sample_rate);                                   // Initialize envelope
-
-    FilterEnv_Pluck.SetTime(ADSR_SEG_ATTACK, Pluck_Filter_ADSR[0]);                              // Set attack time
-    FilterEnv_Bass.SetTime(ADSR_SEG_ATTACK, Bass_Filter_ADSR[0]);                              // Set attack time
-    FilterEnv_Pad.SetTime(ADSR_SEG_ATTACK, Pad_Filter_ADSR[0]);                              // Set attack time
-
-    FilterEnv_Pluck.SetTime(ADSR_SEG_DECAY, Pluck_Filter_ADSR[1]);                               // Set decay time
-    FilterEnv_Bass.SetTime(ADSR_SEG_DECAY, Bass_Filter_ADSR[1]);                               // Set decay time
-    FilterEnv_Pad.SetTime(ADSR_SEG_DECAY, Pad_Filter_ADSR[1]);                               // Set decay time
-
-    FilterEnv_Pluck.SetSustainLevel(Pluck_Filter_ADSR[2]);                                      // Set sustain level
-    FilterEnv_Bass.SetSustainLevel(Bass_Filter_ADSR[2]);                                      // Set sustain level
-    FilterEnv_Pad.SetSustainLevel(Pad_Filter_ADSR[2]);                                      // Set sustain level
-
-    FilterEnv_Pluck.SetTime(ADSR_SEG_RELEASE, Pluck_Filter_ADSR[3]);                          // Set release time
-    FilterEnv_Bass.SetTime(ADSR_SEG_RELEASE, Bass_Filter_ADSR[3]);                          // Set release time
-    FilterEnv_Pad.SetTime(ADSR_SEG_RELEASE, Pad_Filter_ADSR[3]);                          // Set release time
+//VCF
+  VCF_pluck.Init(sample_rate);
+  VCF_pluck.SetFreq(ft_pluck); 
+  VCF_pluck.SetRes(res_pluck); 
+  
+  pluck_modulator.Init(sample_rate);
+  pluck_modulator.SetWaveform(pluck_modulator.WAVE_SIN);
+  
+  pluck.SetAmp(mix_amp_pluck_modulator);
 
 
+//-----------------------------------------------------------PAD 
+
+//OSC
+
+  pad.Init(sample_rate);
+  pad.SetWaveform(pad.WAVE_SAW);
+  pad.SetFreq(f_pad);
+  pad.SetAmp(mix_amp_pad);
+
+//amp_envelope
+  amp_eg_pad.Init(sample_rate);
+
+  amp_eg_pad.SetTime(ADSR_SEG_ATTACK, pad_Amp_ADSR[0]);
+  amp_eg_pad.SetTime(ADSR_SEG_DECAY, pad_Amp_ADSR[1]);  
+  amp_eg_pad.SetSustainLevel(pad_Amp_ADSR[2]);
+  amp_eg_pad.SetTime(ADSR_SEG_RELEASE, pad_Amp_ADSR[3]); 
+
+//filter_envelope
+  filt_eg_pad.Init(sample_rate);
+
+  filt_eg_pad.SetTime(ADSR_SEG_ATTACK, pad_Filter_ADSR[0]);
+  filt_eg_pad.SetTime(ADSR_SEG_DECAY, pad_Filter_ADSR[1]);  
+  filt_eg_pad.SetSustainLevel(pad_Filter_ADSR[2]);
+  filt_eg_pad.SetTime(ADSR_SEG_RELEASE, pad_Filter_ADSR[3]); 
+
+
+//VCF
+  VCF_pad.Init(sample_rate);
+  VCF_pad.SetFreq(ft_pad); 
+  VCF_pad.SetRes(res_pad); 
+
+//-----------------------------------------------------------BASS
+  // OSC
+  bass.Init(sample_rate);
+  bass.SetWaveform(bass.WAVE_SQUARE);
+  bass.SetFreq(f_bass);
+  bass.SetAmp(mix_amp_bass);
+
+  // amp_envelope
+  amp_eg_bass.Init(sample_rate);
+  amp_eg_bass.SetTime(ADSR_SEG_ATTACK, bass_Amp_ADSR[0]);
+  amp_eg_bass.SetTime(ADSR_SEG_DECAY, bass_Amp_ADSR[1]);
+  amp_eg_bass.SetSustainLevel(bass_Amp_ADSR[2]);
+  amp_eg_bass.SetTime(ADSR_SEG_RELEASE, bass_Amp_ADSR[3]);
+
+  // filter_envelope
+  filt_eg_bass.Init(sample_rate);
+  filt_eg_bass.SetTime(ADSR_SEG_ATTACK, bass_Filter_ADSR[0]);
+  filt_eg_bass.SetTime(ADSR_SEG_DECAY, bass_Filter_ADSR[1]);
+  filt_eg_bass.SetSustainLevel(bass_Filter_ADSR[2]);
+  filt_eg_bass.SetTime(ADSR_SEG_RELEASE, bass_Filter_ADSR[3]);
+
+  // VCF
+  VCF_bass.Init(sample_rate);
+  VCF_bass.SetFreq(ft_bass);
+  VCF_bass.SetRes(res_bass);
+
+  // DELAY
+  Delay.Init(sample_rate);
+  Delay.setDelayTime(delay_time);
+  Delay.setFeedback(delay_fb);
+  Delay.setMix(delay_mix);
 
   
 
+  DAISY.begin(AudioCallback);
+  // put your setup code here, to run once:
+    Serial.begin(9600);
 
-
-
-  DAISY.begin(MyCallback);
+  //while (!Serial) { // needed to keep micro from starting too fast!
+  //  delay(10);
+  //}
+  // Default address is 0x5A, if tied to 3.3V its 0x5B
+  // If tied to SDA its 0x5C and if SCL then 0x5D
+  if (!cap.begin(0x5A)) {
+    Serial.println("MPR121 not found, check wiring?");
+    while (1);
+  }
+  Serial.println("MPR121 found!");  
+  cap.setThresholds(2, 0);
 }
 
-void loop() { 
+
+void loop() {
+
+//Pluck
+  if(cap.touched() & _BV(0)){
+    Gate_pluck = true;
+    value_pluck =cap.filteredData(0);
+    now_f_pluck = p_pluck.discFreq(value_pluck);
+    pluck.SetFreq(now_f_pluck);                                       //setto frequenza pluck
+  }
+  else {
+    Gate_pluck = false;
+  }
+
+
   
- }
+
+
+  if(Gate_pluck){
+    Serial.print("Hai premuto il gate pluck (0) ");
+    Serial.print(" ed il suo valore è : ");
+    Serial.println((int) value_pluck);
+    Serial.print("Frequenza: ");
+    Serial.println(now_f_pluck);
+  }
+//Pad
+  if(cap.touched() & _BV(1)){
+    Gate_pad = true;
+    value_pad =cap.filteredData(1);
+    now_f_pad = p_pad.discFreq(value_pad);
+    pad.SetFreq(now_f_pad); 
+  }
+  else {
+    Gate_pad = false;
+  }
+
+
+  
+
+
+  if(Gate_pad){
+    Serial.print("Hai premuto il gate pad (1) ");
+    Serial.print(" ed il suo valore è : ");
+    Serial.println((int) value_pad);
+    Serial.print("Frequenza: ");
+    Serial.println(now_f_pad);
+  }
+
+  // Pluck 3
+  if (cap.touched() & _BV(2)) {
+    Gate_bass = true;
+    value_bass = cap.filteredData(2);
+    now_f_bass = p_bass.discFreq(value_bass);
+    bass.SetFreq(now_f_bass); // Set frequency for bass
+  } else {
+    Gate_bass = false;
+  }
+
+ 
+
+  if (Gate_bass) {
+    Serial.print("Hai premuto il gate bass (2) ");
+    Serial.print(" ed il suo valore è : ");
+    Serial.println((int)value_bass);
+    Serial.print("Frequenza: ");
+    Serial.println(now_f_bass);
+  }
+
+  
+                                          
+  
+  delay(100);
+}

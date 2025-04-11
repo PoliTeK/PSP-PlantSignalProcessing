@@ -31,12 +31,20 @@ void loop() {
   uint16_t frequency,value; 
   for (int i=0; i<7; i++)
   {
-    gate[i]=cap.touched() & _BV(i);
+    if(cap.touched() & _BV(i)){
+      gate[i]=1;
+    }
+    else {
+      gate[i]=0;
+    }
   }
    for (int i=0; i<7; i++)
   {
-    Serial.print("The value of the gate is ");
-    Serial.println(gate[i]);
+    if (gate[i] == 1){
+      Serial.print("Hai premuto il gate  ");
+      Serial.println(i);
+    }
+    
   }
     delay(100); //before going in glide mode we wait some time (to be calibrate)
     
