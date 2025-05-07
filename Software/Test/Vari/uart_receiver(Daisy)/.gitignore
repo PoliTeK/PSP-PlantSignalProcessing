@@ -1,9 +1,0 @@
-# Ignora i file della build
-/build/
-/**/*.bin
-/**/*.elf
-/**/*.hex
-/**/*.lst
-/**/*.map
-/**/*.o
-/**/*.d
