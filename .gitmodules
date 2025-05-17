@@ -9,3 +9,6 @@
     path = Software/libs/DaisyExamples
     url = https://github.com/electro-smith/DaisyExamples.git
 	branch = master
+[submodule "libDaisy"]
+	path = libDaisy
+	url = https://github.com/PoliTeK/libDaisy
