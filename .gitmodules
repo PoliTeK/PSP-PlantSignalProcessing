@@ -6,3 +6,6 @@
 	path = Software/libs/libDaisy
 	url = https://github.com/PoliTeK/libDaisy
 	branch = mpr121_I2C_readFix
+[submodule "DaisyExamples"]
+	path = DaisyExamples
+	url = https://github.com/electro-smith/DaisyExamples
