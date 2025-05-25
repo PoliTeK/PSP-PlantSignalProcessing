@@ -1,6 +1,6 @@
 [submodule "Software/libs/DaisySP"]
 	path = Software/libs/DaisySP
-	url = https://github.com/electro-smith/DaisySP.git
+	url = https://github.com/electro-smith/DaisySP
 	branch = master
 [submodule "libDaisy"]
 	path = Software/libs/libDaisy
@@ -9,3 +9,9 @@
 [submodule "DaisyExamples"]
 	path = DaisyExamples
 	url = https://github.com/electro-smith/DaisyExamples
+[submodule "Software/libs/--force"]
+	path = Software/libs/--force
+	url = https://github.com/PoliTeK/libDaisy
+[submodule "Software/libs/libDaisy"]
+	path = Software/libs/libDaisy
+	url = https://github.com/PoliTeK/libDaisy
