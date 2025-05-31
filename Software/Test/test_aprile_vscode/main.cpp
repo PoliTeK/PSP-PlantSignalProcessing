@@ -4,12 +4,16 @@
 #include "AnalogDelay.h"
 #include "config.h"
 
+#define DEBUG
+
 #ifndef _BV  //used to mask registers' bits related to the channel
 #define _BV(bit) (1 << (bit)) 
 #endif
 using namespace daisy;
 using namespace daisysp;
 //--OLD ARDUINO: Adafruit_MPR121 cap = Adafruit_MPR121();
+// creates config for mpr121 (constructor sets all to deafult)
+daisy::Mpr121I2C::Config mpr121ObjConf;
 // creates object for mpr121
 daisy::Mpr121I2C cap;
 
@@ -68,8 +72,8 @@ static void AudioCallback(AudioHandle::InterleavingInputBuffer  in,
 
 
     float delay_pluck = Delay.Process(filt_pluck);
-    float out_mix = (delay_pluck + filt_pad + filt_bass) * master; ;
-    
+    // float out_mix = (delay_pluck + filt_pad + filt_bass) * master;
+    out_mix = (delay_pluck + filt_pad + filt_bass) * master; 
     
     out[i] = out[i + 1] = out_mix;
   }
@@ -84,6 +88,11 @@ int main () {
     hw.Init();
     hw.SetAudioBlockSize(4);
     sample_rate = hw.AudioSampleRate();
+    
+
+    #ifdef DEBUG
+      hw.StartLog(true);
+    #endif // DEBUG
 //-----------------------------------------------------------PLUCK
 //OSC
   pluck.Init(sample_rate);
@@ -186,7 +195,10 @@ int main () {
   
 
   hw.StartAudio(AudioCallback);
-  // put your setup code here, to run once:
+  
+    #ifdef DEBUG
+      
+    
   // Serial.begin(9600);
 
   //while (!Serial) { // needed to keep micro from starting too fast!
@@ -194,13 +206,13 @@ int main () {
   //}
   // Default address is 0x5A, if tied to 3.3V its 0x5B
   // If tied to SDA its 0x5C and if SCL then 0x5D
-  //if (!cap.begin(0x5A)) {
-  //  Serial.println("MPR121 not found, check wiring?");
-  //  while (1);
-  //}
-  //Serial.println("MPR121 found!");  
-  //cap.setThresholds(2, 0);
-
+  if (cap.Init(mpr121ObjConf) != daisy::Mpr121I2C::Result::OK ) {
+    hw.PrintLine("MPR121 not found, check wiring?");
+    while (1);
+  }
+  hw.PrintLine("MPR121 found!");  
+  // cap.SetThresholds(2, 0);
+#endif // DEBUG
 while (1){
 
 //Pluck
@@ -219,7 +231,7 @@ while (1){
     hw.PrintLine(" ed il suo valore è : ");
     hw.PrintLine("%d", (int)value_pluck);
     hw.PrintLine("Frequenza: ");
-    // hw.PrintLine("%f", now_f_pluck); // DA AGGIUNGERE FLAG NEL MAKEFILE
+    hw.PrintLine("%f", now_f_pluck); // DA AGGIUNGERE FLAG NEL MAKEFILE
 
   }
 //Pad
@@ -260,8 +272,7 @@ while (1){
     hw.PrintLine("Frequenza: ");
     // hw.PrintLine("%f", now_f_bass); // DA AGGIUNGERE FLAG NEL MAKEFILE
   }
-
-   
+  hw.PrintLine("end of loop, %f", out_mix);
   hw.DelayMs(100);
   }
 }
