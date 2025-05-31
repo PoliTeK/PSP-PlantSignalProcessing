@@ -1,0 +1,435 @@
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"pentaPianta.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN11pentaPiantaC2EPii,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_ZN11pentaPiantaC2EPii
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
+  26              	_ZN11pentaPiantaC2EPii:
+  27              	.LVL0:
+  28              	.LFB562:
+  29              		.file 1 "pentaPianta.cpp"
+   1:pentaPianta.cpp **** #include "pentaPianta.h"
+   2:pentaPianta.cpp **** 
+   3:pentaPianta.cpp **** 
+   4:pentaPianta.cpp **** //rifare non costruttore ma pentapiantaBegin per implementare il controllo degli input
+   5:pentaPianta.cpp ****     pentaPianta::pentaPianta(int* soglieI,int f0I) { //constructor of the class 
+  30              		.loc 1 5 5 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  35              	.LBB2:
+   6:pentaPianta.cpp ****         soglie=soglieI;                              //soglie is the vector of thresholds and has 7
+  36              		.loc 1 6 9 view .LVU1
+   7:pentaPianta.cpp ****                                                      //the first two ones (soglie[0] and soglie[1])
+   8:pentaPianta.cpp ****                                                      //release and touch thresholds. For any plant 
+   9:pentaPianta.cpp ****         f0=f0I;                                      //Minimum output frequency: the first tone of 
+  37              		.loc 1 9 11 is_stmt 0 view .LVU2
+  38 0000 C0E90012 		strd	r1, r2, [r0]
+  39              	.LBE2:
+  10:pentaPianta.cpp ****     }
+  40              		.loc 1 10 5 view .LVU3
+  41 0004 7047     		bx	lr
+  42              		.cfi_endproc
+  43              	.LFE562:
+  45              		.global	_ZN11pentaPiantaC1EPii
+  46              		.thumb_set _ZN11pentaPiantaC1EPii,_ZN11pentaPiantaC2EPii
+  47 0006 00BF     		.section	.text.unlikely._ZN11pentaPianta10initSoglieEPi,"ax",%progbits
+  48              		.align	1
+  49              		.global	_ZN11pentaPianta10initSoglieEPi
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s 			page 2
+
+
+  50              		.syntax unified
+  51              		.thumb
+  52              		.thumb_func
+  53              		.fpu fpv5-d16
+  55              	_ZN11pentaPianta10initSoglieEPi:
+  56              	.LVL1:
+  57              	.LFB564:
+  11:pentaPianta.cpp **** 
+  12:pentaPianta.cpp **** 
+  13:pentaPianta.cpp **** 
+  14:pentaPianta.cpp ****     int pentaPianta::initSoglie(int* soglieI) {     //Pay attention: pass a pointer!!!
+  58              		.loc 1 14 47 is_stmt 1 view -0
+  59              		.cfi_startproc
+  60              		@ Volatile: function does not return.
+  61              		@ args = 0, pretend = 0, frame = 0
+  62              		@ frame_needed = 0, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  15:pentaPianta.cpp ****         soglie = soglieI;
+  64              		.loc 1 15 9 view .LVU5
+  65              		.loc 1 15 16 is_stmt 0 view .LVU6
+  66 0000 0160     		str	r1, [r0]
+  67              		.cfi_endproc
+  68              	.LFE564:
+  70              		.section	.text._ZN11pentaPianta8discFreqEt,"ax",%progbits
+  71              		.align	1
+  72              		.p2align 2,,3
+  73              		.global	_ZN11pentaPianta8discFreqEt
+  74              		.syntax unified
+  75              		.thumb
+  76              		.thumb_func
+  77              		.fpu fpv5-d16
+  79              	_ZN11pentaPianta8discFreqEt:
+  80              	.LVL2:
+  81              	.LFB565:
+  16:pentaPianta.cpp ****     }
+  17:pentaPianta.cpp **** 
+  18:pentaPianta.cpp ****     uint16_t pentaPianta::discFreq(uint16_t value) { //Value should be the sensor data (look at alt
+  82              		.loc 1 18 52 is_stmt 1 view -0
+  83              		.cfi_startproc
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86              		@ link register save eliminated.
+  19:pentaPianta.cpp ****         uint16_t frequenza=-1;                       //Declaration of the output variable
+  87              		.loc 1 19 9 view .LVU8
+  20:pentaPianta.cpp ****                                                      /*The function compares the read value against
+  21:pentaPianta.cpp ****                                                      and consequently assigns a tone in the pentato
+  22:pentaPianta.cpp ****                                                       */
+  23:pentaPianta.cpp ****       if (soglie[0] <= value && value < soglie[2]) // soglie[0] otherwise we can have glitch on sma
+  88              		.loc 1 23 7 view .LVU9
+  89              		.loc 1 23 11 is_stmt 0 view .LVU10
+  90 0000 0368     		ldr	r3, [r0]
+  91              		.loc 1 23 7 view .LVU11
+  92 0002 1A68     		ldr	r2, [r3]
+  93 0004 8A42     		cmp	r2, r1
+  94              		.loc 1 23 30 view .LVU12
+  95 0006 9A68     		ldr	r2, [r3, #8]
+  96              		.loc 1 23 7 view .LVU13
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s 			page 3
+
+
+  97 0008 03DC     		bgt	.L5
+  98              		.loc 1 23 30 discriminator 1 view .LVU14
+  99 000a 9142     		cmp	r1, r2
+ 100 000c 15DA     		bge	.L6
+  24:pentaPianta.cpp **** {
+  25:pentaPianta.cpp ****     frequenza = f0;
+ 101              		.loc 1 25 5 is_stmt 1 view .LVU15
+ 102              		.loc 1 25 15 is_stmt 0 view .LVU16
+ 103 000e 8088     		ldrh	r0, [r0, #4]
+ 104              	.LVL3:
+ 105              		.loc 1 25 15 view .LVU17
+ 106 0010 7047     		bx	lr
+ 107              	.LVL4:
+ 108              	.L5:
+  26:pentaPianta.cpp **** }
+  27:pentaPianta.cpp **** else if (soglie[2] <= value && value < soglie[3])
+ 109              		.loc 1 27 6 is_stmt 1 view .LVU18
+ 110 0012 9142     		cmp	r1, r2
+ 111 0014 11DA     		bge	.L6
+  28:pentaPianta.cpp **** {
+  29:pentaPianta.cpp ****     frequenza = f0 * 1.12;
+  30:pentaPianta.cpp **** }
+  31:pentaPianta.cpp **** else if (soglie[3] <= value && value < soglie[4])
+ 112              		.loc 1 31 6 view .LVU19
+ 113 0016 DA68     		ldr	r2, [r3, #12]
+ 114 0018 9142     		cmp	r1, r2
+ 115 001a 1FDA     		bge	.L9
+  32:pentaPianta.cpp **** {
+  33:pentaPianta.cpp ****     frequenza = f0 * 1.19;
+  34:pentaPianta.cpp **** }
+  35:pentaPianta.cpp **** else if (soglie[4] <= value && value < soglie[5])
+ 116              		.loc 1 35 6 view .LVU20
+ 117 001c 1A69     		ldr	r2, [r3, #16]
+ 118 001e 9142     		cmp	r1, r2
+ 119 0020 24DA     		bge	.L11
+  36:pentaPianta.cpp **** {
+  37:pentaPianta.cpp ****     frequenza = f0 * 1.49;
+  38:pentaPianta.cpp **** }
+  39:pentaPianta.cpp **** else if (soglie[5] <= value && value < soglie[6])
+ 120              		.loc 1 39 6 view .LVU21
+ 121 0022 5A69     		ldr	r2, [r3, #20]
+ 122 0024 9142     		cmp	r1, r2
+ 123 0026 24DA     		bge	.L13
+  40:pentaPianta.cpp **** {
+  41:pentaPianta.cpp ****     frequenza = f0 * 1.58;
+  42:pentaPianta.cpp **** }
+  43:pentaPianta.cpp **** else if (soglie[6] <= value && value < soglie[7])
+ 124              		.loc 1 43 6 view .LVU22
+ 125 0028 9A69     		ldr	r2, [r3, #24]
+ 126 002a 9142     		cmp	r1, r2
+ 127 002c 2EDA     		bge	.L15
+  44:pentaPianta.cpp **** {
+  45:pentaPianta.cpp ****     frequenza = f0 * 1.88;
+  46:pentaPianta.cpp **** }
+  47:pentaPianta.cpp **** else if (soglie[7] <= value)
+ 128              		.loc 1 47 6 view .LVU23
+ 129 002e DB69     		ldr	r3, [r3, #28]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s 			page 4
+
+
+ 130 0030 9942     		cmp	r1, r3
+ 131 0032 33DA     		bge	.L17
+  19:pentaPianta.cpp ****                                                      /*The function compares the read value against
+ 132              		.loc 1 19 18 is_stmt 0 view .LVU24
+ 133 0034 4FF6FF70 		movw	r0, #65535
+ 134              	.LVL5:
+  48:pentaPianta.cpp **** {
+  49:pentaPianta.cpp ****     frequenza = f0 * 2.0;
+  50:pentaPianta.cpp **** }
+  51:pentaPianta.cpp **** 
+  52:pentaPianta.cpp **** return frequenza;
+ 135              		.loc 1 52 1 is_stmt 1 view .LVU25
+  53:pentaPianta.cpp **** 
+  54:pentaPianta.cpp ****     }
+ 136              		.loc 1 54 5 is_stmt 0 view .LVU26
+ 137 0038 7047     		bx	lr
+ 138              	.LVL6:
+ 139              	.L6:
+  27:pentaPianta.cpp **** {
+ 140              		.loc 1 27 29 discriminator 1 view .LVU27
+ 141 003a DA68     		ldr	r2, [r3, #12]
+ 142 003c 9142     		cmp	r1, r2
+ 143 003e 0DDA     		bge	.L9
+  29:pentaPianta.cpp **** }
+ 144              		.loc 1 29 5 is_stmt 1 view .LVU28
+  29:pentaPianta.cpp **** }
+ 145              		.loc 1 29 20 is_stmt 0 view .LVU29
+ 146 0040 90ED017A 		vldr.32	s14, [r0, #4]	@ int
+ 147 0044 9FED1C6B 		vldr.64	d6, .L21
+ 148              	.L19:
+  33:pentaPianta.cpp **** }
+ 149              		.loc 1 33 20 view .LVU30
+ 150 0048 B8EEC77B 		vcvt.f64.s32	d7, s14
+ 151 004c 27EE067B 		vmul.f64	d7, d7, d6
+  33:pentaPianta.cpp **** }
+ 152              		.loc 1 33 15 view .LVU31
+ 153 0050 BCEEC77B 		vcvt.u32.f64	s14, d7
+ 154 0054 17EE103A 		vmov	r3, s14	@ int
+ 155 0058 98B2     		uxth	r0, r3
+ 156              	.LVL7:
+  33:pentaPianta.cpp **** }
+ 157              		.loc 1 33 15 view .LVU32
+ 158 005a 7047     		bx	lr
+ 159              	.LVL8:
+ 160              	.L9:
+  31:pentaPianta.cpp **** {
+ 161              		.loc 1 31 29 discriminator 1 view .LVU33
+ 162 005c 1A69     		ldr	r2, [r3, #16]
+ 163 005e 9142     		cmp	r1, r2
+ 164 0060 04DA     		bge	.L11
+  33:pentaPianta.cpp **** }
+ 165              		.loc 1 33 5 is_stmt 1 view .LVU34
+  33:pentaPianta.cpp **** }
+ 166              		.loc 1 33 20 is_stmt 0 view .LVU35
+ 167 0062 90ED017A 		vldr.32	s14, [r0, #4]	@ int
+ 168 0066 9FED166B 		vldr.64	d6, .L21+8
+ 169 006a EDE7     		b	.L19
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s 			page 5
+
+
+ 170              	.L11:
+  35:pentaPianta.cpp **** {
+ 171              		.loc 1 35 29 discriminator 1 view .LVU36
+ 172 006c 5A69     		ldr	r2, [r3, #20]
+ 173 006e 9142     		cmp	r1, r2
+ 174 0070 07DB     		blt	.L20
+ 175              	.L13:
+  39:pentaPianta.cpp **** {
+ 176              		.loc 1 39 29 discriminator 1 view .LVU37
+ 177 0072 9A69     		ldr	r2, [r3, #24]
+ 178 0074 9142     		cmp	r1, r2
+ 179 0076 09DA     		bge	.L15
+  41:pentaPianta.cpp **** }
+ 180              		.loc 1 41 5 is_stmt 1 view .LVU38
+  41:pentaPianta.cpp **** }
+ 181              		.loc 1 41 20 is_stmt 0 view .LVU39
+ 182 0078 90ED017A 		vldr.32	s14, [r0, #4]	@ int
+ 183 007c 9FED126B 		vldr.64	d6, .L21+16
+ 184 0080 E2E7     		b	.L19
+ 185              	.L20:
+  37:pentaPianta.cpp **** }
+ 186              		.loc 1 37 5 is_stmt 1 view .LVU40
+  37:pentaPianta.cpp **** }
+ 187              		.loc 1 37 20 is_stmt 0 view .LVU41
+ 188 0082 9FED136B 		vldr.64	d6, .L21+24
+ 189 0086 90ED017A 		vldr.32	s14, [r0, #4]	@ int
+ 190 008a DDE7     		b	.L19
+ 191              	.L15:
+  43:pentaPianta.cpp **** {
+ 192              		.loc 1 43 29 discriminator 1 view .LVU42
+ 193 008c DB69     		ldr	r3, [r3, #28]
+ 194 008e 9942     		cmp	r1, r3
+ 195 0090 04DA     		bge	.L17
+  45:pentaPianta.cpp **** }
+ 196              		.loc 1 45 5 is_stmt 1 view .LVU43
+  45:pentaPianta.cpp **** }
+ 197              		.loc 1 45 20 is_stmt 0 view .LVU44
+ 198 0092 90ED017A 		vldr.32	s14, [r0, #4]	@ int
+ 199 0096 9FED106B 		vldr.64	d6, .L21+32
+ 200 009a D5E7     		b	.L19
+ 201              	.L17:
+  49:pentaPianta.cpp **** }
+ 202              		.loc 1 49 5 is_stmt 1 view .LVU45
+  49:pentaPianta.cpp **** }
+ 203              		.loc 1 49 20 is_stmt 0 view .LVU46
+ 204 009c 90ED017A 		vldr.32	s14, [r0, #4]	@ int
+ 205 00a0 B8EEC77B 		vcvt.f64.s32	d7, s14
+ 206 00a4 37EE077B 		vadd.f64	d7, d7, d7
+  49:pentaPianta.cpp **** }
+ 207              		.loc 1 49 15 view .LVU47
+ 208 00a8 BCEEC77B 		vcvt.u32.f64	s14, d7
+ 209 00ac 17EE103A 		vmov	r3, s14	@ int
+ 210 00b0 98B2     		uxth	r0, r3
+ 211              	.LVL9:
+  49:pentaPianta.cpp **** }
+ 212              		.loc 1 49 15 view .LVU48
+ 213 00b2 7047     		bx	lr
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s 			page 6
+
+
+ 214              	.L22:
+ 215 00b4 AFF30080 		.align	3
+ 216              	.L21:
+ 217 00b8 EC51B81E 		.word	515396076
+ 218 00bc 85EBF13F 		.word	1072819077
+ 219 00c0 0AD7A370 		.word	1889785610
+ 220 00c4 3D0AF33F 		.word	1072892477
+ 221 00c8 48E17A14 		.word	343597384
+ 222 00cc AE47F93F 		.word	1073301422
+ 223 00d0 D7A3703D 		.word	1030792151
+ 224 00d4 0AD7F73F 		.word	1073207050
+ 225 00d8 14AE47E1 		.word	-515396076
+ 226 00dc 7A14FE3F 		.word	1073615994
+ 227              		.cfi_endproc
+ 228              	.LFE565:
+ 230              		.section	.text._ZN11pentaPianta10analogFreqEt,"ax",%progbits
+ 231              		.align	1
+ 232              		.p2align 2,,3
+ 233              		.global	_ZN11pentaPianta10analogFreqEt
+ 234              		.syntax unified
+ 235              		.thumb
+ 236              		.thumb_func
+ 237              		.fpu fpv5-d16
+ 239              	_ZN11pentaPianta10analogFreqEt:
+ 240              	.LVL10:
+ 241              	.LFB566:
+  55:pentaPianta.cpp **** 
+  56:pentaPianta.cpp ****     uint16_t pentaPianta::analogFreq(uint16_t value) {
+ 242              		.loc 1 56 54 is_stmt 1 view -0
+ 243              		.cfi_startproc
+ 244              		@ args = 0, pretend = 0, frame = 0
+ 245              		@ frame_needed = 0, uses_anonymous_args = 0
+ 246              		@ link register save eliminated.
+  57:pentaPianta.cpp ****         uint16_t frequenza=-1;
+ 247              		.loc 1 57 9 view .LVU50
+  58:pentaPianta.cpp **** 
+  59:pentaPianta.cpp ****         frequenza = value*(f0*9/5-f0)/(soglie[6]-soglie[0]); //Scaling analog value in linear way 
+ 248              		.loc 1 59 9 view .LVU51
+  56:pentaPianta.cpp ****         uint16_t frequenza=-1;
+ 249              		.loc 1 56 54 is_stmt 0 view .LVU52
+ 250 0000 30B4     		push	{r4, r5}
+ 251              		.cfi_def_cfa_offset 8
+ 252              		.cfi_offset 4, -8
+ 253              		.cfi_offset 5, -4
+ 254              		.loc 1 59 40 view .LVU53
+ 255 0002 D0E90054 		ldrd	r5, r4, [r0]
+ 256              	.LVL11:
+  60:pentaPianta.cpp ****         return frequenza;
+ 257              		.loc 1 60 9 is_stmt 1 view .LVU54
+  59:pentaPianta.cpp ****         return frequenza;
+ 258              		.loc 1 59 32 is_stmt 0 view .LVU55
+ 259 0006 094A     		ldr	r2, .L25
+  59:pentaPianta.cpp ****         return frequenza;
+ 260              		.loc 1 59 30 view .LVU56
+ 261 0008 04EBC403 		add	r3, r4, r4, lsl #3
+  59:pentaPianta.cpp ****         return frequenza;
+ 262              		.loc 1 59 32 view .LVU57
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s 			page 7
+
+
+ 263 000c 82FB0302 		smull	r0, r2, r2, r3
+ 264              	.LVL12:
+  59:pentaPianta.cpp ****         return frequenza;
+ 265              		.loc 1 59 32 view .LVU58
+ 266 0010 DB17     		asrs	r3, r3, #31
+  59:pentaPianta.cpp ****         return frequenza;
+ 267              		.loc 1 59 49 view .LVU59
+ 268 0012 2868     		ldr	r0, [r5]
+  59:pentaPianta.cpp ****         return frequenza;
+ 269              		.loc 1 59 32 view .LVU60
+ 270 0014 C3EB6203 		rsb	r3, r3, r2, asr #1
+  59:pentaPianta.cpp ****         return frequenza;
+ 271              		.loc 1 59 49 view .LVU61
+ 272 0018 AA69     		ldr	r2, [r5, #24]
+  59:pentaPianta.cpp ****         return frequenza;
+ 273              		.loc 1 59 34 view .LVU62
+ 274 001a 1B1B     		subs	r3, r3, r4
+  59:pentaPianta.cpp ****         return frequenza;
+ 275              		.loc 1 59 49 view .LVU63
+ 276 001c 121A     		subs	r2, r2, r0
+  59:pentaPianta.cpp ****         return frequenza;
+ 277              		.loc 1 59 26 view .LVU64
+ 278 001e 03FB01F1 		mul	r1, r3, r1
+ 279              	.LVL13:
+  59:pentaPianta.cpp ****         return frequenza;
+ 280              		.loc 1 59 38 view .LVU65
+ 281 0022 91FBF2F0 		sdiv	r0, r1, r2
+  61:pentaPianta.cpp ****     }
+ 282              		.loc 1 61 5 view .LVU66
+ 283 0026 30BC     		pop	{r4, r5}
+ 284              		.cfi_restore 5
+ 285              		.cfi_restore 4
+ 286              		.cfi_def_cfa_offset 0
+ 287              	.LVL14:
+ 288              		.loc 1 61 5 view .LVU67
+ 289 0028 80B2     		uxth	r0, r0
+ 290 002a 7047     		bx	lr
+ 291              	.L26:
+ 292              		.align	2
+ 293              	.L25:
+ 294 002c 67666666 		.word	1717986919
+ 295              		.cfi_endproc
+ 296              	.LFE566:
+ 298              		.text
+ 299              	.Letext0:
+ 300              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 301              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 302              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 303              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 304              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\th
+ 305              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 306              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 307              		.file 9 "pentaPianta.h"
+ 308              		.file 10 "<built-in>"
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 pentaPianta.cpp
+C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s:17     .text._ZN11pentaPiantaC2EPii:00000000 $t
+C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s:26     .text._ZN11pentaPiantaC2EPii:00000000 _ZN11pentaPiantaC2EPii
+C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s:26     .text._ZN11pentaPiantaC2EPii:00000000 _ZN11pentaPiantaC1EPii
+C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s:48     .text.unlikely._ZN11pentaPianta10initSoglieEPi:00000000 $t
+C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s:55     .text.unlikely._ZN11pentaPianta10initSoglieEPi:00000000 _ZN11pentaPianta10initSoglieEPi
+C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s:71     .text._ZN11pentaPianta8discFreqEt:00000000 $t
+C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s:79     .text._ZN11pentaPianta8discFreqEt:00000000 _ZN11pentaPianta8discFreqEt
+C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s:217    .text._ZN11pentaPianta8discFreqEt:000000b8 $d
+C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s:231    .text._ZN11pentaPianta10analogFreqEt:00000000 $t
+C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s:239    .text._ZN11pentaPianta10analogFreqEt:00000000 _ZN11pentaPianta10analogFreqEt
+C:\Users\matte\AppData\Local\Temp\ccvS4ScC.s:294    .text._ZN11pentaPianta10analogFreqEt:0000002c $d
+
+NO UNDEFINED SYMBOLS
