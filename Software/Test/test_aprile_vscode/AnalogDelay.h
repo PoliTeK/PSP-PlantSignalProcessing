@@ -3,8 +3,8 @@
 // Inclusione delle librerie necessarie per il progetto Daisy
 // #include "DaisyDuino.h" NON SERVE IN VSCODE
 
-#include "../../../../libs/libDaisy/src/daisy_seed.h"
-#include "../../../../libs/DaisySP/Source/daisysp.h"  
+#include "../../libs/libDaisy/src/daisy_seed.h"
+#include "../../libs/DaisySP/Source/daisysp.h"  
 #include <stdint.h>
 
 // Definizione della costante per il tempo massimo di delay in secondi
