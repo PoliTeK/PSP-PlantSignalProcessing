@@ -1,0 +1,400 @@
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccL5vE11.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"Effect.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN6Effect5beginEPi,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_ZN6Effect5beginEPi
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
+  26              	_ZN6Effect5beginEPi:
+  27              	.LVL0:
+  28              	.LFB566:
+  29              		.file 1 "Effect.cpp"
+   1:Effect.cpp    **** #include "Effect.h"
+   2:Effect.cpp    **** 
+   3:Effect.cpp    **** 
+   4:Effect.cpp    ****     void Effect::begin(int* thresholdsI){
+  30              		.loc 1 4 41 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+   5:Effect.cpp    ****         if (sizeof(_thresholds) / sizeof(_thresholds[0]) != 7){         //controls that the size of
+  35              		.loc 1 5 9 view .LVU1
+   6:Effect.cpp    ****             return;
+  36              		.loc 1 6 13 view .LVU2
+   7:Effect.cpp    ****         } else {
+   8:Effect.cpp    ****             _thresholds = thresholdsI;
+   9:Effect.cpp    ****             _gate = false; //initialize the gate to false
+  10:Effect.cpp    ****             _raw_value = 0; //initialize the raw value to 0
+  11:Effect.cpp    ****         }
+  12:Effect.cpp    ****         
+  13:Effect.cpp    ****     }
+  37              		.loc 1 13 5 is_stmt 0 view .LVU3
+  38 0000 7047     		bx	lr
+  39              		.cfi_endproc
+  40              	.LFE566:
+  42 0002 00BF     		.section	.text._ZN6Effect15analogCoeffFineEt,"ax",%progbits
+  43              		.align	1
+  44              		.p2align 2,,3
+  45              		.global	_ZN6Effect15analogCoeffFineEt
+  46              		.syntax unified
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccL5vE11.s 			page 2
+
+
+  47              		.thumb
+  48              		.thumb_func
+  49              		.fpu fpv5-d16
+  51              	_ZN6Effect15analogCoeffFineEt:
+  52              	.LVL1:
+  53              	.LFB567:
+  14:Effect.cpp    **** 
+  15:Effect.cpp    **** 
+  16:Effect.cpp    **** 
+  17:Effect.cpp    **** 
+  18:Effect.cpp    **** 
+  19:Effect.cpp    ****     float Effect::analogCoeffFine(uint16_t value) { /*
+  54              		.loc 1 19 51 is_stmt 1 view -0
+  55              		.cfi_startproc
+  56              		@ args = 0, pretend = 0, frame = 0
+  57              		@ frame_needed = 0, uses_anonymous_args = 0
+  58              		@ link register save eliminated.
+  20:Effect.cpp    ****                                                         _coeff is a fixed values array which serve 
+  21:Effect.cpp    ****                                                         This way we don't have a single function wh
+  22:Effect.cpp    ****                                                         But a normalization with a different slope 
+  23:Effect.cpp    ****                                                         because the values read from the various sp
+  24:Effect.cpp    ****                                                         to have a slightly better modulation
+  25:Effect.cpp    ****                                                         */
+  26:Effect.cpp    ****         float output=-1;
+  59              		.loc 1 26 9 view .LVU5
+  27:Effect.cpp    ****         if(_thresholds[0]<=value && value <_thresholds[2])     //_thresholds[0] otherwise we can ha
+  60              		.loc 1 27 9 view .LVU6
+  61              		.loc 1 27 12 is_stmt 0 view .LVU7
+  62 0000 0368     		ldr	r3, [r0]
+  19:Effect.cpp    ****                                                         _coeff is a fixed values array which serve 
+  63              		.loc 1 19 51 view .LVU8
+  64 0002 10B4     		push	{r4}
+  65              		.cfi_def_cfa_offset 4
+  66              		.cfi_offset 4, -4
+  67              		.loc 1 27 25 view .LVU9
+  68 0004 1C68     		ldr	r4, [r3]
+  69              		.loc 1 27 57 view .LVU10
+  70 0006 9A68     		ldr	r2, [r3, #8]
+  71              		.loc 1 27 9 view .LVU11
+  72 0008 8C42     		cmp	r4, r1
+  73 000a 1FDC     		bgt	.L4
+  74              		.loc 1 27 34 discriminator 1 view .LVU12
+  75 000c 9142     		cmp	r1, r2
+  76 000e 2DDA     		bge	.L5
+  28:Effect.cpp    ****         {                                                      
+  29:Effect.cpp    ****             output= value*(_coeff[1]-_coeff[0])/(_thresholds[2]-_thresholds[0]);   
+  77              		.loc 1 29 13 is_stmt 1 view .LVU13
+  78              		.loc 1 29 26 is_stmt 0 view .LVU14
+  79 0010 07EE901A 		vmov	s15, r1	@ int
+  80              		.loc 1 29 37 view .LVU15
+  81 0014 D0ED026A 		vldr.32	s13, [r0, #8]
+  82 0018 90ED017A 		vldr.32	s14, [r0, #4]
+  83              		.loc 1 29 64 view .LVU16
+  84 001c 121B     		subs	r2, r2, r4
+  85              		.loc 1 29 26 view .LVU17
+  86 001e F8EEE77A 		vcvt.f32.s32	s15, s15
+  87              	.L18:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccL5vE11.s 			page 3
+
+
+  30:Effect.cpp    ****         }   else if(_thresholds[2]<=value && value<_thresholds[3])                 
+  31:Effect.cpp    ****         {                                                                  
+  32:Effect.cpp    ****             output= value*(_coeff[2]-_coeff[1])/(_thresholds[3]-_thresholds[2]);   
+  88              		.loc 1 32 37 view .LVU18
+  89 0022 76EEC76A 		vsub.f32	s13, s13, s14
+  90              		.loc 1 32 48 view .LVU19
+  91 0026 07EE102A 		vmov	s14, r2	@ int
+  92 002a B8EEC77A 		vcvt.f32.s32	s14, s14
+  93              		.loc 1 32 26 view .LVU20
+  94 002e 66EEA77A 		vmul.f32	s15, s13, s15
+  95              		.loc 1 32 19 view .LVU21
+  96 0032 87EE870A 		vdiv.f32	s0, s15, s14
+  97              	.LVL2:
+  98              	.L6:
+  33:Effect.cpp    ****         }   else if(_thresholds[3]<=value && value<_thresholds[4])
+  34:Effect.cpp    ****         {
+  35:Effect.cpp    ****             output= value*(_coeff[3]-_coeff[2])/(_thresholds[4]-_thresholds[3]);
+  36:Effect.cpp    ****         }   else if(_thresholds[4]<=value && value<_thresholds[5])
+  37:Effect.cpp    ****         {
+  38:Effect.cpp    ****             output= value*(_coeff[4]-_coeff[3])/(_thresholds[5]-_thresholds[4]);
+  39:Effect.cpp    ****         }   else if(_thresholds[5]<=value )
+  40:Effect.cpp    ****         {
+  41:Effect.cpp    ****             output= value*(_coeff[5]-_coeff[4])/(_thresholds[6]-_thresholds[5]);
+  42:Effect.cpp    ****         }
+  43:Effect.cpp    ****         if (output>1)  //if the values are out of scale, it returns the max
+  99              		.loc 1 43 9 is_stmt 1 view .LVU22
+  44:Effect.cpp    ****             return 1;
+  45:Effect.cpp    ****         return output;
+  46:Effect.cpp    ****     }
+ 100              		.loc 1 46 5 is_stmt 0 view .LVU23
+ 101 0036 5DF8044B 		ldr	r4, [sp], #4
+ 102              		.cfi_remember_state
+ 103              		.cfi_restore 4
+ 104              		.cfi_def_cfa_offset 0
+  43:Effect.cpp    ****             return 1;
+ 105              		.loc 1 43 9 view .LVU24
+ 106 003a F7EE007A 		vmov.f32	s15, #1.0e+0
+  44:Effect.cpp    ****             return 1;
+ 107              		.loc 1 44 20 view .LVU25
+ 108 003e B4EE670A 		vcmp.f32	s0, s15
+ 109 0042 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 110 0046 37FE800A 		vselgt.f32	s0, s15, s0
+ 111              	.LVL3:
+ 112              		.loc 1 46 5 view .LVU26
+ 113 004a 7047     		bx	lr
+ 114              	.LVL4:
+ 115              	.L4:
+ 116              		.cfi_restore_state
+  30:Effect.cpp    ****         {                                                                  
+ 117              		.loc 1 30 18 is_stmt 1 view .LVU27
+ 118 004c 9142     		cmp	r1, r2
+ 119 004e 0DDA     		bge	.L5
+  30:Effect.cpp    ****         {                                                                  
+ 120              		.loc 1 30 65 is_stmt 0 view .LVU28
+ 121 0050 DC68     		ldr	r4, [r3, #12]
+  33:Effect.cpp    ****         {
+ 122              		.loc 1 33 18 is_stmt 1 view .LVU29
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccL5vE11.s 			page 4
+
+
+ 123 0052 A142     		cmp	r1, r4
+ 124 0054 17DA     		bge	.L8
+  33:Effect.cpp    ****         {
+ 125              		.loc 1 33 65 is_stmt 0 view .LVU30
+ 126 0056 1A69     		ldr	r2, [r3, #16]
+  36:Effect.cpp    ****         {
+ 127              		.loc 1 36 18 is_stmt 1 view .LVU31
+ 128 0058 9142     		cmp	r1, r2
+ 129 005a 21DA     		bge	.L10
+  36:Effect.cpp    ****         {
+ 130              		.loc 1 36 65 is_stmt 0 view .LVU32
+ 131 005c 5C69     		ldr	r4, [r3, #20]
+  39:Effect.cpp    ****         {
+ 132              		.loc 1 39 18 is_stmt 1 view .LVU33
+ 133 005e A142     		cmp	r1, r4
+ 134 0060 26DA     		bge	.L12
+  26:Effect.cpp    ****         if(_thresholds[0]<=value && value <_thresholds[2])     //_thresholds[0] otherwise we can ha
+ 135              		.loc 1 26 15 is_stmt 0 view .LVU34
+ 136 0062 BFEE000A 		vmov.f32	s0, #-1.0e+0
+ 137              	.LVL5:
+ 138              		.loc 1 46 5 view .LVU35
+ 139 0066 5DF8044B 		ldr	r4, [sp], #4
+ 140              		.cfi_remember_state
+ 141              		.cfi_restore 4
+ 142              		.cfi_def_cfa_offset 0
+ 143 006a 7047     		bx	lr
+ 144              	.LVL6:
+ 145              	.L5:
+ 146              		.cfi_restore_state
+  30:Effect.cpp    ****         {                                                                  
+ 147              		.loc 1 30 65 discriminator 1 view .LVU36
+ 148 006c DC68     		ldr	r4, [r3, #12]
+  30:Effect.cpp    ****         {                                                                  
+ 149              		.loc 1 30 43 discriminator 1 view .LVU37
+ 150 006e A142     		cmp	r1, r4
+ 151 0070 09DA     		bge	.L8
+  32:Effect.cpp    ****         }   else if(_thresholds[3]<=value && value<_thresholds[4])
+ 152              		.loc 1 32 13 is_stmt 1 view .LVU38
+  32:Effect.cpp    ****         }   else if(_thresholds[3]<=value && value<_thresholds[4])
+ 153              		.loc 1 32 37 is_stmt 0 view .LVU39
+ 154 0072 D0ED036A 		vldr.32	s13, [r0, #12]
+ 155 0076 90ED027A 		vldr.32	s14, [r0, #8]
+ 156              	.L19:
+  32:Effect.cpp    ****         }   else if(_thresholds[3]<=value && value<_thresholds[4])
+ 157              		.loc 1 32 26 view .LVU40
+ 158 007a 07EE901A 		vmov	s15, r1	@ int
+  32:Effect.cpp    ****         }   else if(_thresholds[3]<=value && value<_thresholds[4])
+ 159              		.loc 1 32 64 view .LVU41
+ 160 007e A21A     		subs	r2, r4, r2
+  32:Effect.cpp    ****         }   else if(_thresholds[3]<=value && value<_thresholds[4])
+ 161              		.loc 1 32 26 view .LVU42
+ 162 0080 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 163 0084 CDE7     		b	.L18
+ 164              	.L8:
+  33:Effect.cpp    ****         {
+ 165              		.loc 1 33 65 discriminator 1 view .LVU43
+ 166 0086 1A69     		ldr	r2, [r3, #16]
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccL5vE11.s 			page 5
+
+
+  33:Effect.cpp    ****         {
+ 167              		.loc 1 33 43 discriminator 1 view .LVU44
+ 168 0088 9142     		cmp	r1, r2
+ 169 008a 09DA     		bge	.L10
+  35:Effect.cpp    ****         }   else if(_thresholds[4]<=value && value<_thresholds[5])
+ 170              		.loc 1 35 13 is_stmt 1 view .LVU45
+  35:Effect.cpp    ****         }   else if(_thresholds[4]<=value && value<_thresholds[5])
+ 171              		.loc 1 35 26 is_stmt 0 view .LVU46
+ 172 008c 07EE901A 		vmov	s15, r1	@ int
+  35:Effect.cpp    ****         }   else if(_thresholds[4]<=value && value<_thresholds[5])
+ 173              		.loc 1 35 37 view .LVU47
+ 174 0090 D0ED046A 		vldr.32	s13, [r0, #16]
+ 175 0094 90ED037A 		vldr.32	s14, [r0, #12]
+  35:Effect.cpp    ****         }   else if(_thresholds[4]<=value && value<_thresholds[5])
+ 176              		.loc 1 35 64 view .LVU48
+ 177 0098 121B     		subs	r2, r2, r4
+  35:Effect.cpp    ****         }   else if(_thresholds[4]<=value && value<_thresholds[5])
+ 178              		.loc 1 35 26 view .LVU49
+ 179 009a F8EEE77A 		vcvt.f32.s32	s15, s15
+ 180 009e C0E7     		b	.L18
+ 181              	.L10:
+  36:Effect.cpp    ****         {
+ 182              		.loc 1 36 65 discriminator 1 view .LVU50
+ 183 00a0 5C69     		ldr	r4, [r3, #20]
+  36:Effect.cpp    ****         {
+ 184              		.loc 1 36 43 discriminator 1 view .LVU51
+ 185 00a2 A142     		cmp	r1, r4
+ 186 00a4 04DA     		bge	.L12
+  38:Effect.cpp    ****         }   else if(_thresholds[5]<=value )
+ 187              		.loc 1 38 13 is_stmt 1 view .LVU52
+  38:Effect.cpp    ****         }   else if(_thresholds[5]<=value )
+ 188              		.loc 1 38 37 is_stmt 0 view .LVU53
+ 189 00a6 D0ED056A 		vldr.32	s13, [r0, #20]
+ 190 00aa 90ED047A 		vldr.32	s14, [r0, #16]
+ 191 00ae E4E7     		b	.L19
+ 192              	.L12:
+  41:Effect.cpp    ****         }
+ 193              		.loc 1 41 13 is_stmt 1 view .LVU54
+  41:Effect.cpp    ****         }
+ 194              		.loc 1 41 37 is_stmt 0 view .LVU55
+ 195 00b0 90ED067A 		vldr.32	s14, [r0, #24]
+  41:Effect.cpp    ****         }
+ 196              		.loc 1 41 26 view .LVU56
+ 197 00b4 07EE901A 		vmov	s15, r1	@ int
+  41:Effect.cpp    ****         }
+ 198              		.loc 1 41 37 view .LVU57
+ 199 00b8 D0ED056A 		vldr.32	s13, [r0, #20]
+  41:Effect.cpp    ****         }
+ 200              		.loc 1 41 64 view .LVU58
+ 201 00bc 9B69     		ldr	r3, [r3, #24]
+  41:Effect.cpp    ****         }
+ 202              		.loc 1 41 26 view .LVU59
+ 203 00be F8EEE77A 		vcvt.f32.s32	s15, s15
+  41:Effect.cpp    ****         }
+ 204              		.loc 1 41 37 view .LVU60
+ 205 00c2 37EE667A 		vsub.f32	s14, s14, s13
+  41:Effect.cpp    ****         }
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccL5vE11.s 			page 6
+
+
+ 206              		.loc 1 41 64 view .LVU61
+ 207 00c6 1B1B     		subs	r3, r3, r4
+  41:Effect.cpp    ****         }
+ 208              		.loc 1 41 26 view .LVU62
+ 209 00c8 67EE277A 		vmul.f32	s15, s14, s15
+  41:Effect.cpp    ****         }
+ 210              		.loc 1 41 48 view .LVU63
+ 211 00cc 07EE103A 		vmov	s14, r3	@ int
+ 212 00d0 B8EEC77A 		vcvt.f32.s32	s14, s14
+  41:Effect.cpp    ****         }
+ 213              		.loc 1 41 19 view .LVU64
+ 214 00d4 87EE870A 		vdiv.f32	s0, s15, s14
+ 215              	.LVL7:
+  41:Effect.cpp    ****         }
+ 216              		.loc 1 41 19 view .LVU65
+ 217 00d8 ADE7     		b	.L6
+ 218              		.cfi_endproc
+ 219              	.LFE567:
+ 221 00da 00BF     		.section	.text._ZN6Effect19analogCoeffIgnorantEt,"ax",%progbits
+ 222              		.align	1
+ 223              		.p2align 2,,3
+ 224              		.global	_ZN6Effect19analogCoeffIgnorantEt
+ 225              		.syntax unified
+ 226              		.thumb
+ 227              		.thumb_func
+ 228              		.fpu fpv5-d16
+ 230              	_ZN6Effect19analogCoeffIgnorantEt:
+ 231              	.LVL8:
+ 232              	.LFB568:
+  47:Effect.cpp    **** 
+  48:Effect.cpp    ****     float Effect::analogCoeffIgnorant(uint16_t value){ //stupid normalization with only a scale
+ 233              		.loc 1 48 54 is_stmt 1 view -0
+ 234              		.cfi_startproc
+ 235              		@ args = 0, pretend = 0, frame = 0
+ 236              		@ frame_needed = 0, uses_anonymous_args = 0
+ 237              		@ link register save eliminated.
+  49:Effect.cpp    ****         float output=-1;
+ 238              		.loc 1 49 9 view .LVU67
+  50:Effect.cpp    ****         output = value*1/(_thresholds[6]-_thresholds[0]);
+ 239              		.loc 1 50 9 view .LVU68
+ 240              		.loc 1 50 27 is_stmt 0 view .LVU69
+ 241 0000 0268     		ldr	r2, [r0]
+  51:Effect.cpp    ****         if (output>1) 
+ 242              		.loc 1 51 9 view .LVU70
+ 243 0002 B7EE000A 		vmov.f32	s0, #1.0e+0
+  50:Effect.cpp    ****         output = value*1/(_thresholds[6]-_thresholds[0]);
+ 244              		.loc 1 50 41 view .LVU71
+ 245 0006 9369     		ldr	r3, [r2, #24]
+ 246 0008 1268     		ldr	r2, [r2]
+ 247 000a 9B1A     		subs	r3, r3, r2
+  50:Effect.cpp    ****         output = value*1/(_thresholds[6]-_thresholds[0]);
+ 248              		.loc 1 50 25 view .LVU72
+ 249 000c 91FBF3F3 		sdiv	r3, r1, r3
+ 250 0010 07EE903A 		vmov	s15, r3	@ int
+  50:Effect.cpp    ****         output = value*1/(_thresholds[6]-_thresholds[0]);
+ 251              		.loc 1 50 16 view .LVU73
+ 252 0014 F8EEE77A 		vcvt.f32.s32	s15, s15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccL5vE11.s 			page 7
+
+
+ 253              	.LVL9:
+ 254              		.loc 1 51 9 is_stmt 1 view .LVU74
+  52:Effect.cpp    ****             return 1;
+ 255              		.loc 1 52 20 is_stmt 0 view .LVU75
+ 256 0018 F4EE407A 		vcmp.f32	s15, s0
+ 257 001c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+  53:Effect.cpp    ****         return output;
+  54:Effect.cpp    ****     }...
+ 258              		.loc 1 54 5 view .LVU76
+ 259 0020 30FE270A 		vselgt.f32	s0, s0, s15
+ 260 0024 7047     		bx	lr
+ 261              		.cfi_endproc
+ 262              	.LFE568:
+ 264 0026 00BF     		.text
+ 265              	.Letext0:
+ 266              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 267              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 268              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 269              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 270              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\th
+ 271              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 272              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 273              		.file 9 "Effect.h"
+ 274              		.file 10 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccL5vE11.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Effect.cpp
+C:\Users\skipi\AppData\Local\Temp\ccL5vE11.s:17     .text._ZN6Effect5beginEPi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccL5vE11.s:26     .text._ZN6Effect5beginEPi:00000000 _ZN6Effect5beginEPi
+C:\Users\skipi\AppData\Local\Temp\ccL5vE11.s:43     .text._ZN6Effect15analogCoeffFineEt:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccL5vE11.s:51     .text._ZN6Effect15analogCoeffFineEt:00000000 _ZN6Effect15analogCoeffFineEt
+C:\Users\skipi\AppData\Local\Temp\ccL5vE11.s:222    .text._ZN6Effect19analogCoeffIgnorantEt:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccL5vE11.s:230    .text._ZN6Effect19analogCoeffIgnorantEt:00000000 _ZN6Effect19analogCoeffIgnorantEt
+
+NO UNDEFINED SYMBOLS

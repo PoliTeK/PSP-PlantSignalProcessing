@@ -1,0 +1,1360 @@
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"Ramo.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN4RamoC2Ev,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_ZN4RamoC2Ev
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
+  26              	_ZN4RamoC2Ev:
+  27              	.LVL0:
+  28              	.LFB4815:
+  29              		.file 1 "../../Classes/Audio_Engine/Ramo/src/Ramo.cpp"
+   1:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+   2:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** #include "Ramo.h"
+   3:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+   4:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** using namespace daisysp;
+   5:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+   6:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** Ramo::Ramo()
+  30              		.loc 1 6 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+   7:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+   8:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+  35              		.loc 1 8 1 is_stmt 0 view .LVU1
+  36 0000 7047     		bx	lr
+  37              		.cfi_endproc
+  38              	.LFE4815:
+  40              		.global	_ZN4RamoC1Ev
+  41              		.thumb_set _ZN4RamoC1Ev,_ZN4RamoC2Ev
+  42 0002 00BF     		.section	.text._ZN4RamoD2Ev,"ax",%progbits
+  43              		.align	1
+  44              		.p2align 2,,3
+  45              		.global	_ZN4RamoD2Ev
+  46              		.syntax unified
+  47              		.thumb
+  48              		.thumb_func
+  49              		.fpu fpv5-d16
+  51              	_ZN4RamoD2Ev:
+  52              	.LVL1:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 2
+
+
+  53              	.LFB4818:
+   9:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+  10:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** Ramo::~Ramo()
+  54              		.loc 1 10 1 is_stmt 1 view -0
+  55              		.cfi_startproc
+  56              		@ args = 0, pretend = 0, frame = 0
+  57              		@ frame_needed = 0, uses_anonymous_args = 0
+  58              		@ link register save eliminated.
+  11:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+  12:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     // Cleanup if needed
+  13:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+  59              		.loc 1 13 1 is_stmt 0 view .LVU3
+  60 0000 7047     		bx	lr
+  61              		.cfi_endproc
+  62              	.LFE4818:
+  64              		.global	_ZN4RamoD1Ev
+  65              		.thumb_set _ZN4RamoD1Ev,_ZN4RamoD2Ev
+  66 0002 00BF     		.section	.text._ZN4Ramo4InitEf,"ax",%progbits
+  67              		.align	1
+  68              		.p2align 2,,3
+  69              		.global	_ZN4Ramo4InitEf
+  70              		.syntax unified
+  71              		.thumb
+  72              		.thumb_func
+  73              		.fpu fpv5-d16
+  75              	_ZN4Ramo4InitEf:
+  76              	.LVL2:
+  77              	.LFB4820:
+  14:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+  15:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** void Ramo::Init(float sample_rate) // initialization
+  16:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+  78              		.loc 1 16 1 is_stmt 1 view -0
+  79              		.cfi_startproc
+  80              		@ args = 0, pretend = 0, frame = 0
+  81              		@ frame_needed = 0, uses_anonymous_args = 0
+  82              		@ link register save eliminated.
+  17:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _sr = sample_rate;
+  83              		.loc 1 17 5 view .LVU5
+  18:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _sr_recip = 1.0f / sample_rate;
+  84              		.loc 1 18 22 is_stmt 0 view .LVU6
+  85 0000 F7EE006A 		vmov.f32	s13, #1.0e+0
+  19:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _freq = 100.0f;
+  86              		.loc 1 19 11 view .LVU7
+  87 0004 DFED107A 		vldr.32	s15, .L5
+  20:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _phase_inc[0] = CalcPhaseInc(_freq);
+  21:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _phase_inc[1] = CalcPhaseInc(_freq);
+  22:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _pw = 0.5f;
+  88              		.loc 1 22 9 view .LVU8
+  89 0008 4FF07C53 		mov	r3, #1056964608
+  90              	.LBB16:
+  23:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _tresh = 1.0f;
+  24:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     
+  25:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     
+  26:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+  27:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for (int i = 0; i < 2; i++) {
+  28:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _amp[i] = 0.5f;
+  29:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _phase[i] = 0.0f;
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 3
+
+
+  91              		.loc 1 29 19 view .LVU9
+  92 000c 0022     		movs	r2, #0
+  93              	.LBE16:
+  19:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _phase_inc[0] = CalcPhaseInc(_freq);
+  94              		.loc 1 19 11 view .LVU10
+  95 000e C0ED037A 		vstr.32	s15, [r0, #12]
+  96              	.LBB17:
+  30:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _waveform[i] = WAVE_SIN;
+  97              		.loc 1 30 22 view .LVU11
+  98 0012 4FF0000C 		mov	ip, #0
+  99              	.LBE17:
+  18:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _freq = 100.0f;
+ 100              		.loc 1 18 22 view .LVU12
+ 101 0016 86EE807A 		vdiv.f32	s14, s13, s0
+ 102              	.LBB18:
+  31:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _eoc[i] = true;
+  32:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _eor[i] = true;
+ 103              		.loc 1 32 17 view .LVU13
+ 104 001a 4FF00131 		mov	r1, #16843009
+ 105              	.LBE18:
+  17:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _sr_recip = 1.0f / sample_rate;
+ 106              		.loc 1 17 9 view .LVU14
+ 107 001e 80ED080A 		vstr.32	s0, [r0, #32]
+  18:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _freq = 100.0f;
+ 108              		.loc 1 18 5 is_stmt 1 view .LVU15
+  22:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _tresh = 1.0f;
+ 109              		.loc 1 22 9 is_stmt 0 view .LVU16
+ 110 0022 4361     		str	r3, [r0, #20]	@ float
+  23:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     
+ 111              		.loc 1 23 12 view .LVU17
+ 112 0024 C0ED066A 		vstr.32	s13, [r0, #24]
+ 113              	.LBB19:
+  28:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _phase[i] = 0.0f;
+ 114              		.loc 1 28 17 view .LVU18
+ 115 0028 4360     		str	r3, [r0, #4]	@ float
+  29:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _waveform[i] = WAVE_SIN;
+ 116              		.loc 1 29 19 view .LVU19
+ 117 002a 8262     		str	r2, [r0, #40]	@ float
+  28:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _phase[i] = 0.0f;
+ 118              		.loc 1 28 17 view .LVU20
+ 119 002c 8360     		str	r3, [r0, #8]	@ float
+  29:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _waveform[i] = WAVE_SIN;
+ 120              		.loc 1 29 19 view .LVU21
+ 121 002e C262     		str	r2, [r0, #44]	@ float
+  30:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _eoc[i] = true;
+ 122              		.loc 1 30 22 view .LVU22
+ 123 0030 A0F800C0 		strh	ip, [r0]	@ movhi
+ 124              		.loc 1 32 17 view .LVU23
+ 125 0034 8163     		str	r1, [r0, #56]
+ 126              	.LBE19:
+ 127              	.LBB20:
+ 128              	.LBB21:
+  33:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     }
+  34:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+  35:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+  36:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+  37:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** float Ramo::Process()
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 4
+
+
+  38:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+  39:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     float out[n], t[n], s[n];
+  40:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for (int i = 0; i < n; i++)
+  41:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+  42:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         switch (_waveform[i])
+  43:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+  44:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         case WAVE_SIN:
+  45:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             out[i] = sinf(_phase[i] * TWOPI_F);
+  46:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+  47:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         case WAVE_TRI:
+  48:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             t[i] = abs(-1.0f + (2.0f * _phase[i]));
+  49:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             t[i] = 2 *  (t[i] - 0.5f); 
+  50:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             if (t[i] > _tresh)
+  51:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             {
+  52:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****                 out[i] = (- t[i] + 2 * _tresh) * 1/_tresh;
+  53:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             }
+  54:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             else if (t[i] < -_tresh)
+  55:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             {
+  56:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****                 out[i] = (- t[i] - 2 * _tresh) * 1/_tresh;
+  57:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             }
+  58:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             else
+  59:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             {
+  60:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****                 out[i] = t[i] *  1/_tresh;
+  61:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             }
+  62:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+  63:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+  64:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         case WAVE_SAW:
+  65:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         if (_phase[i] > _c-0.05 && _phase[i] < 0.95-_c || _c==0)
+  66:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+  67:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             out[i] =- 1.0f+((_phase[i] * 2.0f));
+  68:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }else{
+  69:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             out[i] = 1.0f-(_phase[i] * 2.0f);
+  70:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }
+  71:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             
+  72:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+  73:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         case WAVE_SQUARE:
+  74:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             out[i] = _phase[i] < _pw ? (1.0f) : -1.0f;
+  75:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+  76:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         default:
+  77:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             out[i] = 0.0f;
+  78:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+  79:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }
+  80:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _phase[i] += _phase_inc[i];
+  81:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+  82:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         if (_phase[i] > 1.0f)
+  83:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+  84:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             _phase[i] -= 1.0f;
+  85:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             _eoc[i] = true;
+  86:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }
+  87:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         else
+  88:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+  89:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             _eoc[i] = false;
+  90:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }
+  91:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _eor[i] = (_phase[i] - _phase_inc[i] < 0.5f && _phase[i] >= 0.5f);
+  92:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     }
+  93:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+  94:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     return _gain * (out[0] * _amp[0] + out[1] * _amp[1]);
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 5
+
+
+  95:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+  96:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+  97:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** float Ramo::CalcPhaseInc(float f)
+  98:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+  99:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     return f * _sr_recip;
+ 129              		.loc 1 99 16 view .LVU24
+ 130 0036 67EE277A 		vmul.f32	s15, s14, s15
+ 131              	.LBE21:
+ 132              	.LBE20:
+  18:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _freq = 100.0f;
+ 133              		.loc 1 18 15 view .LVU25
+ 134 003a 80ED097A 		vstr.32	s14, [r0, #36]
+  19:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _phase_inc[0] = CalcPhaseInc(_freq);
+ 135              		.loc 1 19 5 is_stmt 1 view .LVU26
+  20:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _phase_inc[1] = CalcPhaseInc(_freq);
+ 136              		.loc 1 20 5 view .LVU27
+ 137              	.LVL3:
+ 138              	.LBB23:
+ 139              	.LBI20:
+  97:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+ 140              		.loc 1 97 7 view .LVU28
+ 141              	.LBB22:
+ 142              		.loc 1 99 5 view .LVU29
+ 143              		.loc 1 99 5 is_stmt 0 view .LVU30
+ 144              	.LBE22:
+ 145              	.LBE23:
+  20:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _phase_inc[1] = CalcPhaseInc(_freq);
+ 146              		.loc 1 20 19 view .LVU31
+ 147 003e C0ED0C7A 		vstr.32	s15, [r0, #48]
+  21:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _pw = 0.5f;
+ 148              		.loc 1 21 5 is_stmt 1 view .LVU32
+ 149              	.LVL4:
+ 150              		.loc 1 99 5 view .LVU33
+  21:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _pw = 0.5f;
+ 151              		.loc 1 21 19 is_stmt 0 view .LVU34
+ 152 0042 C0ED0D7A 		vstr.32	s15, [r0, #52]
+  22:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _tresh = 1.0f;
+ 153              		.loc 1 22 5 is_stmt 1 view .LVU35
+  23:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     
+ 154              		.loc 1 23 5 view .LVU36
+  27:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _amp[i] = 0.5f;
+ 155              		.loc 1 27 5 view .LVU37
+ 156              	.LVL5:
+ 157              	.LBB24:
+  27:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _amp[i] = 0.5f;
+ 158              		.loc 1 27 23 view .LVU38
+  28:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _phase[i] = 0.0f;
+ 159              		.loc 1 28 9 view .LVU39
+  29:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _waveform[i] = WAVE_SIN;
+ 160              		.loc 1 29 9 view .LVU40
+  30:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _eoc[i] = true;
+ 161              		.loc 1 30 9 view .LVU41
+  31:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _eor[i] = true;
+ 162              		.loc 1 31 9 view .LVU42
+  32:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     }
+ 163              		.loc 1 32 9 view .LVU43
+  27:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _amp[i] = 0.5f;
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 6
+
+
+ 164              		.loc 1 27 5 view .LVU44
+  27:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _amp[i] = 0.5f;
+ 165              		.loc 1 27 23 view .LVU45
+  28:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _phase[i] = 0.0f;
+ 166              		.loc 1 28 9 view .LVU46
+  29:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _waveform[i] = WAVE_SIN;
+ 167              		.loc 1 29 9 view .LVU47
+  30:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _eoc[i] = true;
+ 168              		.loc 1 30 9 view .LVU48
+  31:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _eor[i] = true;
+ 169              		.loc 1 31 9 view .LVU49
+  32:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     }
+ 170              		.loc 1 32 9 view .LVU50
+  27:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _amp[i] = 0.5f;
+ 171              		.loc 1 27 5 view .LVU51
+  27:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _amp[i] = 0.5f;
+ 172              		.loc 1 27 23 view .LVU52
+ 173              	.LBE24:
+  35:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 174              		.loc 1 35 1 is_stmt 0 view .LVU53
+ 175 0046 7047     		bx	lr
+ 176              	.L6:
+ 177              		.align	2
+ 178              	.L5:
+ 179 0048 0000C842 		.word	1120403456
+ 180              		.cfi_endproc
+ 181              	.LFE4820:
+ 183              		.section	.text._ZN4Ramo7ProcessEv,"ax",%progbits
+ 184              		.align	1
+ 185              		.p2align 2,,3
+ 186              		.global	_ZN4Ramo7ProcessEv
+ 187              		.syntax unified
+ 188              		.thumb
+ 189              		.thumb_func
+ 190              		.fpu fpv5-d16
+ 192              	_ZN4Ramo7ProcessEv:
+ 193              	.LVL6:
+ 194              	.LFB4821:
+  38:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     float out[n], t[n], s[n];
+ 195              		.loc 1 38 1 is_stmt 1 view -0
+ 196              		.cfi_startproc
+ 197              		@ args = 0, pretend = 0, frame = 8
+ 198              		@ frame_needed = 0, uses_anonymous_args = 0
+  39:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for (int i = 0; i < n; i++)
+ 199              		.loc 1 39 5 view .LVU55
+  40:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 200              		.loc 1 40 5 view .LVU56
+ 201              	.LBB25:
+  40:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 202              		.loc 1 40 23 view .LVU57
+ 203              	.LBE25:
+  38:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     float out[n], t[n], s[n];
+ 204              		.loc 1 38 1 is_stmt 0 view .LVU58
+ 205 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 206              		.cfi_def_cfa_offset 24
+ 207              		.cfi_offset 4, -24
+ 208              		.cfi_offset 5, -20
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 7
+
+
+ 209              		.cfi_offset 6, -16
+ 210              		.cfi_offset 7, -12
+ 211              		.cfi_offset 8, -8
+ 212              		.cfi_offset 14, -4
+ 213 0004 2DED028B 		vpush.64	{d8}
+ 214              		.cfi_def_cfa_offset 32
+ 215              		.cfi_offset 80, -32
+ 216              		.cfi_offset 81, -28
+ 217 0008 82B0     		sub	sp, sp, #8
+ 218              		.cfi_def_cfa_offset 40
+  38:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     float out[n], t[n], s[n];
+ 219              		.loc 1 38 1 view .LVU59
+ 220 000a 0546     		mov	r5, r0
+ 221 000c 461E     		subs	r6, r0, #1
+ 222 000e 00F12804 		add	r4, r0, #40
+ 223 0012 6F46     		mov	r7, sp
+ 224              	.LVL7:
+ 225              	.L29:
+ 226              	.LBB30:
+  42:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+ 227              		.loc 1 42 9 is_stmt 1 view .LVU60
+ 228 0014 B046     		mov	r8, r6
+ 229 0016 16F8013F 		ldrb	r3, [r6, #1]!	@ zero_extendqisi2
+ 230 001a 032B     		cmp	r3, #3
+ 231 001c 00F2C780 		bhi	.L8
+ 232 0020 DFE803F0 		tbb	[pc, r3]
+ 233              	.L10:
+ 234 0024 97       		.byte	(.L13-.L10)/2
+ 235 0025 79       		.byte	(.L12-.L10)/2
+ 236 0026 27       		.byte	(.L11-.L10)/2
+ 237 0027 02       		.byte	(.L9-.L10)/2
+ 238              		.p2align 1
+ 239              	.L9:
+  64:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         if (_phase[i] > _c-0.05 && _phase[i] < 0.95-_c || _c==0)
+ 240              		.loc 1 64 9 view .LVU61
+  65:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+ 241              		.loc 1 65 9 view .LVU62
+  65:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+ 242              		.loc 1 65 25 is_stmt 0 view .LVU63
+ 243 0028 D5ED076A 		vldr.32	s13, [r5, #28]
+  65:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+ 244              		.loc 1 65 21 view .LVU64
+ 245 002c 94ED008A 		vldr.32	s16, [r4]
+  65:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+ 246              		.loc 1 65 25 view .LVU65
+ 247 0030 B7EEE64A 		vcvt.f64.f32	d4, s13
+  65:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+ 248              		.loc 1 65 21 view .LVU66
+ 249 0034 B7EEC85A 		vcvt.f64.f32	d5, s16
+  65:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+ 250              		.loc 1 65 27 view .LVU67
+ 251 0038 9FED5F7B 		vldr.64	d7, .L43
+ 252 003c 34EE477B 		vsub.f64	d7, d4, d7
+  65:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+ 253              		.loc 1 65 9 view .LVU68
+ 254 0040 B4EEC75B 		vcmpe.f64	d5, d7
+ 255 0044 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 8
+
+
+ 256 0048 40F38E80 		ble	.L19
+  65:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+ 257              		.loc 1 65 52 discriminator 1 view .LVU69
+ 258 004c 9FED5C7B 		vldr.64	d7, .L43+8
+ 259 0050 37EE444B 		vsub.f64	d4, d7, d4
+  65:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+ 260              		.loc 1 65 33 discriminator 1 view .LVU70
+ 261 0054 B4EEC45B 		vcmpe.f64	d5, d4
+ 262 0058 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 263 005c 40F18480 		bpl	.L19
+ 264              	.L21:
+  67:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }else{
+ 265              		.loc 1 67 13 is_stmt 1 view .LVU71
+  67:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }else{
+ 266              		.loc 1 67 27 is_stmt 0 view .LVU72
+ 267 0060 B0EE007A 		vmov.f32	s14, #2.0e+0
+ 268 0064 FFEE007A 		vmov.f32	s15, #-1.0e+0
+ 269 0068 E8EE077A 		vfma.f32	s15, s16, s14
+  67:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }else{
+ 270              		.loc 1 67 20 view .LVU73
+ 271 006c C7ED007A 		vstr.32	s15, [r7]
+ 272 0070 10E0     		b	.L14
+ 273              	.L11:
+  73:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             out[i] = _phase[i] < _pw ? (1.0f) : -1.0f;
+ 274              		.loc 1 73 9 is_stmt 1 view .LVU74
+  74:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+ 275              		.loc 1 74 13 view .LVU75
+  74:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+ 276              		.loc 1 74 30 is_stmt 0 view .LVU76
+ 277 0072 94ED008A 		vldr.32	s16, [r4]
+  74:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+ 278              		.loc 1 74 38 view .LVU77
+ 279 0076 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 280 007a D5ED056A 		vldr.32	s13, [r5, #20]
+ 281 007e BFEE007A 		vmov.f32	s14, #-1.0e+0
+ 282 0082 B4EEE68A 		vcmpe.f32	s16, s13
+ 283 0086 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 284 008a 58BF     		it	pl
+ 285 008c F0EE477A 		vmovpl.f32	s15, s14
+  74:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+ 286              		.loc 1 74 20 view .LVU78
+ 287 0090 C7ED007A 		vstr.32	s15, [r7]
+  75:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         default:
+ 288              		.loc 1 75 13 is_stmt 1 view .LVU79
+ 289              	.L14:
+  80:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 290              		.loc 1 80 9 view .LVU80
+  80:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 291              		.loc 1 80 34 is_stmt 0 view .LVU81
+ 292 0094 94ED027A 		vldr.32	s14, [r4, #8]
+  82:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+ 293              		.loc 1 82 9 view .LVU82
+ 294 0098 F7EE006A 		vmov.f32	s13, #1.0e+0
+  80:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 295              		.loc 1 80 19 view .LVU83
+ 296 009c 77EE087A 		vadd.f32	s15, s14, s16
+  82:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 9
+
+
+ 297              		.loc 1 82 9 view .LVU84
+ 298 00a0 F4EEE67A 		vcmpe.f32	s15, s13
+  80:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 299              		.loc 1 80 19 view .LVU85
+ 300 00a4 C4ED007A 		vstr.32	s15, [r4]
+  82:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+ 301              		.loc 1 82 9 is_stmt 1 view .LVU86
+ 302 00a8 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 303 00ac 6DDD     		ble	.L40
+  84:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             _eoc[i] = true;
+ 304              		.loc 1 84 13 view .LVU87
+  84:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             _eoc[i] = true;
+ 305              		.loc 1 84 23 is_stmt 0 view .LVU88
+ 306 00ae 77EEE67A 		vsub.f32	s15, s15, s13
+  85:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }
+ 307              		.loc 1 85 21 view .LVU89
+ 308 00b2 0123     		movs	r3, #1
+  84:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             _eoc[i] = true;
+ 309              		.loc 1 84 23 view .LVU90
+ 310 00b4 C4ED007A 		vstr.32	s15, [r4]
+  85:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }
+ 311              		.loc 1 85 13 is_stmt 1 view .LVU91
+  85:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }
+ 312              		.loc 1 85 21 is_stmt 0 view .LVU92
+ 313 00b8 86F83A30 		strb	r3, [r6, #58]
+ 314              	.L26:
+  91:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     }
+ 315              		.loc 1 91 9 is_stmt 1 view .LVU93
+  91:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     }
+ 316              		.loc 1 91 30 is_stmt 0 view .LVU94
+ 317 00bc 37EEC77A 		vsub.f32	s14, s15, s14
+  91:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     }
+ 318              		.loc 1 91 53 view .LVU95
+ 319 00c0 F6EE006A 		vmov.f32	s13, #5.0e-1
+ 320 00c4 B4EEE67A 		vcmpe.f32	s14, s13
+ 321 00c8 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 322 00cc 5BD5     		bpl	.L41
+  91:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     }
+ 323              		.loc 1 91 53 discriminator 1 view .LVU96
+ 324 00ce F4EEE67A 		vcmpe.f32	s15, s13
+ 325 00d2 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 326 00d6 ACBF     		ite	ge
+ 327 00d8 0123     		movge	r3, #1
+ 328 00da 0023     		movlt	r3, #0
+ 329              	.L27:
+  40:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 330              		.loc 1 40 23 discriminator 6 view .LVU97
+ 331 00dc 4545     		cmp	r5, r8
+ 332 00de 04F10404 		add	r4, r4, #4
+ 333 00e2 07F10407 		add	r7, r7, #4
+  91:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     }
+ 334              		.loc 1 91 17 discriminator 6 view .LVU98
+ 335 00e6 86F83830 		strb	r3, [r6, #56]
+  40:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 336              		.loc 1 40 5 is_stmt 1 discriminator 6 view .LVU99
+ 337              	.LVL8:
+  40:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 10
+
+
+ 338              		.loc 1 40 23 discriminator 6 view .LVU100
+ 339 00ea 93D1     		bne	.L29
+ 340              	.LBE30:
+  94:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 341              		.loc 1 94 5 view .LVU101
+  94:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 342              		.loc 1 94 47 is_stmt 0 view .LVU102
+ 343 00ec 95ED020A 		vldr.32	s0, [r5, #8]
+ 344 00f0 DDED017A 		vldr.32	s15, [sp, #4]
+  94:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 345              		.loc 1 94 38 view .LVU103
+ 346 00f4 DDED006A 		vldr.32	s13, [sp]
+  94:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 347              		.loc 1 94 47 view .LVU104
+ 348 00f8 67EE807A 		vmul.f32	s15, s15, s0
+  94:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 349              		.loc 1 94 38 view .LVU105
+ 350 00fc 95ED017A 		vldr.32	s14, [r5, #4]
+  94:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 351              		.loc 1 94 56 view .LVU106
+ 352 0100 95ED040A 		vldr.32	s0, [r5, #16]
+  94:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 353              		.loc 1 94 38 view .LVU107
+ 354 0104 E6EE877A 		vfma.f32	s15, s13, s14
+  95:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 355              		.loc 1 95 1 view .LVU108
+ 356 0108 27EE800A 		vmul.f32	s0, s15, s0
+ 357 010c 02B0     		add	sp, sp, #8
+ 358              		.cfi_remember_state
+ 359              		.cfi_def_cfa_offset 32
+ 360              		@ sp needed
+ 361 010e BDEC028B 		vldm	sp!, {d8}
+ 362              		.cfi_restore 80
+ 363              		.cfi_restore 81
+ 364              		.cfi_def_cfa_offset 24
+ 365 0112 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 366              	.LVL9:
+ 367              	.L12:
+ 368              		.cfi_restore_state
+ 369              	.LBB31:
+  47:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             t[i] = abs(-1.0f + (2.0f * _phase[i]));
+ 370              		.loc 1 47 9 is_stmt 1 view .LVU109
+  48:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             t[i] = 2 *  (t[i] - 0.5f); 
+ 371              		.loc 1 48 13 view .LVU110
+  48:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             t[i] = 2 *  (t[i] - 0.5f); 
+ 372              		.loc 1 48 23 is_stmt 0 view .LVU111
+ 373 0116 F0EE006A 		vmov.f32	s13, #2.0e+0
+  48:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             t[i] = 2 *  (t[i] - 0.5f); 
+ 374              		.loc 1 48 48 view .LVU112
+ 375 011a 94ED008A 		vldr.32	s16, [r4]
+  48:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             t[i] = 2 *  (t[i] - 0.5f); 
+ 376              		.loc 1 48 23 view .LVU113
+ 377 011e FFEE007A 		vmov.f32	s15, #-1.0e+0
+  50:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             {
+ 378              		.loc 1 50 24 view .LVU114
+ 379 0122 95ED067A 		vldr.32	s14, [r5, #24]
+  49:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             if (t[i] > _tresh)
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 11
+
+
+ 380              		.loc 1 49 31 view .LVU115
+ 381 0126 B6EE006A 		vmov.f32	s12, #5.0e-1
+  48:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             t[i] = 2 *  (t[i] - 0.5f); 
+ 382              		.loc 1 48 23 view .LVU116
+ 383 012a E8EE267A 		vfma.f32	s15, s16, s13
+ 384              	.LVL10:
+ 385              	.LBB26:
+ 386              	.LBI26:
+ 387              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+   1:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // -*- C++ -*- C library enhancements header.
+   2:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+   3:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // Copyright (C) 2016-2020 Free Software Foundation, Inc.
+   4:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** //
+   5:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // This file is part of the GNU ISO C++ Library.  This library is free
+   6:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // software; you can redistribute it and/or modify it under the
+   7:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // terms of the GNU General Public License as published by the
+   8:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // Free Software Foundation; either version 3, or (at your option)
+   9:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // any later version.
+  10:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  11:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // This library is distributed in the hope that it will be useful,
+  12:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // GNU General Public License for more details.
+  15:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  16:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // Under Section 7 of GPL version 3, you are granted additional
+  17:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // permissions described in the GCC Runtime Library Exception, version
+  18:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // 3.1, as published by the Free Software Foundation.
+  19:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  20:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // You should have received a copy of the GNU General Public License and
+  21:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // a copy of the GCC Runtime Library Exception along with this program;
+  22:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  23:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // <http://www.gnu.org/licenses/>.
+  24:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  25:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** /** @file include/bits/std_abs.h
+  26:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****  *  This is an internal header file, included by other library headers.
+  27:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****  *  Do not attempt to use it directly. @headername{cmath, cstdlib}
+  28:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****  */
+  29:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  30:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #ifndef _GLIBCXX_BITS_STD_ABS_H
+  31:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #define _GLIBCXX_BITS_STD_ABS_H
+  32:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  33:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #pragma GCC system_header
+  34:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  35:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #include <bits/c++config.h>
+  36:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  37:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #define _GLIBCXX_INCLUDE_NEXT_C_HEADERS
+  38:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #include_next <stdlib.h>
+  39:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #ifdef __CORRECT_ISO_CPP_MATH_H_PROTO
+  40:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** # include_next <math.h>
+  41:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #endif
+  42:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #undef _GLIBCXX_INCLUDE_NEXT_C_HEADERS
+  43:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  44:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #undef abs
+  45:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  46:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** extern "C++"
+  47:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** {
+  48:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** namespace std _GLIBCXX_VISIBILITY(default)
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 12
+
+
+  49:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** {
+  50:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
+  51:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  52:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   using ::abs;
+  53:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  54:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #ifndef __CORRECT_ISO_CPP_STDLIB_H_PROTO
+  55:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   inline long
+  56:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   abs(long __i) { return __builtin_labs(__i); }
+  57:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #endif
+  58:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  59:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #ifdef _GLIBCXX_USE_LONG_LONG
+  60:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   inline long long
+  61:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   abs(long long __x) { return __builtin_llabs (__x); }
+  62:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #endif
+  63:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  64:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // _GLIBCXX_RESOLVE_LIB_DEFECTS
+  65:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // 2192. Validity and return type of std::abs(0u) is unclear
+  66:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // 2294. <cstdlib> should declare abs(double)
+  67:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** // 2735. std::abs(short), std::abs(signed char) and others should return int
+  68:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  69:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
+  70:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   inline _GLIBCXX_CONSTEXPR double
+  71:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   abs(double __x)
+  72:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   { return __builtin_fabs(__x); }
+  73:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** 
+  74:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   inline _GLIBCXX_CONSTEXPR float
+  75:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   abs(float __x)
+ 388              		.loc 2 75 3 is_stmt 1 view .LVU117
+ 389              	.LBB27:
+  76:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h ****   { return __builtin_fabsf(__x); }
+ 390              		.loc 2 76 5 view .LVU118
+ 391              		.loc 2 76 5 is_stmt 0 view .LVU119
+ 392              	.LBE27:
+ 393              	.LBE26:
+  49:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             if (t[i] > _tresh)
+ 394              		.loc 1 49 13 is_stmt 1 view .LVU120
+ 395              	.LBB29:
+ 396              	.LBB28:
+ 397              		.loc 2 76 31 is_stmt 0 view .LVU121
+ 398 012e F0EEE77A 		vabs.f32	s15, s15
+ 399              	.LBE28:
+ 400              	.LBE29:
+  49:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             if (t[i] > _tresh)
+ 401              		.loc 1 49 31 view .LVU122
+ 402 0132 77EEC67A 		vsub.f32	s15, s15, s12
+  49:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             if (t[i] > _tresh)
+ 403              		.loc 1 49 22 view .LVU123
+ 404 0136 77EEA77A 		vadd.f32	s15, s15, s15
+  50:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             {
+ 405              		.loc 1 50 13 is_stmt 1 view .LVU124
+ 406 013a F4EEC77A 		vcmpe.f32	s15, s14
+ 407 013e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 408 0142 26DD     		ble	.L38
+  52:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             }
+ 409              		.loc 1 52 17 view .LVU125
+  52:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             }
+ 410              		.loc 1 52 34 is_stmt 0 view .LVU126
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 13
+
+
+ 411 0144 D7EE267A 		vfnms.f32	s15, s14, s13
+  52:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             }
+ 412              		.loc 1 52 51 view .LVU127
+ 413 0148 C7EE876A 		vdiv.f32	s13, s15, s14
+  52:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             }
+ 414              		.loc 1 52 24 view .LVU128
+ 415 014c C7ED006A 		vstr.32	s13, [r7]
+ 416 0150 A0E7     		b	.L14
+ 417              	.L13:
+  44:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             out[i] = sinf(_phase[i] * TWOPI_F);
+ 418              		.loc 1 44 9 is_stmt 1 view .LVU129
+  45:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+ 419              		.loc 1 45 13 view .LVU130
+  45:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+ 420              		.loc 1 45 35 is_stmt 0 view .LVU131
+ 421 0152 94ED008A 		vldr.32	s16, [r4]
+  45:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+ 422              		.loc 1 45 26 view .LVU132
+ 423 0156 9FED1C0A 		vldr.32	s0, .L43+16
+ 424 015a 28EE000A 		vmul.f32	s0, s16, s0
+ 425 015e FFF7FEFF 		bl	sinf
+ 426              	.LVL11:
+  45:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+ 427              		.loc 1 45 20 view .LVU133
+ 428 0162 87ED000A 		vstr.32	s0, [r7]
+  46:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         case WAVE_TRI:
+ 429              		.loc 1 46 13 is_stmt 1 view .LVU134
+ 430 0166 95E7     		b	.L14
+ 431              	.L19:
+  65:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         {
+ 432              		.loc 1 65 56 is_stmt 0 discriminator 3 view .LVU135
+ 433 0168 F5EE406A 		vcmp.f32	s13, #0
+ 434 016c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 435 0170 3FF476AF 		beq	.L21
+  69:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }
+ 436              		.loc 1 69 13 is_stmt 1 view .LVU136
+  69:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }
+ 437              		.loc 1 69 26 is_stmt 0 view .LVU137
+ 438 0174 B0EE007A 		vmov.f32	s14, #2.0e+0
+ 439 0178 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 440 017c E8EE477A 		vfms.f32	s15, s16, s14
+  69:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }
+ 441              		.loc 1 69 20 view .LVU138
+ 442 0180 C7ED007A 		vstr.32	s15, [r7]
+ 443 0184 86E7     		b	.L14
+ 444              	.L41:
+  91:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     }
+ 445              		.loc 1 91 53 view .LVU139
+ 446 0186 0023     		movs	r3, #0
+ 447 0188 A8E7     		b	.L27
+ 448              	.L40:
+  89:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }
+ 449              		.loc 1 89 13 is_stmt 1 view .LVU140
+  89:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }
+ 450              		.loc 1 89 21 is_stmt 0 view .LVU141
+ 451 018a 0023     		movs	r3, #0
+ 452 018c 86F83A30 		strb	r3, [r6, #58]
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 14
+
+
+ 453 0190 94E7     		b	.L26
+ 454              	.L38:
+  54:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             {
+ 455              		.loc 1 54 18 is_stmt 1 view .LVU142
+  56:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             }
+ 456              		.loc 1 56 17 view .LVU143
+  54:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             {
+ 457              		.loc 1 54 29 is_stmt 0 view .LVU144
+ 458 0192 B1EE476A 		vneg.f32	s12, s14
+  54:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             {
+ 459              		.loc 1 54 18 view .LVU145
+ 460 0196 F4EEC67A 		vcmpe.f32	s15, s12
+ 461 019a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+  56:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             }
+ 462              		.loc 1 56 34 view .LVU146
+ 463 019e 48BF     		it	mi
+ 464 01a0 D6EE267A 		vfnmsmi.f32	s15, s12, s13
+  60:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             }
+ 465              		.loc 1 60 17 is_stmt 1 view .LVU147
+  60:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             }
+ 466              		.loc 1 60 35 is_stmt 0 view .LVU148
+ 467 01a4 C7EE876A 		vdiv.f32	s13, s15, s14
+  60:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             }
+ 468              		.loc 1 60 24 view .LVU149
+ 469 01a8 C7ED006A 		vstr.32	s13, [r7]
+ 470 01ac 72E7     		b	.L14
+ 471              	.L8:
+  76:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             out[i] = 0.0f;
+ 472              		.loc 1 76 9 is_stmt 1 view .LVU150
+  77:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+ 473              		.loc 1 77 13 view .LVU151
+  77:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+ 474              		.loc 1 77 20 is_stmt 0 view .LVU152
+ 475 01ae 0023     		movs	r3, #0
+  45:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+ 476              		.loc 1 45 35 view .LVU153
+ 477 01b0 94ED008A 		vldr.32	s16, [r4]
+  77:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****             break;
+ 478              		.loc 1 77 20 view .LVU154
+ 479 01b4 3B60     		str	r3, [r7]	@ float
+  78:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         }
+ 480              		.loc 1 78 13 is_stmt 1 view .LVU155
+ 481 01b6 6DE7     		b	.L14
+ 482              	.L44:
+ 483              		.align	3
+ 484              	.L43:
+ 485 01b8 9A999999 		.word	-1717986918
+ 486 01bc 9999A93F 		.word	1068079513
+ 487 01c0 66666666 		.word	1717986918
+ 488 01c4 6666EE3F 		.word	1072588390
+ 489 01c8 DB0FC940 		.word	1086918619
+ 490              	.LBE31:
+ 491              		.cfi_endproc
+ 492              	.LFE4821:
+ 494              		.section	.text._ZN4Ramo12CalcPhaseIncEf,"ax",%progbits
+ 495              		.align	1
+ 496              		.p2align 2,,3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 15
+
+
+ 497              		.global	_ZN4Ramo12CalcPhaseIncEf
+ 498              		.syntax unified
+ 499              		.thumb
+ 500              		.thumb_func
+ 501              		.fpu fpv5-d16
+ 503              	_ZN4Ramo12CalcPhaseIncEf:
+ 504              	.LVL12:
+ 505              	.LFB4822:
+  98:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     return f * _sr_recip;
+ 506              		.loc 1 98 1 view -0
+ 507              		.cfi_startproc
+ 508              		@ args = 0, pretend = 0, frame = 0
+ 509              		@ frame_needed = 0, uses_anonymous_args = 0
+ 510              		@ link register save eliminated.
+ 511              		.loc 1 99 5 view .LVU157
+ 512              		.loc 1 99 16 is_stmt 0 view .LVU158
+ 513 0000 D0ED097A 		vldr.32	s15, [r0, #36]
+ 100:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 514              		.loc 1 100 1 view .LVU159
+ 515 0004 20EE270A 		vmul.f32	s0, s0, s15
+ 516              	.LVL13:
+ 517              		.loc 1 100 1 view .LVU160
+ 518 0008 7047     		bx	lr
+ 519              		.cfi_endproc
+ 520              	.LFE4822:
+ 522 000a 00BF     		.section	.text._ZN4Ramo12SetWaveformsEPh,"ax",%progbits
+ 523              		.align	1
+ 524              		.p2align 2,,3
+ 525              		.global	_ZN4Ramo12SetWaveformsEPh
+ 526              		.syntax unified
+ 527              		.thumb
+ 528              		.thumb_func
+ 529              		.fpu fpv5-d16
+ 531              	_ZN4Ramo12SetWaveformsEPh:
+ 532              	.LVL14:
+ 533              	.LFB4823:
+ 101:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 102:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** void Ramo::SetWaveforms(uint8_t wf[])
+ 103:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {   
+ 534              		.loc 1 103 1 is_stmt 1 view -0
+ 535              		.cfi_startproc
+ 536              		@ args = 0, pretend = 0, frame = 0
+ 537              		@ frame_needed = 0, uses_anonymous_args = 0
+ 538              		@ link register save eliminated.
+ 104:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for(int i = 0; i < n; i++)
+ 539              		.loc 1 104 5 view .LVU162
+ 540              	.LBB32:
+ 541              		.loc 1 104 22 view .LVU163
+ 105:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 106:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _waveform[i] = wf[i] < WAVE_LAST ? wf[i] : WAVE_SIN;
+ 542              		.loc 1 106 9 view .LVU164
+ 543              		.loc 1 106 28 is_stmt 0 view .LVU165
+ 544 0000 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
+ 545              		.loc 1 106 22 view .LVU166
+ 546 0002 042B     		cmp	r3, #4
+ 547 0004 28BF     		it	cs
+ 548 0006 0023     		movcs	r3, #0
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 16
+
+
+ 549 0008 0370     		strb	r3, [r0]
+ 104:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for(int i = 0; i < n; i++)
+ 550              		.loc 1 104 5 is_stmt 1 view .LVU167
+ 551              	.LVL15:
+ 104:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for(int i = 0; i < n; i++)
+ 552              		.loc 1 104 22 view .LVU168
+ 553              		.loc 1 106 9 view .LVU169
+ 554              		.loc 1 106 28 is_stmt 0 view .LVU170
+ 555 000a 4B78     		ldrb	r3, [r1, #1]	@ zero_extendqisi2
+ 556              		.loc 1 106 22 view .LVU171
+ 557 000c 042B     		cmp	r3, #4
+ 558 000e 28BF     		it	cs
+ 559 0010 0023     		movcs	r3, #0
+ 560 0012 4370     		strb	r3, [r0, #1]
+ 104:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for(int i = 0; i < n; i++)
+ 561              		.loc 1 104 5 is_stmt 1 view .LVU172
+ 562              	.LVL16:
+ 104:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for(int i = 0; i < n; i++)
+ 563              		.loc 1 104 22 view .LVU173
+ 564              	.LBE32:
+ 107:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     }
+ 108:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     
+ 109:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 565              		.loc 1 109 1 is_stmt 0 view .LVU174
+ 566 0014 7047     		bx	lr
+ 567              		.cfi_endproc
+ 568              	.LFE4823:
+ 570 0016 00BF     		.section	.text._ZN4Ramo7SetFreqEf,"ax",%progbits
+ 571              		.align	1
+ 572              		.p2align 2,,3
+ 573              		.global	_ZN4Ramo7SetFreqEf
+ 574              		.syntax unified
+ 575              		.thumb
+ 576              		.thumb_func
+ 577              		.fpu fpv5-d16
+ 579              	_ZN4Ramo7SetFreqEf:
+ 580              	.LVL17:
+ 581              	.LFB4824:
+ 110:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 111:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** void Ramo::SetFreq( const float f)
+ 112:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+ 582              		.loc 1 112 1 is_stmt 1 view -0
+ 583              		.cfi_startproc
+ 584              		@ args = 0, pretend = 0, frame = 0
+ 585              		@ frame_needed = 0, uses_anonymous_args = 0
+ 586              		@ link register save eliminated.
+ 113:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _freq = f;
+ 587              		.loc 1 113 5 view .LVU176
+ 588              	.LBB33:
+ 589              	.LBB34:
+ 590              	.LBB35:
+  99:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 591              		.loc 1 99 16 is_stmt 0 view .LVU177
+ 592 0000 D0ED097A 		vldr.32	s15, [r0, #36]
+ 593              	.LBE35:
+ 594              	.LBE34:
+ 595              	.LBE33:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 17
+
+
+ 596              		.loc 1 113 11 view .LVU178
+ 597 0004 80ED030A 		vstr.32	s0, [r0, #12]
+ 114:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for (int i = 0; i < n; i++)
+ 598              		.loc 1 114 5 is_stmt 1 view .LVU179
+ 599              	.LVL18:
+ 600              	.LBB40:
+ 601              		.loc 1 114 23 view .LVU180
+ 115:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 116:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _phase_inc[i] = CalcPhaseInc(f);
+ 602              		.loc 1 116 9 view .LVU181
+ 603              	.LBB38:
+ 604              	.LBI34:
+  97:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+ 605              		.loc 1 97 7 view .LVU182
+ 606              	.LBB36:
+  99:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 607              		.loc 1 99 5 view .LVU183
+  99:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 608              		.loc 1 99 16 is_stmt 0 view .LVU184
+ 609 0008 20EE270A 		vmul.f32	s0, s0, s15
+ 610              	.LVL19:
+  99:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 611              		.loc 1 99 16 view .LVU185
+ 612              	.LBE36:
+ 613              	.LBE38:
+ 614              		.loc 1 116 23 view .LVU186
+ 615 000c 80ED0C0A 		vstr.32	s0, [r0, #48]
+ 114:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 616              		.loc 1 114 5 is_stmt 1 view .LVU187
+ 617              	.LVL20:
+ 114:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 618              		.loc 1 114 23 view .LVU188
+ 619              		.loc 1 116 9 view .LVU189
+ 620              	.LBB39:
+  97:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+ 621              		.loc 1 97 7 view .LVU190
+ 622              	.LBB37:
+  99:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 623              		.loc 1 99 5 view .LVU191
+  99:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 624              		.loc 1 99 5 is_stmt 0 view .LVU192
+ 625              	.LBE37:
+ 626              	.LBE39:
+ 627              		.loc 1 116 23 view .LVU193
+ 628 0010 80ED0D0A 		vstr.32	s0, [r0, #52]
+ 114:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 629              		.loc 1 114 5 is_stmt 1 view .LVU194
+ 630              	.LVL21:
+ 114:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 631              		.loc 1 114 23 view .LVU195
+ 632              	.LBE40:
+ 117:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     }
+ 118:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 633              		.loc 1 118 1 is_stmt 0 view .LVU196
+ 634 0014 7047     		bx	lr
+ 635              		.cfi_endproc
+ 636              	.LFE4824:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 18
+
+
+ 638 0016 00BF     		.section	.text._ZN4Ramo9SetDetuneEPf,"ax",%progbits
+ 639              		.align	1
+ 640              		.p2align 2,,3
+ 641              		.global	_ZN4Ramo9SetDetuneEPf
+ 642              		.syntax unified
+ 643              		.thumb
+ 644              		.thumb_func
+ 645              		.fpu fpv5-d16
+ 647              	_ZN4Ramo9SetDetuneEPf:
+ 648              	.LVL22:
+ 649              	.LFB4825:
+ 119:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 120:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** void Ramo::SetDetune(float ef[])
+ 121:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+ 650              		.loc 1 121 1 is_stmt 1 view -0
+ 651              		.cfi_startproc
+ 652              		@ args = 0, pretend = 0, frame = 0
+ 653              		@ frame_needed = 0, uses_anonymous_args = 0
+ 654              		@ link register save eliminated.
+ 122:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for (int i = 0; i < n; i++)
+ 655              		.loc 1 122 5 view .LVU198
+ 656              	.LBB41:
+ 657              		.loc 1 122 23 view .LVU199
+ 123:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 124:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _phase_inc[i] = CalcPhaseInc(_freq) * ef[i];
+ 658              		.loc 1 124 9 view .LVU200
+ 659              	.LBB42:
+ 660              	.LBI42:
+  97:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+ 661              		.loc 1 97 7 view .LVU201
+ 662              	.LBB43:
+  99:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 663              		.loc 1 99 5 view .LVU202
+  99:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 664              		.loc 1 99 16 is_stmt 0 view .LVU203
+ 665 0000 D0ED037A 		vldr.32	s15, [r0, #12]
+ 666 0004 D0ED096A 		vldr.32	s13, [r0, #36]
+ 667              	.LBE43:
+ 668              	.LBE42:
+ 669              		.loc 1 124 45 view .LVU204
+ 670 0008 91ED007A 		vldr.32	s14, [r1]
+ 671              	.LBB46:
+ 672              	.LBB44:
+  99:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 673              		.loc 1 99 16 view .LVU205
+ 674 000c 67EEA67A 		vmul.f32	s15, s15, s13
+ 675              	.LVL23:
+  99:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 676              		.loc 1 99 16 view .LVU206
+ 677              	.LBE44:
+ 678              	.LBE46:
+ 679              		.loc 1 124 45 view .LVU207
+ 680 0010 27EE277A 		vmul.f32	s14, s14, s15
+ 681              		.loc 1 124 23 view .LVU208
+ 682 0014 80ED0C7A 		vstr.32	s14, [r0, #48]
+ 122:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 683              		.loc 1 122 5 is_stmt 1 view .LVU209
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 19
+
+
+ 684              	.LVL24:
+ 122:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 685              		.loc 1 122 23 view .LVU210
+ 686              		.loc 1 124 9 view .LVU211
+ 687              	.LBB47:
+  97:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+ 688              		.loc 1 97 7 view .LVU212
+ 689              	.LBB45:
+  99:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 690              		.loc 1 99 5 view .LVU213
+  99:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 691              		.loc 1 99 5 is_stmt 0 view .LVU214
+ 692              	.LBE45:
+ 693              	.LBE47:
+ 694              		.loc 1 124 45 view .LVU215
+ 695 0018 91ED017A 		vldr.32	s14, [r1, #4]
+ 696 001c 67EE277A 		vmul.f32	s15, s14, s15
+ 697              		.loc 1 124 23 view .LVU216
+ 698 0020 C0ED0D7A 		vstr.32	s15, [r0, #52]
+ 122:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 699              		.loc 1 122 5 is_stmt 1 view .LVU217
+ 700              	.LVL25:
+ 122:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 701              		.loc 1 122 23 view .LVU218
+ 702              	.LBE41:
+ 125:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     }
+ 126:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 703              		.loc 1 126 1 is_stmt 0 view .LVU219
+ 704 0024 7047     		bx	lr
+ 705              		.cfi_endproc
+ 706              	.LFE4825:
+ 708 0026 00BF     		.section	.text._ZN4Ramo6SetAmpEPf,"ax",%progbits
+ 709              		.align	1
+ 710              		.p2align 2,,3
+ 711              		.global	_ZN4Ramo6SetAmpEPf
+ 712              		.syntax unified
+ 713              		.thumb
+ 714              		.thumb_func
+ 715              		.fpu fpv5-d16
+ 717              	_ZN4Ramo6SetAmpEPf:
+ 718              	.LVL26:
+ 719              	.LFB4826:
+ 127:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 128:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 129:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 130:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 131:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** void Ramo::SetAmp(float a[])
+ 132:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+ 720              		.loc 1 132 1 is_stmt 1 view -0
+ 721              		.cfi_startproc
+ 722              		@ args = 0, pretend = 0, frame = 0
+ 723              		@ frame_needed = 0, uses_anonymous_args = 0
+ 724              		@ link register save eliminated.
+ 133:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for (int i = 0; i < n; i++)
+ 725              		.loc 1 133 5 view .LVU221
+ 726              	.LBB48:
+ 727              		.loc 1 133 23 view .LVU222
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 20
+
+
+ 134:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     {
+ 135:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****         _amp[i] = a[i];
+ 728              		.loc 1 135 9 view .LVU223
+ 729              		.loc 1 135 22 is_stmt 0 view .LVU224
+ 730 0000 0B68     		ldr	r3, [r1]	@ float
+ 731              		.loc 1 135 17 view .LVU225
+ 732 0002 4360     		str	r3, [r0, #4]	@ float
+ 133:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for (int i = 0; i < n; i++)
+ 733              		.loc 1 133 5 is_stmt 1 view .LVU226
+ 734              	.LVL27:
+ 133:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for (int i = 0; i < n; i++)
+ 735              		.loc 1 133 23 view .LVU227
+ 736              		.loc 1 135 9 view .LVU228
+ 737              		.loc 1 135 22 is_stmt 0 view .LVU229
+ 738 0004 4B68     		ldr	r3, [r1, #4]	@ float
+ 739              		.loc 1 135 17 view .LVU230
+ 740 0006 8360     		str	r3, [r0, #8]	@ float
+ 133:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for (int i = 0; i < n; i++)
+ 741              		.loc 1 133 5 is_stmt 1 view .LVU231
+ 742              	.LVL28:
+ 133:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     for (int i = 0; i < n; i++)
+ 743              		.loc 1 133 23 view .LVU232
+ 744              	.LBE48:
+ 136:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     }
+ 137:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 745              		.loc 1 137 1 is_stmt 0 view .LVU233
+ 746 0008 7047     		bx	lr
+ 747              		.cfi_endproc
+ 748              	.LFE4826:
+ 750 000a 00BF     		.section	.text._ZN4Ramo7SetGainEf,"ax",%progbits
+ 751              		.align	1
+ 752              		.p2align 2,,3
+ 753              		.global	_ZN4Ramo7SetGainEf
+ 754              		.syntax unified
+ 755              		.thumb
+ 756              		.thumb_func
+ 757              		.fpu fpv5-d16
+ 759              	_ZN4Ramo7SetGainEf:
+ 760              	.LVL29:
+ 761              	.LFB4827:
+ 138:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 139:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** void Ramo::SetGain(float g)
+ 140:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+ 762              		.loc 1 140 1 is_stmt 1 view -0
+ 763              		.cfi_startproc
+ 764              		@ args = 0, pretend = 0, frame = 0
+ 765              		@ frame_needed = 0, uses_anonymous_args = 0
+ 766              		@ link register save eliminated.
+ 141:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _gain = g;
+ 767              		.loc 1 141 5 view .LVU235
+ 768              		.loc 1 141 11 is_stmt 0 view .LVU236
+ 769 0000 80ED040A 		vstr.32	s0, [r0, #16]
+ 142:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 770              		.loc 1 142 1 view .LVU237
+ 771 0004 7047     		bx	lr
+ 772              		.cfi_endproc
+ 773              	.LFE4827:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 21
+
+
+ 775 0006 00BF     		.section	.text._ZN4Ramo8SetShapeEf,"ax",%progbits
+ 776              		.align	1
+ 777              		.p2align 2,,3
+ 778              		.global	_ZN4Ramo8SetShapeEf
+ 779              		.syntax unified
+ 780              		.thumb
+ 781              		.thumb_func
+ 782              		.fpu fpv5-d16
+ 784              	_ZN4Ramo8SetShapeEf:
+ 785              	.LVL30:
+ 786              	.LFB4828:
+ 143:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** 
+ 144:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** void Ramo::SetShape(float s)
+ 145:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** {
+ 787              		.loc 1 145 1 is_stmt 1 view -0
+ 788              		.cfi_startproc
+ 789              		@ args = 0, pretend = 0, frame = 0
+ 790              		@ frame_needed = 0, uses_anonymous_args = 0
+ 791              		@ link register save eliminated.
+ 146:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
+ 792              		.loc 1 146 5 view .LVU239
+ 793              		.loc 1 146 23 is_stmt 0 view .LVU240
+ 794 0000 B7EEC04A 		vcvt.f64.f32	d4, s0
+ 147:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _pw =  0.5f + s * 0.35f;
+ 795              		.loc 1 147 17 view .LVU241
+ 796 0004 DFED103A 		vldr.32	s7, .L56+16
+ 797 0008 F6EE006A 		vmov.f32	s13, #5.0e-1
+ 148:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _c = s* 0.25;
+ 798              		.loc 1 148 11 view .LVU242
+ 799 000c B5EE006A 		vmov.f32	s12, #2.5e-1
+ 146:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
+ 800              		.loc 1 146 21 view .LVU243
+ 801 0010 9FED095B 		vldr.64	d5, .L56
+ 802 0014 9FED0A7B 		vldr.64	d7, .L56+8
+ 147:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _pw =  0.5f + s * 0.35f;
+ 803              		.loc 1 147 17 view .LVU244
+ 804 0018 E0EE236A 		vfma.f32	s13, s0, s7
+ 805              		.loc 1 148 11 view .LVU245
+ 806 001c 20EE060A 		vmul.f32	s0, s0, s12
+ 807              	.LVL31:
+ 146:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
+ 808              		.loc 1 146 21 view .LVU246
+ 809 0020 A4EE057B 		vfma.f64	d7, d4, d5
+ 810              		.loc 1 148 8 view .LVU247
+ 811 0024 80ED070A 		vstr.32	s0, [r0, #28]
+ 147:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _pw =  0.5f + s * 0.35f;
+ 812              		.loc 1 147 9 view .LVU248
+ 813 0028 C0ED056A 		vstr.32	s13, [r0, #20]
+ 146:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
+ 814              		.loc 1 146 21 view .LVU249
+ 815 002c B7EEC77B 		vcvt.f32.f64	s14, d7
+ 816 0030 80ED067A 		vstr.32	s14, [r0, #24]
+ 146:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _tresh = Th_MAX + s *(1-Th_MAX); ;
+ 817              		.loc 1 146 38 is_stmt 1 view .LVU250
+ 147:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp ****     _pw =  0.5f + s * 0.35f;
+ 818              		.loc 1 147 5 view .LVU251
+ 819              		.loc 1 148 5 view .LVU252
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 22
+
+
+ 149:../../Classes/Audio_Engine/Ramo/src/Ramo.cpp **** }
+ 820              		.loc 1 149 1 is_stmt 0 view .LVU253
+ 821 0034 7047     		bx	lr
+ 822              	.L57:
+ 823 0036 00BF     		.align	3
+ 824              	.L56:
+ 825 0038 9A999999 		.word	-1717986918
+ 826 003c 9999D93F 		.word	1071225241
+ 827 0040 33333333 		.word	858993459
+ 828 0044 3333E33F 		.word	1071854387
+ 829 0048 3333B33E 		.word	1051931443
+ 830              		.cfi_endproc
+ 831              	.LFE4828:
+ 833              		.text
+ 834              	.Letext0:
+ 835              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 836              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 837              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 838              		.file 6 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 839              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 840              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 841              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 842              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 843              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 844              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 845              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 846              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 847              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 848              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 849              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 850              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 851              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\charconv.h
+ 852              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 853              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 854              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 855              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 856              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 857              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 858              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 859              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 860              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 861              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 862              		.file 30 "../../libs/DaisySP/Source/Control/adenv.h"
+ 863              		.file 31 "../../libs/DaisySP/Source/Utility/dsp.h"
+ 864              		.file 32 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 865              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 866              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 867              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 868              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 869              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 870              		.file 38 "../../libs/libDaisy/src/daisy_core.h"
+ 871              		.file 39 "../../libs/libDaisy/src/util/wav_format.h"
+ 872              		.file 40 "../../libs/libDaisy/src/dev/sr_595.h"
+ 873              		.file 41 "../../libs/libDaisy/src/dev/max11300.h"
+ 874              		.file 42 "../../libs/libDaisy/src/daisy_seed.h"
+ 875              		.file 43 "../../Classes/Audio_Engine/Ramo/src/Ramo.h"
+ 876              		.file 44 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 23
+
+
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s 			page 24
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Ramo.cpp
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:17     .text._ZN4RamoC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:26     .text._ZN4RamoC2Ev:00000000 _ZN4RamoC2Ev
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:26     .text._ZN4RamoC2Ev:00000000 _ZN4RamoC1Ev
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:43     .text._ZN4RamoD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:51     .text._ZN4RamoD2Ev:00000000 _ZN4RamoD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:51     .text._ZN4RamoD2Ev:00000000 _ZN4RamoD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:67     .text._ZN4Ramo4InitEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:75     .text._ZN4Ramo4InitEf:00000000 _ZN4Ramo4InitEf
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:179    .text._ZN4Ramo4InitEf:00000048 $d
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:184    .text._ZN4Ramo7ProcessEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:192    .text._ZN4Ramo7ProcessEv:00000000 _ZN4Ramo7ProcessEv
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:234    .text._ZN4Ramo7ProcessEv:00000024 $d
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:238    .text._ZN4Ramo7ProcessEv:00000028 $t
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:485    .text._ZN4Ramo7ProcessEv:000001b8 $d
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:495    .text._ZN4Ramo12CalcPhaseIncEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:503    .text._ZN4Ramo12CalcPhaseIncEf:00000000 _ZN4Ramo12CalcPhaseIncEf
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:523    .text._ZN4Ramo12SetWaveformsEPh:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:531    .text._ZN4Ramo12SetWaveformsEPh:00000000 _ZN4Ramo12SetWaveformsEPh
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:571    .text._ZN4Ramo7SetFreqEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:579    .text._ZN4Ramo7SetFreqEf:00000000 _ZN4Ramo7SetFreqEf
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:639    .text._ZN4Ramo9SetDetuneEPf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:647    .text._ZN4Ramo9SetDetuneEPf:00000000 _ZN4Ramo9SetDetuneEPf
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:709    .text._ZN4Ramo6SetAmpEPf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:717    .text._ZN4Ramo6SetAmpEPf:00000000 _ZN4Ramo6SetAmpEPf
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:751    .text._ZN4Ramo7SetGainEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:759    .text._ZN4Ramo7SetGainEf:00000000 _ZN4Ramo7SetGainEf
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:776    .text._ZN4Ramo8SetShapeEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:784    .text._ZN4Ramo8SetShapeEf:00000000 _ZN4Ramo8SetShapeEf
+C:\Users\skipi\AppData\Local\Temp\ccOXXRuW.s:825    .text._ZN4Ramo8SetShapeEf:00000038 $d
+
+UNDEFINED SYMBOLS
+sinf
