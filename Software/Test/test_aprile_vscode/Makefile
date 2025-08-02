@@ -3,7 +3,7 @@ TARGET = test_aprile_vscode
 
 # Sources
 
-CPP_SOURCES = main.cpp AnalogDelay.cpp pentaPianta.cpp
+CPP_SOURCES = main.cpp AnalogDelay.cpp pentaPianta.cpp Ramo.cpp 
 
 # Library Locations
 LIBDAISY_DIR = ../../libs/libDaisy
