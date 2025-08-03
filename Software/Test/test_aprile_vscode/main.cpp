@@ -110,7 +110,7 @@ int main()
   float sample_rate;
   hw.Configure();
   hw.Init();
-  hw.SetAudioBlockSize(4);
+  hw.SetAudioBlockSize(64);
   sample_rate = hw.AudioSampleRate();
 
 #ifdef DEBUG
@@ -237,13 +237,6 @@ int main()
 
 #ifdef DEBUG
 
-  // Serial.begin(9600);
-
-  // while (!Serial) { // needed to keep micro from starting too fast!
-  //   delay(10);
-  // }
-  //  Default address is 0x5A, if tied to 3.3V its 0x5B
-  //  If tied to SDA its 0x5C and if SCL then 0x5D
   if (cap.Init(mpr121ObjConf) != daisy::Mpr121I2C::Result::OK)
   {
     hw.PrintLine("MPR121 not found, check wiring?");
@@ -256,7 +249,7 @@ int main()
       
   }
   hw.PrintLine("MPR121 found!");
- //cap.SetThresholds(0, 0);
+
 #endif // DEBUG
   while (1)
   {
