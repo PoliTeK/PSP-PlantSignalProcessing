@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -27,7 +27,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
   24              		.fpu fpv5-d16
   26              	_ZN4RamoC2Ev:
   27              	.LVL0:
-  28              	.LFB4815:
+  28              	.LFB4841:
   29              		.file 1 "Ramo.cpp"
    1:Ramo.cpp      **** 
    2:Ramo.cpp      **** #include "Ramo.h"
@@ -45,7 +45,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
   35              		.loc 1 8 1 is_stmt 0 view .LVU1
   36 0000 7047     		bx	lr
   37              		.cfi_endproc
-  38              	.LFE4815:
+  38              	.LFE4841:
   40              		.global	_ZN4RamoC1Ev
   41              		.thumb_set _ZN4RamoC1Ev,_ZN4RamoC2Ev
   42 0002 00BF     		.section	.text._ZN4RamoD2Ev,"ax",%progbits
@@ -58,10 +58,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
   49              		.fpu fpv5-d16
   51              	_ZN4RamoD2Ev:
   52              	.LVL1:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 2
 
 
-  53              	.LFB4818:
+  53              	.LFB4844:
    9:Ramo.cpp      **** 
   10:Ramo.cpp      **** Ramo::~Ramo()
   54              		.loc 1 10 1 is_stmt 1 view -0
@@ -75,7 +75,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
   59              		.loc 1 13 1 is_stmt 0 view .LVU3
   60 0000 7047     		bx	lr
   61              		.cfi_endproc
-  62              	.LFE4818:
+  62              	.LFE4844:
   64              		.global	_ZN4RamoD1Ev
   65              		.thumb_set _ZN4RamoD1Ev,_ZN4RamoD2Ev
   66 0002 00BF     		.section	.text._ZN4Ramo4InitEf,"ax",%progbits
@@ -88,7 +88,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
   73              		.fpu fpv5-d16
   75              	_ZN4Ramo4InitEf:
   76              	.LVL2:
-  77              	.LFB4820:
+  77              	.LFB4846:
   14:Ramo.cpp      **** 
   15:Ramo.cpp      **** void Ramo::Init(float sample_rate) // initialization
   16:Ramo.cpp      **** {
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
   27:Ramo.cpp      ****     for (int i = 0; i < 2; i++) {
   28:Ramo.cpp      ****         _amp[i] = 0.5f;
   29:Ramo.cpp      ****         _phase[i] = 0.0f;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 3
 
 
   91              		.loc 1 29 19 view .LVU9
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
   35:Ramo.cpp      **** }
   36:Ramo.cpp      **** 
   37:Ramo.cpp      **** float Ramo::Process()
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 4
 
 
   38:Ramo.cpp      **** {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
   92:Ramo.cpp      ****     }
   93:Ramo.cpp      **** 
   94:Ramo.cpp      ****     return _gain * (out[0] * _amp[0] + out[1] * _amp[1]);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 5
 
 
   95:Ramo.cpp      **** }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
   32:Ramo.cpp      ****     }
  163              		.loc 1 32 9 view .LVU43
   27:Ramo.cpp      ****         _amp[i] = 0.5f;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 6
 
 
  164              		.loc 1 27 5 view .LVU44
@@ -327,7 +327,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  178              	.L5:
  179 0048 0000C842 		.word	1120403456
  180              		.cfi_endproc
- 181              	.LFE4820:
+ 181              	.LFE4846:
  183              		.section	.text._ZN4Ramo7ProcessEv,"ax",%progbits
  184              		.align	1
  185              		.p2align 2,,3
@@ -338,7 +338,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  190              		.fpu fpv5-d16
  192              	_ZN4Ramo7ProcessEv:
  193              	.LVL6:
- 194              	.LFB4821:
+ 194              	.LFB4847:
   38:Ramo.cpp      ****     float out[n], t[n], s[n];
  195              		.loc 1 38 1 is_stmt 1 view -0
  196              		.cfi_startproc
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  206              		.cfi_def_cfa_offset 24
  207              		.cfi_offset 4, -24
  208              		.cfi_offset 5, -20
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 7
 
 
  209              		.cfi_offset 6, -16
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  253              		.loc 1 65 9 view .LVU68
  254 0040 B4EEC75B 		vcmpe.f64	d5, d7
  255 0044 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 8
 
 
  256 0048 40F38E80 		ble	.L19
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  295              		.loc 1 80 19 view .LVU83
  296 009c 77EE087A 		vadd.f32	s15, s14, s16
   82:Ramo.cpp      ****         {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 9
 
 
  297              		.loc 1 82 9 view .LVU84
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  336              		.loc 1 40 5 is_stmt 1 discriminator 6 view .LVU99
  337              	.LVL8:
   40:Ramo.cpp      ****     {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 10
 
 
  338              		.loc 1 40 23 discriminator 6 view .LVU100
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  378              		.loc 1 50 24 view .LVU114
  379 0122 95ED067A 		vldr.32	s14, [r5, #24]
   49:Ramo.cpp      ****             if (t[i] > _tresh)
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 11
 
 
  380              		.loc 1 49 31 view .LVU115
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
   46:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** extern "C++"
   47:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** {
   48:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** namespace std _GLIBCXX_VISIBILITY(default)
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 12
 
 
   49:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\bits\std_abs.h **** {
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  409              		.loc 1 52 17 view .LVU125
   52:Ramo.cpp      ****             }
  410              		.loc 1 52 34 is_stmt 0 view .LVU126
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 13
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 13
 
 
  411 0144 D7EE267A 		vfnms.f32	s15, s14, s13
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  450              		.loc 1 89 21 is_stmt 0 view .LVU141
  451 018a 0023     		movs	r3, #0
  452 018c 86F83A30 		strb	r3, [r6, #58]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 14
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 14
 
 
  453 0190 94E7     		b	.L26
@@ -834,11 +834,11 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  489 01c8 DB0FC940 		.word	1086918619
  490              	.LBE31:
  491              		.cfi_endproc
- 492              	.LFE4821:
+ 492              	.LFE4847:
  494              		.section	.text._ZN4Ramo12CalcPhaseIncEf,"ax",%progbits
  495              		.align	1
  496              		.p2align 2,,3
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 15
 
 
  497              		.global	_ZN4Ramo12CalcPhaseIncEf
@@ -848,7 +848,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  501              		.fpu fpv5-d16
  503              	_ZN4Ramo12CalcPhaseIncEf:
  504              	.LVL12:
- 505              	.LFB4822:
+ 505              	.LFB4848:
   98:Ramo.cpp      ****     return f * _sr_recip;
  506              		.loc 1 98 1 view -0
  507              		.cfi_startproc
@@ -865,7 +865,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  517              		.loc 1 100 1 view .LVU160
  518 0008 7047     		bx	lr
  519              		.cfi_endproc
- 520              	.LFE4822:
+ 520              	.LFE4848:
  522 000a 00BF     		.section	.text._ZN4Ramo12SetWaveformsEPh,"ax",%progbits
  523              		.align	1
  524              		.p2align 2,,3
@@ -876,7 +876,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  529              		.fpu fpv5-d16
  531              	_ZN4Ramo12SetWaveformsEPh:
  532              	.LVL14:
- 533              	.LFB4823:
+ 533              	.LFB4849:
  101:Ramo.cpp      **** 
  102:Ramo.cpp      **** void Ramo::SetWaveforms(uint8_t wf[])
  103:Ramo.cpp      **** {   
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  546 0002 042B     		cmp	r3, #4
  547 0004 28BF     		it	cs
  548 0006 0023     		movcs	r3, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 16
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 16
 
 
  549 0008 0370     		strb	r3, [r0]
@@ -927,7 +927,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  565              		.loc 1 109 1 is_stmt 0 view .LVU174
  566 0014 7047     		bx	lr
  567              		.cfi_endproc
- 568              	.LFE4823:
+ 568              	.LFE4849:
  570 0016 00BF     		.section	.text._ZN4Ramo7SetFreqEf,"ax",%progbits
  571              		.align	1
  572              		.p2align 2,,3
@@ -938,7 +938,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  577              		.fpu fpv5-d16
  579              	_ZN4Ramo7SetFreqEf:
  580              	.LVL17:
- 581              	.LFB4824:
+ 581              	.LFB4850:
  110:Ramo.cpp      **** 
  111:Ramo.cpp      **** void Ramo::SetFreq( const float f)
  112:Ramo.cpp      **** {
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  593              	.LBE35:
  594              	.LBE34:
  595              	.LBE33:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 17
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 17
 
 
  596              		.loc 1 113 11 view .LVU178
@@ -1017,8 +1017,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  633              		.loc 1 118 1 is_stmt 0 view .LVU196
  634 0014 7047     		bx	lr
  635              		.cfi_endproc
- 636              	.LFE4824:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 18
+ 636              	.LFE4850:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 18
 
 
  638 0016 00BF     		.section	.text._ZN4Ramo9SetDetuneEPf,"ax",%progbits
@@ -1031,7 +1031,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  645              		.fpu fpv5-d16
  647              	_ZN4Ramo9SetDetuneEPf:
  648              	.LVL22:
- 649              	.LFB4825:
+ 649              	.LFB4851:
  119:Ramo.cpp      **** 
  120:Ramo.cpp      **** void Ramo::SetDetune(float ef[])
  121:Ramo.cpp      **** {
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  682 0014 80ED0C7A 		vstr.32	s14, [r0, #48]
  122:Ramo.cpp      ****     {
  683              		.loc 1 122 5 is_stmt 1 view .LVU209
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 19
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 19
 
 
  684              	.LVL24:
@@ -1111,7 +1111,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  703              		.loc 1 126 1 is_stmt 0 view .LVU219
  704 0024 7047     		bx	lr
  705              		.cfi_endproc
- 706              	.LFE4825:
+ 706              	.LFE4851:
  708 0026 00BF     		.section	.text._ZN4Ramo6SetAmpEPf,"ax",%progbits
  709              		.align	1
  710              		.p2align 2,,3
@@ -1122,7 +1122,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  715              		.fpu fpv5-d16
  717              	_ZN4Ramo6SetAmpEPf:
  718              	.LVL26:
- 719              	.LFB4826:
+ 719              	.LFB4852:
  127:Ramo.cpp      **** 
  128:Ramo.cpp      **** 
  129:Ramo.cpp      **** 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  725              		.loc 1 133 5 view .LVU221
  726              	.LBB48:
  727              		.loc 1 133 23 view .LVU222
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 20
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 20
 
 
  134:Ramo.cpp      ****     {
@@ -1169,7 +1169,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  745              		.loc 1 137 1 is_stmt 0 view .LVU233
  746 0008 7047     		bx	lr
  747              		.cfi_endproc
- 748              	.LFE4826:
+ 748              	.LFE4852:
  750 000a 00BF     		.section	.text._ZN4Ramo7SetGainEf,"ax",%progbits
  751              		.align	1
  752              		.p2align 2,,3
@@ -1180,7 +1180,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  757              		.fpu fpv5-d16
  759              	_ZN4Ramo7SetGainEf:
  760              	.LVL29:
- 761              	.LFB4827:
+ 761              	.LFB4853:
  138:Ramo.cpp      **** 
  139:Ramo.cpp      **** void Ramo::SetGain(float g)
  140:Ramo.cpp      **** {
@@ -1197,8 +1197,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  770              		.loc 1 142 1 view .LVU237
  771 0004 7047     		bx	lr
  772              		.cfi_endproc
- 773              	.LFE4827:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 21
+ 773              	.LFE4853:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 21
 
 
  775 0006 00BF     		.section	.text._ZN4Ramo8SetShapeEf,"ax",%progbits
@@ -1211,7 +1211,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  782              		.fpu fpv5-d16
  784              	_ZN4Ramo8SetShapeEf:
  785              	.LVL30:
- 786              	.LFB4828:
+ 786              	.LFB4854:
  143:Ramo.cpp      **** 
  144:Ramo.cpp      **** void Ramo::SetShape(float s)
  145:Ramo.cpp      **** {
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  147:Ramo.cpp      ****     _pw =  0.5f + s * 0.35f;
  818              		.loc 1 147 5 view .LVU251
  819              		.loc 1 148 5 view .LVU252
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 22
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 22
 
 
  149:Ramo.cpp      **** }
@@ -1273,7 +1273,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  828 0044 3333E33F 		.word	1071854387
  829 0048 3333B33E 		.word	1051931443
  830              		.cfi_endproc
- 831              	.LFE4828:
+ 831              	.LFE4854:
  833              		.text
  834              	.Letext0:
  835              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
@@ -1318,43 +1318,43 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 1
  874              		.file 42 "../../libs/libDaisy/src/daisy_seed.h"
  875              		.file 43 "Ramo.h"
  876              		.file 44 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 23
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 23
 
 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s 			page 24
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Ramo.cpp
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:17     .text._ZN4RamoC2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:26     .text._ZN4RamoC2Ev:00000000 _ZN4RamoC2Ev
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:26     .text._ZN4RamoC2Ev:00000000 _ZN4RamoC1Ev
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:43     .text._ZN4RamoD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:51     .text._ZN4RamoD2Ev:00000000 _ZN4RamoD2Ev
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:51     .text._ZN4RamoD2Ev:00000000 _ZN4RamoD1Ev
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:67     .text._ZN4Ramo4InitEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:75     .text._ZN4Ramo4InitEf:00000000 _ZN4Ramo4InitEf
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:179    .text._ZN4Ramo4InitEf:00000048 $d
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:184    .text._ZN4Ramo7ProcessEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:192    .text._ZN4Ramo7ProcessEv:00000000 _ZN4Ramo7ProcessEv
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:234    .text._ZN4Ramo7ProcessEv:00000024 $d
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:238    .text._ZN4Ramo7ProcessEv:00000028 $t
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:485    .text._ZN4Ramo7ProcessEv:000001b8 $d
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:495    .text._ZN4Ramo12CalcPhaseIncEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:503    .text._ZN4Ramo12CalcPhaseIncEf:00000000 _ZN4Ramo12CalcPhaseIncEf
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:523    .text._ZN4Ramo12SetWaveformsEPh:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:531    .text._ZN4Ramo12SetWaveformsEPh:00000000 _ZN4Ramo12SetWaveformsEPh
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:571    .text._ZN4Ramo7SetFreqEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:579    .text._ZN4Ramo7SetFreqEf:00000000 _ZN4Ramo7SetFreqEf
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:639    .text._ZN4Ramo9SetDetuneEPf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:647    .text._ZN4Ramo9SetDetuneEPf:00000000 _ZN4Ramo9SetDetuneEPf
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:709    .text._ZN4Ramo6SetAmpEPf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:717    .text._ZN4Ramo6SetAmpEPf:00000000 _ZN4Ramo6SetAmpEPf
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:751    .text._ZN4Ramo7SetGainEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:759    .text._ZN4Ramo7SetGainEf:00000000 _ZN4Ramo7SetGainEf
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:776    .text._ZN4Ramo8SetShapeEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:784    .text._ZN4Ramo8SetShapeEf:00000000 _ZN4Ramo8SetShapeEf
-C:\Users\skipi\AppData\Local\Temp\cctrkAlw.s:825    .text._ZN4Ramo8SetShapeEf:00000038 $d
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:17     .text._ZN4RamoC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:26     .text._ZN4RamoC2Ev:00000000 _ZN4RamoC2Ev
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:26     .text._ZN4RamoC2Ev:00000000 _ZN4RamoC1Ev
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:43     .text._ZN4RamoD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:51     .text._ZN4RamoD2Ev:00000000 _ZN4RamoD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:51     .text._ZN4RamoD2Ev:00000000 _ZN4RamoD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:67     .text._ZN4Ramo4InitEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:75     .text._ZN4Ramo4InitEf:00000000 _ZN4Ramo4InitEf
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:179    .text._ZN4Ramo4InitEf:00000048 $d
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:184    .text._ZN4Ramo7ProcessEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:192    .text._ZN4Ramo7ProcessEv:00000000 _ZN4Ramo7ProcessEv
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:234    .text._ZN4Ramo7ProcessEv:00000024 $d
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:238    .text._ZN4Ramo7ProcessEv:00000028 $t
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:485    .text._ZN4Ramo7ProcessEv:000001b8 $d
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:495    .text._ZN4Ramo12CalcPhaseIncEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:503    .text._ZN4Ramo12CalcPhaseIncEf:00000000 _ZN4Ramo12CalcPhaseIncEf
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:523    .text._ZN4Ramo12SetWaveformsEPh:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:531    .text._ZN4Ramo12SetWaveformsEPh:00000000 _ZN4Ramo12SetWaveformsEPh
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:571    .text._ZN4Ramo7SetFreqEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:579    .text._ZN4Ramo7SetFreqEf:00000000 _ZN4Ramo7SetFreqEf
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:639    .text._ZN4Ramo9SetDetuneEPf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:647    .text._ZN4Ramo9SetDetuneEPf:00000000 _ZN4Ramo9SetDetuneEPf
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:709    .text._ZN4Ramo6SetAmpEPf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:717    .text._ZN4Ramo6SetAmpEPf:00000000 _ZN4Ramo6SetAmpEPf
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:751    .text._ZN4Ramo7SetGainEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:759    .text._ZN4Ramo7SetGainEf:00000000 _ZN4Ramo7SetGainEf
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:776    .text._ZN4Ramo8SetShapeEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:784    .text._ZN4Ramo8SetShapeEf:00000000 _ZN4Ramo8SetShapeEf
+C:\Users\skipi\AppData\Local\Temp\ccZUcdMo.s:825    .text._ZN4Ramo8SetShapeEf:00000038 $d
 
 UNDEFINED SYMBOLS
 sinf

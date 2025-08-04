@@ -109,7 +109,7 @@ build/AnalogDelay.o: AnalogDelay.cpp \
  ../../libs/libDaisy/src/version.h ../../libs/libDaisy/src/sys/system.h \
  ../../libs/libDaisy/src/per/tim.h ../../libs/libDaisy/src/per/qspi.h \
  ../../libs/libDaisy/src/util/hal_map.h ../../libs/libDaisy/src/per/dac.h \
- ../../libs/libDaisy/src/per/gpio.h \
+ ../../libs/libDaisy/src/per/gpio.h ../../libs/libDaisy/src/per/pwm.h \
  ../../libs/libDaisy/src/dev/leddriver.h \
  ../../libs/libDaisy/src/per/i2c.h ../../libs/libDaisy/src/dev/mpr121.h \
  ../../libs/libDaisy/src/dev/sdram.h \
@@ -355,6 +355,7 @@ AnalogDelay.h:
 ../../libs/libDaisy/src/util/hal_map.h:
 ../../libs/libDaisy/src/per/dac.h:
 ../../libs/libDaisy/src/per/gpio.h:
+../../libs/libDaisy/src/per/pwm.h:
 ../../libs/libDaisy/src/dev/leddriver.h:
 ../../libs/libDaisy/src/per/i2c.h:
 ../../libs/libDaisy/src/dev/mpr121.h:

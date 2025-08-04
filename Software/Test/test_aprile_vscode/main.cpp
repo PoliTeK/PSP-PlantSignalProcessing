@@ -43,6 +43,9 @@ AnalogDelay Delay;
 
 float out_mix;
 
+uint16_t lasttouched = 0;
+uint16_t currtouched = 0;
+
 static void AudioCallback(AudioHandle::InterleavingInputBuffer in,
                           AudioHandle::InterleavingOutputBuffer out,
                           size_t size)
@@ -237,100 +240,99 @@ int main()
 
 #ifdef DEBUG
 
-  if (cap.Init(mpr121ObjConf) != daisy::Mpr121I2C::Result::OK)
+if (cap.Init(mpr121ObjConf) != daisy::Mpr121I2C::Result::OK)
+{
+  hw.PrintLine("MPR121 not found, check wiring?");
+  while (1)
   {
-    hw.PrintLine("MPR121 not found, check wiring?");
-    while (1){
-      hw.SetLed(true);
-      hw.DelayMs(500);
-      hw.SetLed(false);
-      hw.DelayMs(500);
-    }
-      
+    hw.SetLed(true);
+    hw.DelayMs(500);
+    hw.SetLed(false);
+    hw.DelayMs(500);
   }
-  hw.PrintLine("MPR121 found!");
+}
+hw.PrintLine("MPR121 found!");
 
 #endif // DEBUG
   while (1)
   {
 
     // Pluck
-    if (cap.Touched() & _BV(0))
+    
+    currtouched = cap.Touched();
+
+    if ((currtouched & _BV(0)) && !(lasttouched & _BV(0)))
     {
       Gate_pluck = true;
       value_pluck = cap.FilteredData(0);
       now_f_pluck = p_pluck.discFreq(value_pluck);
-    }
-    
-    else
-    {
-      Gate_pluck = false;
+      #ifdef DEBUG
+        hw.PrintLine("--------------------------------------------------------------------------------");
+        hw.PrintLine("CAP 0 touched");
+        hw.PrintLine("%d", (int)cap.FilteredData(0));
+        hw.PrintLine("--------------------------------------------------------------------------------");
+      #endif // DEBUG
+      
     }
 
-    // Pad
-    if (cap.Touched() & _BV(1))
+    if (!(currtouched & _BV(0)) && (lasttouched & _BV(0)))
+    {
+      Gate_pluck = false;
+      #ifdef DEBUG
+        hw.PrintLine("--------------------------------------------------------------------------------");
+        hw.PrintLine("CAP 0 released");
+        hw.PrintLine("--------------------------------------------------------------------------------");
+       #endif // DEBUG
+    }
+
+    if ((currtouched & _BV(1)) && !(lasttouched & _BV(1)))
     {
       Gate_pad = true;
       value_pad = cap.FilteredData(1);
       now_f_pad = p_pad.discFreq(value_pad);
+      #ifdef DEBUG
+        hw.PrintLine("--------------------------------------------------------------------------------");
+        hw.PrintLine("CAP 1 touched");
+        hw.PrintLine("%d", (int)cap.FilteredData(1));
+        hw.PrintLine("--------------------------------------------------------------------------------");
+      #endif // DEBUG
     }
-    else
+
+    if (!(currtouched & _BV(1)) && (lasttouched & _BV(1)))
     {
       Gate_pad = false;
+      #ifdef DEBUG
+        hw.PrintLine("--------------------------------------------------------------------------------");
+        hw.PrintLine("CAP 1 released");
+        hw.PrintLine("--------------------------------------------------------------------------------");
+       #endif // DEBUG
     }
 
-     // Pad
-     if (cap.Touched() & _BV(2))
-     {
-       Gate_bass = true;
-       value_bass = cap.FilteredData(2);
-       now_f_bass = p_bass.discFreq(value_bass);
-     }
-     else
-     {
-       Gate_bass = false;
-     }
-     
-
-#ifdef DEBUG
-    if (Gate_pad)
+    if ((currtouched & _BV(2)) && !(lasttouched & _BV(2)))
     {
-      hw.PrintLine("Hai premuto il gate pad (1) ");
-      hw.PrintLine(" ed il suo valore è : ");
-      hw.PrintLine("%d", (int)value_pad);
-      hw.PrintLine("Frequenza: ");
-      // hw.PrintLine("%f", now_f_pad); // DA AGGIUNGERE FLAG NEL MAKEFILE
+      Gate_bass = true;
+      value_bass = cap.FilteredData(2);
+      now_f_bass = p_bass.discFreq(value_bass);
+      #ifdef DEBUG
+        hw.PrintLine("--------------------------------------------------------------------------------");
+        hw.PrintLine("CAP 2 touched");
+        hw.PrintLine("%d", (int)cap.FilteredData(2));
+        hw.PrintLine("--------------------------------------------------------------------------------");
+      #endif // DEBUG
     }
-
-    if (Gate_pluck)
+    if (!(currtouched & _BV(2)) && (lasttouched & _BV(2)))
     {
-      hw.PrintLine("Hai premuto il gate pluck (0) ");
-      hw.PrintLine(" ed il suo valore è : ");
-      hw.PrintLine("%d", (int)value_pluck);
-      hw.PrintLine("Frequenza: ");
-      hw.PrintLine("%f", now_f_pluck); // DA AGGIUNGERE FLAG NEL MAKEFILE
+      Gate_bass = false;
+      #ifdef DEBUG
+        hw.PrintLine("--------------------------------------------------------------------------------");
+        hw.PrintLine("CAP 2 released");
+        hw.PrintLine("--------------------------------------------------------------------------------");
+       #endif // DEBUG
     }
-
-    if (Gate_bass)
-    {
-      hw.PrintLine("Hai premuto il gate bass (2) ");
-      hw.PrintLine(" ed il suo valore è : ");
-      hw.PrintLine("%d", (int)value_bass);
-      hw.PrintLine("Frequenza: ");
-      // hw.PrintLine("%f", now_f_bass); // DA AGGIUNGERE FLAG NEL MAKEFILE
-    }
-
-    //hw.PrintLine("end of loop, %f", out_mix);
-
-#endif // DEBUG
+    lasttouched = currtouched;
 
 
-
-   
-    
-
-
-hw.DelayMs(1);
+    hw.DelayMs(1);
   }
 
 }

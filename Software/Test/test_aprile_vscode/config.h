@@ -94,14 +94,14 @@ float bass_Filter_ADSR[4] = {10.0f, 1.0f, 0.6f, 0.5f};  // Attack, Decay, Sustai
 
 // Ampiezza di mixaggio per il bass
 float mix_amp_bass[2] = {0.5, 0.5};
-float gain_bass = 1.0f; // Gain for bass
+float gain_bass = 2.0f; // Gain for bass
 
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //                                     Master Control
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 // Parametro master per il mixaggio globale
-float master = 0.5f;
+float master = 0.7f;
 
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //                                          Delay Settings
