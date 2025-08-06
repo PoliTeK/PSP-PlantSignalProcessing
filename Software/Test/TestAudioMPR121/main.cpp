@@ -4,7 +4,7 @@
 #ifndef _BV
 #define _BV(bit) (1 << (bit))
 #endif
-//#define DEBUG
+#define DEBUG
 using namespace daisy;
 using namespace daisysp;
 
@@ -44,9 +44,7 @@ static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::
 int main()
 {
 
-#ifdef DEBUG
-  hw.StartLog(false); // starts the log to the serial port
-#endif
+
 
   float sampleRate;
   hw.Configure();
