@@ -59,6 +59,11 @@ int main()
   osc.SetFreq(440.0f);                   // sets the frequency
   osc.SetAmp(0.5f);                      // sets the amplitude
 
+  #ifdef DEBUG
+  hw.StartLog(false); // starts the log to the serial port
+  #endif
+
+
   daisy::Mpr121I2C::Result status = cap.Init(mpr121ObjConf);
   if (status != daisy::Mpr121I2C::Result::OK) // initializes the mpr121 with the config and see if the comunication is ok
   {
