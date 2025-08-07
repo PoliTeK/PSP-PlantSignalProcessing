@@ -1,5 +1,6 @@
 #include "../../libs/libDaisy/src/daisy_seed.h"
 #include "../../libs/DaisySP/Source/daisysp.h"
+#include "../../Classes/FIIR/CapFir.h"
 
 #ifndef _BV // used to mask registers' bits related to the channel
 #define _BV(bit) (1 << (bit))
@@ -15,6 +16,8 @@ daisy::Mpr121I2C cap;                                         // creates object 
 
 DaisySeed hw;
 
+CapFir filter;                                                   // creates object for the CapFir filter
+
 uint16_t lasttouched = 0;                                     // used to store the last touched value
 uint16_t currtouched = 0;                                     // used to store the current touched value
 
@@ -23,11 +26,10 @@ bool touched = false;                                          // used to check 
 int main()
 {
 
-  float sample_rate;
+  
   hw.Configure();
   hw.Init();
-  hw.SetAudioBlockSize(4);
-  sample_rate = hw.AudioSampleRate();
+  
 
   hw.StartLog(true);                                                            // starts the log to the serial port
 
@@ -43,6 +45,8 @@ int main()
     }
   }
   hw.PrintLine("MPR121 found!");
+
+  filter.Init(CapFir::ResType::LOW);                     // initializes the filter with the low pass type and 16 coefficients
   //cap.SetThresholds(12, 6); // sets the touch and release thresholds for all 12 channels         // non funziona PD
 
   while (1)
@@ -74,6 +78,7 @@ int main()
       hw.PrintLine("| Baseline Touched Value : %d |", cap.BaselineData(0));
       hw.PrintLine("| Filtered Touched Value : %d |", cap.FilteredData(0));
       hw.PrintLine("| Difference Touched Value : %d |", cap.BaselineData(0) - cap.FilteredData(0));
+      hw.PrintLine("| Filtered Difference Touched Value : %f |", filter.Process(cap.BaselineData(0) - cap.FilteredData(0)));
       hw.PrintLine("| ");
     } else {
       hw.PrintLine(" ");
@@ -81,6 +86,7 @@ int main()
       hw.PrintLine("Baseline Untouched Value : %d", cap.BaselineData(0));
       hw.PrintLine("Filtered Untouched Value : %d", cap.FilteredData(0));
       hw.PrintLine("Difference Untouched Value : %d", cap.BaselineData(0)-cap.FilteredData(0));
+      hw.PrintLine("Filtered Difference Untouched Value : %f", filter.Process(cap.BaselineData(0) - cap.FilteredData(0)));
       hw.PrintLine(" ");
       hw.PrintLine(" ");
     }
@@ -89,6 +95,6 @@ int main()
     lasttouched = currtouched;
 
    
-    hw.DelayMs(200);
+    hw.DelayMs(1);
   }
 }

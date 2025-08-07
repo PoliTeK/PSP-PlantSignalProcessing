@@ -1,0 +1,774 @@
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"CapFir.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN6CapFirC2Ev,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_ZN6CapFirC2Ev
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
+  26              	_ZN6CapFirC2Ev:
+  27              	.LVL0:
+  28              	.LFB4841:
+  29              		.file 1 "../../Classes/FIIR/CapFir.cpp"
+   1:../../Classes/FIIR/CapFir.cpp **** #include "../../libs/libDaisy/src/daisy_seed.h"
+   2:../../Classes/FIIR/CapFir.cpp **** #include "../../libs/DaisySP/Source/daisysp.h"
+   3:../../Classes/FIIR/CapFir.cpp **** #include "CapFir.h"
+   4:../../Classes/FIIR/CapFir.cpp **** 
+   5:../../Classes/FIIR/CapFir.cpp **** CapFir::CapFir() {}
+  30              		.loc 1 5 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 5 1 is_stmt 0 view .LVU1
+  35 0000 38B5     		push	{r3, r4, r5, lr}
+  36              		.cfi_def_cfa_offset 16
+  37              		.cfi_offset 3, -16
+  38              		.cfi_offset 4, -12
+  39              		.cfi_offset 5, -8
+  40              		.cfi_offset 14, -4
+  41              	.LBB2:
+  42              		.loc 1 5 16 view .LVU2
+  43 0002 134D     		ldr	r5, .L4
+  44              	.LBE2:
+  45              		.loc 1 5 1 view .LVU3
+  46 0004 0446     		mov	r4, r0
+  47              	.LBB3:
+  48              		.loc 1 5 16 view .LVU4
+  49 0006 00F5E27C 		add	ip, r0, #452
+  50 000a AE46     		mov	lr, r5
+  51 000c BEE80F00 		ldmia	lr!, {r0, r1, r2, r3}
+  52              	.LVL1:
+  53              		.loc 1 5 16 view .LVU5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s 			page 2
+
+
+  54 0010 ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
+  55 0014 BEE80F00 		ldmia	lr!, {r0, r1, r2, r3}
+  56 0018 ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
+  57 001c BEE80F00 		ldmia	lr!, {r0, r1, r2, r3}
+  58 0020 ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
+  59 0024 9EE80F00 		ldm	lr, {r0, r1, r2, r3}
+  60 0028 8CE80F00 		stm	ip, {r0, r1, r2, r3}
+  61 002c 05F14001 		add	r1, r5, #64
+  62 0030 8022     		movs	r2, #128
+  63 0032 04F50170 		add	r0, r4, #516
+  64 0036 FFF7FEFF 		bl	memcpy
+  65              	.LVL2:
+  66 003a 4FF48072 		mov	r2, #256
+  67 003e 05F1C001 		add	r1, r5, #192
+  68 0042 04F52170 		add	r0, r4, #644
+  69 0046 FFF7FEFF 		bl	memcpy
+  70              	.LVL3:
+  71              	.LBE3:
+  72              		.loc 1 5 19 view .LVU6
+  73 004a 2046     		mov	r0, r4
+  74 004c 38BD     		pop	{r3, r4, r5, pc}
+  75              	.LVL4:
+  76              	.L5:
+  77              		.loc 1 5 19 view .LVU7
+  78 004e 00BF     		.align	2
+  79              	.L4:
+  80 0050 00000000 		.word	.LANCHOR0
+  81              		.cfi_endproc
+  82              	.LFE4841:
+  84              		.global	_ZN6CapFirC1Ev
+  85              		.thumb_set _ZN6CapFirC1Ev,_ZN6CapFirC2Ev
+  86              		.section	.text._ZN6CapFirD2Ev,"ax",%progbits
+  87              		.align	1
+  88              		.p2align 2,,3
+  89              		.global	_ZN6CapFirD2Ev
+  90              		.syntax unified
+  91              		.thumb
+  92              		.thumb_func
+  93              		.fpu fpv5-d16
+  95              	_ZN6CapFirD2Ev:
+  96              	.LVL5:
+  97              	.LFB4844:
+   6:../../Classes/FIIR/CapFir.cpp **** CapFir::~CapFir() {}
+  98              		.loc 1 6 1 is_stmt 1 view -0
+  99              		.cfi_startproc
+ 100              		@ args = 0, pretend = 0, frame = 0
+ 101              		@ frame_needed = 0, uses_anonymous_args = 0
+ 102              		@ link register save eliminated.
+ 103              		.loc 1 6 20 is_stmt 0 view .LVU9
+ 104 0000 7047     		bx	lr
+ 105              		.cfi_endproc
+ 106              	.LFE4844:
+ 108              		.global	_ZN6CapFirD1Ev
+ 109              		.thumb_set _ZN6CapFirD1Ev,_ZN6CapFirD2Ev
+ 110 0002 00BF     		.section	.text._ZN6CapFir4InitENS_7ResTypeE,"ax",%progbits
+ 111              		.align	1
+ 112              		.p2align 2,,3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s 			page 3
+
+
+ 113              		.global	_ZN6CapFir4InitENS_7ResTypeE
+ 114              		.syntax unified
+ 115              		.thumb
+ 116              		.thumb_func
+ 117              		.fpu fpv5-d16
+ 119              	_ZN6CapFir4InitENS_7ResTypeE:
+ 120              	.LVL6:
+ 121              	.LFB4846:
+   7:../../Classes/FIIR/CapFir.cpp **** 
+   8:../../Classes/FIIR/CapFir.cpp **** void CapFir::Init(enum ResType res_type) {
+ 122              		.loc 1 8 42 is_stmt 1 view -0
+ 123              		.cfi_startproc
+ 124              		@ args = 0, pretend = 0, frame = 0
+ 125              		@ frame_needed = 0, uses_anonymous_args = 0
+ 126              		@ link register save eliminated.
+   9:../../Classes/FIIR/CapFir.cpp ****     _resType = res_type;
+ 127              		.loc 1 9 5 view .LVU11
+ 128              	.LBB4:
+  10:../../Classes/FIIR/CapFir.cpp ****     switch (_resType) {
+ 129              		.loc 1 10 5 is_stmt 0 view .LVU12
+ 130 0000 0129     		cmp	r1, #1
+ 131              	.LBE4:
+   9:../../Classes/FIIR/CapFir.cpp ****     _resType = res_type;
+ 132              		.loc 1 9 14 view .LVU13
+ 133 0002 0170     		strb	r1, [r0]
+ 134              		.loc 1 10 5 is_stmt 1 view .LVU14
+ 135              	.LBB8:
+ 136 0004 03D0     		beq	.L8
+ 137 0006 0229     		cmp	r1, #2
+ 138 0008 0AD0     		beq	.L9
+ 139 000a 29B1     		cbz	r1, .L11
+ 140              	.LBE8:
+  11:../../Classes/FIIR/CapFir.cpp ****         case LOW:
+  12:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
+  13:../../Classes/FIIR/CapFir.cpp ****                 _bufferL[i] = 0.0f;
+  14:../../Classes/FIIR/CapFir.cpp ****                 }
+  15:../../Classes/FIIR/CapFir.cpp ****             break;
+  16:../../Classes/FIIR/CapFir.cpp **** 
+  17:../../Classes/FIIR/CapFir.cpp ****         case MID:
+  18:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
+  19:../../Classes/FIIR/CapFir.cpp ****                 _bufferM[i] = 0.0f;
+  20:../../Classes/FIIR/CapFir.cpp ****             }
+  21:../../Classes/FIIR/CapFir.cpp ****             break;
+  22:../../Classes/FIIR/CapFir.cpp **** 
+  23:../../Classes/FIIR/CapFir.cpp ****         case HIGH:
+  24:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
+  25:../../Classes/FIIR/CapFir.cpp ****                 _bufferH[i] = 0.0f;
+  26:../../Classes/FIIR/CapFir.cpp ****             }
+  27:../../Classes/FIIR/CapFir.cpp ****             break;
+  28:../../Classes/FIIR/CapFir.cpp ****     }      
+  29:../../Classes/FIIR/CapFir.cpp ****     
+  30:../../Classes/FIIR/CapFir.cpp **** }
+ 141              		.loc 1 30 1 is_stmt 0 view .LVU15
+ 142 000c 7047     		bx	lr
+ 143              	.L8:
+ 144              	.LBB9:
+ 145              	.LBB5:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s 			page 4
+
+
+  19:../../Classes/FIIR/CapFir.cpp ****             }
+ 146              		.loc 1 19 29 view .LVU16
+ 147 000e 8022     		movs	r2, #128
+ 148 0010 0021     		movs	r1, #0
+ 149              	.LVL7:
+  19:../../Classes/FIIR/CapFir.cpp ****             }
+ 150              		.loc 1 19 29 view .LVU17
+ 151 0012 4430     		adds	r0, r0, #68
+ 152              	.LVL8:
+  19:../../Classes/FIIR/CapFir.cpp ****             }
+ 153              		.loc 1 19 29 view .LVU18
+ 154 0014 FFF7FEBF 		b	memset
+ 155              	.LVL9:
+ 156              	.L11:
+  19:../../Classes/FIIR/CapFir.cpp ****             }
+ 157              		.loc 1 19 29 view .LVU19
+ 158              	.LBE5:
+ 159              	.LBB6:
+  13:../../Classes/FIIR/CapFir.cpp ****                 }
+ 160              		.loc 1 13 29 view .LVU20
+ 161 0018 4022     		movs	r2, #64
+ 162 001a 0430     		adds	r0, r0, #4
+ 163              	.LVL10:
+  13:../../Classes/FIIR/CapFir.cpp ****                 }
+ 164              		.loc 1 13 29 view .LVU21
+ 165 001c FFF7FEBF 		b	memset
+ 166              	.LVL11:
+ 167              	.L9:
+  13:../../Classes/FIIR/CapFir.cpp ****                 }
+ 168              		.loc 1 13 29 view .LVU22
+ 169              	.LBE6:
+ 170              	.LBB7:
+  25:../../Classes/FIIR/CapFir.cpp ****             }
+ 171              		.loc 1 25 29 view .LVU23
+ 172 0020 4FF48072 		mov	r2, #256
+ 173 0024 0021     		movs	r1, #0
+ 174              	.LVL12:
+  25:../../Classes/FIIR/CapFir.cpp ****             }
+ 175              		.loc 1 25 29 view .LVU24
+ 176 0026 C430     		adds	r0, r0, #196
+ 177              	.LVL13:
+  25:../../Classes/FIIR/CapFir.cpp ****             }
+ 178              		.loc 1 25 29 view .LVU25
+ 179 0028 FFF7FEBF 		b	memset
+ 180              	.LVL14:
+  25:../../Classes/FIIR/CapFir.cpp ****             }
+ 181              		.loc 1 25 29 view .LVU26
+ 182              	.LBE7:
+ 183              	.LBE9:
+ 184              		.cfi_endproc
+ 185              	.LFE4846:
+ 187              		.section	.text._ZN6CapFir7ProcessEf,"ax",%progbits
+ 188              		.align	1
+ 189              		.p2align 2,,3
+ 190              		.global	_ZN6CapFir7ProcessEf
+ 191              		.syntax unified
+ 192              		.thumb
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s 			page 5
+
+
+ 193              		.thumb_func
+ 194              		.fpu fpv5-d16
+ 196              	_ZN6CapFir7ProcessEf:
+ 197              	.LVL15:
+ 198              	.LFB4847:
+  31:../../Classes/FIIR/CapFir.cpp **** 
+  32:../../Classes/FIIR/CapFir.cpp **** float CapFir::Process(float in) {
+ 199              		.loc 1 32 33 is_stmt 1 view -0
+ 200              		.cfi_startproc
+ 201              		@ args = 0, pretend = 0, frame = 0
+ 202              		@ frame_needed = 0, uses_anonymous_args = 0
+  33:../../Classes/FIIR/CapFir.cpp ****     float out = 0.0f;
+ 203              		.loc 1 33 5 view .LVU28
+  34:../../Classes/FIIR/CapFir.cpp **** 
+  35:../../Classes/FIIR/CapFir.cpp ****     switch (_resType) {
+ 204              		.loc 1 35 5 view .LVU29
+ 205              	.LBB10:
+ 206              		.loc 1 35 13 is_stmt 0 view .LVU30
+ 207 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 208              		.loc 1 35 5 view .LVU31
+ 209 0002 012B     		cmp	r3, #1
+ 210              	.LBE10:
+  32:../../Classes/FIIR/CapFir.cpp ****     float out = 0.0f;
+ 211              		.loc 1 32 33 view .LVU32
+ 212 0004 10B5     		push	{r4, lr}
+ 213              		.cfi_def_cfa_offset 8
+ 214              		.cfi_offset 4, -8
+ 215              		.cfi_offset 14, -4
+ 216 0006 0446     		mov	r4, r0
+ 217 0008 2DED028B 		vpush.64	{d8}
+ 218              		.cfi_def_cfa_offset 16
+ 219              		.cfi_offset 80, -16
+ 220              		.cfi_offset 81, -12
+  32:../../Classes/FIIR/CapFir.cpp ****     float out = 0.0f;
+ 221              		.loc 1 32 33 view .LVU33
+ 222 000c B0EE408A 		vmov.f32	s16, s0
+ 223              	.LBB23:
+ 224              		.loc 1 35 5 view .LVU34
+ 225 0010 07D0     		beq	.L13
+ 226 0012 022B     		cmp	r3, #2
+ 227 0014 3AD0     		beq	.L14
+ 228 0016 FBB1     		cbz	r3, .L27
+ 229 0018 9FED2A0A 		vldr.32	s0, .L31
+ 230              	.LVL16:
+ 231              		.loc 1 35 5 view .LVU35
+ 232              	.LBE23:
+  36:../../Classes/FIIR/CapFir.cpp ****         case LOW:
+  37:../../Classes/FIIR/CapFir.cpp ****             for (int i = 15; i > 0; i--) {
+  38:../../Classes/FIIR/CapFir.cpp ****                 _bufferL[i] = _bufferL[i - 1];
+  39:../../Classes/FIIR/CapFir.cpp ****             }
+  40:../../Classes/FIIR/CapFir.cpp ****             _bufferL[0] = in;
+  41:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
+  42:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
+  43:../../Classes/FIIR/CapFir.cpp ****             }
+  44:../../Classes/FIIR/CapFir.cpp ****             break;
+  45:../../Classes/FIIR/CapFir.cpp **** 
+  46:../../Classes/FIIR/CapFir.cpp ****         case MID:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s 			page 6
+
+
+  47:../../Classes/FIIR/CapFir.cpp ****             for (int i = 31; i > 0; i--) {
+  48:../../Classes/FIIR/CapFir.cpp ****                 _bufferM[i] = _bufferM[i - 1];
+  49:../../Classes/FIIR/CapFir.cpp ****             }
+  50:../../Classes/FIIR/CapFir.cpp ****             _bufferM[0] = in;
+  51:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
+  52:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
+  53:../../Classes/FIIR/CapFir.cpp ****             }
+  54:../../Classes/FIIR/CapFir.cpp ****             break;
+  55:../../Classes/FIIR/CapFir.cpp **** 
+  56:../../Classes/FIIR/CapFir.cpp ****         case HIGH:
+  57:../../Classes/FIIR/CapFir.cpp ****             for (int i = 63; i > 0; i--) {
+  58:../../Classes/FIIR/CapFir.cpp ****                 _bufferH[i] = _bufferH[i - 1];
+  59:../../Classes/FIIR/CapFir.cpp ****             }
+  60:../../Classes/FIIR/CapFir.cpp ****             _bufferH[0] = in;
+  61:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
+  62:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
+  63:../../Classes/FIIR/CapFir.cpp ****             }
+  64:../../Classes/FIIR/CapFir.cpp ****             break;
+  65:../../Classes/FIIR/CapFir.cpp ****     }
+  66:../../Classes/FIIR/CapFir.cpp **** 
+  67:../../Classes/FIIR/CapFir.cpp ****     return out;
+ 233              		.loc 1 67 5 is_stmt 1 view .LVU36
+  68:../../Classes/FIIR/CapFir.cpp **** }
+ 234              		.loc 1 68 1 is_stmt 0 view .LVU37
+ 235 001c BDEC028B 		vldm	sp!, {d8}
+ 236              		.cfi_remember_state
+ 237              		.cfi_restore 80
+ 238              		.cfi_restore 81
+ 239              		.cfi_def_cfa_offset 8
+ 240              	.LVL17:
+ 241              		.loc 1 68 1 view .LVU38
+ 242 0020 10BD     		pop	{r4, pc}
+ 243              	.LVL18:
+ 244              	.L13:
+ 245              		.cfi_restore_state
+ 246              	.LBB24:
+ 247              	.LBB11:
+ 248              	.LBB12:
+  48:../../Classes/FIIR/CapFir.cpp ****             }
+ 249              		.loc 1 48 29 view .LVU39
+ 250 0022 00F14803 		add	r3, r0, #72
+ 251 0026 7C22     		movs	r2, #124
+ 252 0028 00F14401 		add	r1, r0, #68
+ 253 002c 1846     		mov	r0, r3
+ 254              	.LVL19:
+  48:../../Classes/FIIR/CapFir.cpp ****             }
+ 255              		.loc 1 48 29 view .LVU40
+ 256 002e FFF7FEFF 		bl	memmove
+ 257              	.LVL20:
+  48:../../Classes/FIIR/CapFir.cpp ****             }
+ 258              		.loc 1 48 29 view .LVU41
+ 259 0032 04F1C402 		add	r2, r4, #196
+ 260 0036 0346     		mov	r3, r0
+ 261              	.LBE12:
+  50:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
+ 262              		.loc 1 50 13 is_stmt 1 view .LVU42
+ 263              	.LBE11:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s 			page 7
+
+
+ 264              	.LBE24:
+  33:../../Classes/FIIR/CapFir.cpp **** 
+ 265              		.loc 1 33 11 is_stmt 0 view .LVU43
+ 266 0038 9FED220A 		vldr.32	s0, .L31
+ 267              	.LBB25:
+ 268              	.LBB18:
+  50:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
+ 269              		.loc 1 50 25 view .LVU44
+ 270 003c 84ED118A 		vstr.32	s16, [r4, #68]
+  51:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
+ 271              		.loc 1 51 13 is_stmt 1 view .LVU45
+ 272              	.LVL21:
+ 273              	.LBB13:
+  51:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
+ 274              		.loc 1 51 31 view .LVU46
+ 275 0040 01E0     		b	.L17
+ 276              	.LVL22:
+ 277              	.L28:
+  52:../../Classes/FIIR/CapFir.cpp ****             }
+ 278              		.loc 1 52 34 is_stmt 0 view .LVU47
+ 279 0042 B3EC018A 		vldmia.32	r3!, {s16}
+ 280              	.LVL23:
+ 281              	.L17:
+  52:../../Classes/FIIR/CapFir.cpp ****             }
+ 282              		.loc 1 52 17 is_stmt 1 discriminator 2 view .LVU48
+  52:../../Classes/FIIR/CapFir.cpp ****             }
+ 283              		.loc 1 52 21 is_stmt 0 discriminator 2 view .LVU49
+ 284 0046 D3ED6F7A 		vldr.32	s15, [r3, #444]
+  51:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
+ 285              		.loc 1 51 31 discriminator 2 view .LVU50
+ 286 004a 9A42     		cmp	r2, r3
+  52:../../Classes/FIIR/CapFir.cpp ****             }
+ 287              		.loc 1 52 21 discriminator 2 view .LVU51
+ 288 004c A7EE880A 		vfma.f32	s0, s15, s16
+ 289              	.LVL24:
+  51:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
+ 290              		.loc 1 51 13 is_stmt 1 discriminator 2 view .LVU52
+  51:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
+ 291              		.loc 1 51 31 discriminator 2 view .LVU53
+ 292 0050 F7D1     		bne	.L28
+ 293              	.LBE13:
+ 294              	.LBE18:
+ 295              	.LBE25:
+ 296              		.loc 1 68 1 is_stmt 0 view .LVU54
+ 297 0052 BDEC028B 		vldm	sp!, {d8}
+ 298              		.cfi_remember_state
+ 299              		.cfi_restore 80
+ 300              		.cfi_restore 81
+ 301              		.cfi_def_cfa_offset 8
+ 302 0056 10BD     		pop	{r4, pc}
+ 303              	.LVL25:
+ 304              	.L27:
+ 305              		.cfi_restore_state
+ 306              	.LBB26:
+ 307              	.LBB19:
+ 308              	.LBB14:
+  38:../../Classes/FIIR/CapFir.cpp ****             }
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s 			page 8
+
+
+ 309              		.loc 1 38 29 view .LVU55
+ 310 0058 00F10803 		add	r3, r0, #8
+ 311 005c 3C22     		movs	r2, #60
+ 312 005e 011D     		adds	r1, r0, #4
+ 313 0060 1846     		mov	r0, r3
+ 314              	.LVL26:
+  38:../../Classes/FIIR/CapFir.cpp ****             }
+ 315              		.loc 1 38 29 view .LVU56
+ 316 0062 FFF7FEFF 		bl	memmove
+ 317              	.LVL27:
+  38:../../Classes/FIIR/CapFir.cpp ****             }
+ 318              		.loc 1 38 29 view .LVU57
+ 319 0066 04F14402 		add	r2, r4, #68
+ 320 006a 0346     		mov	r3, r0
+ 321              	.LBE14:
+  40:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
+ 322              		.loc 1 40 13 is_stmt 1 view .LVU58
+ 323              	.LBE19:
+ 324              	.LBE26:
+  33:../../Classes/FIIR/CapFir.cpp **** 
+ 325              		.loc 1 33 11 is_stmt 0 view .LVU59
+ 326 006c 9FED150A 		vldr.32	s0, .L31
+ 327              	.LBB27:
+ 328              	.LBB20:
+  40:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
+ 329              		.loc 1 40 25 view .LVU60
+ 330 0070 84ED018A 		vstr.32	s16, [r4, #4]
+  41:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
+ 331              		.loc 1 41 13 is_stmt 1 view .LVU61
+ 332              	.LVL28:
+ 333              	.LBB15:
+  41:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
+ 334              		.loc 1 41 31 view .LVU62
+ 335 0074 01E0     		b	.L16
+ 336              	.LVL29:
+ 337              	.L29:
+  42:../../Classes/FIIR/CapFir.cpp ****             }
+ 338              		.loc 1 42 34 is_stmt 0 view .LVU63
+ 339 0076 B3EC018A 		vldmia.32	r3!, {s16}
+ 340              	.LVL30:
+ 341              	.L16:
+  42:../../Classes/FIIR/CapFir.cpp ****             }
+ 342              		.loc 1 42 17 is_stmt 1 discriminator 2 view .LVU64
+  42:../../Classes/FIIR/CapFir.cpp ****             }
+ 343              		.loc 1 42 21 is_stmt 0 discriminator 2 view .LVU65
+ 344 007a D3ED6F7A 		vldr.32	s15, [r3, #444]
+  41:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
+ 345              		.loc 1 41 31 discriminator 2 view .LVU66
+ 346 007e 9A42     		cmp	r2, r3
+  42:../../Classes/FIIR/CapFir.cpp ****             }
+ 347              		.loc 1 42 21 discriminator 2 view .LVU67
+ 348 0080 A7EE880A 		vfma.f32	s0, s15, s16
+ 349              	.LVL31:
+  41:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
+ 350              		.loc 1 41 13 is_stmt 1 discriminator 2 view .LVU68
+  41:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
+ 351              		.loc 1 41 31 discriminator 2 view .LVU69
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s 			page 9
+
+
+ 352 0084 F7D1     		bne	.L29
+ 353              	.LBE15:
+ 354              	.LBE20:
+ 355              	.LBE27:
+ 356              		.loc 1 68 1 is_stmt 0 view .LVU70
+ 357 0086 BDEC028B 		vldm	sp!, {d8}
+ 358              		.cfi_remember_state
+ 359              		.cfi_restore 80
+ 360              		.cfi_restore 81
+ 361              		.cfi_def_cfa_offset 8
+ 362 008a 10BD     		pop	{r4, pc}
+ 363              	.LVL32:
+ 364              	.L14:
+ 365              		.cfi_restore_state
+ 366              	.LBB28:
+ 367              	.LBB21:
+ 368              	.LBB16:
+  58:../../Classes/FIIR/CapFir.cpp ****             }
+ 369              		.loc 1 58 29 view .LVU71
+ 370 008c 00F1C803 		add	r3, r0, #200
+ 371 0090 FC22     		movs	r2, #252
+ 372 0092 00F1C401 		add	r1, r0, #196
+ 373 0096 1846     		mov	r0, r3
+ 374              	.LVL33:
+  58:../../Classes/FIIR/CapFir.cpp ****             }
+ 375              		.loc 1 58 29 view .LVU72
+ 376 0098 FFF7FEFF 		bl	memmove
+ 377              	.LVL34:
+  58:../../Classes/FIIR/CapFir.cpp ****             }
+ 378              		.loc 1 58 29 view .LVU73
+ 379 009c 04F5E272 		add	r2, r4, #452
+ 380 00a0 0346     		mov	r3, r0
+ 381              	.LBE16:
+  60:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
+ 382              		.loc 1 60 13 is_stmt 1 view .LVU74
+ 383              	.LBE21:
+ 384              	.LBE28:
+  33:../../Classes/FIIR/CapFir.cpp **** 
+ 385              		.loc 1 33 11 is_stmt 0 view .LVU75
+ 386 00a2 9FED080A 		vldr.32	s0, .L31
+ 387              	.LBB29:
+ 388              	.LBB22:
+  60:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
+ 389              		.loc 1 60 25 view .LVU76
+ 390 00a6 84ED318A 		vstr.32	s16, [r4, #196]
+  61:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
+ 391              		.loc 1 61 13 is_stmt 1 view .LVU77
+ 392              	.LVL35:
+ 393              	.LBB17:
+  61:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
+ 394              		.loc 1 61 31 view .LVU78
+ 395 00aa 01E0     		b	.L18
+ 396              	.LVL36:
+ 397              	.L30:
+  62:../../Classes/FIIR/CapFir.cpp ****             }
+ 398              		.loc 1 62 34 is_stmt 0 view .LVU79
+ 399 00ac B3EC018A 		vldmia.32	r3!, {s16}
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s 			page 10
+
+
+ 400              	.LVL37:
+ 401              	.L18:
+  62:../../Classes/FIIR/CapFir.cpp ****             }
+ 402              		.loc 1 62 17 is_stmt 1 discriminator 2 view .LVU80
+  62:../../Classes/FIIR/CapFir.cpp ****             }
+ 403              		.loc 1 62 21 is_stmt 0 discriminator 2 view .LVU81
+ 404 00b0 D3ED6F7A 		vldr.32	s15, [r3, #444]
+  61:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
+ 405              		.loc 1 61 31 discriminator 2 view .LVU82
+ 406 00b4 9A42     		cmp	r2, r3
+  62:../../Classes/FIIR/CapFir.cpp ****             }
+ 407              		.loc 1 62 21 discriminator 2 view .LVU83
+ 408 00b6 A7EE880A 		vfma.f32	s0, s15, s16
+ 409              	.LVL38:
+  61:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
+ 410              		.loc 1 61 13 is_stmt 1 discriminator 2 view .LVU84
+  61:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
+ 411              		.loc 1 61 31 discriminator 2 view .LVU85
+ 412 00ba F7D1     		bne	.L30
+ 413              	.LBE17:
+ 414              	.LBE22:
+ 415              	.LBE29:
+ 416              		.loc 1 68 1 is_stmt 0 view .LVU86
+ 417 00bc BDEC028B 		vldm	sp!, {d8}
+ 418              		.cfi_restore 80
+ 419              		.cfi_restore 81
+ 420              		.cfi_def_cfa_offset 8
+ 421 00c0 10BD     		pop	{r4, pc}
+ 422              	.LVL39:
+ 423              	.L32:
+ 424              		.loc 1 68 1 view .LVU87
+ 425 00c2 00BF     		.align	2
+ 426              	.L31:
+ 427 00c4 00000000 		.word	0
+ 428              		.cfi_endproc
+ 429              	.LFE4847:
+ 431              		.section	.rodata
+ 432              		.align	2
+ 433              		.set	.LANCHOR0,. + 0
+ 434              	.LC0:
+ 435 0000 A8561B3C 		.word	1008424616
+ 436 0004 79BD6A3C 		.word	1013628281
+ 437 0008 C45EE53C 		.word	1021664964
+ 438 000c CCCE453D 		.word	1027985100
+ 439 0010 1AF8923D 		.word	1033041946
+ 440 0014 0B32C13D 		.word	1036071435
+ 441 0018 F176E53D 		.word	1038448369
+ 442 001c 4D5DF93D 		.word	1039752525
+ 443 0020 4D5DF93D 		.word	1039752525
+ 444 0024 F176E53D 		.word	1038448369
+ 445 0028 0B32C13D 		.word	1036071435
+ 446 002c 1AF8923D 		.word	1033041946
+ 447 0030 CCCE453D 		.word	1027985100
+ 448 0034 C45EE53C 		.word	1021664964
+ 449 0038 79BD6A3C 		.word	1013628281
+ 450 003c A8561B3C 		.word	1008424616
+ 451              	.LC1:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s 			page 11
+
+
+ 452 0040 B4D3873B 		.word	998757300
+ 453 0044 F2099B3B 		.word	1000016370
+ 454 0048 5858CF3B 		.word	1003444312
+ 455 004c B332123C 		.word	1007825587
+ 456 0050 98154C3C 		.word	1011619224
+ 457 0054 5FC1893C 		.word	1015660895
+ 458 0058 96F5B23C 		.word	1018361238
+ 459 005c FB0FE03C 		.word	1021317115
+ 460 0060 F19D073D 		.word	1023909361
+ 461 0064 053F1F3D 		.word	1025457925
+ 462 0068 A7E6353D 		.word	1026942631
+ 463 006c 46964A3D 		.word	1028298310
+ 464 0070 36625C3D 		.word	1029464630
+ 465 0074 8D7D6A3D 		.word	1030389133
+ 466 0078 A044743D 		.word	1031029920
+ 467 007c 6E45793D 		.word	1031357806
+ 468 0080 6E45793D 		.word	1031357806
+ 469 0084 A044743D 		.word	1031029920
+ 470 0088 8D7D6A3D 		.word	1030389133
+ 471 008c 36625C3D 		.word	1029464630
+ 472 0090 46964A3D 		.word	1028298310
+ 473 0094 A7E6353D 		.word	1026942631
+ 474 0098 053F1F3D 		.word	1025457925
+ 475 009c F19D073D 		.word	1023909361
+ 476 00a0 FB0FE03C 		.word	1021317115
+ 477 00a4 96F5B23C 		.word	1018361238
+ 478 00a8 5FC1893C 		.word	1015660895
+ 479 00ac 98154C3C 		.word	1011619224
+ 480 00b0 B332123C 		.word	1007825587
+ 481 00b4 5858CF3B 		.word	1003444312
+ 482 00b8 F2099B3B 		.word	1000016370
+ 483 00bc B4D3873B 		.word	998757300
+ 484              	.LC2:
+ 485 00c0 B1199E3A 		.word	983439793
+ 486 00c4 722EAC3A 		.word	984362610
+ 487 00c8 47C8C43A 		.word	985974855
+ 488 00cc D948E93A 		.word	988367065
+ 489 00d0 6F720D3B 		.word	990737007
+ 490 00d4 824E2D3B 		.word	992824962
+ 491 00d8 CC9A543B 		.word	995400396
+ 492 00dc 08CC813B 		.word	998362120
+ 493 00e0 AA319D3B 		.word	1000157610
+ 494 00e4 197ABC3B 		.word	1002207769
+ 495 00e8 9A8DDF3B 		.word	1004506522
+ 496 00ec 4620033C 		.word	1006837830
+ 497 00f0 182A183C 		.word	1008216600
+ 498 00f4 54BB2E3C 		.word	1009695572
+ 499 00f8 26A2463C 		.word	1011261990
+ 500 00fc 60A45F3C 		.word	1012900960
+ 501 0100 5F80793C 		.word	1014595679
+ 502 0104 15F7893C 		.word	1015674645
+ 503 0108 2950973C 		.word	1016549417
+ 504 010c CDA2A43C 		.word	1017422541
+ 505 0110 F9C4B13C 		.word	1018283257
+ 506 0114 178CBE3C 		.word	1019120663
+ 507 0118 B9CDCA3C 		.word	1019923897
+ 508 011c 4960D63C 		.word	1020682313
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s 			page 12
+
+
+ 509 0120 DF1BE13C 		.word	1021385695
+ 510 0124 EADAEA3C 		.word	1022024426
+ 511 0128 D77AF33C 		.word	1022589655
+ 512 012c CBDCFA3C 		.word	1023073483
+ 513 0130 0D73003D 		.word	1023439629
+ 514 0134 6AC0023D 		.word	1023590506
+ 515 0138 164E043D 		.word	1023692310
+ 516 013c 5A16053D 		.word	1023743578
+ 517 0140 5A16053D 		.word	1023743578
+ 518 0144 164E043D 		.word	1023692310
+ 519 0148 6AC0023D 		.word	1023590506
+ 520 014c 0D73003D 		.word	1023439629
+ 521 0150 CBDCFA3C 		.word	1023073483
+ 522 0154 D77AF33C 		.word	1022589655
+ 523 0158 EADAEA3C 		.word	1022024426
+ 524 015c DF1BE13C 		.word	1021385695
+ 525 0160 4960D63C 		.word	1020682313
+ 526 0164 B9CDCA3C 		.word	1019923897
+ 527 0168 178CBE3C 		.word	1019120663
+ 528 016c F9C4B13C 		.word	1018283257
+ 529 0170 CDA2A43C 		.word	1017422541
+ 530 0174 2950973C 		.word	1016549417
+ 531 0178 15F7893C 		.word	1015674645
+ 532 017c 5F80793C 		.word	1014595679
+ 533 0180 60A45F3C 		.word	1012900960
+ 534 0184 26A2463C 		.word	1011261990
+ 535 0188 54BB2E3C 		.word	1009695572
+ 536 018c 182A183C 		.word	1008216600
+ 537 0190 4620033C 		.word	1006837830
+ 538 0194 9A8DDF3B 		.word	1004506522
+ 539 0198 197ABC3B 		.word	1002207769
+ 540 019c AA319D3B 		.word	1000157610
+ 541 01a0 08CC813B 		.word	998362120
+ 542 01a4 CC9A543B 		.word	995400396
+ 543 01a8 824E2D3B 		.word	992824962
+ 544 01ac 6F720D3B 		.word	990737007
+ 545 01b0 D948E93A 		.word	988367065
+ 546 01b4 47C8C43A 		.word	985974855
+ 547 01b8 722EAC3A 		.word	984362610
+ 548 01bc B1199E3A 		.word	983439793
+ 549              		.text
+ 550              	.Letext0:
+ 551              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 552              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 553              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 554              		.file 5 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 555              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 556              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 557              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 558              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 559              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 560              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 561              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 562              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 563              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 564              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 565              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s 			page 13
+
+
+ 566              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 567              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 568              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 569              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 570              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 571              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
+ 572              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 573              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 574              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 575              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 576              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 577              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 578              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 579              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 580              		.file 31 "../../Classes/FIIR/../../libs/libDaisy/src/daisy_core.h"
+ 581              		.file 32 "../../libs/libDaisy/src/util/wav_format.h"
+ 582              		.file 33 "../../Classes/FIIR/../../libs/libDaisy/src/dev/sr_595.h"
+ 583              		.file 34 "../../Classes/FIIR/../../libs/libDaisy/src/dev/max11300.h"
+ 584              		.file 35 "../../Classes/FIIR/../../libs/libDaisy/src/daisy_seed.h"
+ 585              		.file 36 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 586              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 587              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 588              		.file 39 "../../Classes/FIIR/../../libs/DaisySP/Source/Control/adenv.h"
+ 589              		.file 40 "../../libs/DaisySP/Source/Utility/dsp.h"
+ 590              		.file 41 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 591              		.file 42 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 592              		.file 43 "../../Classes/FIIR/CapFir.h"
+ 593              		.file 44 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 CapFir.cpp
+C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s:17     .text._ZN6CapFirC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s:26     .text._ZN6CapFirC2Ev:00000000 _ZN6CapFirC2Ev
+C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s:80     .text._ZN6CapFirC2Ev:00000050 $d
+C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s:26     .text._ZN6CapFirC2Ev:00000000 _ZN6CapFirC1Ev
+C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s:87     .text._ZN6CapFirD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s:95     .text._ZN6CapFirD2Ev:00000000 _ZN6CapFirD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s:95     .text._ZN6CapFirD2Ev:00000000 _ZN6CapFirD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s:111    .text._ZN6CapFir4InitENS_7ResTypeE:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s:119    .text._ZN6CapFir4InitENS_7ResTypeE:00000000 _ZN6CapFir4InitENS_7ResTypeE
+C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s:188    .text._ZN6CapFir7ProcessEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s:196    .text._ZN6CapFir7ProcessEf:00000000 _ZN6CapFir7ProcessEf
+C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s:427    .text._ZN6CapFir7ProcessEf:000000c4 $d
+C:\Users\skipi\AppData\Local\Temp\ccqbu6L6.s:432    .rodata:00000000 $d
+
+UNDEFINED SYMBOLS
+memcpy
+memset
+memmove

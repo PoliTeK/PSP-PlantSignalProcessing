@@ -1,10 +1,11 @@
 #include "../../libs/libDaisy/src/daisy_seed.h"
 #include "../../libs/DaisySP/Source/daisysp.h"
+#include "../../Classes/FIIR/CapFir.h"
 
 #ifndef _BV
 #define _BV(bit) (1 << (bit))
 #endif
-#define DEBUG
+//#define DEBUG
 using namespace daisy;
 using namespace daisysp;
 
@@ -12,10 +13,12 @@ daisy::Mpr121I2C::Config mpr121ObjConf; // creates config for mpr121 (constructo
 daisy::Mpr121I2C cap;                   // creates object for mpr121ù
 
 DaisySeed hw;
+CapFir capFilter; // creates object for the CapFir filter
 
 static Oscillator osc;     // creates an oscillator object
 float f = 0.0f;     // used to store the frequency
 float delta = 0.0f; // used to store the delta value
+float filtDelta = 0.0f; // used to store the filtered delta value
 bool gate = false;  // used to store the gate value
 
 uint16_t lastTouched = 0;                               // used to store the last touched value
@@ -79,15 +82,18 @@ int main()
   }
 
   // cap.SetThresholds(12, 6);                                           // sets the touch and release thresholds for all 12 channels         // non funziona PD
+  capFilter.Init(CapFir::ResType::MID); 
   hw.StartAudio(AudioCallback);
+
   while (1)
   {
     currTouched = cap.Touched();                                   // reads the touched channels from the mpr121
     if ((currTouched & _BV(0)) && !(lastTouched & _BV(0)) || gate) // if the channel 0 is touched and it was not touched before
     {
+      gate = true; // sets the gate to true
       delta = (float)(cap.FilteredData(0) - cap.BaselineData(0) - touchTreshold); // calculates the delta between the filtered and baseline data
-      gate = true;
-      f = 440 + (delta / 40) * 440;
+      filtDelta = capFilter.Process(delta); 
+      f = 440 + (filtDelta / 40) * 440;
       osc.SetFreq(f);
 #ifdef DEBUG // sets the gate to true
       hw.PrintLine("--------------------------------------------------------------------------------");
@@ -114,6 +120,7 @@ int main()
       hw.PrintLine("| Baseline Touched Value : %d |", cap.BaselineData(0));
       hw.PrintLine("| Filtered Touched Value : %d |", cap.FilteredData(0));
       hw.PrintLine("| Difference Touched Value : %d |", cap.BaselineData(0) - cap.FilteredData(0));
+      hw.PrintLine("| Frequency : %f |", f);
       hw.PrintLine("| ");
     }
     else
@@ -130,6 +137,6 @@ int main()
 
     lastTouched = currTouched;
 
-    hw.DelayMs(100);
+    hw.DelayMs(1);
   }
 }

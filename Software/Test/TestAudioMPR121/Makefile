@@ -5,7 +5,7 @@ TARGET = main
 
 # Sources
 
-CPP_SOURCES = main.cpp 
+CPP_SOURCES = main.cpp ../../Classes/FIIR/CapFir.cpp
 
 
 # Library Locations

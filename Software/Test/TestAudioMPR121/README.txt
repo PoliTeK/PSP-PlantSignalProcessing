@@ -1,4 +1,6 @@
-Cartella contenente test di componenti ecc, NOMINARE OGNI TEST : "Test_....."## ⚙️ Collegamenti Hardware
+Cartella contenente test di componenti ecc, NOMINARE OGNI TEST : "Test_....."## 
+
+⚙️ Collegamenti Hardware
 
 Collegare il modulo **MPR121** alla **Daisy Seed** come segue:
 
@@ -20,8 +22,9 @@ Il codice:
 - Inizializza un **oscillatore audio** (forma d’onda: triangolare) con frequenza base 440 Hz.
 - Monitora **il canale 0** del sensore capacitivo.
 - Calcola la differenza tra il valore **Baseline** e il valore **Filtered** del sensore (Δ).
+- Filtro con un FIR il valore di Delta per renderlo più stabile ed allos tesso tempo reattivo
 - Quando viene rilevato un tocco:
-  - La frequenza dell’oscillatore viene **modificata dinamicamente** in base a Δ.
+  - La frequenza dell’oscillatore viene **modificata dinamicamente** in base a Δ Filtrato.
   - Il suono viene riprodotto finché il tocco è presente.
 - Quando il dito viene rimosso, l'audio si interrompe.
 
@@ -97,8 +100,8 @@ Difference Untouched Value : -3
 
 # Next Steps
 
+- Temperare la pianta
 - Trovare modo per impostare le soglie dinamicamente
 - Algoritmo di controllo delle soglie per rendere lk'esperienza sempre uguale
-- Rendere stabile la lettura per una generazione di toni più lineare e stabile
 - introdurre controlli sul suono
--
+
