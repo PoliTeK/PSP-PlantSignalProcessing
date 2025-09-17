@@ -21,6 +21,9 @@ float delta = 0.0f;
 float filtDelta = 0.0f; 
 bool gate = false;  
 
+static Adsr env;
+
+
 uint16_t lastTouched = 0;                               // last touched value
 uint16_t currTouched = 0;                               // current touched value                                        ù
 uint8_t touchTreshold = MPR121_TOUCH_THRESHOLD_DEFAULT; 
@@ -29,18 +32,15 @@ float output = 0.0f; // used to store the output value
 
 static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::InterleavingOutputBuffer out, size_t size)
 {
-
+  float envOut, oscOut;
   for (size_t i = 0; i < size; i += 2)
   {
 
-    if (gate)
-    {
-      out[i] = out[i + 1] = osc.Process(); // if the gate is true, set the output to 0
-    }
-    else
-    {
-      out[i] = out[i + 1] = 0.0f;
-    }
+    envOut = env.Process(gate); 
+    osc.SetAmp(envOut);
+
+    oscOut = osc.Process();
+    out[i] = out[i + 1] = oscOut;               // outputs the same value to left and right channels
   }
 }
 
@@ -59,6 +59,12 @@ int main()
   osc.SetWaveform(Oscillator::WAVE_TRI); // sets the waveform
   osc.SetFreq(440.0f);                   // sets the frequency
   osc.SetAmp(0.5f);                      // sets the amplitude
+
+  env.Init(sampleRate); // initializes the envelope with the sample rate
+  env.SetTime(ADSR_SEG_ATTACK, 0.05f);
+  env.SetTime(ADSR_SEG_DECAY, 0.1f);
+  env.SetSustainLevel(0.7f);
+  env.SetTime(ADSR_SEG_RELEASE, 0.2f);
 
   #ifdef DEBUG
   hw.StartLog(false); // starts the log to the serial port
