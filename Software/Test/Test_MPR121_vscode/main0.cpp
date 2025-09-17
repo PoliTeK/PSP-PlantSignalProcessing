@@ -15,7 +15,7 @@ daisy::Mpr121I2C::Config mpr121ObjConf;                       // creates config 
 daisy::Mpr121I2C cap;                                         // creates object for mpr121ù
 
 DaisySeed hw;
-
+int t;
 CapFir filter;                                                   // creates object for the CapFir filter
 
 uint16_t lasttouched = 0;                                     // used to store the last touched value
@@ -75,16 +75,16 @@ int main()
     if (touched)                                                     
     {
       hw.PrintLine("| ");
-      hw.PrintLine("| Baseline Touched Value : %d |", cap.BaselineData(0));
-      hw.PrintLine("| Filtered Touched Value : %d |", cap.FilteredData(0));
+      //hw.PrintLine("| Baseline Touched Value : %d |", cap.BaselineData(0));
+      //hw.PrintLine("| Filtered Touched Value : %d |", cap.FilteredData(0));
       hw.PrintLine("| Difference Touched Value : %d |", cap.BaselineData(0) - cap.FilteredData(0));
       hw.PrintLine("| Filtered Difference Touched Value : %f |", filter.Process(cap.BaselineData(0) - cap.FilteredData(0)));
       hw.PrintLine("| ");
     } else {
       hw.PrintLine(" ");
       hw.PrintLine(" ");
-      hw.PrintLine("Baseline Untouched Value : %d", cap.BaselineData(0));
-      hw.PrintLine("Filtered Untouched Value : %d", cap.FilteredData(0));
+      //hw.PrintLine("Baseline Untouched Value : %d", cap.BaselineData(0));
+      //hw.PrintLine("Filtered Untouched Value : %d", cap.FilteredData(0));
       hw.PrintLine("Difference Untouched Value : %d", cap.BaselineData(0)-cap.FilteredData(0));
       hw.PrintLine("Filtered Difference Untouched Value : %f", filter.Process(cap.BaselineData(0) - cap.FilteredData(0)));
       hw.PrintLine(" ");
@@ -95,6 +95,7 @@ int main()
     lasttouched = currtouched;
 
    
-    hw.DelayMs(1);
+    hw.DelayMs(100);
+    
   }
 }

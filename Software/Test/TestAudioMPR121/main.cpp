@@ -5,7 +5,7 @@
 #ifndef _BV
 #define _BV(bit) (1 << (bit))
 #endif
-//#define DEBUG
+#define DEBUG
 using namespace daisy;
 using namespace daisysp;
 
@@ -15,15 +15,15 @@ daisy::Mpr121I2C cap;                   // creates object for mpr121ù
 DaisySeed hw;
 CapFir capFilter; // creates object for the CapFir filter
 
-static Oscillator osc;     // creates an oscillator object
-float f = 0.0f;     // used to store the frequency
-float delta = 0.0f; // used to store the delta value
-float filtDelta = 0.0f; // used to store the filtered delta value
-bool gate = false;  // used to store the gate value
+static Oscillator osc;     
+float f = 0.0f;     
+float delta = 0.0f; 
+float filtDelta = 0.0f; 
+bool gate = false;  
 
-uint16_t lastTouched = 0;                               // used to store the last touched value
-uint16_t currTouched = 0;                               // used to store the current touched value                                         // used to check if the cap was touched or not
-uint8_t touchTreshold = MPR121_TOUCH_THRESHOLD_DEFAULT; // used to set the touch treshold
+uint16_t lastTouched = 0;                               // last touched value
+uint16_t currTouched = 0;                               // current touched value                                        ù
+uint8_t touchTreshold = MPR121_TOUCH_THRESHOLD_DEFAULT; 
 
 float output = 0.0f; // used to store the output value
 
@@ -82,7 +82,7 @@ int main()
   }
 
   // cap.SetThresholds(12, 6);                                           // sets the touch and release thresholds for all 12 channels         // non funziona PD
-  capFilter.Init(CapFir::ResType::MID); 
+  capFilter.Init(CapFir::ResType::LOW); 
   hw.StartAudio(AudioCallback);
 
   while (1)
@@ -93,22 +93,22 @@ int main()
       gate = true; // sets the gate to true
       delta = (float)(cap.FilteredData(0) - cap.BaselineData(0) - touchTreshold); // calculates the delta between the filtered and baseline data
       filtDelta = capFilter.Process(delta); 
-      f = 440 + (filtDelta / 40) * 440;
+      f = 880 + (filtDelta / 70) * 880;
       osc.SetFreq(f);
-#ifdef DEBUG // sets the gate to true
-      hw.PrintLine("--------------------------------------------------------------------------------");
-      hw.PrintLine("CAP 0 touched");
-#endif
+      #ifdef DEBUG // sets the gate to true
+        hw.PrintLine("--------------------------------------------------------------------------------");
+        hw.PrintLine("CAP 0 touched");
+      #endif
     }
 
     if (!(currTouched & _BV(0)) && (lastTouched & _BV(0))) // if the channel 0 was touched and it is not touched now
     {
       gate = false; // sets the gate to false
-#ifdef DEBUG
-      hw.PrintLine("CAP 0 released");
-      hw.PrintLine("--------------------------------------------------------------------------------");
-      hw.PrintLine(" ");
-#endif
+      #ifdef DEBUG
+        hw.PrintLine("CAP 0 released");
+        hw.PrintLine("--------------------------------------------------------------------------------");
+        hw.PrintLine(" ");
+      #endif
     }
 
     // calculates the frequency based on the delta value
@@ -137,6 +137,6 @@ int main()
 
     lastTouched = currTouched;
 
-    hw.DelayMs(1);
+    hw.DelayMs(10);
   }
 }
