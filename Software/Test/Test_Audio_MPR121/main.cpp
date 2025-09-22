@@ -1,11 +1,11 @@
 #include "../../libs/libDaisy/src/daisy_seed.h"
 #include "../../libs/DaisySP/Source/daisysp.h"
-#include "../../Classes/FIIR/CapFir.h"
+#include "../../Classes/Temperamento/PlantConditioner.h"
 
 #ifndef _BV
 #define _BV(bit) (1 << (bit))
 #endif
-#define DEBUG
+//#define DEBUG
 using namespace daisy;
 using namespace daisysp;
 
@@ -14,6 +14,7 @@ daisy::Mpr121I2C cap;                   // creates object for mpr121ù
 
 DaisySeed hw;
 CapFir capFilter; // creates object for the CapFir filter
+PlantConditioner pc;
 
 static Oscillator osc;     
 float f = 0.0f;     
@@ -55,6 +56,11 @@ int main()
   hw.SetAudioBlockSize(4);
   sampleRate = hw.AudioSampleRate();
 
+  pc.Init(CapFir::ResType::HIGH); 
+  pc.setScale(PlantConditioner::Fs, PlantConditioner::Major);
+  pc.setOctave(5);
+  pc.setBounds(4, 65);
+
   osc.Init(sampleRate);                  // initializes the oscillator with the sample rate
   osc.SetWaveform(Oscillator::WAVE_TRI); // sets the waveform
   osc.SetFreq(440.0f);                   // sets the frequency
@@ -79,8 +85,7 @@ int main()
       hw.SetLed(true); // blink if not ok
       hw.DelayMs(500);
       hw.SetLed(false);
-      hw.DelayMs(500);
-    }
+      hw.DelayMs(500);    }
   }
   else
   {
@@ -88,7 +93,6 @@ int main()
   }
 
   // cap.SetThresholds(12, 6);                                           // sets the touch and release thresholds for all 12 channels         // non funziona PD
-  capFilter.Init(CapFir::ResType::LOW); 
   hw.StartAudio(AudioCallback);
 
   while (1)
@@ -97,9 +101,7 @@ int main()
     if ((currTouched & _BV(0)) && !(lastTouched & _BV(0)) || gate) // if the channel 0 is touched and it was not touched before
     {
       gate = true; // sets the gate to true
-      delta = (float)(cap.FilteredData(0) - cap.BaselineData(0) - touchTreshold); // calculates the delta between the filtered and baseline data
-      filtDelta = capFilter.Process(delta); 
-      f = 880 + (filtDelta / 70) * 880;
+      f = pc.Process(cap.BaselineData(0), cap.FilteredData(0)); // calculates the frequency based on the delta value
       osc.SetFreq(f);
       #ifdef DEBUG // sets the gate to true
         hw.PrintLine("--------------------------------------------------------------------------------");

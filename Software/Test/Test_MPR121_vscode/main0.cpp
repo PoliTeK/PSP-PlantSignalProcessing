@@ -1,7 +1,9 @@
 #include "../../libs/libDaisy/src/daisy_seed.h"
 #include "../../libs/DaisySP/Source/daisysp.h"
-#include "../../Classes/FIIR/CapFir.h"
-
+//#include "../../Classes/FIIR/CapFir.h"
+#include "../../Classes/Temperamento/PlantConditioner.h"
+//#define DebugFrequencies
+#define DebugBins
 #ifndef _BV // used to mask registers' bits related to the channel
 #define _BV(bit) (1 << (bit))
 #endif
@@ -17,6 +19,7 @@ daisy::Mpr121I2C cap;                                         // creates object 
 DaisySeed hw;
 int t;
 CapFir filter;                                                   // creates object for the CapFir filter
+PlantConditioner pc;
 
 uint16_t lasttouched = 0;                                     // used to store the last touched value
 uint16_t currtouched = 0;                                     // used to store the current touched value
@@ -46,15 +49,17 @@ int main()
   }
   hw.PrintLine("MPR121 found!");
 
-  filter.Init(CapFir::ResType::LOW);                     // initializes the filter with the low pass type and 16 coefficients
+  pc.Init(CapFir::ResType::LOW);                     // initializes the filter with the low pass type and 16 coefficients
+  pc.setScale(PlantConditioner::C, PlantConditioner::Major);
+  pc.setOctave(3);
+  pc.setCurve(100, 2);                               // sets the curve of the scale
+
   //cap.SetThresholds(12, 6); // sets the touch and release thresholds for all 12 channels         // non funziona PD
 
   while (1)
   {
-
+    #ifdef DebugFrequencies
     currtouched = cap.Touched();                                            // reads the touched channels from the mpr121
-
-    
     if ((currtouched & _BV(0)) && !(lasttouched & _BV(0)))                 // if the channel 0 is touched and it was not touched before
     {
       hw.PrintLine("--------------------------------------------------------------------------------");
@@ -78,7 +83,7 @@ int main()
       //hw.PrintLine("| Baseline Touched Value : %d |", cap.BaselineData(0));
       //hw.PrintLine("| Filtered Touched Value : %d |", cap.FilteredData(0));
       hw.PrintLine("| Difference Touched Value : %d |", cap.BaselineData(0) - cap.FilteredData(0));
-      hw.PrintLine("| Filtered Difference Touched Value : %f |", filter.Process(cap.BaselineData(0) - cap.FilteredData(0)));
+      hw.PrintLine("| Filtered Difference Touched Value : %f |", pc.Process(cap.BaselineData(0), cap.FilteredData(0)));
       hw.PrintLine("| ");
     } else {
       hw.PrintLine(" ");
@@ -86,14 +91,20 @@ int main()
       //hw.PrintLine("Baseline Untouched Value : %d", cap.BaselineData(0));
       //hw.PrintLine("Filtered Untouched Value : %d", cap.FilteredData(0));
       hw.PrintLine("Difference Untouched Value : %d", cap.BaselineData(0)-cap.FilteredData(0));
-      hw.PrintLine("Filtered Difference Untouched Value : %f", filter.Process(cap.BaselineData(0) - cap.FilteredData(0)));
+      hw.PrintLine("Filtered Difference Untouched Value : %f", pc.Process(cap.BaselineData(0), cap.FilteredData(0)));
       hw.PrintLine(" ");
       hw.PrintLine(" ");
     }
-    
-    
     lasttouched = currtouched;
-
+    #endif
+    #ifdef DebugBins
+    float* bins = pc.getBin();
+    hw.PrintLine("Bins: ");
+    for (int i = 0; i < 7; i++) {
+        hw.Print("| %f | ", bins[i]);
+    }
+    hw.PrintLine(" ");
+    #endif
    
     hw.DelayMs(100);
     

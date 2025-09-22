@@ -1,0 +1,1161 @@
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"PlantConditioner.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN16PlantConditionerC2Ev,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_ZN16PlantConditionerC2Ev
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
+  26              	_ZN16PlantConditionerC2Ev:
+  27              	.LVL0:
+  28              	.LFB4841:
+  29              		.file 1 "../../Classes/Temperamento/PlantConditioner.cpp"
+   1:../../Classes/Temperamento/PlantConditioner.cpp **** # include "PlantConditioner.h"
+   2:../../Classes/Temperamento/PlantConditioner.cpp **** 
+   3:../../Classes/Temperamento/PlantConditioner.cpp **** PlantConditioner::PlantConditioner() {}
+  30              		.loc 1 3 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 24
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              	.LBB2:
+  35              		.loc 1 3 36 is_stmt 0 view .LVU1
+  36 0000 0223     		movs	r3, #2
+  37              	.LBE2:
+  38              		.loc 1 3 1 view .LVU2
+  39 0002 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+  40              		.cfi_def_cfa_offset 36
+  41              		.cfi_offset 4, -36
+  42              		.cfi_offset 5, -32
+  43              		.cfi_offset 6, -28
+  44              		.cfi_offset 7, -24
+  45              		.cfi_offset 8, -20
+  46              		.cfi_offset 9, -16
+  47              		.cfi_offset 10, -12
+  48              		.cfi_offset 11, -8
+  49              		.cfi_offset 14, -4
+  50 0006 0446     		mov	r4, r0
+  51 0008 87B0     		sub	sp, sp, #28
+  52              		.cfi_def_cfa_offset 64
+  53              	.LBB3:
+  54              		.loc 1 3 36 view .LVU3
+  55 000a 00F8043B 		strb	r3, [r0], #4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 2
+
+
+  56              	.LVL1:
+  57              		.loc 1 3 36 view .LVU4
+  58 000e FFF7FEFF 		bl	_ZN6CapFirC1Ev
+  59              	.LVL2:
+  60 0012 0722     		movs	r2, #7
+  61 0014 334D     		ldr	r5, .L4
+  62 0016 46F20153 		movw	r3, #25857
+  63 001a 84F88923 		strb	r2, [r4, #905]
+  64 001e 6421     		movs	r1, #100
+  65 0020 04F58462 		add	r2, r4, #1056
+  66 0024 A4F89433 		strh	r3, [r4, #916]	@ movhi
+  67 0028 84F89613 		strb	r1, [r4, #918]
+  68 002c 05F15403 		add	r3, r5, #84
+  69 0030 04F23C41 		addw	r1, r4, #1084
+  70 0034 0192     		str	r2, [sp, #4]
+  71 0036 05F1B400 		add	r0, r5, #180
+  72 003a 04F59062 		add	r2, r4, #1152
+  73 003e 0293     		str	r3, [sp, #8]
+  74 0040 04F5737A 		add	r10, r4, #972
+  75 0044 0391     		str	r1, [sp, #12]
+  76 0046 05F11C09 		add	r9, r5, #28
+  77 004a 0590     		str	r0, [sp, #20]
+  78 004c 05F13807 		add	r7, r5, #56
+  79 0050 0492     		str	r2, [sp, #16]
+  80 0052 05F1700B 		add	fp, r5, #112
+  81 0056 05F1840E 		add	lr, r5, #132
+  82 005a 04F57A78 		add	r8, r4, #1000
+  83 005e 04F20446 		addw	r6, r4, #1028
+  84 0062 04F58A6C 		add	ip, r4, #1104
+  85 0066 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+  86 0068 AAE80F00 		stmia	r10!, {r0, r1, r2, r3}
+  87 006c 95E80700 		ldm	r5, {r0, r1, r2}
+  88 0070 8AE80700 		stm	r10, {r0, r1, r2}
+  89 0074 B9E80F00 		ldmia	r9!, {r0, r1, r2, r3}
+  90 0078 A8E80F00 		stmia	r8!, {r0, r1, r2, r3}
+  91 007c 99E80700 		ldm	r9, {r0, r1, r2}
+  92 0080 88E80700 		stm	r8, {r0, r1, r2}
+  93 0084 0FCF     		ldmia	r7!, {r0, r1, r2, r3}
+  94 0086 0FC6     		stmia	r6!, {r0, r1, r2, r3}
+  95 0088 97E80700 		ldm	r7, {r0, r1, r2}
+  96 008c 029B     		ldr	r3, [sp, #8]
+  97 008e 019D     		ldr	r5, [sp, #4]
+  98 0090 86E80700 		stm	r6, {r0, r1, r2}
+  99 0094 1E46     		mov	r6, r3
+ 100 0096 2F46     		mov	r7, r5
+ 101 0098 0FCE     		ldmia	r6!, {r0, r1, r2, r3}
+ 102 009a 0FC7     		stmia	r7!, {r0, r1, r2, r3}
+ 103 009c 96E80700 		ldm	r6, {r0, r1, r2}
+ 104 00a0 87E80700 		stm	r7, {r0, r1, r2}
+ 105 00a4 BBE80F00 		ldmia	fp!, {r0, r1, r2, r3}
+ 106 00a8 039D     		ldr	r5, [sp, #12]
+ 107 00aa 0FC5     		stmia	r5!, {r0, r1, r2, r3}
+ 108 00ac DBF80030 		ldr	r3, [fp]
+ 109 00b0 2B60     		str	r3, [r5]
+ 110 00b2 BEE80F00 		ldmia	lr!, {r0, r1, r2, r3}
+ 111 00b6 ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
+ 112 00ba BEE80F00 		ldmia	lr!, {r0, r1, r2, r3}
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 3
+
+
+ 113 00be ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
+ 114 00c2 9EE80F00 		ldm	lr, {r0, r1, r2, r3}
+ 115 00c6 8CE80F00 		stm	ip, {r0, r1, r2, r3}
+ 116 00ca 0598     		ldr	r0, [sp, #20]
+ 117 00cc 049D     		ldr	r5, [sp, #16]
+ 118 00ce 0646     		mov	r6, r0
+ 119 00d0 0FCE     		ldmia	r6!, {r0, r1, r2, r3}
+ 120 00d2 0FC5     		stmia	r5!, {r0, r1, r2, r3}
+ 121 00d4 96E80300 		ldm	r6, {r0, r1}
+ 122 00d8 85E80300 		stm	r5, {r0, r1}
+ 123              	.LBE3:
+ 124              		.loc 1 3 39 view .LVU5
+ 125 00dc 2046     		mov	r0, r4
+ 126 00de 07B0     		add	sp, sp, #28
+ 127              		.cfi_def_cfa_offset 36
+ 128              		@ sp needed
+ 129 00e0 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 130              	.LVL3:
+ 131              	.L5:
+ 132              		.loc 1 3 39 view .LVU6
+ 133              		.align	2
+ 134              	.L4:
+ 135 00e4 00000000 		.word	.LANCHOR0
+ 136              		.cfi_endproc
+ 137              	.LFE4841:
+ 139              		.global	_ZN16PlantConditionerC1Ev
+ 140              		.thumb_set _ZN16PlantConditionerC1Ev,_ZN16PlantConditionerC2Ev
+ 141              		.section	.text._ZN16PlantConditionerD2Ev,"ax",%progbits
+ 142              		.align	1
+ 143              		.p2align 2,,3
+ 144              		.global	_ZN16PlantConditionerD2Ev
+ 145              		.syntax unified
+ 146              		.thumb
+ 147              		.thumb_func
+ 148              		.fpu fpv5-d16
+ 150              	_ZN16PlantConditionerD2Ev:
+ 151              	.LVL4:
+ 152              	.LFB4844:
+   4:../../Classes/Temperamento/PlantConditioner.cpp **** PlantConditioner::~PlantConditioner() {}
+ 153              		.loc 1 4 1 is_stmt 1 view -0
+ 154              		.cfi_startproc
+ 155              		@ args = 0, pretend = 0, frame = 0
+ 156              		@ frame_needed = 0, uses_anonymous_args = 0
+ 157              		.loc 1 4 1 is_stmt 0 view .LVU8
+ 158 0000 10B5     		push	{r4, lr}
+ 159              		.cfi_def_cfa_offset 8
+ 160              		.cfi_offset 4, -8
+ 161              		.cfi_offset 14, -4
+ 162              		.loc 1 4 1 view .LVU9
+ 163 0002 0446     		mov	r4, r0
+ 164              	.LBB4:
+ 165              		.loc 1 4 37 view .LVU10
+ 166 0004 0430     		adds	r0, r0, #4
+ 167              	.LVL5:
+ 168              		.loc 1 4 37 view .LVU11
+ 169 0006 FFF7FEFF 		bl	_ZN6CapFirD1Ev
+ 170              	.LVL6:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 4
+
+
+ 171              	.LBE4:
+ 172              		.loc 1 4 40 view .LVU12
+ 173 000a 2046     		mov	r0, r4
+ 174 000c 10BD     		pop	{r4, pc}
+ 175              		.loc 1 4 40 view .LVU13
+ 176              		.cfi_endproc
+ 177              	.LFE4844:
+ 179              		.global	_ZN16PlantConditionerD1Ev
+ 180              		.thumb_set _ZN16PlantConditionerD1Ev,_ZN16PlantConditionerD2Ev
+ 181 000e 00BF     		.section	.text._ZN16PlantConditioner4InitEN6CapFir7ResTypeE,"ax",%progbits
+ 182              		.align	1
+ 183              		.p2align 2,,3
+ 184              		.global	_ZN16PlantConditioner4InitEN6CapFir7ResTypeE
+ 185              		.syntax unified
+ 186              		.thumb
+ 187              		.thumb_func
+ 188              		.fpu fpv5-d16
+ 190              	_ZN16PlantConditioner4InitEN6CapFir7ResTypeE:
+ 191              	.LVL7:
+ 192              	.LFB4846:
+   5:../../Classes/Temperamento/PlantConditioner.cpp **** 
+   6:../../Classes/Temperamento/PlantConditioner.cpp **** void PlantConditioner::Init(CapFir::ResType res_type) {
+ 193              		.loc 1 6 55 is_stmt 1 view -0
+ 194              		.cfi_startproc
+ 195              		@ args = 0, pretend = 0, frame = 0
+ 196              		@ frame_needed = 0, uses_anonymous_args = 0
+   7:../../Classes/Temperamento/PlantConditioner.cpp ****     _capFir.Init(res_type);
+ 197              		.loc 1 7 5 view .LVU15
+   6:../../Classes/Temperamento/PlantConditioner.cpp ****     _capFir.Init(res_type);
+ 198              		.loc 1 6 55 is_stmt 0 view .LVU16
+ 199 0000 10B5     		push	{r4, lr}
+ 200              		.cfi_def_cfa_offset 8
+ 201              		.cfi_offset 4, -8
+ 202              		.cfi_offset 14, -4
+   6:../../Classes/Temperamento/PlantConditioner.cpp ****     _capFir.Init(res_type);
+ 203              		.loc 1 6 55 view .LVU17
+ 204 0002 0446     		mov	r4, r0
+ 205              		.loc 1 7 17 view .LVU18
+ 206 0004 0430     		adds	r0, r0, #4
+ 207              	.LVL8:
+ 208              		.loc 1 7 17 view .LVU19
+ 209 0006 FFF7FEFF 		bl	_ZN6CapFir4InitENS_7ResTypeE
+ 210              	.LVL9:
+   8:../../Classes/Temperamento/PlantConditioner.cpp ****     _delta = 0;
+ 211              		.loc 1 8 5 is_stmt 1 view .LVU20
+ 212              		.loc 1 8 12 is_stmt 0 view .LVU21
+ 213 000a 0021     		movs	r1, #0
+   9:../../Classes/Temperamento/PlantConditioner.cpp ****     _deltaFilt = 0;
+ 214              		.loc 1 9 16 view .LVU22
+ 215 000c 0022     		movs	r2, #0
+  10:../../Classes/Temperamento/PlantConditioner.cpp ****     _octave = 4;
+ 216              		.loc 1 10 13 view .LVU23
+ 217 000e 0423     		movs	r3, #4
+   8:../../Classes/Temperamento/PlantConditioner.cpp ****     _delta = 0;
+ 218              		.loc 1 8 12 view .LVU24
+ 219 0010 C4F88C13 		str	r1, [r4, #908]
+   9:../../Classes/Temperamento/PlantConditioner.cpp ****     _deltaFilt = 0;
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 5
+
+
+ 220              		.loc 1 9 5 is_stmt 1 view .LVU25
+   9:../../Classes/Temperamento/PlantConditioner.cpp ****     _deltaFilt = 0;
+ 221              		.loc 1 9 16 is_stmt 0 view .LVU26
+ 222 0014 C4F89023 		str	r2, [r4, #912]	@ float
+ 223              		.loc 1 10 5 is_stmt 1 view .LVU27
+ 224              		.loc 1 10 13 is_stmt 0 view .LVU28
+ 225 0018 84F88833 		strb	r3, [r4, #904]
+  11:../../Classes/Temperamento/PlantConditioner.cpp **** }
+ 226              		.loc 1 11 1 view .LVU29
+ 227 001c 10BD     		pop	{r4, pc}
+ 228              		.loc 1 11 1 view .LVU30
+ 229              		.cfi_endproc
+ 230              	.LFE4846:
+ 232 001e 00BF     		.section	.text._ZN16PlantConditioner8setScaleENS_5NotesENS_9ScaleTypeE,"ax",%progbits
+ 233              		.align	1
+ 234              		.p2align 2,,3
+ 235              		.global	_ZN16PlantConditioner8setScaleENS_5NotesENS_9ScaleTypeE
+ 236              		.syntax unified
+ 237              		.thumb
+ 238              		.thumb_func
+ 239              		.fpu fpv5-d16
+ 241              	_ZN16PlantConditioner8setScaleENS_5NotesENS_9ScaleTypeE:
+ 242              	.LVL10:
+ 243              	.LFB4847:
+  12:../../Classes/Temperamento/PlantConditioner.cpp **** void PlantConditioner::setScale( enum Notes rootNote, enum ScaleType scale_type) {
+ 244              		.loc 1 12 82 is_stmt 1 view -0
+ 245              		.cfi_startproc
+ 246              		@ args = 0, pretend = 0, frame = 0
+ 247              		@ frame_needed = 0, uses_anonymous_args = 0
+  13:../../Classes/Temperamento/PlantConditioner.cpp ****     switch (scale_type) 
+ 248              		.loc 1 13 5 view .LVU32
+  12:../../Classes/Temperamento/PlantConditioner.cpp **** void PlantConditioner::setScale( enum Notes rootNote, enum ScaleType scale_type) {
+ 249              		.loc 1 12 82 is_stmt 0 view .LVU33
+ 250 0000 70B5     		push	{r4, r5, r6, lr}
+ 251              		.cfi_def_cfa_offset 16
+ 252              		.cfi_offset 4, -16
+ 253              		.cfi_offset 5, -12
+ 254              		.cfi_offset 6, -8
+ 255              		.cfi_offset 14, -4
+ 256 0002 07EE901A 		vmov	s15, r1	@ int
+ 257 0006 0646     		mov	r6, r0
+ 258 0008 2DED028B 		vpush.64	{d8}
+ 259              		.cfi_def_cfa_offset 24
+ 260              		.cfi_offset 80, -24
+ 261              		.cfi_offset 81, -20
+ 262 000c 062A     		cmp	r2, #6
+ 263 000e 24D8     		bhi	.L11
+ 264 0010 DFE802F0 		tbb	[pc, r2]
+ 265              	.L13:
+ 266 0014 23       		.byte	(.L11-.L13)/2
+ 267 0015 7D       		.byte	(.L18-.L13)/2
+ 268 0016 9F       		.byte	(.L17-.L13)/2
+ 269 0017 C1       		.byte	(.L16-.L13)/2
+ 270 0018 E3       		.byte	(.L15-.L13)/2
+ 271 0019 04       		.byte	(.L14-.L13)/2
+ 272 001a 5F       		.byte	(.L12-.L13)/2
+ 273 001b 00       		.p2align 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 6
+
+
+ 274              	.L14:
+ 275              	.LBB5:
+  14:../../Classes/Temperamento/PlantConditioner.cpp ****     {
+  15:../../Classes/Temperamento/PlantConditioner.cpp ****     case Major:
+  16:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 7;
+  17:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+  18:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _majorScale[i];
+  19:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+  20:../../Classes/Temperamento/PlantConditioner.cpp ****         break;
+  21:../../Classes/Temperamento/PlantConditioner.cpp ****     case MinorNat:
+  22:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 7;
+  23:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+  24:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _minorNScale[i];
+  25:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+  26:../../Classes/Temperamento/PlantConditioner.cpp ****         break;
+  27:../../Classes/Temperamento/PlantConditioner.cpp ****     case MinorArm:
+  28:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 7;
+  29:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+  30:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _minorAScale[i];
+  31:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+  32:../../Classes/Temperamento/PlantConditioner.cpp ****         break;
+  33:../../Classes/Temperamento/PlantConditioner.cpp ****     case MinorMel:
+  34:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 7;
+  35:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+  36:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _minorMScale[i];
+  37:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+  38:../../Classes/Temperamento/PlantConditioner.cpp ****         break;
+  39:../../Classes/Temperamento/PlantConditioner.cpp ****     case Pentatonic:
+  40:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 5;
+  41:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 5; i++) {
+  42:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _pentatonicScale[i];
+  43:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+  44:../../Classes/Temperamento/PlantConditioner.cpp ****         break;
+  45:../../Classes/Temperamento/PlantConditioner.cpp ****     case Chromatic:
+ 276              		.loc 1 45 5 is_stmt 1 view .LVU34
+  46:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 12;
+ 277              		.loc 1 46 9 view .LVU35
+ 278              	.LBB6:
+  47:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 12; i++) {
+  48:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _chromaticScale[i];
+ 279              		.loc 1 48 23 is_stmt 0 view .LVU36
+ 280 001c 00F56774 		add	r4, r0, #924
+ 281              	.LBE6:
+  46:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 12;
+ 282              		.loc 1 46 22 view .LVU37
+ 283 0020 0C21     		movs	r1, #12
+ 284              	.LVL11:
+ 285              	.LBB7:
+ 286              		.loc 1 48 23 view .LVU38
+ 287 0022 00F58A63 		add	r3, r0, #1104
+ 288 0026 00F5906E 		add	lr, r0, #1152
+ 289 002a 2246     		mov	r2, r4
+ 290              	.LVL12:
+ 291              		.loc 1 48 23 view .LVU39
+ 292              	.LBE7:
+  46:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 12;
+ 293              		.loc 1 46 22 view .LVU40
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 7
+
+
+ 294 002c 80F88913 		strb	r1, [r0, #905]
+  47:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 12; i++) {
+ 295              		.loc 1 47 9 is_stmt 1 view .LVU41
+ 296              	.LVL13:
+ 297              	.LBB8:
+  47:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 12; i++) {
+ 298              		.loc 1 47 27 view .LVU42
+ 299              	.L21:
+ 300              		.loc 1 48 23 is_stmt 0 view .LVU43
+ 301 0030 D3F800C0 		ldr	ip, [r3]	@ unaligned
+ 302 0034 1033     		adds	r3, r3, #16
+ 303 0036 53F80C5C 		ldr	r5, [r3, #-12]	@ unaligned
+ 304 003a 1032     		adds	r2, r2, #16
+ 305 003c 53F8080C 		ldr	r0, [r3, #-8]	@ unaligned
+ 306 0040 53F8041C 		ldr	r1, [r3, #-4]	@ unaligned
+ 307 0044 7345     		cmp	r3, lr
+ 308 0046 42F810CC 		str	ip, [r2, #-16]	@ unaligned
+ 309 004a 42F80C5C 		str	r5, [r2, #-12]	@ unaligned
+ 310 004e 42F8080C 		str	r0, [r2, #-8]	@ unaligned
+ 311 0052 42F8041C 		str	r1, [r2, #-4]	@ unaligned
+ 312 0056 EBD1     		bne	.L21
+ 313 0058 20E0     		b	.L20
+ 314              	.LVL14:
+ 315              	.L11:
+ 316              		.loc 1 48 23 view .LVU44
+ 317              	.LBE8:
+  49:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+  50:../../Classes/Temperamento/PlantConditioner.cpp ****         break;
+  51:../../Classes/Temperamento/PlantConditioner.cpp ****     case Esatonic:
+  52:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 6;
+  53:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 6; i++) {
+  54:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _esatonic[i];
+  55:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+  56:../../Classes/Temperamento/PlantConditioner.cpp ****         break;
+  57:../../Classes/Temperamento/PlantConditioner.cpp ****     default:
+ 318              		.loc 1 57 5 is_stmt 1 view .LVU45
+  58:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 7;
+ 319              		.loc 1 58 9 view .LVU46
+ 320              	.LBB9:
+  59:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+  60:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _majorScale[i];
+ 321              		.loc 1 60 23 is_stmt 0 view .LVU47
+ 322 005a D0F8D433 		ldr	r3, [r0, #980]	@ unaligned
+ 323 005e 06F56774 		add	r4, r6, #924
+ 324 0062 D0F8CC13 		ldr	r1, [r0, #972]	@ unaligned
+ 325              	.LVL15:
+ 326              		.loc 1 60 23 view .LVU48
+ 327 0066 D0F8D023 		ldr	r2, [r0, #976]	@ unaligned
+ 328              	.LVL16:
+ 329              		.loc 1 60 23 view .LVU49
+ 330              	.LBE9:
+  58:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 7;
+ 331              		.loc 1 58 22 view .LVU50
+ 332 006a 0720     		movs	r0, #7
+ 333              	.LVL17:
+ 334              	.LBB10:
+ 335              		.loc 1 60 23 view .LVU51
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 8
+
+
+ 336 006c C6F8A433 		str	r3, [r6, #932]	@ unaligned
+ 337 0070 D6F8D833 		ldr	r3, [r6, #984]	@ unaligned
+ 338 0074 C6F89C13 		str	r1, [r6, #924]	@ unaligned
+ 339 0078 C6F8A023 		str	r2, [r6, #928]	@ unaligned
+ 340 007c D6F8DC13 		ldr	r1, [r6, #988]	@ unaligned
+ 341 0080 D6F8E023 		ldr	r2, [r6, #992]	@ unaligned
+ 342 0084 C6F8A833 		str	r3, [r6, #936]	@ unaligned
+ 343 0088 D6F8E433 		ldr	r3, [r6, #996]	@ unaligned
+ 344              	.LBE10:
+  58:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 7;
+ 345              		.loc 1 58 22 view .LVU52
+ 346 008c 86F88903 		strb	r0, [r6, #905]
+  59:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+ 347              		.loc 1 59 9 is_stmt 1 view .LVU53
+ 348              	.LVL18:
+ 349              	.LBB11:
+  59:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+ 350              		.loc 1 59 27 view .LVU54
+ 351              		.loc 1 60 23 is_stmt 0 view .LVU55
+ 352 0090 C6F8AC13 		str	r1, [r6, #940]	@ unaligned
+ 353 0094 C6F8B023 		str	r2, [r6, #944]	@ unaligned
+ 354 0098 C6F8B433 		str	r3, [r6, #948]	@ unaligned
+ 355              	.LVL19:
+ 356              	.L20:
+ 357              		.loc 1 60 23 view .LVU56
+ 358              	.LBE11:
+ 359              	.LBE5:
+ 360              	.LBB27:
+  61:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+  62:../../Classes/Temperamento/PlantConditioner.cpp ****         break;
+  63:../../Classes/Temperamento/PlantConditioner.cpp ****     }
+  64:../../Classes/Temperamento/PlantConditioner.cpp **** 
+  65:../../Classes/Temperamento/PlantConditioner.cpp ****     for (int i = 0; i < _scaleLength; i++) {
+ 361              		.loc 1 65 23 is_stmt 1 view .LVU57
+  66:../../Classes/Temperamento/PlantConditioner.cpp ****         _scale[i] = _scale[i] * powf(2.0f, (float) rootNote / 12.0f); 
+ 362              		.loc 1 66 44 is_stmt 0 view .LVU58
+ 363 009c F8EE677A 		vcvt.f32.u32	s15, s15
+ 364              		.loc 1 66 37 view .LVU59
+ 365 00a0 0025     		movs	r5, #0
+ 366 00a2 B2EE087A 		vmov.f32	s14, #1.2e+1
+ 367 00a6 C7EE878A 		vdiv.f32	s17, s15, s14
+ 368              	.LVL20:
+ 369              	.L22:
+ 370              		.loc 1 66 9 is_stmt 1 discriminator 2 view .LVU60
+ 371              		.loc 1 66 29 is_stmt 0 discriminator 2 view .LVU61
+ 372 00aa 94ED008A 		vldr.32	s16, [r4]
+  65:../../Classes/Temperamento/PlantConditioner.cpp ****         _scale[i] = _scale[i] * powf(2.0f, (float) rootNote / 12.0f); 
+ 373              		.loc 1 65 5 discriminator 2 view .LVU62
+ 374 00ae 0135     		adds	r5, r5, #1
+ 375              	.LVL21:
+ 376              		.loc 1 66 37 discriminator 2 view .LVU63
+ 377 00b0 B0EE000A 		vmov.f32	s0, #2.0e+0
+ 378 00b4 F0EE680A 		vmov.f32	s1, s17
+ 379 00b8 FFF7FEFF 		bl	powf
+ 380              	.LVL22:
+ 381              		.loc 1 66 31 discriminator 2 view .LVU64
+ 382 00bc 28EE000A 		vmul.f32	s0, s16, s0
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 9
+
+
+ 383              		.loc 1 66 19 discriminator 2 view .LVU65
+ 384 00c0 A4EC010A 		vstmia.32	r4!, {s0}
+  65:../../Classes/Temperamento/PlantConditioner.cpp ****         _scale[i] = _scale[i] * powf(2.0f, (float) rootNote / 12.0f); 
+ 385              		.loc 1 65 5 is_stmt 1 discriminator 2 view .LVU66
+ 386              	.LVL23:
+  65:../../Classes/Temperamento/PlantConditioner.cpp ****         _scale[i] = _scale[i] * powf(2.0f, (float) rootNote / 12.0f); 
+ 387              		.loc 1 65 23 discriminator 2 view .LVU67
+  65:../../Classes/Temperamento/PlantConditioner.cpp ****         _scale[i] = _scale[i] * powf(2.0f, (float) rootNote / 12.0f); 
+ 388              		.loc 1 65 25 is_stmt 0 discriminator 2 view .LVU68
+ 389 00c4 96F88933 		ldrb	r3, [r6, #905]	@ zero_extendqisi2
+  65:../../Classes/Temperamento/PlantConditioner.cpp ****         _scale[i] = _scale[i] * powf(2.0f, (float) rootNote / 12.0f); 
+ 390              		.loc 1 65 23 discriminator 2 view .LVU69
+ 391 00c8 AB42     		cmp	r3, r5
+ 392 00ca EEDC     		bgt	.L22
+ 393              	.LBE27:
+  67:../../Classes/Temperamento/PlantConditioner.cpp ****     }
+  68:../../Classes/Temperamento/PlantConditioner.cpp **** }
+ 394              		.loc 1 68 1 view .LVU70
+ 395 00cc BDEC028B 		vldm	sp!, {d8}
+ 396              		.cfi_remember_state
+ 397              		.cfi_restore 80
+ 398              		.cfi_restore 81
+ 399              		.cfi_def_cfa_offset 16
+ 400 00d0 70BD     		pop	{r4, r5, r6, pc}
+ 401              	.LVL24:
+ 402              	.L12:
+ 403              		.cfi_restore_state
+ 404              	.LBB28:
+  51:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 6;
+ 405              		.loc 1 51 5 is_stmt 1 view .LVU71
+  52:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 6; i++) {
+ 406              		.loc 1 52 9 view .LVU72
+ 407              	.LBB12:
+  54:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 408              		.loc 1 54 23 is_stmt 0 view .LVU73
+ 409 00d2 D0F88024 		ldr	r2, [r0, #1152]	@ unaligned
+ 410              	.LVL25:
+  54:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 411              		.loc 1 54 23 view .LVU74
+ 412 00d6 06F56774 		add	r4, r6, #924
+ 413 00da D0F88434 		ldr	r3, [r0, #1156]	@ unaligned
+ 414              	.LBE12:
+  52:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 6; i++) {
+ 415              		.loc 1 52 22 view .LVU75
+ 416 00de 0620     		movs	r0, #6
+ 417              	.LVL26:
+ 418              	.LBB13:
+  54:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 419              		.loc 1 54 23 view .LVU76
+ 420 00e0 D6F88854 		ldr	r5, [r6, #1160]	@ unaligned
+ 421 00e4 D6F88C14 		ldr	r1, [r6, #1164]	@ unaligned
+ 422              	.LVL27:
+  54:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 423              		.loc 1 54 23 view .LVU77
+ 424 00e8 C6F89C23 		str	r2, [r6, #924]	@ unaligned
+ 425 00ec C6F8A033 		str	r3, [r6, #928]	@ unaligned
+ 426 00f0 D6F89024 		ldr	r2, [r6, #1168]	@ unaligned
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 10
+
+
+ 427 00f4 D6F89434 		ldr	r3, [r6, #1172]	@ unaligned
+ 428 00f8 C6F8AC23 		str	r2, [r6, #940]	@ unaligned
+ 429 00fc C6F8A453 		str	r5, [r6, #932]	@ unaligned
+ 430              	.LBE13:
+  52:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 6; i++) {
+ 431              		.loc 1 52 22 view .LVU78
+ 432 0100 86F88903 		strb	r0, [r6, #905]
+  53:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _esatonic[i];
+ 433              		.loc 1 53 9 is_stmt 1 view .LVU79
+ 434              	.LVL28:
+ 435              	.LBB14:
+  53:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _esatonic[i];
+ 436              		.loc 1 53 27 view .LVU80
+  54:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 437              		.loc 1 54 23 is_stmt 0 view .LVU81
+ 438 0104 C6F8A813 		str	r1, [r6, #936]	@ unaligned
+ 439 0108 C6F8B033 		str	r3, [r6, #944]	@ unaligned
+ 440 010c C6E7     		b	.L20
+ 441              	.LVL29:
+ 442              	.L18:
+  54:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 443              		.loc 1 54 23 view .LVU82
+ 444              	.LBE14:
+  21:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 7;
+ 445              		.loc 1 21 5 is_stmt 1 view .LVU83
+  22:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+ 446              		.loc 1 22 9 view .LVU84
+ 447              	.LBB15:
+  24:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 448              		.loc 1 24 23 is_stmt 0 view .LVU85
+ 449 010e D0F8F033 		ldr	r3, [r0, #1008]	@ unaligned
+ 450 0112 06F56774 		add	r4, r6, #924
+ 451 0116 D0F8E813 		ldr	r1, [r0, #1000]	@ unaligned
+ 452              	.LVL30:
+  24:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 453              		.loc 1 24 23 view .LVU86
+ 454 011a D0F8EC23 		ldr	r2, [r0, #1004]	@ unaligned
+ 455              	.LVL31:
+  24:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 456              		.loc 1 24 23 view .LVU87
+ 457              	.LBE15:
+  22:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+ 458              		.loc 1 22 22 view .LVU88
+ 459 011e 0720     		movs	r0, #7
+ 460              	.LVL32:
+ 461              	.LBB16:
+  24:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 462              		.loc 1 24 23 view .LVU89
+ 463 0120 C6F8A433 		str	r3, [r6, #932]	@ unaligned
+ 464 0124 D6F8F433 		ldr	r3, [r6, #1012]	@ unaligned
+ 465 0128 C6F89C13 		str	r1, [r6, #924]	@ unaligned
+ 466 012c C6F8A023 		str	r2, [r6, #928]	@ unaligned
+ 467 0130 D6F8F813 		ldr	r1, [r6, #1016]	@ unaligned
+ 468 0134 D6F8FC23 		ldr	r2, [r6, #1020]	@ unaligned
+ 469 0138 C6F8A833 		str	r3, [r6, #936]	@ unaligned
+ 470 013c D6F80034 		ldr	r3, [r6, #1024]	@ unaligned
+ 471              	.LBE16:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 11
+
+
+  22:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+ 472              		.loc 1 22 22 view .LVU90
+ 473 0140 86F88903 		strb	r0, [r6, #905]
+  23:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _minorNScale[i];
+ 474              		.loc 1 23 9 is_stmt 1 view .LVU91
+ 475              	.LVL33:
+ 476              	.LBB17:
+  23:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _minorNScale[i];
+ 477              		.loc 1 23 27 view .LVU92
+  24:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 478              		.loc 1 24 23 is_stmt 0 view .LVU93
+ 479 0144 C6F8AC13 		str	r1, [r6, #940]	@ unaligned
+ 480 0148 C6F8B023 		str	r2, [r6, #944]	@ unaligned
+ 481 014c C6F8B433 		str	r3, [r6, #948]	@ unaligned
+ 482 0150 A4E7     		b	.L20
+ 483              	.LVL34:
+ 484              	.L17:
+  24:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 485              		.loc 1 24 23 view .LVU94
+ 486              	.LBE17:
+  27:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 7;
+ 487              		.loc 1 27 5 is_stmt 1 view .LVU95
+  28:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+ 488              		.loc 1 28 9 view .LVU96
+ 489              	.LBB18:
+  30:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 490              		.loc 1 30 23 is_stmt 0 view .LVU97
+ 491 0152 D0F80C34 		ldr	r3, [r0, #1036]	@ unaligned
+ 492 0156 06F56774 		add	r4, r6, #924
+ 493 015a D0F80414 		ldr	r1, [r0, #1028]	@ unaligned
+ 494              	.LVL35:
+  30:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 495              		.loc 1 30 23 view .LVU98
+ 496 015e D0F80824 		ldr	r2, [r0, #1032]	@ unaligned
+ 497              	.LVL36:
+  30:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 498              		.loc 1 30 23 view .LVU99
+ 499              	.LBE18:
+  28:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+ 500              		.loc 1 28 22 view .LVU100
+ 501 0162 0720     		movs	r0, #7
+ 502              	.LVL37:
+ 503              	.LBB19:
+  30:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 504              		.loc 1 30 23 view .LVU101
+ 505 0164 C6F8A433 		str	r3, [r6, #932]	@ unaligned
+ 506 0168 D6F81034 		ldr	r3, [r6, #1040]	@ unaligned
+ 507 016c C6F89C13 		str	r1, [r6, #924]	@ unaligned
+ 508 0170 C6F8A023 		str	r2, [r6, #928]	@ unaligned
+ 509 0174 D6F81414 		ldr	r1, [r6, #1044]	@ unaligned
+ 510 0178 D6F81824 		ldr	r2, [r6, #1048]	@ unaligned
+ 511 017c C6F8A833 		str	r3, [r6, #936]	@ unaligned
+ 512 0180 D6F81C34 		ldr	r3, [r6, #1052]	@ unaligned
+ 513              	.LBE19:
+  28:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+ 514              		.loc 1 28 22 view .LVU102
+ 515 0184 86F88903 		strb	r0, [r6, #905]
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 12
+
+
+  29:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _minorAScale[i];
+ 516              		.loc 1 29 9 is_stmt 1 view .LVU103
+ 517              	.LVL38:
+ 518              	.LBB20:
+  29:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _minorAScale[i];
+ 519              		.loc 1 29 27 view .LVU104
+  30:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 520              		.loc 1 30 23 is_stmt 0 view .LVU105
+ 521 0188 C6F8AC13 		str	r1, [r6, #940]	@ unaligned
+ 522 018c C6F8B023 		str	r2, [r6, #944]	@ unaligned
+ 523 0190 C6F8B433 		str	r3, [r6, #948]	@ unaligned
+ 524 0194 82E7     		b	.L20
+ 525              	.LVL39:
+ 526              	.L16:
+  30:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 527              		.loc 1 30 23 view .LVU106
+ 528              	.LBE20:
+  33:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 7;
+ 529              		.loc 1 33 5 is_stmt 1 view .LVU107
+  34:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+ 530              		.loc 1 34 9 view .LVU108
+ 531              	.LBB21:
+  36:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 532              		.loc 1 36 23 is_stmt 0 view .LVU109
+ 533 0196 D0F82834 		ldr	r3, [r0, #1064]	@ unaligned
+ 534 019a 06F56774 		add	r4, r6, #924
+ 535 019e D0F82014 		ldr	r1, [r0, #1056]	@ unaligned
+ 536              	.LVL40:
+  36:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 537              		.loc 1 36 23 view .LVU110
+ 538 01a2 D0F82424 		ldr	r2, [r0, #1060]	@ unaligned
+ 539              	.LVL41:
+  36:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 540              		.loc 1 36 23 view .LVU111
+ 541              	.LBE21:
+  34:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+ 542              		.loc 1 34 22 view .LVU112
+ 543 01a6 0720     		movs	r0, #7
+ 544              	.LVL42:
+ 545              	.LBB22:
+  36:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 546              		.loc 1 36 23 view .LVU113
+ 547 01a8 C6F8A433 		str	r3, [r6, #932]	@ unaligned
+ 548 01ac D6F82C34 		ldr	r3, [r6, #1068]	@ unaligned
+ 549 01b0 C6F89C13 		str	r1, [r6, #924]	@ unaligned
+ 550 01b4 C6F8A023 		str	r2, [r6, #928]	@ unaligned
+ 551 01b8 D6F83014 		ldr	r1, [r6, #1072]	@ unaligned
+ 552 01bc D6F83424 		ldr	r2, [r6, #1076]	@ unaligned
+ 553 01c0 C6F8A833 		str	r3, [r6, #936]	@ unaligned
+ 554 01c4 D6F83834 		ldr	r3, [r6, #1080]	@ unaligned
+ 555              	.LBE22:
+  34:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 7; i++) {
+ 556              		.loc 1 34 22 view .LVU114
+ 557 01c8 86F88903 		strb	r0, [r6, #905]
+  35:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _minorMScale[i];
+ 558              		.loc 1 35 9 is_stmt 1 view .LVU115
+ 559              	.LVL43:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 13
+
+
+ 560              	.LBB23:
+  35:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _minorMScale[i];
+ 561              		.loc 1 35 27 view .LVU116
+  36:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 562              		.loc 1 36 23 is_stmt 0 view .LVU117
+ 563 01cc C6F8AC13 		str	r1, [r6, #940]	@ unaligned
+ 564 01d0 C6F8B023 		str	r2, [r6, #944]	@ unaligned
+ 565 01d4 C6F8B433 		str	r3, [r6, #948]	@ unaligned
+ 566 01d8 60E7     		b	.L20
+ 567              	.LVL44:
+ 568              	.L15:
+  36:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 569              		.loc 1 36 23 view .LVU118
+ 570              	.LBE23:
+  39:../../Classes/Temperamento/PlantConditioner.cpp ****         _scaleLength = 5;
+ 571              		.loc 1 39 5 is_stmt 1 view .LVU119
+  40:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 5; i++) {
+ 572              		.loc 1 40 9 view .LVU120
+ 573              	.LBB24:
+  42:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 574              		.loc 1 42 23 is_stmt 0 view .LVU121
+ 575 01da D0F83C34 		ldr	r3, [r0, #1084]	@ unaligned
+ 576              	.LBE24:
+  40:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 5; i++) {
+ 577              		.loc 1 40 22 view .LVU122
+ 578 01de 0521     		movs	r1, #5
+ 579              	.LVL45:
+ 580              	.LBB25:
+  42:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 581              		.loc 1 42 23 view .LVU123
+ 582 01e0 06F56774 		add	r4, r6, #924
+ 583 01e4 C0F89C33 		str	r3, [r0, #924]	@ unaligned
+ 584 01e8 D6F84434 		ldr	r3, [r6, #1092]	@ unaligned
+ 585 01ec D0F84004 		ldr	r0, [r0, #1088]	@ unaligned
+ 586              	.LVL46:
+  42:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 587              		.loc 1 42 23 view .LVU124
+ 588 01f0 D6F84824 		ldr	r2, [r6, #1096]	@ unaligned
+ 589              	.LVL47:
+  42:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 590              		.loc 1 42 23 view .LVU125
+ 591 01f4 C6F8A433 		str	r3, [r6, #932]	@ unaligned
+ 592 01f8 D6F84C34 		ldr	r3, [r6, #1100]	@ unaligned
+ 593 01fc C6F8A003 		str	r0, [r6, #928]	@ unaligned
+ 594              	.LBE25:
+  40:../../Classes/Temperamento/PlantConditioner.cpp ****         for (int i = 0; i < 5; i++) {
+ 595              		.loc 1 40 22 view .LVU126
+ 596 0200 86F88913 		strb	r1, [r6, #905]
+  41:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _pentatonicScale[i];
+ 597              		.loc 1 41 9 is_stmt 1 view .LVU127
+ 598              	.LVL48:
+ 599              	.LBB26:
+  41:../../Classes/Temperamento/PlantConditioner.cpp ****             _scale[i] = _pentatonicScale[i];
+ 600              		.loc 1 41 27 view .LVU128
+  42:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+ 601              		.loc 1 42 23 is_stmt 0 view .LVU129
+ 602 0204 C6F8A823 		str	r2, [r6, #936]	@ unaligned
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 14
+
+
+ 603 0208 C6F8AC33 		str	r3, [r6, #940]	@ unaligned
+ 604 020c 46E7     		b	.L20
+ 605              	.LBE26:
+ 606              	.LBE28:
+ 607              		.cfi_endproc
+ 608              	.LFE4847:
+ 610 020e 00BF     		.section	.text._ZN16PlantConditioner9setOctaveEh,"ax",%progbits
+ 611              		.align	1
+ 612              		.p2align 2,,3
+ 613              		.global	_ZN16PlantConditioner9setOctaveEh
+ 614              		.syntax unified
+ 615              		.thumb
+ 616              		.thumb_func
+ 617              		.fpu fpv5-d16
+ 619              	_ZN16PlantConditioner9setOctaveEh:
+ 620              	.LVL49:
+ 621              	.LFB4848:
+  69:../../Classes/Temperamento/PlantConditioner.cpp **** 
+  70:../../Classes/Temperamento/PlantConditioner.cpp **** void PlantConditioner::setOctave(uint8_t octave) {
+ 622              		.loc 1 70 50 is_stmt 1 view -0
+ 623              		.cfi_startproc
+ 624              		@ args = 0, pretend = 0, frame = 0
+ 625              		@ frame_needed = 0, uses_anonymous_args = 0
+ 626              		@ link register save eliminated.
+  71:../../Classes/Temperamento/PlantConditioner.cpp ****     _octave = octave;
+ 627              		.loc 1 71 5 view .LVU131
+ 628              		.loc 1 71 13 is_stmt 0 view .LVU132
+ 629 0000 80F88813 		strb	r1, [r0, #904]
+  72:../../Classes/Temperamento/PlantConditioner.cpp **** }
+ 630              		.loc 1 72 1 view .LVU133
+ 631 0004 7047     		bx	lr
+ 632              		.cfi_endproc
+ 633              	.LFE4848:
+ 635 0006 00BF     		.section	.text._ZN16PlantConditioner7ProcessEtt,"ax",%progbits
+ 636              		.align	1
+ 637              		.p2align 2,,3
+ 638              		.global	_ZN16PlantConditioner7ProcessEtt
+ 639              		.syntax unified
+ 640              		.thumb
+ 641              		.thumb_func
+ 642              		.fpu fpv5-d16
+ 644              	_ZN16PlantConditioner7ProcessEtt:
+ 645              	.LVL50:
+ 646              	.LFB4849:
+  73:../../Classes/Temperamento/PlantConditioner.cpp **** 
+  74:../../Classes/Temperamento/PlantConditioner.cpp **** float PlantConditioner::Process(uint16_t baseline, uint16_t filtered) {
+ 647              		.loc 1 74 71 is_stmt 1 view -0
+ 648              		.cfi_startproc
+ 649              		@ args = 0, pretend = 0, frame = 8
+ 650              		@ frame_needed = 0, uses_anonymous_args = 0
+  75:../../Classes/Temperamento/PlantConditioner.cpp ****     float out = 0.0f;
+ 651              		.loc 1 75 5 view .LVU135
+  76:../../Classes/Temperamento/PlantConditioner.cpp **** 
+  77:../../Classes/Temperamento/PlantConditioner.cpp ****     _delta = baseline - filtered - touchTreshold;
+ 652              		.loc 1 77 5 view .LVU136
+  74:../../Classes/Temperamento/PlantConditioner.cpp ****     float out = 0.0f;
+ 653              		.loc 1 74 71 is_stmt 0 view .LVU137
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 15
+
+
+ 654 0000 10B5     		push	{r4, lr}
+ 655              		.cfi_def_cfa_offset 8
+ 656              		.cfi_offset 4, -8
+ 657              		.cfi_offset 14, -4
+ 658              		.loc 1 77 23 view .LVU138
+ 659 0002 8A1A     		subs	r2, r1, r2
+ 660              	.LVL51:
+ 661              		.loc 1 77 36 view .LVU139
+ 662 0004 0178     		ldrb	r1, [r0]	@ zero_extendqisi2
+ 663              	.LVL52:
+  74:../../Classes/Temperamento/PlantConditioner.cpp ****     float out = 0.0f;
+ 664              		.loc 1 74 71 view .LVU140
+ 665 0006 0446     		mov	r4, r0
+ 666 0008 82B0     		sub	sp, sp, #8
+ 667              		.cfi_def_cfa_offset 16
+ 668              		.loc 1 77 34 view .LVU141
+ 669 000a 521A     		subs	r2, r2, r1
+  78:../../Classes/Temperamento/PlantConditioner.cpp ****     _deltaFilt = _capFir.Process((float)_delta);
+ 670              		.loc 1 78 33 view .LVU142
+ 671 000c 0430     		adds	r0, r0, #4
+ 672              	.LVL53:
+ 673              		.loc 1 78 33 view .LVU143
+ 674 000e 07EE902A 		vmov	s15, r2	@ int
+  77:../../Classes/Temperamento/PlantConditioner.cpp ****     _deltaFilt = _capFir.Process((float)_delta);
+ 675              		.loc 1 77 12 view .LVU144
+ 676 0012 C4F88C23 		str	r2, [r4, #908]
+ 677              		.loc 1 78 5 is_stmt 1 view .LVU145
+ 678              		.loc 1 78 33 is_stmt 0 view .LVU146
+ 679 0016 B8EEE70A 		vcvt.f32.s32	s0, s15
+ 680 001a FFF7FEFF 		bl	_ZN6CapFir7ProcessEf
+ 681              	.LVL54:
+  79:../../Classes/Temperamento/PlantConditioner.cpp ****     if (_deltaFilt < _deltaMin) _deltaFilt = _deltaMin;
+ 682              		.loc 1 79 22 view .LVU147
+ 683 001e 94F89433 		ldrb	r3, [r4, #916]	@ zero_extendqisi2
+  78:../../Classes/Temperamento/PlantConditioner.cpp ****     _deltaFilt = _capFir.Process((float)_delta);
+ 684              		.loc 1 78 16 view .LVU148
+ 685 0022 84EDE40A 		vstr.32	s0, [r4, #912]
+ 686              		.loc 1 79 5 is_stmt 1 view .LVU149
+ 687              		.loc 1 79 20 is_stmt 0 view .LVU150
+ 688 0026 07EE903A 		vmov	s15, r3	@ int
+ 689 002a F8EEE77A 		vcvt.f32.s32	s15, s15
+ 690              		.loc 1 79 5 view .LVU151
+ 691 002e B4EEE70A 		vcmpe.f32	s0, s15
+ 692 0032 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 693 0036 05D5     		bpl	.L29
+ 694              		.loc 1 79 33 is_stmt 1 discriminator 1 view .LVU152
+ 695              		.loc 1 79 44 is_stmt 0 discriminator 1 view .LVU153
+ 696 0038 07EE903A 		vmov	s15, r3	@ int
+ 697 003c B8EE670A 		vcvt.f32.u32	s0, s15
+ 698 0040 84EDE40A 		vstr.32	s0, [r4, #912]
+ 699              	.L29:
+  80:../../Classes/Temperamento/PlantConditioner.cpp ****     if (_deltaFilt > _deltaMax) _deltaFilt = _deltaMax;
+ 700              		.loc 1 80 5 is_stmt 1 view .LVU154
+ 701              		.loc 1 80 22 is_stmt 0 view .LVU155
+ 702 0044 94F89523 		ldrb	r2, [r4, #917]	@ zero_extendqisi2
+ 703 0048 07EE902A 		vmov	s15, r2	@ int
+ 704              		.loc 1 80 20 view .LVU156
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 16
+
+
+ 705 004c B8EEE77A 		vcvt.f32.s32	s14, s15
+ 706              		.loc 1 80 5 view .LVU157
+ 707 0050 B4EEC07A 		vcmpe.f32	s14, s0
+ 708 0054 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 709 0058 03D5     		bpl	.L31
+ 710              		.loc 1 80 33 is_stmt 1 discriminator 1 view .LVU158
+ 711              		.loc 1 80 44 is_stmt 0 discriminator 1 view .LVU159
+ 712 005a F8EE677A 		vcvt.f32.u32	s15, s15
+ 713 005e C4EDE47A 		vstr.32	s15, [r4, #912]
+ 714              	.L31:
+  81:../../Classes/Temperamento/PlantConditioner.cpp ****     
+  82:../../Classes/Temperamento/PlantConditioner.cpp ****     for (int i = 0; i < _scaleLength; i++) {
+ 715              		.loc 1 82 5 is_stmt 1 view .LVU160
+ 716              	.LVL55:
+ 717              	.LBB29:
+ 718              		.loc 1 82 23 view .LVU161
+ 719              		.loc 1 82 25 is_stmt 0 view .LVU162
+ 720 0062 94F88903 		ldrb	r0, [r4, #905]	@ zero_extendqisi2
+ 721              		.loc 1 82 23 view .LVU163
+ 722 0066 88B3     		cbz	r0, .L38
+ 723 0068 04F56772 		add	r2, r4, #924
+  83:../../Classes/Temperamento/PlantConditioner.cpp ****         if (_deltaFilt < (_deltaMin + (i+1) * (_range / _scaleLength)) && _deltaFilt >= (_deltaMin 
+ 724              		.loc 1 83 55 view .LVU164
+ 725 006c 94F896C3 		ldrb	ip, [r4, #918]	@ zero_extendqisi2
+ 726              		.loc 1 83 13 view .LVU165
+ 727 0070 94EDE47A 		vldr.32	s14, [r4, #912]
+ 728              	.LBE29:
+  75:../../Classes/Temperamento/PlantConditioner.cpp **** 
+ 729              		.loc 1 75 11 view .LVU166
+ 730 0074 9FED170A 		vldr.32	s0, .L45
+ 731 0078 BCFBF0FC 		udiv	ip, ip, r0
+ 732 007c 02EB8000 		add	r0, r2, r0, lsl #2
+ 733              	.LVL56:
+ 734              	.L34:
+ 735              	.LBB30:
+ 736              		.loc 1 83 9 is_stmt 1 view .LVU167
+ 737 0080 0193     		str	r3, [sp, #4]
+ 738 0082 6344     		add	r3, r3, ip
+ 739              		.loc 1 83 24 is_stmt 0 view .LVU168
+ 740 0084 07EE903A 		vmov	s15, r3	@ int
+ 741 0088 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 742              		.loc 1 83 9 view .LVU169
+ 743 008c B4EEE77A 		vcmpe.f32	s14, s15
+ 744 0090 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 745 0094 15D5     		bpl	.L35
+  84:../../Classes/Temperamento/PlantConditioner.cpp ****             out = _scale[i] * (1 << _octave);  
+ 746              		.loc 1 84 13 is_stmt 1 discriminator 1 view .LVU170
+  83:../../Classes/Temperamento/PlantConditioner.cpp ****         if (_deltaFilt < (_deltaMin + (i+1) * (_range / _scaleLength)) && _deltaFilt >= (_deltaMin 
+ 747              		.loc 1 83 86 is_stmt 0 discriminator 1 view .LVU171
+ 748 0096 DDED017A 		vldr.32	s15, [sp, #4]	@ int
+ 749              		.loc 1 84 34 discriminator 1 view .LVU172
+ 750 009a 0121     		movs	r1, #1
+  83:../../Classes/Temperamento/PlantConditioner.cpp ****         if (_deltaFilt < (_deltaMin + (i+1) * (_range / _scaleLength)) && _deltaFilt >= (_deltaMin 
+ 751              		.loc 1 83 86 discriminator 1 view .LVU173
+ 752 009c F8EEE77A 		vcvt.f32.s32	s15, s15
+  83:../../Classes/Temperamento/PlantConditioner.cpp ****         if (_deltaFilt < (_deltaMin + (i+1) * (_range / _scaleLength)) && _deltaFilt >= (_deltaMin 
+ 753              		.loc 1 83 72 discriminator 1 view .LVU174
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 17
+
+
+ 754 00a0 B4EEE77A 		vcmpe.f32	s14, s15
+ 755 00a4 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 756 00a8 0BDB     		blt	.L35
+ 757              		.loc 1 84 37 view .LVU175
+ 758 00aa 94F888E3 		ldrb	lr, [r4, #904]	@ zero_extendqisi2
+ 759              		.loc 1 84 17 view .LVU176
+ 760 00ae D2ED007A 		vldr.32	s15, [r2]
+ 761              		.loc 1 84 34 view .LVU177
+ 762 00b2 01FA0EF1 		lsl	r1, r1, lr
+ 763 00b6 00EE101A 		vmov	s0, r1	@ int
+ 764              		.loc 1 84 29 view .LVU178
+ 765 00ba B8EEC00A 		vcvt.f32.s32	s0, s0
+ 766              		.loc 1 84 17 view .LVU179
+ 767 00be 20EE270A 		vmul.f32	s0, s0, s15
+ 768              	.LVL57:
+ 769              	.L35:
+  82:../../Classes/Temperamento/PlantConditioner.cpp ****         if (_deltaFilt < (_deltaMin + (i+1) * (_range / _scaleLength)) && _deltaFilt >= (_deltaMin 
+ 770              		.loc 1 82 23 is_stmt 1 discriminator 1 view .LVU180
+ 771 00c2 0432     		adds	r2, r2, #4
+ 772 00c4 8242     		cmp	r2, r0
+ 773 00c6 DBD1     		bne	.L34
+ 774              	.LBE30:
+  85:../../Classes/Temperamento/PlantConditioner.cpp ****         }
+  86:../../Classes/Temperamento/PlantConditioner.cpp ****     }
+  87:../../Classes/Temperamento/PlantConditioner.cpp ****     return out;
+  88:../../Classes/Temperamento/PlantConditioner.cpp **** }...
+ 775              		.loc 1 88 1 is_stmt 0 view .LVU181
+ 776 00c8 02B0     		add	sp, sp, #8
+ 777              		.cfi_remember_state
+ 778              		.cfi_def_cfa_offset 8
+ 779              		@ sp needed
+ 780 00ca 10BD     		pop	{r4, pc}
+ 781              	.LVL58:
+ 782              	.L38:
+ 783              		.cfi_restore_state
+  75:../../Classes/Temperamento/PlantConditioner.cpp ****     float out = 0.0f;
+ 784              		.loc 1 75 11 view .LVU182
+ 785 00cc 9FED010A 		vldr.32	s0, .L45
+  87:../../Classes/Temperamento/PlantConditioner.cpp ****     return out;
+ 786              		.loc 1 87 5 is_stmt 1 view .LVU183
+ 787              		.loc 1 88 1 is_stmt 0 view .LVU184
+ 788 00d0 02B0     		add	sp, sp, #8
+ 789              		.cfi_def_cfa_offset 8
+ 790              		@ sp needed
+ 791 00d2 10BD     		pop	{r4, pc}
+ 792              	.LVL59:
+ 793              	.L46:
+ 794              		.loc 1 88 1 view .LVU185
+ 795              		.align	2
+ 796              	.L45:
+ 797 00d4 00000000 		.word	0
+ 798              		.cfi_endproc
+ 799              	.LFE4849:
+ 801              		.section	.rodata
+ 802              		.align	2
+ 803              		.set	.LANCHOR0,. + 0
+ 804              	.LC0:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 18
+
+
+ 805 0000 CDCC8241 		.word	1099091149
+ 806 0004 CDCC9241 		.word	1100139725
+ 807 0008 CDCCA441 		.word	1101319373
+ 808 000c D7A3AE41 		.word	1101964247
+ 809 0010 0000C441 		.word	1103364096
+ 810 0014 0000DC41 		.word	1104936960
+ 811 0018 C3F5F641 		.word	1106703811
+ 812              	.LC1:
+ 813 001c CDCC8241 		.word	1099091149
+ 814 0020 CDCC9241 		.word	1100139725
+ 815 0024 9A999B41 		.word	1100716442
+ 816 0028 D7A3AE41 		.word	1101964247
+ 817 002c 0000C441 		.word	1103364096
+ 818 0030 14AECF41 		.word	1104129556
+ 819 0034 B81EE941 		.word	1105796792
+ 820              	.LC2:
+ 821 0038 CDCC8241 		.word	1099091149
+ 822 003c CDCC9241 		.word	1100139725
+ 823 0040 9A999B41 		.word	1100716442
+ 824 0044 D7A3AE41 		.word	1101964247
+ 825 0048 0000C441 		.word	1103364096
+ 826 004c 14AECF41 		.word	1104129556
+ 827 0050 C3F5F641 		.word	1106703811
+ 828              	.LC3:
+ 829 0054 CDCC8241 		.word	1099091149
+ 830 0058 CDCC9241 		.word	1100139725
+ 831 005c 9A999B41 		.word	1100716442
+ 832 0060 D7A3AE41 		.word	1101964247
+ 833 0064 C3F5B841 		.word	1102640579
+ 834 0068 0000DC41 		.word	1104936960
+ 835 006c C3F5F641 		.word	1106703811
+ 836              	.LC4:
+ 837 0070 CDCC8241 		.word	1099091149
+ 838 0074 CDCC9241 		.word	1100139725
+ 839 0078 D7A3AE41 		.word	1101964247
+ 840 007c 0000C441 		.word	1103364096
+ 841 0080 0000DC41 		.word	1104936960
+ 842              	.LC5:
+ 843 0084 CDCC8241 		.word	1099091149
+ 844 0088 5C8F8A41 		.word	1099599708
+ 845 008c CDCC9241 		.word	1100139725
+ 846 0090 9A999B41 		.word	1100716442
+ 847 0094 CDCCA441 		.word	1101319373
+ 848 0098 D7A3AE41 		.word	1101964247
+ 849 009c C3F5B841 		.word	1102640579
+ 850 00a0 0000C441 		.word	1103364096
+ 851 00a4 14AECF41 		.word	1104129556
+ 852 00a8 0000DC41 		.word	1104936960
+ 853 00ac B81EE941 		.word	1105796792
+ 854 00b0 C3F5F641 		.word	1106703811
+ 855              	.LC6:
+ 856 00b4 CDCC8241 		.word	1099091149
+ 857 00b8 CDCC9241 		.word	1100139725
+ 858 00bc CDCCA441 		.word	1101319373
+ 859 00c0 D7A3AE41 		.word	1101964247
+ 860 00c4 0000C441 		.word	1103364096
+ 861 00c8 0000DC41 		.word	1104936960
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 19
+
+
+ 862              		.text
+ 863              	.Letext0:
+ 864              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 865              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 866              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 867              		.file 5 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 868              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 869              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 870              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 871              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 872              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 873              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 874              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 875              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 876              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 877              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 878              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 879              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 880              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 881              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\charconv.h
+ 882              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 883              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 884              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 885              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 886              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 887              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 888              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 889              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 890              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 891              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 892              		.file 30 "../../libs/DaisySP/Source/Control/adenv.h"
+ 893              		.file 31 "../../libs/DaisySP/Source/Utility/dsp.h"
+ 894              		.file 32 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 895              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 896              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 897              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 898              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 899              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 900              		.file 38 "../../libs/libDaisy/src/daisy_core.h"
+ 901              		.file 39 "../../libs/libDaisy/src/util/wav_format.h"
+ 902              		.file 40 "../../libs/libDaisy/src/dev/sr_595.h"
+ 903              		.file 41 "../../libs/libDaisy/src/dev/max11300.h"
+ 904              		.file 42 "../../libs/libDaisy/src/daisy_seed.h"
+ 905              		.file 43 "../../Classes/Temperamento/../FIIR/CapFir.h"
+ 906              		.file 44 "../../Classes/Temperamento/PlantConditioner.h"
+ 907              		.file 45 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s 			page 20
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 PlantConditioner.cpp
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:17     .text._ZN16PlantConditionerC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:26     .text._ZN16PlantConditionerC2Ev:00000000 _ZN16PlantConditionerC2Ev
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:135    .text._ZN16PlantConditionerC2Ev:000000e4 $d
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:26     .text._ZN16PlantConditionerC2Ev:00000000 _ZN16PlantConditionerC1Ev
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:142    .text._ZN16PlantConditionerD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:150    .text._ZN16PlantConditionerD2Ev:00000000 _ZN16PlantConditionerD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:150    .text._ZN16PlantConditionerD2Ev:00000000 _ZN16PlantConditionerD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:182    .text._ZN16PlantConditioner4InitEN6CapFir7ResTypeE:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:190    .text._ZN16PlantConditioner4InitEN6CapFir7ResTypeE:00000000 _ZN16PlantConditioner4InitEN6CapFir7ResTypeE
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:233    .text._ZN16PlantConditioner8setScaleENS_5NotesENS_9ScaleTypeE:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:241    .text._ZN16PlantConditioner8setScaleENS_5NotesENS_9ScaleTypeE:00000000 _ZN16PlantConditioner8setScaleENS_5NotesENS_9ScaleTypeE
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:266    .text._ZN16PlantConditioner8setScaleENS_5NotesENS_9ScaleTypeE:00000014 $d
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:611    .text._ZN16PlantConditioner9setOctaveEh:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:619    .text._ZN16PlantConditioner9setOctaveEh:00000000 _ZN16PlantConditioner9setOctaveEh
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:636    .text._ZN16PlantConditioner7ProcessEtt:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:644    .text._ZN16PlantConditioner7ProcessEtt:00000000 _ZN16PlantConditioner7ProcessEtt
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:797    .text._ZN16PlantConditioner7ProcessEtt:000000d4 $d
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:802    .rodata:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:273    .text._ZN16PlantConditioner8setScaleENS_5NotesENS_9ScaleTypeE:0000001b $d
+C:\Users\skipi\AppData\Local\Temp\ccxBE1Mj.s:273    .text._ZN16PlantConditioner8setScaleENS_5NotesENS_9ScaleTypeE:0000001c $t
+
+UNDEFINED SYMBOLS
+_ZN6CapFirC1Ev
+_ZN6CapFirD1Ev
+_ZN6CapFir4InitENS_7ResTypeE
+powf
+_ZN6CapFir7ProcessEf

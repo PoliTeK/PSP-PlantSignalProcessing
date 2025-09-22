@@ -5,7 +5,7 @@ TARGET = main
 
 # Sources
 
-CPP_SOURCES = main.cpp ../../Classes/FIIR/CapFir.cpp
+CPP_SOURCES = main.cpp ../../Classes/FIIR/CapFir.cpp ../../Classes/Temperamento/PlantConditioner.cpp
 
 
 # Library Locations
