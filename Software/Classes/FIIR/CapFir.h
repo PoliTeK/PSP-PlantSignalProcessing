@@ -17,7 +17,7 @@ public:
     };
 
     
-    void Init(enum ResType res_type);
+    void Init(ResType res_type);
     float Process(float in);
     
 

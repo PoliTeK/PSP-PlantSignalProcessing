@@ -3,13 +3,13 @@
 PlantConditioner::PlantConditioner() {}
 PlantConditioner::~PlantConditioner() {}
 
-void PlantConditioner::Init(enum ResType res_type) {
+void PlantConditioner::Init(CapFir::ResType res_type) {
     _capFir.Init(res_type);
     _delta = 0;
     _deltaFilt = 0;
     _octave = 4;
 }
-void PlantConditioner::setScale( enum Notes rootNote, enum ScaleType scale_type) {
+void PlantConditioner::setScale( enum Notes root_note, enum ScaleType scale_type) {
     switch (scale_type) 
     {
     case Major:
@@ -63,7 +63,7 @@ void PlantConditioner::setScale( enum Notes rootNote, enum ScaleType scale_type)
     }
 
     for (int i = 0; i < _scaleLength; i++) {
-        _scale[i] = _scale[i] * powf(2.0f, (float) rootNote / 12.0f); 
+        _scale[i] = _scale[i] * powf(2.0f, (float) root_note / 12.0f); 
     }
 }
 
@@ -76,13 +76,36 @@ float PlantConditioner::Process(uint16_t baseline, uint16_t filtered) {
 
     _delta = baseline - filtered - touchTreshold;
     _deltaFilt = _capFir.Process((float)_delta);
-    if (_deltaFilt < _deltaMin) _deltaFilt = _deltaMin;
-    if (_deltaFilt > _deltaMax) _deltaFilt = _deltaMax;
-    
-    for (int i = 0; i < _scaleLength; i++) {
-        if (_deltaFilt < (_deltaMin + (i+1) * (_range / _scaleLength)) && _deltaFilt >= (_deltaMin + i * (_range / _scaleLength))) {
-            out = _scale[i] * (1 << _octave);  
+    if (_deltaFilt < _deltaMin) out = _scale[0] * (1 << _octave);
+    else if (_deltaFilt > _deltaMax) out = _scale[_scaleLength - 1] * (1 << _octave);
+    else {
+        for (int i = 0; i < _scaleLength; i++) {
+            float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
+            float upper = _deltaMin + _range * powf((float)(i + 1) / _scaleLength, _curveType);
+            
+            if (_deltaFilt >= lower && _deltaFilt < upper) {
+                out = _scale[i] * (1 << _octave);
+                break;
+            }
         }
     }
+    
+    
     return out;
+}
+
+float* PlantConditioner::getBin() {
+    for (int i = 0; i < _scaleLength; i++) {
+        float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
+        float upper = _deltaMin + _range * powf((float)(i + 1) / _scaleLength, _curveType);
+        _bin[i] = upper - lower;  // x debug
+    }
+    return _bin;
+}
+
+void PlantConditioner::setCurve(uint8_t delta_max, uint8_t curve_type) {
+
+    _curveType = curve_type;
+    _deltaMax = delta_max;
+    _range = _deltaMax - _deltaMin;
 }

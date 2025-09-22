@@ -1,8 +1,10 @@
 #pragma once
 #include "daisysp.h"
 #include "daisy_seed.h"
-#include "../.../FIIR/CapFir.h"
+#include "../FIIR/CapFir.h"
 #include <cstdint>
+
+
 
 class PlantConditioner {
 public:
@@ -38,16 +40,25 @@ public:
 
     void Init(CapFir::ResType res_type);
 
-    void setScale( enum Notes rootNote, enum ScaleType scale_type);
+    void setCurve(uint8_t delta_max, uint8_t curve_type);
+
+    void setScale( enum Notes root_note, enum ScaleType scale_type);
 
     void setOctave(uint8_t octave);
+
+    float* getBin();
 
     float Process(uint16_t baseline, uint16_t filtered);
 
 private:
+
+    const uint8_t touchTreshold = MPR121_TOUCH_THRESHOLD_DEFAULT;
+    CapFir _capFir;
+    uint8_t _curveType = 0; //0 linear, 1 exponential, 2 logarithmic
     uint8_t _octave, _scaleLength = 7;
     int _delta;
     float  _deltaFilt;
+    float _bin[12];
     uint8_t _deltaMin = 1, _deltaMax = 101, _range = 100;  //valori da calibrare
     float _outFreq;
     float _scale[12]; //Al massimo scala dodecafonica equalizzata. Se vogliamo farla microtonale, fottetevi ecco......   
@@ -59,3 +70,4 @@ private:
     const float _pentatonicScale[5] = {16.35 , 18.35 , 21.83, 24.5, 27.5   }; //C D F G A
     const float _chromaticScale[12] = {16.35 , 17.32 , 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87   }; //C C# D D# E F F# G G# A A# B
     const float _esatonic[6] = {16.35 , 18.35 , 20.6, 21.83, 24.5, 27.5   }; //C D E F G A
+};
