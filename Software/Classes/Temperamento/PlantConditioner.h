@@ -40,7 +40,7 @@ public:
 
     void Init(CapFir::ResType res_type);
 
-    void setCurve(uint8_t delta_max, uint8_t curve_type);
+    void setCurve(uint8_t delta_max, float curve_type);
 
     void setScale( enum Notes root_note, enum ScaleType scale_type);
 
@@ -50,16 +50,23 @@ public:
 
     float Process(uint16_t baseline, uint16_t filtered);
 
+    uint8_t getDeltaMin(){ return _deltaMin; }
+
+    
+    uint8_t getDeltaMax(){ return _deltaMax; } 
+    
+    uint8_t getRange(){ return _range; } 
+
 private:
 
     const uint8_t touchTreshold = MPR121_TOUCH_THRESHOLD_DEFAULT;
     CapFir _capFir;
-    uint8_t _curveType = 0; //0 linear, 1 exponential, 2 logarithmic
+
+    float _curveType = 0; //0 linear, 1 exponential, 2 logarithmic
     uint8_t _octave, _scaleLength = 7;
-    int _delta;
+    uint8_t _delta,  _deltaMin = 1, _deltaMax = 101, _range = 100;
     float  _deltaFilt;
     float _bin[12];
-    uint8_t _deltaMin = 1, _deltaMax = 101, _range = 100;  //valori da calibrare
     float _outFreq;
     float _scale[12]; //Al massimo scala dodecafonica equalizzata. Se vogliamo farla microtonale, fottetevi ecco......   
 

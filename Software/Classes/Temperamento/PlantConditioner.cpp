@@ -80,8 +80,14 @@ float PlantConditioner::Process(uint16_t baseline, uint16_t filtered) {
     else if (_deltaFilt > _deltaMax) out = _scale[_scaleLength - 1] * (1 << _octave);
     else {
         for (int i = 0; i < _scaleLength; i++) {
-            float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
-            float upper = _deltaMin + _range * powf((float)(i + 1) / _scaleLength, _curveType);
+
+        //Dimensione Crescente Bin
+        //float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
+        //float upper = _deltaMin + _range * powf((float)(i+1) / _scaleLength, _curveType);
+
+        //Dimensione Decrescente Bin
+        float lower = _deltaMin + _range * (1.0f - powf(1.0f - (float)i / _scaleLength, _curveType));
+        float upper = _deltaMin + _range * (1.0f - powf(1.0f - (float)(i + 1) / _scaleLength, _curveType));
             
             if (_deltaFilt >= lower && _deltaFilt < upper) {
                 out = _scale[i] * (1 << _octave);
@@ -96,14 +102,21 @@ float PlantConditioner::Process(uint16_t baseline, uint16_t filtered) {
 
 float* PlantConditioner::getBin() {
     for (int i = 0; i < _scaleLength; i++) {
-        float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
-        float upper = _deltaMin + _range * powf((float)(i + 1) / _scaleLength, _curveType);
+        
+        //Dimensione Crescente Bin
+        //float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
+        //float upper = _deltaMin + _range * powf((float)(i+1) / _scaleLength, _curveType);
+
+        //Dimensione Decrescente Bin
+        float lower = _deltaMin + _range * (1.0f - powf(1.0f - (float)i / _scaleLength, _curveType));
+        float upper = _deltaMin + _range * (1.0f - powf(1.0f - (float)(i + 1) / _scaleLength, _curveType));
+            
         _bin[i] = upper - lower;  // x debug
     }
     return _bin;
 }
 
-void PlantConditioner::setCurve(uint8_t delta_max, uint8_t curve_type) {
+void PlantConditioner::setCurve(uint8_t delta_max, float curve_type) {
 
     _curveType = curve_type;
     _deltaMax = delta_max;
