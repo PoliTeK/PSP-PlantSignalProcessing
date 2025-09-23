@@ -239,8 +239,8 @@ build/main0.o: main0.cpp \
  ../../libs/DaisySP/Source/Utility/metro.h \
  ../../libs/DaisySP/Source/Utility/samplehold.h \
  ../../libs/DaisySP/Source/Utility/smooth_random.h \
- ../../Classes/Temperamento/PlantConditioner.h \
- ../../Classes/Temperamento/../FIIR/CapFir.h
+ ../../Classes/FIIR/CapFir.h \
+ ../../Classes/Temperamento/PlantConditioner.h
 ../../libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../../libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -495,5 +495,5 @@ build/main0.o: main0.cpp \
 ../../libs/DaisySP/Source/Utility/metro.h:
 ../../libs/DaisySP/Source/Utility/samplehold.h:
 ../../libs/DaisySP/Source/Utility/smooth_random.h:
+../../Classes/FIIR/CapFir.h:
 ../../Classes/Temperamento/PlantConditioner.h:
-../../Classes/Temperamento/../FIIR/CapFir.h:

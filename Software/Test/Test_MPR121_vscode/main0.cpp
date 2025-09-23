@@ -1,12 +1,14 @@
 #include "../../libs/libDaisy/src/daisy_seed.h"
 #include "../../libs/DaisySP/Source/daisysp.h"
-//#include "../../Classes/FIIR/CapFir.h"
+#include "../../Classes/FIIR/CapFir.h"
 #include "../../Classes/Temperamento/PlantConditioner.h"
 //#define DebugFrequencies
 #define DebugBins
 #ifndef _BV // used to mask registers' bits related to the channel
 #define _BV(bit) (1 << (bit))
 #endif
+#define ADC_CH 2 // Numero di canali ADC da utilizzare
+
 
 using namespace daisy;
 using namespace daisysp;
@@ -17,6 +19,8 @@ daisy::Mpr121I2C::Config mpr121ObjConf;                       // creates config 
 daisy::Mpr121I2C cap;                                         // creates object for mpr121ù
 
 DaisySeed hw;
+AdcChannelConfig adcConfig[ADC_CH]; // Array di configurazione per 3 canali ADC
+
 int t;
 CapFir filter;                                                   // creates object for the CapFir filter
 PlantConditioner pc;
@@ -52,7 +56,12 @@ int main()
   pc.Init(CapFir::ResType::LOW);                     // initializes the filter with the low pass type and 16 coefficients
   pc.setScale(PlantConditioner::C, PlantConditioner::Major);
   pc.setOctave(3);
-  pc.setCurve(100, 2);                               // sets the curve of the scale
+  pc.setCurve(100, 1.1);                               // sets the curve of the scale
+
+  adcConfig[0].InitSingle(hw.GetPin(15)); 
+  adcConfig[1].InitSingle(hw.GetPin(16)); 
+  hw.adc.Init(adcConfig, ADC_CH);              
+  hw.adc.Start();                         
 
   //cap.SetThresholds(12, 6); // sets the touch and release thresholds for all 12 channels         // non funziona PD
 
@@ -97,8 +106,15 @@ int main()
     }
     lasttouched = currtouched;
     #endif
+
+    
     #ifdef DebugBins
+    //uint8_t delta_max =pc.getDeltaMin() + (uint8_t) hw.adc.Get(0)*120/4095; //0-120
+    float curve_type = hw.adc.GetFloat(1)*4.0f;
+    pc.setCurve(100, filter.Process(curve_type));
     float* bins = pc.getBin();
+    hw.PrintLine("RawValue : %f", curve_type);
+    
     hw.PrintLine("Bins: ");
     for (int i = 0; i < 7; i++) {
         hw.Print("| %f | ", bins[i]);
