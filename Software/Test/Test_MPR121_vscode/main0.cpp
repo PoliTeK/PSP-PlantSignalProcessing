@@ -58,8 +58,8 @@ int main()
   pc.setOctave(3);
   pc.setCurve(100, 1.1);                               // sets the curve of the scale
 
-  adcConfig[0].InitSingle(hw.GetPin(15)); 
-  adcConfig[1].InitSingle(hw.GetPin(16)); 
+  adcConfig[0].InitSingle(daisy::seed::A0); 
+  adcConfig[1].InitSingle(daisy::seed::A1); 
   hw.adc.Init(adcConfig, ADC_CH);              
   hw.adc.Start();                         
 
