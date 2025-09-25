@@ -74,7 +74,7 @@ void PlantConditioner::setOctave(uint8_t octave) {
 float PlantConditioner::Process(uint16_t baseline, uint16_t filtered) {
     float out = 0.0f;
 
-    _delta = baseline - filtered - touchTreshold;
+    _delta = baseline - filtered; //- touchTreshold;
     _deltaFilt = _capFir.Process((float)_delta);
     if (_deltaFilt < _deltaMin) out = _scale[0] * (1 << _octave);
     else if (_deltaFilt > _deltaMax) out = _scale[_scaleLength - 1] * (1 << _octave);
@@ -82,12 +82,12 @@ float PlantConditioner::Process(uint16_t baseline, uint16_t filtered) {
         for (int i = 0; i < _scaleLength; i++) {
 
         //Dimensione Crescente Bin
-        //float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
-        //float upper = _deltaMin + _range * powf((float)(i+1) / _scaleLength, _curveType);
+        float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
+        float upper = _deltaMin + _range * powf((float)(i+1) / _scaleLength, _curveType);
 
         //Dimensione Decrescente Bin
-        float lower = _deltaMin + _range * (1.0f - powf(1.0f - (float)i / _scaleLength, _curveType));
-        float upper = _deltaMin + _range * (1.0f - powf(1.0f - (float)(i + 1) / _scaleLength, _curveType));
+        //float lower = _deltaMin + _range * (1.0f - powf(1.0f - (float)i / _scaleLength, _curveType));
+        //float upper = _deltaMin + _range * (1.0f - powf(1.0f - (float)(i + 1) / _scaleLength, _curveType));
             
             if (_deltaFilt >= lower && _deltaFilt < upper) {
                 out = _scale[i] * (1 << _octave);
@@ -104,12 +104,12 @@ float* PlantConditioner::getBin() {
     for (int i = 0; i < _scaleLength; i++) {
         
         //Dimensione Crescente Bin
-        //float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
-        //float upper = _deltaMin + _range * powf((float)(i+1) / _scaleLength, _curveType);
+        float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
+        float upper = _deltaMin + _range * powf((float)(i+1) / _scaleLength, _curveType);
 
         //Dimensione Decrescente Bin
-        float lower = _deltaMin + _range * (1.0f - powf(1.0f - (float)i / _scaleLength, _curveType));
-        float upper = _deltaMin + _range * (1.0f - powf(1.0f - (float)(i + 1) / _scaleLength, _curveType));
+        //float lower = _deltaMin + _range * (1.0f - powf(1.0f - (float)i / _scaleLength, _curveType));
+        //float upper = _deltaMin + _range * (1.0f - powf(1.0f - (float)(i + 1) / _scaleLength, _curveType));
             
         _bin[i] = upper - lower;  // x debug
     }

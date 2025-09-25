@@ -50,8 +50,9 @@ public:
 
     float Process(uint16_t baseline, uint16_t filtered);
 
-    uint8_t getDeltaMin(){ return _deltaMin; }
+    float getDeltaFilt(){return _deltaFilt;}
 
+    uint8_t getDeltaMin(){ return _deltaMin; }
     
     uint8_t getDeltaMax(){ return _deltaMax; } 
     
