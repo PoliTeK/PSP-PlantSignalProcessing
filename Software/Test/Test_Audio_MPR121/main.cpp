@@ -1,11 +1,13 @@
 #include "../../libs/libDaisy/src/daisy_seed.h"
 #include "../../libs/DaisySP/Source/daisysp.h"
+#include "../../Classes/FIIR/CapFir.h"
 #include "../../Classes/Temperamento/PlantConditioner.h"
 
 #ifndef _BV
 #define _BV(bit) (1 << (bit))
 #endif
-//#define DEBUG
+#define ADC_CH 2 // Numero di canali ADC da utilizzare
+#define DEBUG
 using namespace daisy;
 using namespace daisysp;
 
@@ -13,7 +15,10 @@ daisy::Mpr121I2C::Config mpr121ObjConf; // creates config for mpr121 (constructo
 daisy::Mpr121I2C cap;                   // creates object for mpr121ù
 
 DaisySeed hw;
-CapFir capFilter; // creates object for the CapFir filter
+AdcChannelConfig adcConfig[ADC_CH];
+CapFir CurveFilter; // creates object for the CapFir filter
+CapFir DeltaFilter;
+CapFir MaxFilter;
 PlantConditioner pc;
 
 static Oscillator osc;     
@@ -47,8 +52,11 @@ static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::
 
 int main()
 {
+  int k = 0;
 
-
+  CurveFilter.Init(CapFir::ResType::HIGH);
+  DeltaFilter.Init(CapFir::ResType::HIGH);
+  MaxFilter.Init(CapFir::ResType::HIGH);
 
   float sampleRate;
   hw.Configure();
@@ -57,9 +65,10 @@ int main()
   sampleRate = hw.AudioSampleRate();
 
   pc.Init(CapFir::ResType::HIGH); 
-  pc.setScale(PlantConditioner::Fs, PlantConditioner::Major);
-  pc.setOctave(5);
-  pc.setBounds(4, 65);
+  pc.setScale(PlantConditioner::C, PlantConditioner::MinorArm);
+  pc.setOctave(3);
+  pc.setCurve(100,1.1);
+  
 
   osc.Init(sampleRate);                  // initializes the oscillator with the sample rate
   osc.SetWaveform(Oscillator::WAVE_TRI); // sets the waveform
@@ -71,6 +80,11 @@ int main()
   env.SetTime(ADSR_SEG_DECAY, 0.1f);
   env.SetSustainLevel(0.7f);
   env.SetTime(ADSR_SEG_RELEASE, 0.2f);
+
+  adcConfig[0].InitSingle(daisy::seed::A0); 
+  adcConfig[1].InitSingle(daisy::seed::A1); 
+  hw.adc.Init(adcConfig, ADC_CH);              
+  hw.adc.Start();                
 
   #ifdef DEBUG
   hw.StartLog(false); // starts the log to the serial port
@@ -97,6 +111,11 @@ int main()
 
   while (1)
   {
+    float curve_type = hw.adc.GetFloat(1)*2 + 1;
+    float delta_max = hw.adc.GetFloat(0)*90 + 30;
+    pc.setCurve(MaxFilter.Process(delta_max), CurveFilter.Process(curve_type));
+    
+
     currTouched = cap.Touched();                                   // reads the touched channels from the mpr121
     if ((currTouched & _BV(0)) && !(lastTouched & _BV(0)) || gate) // if the channel 0 is touched and it was not touched before
     {
@@ -105,7 +124,7 @@ int main()
       osc.SetFreq(f);
       #ifdef DEBUG // sets the gate to true
         hw.PrintLine("--------------------------------------------------------------------------------");
-        hw.PrintLine("CAP 0 touched");
+        hw.PrintLine("CAP touched");
       #endif
     }
 
@@ -113,7 +132,7 @@ int main()
     {
       gate = false; // sets the gate to false
       #ifdef DEBUG
-        hw.PrintLine("CAP 0 released");
+        hw.PrintLine("CAP released");
         hw.PrintLine("--------------------------------------------------------------------------------");
         hw.PrintLine(" ");
       #endif
@@ -125,26 +144,27 @@ int main()
     if (gate)
     {
       hw.PrintLine("| ");
-      hw.PrintLine("| Baseline Touched Value : %d |", cap.BaselineData(0));
-      hw.PrintLine("| Filtered Touched Value : %d |", cap.FilteredData(0));
-      hw.PrintLine("| Difference Touched Value : %d |", cap.BaselineData(0) - cap.FilteredData(0));
+      hw.PrintLine("| Delta Filtered : %d, %f |",cap.BaselineData(0) - cap.FilteredData(0),
+        pc.getDeltaFilt());
       hw.PrintLine("| Frequency : %f |", f);
       hw.PrintLine("| ");
     }
-    else
-    {
-      hw.PrintLine(" ");
-      hw.PrintLine(" ");
-      hw.PrintLine("Baseline Untouched Value : %d", cap.BaselineData(0));
-      hw.PrintLine("Filtered Untouched Value : %d", cap.FilteredData(0));
-      hw.PrintLine("Difference Untouched Value : %d", cap.BaselineData(0) - cap.FilteredData(0));
-      hw.PrintLine(" ");
-      hw.PrintLine(" ");
+    else{
+      k++;
+      //hw.PrintLine("k : %d", k);
+      if (k>100){
+        hw.PrintLine(" ");
+        hw.PrintLine("deltaMax : %f", delta_max);
+        hw.PrintLine("curveType : %f", curve_type);
+        k = 0;
+      }
     }
 #endif
 
     lastTouched = currTouched;
-
+    
     hw.DelayMs(10);
+    
+
   }
 }
