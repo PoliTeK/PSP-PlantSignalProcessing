@@ -7,7 +7,7 @@
 #define _BV(bit) (1 << (bit))
 #endif
 #define ADC_CH 2 // Numero di canali ADC da utilizzare
-#define DEBUG
+//#define DEBUG
 using namespace daisy;
 using namespace daisysp;
 
@@ -26,6 +26,8 @@ float f = 0.0f;
 float delta = 0.0f; 
 float filtDelta = 0.0f; 
 bool gate = false;  
+
+bool flag = false; // used for debug printing
 
 static Adsr env;
 
@@ -64,7 +66,7 @@ int main()
   hw.SetAudioBlockSize(4);
   sampleRate = hw.AudioSampleRate();
 
-  pc.Init(CapFir::ResType::LOW); 
+  pc.Init(CapFir::ResType::HIGH); 
   pc.setScale(PlantConditioner::C, PlantConditioner::MinorArm);
   pc.setOctave(3);
   pc.setCurve(100,1.1);
@@ -89,7 +91,7 @@ int main()
   #ifdef DEBUG
   hw.StartLog(false); // starts the log to the serial port
   #endif
-
+  hw.StartLog(false);
 
   daisy::Mpr121I2C::Result status = cap.Init(mpr121ObjConf);
   if (status != daisy::Mpr121I2C::Result::OK) // initializes the mpr121 with the config and see if the comunication is ok
@@ -114,48 +116,45 @@ int main()
     float curve_type = hw.adc.GetFloat(1)*2 + 1;
     float delta_max = hw.adc.GetFloat(0)*90 + 30;
     pc.setCurve(MaxFilter.Process(delta_max), CurveFilter.Process(curve_type));
-    f = pc.Process(cap.BaselineData(0), cap.FilteredData(0)); // calculates the frequency based on the delta value
+    
 
     currTouched = cap.Touched();                                   // reads the touched channels from the mpr121
     if ((currTouched & _BV(0)) && !(lastTouched & _BV(0)) || gate) // if the channel 0 is touched and it was not touched before
     {
       gate = true; // sets the gate to true
+      f = pc.Process(cap.BaselineData(0), cap.FilteredData(0));
       osc.SetFreq(f);
-      /*
-      #ifdef DEBUG // sets the gate to true
-        hw.PrintLine("--------------------------------------------------------------------------------");
-        hw.PrintLine("CAP touched");
-      #endif
-      */
     }
 
     if (!(currTouched & _BV(0)) && (lastTouched & _BV(0))) // if the channel 0 was touched and it is not touched now
     {
       gate = false; // sets the gate to false
-      /*
-      #ifdef DEBUG
-        hw.PrintLine("CAP released");
-        hw.PrintLine("--------------------------------------------------------------------------------");
-        hw.PrintLine(" ");
-      #endif
-      */
     }
 
     // calculates the frequency based on the delta value
 
 #ifdef DEBUG
     if (gate)
-    {/*
+    {
+      if (!flag){
+        hw.PrintLine("--------------------------------------------------------------------------------");
+        hw.PrintLine("CAP touched");
+        flag = true;
+      }
       hw.PrintLine("| ");
-      hw.PrintLine("| Delta : %d, | DeltaFiltered :  %f |", pc.getDelta(), pc.getDeltaFilt());
-      hw.PrintLine("| Frequency : %f |", f);
+      hw.PrintLine("| Delta : %f, | DeltaFiltered :  %f | Frequency : %f ", pc.getDelta(), pc.getDeltaFilt(), f);
       hw.PrintLine("| ");
-      */
+      
     }
-    else{
-      
-      
-      /*
+    else
+    {
+      if ( flag)
+      {
+        hw.PrintLine("CAP released");
+        hw.PrintLine("--------------------------------------------------------------------------------");
+        hw.PrintLine(" ");
+        flag = false;
+      }
       k++;
       if (k>50){
         hw.PrintLine(" ");
@@ -163,12 +162,17 @@ int main()
         hw.PrintLine("curveType : %f", curve_type);
         k = 0;
       }
-      */
     }
 #endif
 
     lastTouched = currTouched;
-    hw.PrintLine("%f, %d, %f", f, pc.getDelta(), pc.getDeltaFilt());
+    
+      hw.PrintLine("%f, %f, %f", f, pc.getDelta(), pc.getDeltaFilt());
+      //hw.PrintLine(" ");
+      //hw.PrintLine("%d, %d ", cap.BaselineData(0), cap.FilteredData(0));
+      //hw.PrintLine(" ");
+    
+   
     hw.DelayMs(10);
     
 
