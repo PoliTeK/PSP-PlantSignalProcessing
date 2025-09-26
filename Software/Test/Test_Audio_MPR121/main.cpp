@@ -64,7 +64,7 @@ int main()
   hw.SetAudioBlockSize(4);
   sampleRate = hw.AudioSampleRate();
 
-  pc.Init(CapFir::ResType::HIGH); 
+  pc.Init(CapFir::ResType::LOW); 
   pc.setScale(PlantConditioner::C, PlantConditioner::MinorArm);
   pc.setOctave(3);
   pc.setCurve(100,1.1);
@@ -114,55 +114,61 @@ int main()
     float curve_type = hw.adc.GetFloat(1)*2 + 1;
     float delta_max = hw.adc.GetFloat(0)*90 + 30;
     pc.setCurve(MaxFilter.Process(delta_max), CurveFilter.Process(curve_type));
-    
+    f = pc.Process(cap.BaselineData(0), cap.FilteredData(0)); // calculates the frequency based on the delta value
 
     currTouched = cap.Touched();                                   // reads the touched channels from the mpr121
     if ((currTouched & _BV(0)) && !(lastTouched & _BV(0)) || gate) // if the channel 0 is touched and it was not touched before
     {
       gate = true; // sets the gate to true
-      f = pc.Process(cap.BaselineData(0), cap.FilteredData(0)); // calculates the frequency based on the delta value
       osc.SetFreq(f);
+      /*
       #ifdef DEBUG // sets the gate to true
         hw.PrintLine("--------------------------------------------------------------------------------");
         hw.PrintLine("CAP touched");
       #endif
+      */
     }
 
     if (!(currTouched & _BV(0)) && (lastTouched & _BV(0))) // if the channel 0 was touched and it is not touched now
     {
       gate = false; // sets the gate to false
+      /*
       #ifdef DEBUG
         hw.PrintLine("CAP released");
         hw.PrintLine("--------------------------------------------------------------------------------");
         hw.PrintLine(" ");
       #endif
+      */
     }
 
     // calculates the frequency based on the delta value
 
 #ifdef DEBUG
     if (gate)
-    {
+    {/*
       hw.PrintLine("| ");
-      hw.PrintLine("| Delta Filtered : %d, %f |",cap.BaselineData(0) - cap.FilteredData(0),
-        pc.getDeltaFilt());
+      hw.PrintLine("| Delta : %d, | DeltaFiltered :  %f |", pc.getDelta(), pc.getDeltaFilt());
       hw.PrintLine("| Frequency : %f |", f);
       hw.PrintLine("| ");
+      */
     }
     else{
+      
+      
+      /*
       k++;
-      //hw.PrintLine("k : %d", k);
-      if (k>100){
+      if (k>50){
         hw.PrintLine(" ");
         hw.PrintLine("deltaMax : %f", delta_max);
         hw.PrintLine("curveType : %f", curve_type);
         k = 0;
       }
+      */
     }
 #endif
 
     lastTouched = currTouched;
-    
+    hw.PrintLine("%f, %d, %f", f, pc.getDelta(), pc.getDeltaFilt());
     hw.DelayMs(10);
     
 

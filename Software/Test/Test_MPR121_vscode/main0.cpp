@@ -2,7 +2,7 @@
 #include "../../libs/DaisySP/Source/daisysp.h"
 #include "../../Classes/FIIR/CapFir.h"
 #include "../../Classes/Temperamento/PlantConditioner.h"
-//#define DebugFrequencies
+#define DebugFrequencies
 #define DebugBins
 #ifndef _BV // used to mask registers' bits related to the channel
 #define _BV(bit) (1 << (bit))
