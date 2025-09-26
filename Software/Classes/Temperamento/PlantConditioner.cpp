@@ -73,9 +73,8 @@ void PlantConditioner::setOctave(uint8_t octave) {
 
 float PlantConditioner::Process(uint16_t baseline, uint16_t filtered) {
     float out = 0.0f;
-
-    _delta = baseline - filtered; //- touchTreshold;
-    _deltaFilt = _capFir.Process((float)_delta);
+    _delta = baseline - filtered - touchTreshold;
+    _deltaFilt = _capFir.Process(_delta);
     if (_deltaFilt < _deltaMin) out = _scale[0] * (1 << _octave);
     else if (_deltaFilt > _deltaMax) out = _scale[_scaleLength - 1] * (1 << _octave);
     else {

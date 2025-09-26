@@ -50,7 +50,11 @@ public:
 
     float Process(uint16_t baseline, uint16_t filtered);
 
+    float getDelta(){return _delta;}
+
     float getDeltaFilt(){return _deltaFilt;}
+
+    void setDelta();
 
     uint8_t getDeltaMin(){ return _deltaMin; }
     
@@ -65,8 +69,8 @@ private:
 
     float _curveType = 0; //0 linear, 1 exponential, 2 logarithmic
     uint8_t _octave, _scaleLength = 7;
-    uint8_t _delta,  _deltaMin = 1, _deltaMax = 101, _range = 100;
-    float  _deltaFilt;
+    uint8_t  _deltaMin = 1, _deltaMax = 101, _range = 100;
+    float  _delta, _deltaFilt;
     float _bin[12];
     float _outFreq;
     float _scale[12]; //Al massimo scala dodecafonica equalizzata. Se vogliamo farla microtonale, fottetevi ecco......   

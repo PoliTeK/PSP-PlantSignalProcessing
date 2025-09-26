@@ -1,7 +1,8 @@
 %%Codice Matlab per il calcolo dei coefficienti di un FIR
+clc
 
 fs = 100;        % frequenza di campionamento effettiva
-fc = 5;         % frequenza di taglio desiderata
+fc = 10;         % frequenza di taglio desiderata
 Na = 16;         % ordine del filtro (numero coefficienti)
 Nb = 32;
 Nc = 64;
