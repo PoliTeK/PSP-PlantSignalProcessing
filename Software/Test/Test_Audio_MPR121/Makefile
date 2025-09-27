@@ -5,7 +5,7 @@ TARGET = main
 
 # Sources
 
-CPP_SOURCES = main.cpp ../../Classes/FIIR/CapFir.cpp ../../Classes/Temperamento/PlantConditioner.cpp
+CPP_SOURCES = main.cpp ../../Classes/FIIR/CapFir.cpp ../../Classes/Temperamento/PlantConditioner.cpp  ../../Classes/Effects/AnalogDelay/src/AnalogDelay.cpp
 
 
 # Library Locations

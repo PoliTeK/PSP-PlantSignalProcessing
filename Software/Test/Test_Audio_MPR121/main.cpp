@@ -1,13 +1,17 @@
 #include "../../libs/libDaisy/src/daisy_seed.h"
 #include "../../libs/DaisySP/Source/daisysp.h"
-#include "../../Classes/FIIR/CapFir.h"
 #include "../../Classes/Temperamento/PlantConditioner.h"
+#include "../../Classes/Effects/AnalogDelay/src/AnalogDelay.h"
 
 #ifndef _BV
 #define _BV(bit) (1 << (bit))
 #endif
 #define ADC_CH 2 // Numero di canali ADC da utilizzare
-//#define DEBUG
+#define DEBUG
+//#define csvAcquisition
+
+
+
 using namespace daisy;
 using namespace daisysp;
 
@@ -16,31 +20,34 @@ daisy::Mpr121I2C cap;                   // creates object for mpr121ù
 
 DaisySeed hw;
 AdcChannelConfig adcConfig[ADC_CH];
-CapFir CurveFilter; // creates object for the CapFir filter
-CapFir DeltaFilter;
-CapFir MaxFilter;
+
 PlantConditioner pc;
 
 static Oscillator osc;     
 float f = 0.0f;     
-float delta = 0.0f; 
-float filtDelta = 0.0f; 
 bool gate = false;  
+////////////////////////////////////////roba momentanea per notte ricercatori
+
+static AnalogDelay delay; // delay effect
+
+
+////////////////////////////////////////////////////////
 
 bool flag = false; // used for debug printing
+int k = 0;        // used for debug printing
 
 static Adsr env;
 
 
 uint16_t lastTouched = 0;                               // last touched value
 uint16_t currTouched = 0;                               // current touched value                                        ù
-uint8_t touchTreshold = MPR121_TOUCH_THRESHOLD_DEFAULT; 
+
 
 float output = 0.0f; // used to store the output value
 
 static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::InterleavingOutputBuffer out, size_t size)
 {
-  float envOut, oscOut;
+  float envOut, oscOut, wetOut;
   for (size_t i = 0; i < size; i += 2)
   {
 
@@ -48,17 +55,13 @@ static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::
     osc.SetAmp(envOut);
 
     oscOut = osc.Process();
-    out[i] = out[i + 1] = oscOut;               // outputs the same value to left and right channels
+    wetOut = delay.Process(oscOut);
+    out[i] = out[i + 1] = wetOut;               // outputs the same value to left and right channels
   }
 }
 
 int main()
 {
-  int k = 0;
-
-  CurveFilter.Init(CapFir::ResType::HIGH);
-  DeltaFilter.Init(CapFir::ResType::HIGH);
-  MaxFilter.Init(CapFir::ResType::HIGH);
 
   float sampleRate;
   hw.Configure();
@@ -82,16 +85,30 @@ int main()
   env.SetTime(ADSR_SEG_DECAY, 0.1f);
   env.SetSustainLevel(0.7f);
   env.SetTime(ADSR_SEG_RELEASE, 0.2f);
+/////////////////////////////////////////////////////roba momentanea per notte ricercatori
+  delay.Init(sampleRate);
+  delay.setDelayTime(0.25f); // sets initial delay time to 500ms
+  delay.setFeedback(0.25f);  // sets initial feedback to 50%
+  delay.setMix(0.2f);       // sets initial mix to 50%
+  delay.setDepth(0.01f);   // sets initial depth to 2ms
+
+/////////////////////////////////////////////////////7
+
+
+
 
   adcConfig[0].InitSingle(daisy::seed::A0); 
   adcConfig[1].InitSingle(daisy::seed::A1); 
   hw.adc.Init(adcConfig, ADC_CH);              
   hw.adc.Start();                
 
-  #ifdef DEBUG
-  hw.StartLog(false); // starts the log to the serial port
+  #ifdef DEBUG 
+    hw.StartLog(false); // starts the log to the serial port
   #endif
-  hw.StartLog(false);
+  #ifdef csvAcquisition
+    hw.StartLog(false); // starts the log to the serial port
+  #endif
+  
 
   daisy::Mpr121I2C::Result status = cap.Init(mpr121ObjConf);
   if (status != daisy::Mpr121I2C::Result::OK) // initializes the mpr121 with the config and see if the comunication is ok
@@ -114,8 +131,8 @@ int main()
   while (1)
   {
     float curve_type = hw.adc.GetFloat(1)*2 + 1;
-    float delta_max = hw.adc.GetFloat(0)*90 + 30;
-    pc.setCurve(MaxFilter.Process(delta_max), CurveFilter.Process(curve_type));
+    float delta_max = hw.adc.GetFloat(0)*100 + 20;
+    pc.setCurve(delta_max, curve_type);
     
 
     currTouched = cap.Touched();                                   // reads the touched channels from the mpr121
@@ -124,16 +141,19 @@ int main()
       gate = true; // sets the gate to true
       f = pc.Process(cap.BaselineData(0), cap.FilteredData(0));
       osc.SetFreq(f);
+      
     }
 
     if (!(currTouched & _BV(0)) && (lastTouched & _BV(0))) // if the channel 0 was touched and it is not touched now
     {
       gate = false; // sets the gate to false
+      
+      pc.setDelta();
     }
 
     // calculates the frequency based on the delta value
 
-#ifdef DEBUG
+  #ifdef DEBUG
     if (gate)
     {
       if (!flag){
@@ -163,17 +183,17 @@ int main()
         k = 0;
       }
     }
-#endif
+  #endif
 
-    lastTouched = currTouched;
+  #ifdef csvAcquisition
+    hw.PrintLine("%f, %f, %f, %d", f, pc.getDelta(), pc.getDeltaFilt());
+    //hw.PrintLine(" ");
+    //hw.PrintLine("%d, %d ", cap.BaselineData(0), cap.FilteredData(0));
+    //hw.PrintLine(" ");
+  #endif
     
-      hw.PrintLine("%f, %f, %f", f, pc.getDelta(), pc.getDeltaFilt());
-      //hw.PrintLine(" ");
-      //hw.PrintLine("%d, %d ", cap.BaselineData(0), cap.FilteredData(0));
-      //hw.PrintLine(" ");
-    
-   
-    hw.DelayMs(10);
+  lastTouched = currTouched;
+  hw.DelayMs(10);
     
 
   }

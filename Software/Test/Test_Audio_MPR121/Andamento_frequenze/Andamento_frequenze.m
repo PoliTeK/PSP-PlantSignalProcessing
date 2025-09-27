@@ -21,7 +21,7 @@ Ts = 0.01;
 t = (0:N-1) * Ts;
 
 % Plot con scala temporale
-plot(t,data(1,:), t, data(2,:), t, data(3,:));
+plot(t,data(1,:), "r", t, data(2,:), "g", t, data(3,:), "b");
 
 
 xlabel('Tempo [s]');

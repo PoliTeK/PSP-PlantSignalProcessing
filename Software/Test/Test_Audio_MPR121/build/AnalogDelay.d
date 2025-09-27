@@ -1,4 +1,5 @@
-build/main.o: main.cpp \
+build/AnalogDelay.o: \
+ ../../Classes/Effects/AnalogDelay/src/AnalogDelay.cpp \
  ../../libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h \
  ../../libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h \
@@ -104,6 +105,7 @@ build/main.o: main.cpp \
  ../../libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../../libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
  ../../libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
+ ../../Classes/Effects/AnalogDelay/src/AnalogDelay.h \
  ../../libs/libDaisy/src/daisy_seed.h ../../libs/libDaisy/src/daisy.h \
  ../../libs/libDaisy/src/daisy_core.h ../../libs/libDaisy/src/version.h \
  ../../libs/libDaisy/src/sys/system.h ../../libs/libDaisy/src/per/tim.h \
@@ -238,10 +240,7 @@ build/main.o: main.cpp \
  ../../libs/DaisySP/Source/Utility/maytrig.h \
  ../../libs/DaisySP/Source/Utility/metro.h \
  ../../libs/DaisySP/Source/Utility/samplehold.h \
- ../../libs/DaisySP/Source/Utility/smooth_random.h \
- ../../Classes/Temperamento/PlantConditioner.h \
- ../../Classes/Temperamento/../FIIR/CapFir.h \
- ../../Classes/Effects/AnalogDelay/src/AnalogDelay.h
+ ../../libs/DaisySP/Source/Utility/smooth_random.h
 ../../libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../../libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -347,6 +346,7 @@ build/main.o: main.cpp \
 ../../libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h:
 ../../libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
 ../../libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
+../../Classes/Effects/AnalogDelay/src/AnalogDelay.h:
 ../../libs/libDaisy/src/daisy_seed.h:
 ../../libs/libDaisy/src/daisy.h:
 ../../libs/libDaisy/src/daisy_core.h:
@@ -496,6 +496,3 @@ build/main.o: main.cpp \
 ../../libs/DaisySP/Source/Utility/metro.h:
 ../../libs/DaisySP/Source/Utility/samplehold.h:
 ../../libs/DaisySP/Source/Utility/smooth_random.h:
-../../Classes/Temperamento/PlantConditioner.h:
-../../Classes/Temperamento/../FIIR/CapFir.h:
-../../Classes/Effects/AnalogDelay/src/AnalogDelay.h:
