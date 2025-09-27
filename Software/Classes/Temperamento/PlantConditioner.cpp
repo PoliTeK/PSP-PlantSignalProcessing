@@ -4,7 +4,9 @@ PlantConditioner::PlantConditioner() {}
 PlantConditioner::~PlantConditioner() {}
 
 void PlantConditioner::Init(CapFir::ResType res_type) {
-    _capFir.Init(res_type);
+    _deltaFir.Init(res_type);
+    _maxFir.Init(CapFir::ResType::HIGH);
+    _curveFir.Init(CapFir::ResType::HIGH);
     _delta = 0;
     _deltaFilt = 0;
     _octave = 4;
@@ -74,7 +76,7 @@ void PlantConditioner::setOctave(uint8_t octave) {
 float PlantConditioner::Process(uint16_t baseline, uint16_t filtered) {
     float out = 0.0f;
     _delta = baseline - filtered - touchTreshold;
-    _deltaFilt = _capFir.Process(_delta);
+    _deltaFilt = _deltaFir.Process(_delta);
     if (_deltaFilt < _deltaMin) out = _scale[0] * (1 << _octave);
     else if (_deltaFilt > _deltaMax) out = _scale[_scaleLength - 1] * (1 << _octave);
     else {
@@ -117,7 +119,11 @@ float* PlantConditioner::getBin() {
 
 void PlantConditioner::setCurve(uint8_t delta_max, float curve_type) {
 
-    _curveType = curve_type;
-    _deltaMax = delta_max;
+    _curveType = _curveFir.Process(curve_type);
+    _deltaMax = _maxFir.Process(delta_max);
     _range = _deltaMax - _deltaMin;
+}
+
+void PlantConditioner::setDelta() {
+    _delta = _deltaFilt ;
 }

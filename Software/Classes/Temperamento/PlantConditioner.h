@@ -65,7 +65,7 @@ public:
 private:
 
     const uint8_t touchTreshold = MPR121_TOUCH_THRESHOLD_DEFAULT;
-    CapFir _capFir;
+    CapFir _deltaFir, _maxFir, _curveFir;
 
     float _curveType = 0; //0 linear, 1 exponential, 2 logarithmic
     uint8_t _octave, _scaleLength = 7;
