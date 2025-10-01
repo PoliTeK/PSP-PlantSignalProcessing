@@ -19,6 +19,7 @@ public:
     
     void Init(ResType res_type);
     float Process(float in);
+    void setBuffer(float value);
     
 
 private:

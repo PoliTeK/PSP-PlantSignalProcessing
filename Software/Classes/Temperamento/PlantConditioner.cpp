@@ -124,6 +124,7 @@ void PlantConditioner::setCurve(uint8_t delta_max, float curve_type) {
     _range = _deltaMax - _deltaMin;
 }
 
-void PlantConditioner::setDelta() {
+void PlantConditioner::setBuffer() {
     _delta = _deltaFilt ;
+    _deltaFir.setBuffer(_delta);
 }

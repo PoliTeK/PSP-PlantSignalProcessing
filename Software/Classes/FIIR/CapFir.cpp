@@ -67,4 +67,27 @@ float CapFir::Process(float in) {
     return out;
 }
 
+void CapFir::setBuffer(float value) {
+    switch (_resType) {
+        case LOW:
+            for (int i = 0; i < 16; i++) {
+                _bufferL[i] = value;
+                }
+            break;
+
+        case MID:
+            for (int i = 0; i < 32; i++) {
+                _bufferM[i] = value;
+            }
+            break;
+
+        case HIGH:
+            for (int i = 0; i < 64; i++) {
+                _bufferH[i] = value;
+            }
+            break;
+    }      
+    
+}
+
 

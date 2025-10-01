@@ -54,7 +54,7 @@ public:
 
     float getDeltaFilt(){return _deltaFilt;}
 
-    void setDelta();
+    void setBuffer();
 
     uint8_t getDeltaMin(){ return _deltaMin; }
     
