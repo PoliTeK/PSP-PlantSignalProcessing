@@ -7,8 +7,8 @@
 #define _BV(bit) (1 << (bit))
 #endif
 #define ADC_CH 2 // Numero di canali ADC da utilizzare
-#define DEBUG
-//#define csvAcquisition
+//#define DEBUG
+#define csvAcquisition
 
 
 
@@ -26,12 +26,7 @@ PlantConditioner pc;
 static Oscillator osc;     
 float f = 0.0f;     
 bool gate = false;  
-////////////////////////////////////////roba momentanea per notte ricercatori
 
-static AnalogDelay delay; // delay effect
-
-
-////////////////////////////////////////////////////////
 
 bool flag = false; // used for debug printing
 int k = 0;        // used for debug printing
@@ -47,7 +42,7 @@ float output = 0.0f; // used to store the output value
 
 static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::InterleavingOutputBuffer out, size_t size)
 {
-  float envOut, oscOut, wetOut;
+  float envOut, oscOut;
   for (size_t i = 0; i < size; i += 2)
   {
 
@@ -55,8 +50,8 @@ static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::
     osc.SetAmp(envOut);
 
     oscOut = osc.Process();
-    wetOut = delay.Process(oscOut);
-    out[i] = out[i + 1] = wetOut;               // outputs the same value to left and right channels
+ 
+    out[i] = out[i + 1] = oscOut;               // outputs the same value to left and right channels
   }
 }
 
@@ -85,14 +80,7 @@ int main()
   env.SetTime(ADSR_SEG_DECAY, 0.1f);
   env.SetSustainLevel(0.7f);
   env.SetTime(ADSR_SEG_RELEASE, 0.2f);
-/////////////////////////////////////////////////////roba momentanea per notte ricercatori
-  delay.Init(sampleRate);
-  delay.setDelayTime(0.25f); // sets initial delay time to 500ms
-  delay.setFeedback(0.25f);  // sets initial feedback to 50%
-  delay.setMix(0.2f);       // sets initial mix to 50%
-  delay.setDepth(0.01f);   // sets initial depth to 2ms
 
-/////////////////////////////////////////////////////7
 
 
 
@@ -147,8 +135,7 @@ int main()
     if (!(currTouched & _BV(0)) && (lastTouched & _BV(0))) // if the channel 0 was touched and it is not touched now
     {
       gate = false; // sets the gate to false
-      
-      pc.setDelta();
+      pc.setBuffer();
     }
 
     // calculates the frequency based on the delta value

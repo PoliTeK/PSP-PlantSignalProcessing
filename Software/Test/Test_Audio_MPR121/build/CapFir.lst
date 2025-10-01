@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 1
   51 000c BEE80F00 		ldmia	lr!, {r0, r1, r2, r3}
   52              	.LVL1:
   53              		.loc 1 5 16 view .LVU5
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 2
 
 
   54 0010 ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 1
  110 0002 00BF     		.section	.text._ZN6CapFir4InitENS_7ResTypeE,"ax",%progbits
  111              		.align	1
  112              		.p2align 2,,3
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 3
 
 
  113              		.global	_ZN6CapFir4InitENS_7ResTypeE
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 1
  143              	.L8:
  144              	.LBB9:
  145              	.LBB5:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 4
 
 
   19:../../Classes/FIIR/CapFir.cpp ****             }
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 1
  190              		.global	_ZN6CapFir7ProcessEf
  191              		.syntax unified
  192              		.thumb
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 5
 
 
  193              		.thumb_func
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 1
   44:../../Classes/FIIR/CapFir.cpp ****             break;
   45:../../Classes/FIIR/CapFir.cpp **** 
   46:../../Classes/FIIR/CapFir.cpp ****         case MID:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 6
 
 
   47:../../Classes/FIIR/CapFir.cpp ****             for (int i = 31; i > 0; i--) {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 1
   50:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
  262              		.loc 1 50 13 is_stmt 1 view .LVU42
  263              	.LBE11:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 7
 
 
  264              	.LBE24:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 1
  307              	.LBB19:
  308              	.LBB14:
   38:../../Classes/FIIR/CapFir.cpp ****             }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 8
 
 
  309              		.loc 1 38 29 view .LVU55
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 1
  350              		.loc 1 41 13 is_stmt 1 discriminator 2 view .LVU68
   41:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
  351              		.loc 1 41 31 discriminator 2 view .LVU69
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 9
 
 
  352 0084 F7D1     		bne	.L29
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 1
   62:../../Classes/FIIR/CapFir.cpp ****             }
  398              		.loc 1 62 34 is_stmt 0 view .LVU79
  399 00ac B3EC018A 		vldmia.32	r3!, {s16}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 10
 
 
  400              	.LVL37:
@@ -577,196 +577,325 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 1
  427 00c4 00000000 		.word	0
  428              		.cfi_endproc
  429              	.LFE4847:
- 431              		.section	.rodata
- 432              		.align	2
- 433              		.set	.LANCHOR0,. + 0
- 434              	.LC0:
- 435 0000 6A7E63BB 		.word	-1151107478
- 436 0004 D1F69EBB 		.word	-1147210031
- 437 0008 ED1E8BBB 		.word	-1148510483
- 438 000c AFAB113C 		.word	1007791023
- 439 0010 3132353D 		.word	1026896433
- 440 0014 0447CD3D 		.word	1036863236
- 441 0018 54F1233E 		.word	1042542932
- 442 001c 8BE24B3E 		.word	1045160587
- 443 0020 8BE24B3E 		.word	1045160587
- 444 0024 54F1233E 		.word	1042542932
- 445 0028 0447CD3D 		.word	1036863236
- 446 002c 3132353D 		.word	1026896433
- 447 0030 AFAB113C 		.word	1007791023
- 448 0034 ED1E8BBB 		.word	-1148510483
- 449 0038 D1F69EBB 		.word	-1147210031
- 450 003c 6A7E63BB 		.word	-1151107478
- 451              	.LC1:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 11
+ 431              		.section	.text._ZN6CapFir9setBufferEf,"ax",%progbits
+ 432              		.align	1
+ 433              		.p2align 2,,3
+ 434              		.global	_ZN6CapFir9setBufferEf
+ 435              		.syntax unified
+ 436              		.thumb
+ 437              		.thumb_func
+ 438              		.fpu fpv5-d16
+ 440              	_ZN6CapFir9setBufferEf:
+ 441              	.LVL40:
+ 442              	.LFB4848:
+  69:../../Classes/FIIR/CapFir.cpp **** 
+  70:../../Classes/FIIR/CapFir.cpp **** void CapFir::setBuffer(float value) {
+ 443              		.loc 1 70 37 is_stmt 1 view -0
+ 444              		.cfi_startproc
+ 445              		@ args = 0, pretend = 0, frame = 0
+ 446              		@ frame_needed = 0, uses_anonymous_args = 0
+ 447              		@ link register save eliminated.
+  71:../../Classes/FIIR/CapFir.cpp ****     switch (_resType) {
+ 448              		.loc 1 71 5 view .LVU89
+ 449              	.LBB30:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 11
 
 
- 452 0040 93EF04BA 		.word	-1174081645
- 453 0044 97D41E3A 		.word	975099031
- 454 0048 DF72123B 		.word	991064799
- 455 004c 3B66873B 		.word	998729275
- 456 0050 4D80A33B 		.word	1000570957
- 457 0054 66EF353B 		.word	993390438
- 458 0058 B4DC80BB 		.word	-1149182796
- 459 005c E13369BC 		.word	-1133956127
- 460 0060 53A0C3BC 		.word	-1128030125
- 461 0064 6570D4BC 		.word	-1126928283
- 462 0068 8A5759BC 		.word	-1134995574
- 463 006c ACF2923C 		.word	1016263340
- 464 0070 E2CF853D 		.word	1032179682
- 465 0074 0369F53D 		.word	1039493379
- 466 0078 6DE52B3E 		.word	1043064173
- 467 007c DDBE483E 		.word	1044954845
- 468 0080 DDBE483E 		.word	1044954845
- 469 0084 6DE52B3E 		.word	1043064173
- 470 0088 0369F53D 		.word	1039493379
- 471 008c E2CF853D 		.word	1032179682
- 472 0090 ACF2923C 		.word	1016263340
- 473 0094 8A5759BC 		.word	-1134995574
- 474 0098 6570D4BC 		.word	-1126928283
- 475 009c 53A0C3BC 		.word	-1128030125
- 476 00a0 E13369BC 		.word	-1133956127
- 477 00a4 B4DC80BB 		.word	-1149182796
- 478 00a8 66EF353B 		.word	993390438
- 479 00ac 4D80A33B 		.word	1000570957
- 480 00b0 3B66873B 		.word	998729275
- 481 00b4 DF72123B 		.word	991064799
- 482 00b8 97D41E3A 		.word	975099031
- 483 00bc 93EF04BA 		.word	-1174081645
- 484              	.LC2:
- 485 00c0 BA8E2B3A 		.word	975933114
- 486 00c4 2D388B39 		.word	965425197
- 487 00c8 A4E59BB9 		.word	-1180965468
- 488 00cc 8F0D6EBA 		.word	-1167192689
- 489 00d0 5E49B0BA 		.word	-1162852002
- 490 00d4 195CADBA 		.word	-1163043815
- 491 00d8 F9D221BA 		.word	-1172188423
- 492 00dc 4E97453A 		.word	977639246
- 493 00e0 143E1D3B 		.word	991772180
- 494 00e4 3DE66A3B 		.word	996861501
- 495 00e8 7A1F643B 		.word	996417402
- 496 00ec CDC3CF3A 		.word	986694605
- 497 00f0 C112F6BA 		.word	-1158278463
- 498 00f4 809ABDBB 		.word	-1145202048
- 499 00f8 B43509BC 		.word	-1140247116
- 500 00fc 1D6001BC 		.word	-1140760547
- 501 0100 CC7F65BB 		.word	-1150976052
- 502 0104 D3D5843B 		.word	998561235
- 503 0108 1EE3483C 		.word	1011409694
- 504 010c 604D8F3C 		.word	1016024416
- 505 0110 DFD9853C 		.word	1015405023
- 506 0114 8E84EC3B 		.word	1005356174
- 507 0118 0E3F09BC 		.word	-1140244722
- 508 011c B5B2D1BC 		.word	-1127107915
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 12
+ 450              		.loc 1 71 13 is_stmt 0 view .LVU90
+ 451 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 452              		.loc 1 71 5 view .LVU91
+ 453 0002 012B     		cmp	r3, #1
+ 454 0004 03D0     		beq	.L34
+ 455 0006 022B     		cmp	r3, #2
+ 456 0008 12D0     		beq	.L35
+ 457 000a 4BB1     		cbz	r3, .L44
+ 458              	.LBE30:
+  72:../../Classes/FIIR/CapFir.cpp ****         case LOW:
+  73:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
+  74:../../Classes/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
+  75:../../Classes/FIIR/CapFir.cpp ****                 }
+  76:../../Classes/FIIR/CapFir.cpp ****             break;
+  77:../../Classes/FIIR/CapFir.cpp **** 
+  78:../../Classes/FIIR/CapFir.cpp ****         case MID:
+  79:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
+  80:../../Classes/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
+  81:../../Classes/FIIR/CapFir.cpp ****             }
+  82:../../Classes/FIIR/CapFir.cpp ****             break;
+  83:../../Classes/FIIR/CapFir.cpp **** 
+  84:../../Classes/FIIR/CapFir.cpp ****         case HIGH:
+  85:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
+  86:../../Classes/FIIR/CapFir.cpp ****                 _bufferH[i] = value;
+  87:../../Classes/FIIR/CapFir.cpp ****             }
+  88:../../Classes/FIIR/CapFir.cpp ****             break;
+  89:../../Classes/FIIR/CapFir.cpp ****     }      
+  90:../../Classes/FIIR/CapFir.cpp ****     
+  91:../../Classes/FIIR/CapFir.cpp **** }
+ 459              		.loc 1 91 1 view .LVU92
+ 460 000c 7047     		bx	lr
+ 461              	.L34:
+ 462 000e 00F14402 		add	r2, r0, #68
+ 463 0012 00F1C403 		add	r3, r0, #196
+ 464              	.L39:
+ 465              	.LBB34:
+ 466              	.LBB31:
+  80:../../Classes/FIIR/CapFir.cpp ****             }
+ 467              		.loc 1 80 17 is_stmt 1 discriminator 2 view .LVU93
+  80:../../Classes/FIIR/CapFir.cpp ****             }
+ 468              		.loc 1 80 29 is_stmt 0 discriminator 2 view .LVU94
+ 469 0016 A2EC010A 		vstmia.32	r2!, {s0}
+  79:../../Classes/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
+ 470              		.loc 1 79 13 is_stmt 1 discriminator 2 view .LVU95
+  79:../../Classes/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
+ 471              		.loc 1 79 31 discriminator 2 view .LVU96
+ 472 001a 9A42     		cmp	r2, r3
+ 473 001c FBD1     		bne	.L39
+  79:../../Classes/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
+ 474              		.loc 1 79 31 is_stmt 0 discriminator 2 view .LVU97
+ 475 001e 7047     		bx	lr
+ 476              	.L44:
+  79:../../Classes/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
+ 477              		.loc 1 79 31 discriminator 2 view .LVU98
+ 478 0020 021D     		adds	r2, r0, #4
+ 479 0022 00F14403 		add	r3, r0, #68
+ 480              	.L37:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 12
 
 
- 509 0120 599718BD 		.word	-1122461863
- 510 0124 3C3A13BD 		.word	-1122813380
- 511 0128 56B588BC 		.word	-1131891370
- 512 012c 8B04AB3C 		.word	1017840779
- 513 0130 6499923D 		.word	1033017700
- 514 0134 AA9B003E 		.word	1040227242
- 515 0138 36022F3E 		.word	1043268150
- 516 013c 6376493E 		.word	1045001827
- 517 0140 6376493E 		.word	1045001827
- 518 0144 36022F3E 		.word	1043268150
- 519 0148 AA9B003E 		.word	1040227242
- 520 014c 6499923D 		.word	1033017700
- 521 0150 8B04AB3C 		.word	1017840779
- 522 0154 56B588BC 		.word	-1131891370
- 523 0158 3C3A13BD 		.word	-1122813380
- 524 015c 599718BD 		.word	-1122461863
- 525 0160 B5B2D1BC 		.word	-1127107915
- 526 0164 0E3F09BC 		.word	-1140244722
- 527 0168 8E84EC3B 		.word	1005356174
- 528 016c DFD9853C 		.word	1015405023
- 529 0170 604D8F3C 		.word	1016024416
- 530 0174 1EE3483C 		.word	1011409694
- 531 0178 D3D5843B 		.word	998561235
- 532 017c CC7F65BB 		.word	-1150976052
- 533 0180 1D6001BC 		.word	-1140760547
- 534 0184 B43509BC 		.word	-1140247116
- 535 0188 809ABDBB 		.word	-1145202048
- 536 018c C112F6BA 		.word	-1158278463
- 537 0190 CDC3CF3A 		.word	986694605
- 538 0194 7A1F643B 		.word	996417402
- 539 0198 3DE66A3B 		.word	996861501
- 540 019c 143E1D3B 		.word	991772180
- 541 01a0 4E97453A 		.word	977639246
- 542 01a4 F9D221BA 		.word	-1172188423
- 543 01a8 195CADBA 		.word	-1163043815
- 544 01ac 5E49B0BA 		.word	-1162852002
- 545 01b0 8F0D6EBA 		.word	-1167192689
- 546 01b4 A4E59BB9 		.word	-1180965468
- 547 01b8 2D388B39 		.word	965425197
- 548 01bc BA8E2B3A 		.word	975933114
- 549              		.text
- 550              	.Letext0:
- 551              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
- 552              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
- 553              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
- 554              		.file 5 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
- 555              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
- 556              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
- 557              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
- 558              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
- 559              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
- 560              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
- 561              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
- 562              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
- 563              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
- 564              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
- 565              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 13
+ 481              	.LBE31:
+ 482              	.LBB32:
+  74:../../Classes/FIIR/CapFir.cpp ****                 }
+ 483              		.loc 1 74 17 is_stmt 1 discriminator 2 view .LVU99
+  74:../../Classes/FIIR/CapFir.cpp ****                 }
+ 484              		.loc 1 74 29 is_stmt 0 discriminator 2 view .LVU100
+ 485 0026 A2EC010A 		vstmia.32	r2!, {s0}
+  73:../../Classes/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
+ 486              		.loc 1 73 13 is_stmt 1 discriminator 2 view .LVU101
+  73:../../Classes/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
+ 487              		.loc 1 73 31 discriminator 2 view .LVU102
+ 488 002a 9A42     		cmp	r2, r3
+ 489 002c FBD1     		bne	.L37
+  73:../../Classes/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
+ 490              		.loc 1 73 31 is_stmt 0 discriminator 2 view .LVU103
+ 491 002e 7047     		bx	lr
+ 492              	.L35:
+  73:../../Classes/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
+ 493              		.loc 1 73 31 discriminator 2 view .LVU104
+ 494 0030 00F1C403 		add	r3, r0, #196
+ 495 0034 00F5E272 		add	r2, r0, #452
+ 496              	.L40:
+ 497              	.LBE32:
+ 498              	.LBB33:
+  86:../../Classes/FIIR/CapFir.cpp ****             }
+ 499              		.loc 1 86 17 is_stmt 1 discriminator 2 view .LVU105
+  86:../../Classes/FIIR/CapFir.cpp ****             }
+ 500              		.loc 1 86 29 is_stmt 0 discriminator 2 view .LVU106
+ 501 0038 A3EC010A 		vstmia.32	r3!, {s0}
+  85:../../Classes/FIIR/CapFir.cpp ****                 _bufferH[i] = value;
+ 502              		.loc 1 85 13 is_stmt 1 discriminator 2 view .LVU107
+  85:../../Classes/FIIR/CapFir.cpp ****                 _bufferH[i] = value;
+ 503              		.loc 1 85 31 discriminator 2 view .LVU108
+ 504 003c 9342     		cmp	r3, r2
+ 505 003e FBD1     		bne	.L40
+  85:../../Classes/FIIR/CapFir.cpp ****                 _bufferH[i] = value;
+ 506              		.loc 1 85 31 is_stmt 0 discriminator 2 view .LVU109
+ 507              	.LBE33:
+ 508              	.LBE34:
+ 509              		.loc 1 91 1 view .LVU110
+ 510 0040 7047     		bx	lr
+ 511              		.cfi_endproc
+ 512              	.LFE4848:
+ 514 0042 00BF     		.section	.rodata
+ 515              		.align	2
+ 516              		.set	.LANCHOR0,. + 0
+ 517              	.LC0:
+ 518 0000 6A7E63BB 		.word	-1151107478
+ 519 0004 D1F69EBB 		.word	-1147210031
+ 520 0008 ED1E8BBB 		.word	-1148510483
+ 521 000c AFAB113C 		.word	1007791023
+ 522 0010 3132353D 		.word	1026896433
+ 523 0014 0447CD3D 		.word	1036863236
+ 524 0018 54F1233E 		.word	1042542932
+ 525 001c 8BE24B3E 		.word	1045160587
+ 526 0020 8BE24B3E 		.word	1045160587
+ 527 0024 54F1233E 		.word	1042542932
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 13
 
 
- 566              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
- 567              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
- 568              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
- 569              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
- 570              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
- 571              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
- 572              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
- 573              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
- 574              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
- 575              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
- 576              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
- 577              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
- 578              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
- 579              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
- 580              		.file 31 "../../Classes/FIIR/../../libs/libDaisy/src/daisy_core.h"
- 581              		.file 32 "../../libs/libDaisy/src/util/wav_format.h"
- 582              		.file 33 "../../Classes/FIIR/../../libs/libDaisy/src/dev/sr_595.h"
- 583              		.file 34 "../../Classes/FIIR/../../libs/libDaisy/src/dev/max11300.h"
- 584              		.file 35 "../../Classes/FIIR/../../libs/libDaisy/src/daisy_seed.h"
- 585              		.file 36 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
- 586              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
- 587              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
- 588              		.file 39 "../../Classes/FIIR/../../libs/DaisySP/Source/Control/adenv.h"
- 589              		.file 40 "../../libs/DaisySP/Source/Utility/dsp.h"
- 590              		.file 41 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
- 591              		.file 42 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
- 592              		.file 43 "../../Classes/FIIR/CapFir.h"
- 593              		.file 44 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s 			page 14
+ 528 0028 0447CD3D 		.word	1036863236
+ 529 002c 3132353D 		.word	1026896433
+ 530 0030 AFAB113C 		.word	1007791023
+ 531 0034 ED1E8BBB 		.word	-1148510483
+ 532 0038 D1F69EBB 		.word	-1147210031
+ 533 003c 6A7E63BB 		.word	-1151107478
+ 534              	.LC1:
+ 535 0040 93EF04BA 		.word	-1174081645
+ 536 0044 97D41E3A 		.word	975099031
+ 537 0048 DF72123B 		.word	991064799
+ 538 004c 3B66873B 		.word	998729275
+ 539 0050 4D80A33B 		.word	1000570957
+ 540 0054 66EF353B 		.word	993390438
+ 541 0058 B4DC80BB 		.word	-1149182796
+ 542 005c E13369BC 		.word	-1133956127
+ 543 0060 53A0C3BC 		.word	-1128030125
+ 544 0064 6570D4BC 		.word	-1126928283
+ 545 0068 8A5759BC 		.word	-1134995574
+ 546 006c ACF2923C 		.word	1016263340
+ 547 0070 E2CF853D 		.word	1032179682
+ 548 0074 0369F53D 		.word	1039493379
+ 549 0078 6DE52B3E 		.word	1043064173
+ 550 007c DDBE483E 		.word	1044954845
+ 551 0080 DDBE483E 		.word	1044954845
+ 552 0084 6DE52B3E 		.word	1043064173
+ 553 0088 0369F53D 		.word	1039493379
+ 554 008c E2CF853D 		.word	1032179682
+ 555 0090 ACF2923C 		.word	1016263340
+ 556 0094 8A5759BC 		.word	-1134995574
+ 557 0098 6570D4BC 		.word	-1126928283
+ 558 009c 53A0C3BC 		.word	-1128030125
+ 559 00a0 E13369BC 		.word	-1133956127
+ 560 00a4 B4DC80BB 		.word	-1149182796
+ 561 00a8 66EF353B 		.word	993390438
+ 562 00ac 4D80A33B 		.word	1000570957
+ 563 00b0 3B66873B 		.word	998729275
+ 564 00b4 DF72123B 		.word	991064799
+ 565 00b8 97D41E3A 		.word	975099031
+ 566 00bc 93EF04BA 		.word	-1174081645
+ 567              	.LC2:
+ 568 00c0 BA8E2B3A 		.word	975933114
+ 569 00c4 2D388B39 		.word	965425197
+ 570 00c8 A4E59BB9 		.word	-1180965468
+ 571 00cc 8F0D6EBA 		.word	-1167192689
+ 572 00d0 5E49B0BA 		.word	-1162852002
+ 573 00d4 195CADBA 		.word	-1163043815
+ 574 00d8 F9D221BA 		.word	-1172188423
+ 575 00dc 4E97453A 		.word	977639246
+ 576 00e0 143E1D3B 		.word	991772180
+ 577 00e4 3DE66A3B 		.word	996861501
+ 578 00e8 7A1F643B 		.word	996417402
+ 579 00ec CDC3CF3A 		.word	986694605
+ 580 00f0 C112F6BA 		.word	-1158278463
+ 581 00f4 809ABDBB 		.word	-1145202048
+ 582 00f8 B43509BC 		.word	-1140247116
+ 583 00fc 1D6001BC 		.word	-1140760547
+ 584 0100 CC7F65BB 		.word	-1150976052
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 14
+
+
+ 585 0104 D3D5843B 		.word	998561235
+ 586 0108 1EE3483C 		.word	1011409694
+ 587 010c 604D8F3C 		.word	1016024416
+ 588 0110 DFD9853C 		.word	1015405023
+ 589 0114 8E84EC3B 		.word	1005356174
+ 590 0118 0E3F09BC 		.word	-1140244722
+ 591 011c B5B2D1BC 		.word	-1127107915
+ 592 0120 599718BD 		.word	-1122461863
+ 593 0124 3C3A13BD 		.word	-1122813380
+ 594 0128 56B588BC 		.word	-1131891370
+ 595 012c 8B04AB3C 		.word	1017840779
+ 596 0130 6499923D 		.word	1033017700
+ 597 0134 AA9B003E 		.word	1040227242
+ 598 0138 36022F3E 		.word	1043268150
+ 599 013c 6376493E 		.word	1045001827
+ 600 0140 6376493E 		.word	1045001827
+ 601 0144 36022F3E 		.word	1043268150
+ 602 0148 AA9B003E 		.word	1040227242
+ 603 014c 6499923D 		.word	1033017700
+ 604 0150 8B04AB3C 		.word	1017840779
+ 605 0154 56B588BC 		.word	-1131891370
+ 606 0158 3C3A13BD 		.word	-1122813380
+ 607 015c 599718BD 		.word	-1122461863
+ 608 0160 B5B2D1BC 		.word	-1127107915
+ 609 0164 0E3F09BC 		.word	-1140244722
+ 610 0168 8E84EC3B 		.word	1005356174
+ 611 016c DFD9853C 		.word	1015405023
+ 612 0170 604D8F3C 		.word	1016024416
+ 613 0174 1EE3483C 		.word	1011409694
+ 614 0178 D3D5843B 		.word	998561235
+ 615 017c CC7F65BB 		.word	-1150976052
+ 616 0180 1D6001BC 		.word	-1140760547
+ 617 0184 B43509BC 		.word	-1140247116
+ 618 0188 809ABDBB 		.word	-1145202048
+ 619 018c C112F6BA 		.word	-1158278463
+ 620 0190 CDC3CF3A 		.word	986694605
+ 621 0194 7A1F643B 		.word	996417402
+ 622 0198 3DE66A3B 		.word	996861501
+ 623 019c 143E1D3B 		.word	991772180
+ 624 01a0 4E97453A 		.word	977639246
+ 625 01a4 F9D221BA 		.word	-1172188423
+ 626 01a8 195CADBA 		.word	-1163043815
+ 627 01ac 5E49B0BA 		.word	-1162852002
+ 628 01b0 8F0D6EBA 		.word	-1167192689
+ 629 01b4 A4E59BB9 		.word	-1180965468
+ 630 01b8 2D388B39 		.word	965425197
+ 631 01bc BA8E2B3A 		.word	975933114
+ 632              		.text
+ 633              	.Letext0:
+ 634              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 635              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 636              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 637              		.file 5 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 638              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 639              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 640              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 641              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 15
+
+
+ 642              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 643              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 644              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 645              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 646              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 647              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 648              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 649              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 650              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 651              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 652              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 653              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 654              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
+ 655              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 656              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 657              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 658              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 659              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 660              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 661              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 662              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 663              		.file 31 "../../Classes/FIIR/../../libs/libDaisy/src/daisy_core.h"
+ 664              		.file 32 "../../libs/libDaisy/src/util/wav_format.h"
+ 665              		.file 33 "../../Classes/FIIR/../../libs/libDaisy/src/dev/sr_595.h"
+ 666              		.file 34 "../../Classes/FIIR/../../libs/libDaisy/src/dev/max11300.h"
+ 667              		.file 35 "../../Classes/FIIR/../../libs/libDaisy/src/daisy_seed.h"
+ 668              		.file 36 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 669              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 670              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 671              		.file 39 "../../Classes/FIIR/../../libs/DaisySP/Source/Control/adenv.h"
+ 672              		.file 40 "../../libs/DaisySP/Source/Utility/dsp.h"
+ 673              		.file 41 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 674              		.file 42 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 675              		.file 43 "../../Classes/FIIR/CapFir.h"
+ 676              		.file 44 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 CapFir.cpp
-C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s:17     .text._ZN6CapFirC2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s:26     .text._ZN6CapFirC2Ev:00000000 _ZN6CapFirC2Ev
-C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s:80     .text._ZN6CapFirC2Ev:00000050 $d
-C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s:26     .text._ZN6CapFirC2Ev:00000000 _ZN6CapFirC1Ev
-C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s:87     .text._ZN6CapFirD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s:95     .text._ZN6CapFirD2Ev:00000000 _ZN6CapFirD2Ev
-C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s:95     .text._ZN6CapFirD2Ev:00000000 _ZN6CapFirD1Ev
-C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s:111    .text._ZN6CapFir4InitENS_7ResTypeE:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s:119    .text._ZN6CapFir4InitENS_7ResTypeE:00000000 _ZN6CapFir4InitENS_7ResTypeE
-C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s:188    .text._ZN6CapFir7ProcessEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s:196    .text._ZN6CapFir7ProcessEf:00000000 _ZN6CapFir7ProcessEf
-C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s:427    .text._ZN6CapFir7ProcessEf:000000c4 $d
-C:\Users\skipi\AppData\Local\Temp\ccQrX2ls.s:432    .rodata:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:17     .text._ZN6CapFirC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:26     .text._ZN6CapFirC2Ev:00000000 _ZN6CapFirC2Ev
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:80     .text._ZN6CapFirC2Ev:00000050 $d
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:26     .text._ZN6CapFirC2Ev:00000000 _ZN6CapFirC1Ev
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:87     .text._ZN6CapFirD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:95     .text._ZN6CapFirD2Ev:00000000 _ZN6CapFirD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:95     .text._ZN6CapFirD2Ev:00000000 _ZN6CapFirD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:111    .text._ZN6CapFir4InitENS_7ResTypeE:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:119    .text._ZN6CapFir4InitENS_7ResTypeE:00000000 _ZN6CapFir4InitENS_7ResTypeE
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:188    .text._ZN6CapFir7ProcessEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:196    .text._ZN6CapFir7ProcessEf:00000000 _ZN6CapFir7ProcessEf
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:427    .text._ZN6CapFir7ProcessEf:000000c4 $d
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:432    .text._ZN6CapFir9setBufferEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:440    .text._ZN6CapFir9setBufferEf:00000000 _ZN6CapFir9setBufferEf
+C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:515    .rodata:00000000 $d
 
 UNDEFINED SYMBOLS
 memcpy
