@@ -1,0 +1,1167 @@
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"startup.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.rodata._Z19startup_getMaxValuePfPN5daisy6Mpr121INS0_18Mpr121I2CTransportEEEPNS0_9DaisySe
+  17              		.align	2
+  18              	.LC0:
+  19 0000 53544152 		.ascii	"STARTUP:Entered startup routine\000"
+  19      5455503A 
+  19      456E7465 
+  19      72656420 
+  19      73746172 
+  20              		.align	2
+  21              	.LC1:
+  22 0020 53544152 		.ascii	"STARTUP:Waiting for sensor to be touched at channel"
+  22      5455503A 
+  22      57616974 
+  22      696E6720 
+  22      666F7220 
+  23 0053 203000   		.ascii	" 0\000"
+  24 0056 0000     		.align	2
+  25              	.LC2:
+  26 0058 53544152 		.ascii	"STARTUP:Touch it in the maximum to get correct read"
+  26      5455503A 
+  26      546F7563 
+  26      68206974 
+  26      20696E20 
+  27 008b 696E6700 		.ascii	"ing\000"
+  28 008f 00       		.align	2
+  29              	.LC3:
+  30 0090 53544152 		.ascii	"STARTUP:Sensor at channel 0 has been touched\000"
+  30      5455503A 
+  30      53656E73 
+  30      6F722061 
+  30      74206368 
+  31 00bd 000000   		.align	2
+  32              	.LC4:
+  33 00c0 53544152 		.ascii	"STARTUP:Starting measurement of maximum, wait for l"
+  33      5455503A 
+  33      53746172 
+  33      74696E67 
+  33      206D6561 
+  34 00f3 65642074 		.ascii	"ed to blink 3 times\000"
+  34      6F20626C 
+  34      696E6B20 
+  34      33207469 
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 2
+
+
+  34      6D657300 
+  35 0107 00       		.align	2
+  36              	.LC5:
+  37 0108 53544152 		.ascii	"STARTUP:Ended measurements, writing value to max\000"
+  37      5455503A 
+  37      456E6465 
+  37      64206D65 
+  37      61737572 
+  38 0139 000000   		.align	2
+  39              	.LC6:
+  40 013c 53544152 		.ascii	"STARTUP:END OF PROCEDURE\000"
+  40      5455503A 
+  40      454E4420 
+  40      4F462050 
+  40      524F4345 
+  41              		.section	.text._Z19startup_getMaxValuePfPN5daisy6Mpr121INS0_18Mpr121I2CTransportEEEPNS0_9DaisySeed
+  42              		.align	1
+  43              		.p2align 2,,3
+  44              		.global	_Z19startup_getMaxValuePfPN5daisy6Mpr121INS0_18Mpr121I2CTransportEEEPNS0_9DaisySeedE
+  45              		.arch armv7e-m
+  46              		.syntax unified
+  47              		.thumb
+  48              		.thumb_func
+  49              		.fpu fpv5-d16
+  51              	_Z19startup_getMaxValuePfPN5daisy6Mpr121INS0_18Mpr121I2CTransportEEEPNS0_9DaisySeedE:
+  52              	.LVL0:
+  53              	.LFB4815:
+  54              		.file 1 "startup.cpp"
+   1:startup.cpp   **** #include "startup.h"
+   2:startup.cpp   **** #include <cstdint>
+   3:startup.cpp   **** 
+   4:startup.cpp   **** // used to check if channel has been 'touched'
+   5:startup.cpp   **** #ifndef _BV
+   6:startup.cpp   **** #define _BV(bit) (1 << (bit))
+   7:startup.cpp   **** #endif
+   8:startup.cpp   **** #define MAX_TIMEOUT_VAL_MS 2000
+   9:startup.cpp   **** 
+  10:startup.cpp   **** // Macro function to avoid writing every time "ifdef then endif"
+  11:startup.cpp   **** #ifdef LOGGING
+  12:startup.cpp   ****     #define LOG_MSG(STR) hw->PrintLine("STARTUP:" STR)
+  13:startup.cpp   **** #else
+  14:startup.cpp   ****     #define LOG_MSG(STR) ((void)0)
+  15:startup.cpp   **** #endif
+  16:startup.cpp   **** 
+  17:startup.cpp   **** int startup_getMaxValue (float* maxDestination,
+  18:startup.cpp   **** 						 daisy::Mpr121<daisy::Mpr121I2CTransport>* cap_sensor,
+  19:startup.cpp   **** 						 daisy::DaisySeed* hw){
+  55              		.loc 1 19 29 view -0
+  56              		.cfi_startproc
+  57              		@ args = 0, pretend = 0, frame = 8
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  20:startup.cpp   **** 	
+  21:startup.cpp   **** 	LOG_MSG ("Entered startup routine");
+  59              		.loc 1 21 2 view .LVU1
+  60              	.LBB46:
+  61              	.LBI46:
+  62              		.file 2 "../../libs/libDaisy/src/daisy_seed.h"
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 3
+
+
+   1:../../libs/libDaisy/src/daisy_seed.h **** #pragma once
+   2:../../libs/libDaisy/src/daisy_seed.h **** #ifndef DSY_SEED_H
+   3:../../libs/libDaisy/src/daisy_seed.h **** #define DSY_SEED_H
+   4:../../libs/libDaisy/src/daisy_seed.h **** 
+   5:../../libs/libDaisy/src/daisy_seed.h **** #include "daisy.h"
+   6:../../libs/libDaisy/src/daisy_seed.h **** 
+   7:../../libs/libDaisy/src/daisy_seed.h **** //Uncomment this out if you're still using the rev2 hardware
+   8:../../libs/libDaisy/src/daisy_seed.h **** //#define SEED_REV2
+   9:../../libs/libDaisy/src/daisy_seed.h **** 
+  10:../../libs/libDaisy/src/daisy_seed.h **** namespace daisy
+  11:../../libs/libDaisy/src/daisy_seed.h **** {
+  12:../../libs/libDaisy/src/daisy_seed.h **** /**
+  13:../../libs/libDaisy/src/daisy_seed.h ****    @brief This is the higher-level interface for the Daisy board. \n 
+  14:../../libs/libDaisy/src/daisy_seed.h ****     All basic peripheral configuration/initialization is setup here. \n
+  15:../../libs/libDaisy/src/daisy_seed.h **** 
+  16:../../libs/libDaisy/src/daisy_seed.h ****    @ingroup boards
+  17:../../libs/libDaisy/src/daisy_seed.h **** */
+  18:../../libs/libDaisy/src/daisy_seed.h **** class DaisySeed
+  19:../../libs/libDaisy/src/daisy_seed.h **** {
+  20:../../libs/libDaisy/src/daisy_seed.h ****   public:
+  21:../../libs/libDaisy/src/daisy_seed.h ****     DaisySeed() {}
+  22:../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
+  23:../../libs/libDaisy/src/daisy_seed.h **** 
+  24:../../libs/libDaisy/src/daisy_seed.h ****     /** This function used to provide a pre-initialization configuraiton 
+  25:../../libs/libDaisy/src/daisy_seed.h ****      *  it has since been deprecated, and does nothing.
+  26:../../libs/libDaisy/src/daisy_seed.h ****      */
+  27:../../libs/libDaisy/src/daisy_seed.h ****     void Configure();
+  28:../../libs/libDaisy/src/daisy_seed.h **** 
+  29:../../libs/libDaisy/src/daisy_seed.h ****     /** 
+  30:../../libs/libDaisy/src/daisy_seed.h ****     Initializes the Daisy Seed and the following peripherals:
+  31:../../libs/libDaisy/src/daisy_seed.h ****     SDRAM, QSPI, 24-bit 48kHz Audio via AK4556, Internal USB,
+  32:../../libs/libDaisy/src/daisy_seed.h ****     as well as the built-in LED and Testpoint.
+  33:../../libs/libDaisy/src/daisy_seed.h **** 
+  34:../../libs/libDaisy/src/daisy_seed.h ****     ADCs, DACs, and other special peripherals (such as I2C, SPI, etc.)
+  35:../../libs/libDaisy/src/daisy_seed.h ****     can be initialized using their specific initializers within libdaisy
+  36:../../libs/libDaisy/src/daisy_seed.h ****     for a specific application.
+  37:../../libs/libDaisy/src/daisy_seed.h ****     */
+  38:../../libs/libDaisy/src/daisy_seed.h ****     void Init(bool boost = false);
+  39:../../libs/libDaisy/src/daisy_seed.h **** 
+  40:../../libs/libDaisy/src/daisy_seed.h ****     /** 
+  41:../../libs/libDaisy/src/daisy_seed.h ****     Deinitializes all peripherals automatically handled by `Init`.
+  42:../../libs/libDaisy/src/daisy_seed.h ****     */
+  43:../../libs/libDaisy/src/daisy_seed.h ****     void DeInit();
+  44:../../libs/libDaisy/src/daisy_seed.h **** 
+  45:../../libs/libDaisy/src/daisy_seed.h ****     /** 
+  46:../../libs/libDaisy/src/daisy_seed.h ****     Wait some ms before going on.
+  47:../../libs/libDaisy/src/daisy_seed.h ****     \param del Delay time in ms.
+  48:../../libs/libDaisy/src/daisy_seed.h ****     */
+  49:../../libs/libDaisy/src/daisy_seed.h ****     void DelayMs(size_t del);
+  50:../../libs/libDaisy/src/daisy_seed.h **** 
+  51:../../libs/libDaisy/src/daisy_seed.h ****     /** 
+  52:../../libs/libDaisy/src/daisy_seed.h ****     Returns the gpio_pin corresponding to the index 0-31.
+  53:../../libs/libDaisy/src/daisy_seed.h ****     For the given GPIO on the Daisy Seed (labeled 1-32 in docs).
+  54:../../libs/libDaisy/src/daisy_seed.h ****     */
+  55:../../libs/libDaisy/src/daisy_seed.h ****     static Pin GetPin(uint8_t pin_idx);
+  56:../../libs/libDaisy/src/daisy_seed.h **** 
+  57:../../libs/libDaisy/src/daisy_seed.h ****     /** Begins the audio for the seeds builtin audio.
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 4
+
+
+  58:../../libs/libDaisy/src/daisy_seed.h ****     the specified callback will get called whenever
+  59:../../libs/libDaisy/src/daisy_seed.h ****     new data is ready to be prepared.
+  60:../../libs/libDaisy/src/daisy_seed.h ****     */
+  61:../../libs/libDaisy/src/daisy_seed.h ****     void StartAudio(AudioHandle::InterleavingAudioCallback cb);
+  62:../../libs/libDaisy/src/daisy_seed.h **** 
+  63:../../libs/libDaisy/src/daisy_seed.h ****     /** Begins the audio for the seeds builtin audio.
+  64:../../libs/libDaisy/src/daisy_seed.h ****     the specified callback will get called whenever
+  65:../../libs/libDaisy/src/daisy_seed.h ****     new data is ready to be prepared.
+  66:../../libs/libDaisy/src/daisy_seed.h ****     This will use the newer non-interleaved callback.
+  67:../../libs/libDaisy/src/daisy_seed.h ****     */
+  68:../../libs/libDaisy/src/daisy_seed.h ****     void StartAudio(AudioHandle::AudioCallback cb);
+  69:../../libs/libDaisy/src/daisy_seed.h **** 
+  70:../../libs/libDaisy/src/daisy_seed.h ****     /** Changes to a new interleaved callback
+  71:../../libs/libDaisy/src/daisy_seed.h ****      */
+  72:../../libs/libDaisy/src/daisy_seed.h ****     void ChangeAudioCallback(AudioHandle::InterleavingAudioCallback cb);
+  73:../../libs/libDaisy/src/daisy_seed.h **** 
+  74:../../libs/libDaisy/src/daisy_seed.h ****     /** Changes to a new multichannel callback
+  75:../../libs/libDaisy/src/daisy_seed.h ****      */
+  76:../../libs/libDaisy/src/daisy_seed.h ****     void ChangeAudioCallback(AudioHandle::AudioCallback cb);
+  77:../../libs/libDaisy/src/daisy_seed.h **** 
+  78:../../libs/libDaisy/src/daisy_seed.h ****     /** Stops the audio if it is running. */
+  79:../../libs/libDaisy/src/daisy_seed.h ****     void StopAudio();
+  80:../../libs/libDaisy/src/daisy_seed.h **** 
+  81:../../libs/libDaisy/src/daisy_seed.h ****     /** Updates the Audio Sample Rate, and reinitializes.
+  82:../../libs/libDaisy/src/daisy_seed.h ****      ** Audio must be stopped for this to work.
+  83:../../libs/libDaisy/src/daisy_seed.h ****      */
+  84:../../libs/libDaisy/src/daisy_seed.h ****     void SetAudioSampleRate(SaiHandle::Config::SampleRate samplerate);
+  85:../../libs/libDaisy/src/daisy_seed.h **** 
+  86:../../libs/libDaisy/src/daisy_seed.h ****     /** Returns the audio sample rate in Hz as a floating point number.
+  87:../../libs/libDaisy/src/daisy_seed.h ****      */
+  88:../../libs/libDaisy/src/daisy_seed.h ****     float AudioSampleRate();
+  89:../../libs/libDaisy/src/daisy_seed.h **** 
+  90:../../libs/libDaisy/src/daisy_seed.h ****     /** Sets the number of samples processed per channel by the audio callback.
+  91:../../libs/libDaisy/src/daisy_seed.h ****      */
+  92:../../libs/libDaisy/src/daisy_seed.h ****     void SetAudioBlockSize(size_t blocksize);
+  93:../../libs/libDaisy/src/daisy_seed.h **** 
+  94:../../libs/libDaisy/src/daisy_seed.h ****     /** Returns the number of samples per channel in a block of audio. */
+  95:../../libs/libDaisy/src/daisy_seed.h ****     size_t AudioBlockSize();
+  96:../../libs/libDaisy/src/daisy_seed.h **** 
+  97:../../libs/libDaisy/src/daisy_seed.h ****     /** Returns the rate in Hz that the Audio callback is called */
+  98:../../libs/libDaisy/src/daisy_seed.h ****     float AudioCallbackRate() const;
+  99:../../libs/libDaisy/src/daisy_seed.h **** 
+ 100:../../libs/libDaisy/src/daisy_seed.h ****     /** Returns the SAI Handle for the Daisy Seed 
+ 101:../../libs/libDaisy/src/daisy_seed.h ****      *  This can be useful when adding a secondary codec,
+ 102:../../libs/libDaisy/src/daisy_seed.h ****      *  the result of this function can be passed to the audio reinit 
+ 103:../../libs/libDaisy/src/daisy_seed.h ****      *  with an SAI2 configuration
+ 104:../../libs/libDaisy/src/daisy_seed.h ****      */
+ 105:../../libs/libDaisy/src/daisy_seed.h ****     const SaiHandle& AudioSaiHandle() const;
+ 106:../../libs/libDaisy/src/daisy_seed.h **** 
+ 107:../../libs/libDaisy/src/daisy_seed.h ****     /** Sets the state of the built in LED
+ 108:../../libs/libDaisy/src/daisy_seed.h ****      */
+ 109:../../libs/libDaisy/src/daisy_seed.h ****     void SetLed(bool state);
+ 110:../../libs/libDaisy/src/daisy_seed.h **** 
+ 111:../../libs/libDaisy/src/daisy_seed.h ****     /** Sets the state of the test point near pin 10
+ 112:../../libs/libDaisy/src/daisy_seed.h ****      */
+ 113:../../libs/libDaisy/src/daisy_seed.h ****     void SetTestPoint(bool state);
+ 114:../../libs/libDaisy/src/daisy_seed.h **** 
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 5
+
+
+ 115:../../libs/libDaisy/src/daisy_seed.h ****     /** Print formatted debug log message
+ 116:../../libs/libDaisy/src/daisy_seed.h ****      */
+ 117:../../libs/libDaisy/src/daisy_seed.h ****     template <typename... VA>
+ 118:../../libs/libDaisy/src/daisy_seed.h ****     static void Print(const char* format, VA... va)
+ 119:../../libs/libDaisy/src/daisy_seed.h ****     {
+ 120:../../libs/libDaisy/src/daisy_seed.h ****         Log::Print(format, va...);
+ 121:../../libs/libDaisy/src/daisy_seed.h ****     }
+ 122:../../libs/libDaisy/src/daisy_seed.h **** 
+ 123:../../libs/libDaisy/src/daisy_seed.h ****     /** Print formatted debug log message with automatic line termination
+ 124:../../libs/libDaisy/src/daisy_seed.h ****     */
+ 125:../../libs/libDaisy/src/daisy_seed.h ****     template <typename... VA>
+ 126:../../libs/libDaisy/src/daisy_seed.h ****     static void PrintLine(const char* format, VA... va)
+  63              		.loc 2 126 17 view .LVU2
+  64              	.LBE46:
+  19:startup.cpp   **** 	
+  65              		.loc 1 19 29 is_stmt 0 view .LVU3
+  66 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+  67              		.cfi_def_cfa_offset 28
+  68              		.cfi_offset 4, -28
+  69              		.cfi_offset 5, -24
+  70              		.cfi_offset 6, -20
+  71              		.cfi_offset 7, -16
+  72              		.cfi_offset 8, -12
+  73              		.cfi_offset 9, -8
+  74              		.cfi_offset 14, -4
+  75 0004 0746     		mov	r7, r0
+  76              	.LBB49:
+  77              	.LBB47:
+ 127:../../libs/libDaisy/src/daisy_seed.h ****     {
+ 128:../../libs/libDaisy/src/daisy_seed.h ****         Log::PrintLine(format, va...);
+  78              		.loc 2 128 23 view .LVU4
+  79 0006 3B48     		ldr	r0, .L20
+  80              	.LVL1:
+  81              		.loc 2 128 23 view .LVU5
+  82              	.LBE47:
+  83              	.LBE49:
+  19:startup.cpp   **** 	
+  84              		.loc 1 19 29 view .LVU6
+  85 0008 0C46     		mov	r4, r1
+  86 000a 1546     		mov	r5, r2
+  87 000c B846     		mov	r8, r7
+  22:startup.cpp   **** 	int error = 0;
+  23:startup.cpp   **** 	uint16_t lastTouched = 0; 
+  88              		.loc 1 23 11 view .LVU7
+  89 000e 0026     		movs	r6, #0
+  90              	.LBB50:
+  91              	.LBB51:
+  92              	.LBB52:
+  93              	.LBB53:
+  94              	.LBB54:
+  95              	.LBB55:
+  96              		.file 3 "../../libs/libDaisy/src/dev/mpr121.h"
+   1:../../libs/libDaisy/src/dev/mpr121.h **** #pragma once
+   2:../../libs/libDaisy/src/dev/mpr121.h **** #ifndef DSY_MPR121_H
+   3:../../libs/libDaisy/src/dev/mpr121.h **** #define DSY_MPR121_H
+   4:../../libs/libDaisy/src/dev/mpr121.h **** 
+   5:../../libs/libDaisy/src/dev/mpr121.h **** // The default I2C address
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 6
+
+
+   6:../../libs/libDaisy/src/dev/mpr121.h **** #define MPR121_I2CADDR_DEFAULT 0x5A        ///< default I2C address
+   7:../../libs/libDaisy/src/dev/mpr121.h **** #define MPR121_TOUCH_THRESHOLD_DEFAULT 2  ///< default touch threshold value
+   8:../../libs/libDaisy/src/dev/mpr121.h **** #define MPR121_RELEASE_THRESHOLD_DEFAULT 1 ///< default relese threshold value
+   9:../../libs/libDaisy/src/dev/mpr121.h **** namespace daisy
+  10:../../libs/libDaisy/src/dev/mpr121.h **** {
+  11:../../libs/libDaisy/src/dev/mpr121.h **** /** @addtogroup external 
+  12:../../libs/libDaisy/src/dev/mpr121.h ****     @{ 
+  13:../../libs/libDaisy/src/dev/mpr121.h **** */
+  14:../../libs/libDaisy/src/dev/mpr121.h **** 
+  15:../../libs/libDaisy/src/dev/mpr121.h **** /** I2C Transport for MPR121 */
+  16:../../libs/libDaisy/src/dev/mpr121.h **** class Mpr121I2CTransport
+  17:../../libs/libDaisy/src/dev/mpr121.h **** {
+  18:../../libs/libDaisy/src/dev/mpr121.h ****   public:
+  19:../../libs/libDaisy/src/dev/mpr121.h ****     Mpr121I2CTransport() {}
+  20:../../libs/libDaisy/src/dev/mpr121.h ****     ~Mpr121I2CTransport() {}
+  21:../../libs/libDaisy/src/dev/mpr121.h **** 
+  22:../../libs/libDaisy/src/dev/mpr121.h ****     struct Config
+  23:../../libs/libDaisy/src/dev/mpr121.h ****     {
+  24:../../libs/libDaisy/src/dev/mpr121.h ****         I2CHandle::Config::Peripheral periph;
+  25:../../libs/libDaisy/src/dev/mpr121.h ****         I2CHandle::Config::Speed      speed;
+  26:../../libs/libDaisy/src/dev/mpr121.h ****         Pin                           scl;
+  27:../../libs/libDaisy/src/dev/mpr121.h ****         Pin                           sda;
+  28:../../libs/libDaisy/src/dev/mpr121.h **** 
+  29:../../libs/libDaisy/src/dev/mpr121.h ****         I2CHandle::Config::Mode mode;
+  30:../../libs/libDaisy/src/dev/mpr121.h **** 
+  31:../../libs/libDaisy/src/dev/mpr121.h ****         uint8_t dev_addr;
+  32:../../libs/libDaisy/src/dev/mpr121.h **** 
+  33:../../libs/libDaisy/src/dev/mpr121.h ****         Config()
+  34:../../libs/libDaisy/src/dev/mpr121.h ****         {
+  35:../../libs/libDaisy/src/dev/mpr121.h ****             periph = I2CHandle::Config::Peripheral::I2C_1;
+  36:../../libs/libDaisy/src/dev/mpr121.h ****             speed  = I2CHandle::Config::Speed::I2C_400KHZ;
+  37:../../libs/libDaisy/src/dev/mpr121.h **** 
+  38:../../libs/libDaisy/src/dev/mpr121.h ****             scl = Pin(PORTB, 8);
+  39:../../libs/libDaisy/src/dev/mpr121.h ****             sda = Pin(PORTB, 9);
+  40:../../libs/libDaisy/src/dev/mpr121.h **** 
+  41:../../libs/libDaisy/src/dev/mpr121.h ****             dev_addr = MPR121_I2CADDR_DEFAULT;
+  42:../../libs/libDaisy/src/dev/mpr121.h ****         }
+  43:../../libs/libDaisy/src/dev/mpr121.h ****     };
+  44:../../libs/libDaisy/src/dev/mpr121.h **** 
+  45:../../libs/libDaisy/src/dev/mpr121.h ****     /** \return Did the transaction error? i.e. Return true if error, false if ok */
+  46:../../libs/libDaisy/src/dev/mpr121.h ****     inline bool Init(Config config)
+  47:../../libs/libDaisy/src/dev/mpr121.h ****     {
+  48:../../libs/libDaisy/src/dev/mpr121.h ****         config_ = config;
+  49:../../libs/libDaisy/src/dev/mpr121.h **** 
+  50:../../libs/libDaisy/src/dev/mpr121.h ****         I2CHandle::Config i2c_conf;
+  51:../../libs/libDaisy/src/dev/mpr121.h ****         i2c_conf.mode   = I2CHandle::Config::Mode::I2C_MASTER;
+  52:../../libs/libDaisy/src/dev/mpr121.h ****         i2c_conf.periph = config.periph;
+  53:../../libs/libDaisy/src/dev/mpr121.h ****         i2c_conf.speed  = config.speed;
+  54:../../libs/libDaisy/src/dev/mpr121.h **** 
+  55:../../libs/libDaisy/src/dev/mpr121.h ****         i2c_conf.pin_config.scl = config.scl;
+  56:../../libs/libDaisy/src/dev/mpr121.h ****         i2c_conf.pin_config.sda = config.sda;
+  57:../../libs/libDaisy/src/dev/mpr121.h **** 
+  58:../../libs/libDaisy/src/dev/mpr121.h ****         return I2CHandle::Result::OK != i2c_.Init(i2c_conf);
+  59:../../libs/libDaisy/src/dev/mpr121.h ****     }
+  60:../../libs/libDaisy/src/dev/mpr121.h **** 
+  61:../../libs/libDaisy/src/dev/mpr121.h ****     /** \return Did the transaction error? i.e. Return true if error, false if ok */
+  62:../../libs/libDaisy/src/dev/mpr121.h ****     bool Write(uint8_t *data, uint16_t size)
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 7
+
+
+  63:../../libs/libDaisy/src/dev/mpr121.h ****     {
+  64:../../libs/libDaisy/src/dev/mpr121.h ****         return I2CHandle::Result::OK
+  65:../../libs/libDaisy/src/dev/mpr121.h ****                != i2c_.TransmitBlocking(config_.dev_addr, data, size, 10);
+  66:../../libs/libDaisy/src/dev/mpr121.h ****     }
+  67:../../libs/libDaisy/src/dev/mpr121.h **** 
+  68:../../libs/libDaisy/src/dev/mpr121.h ****     /** \return Did the transaction error? i.e. Return true if error, false if ok */
+  69:../../libs/libDaisy/src/dev/mpr121.h ****     bool Read(uint8_t *data, uint16_t size)
+  70:../../libs/libDaisy/src/dev/mpr121.h ****     {
+  71:../../libs/libDaisy/src/dev/mpr121.h ****         return I2CHandle::Result::OK
+  72:../../libs/libDaisy/src/dev/mpr121.h ****                != i2c_.ReceiveBlocking(config_.dev_addr, data, size, 10);
+  73:../../libs/libDaisy/src/dev/mpr121.h ****     }
+  74:../../libs/libDaisy/src/dev/mpr121.h ****     bool ReadMem(uint8_t *data, uint8_t memAddress, uint16_t memSize)
+  75:../../libs/libDaisy/src/dev/mpr121.h ****     {
+  76:../../libs/libDaisy/src/dev/mpr121.h ****        return I2CHandle::Result::OK
+  77:../../libs/libDaisy/src/dev/mpr121.h ****               != i2c_.Mem_read(
+  97              		.loc 3 77 31 view .LVU8
+  98 0010 04F11809 		add	r9, r4, #24
+  99              	.LBE55:
+ 100              	.LBE54:
+ 101              	.LBE53:
+ 102              	.LBE52:
+ 103              	.LBE51:
+ 104              	.LBE50:
+  19:startup.cpp   **** 	
+ 105              		.loc 1 19 29 view .LVU9
+ 106 0014 2DED028B 		vpush.64	{d8}
+ 107              		.cfi_def_cfa_offset 36
+ 108              		.cfi_offset 80, -36
+ 109              		.cfi_offset 81, -32
+ 110 0018 87B0     		sub	sp, sp, #28
+ 111              		.cfi_def_cfa_offset 64
+ 112              	.LBB70:
+ 113              	.LBB48:
+ 114              		.loc 2 128 23 view .LVU10
+ 115 001a FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
+ 116              	.LVL2:
+ 117              		.loc 2 128 23 view .LVU11
+ 118              	.LBE48:
+ 119              	.LBE70:
+  22:startup.cpp   **** 	int error = 0;
+ 120              		.loc 1 22 2 is_stmt 1 view .LVU12
+ 121              		.loc 1 23 2 view .LVU13
+  24:startup.cpp   **** 	uint16_t currTouched = 0;
+ 122              		.loc 1 24 2 view .LVU14
+  25:startup.cpp   **** 	float currentValue = 0;
+ 123              		.loc 1 25 2 view .LVU15
+  26:startup.cpp   **** 	float maxValue = 0;
+ 124              		.loc 1 26 2 view .LVU16
+  27:startup.cpp   **** 	// uint32_t timer_start = daisy::System::GetUs();
+  28:startup.cpp   **** 	
+  29:startup.cpp   **** 	/* Keeps cycling until the sensor is touched */
+  30:startup.cpp   **** 	/// @todo add a timeout to avoid infinite loop 
+  31:startup.cpp   **** 	LOG_MSG ("Waiting for sensor to be touched at channel 0");
+ 125              		.loc 1 31 2 view .LVU17
+ 126              	.LBB71:
+ 127              	.LBI71:
+ 126:../../libs/libDaisy/src/daisy_seed.h ****     {
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 8
+
+
+ 128              		.loc 2 126 17 view .LVU18
+ 129              	.LBB72:
+ 130              		.loc 2 128 23 is_stmt 0 view .LVU19
+ 131 001e 3648     		ldr	r0, .L20+4
+ 132 0020 FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
+ 133              	.LVL3:
+ 134              		.loc 2 128 23 view .LVU20
+ 135              	.LBE72:
+ 136              	.LBE71:
+  32:startup.cpp   **** 	LOG_MSG ("Touch it in the maximum to get correct reading");
+ 137              		.loc 1 32 2 is_stmt 1 view .LVU21
+ 138              	.LBB73:
+ 139              	.LBI73:
+ 126:../../libs/libDaisy/src/daisy_seed.h ****     {
+ 140              		.loc 2 126 17 view .LVU22
+ 141              	.LBB74:
+ 142              		.loc 2 128 23 is_stmt 0 view .LVU23
+ 143 0024 3548     		ldr	r0, .L20+8
+ 144 0026 0DF11607 		add	r7, sp, #22
+ 145              	.LVL4:
+ 146              		.loc 2 128 23 view .LVU24
+ 147 002a FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
+ 148              	.LVL5:
+ 149              		.loc 2 128 23 view .LVU25
+ 150              	.LBE74:
+ 151              	.LBE73:
+  33:startup.cpp   **** 	bool plantIsTouched = false; 
+ 152              		.loc 1 33 2 is_stmt 1 view .LVU26
+ 153              	.L15:
+  34:startup.cpp   **** 	while (plantIsTouched == false){
+ 154              		.loc 1 34 2 view .LVU27
+ 155              		.loc 1 34 24 view .LVU28
+  35:startup.cpp   **** 
+  36:startup.cpp   **** 		// get value of touched register (all channels)
+  37:startup.cpp   **** 		currTouched = cap_sensor->Touched();
+ 156              		.loc 1 37 3 view .LVU29
+ 157              	.LBB75:
+ 158              	.LBI50:
+  78:../../libs/libDaisy/src/dev/mpr121.h ****                    config_.dev_addr, 
+  79:../../libs/libDaisy/src/dev/mpr121.h ****                    memAddress,
+  80:../../libs/libDaisy/src/dev/mpr121.h ****                    1,
+  81:../../libs/libDaisy/src/dev/mpr121.h ****                    data,
+  82:../../libs/libDaisy/src/dev/mpr121.h ****                    memSize,
+  83:../../libs/libDaisy/src/dev/mpr121.h ****                    10);
+  84:../../libs/libDaisy/src/dev/mpr121.h ****    }
+  85:../../libs/libDaisy/src/dev/mpr121.h ****   private:
+  86:../../libs/libDaisy/src/dev/mpr121.h ****     I2CHandle i2c_;
+  87:../../libs/libDaisy/src/dev/mpr121.h ****     Config    config_;
+  88:../../libs/libDaisy/src/dev/mpr121.h **** };
+  89:../../libs/libDaisy/src/dev/mpr121.h **** 
+  90:../../libs/libDaisy/src/dev/mpr121.h **** 
+  91:../../libs/libDaisy/src/dev/mpr121.h **** /** @brief Device support for MPR121 12x Capacitive Touch Sensor
+  92:../../libs/libDaisy/src/dev/mpr121.h ****     @author beserge
+  93:../../libs/libDaisy/src/dev/mpr121.h ****     @date December 2021
+  94:../../libs/libDaisy/src/dev/mpr121.h **** */
+  95:../../libs/libDaisy/src/dev/mpr121.h **** template <typename Transport>
+  96:../../libs/libDaisy/src/dev/mpr121.h **** class Mpr121
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 9
+
+
+  97:../../libs/libDaisy/src/dev/mpr121.h **** {
+  98:../../libs/libDaisy/src/dev/mpr121.h ****   public:
+  99:../../libs/libDaisy/src/dev/mpr121.h ****     Mpr121() {}
+ 100:../../libs/libDaisy/src/dev/mpr121.h ****     ~Mpr121() {}
+ 101:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 102:../../libs/libDaisy/src/dev/mpr121.h ****     struct Config
+ 103:../../libs/libDaisy/src/dev/mpr121.h ****     {
+ 104:../../libs/libDaisy/src/dev/mpr121.h ****         typename Transport::Config transport_config;
+ 105:../../libs/libDaisy/src/dev/mpr121.h ****         uint8_t                    touch_threshold;
+ 106:../../libs/libDaisy/src/dev/mpr121.h ****         uint8_t                    release_threshold;
+ 107:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 108:../../libs/libDaisy/src/dev/mpr121.h ****         Config()
+ 109:../../libs/libDaisy/src/dev/mpr121.h ****         {
+ 110:../../libs/libDaisy/src/dev/mpr121.h ****             touch_threshold   = MPR121_TOUCH_THRESHOLD_DEFAULT;
+ 111:../../libs/libDaisy/src/dev/mpr121.h ****             release_threshold = MPR121_RELEASE_THRESHOLD_DEFAULT;
+ 112:../../libs/libDaisy/src/dev/mpr121.h ****         }
+ 113:../../libs/libDaisy/src/dev/mpr121.h ****     };
+ 114:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 115:../../libs/libDaisy/src/dev/mpr121.h ****     enum Result
+ 116:../../libs/libDaisy/src/dev/mpr121.h ****     {
+ 117:../../libs/libDaisy/src/dev/mpr121.h ****         OK = 0,
+ 118:../../libs/libDaisy/src/dev/mpr121.h ****         ERR
+ 119:../../libs/libDaisy/src/dev/mpr121.h ****     };
+ 120:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 121:../../libs/libDaisy/src/dev/mpr121.h ****     /** Initialize the MPR121 device
+ 122:../../libs/libDaisy/src/dev/mpr121.h ****         \param config Configuration settings
+ 123:../../libs/libDaisy/src/dev/mpr121.h ****     */
+ 124:../../libs/libDaisy/src/dev/mpr121.h ****     Result Init(Config config)
+ 125:../../libs/libDaisy/src/dev/mpr121.h ****     {
+ 126:../../libs/libDaisy/src/dev/mpr121.h ****         config_ = config;
+ 127:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 128:../../libs/libDaisy/src/dev/mpr121.h ****         SetTransportErr(transport_.Init(config_.transport_config));
+ 129:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 130:../../libs/libDaisy/src/dev/mpr121.h ****         // soft reset
+ 131:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_SOFTRESET, 0x63);
+ 132:../../libs/libDaisy/src/dev/mpr121.h ****         System::Delay(1);
+ 133:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 134:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_ECR, 0x0);
+ 135:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 136:../../libs/libDaisy/src/dev/mpr121.h ****         // this doesn't work for some reason...
+ 137:../../libs/libDaisy/src/dev/mpr121.h ****         // uint8_t c = ReadRegister8(MPR121_CONFIG2);
+ 138:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 139:../../libs/libDaisy/src/dev/mpr121.h ****         // if(c != 0x24)
+ 140:../../libs/libDaisy/src/dev/mpr121.h ****         //     return ERR;
+ 141:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 142:../../libs/libDaisy/src/dev/mpr121.h ****         SetThresholds(config_.touch_threshold, config_.release_threshold);
+ 143:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_MHDR, 0x01);
+ 144:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NHDR, 0x01);
+ 145:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NCLR, 0x0E);
+ 146:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_FDLR, 0x00);
+ 147:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 148:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_MHDF, 0x01);
+ 149:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NHDF, 0x05);
+ 150:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NCLF, 0x01);
+ 151:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_FDLF, 0x00);
+ 152:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 153:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NHDT, 0x00);
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 10
+
+
+ 154:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NCLT, 0x00);
+ 155:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_FDLT, 0x00);
+ 156:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 157:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_DEBOUNCE, 0);
+ 158:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_CONFIG1, 0x10); // default, 16uA charge current
+ 159:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_CONFIG2, 0x20); // 0.5uS encoding, 1ms period
+ 160:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 161:../../libs/libDaisy/src/dev/mpr121.h ****         // autoconfig
+ 162:../../libs/libDaisy/src/dev/mpr121.h ****         // WriteRegister(MPR121_AUTOCONFIG0, 0x0B);
+ 163:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 164:../../libs/libDaisy/src/dev/mpr121.h ****         // correct values for Vdd = 3.3V
+ 165:../../libs/libDaisy/src/dev/mpr121.h ****         // WriteRegister(MPR121_UPLIMIT, 200);     // ((Vdd - 0.7)/Vdd) * 256
+ 166:../../libs/libDaisy/src/dev/mpr121.h ****         // WriteRegister(MPR121_TARGETLIMIT, 180); // UPLIMIT * 0.9
+ 167:../../libs/libDaisy/src/dev/mpr121.h ****         // WriteRegister(MPR121_LOWLIMIT, 130);    // UPLIMIT * 0.65
+ 168:../../libs/libDaisy/src/dev/mpr121.h ****         // autoconfig
+ 169:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 170:../../libs/libDaisy/src/dev/mpr121.h ****         // enable X electrodes and start MPR121
+ 171:../../libs/libDaisy/src/dev/mpr121.h ****         uint8_t ECR_SETTING
+ 172:../../libs/libDaisy/src/dev/mpr121.h ****             = 0x80
+ 173:../../libs/libDaisy/src/dev/mpr121.h ****               + 12; // 5 bits for baseline tracking & proximity disabled + X
+ 174:../../libs/libDaisy/src/dev/mpr121.h ****                     // amount of electrodes running (12)
+ 175:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_ECR,
+ 176:../../libs/libDaisy/src/dev/mpr121.h ****                       ECR_SETTING); // start with above ECR setting
+ 177:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 178:../../libs/libDaisy/src/dev/mpr121.h ****         return GetTransportErr();
+ 179:../../libs/libDaisy/src/dev/mpr121.h ****     }
+ 180:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 181:../../libs/libDaisy/src/dev/mpr121.h ****     /** Set the touch and release thresholds for all 13 channels on the
+ 182:../../libs/libDaisy/src/dev/mpr121.h ****         device to the passed values.
+ 183:../../libs/libDaisy/src/dev/mpr121.h ****         \param      touch The touch threshold value from 0 to 255.
+ 184:../../libs/libDaisy/src/dev/mpr121.h ****         \param      release The release threshold from 0 to 255.
+ 185:../../libs/libDaisy/src/dev/mpr121.h ****     */
+ 186:../../libs/libDaisy/src/dev/mpr121.h ****     void SetThresholds(uint8_t touch, uint8_t release)
+ 187:../../libs/libDaisy/src/dev/mpr121.h ****     {
+ 188:../../libs/libDaisy/src/dev/mpr121.h ****         // set all thresholds (the same)
+ 189:../../libs/libDaisy/src/dev/mpr121.h ****         for(uint8_t i = 0; i < 12; i++)
+ 190:../../libs/libDaisy/src/dev/mpr121.h ****         {
+ 191:../../libs/libDaisy/src/dev/mpr121.h ****             WriteRegister(MPR121_TOUCHTH_0 + 2 * i, touch);
+ 192:../../libs/libDaisy/src/dev/mpr121.h ****             WriteRegister(MPR121_RELEASETH_0 + 2 * i, release);
+ 193:../../libs/libDaisy/src/dev/mpr121.h ****         }
+ 194:../../libs/libDaisy/src/dev/mpr121.h ****     }
+ 195:../../libs/libDaisy/src/dev/mpr121.h ****     
+ 196:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 197:../../libs/libDaisy/src/dev/mpr121.h ****     /** Read the filtered data from channel t. The ADC raw data outputs
+ 198:../../libs/libDaisy/src/dev/mpr121.h ****         run through 3 levels of digital filtering to filter out the high
+ 199:../../libs/libDaisy/src/dev/mpr121.h ****         frequency and low frequency noise encountered. For detailed information on
+ 200:../../libs/libDaisy/src/dev/mpr121.h ****         this filtering see page 6 of the device datasheet.
+ 201:../../libs/libDaisy/src/dev/mpr121.h ****         \param      t the channel to read
+ 202:../../libs/libDaisy/src/dev/mpr121.h ****         \returns    the filtered reading as a 10 bit unsigned value
+ 203:../../libs/libDaisy/src/dev/mpr121.h ****     */
+ 204:../../libs/libDaisy/src/dev/mpr121.h ****     uint16_t FilteredData(uint8_t t)
+ 205:../../libs/libDaisy/src/dev/mpr121.h ****     {
+ 206:../../libs/libDaisy/src/dev/mpr121.h ****         if(t > 12)
+ 207:../../libs/libDaisy/src/dev/mpr121.h ****             return 0;
+ 208:../../libs/libDaisy/src/dev/mpr121.h ****         return ReadRegister16(MPR121_FILTDATA_0L + t * 2);
+ 209:../../libs/libDaisy/src/dev/mpr121.h ****     }
+ 210:../../libs/libDaisy/src/dev/mpr121.h **** 
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 11
+
+
+ 211:../../libs/libDaisy/src/dev/mpr121.h ****     /** Read the baseline value for the channel. The 3rd level filtered
+ 212:../../libs/libDaisy/src/dev/mpr121.h ****         result is internally 10bit but only high 8 bits are readable
+ 213:../../libs/libDaisy/src/dev/mpr121.h ****         from registers 0x1E~0x2A as the baseline value output for each channel.
+ 214:../../libs/libDaisy/src/dev/mpr121.h ****         \param      t the channel to read.
+ 215:../../libs/libDaisy/src/dev/mpr121.h ****         \returns    the baseline data that was read
+ 216:../../libs/libDaisy/src/dev/mpr121.h ****     */
+ 217:../../libs/libDaisy/src/dev/mpr121.h ****     uint16_t BaselineData(uint8_t t)
+ 218:../../libs/libDaisy/src/dev/mpr121.h ****     {
+ 219:../../libs/libDaisy/src/dev/mpr121.h ****         if(t > 12)
+ 220:../../libs/libDaisy/src/dev/mpr121.h ****             return 0;
+ 221:../../libs/libDaisy/src/dev/mpr121.h ****         uint16_t bl = ReadRegister8(MPR121_BASELINE_0 + t);
+ 222:../../libs/libDaisy/src/dev/mpr121.h ****         return (bl << 2);
+ 223:../../libs/libDaisy/src/dev/mpr121.h ****     }
+ 224:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 225:../../libs/libDaisy/src/dev/mpr121.h ****     /** Read the touch status of all 13 channels as bit values in a 12 bit integer.
+ 226:../../libs/libDaisy/src/dev/mpr121.h ****         \returns    a 12 bit integer with each bit corresponding to the touch status
+ 227:../../libs/libDaisy/src/dev/mpr121.h ****         of a sensor. For example, if bit 0 is set then channel 0 of the
+ 228:../../libs/libDaisy/src/dev/mpr121.h ****         device is currently deemed to be touched.
+ 229:../../libs/libDaisy/src/dev/mpr121.h ****     */
+ 230:../../libs/libDaisy/src/dev/mpr121.h ****     uint16_t Touched()
+ 159              		.loc 3 230 14 view .LVU30
+ 160              	.LBB68:
+ 161              	.LBB66:
+ 162              	.LBI52:
+ 231:../../libs/libDaisy/src/dev/mpr121.h ****     {
+ 232:../../libs/libDaisy/src/dev/mpr121.h ****         uint16_t t = ReadRegister16(MPR121_TOUCHSTATUS_L);
+ 233:../../libs/libDaisy/src/dev/mpr121.h ****         return t & 0x0FFF;
+ 234:../../libs/libDaisy/src/dev/mpr121.h ****     }
+ 235:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 236:../../libs/libDaisy/src/dev/mpr121.h ****     /** Read the contents of an 8 bit device register.
+ 237:../../libs/libDaisy/src/dev/mpr121.h ****         \param      reg the register address to read from
+ 238:../../libs/libDaisy/src/dev/mpr121.h ****         \returns    the 8 bit value that was read.
+ 239:../../libs/libDaisy/src/dev/mpr121.h ****     */
+ 240:../../libs/libDaisy/src/dev/mpr121.h ****    uint8_t ReadRegister8(uint8_t reg)
+ 241:../../libs/libDaisy/src/dev/mpr121.h ****     {
+ 242:../../libs/libDaisy/src/dev/mpr121.h ****         uint8_t buff;
+ 243:../../libs/libDaisy/src/dev/mpr121.h ****         SetTransportErr (transport_.ReadMem (&buff, reg, 1));
+ 244:../../libs/libDaisy/src/dev/mpr121.h ****         return buff;
+ 245:../../libs/libDaisy/src/dev/mpr121.h ****     }
+ 246:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 247:../../libs/libDaisy/src/dev/mpr121.h ****     uint16_t ReadRegister16(uint8_t reg)
+ 163              		.loc 3 247 14 view .LVU31
+ 164              	.LBB64:
+ 165              	.LBB57:
+ 166              	.LBI54:
+  74:../../libs/libDaisy/src/dev/mpr121.h ****     {
+ 167              		.loc 3 74 10 view .LVU32
+ 168              	.LBB56:
+  76:../../libs/libDaisy/src/dev/mpr121.h ****               != i2c_.Mem_read(
+ 169              		.loc 3 76 8 view .LVU33
+  77:../../libs/libDaisy/src/dev/mpr121.h ****                    config_.dev_addr, 
+ 170              		.loc 3 77 31 is_stmt 0 view .LVU34
+ 171 002e 4FF00A0E 		mov	lr, #10
+ 172 0032 4FF0020C 		mov	ip, #2
+ 173 0036 94F82C10 		ldrb	r1, [r4, #44]	@ zero_extendqisi2
+ 174 003a 0123     		movs	r3, #1
+ 175 003c 0022     		movs	r2, #0
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 12
+
+
+ 176 003e 4846     		mov	r0, r9
+ 177 0040 0097     		str	r7, [sp]
+ 178 0042 CDE901CE 		strd	ip, lr, [sp, #4]
+ 179 0046 FFF7FEFF 		bl	_ZN5daisy9I2CHandle8Mem_readEtttPhtm
+ 180              	.LVL6:
+  77:../../libs/libDaisy/src/dev/mpr121.h ****                    config_.dev_addr, 
+ 181              		.loc 3 77 31 view .LVU35
+ 182              	.LBE56:
+ 183              	.LBE57:
+ 184              	.LBB58:
+ 185              	.LBI58:
+ 248:../../libs/libDaisy/src/dev/mpr121.h ****     {
+ 249:../../libs/libDaisy/src/dev/mpr121.h ****         uint16_t buff;
+ 250:../../libs/libDaisy/src/dev/mpr121.h ****         SetTransportErr (transport_.ReadMem ((uint8_t*)&buff, reg, 2));
+ 251:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 252:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 253:../../libs/libDaisy/src/dev/mpr121.h ****         return buff;
+ 254:../../libs/libDaisy/src/dev/mpr121.h ****     }
+ 255:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 256:../../libs/libDaisy/src/dev/mpr121.h ****     /** Writes 8-bits to the specified destination register
+ 257:../../libs/libDaisy/src/dev/mpr121.h ****         \param  reg the register address to write to
+ 258:../../libs/libDaisy/src/dev/mpr121.h ****         \param  value the value to write
+ 259:../../libs/libDaisy/src/dev/mpr121.h ****     */
+ 260:../../libs/libDaisy/src/dev/mpr121.h ****     void WriteRegister(uint8_t reg, uint8_t value)
+ 261:../../libs/libDaisy/src/dev/mpr121.h ****     {
+ 262:../../libs/libDaisy/src/dev/mpr121.h ****         // MPR121 must be put in Stop Mode to write to most registers
+ 263:../../libs/libDaisy/src/dev/mpr121.h ****         bool stop_required = true;
+ 264:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 265:../../libs/libDaisy/src/dev/mpr121.h ****         // first get the current set value of the MPR121_ECR register
+ 266:../../libs/libDaisy/src/dev/mpr121.h ****         uint8_t ecr_reg = MPR121_ECR;
+ 267:../../libs/libDaisy/src/dev/mpr121.h ****         uint8_t buff[2] = {ecr_reg, 0x00};
+ 268:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 269:../../libs/libDaisy/src/dev/mpr121.h ****         SetTransportErr(transport_.Write(buff, 1));
+ 270:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 271:../../libs/libDaisy/src/dev/mpr121.h ****         uint8_t ecr_backup;
+ 272:../../libs/libDaisy/src/dev/mpr121.h ****         SetTransportErr(transport_.Read(&ecr_backup, 1));
+ 273:../../libs/libDaisy/src/dev/mpr121.h ****         if((reg == MPR121_ECR) || ((0x73 <= reg) && (reg <= 0x7A)))
+ 274:../../libs/libDaisy/src/dev/mpr121.h ****         {
+ 275:../../libs/libDaisy/src/dev/mpr121.h ****             stop_required = false;
+ 276:../../libs/libDaisy/src/dev/mpr121.h ****         }
+ 277:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 278:../../libs/libDaisy/src/dev/mpr121.h ****         if(stop_required)
+ 279:../../libs/libDaisy/src/dev/mpr121.h ****         {
+ 280:../../libs/libDaisy/src/dev/mpr121.h ****             // clear this register to set stop mode
+ 281:../../libs/libDaisy/src/dev/mpr121.h ****             SetTransportErr(transport_.Write(buff, 2));
+ 282:../../libs/libDaisy/src/dev/mpr121.h ****         }
+ 283:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 284:../../libs/libDaisy/src/dev/mpr121.h ****         buff[0] = reg;
+ 285:../../libs/libDaisy/src/dev/mpr121.h ****         buff[1] = value;
+ 286:../../libs/libDaisy/src/dev/mpr121.h ****         SetTransportErr(transport_.Write(buff, 2));
+ 287:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 288:../../libs/libDaisy/src/dev/mpr121.h ****         if(stop_required)
+ 289:../../libs/libDaisy/src/dev/mpr121.h ****         {
+ 290:../../libs/libDaisy/src/dev/mpr121.h ****             // write back the previous set ECR settings
+ 291:../../libs/libDaisy/src/dev/mpr121.h ****             buff[0] = ecr_reg;
+ 292:../../libs/libDaisy/src/dev/mpr121.h ****             buff[1] = ecr_backup;
+ 293:../../libs/libDaisy/src/dev/mpr121.h ****             SetTransportErr(transport_.Write(buff, 2));
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 13
+
+
+ 294:../../libs/libDaisy/src/dev/mpr121.h ****         }
+ 295:../../libs/libDaisy/src/dev/mpr121.h ****     }
+ 296:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 297:../../libs/libDaisy/src/dev/mpr121.h ****     /** Device register map */
+ 298:../../libs/libDaisy/src/dev/mpr121.h ****     enum RegMap
+ 299:../../libs/libDaisy/src/dev/mpr121.h ****     {
+ 300:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_TOUCHSTATUS_L = 0x00,
+ 301:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_TOUCHSTATUS_H = 0x01,
+ 302:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_FILTDATA_0L   = 0x04,
+ 303:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_FILTDATA_0H   = 0x05,
+ 304:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_BASELINE_0    = 0x1E,
+ 305:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_MHDR          = 0x2B,
+ 306:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_NHDR          = 0x2C,
+ 307:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_NCLR          = 0x2D,
+ 308:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_FDLR          = 0x2E,
+ 309:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_MHDF          = 0x2F,
+ 310:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_NHDF          = 0x30,
+ 311:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_NCLF          = 0x31,
+ 312:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_FDLF          = 0x32,
+ 313:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_NHDT          = 0x33,
+ 314:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_NCLT          = 0x34,
+ 315:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_FDLT          = 0x35,
+ 316:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 317:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_TOUCHTH_0    = 0x41,
+ 318:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_RELEASETH_0  = 0x42,
+ 319:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_DEBOUNCE     = 0x5B,
+ 320:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_CONFIG1      = 0x5C,
+ 321:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_CONFIG2      = 0x5D,
+ 322:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_CHARGECURR_0 = 0x5F,
+ 323:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_CHARGETIME_1 = 0x6C,
+ 324:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_ECR          = 0x5E,
+ 325:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_AUTOCONFIG0  = 0x7B,
+ 326:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_AUTOCONFIG1  = 0x7C,
+ 327:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_UPLIMIT      = 0x7D,
+ 328:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_LOWLIMIT     = 0x7E,
+ 329:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_TARGETLIMIT  = 0x7F,
+ 330:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 331:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_GPIODIR    = 0x76,
+ 332:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_GPIOEN     = 0x77,
+ 333:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_GPIOSET    = 0x78,
+ 334:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_GPIOCLR    = 0x79,
+ 335:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_GPIOTOGGLE = 0x7A,
+ 336:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 337:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_SOFTRESET = 0x80,
+ 338:../../libs/libDaisy/src/dev/mpr121.h ****     };
+ 339:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 340:../../libs/libDaisy/src/dev/mpr121.h ****   private:
+ 341:../../libs/libDaisy/src/dev/mpr121.h ****     Config    config_;
+ 342:../../libs/libDaisy/src/dev/mpr121.h ****     Transport transport_;
+ 343:../../libs/libDaisy/src/dev/mpr121.h ****     bool      transport_error_;
+ 344:../../libs/libDaisy/src/dev/mpr121.h **** 
+ 345:../../libs/libDaisy/src/dev/mpr121.h ****     /** Set the global transport_error_ bool */
+ 346:../../libs/libDaisy/src/dev/mpr121.h ****     void SetTransportErr(bool err) { transport_error_ |= err; }
+ 186              		.loc 3 346 10 is_stmt 1 view .LVU36
+ 187              	.LBB59:
+ 188              		.loc 3 346 55 is_stmt 0 view .LVU37
+ 189 004a 94F83030 		ldrb	r3, [r4, #48]	@ zero_extendqisi2
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 14
+
+
+ 190 004e 3146     		mov	r1, r6
+ 191              	.LBE59:
+ 192              	.LBE58:
+ 253:../../libs/libDaisy/src/dev/mpr121.h ****     }
+ 193              		.loc 3 253 16 view .LVU38
+ 194 0050 BDF81620 		ldrh	r2, [sp, #22]
+ 195              	.LBB62:
+ 196              	.LBB60:
+ 197              		.loc 3 346 55 view .LVU39
+ 198 0054 0028     		cmp	r0, #0
+ 199 0056 18BF     		it	ne
+ 200 0058 43F00103 		orrne	r3, r3, #1
+ 201              	.LBE60:
+ 202              	.LBE62:
+ 203              	.LBE64:
+ 204              	.LBE66:
+ 205              	.LBE68:
+ 206              	.LBE75:
+  38:startup.cpp   **** 
+  39:startup.cpp   **** 		// check if bit of channel has gone from 0 to 1
+  40:startup.cpp   **** 		if (((lastTouched & _BV (0)) == 0) && ((currTouched & _BV(0)) == 1)){
+ 207              		.loc 1 40 3 view .LVU40
+ 208 005c C907     		lsls	r1, r1, #31
+ 209              	.LBB76:
+ 210              	.LBB69:
+ 233:../../libs/libDaisy/src/dev/mpr121.h ****     }
+ 211              		.loc 3 233 20 view .LVU41
+ 212 005e C2F30B06 		ubfx	r6, r2, #0, #12
+ 213              	.LBB67:
+ 214              	.LBB65:
+ 215              	.LBB63:
+ 216              	.LBB61:
+ 217              		.loc 3 346 55 view .LVU42
+ 218 0062 84F83030 		strb	r3, [r4, #48]
+ 219              	.LVL7:
+ 220              		.loc 3 346 55 view .LVU43
+ 221              	.LBE61:
+ 222              	.LBE63:
+ 223              	.LBE65:
+ 224              	.LBE67:
+ 225              	.LBE69:
+ 226              	.LBE76:
+ 227              		.loc 1 40 3 is_stmt 1 view .LVU44
+ 228 0066 E2D4     		bmi	.L15
+ 229              		.loc 1 40 38 is_stmt 0 discriminator 1 view .LVU45
+ 230 0068 D307     		lsls	r3, r2, #31
+ 231 006a E0D5     		bpl	.L15
+  41:startup.cpp   **** 			plantIsTouched = true;
+ 232              		.loc 1 41 4 is_stmt 1 view .LVU46
+ 233              	.LVL8:
+  42:startup.cpp   **** 			LOG_MSG("Sensor at channel 0 has been touched");
+ 234              		.loc 1 42 4 view .LVU47
+ 235              	.LBB77:
+ 236              	.LBI77:
+ 126:../../libs/libDaisy/src/daisy_seed.h ****     {
+ 237              		.loc 2 126 17 view .LVU48
+ 238              	.LBB78:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 15
+
+
+ 239              		.loc 2 128 23 is_stmt 0 view .LVU49
+ 240 006c 2448     		ldr	r0, .L20+12
+ 241              	.LBE78:
+ 242              	.LBE77:
+ 243              	.LBB80:
+  43:startup.cpp   **** 		}
+  44:startup.cpp   **** 		lastTouched = currTouched;
+  45:startup.cpp   **** 	}
+  46:startup.cpp   **** 
+  47:startup.cpp   **** 	/* Cycle for a prefixed time to capture the maximum value */
+  48:startup.cpp   **** 	/// @todo fix argument of for loop, should work but is ugly	
+  49:startup.cpp   **** 	/// @todo check if this method is valid, maybe better to take mean value? 
+  50:startup.cpp   **** 	LOG_MSG("Starting measurement of maximum, wait for led to blink 3 times");
+  51:startup.cpp   **** 	for (int time = 0; time < MAX_TIMEOUT_VAL_MS; time++){
+  52:startup.cpp   **** 		currentValue = hw->adc.GetFloat(0);
+ 244              		.loc 1 52 34 view .LVU50
+ 245 006e 05F11806 		add	r6, r5, #24
+ 246              	.LBE80:
+ 247              	.LBB81:
+ 248              	.LBB79:
+ 249              		.loc 2 128 23 view .LVU51
+ 250 0072 FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
+ 251              	.LVL9:
+ 252              		.loc 2 128 23 view .LVU52
+ 253              	.LBE79:
+ 254              	.LBE81:
+  44:startup.cpp   **** 	}
+ 255              		.loc 1 44 3 is_stmt 1 view .LVU53
+  34:startup.cpp   **** 
+ 256              		.loc 1 34 2 view .LVU54
+  34:startup.cpp   **** 
+ 257              		.loc 1 34 24 view .LVU55
+  50:startup.cpp   **** 	for (int time = 0; time < MAX_TIMEOUT_VAL_MS; time++){
+ 258              		.loc 1 50 2 view .LVU56
+ 259              	.LBB82:
+ 260              	.LBI82:
+ 126:../../libs/libDaisy/src/daisy_seed.h ****     {
+ 261              		.loc 2 126 17 view .LVU57
+ 262              	.LBB83:
+ 263              		.loc 2 128 23 is_stmt 0 view .LVU58
+ 264 0076 2348     		ldr	r0, .L20+16
+ 265              	.LBE83:
+ 266              	.LBE82:
+ 267              	.LBB85:
+ 268              		.loc 1 52 34 view .LVU59
+ 269 0078 4FF4FA64 		mov	r4, #2000
+ 270              	.LVL10:
+ 271              		.loc 1 52 34 view .LVU60
+ 272              	.LBE85:
+  26:startup.cpp   **** 	// uint32_t timer_start = daisy::System::GetUs();
+ 273              		.loc 1 26 8 view .LVU61
+ 274 007c 9FED228A 		vldr.32	s16, .L20+20
+ 275              	.LBB86:
+ 276              	.LBB84:
+ 277              		.loc 2 128 23 view .LVU62
+ 278 0080 FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
+ 279              	.LVL11:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 16
+
+
+ 280              		.loc 2 128 23 view .LVU63
+ 281              	.LBE84:
+ 282              	.LBE86:
+  51:startup.cpp   **** 		currentValue = hw->adc.GetFloat(0);
+ 283              		.loc 1 51 2 is_stmt 1 view .LVU64
+ 284              	.LBB87:
+  51:startup.cpp   **** 		currentValue = hw->adc.GetFloat(0);
+ 285              		.loc 1 51 26 view .LVU65
+ 286              	.L5:
+ 287              		.loc 1 52 3 view .LVU66
+ 288              		.loc 1 52 34 is_stmt 0 view .LVU67
+ 289 0084 0021     		movs	r1, #0
+ 290 0086 3046     		mov	r0, r6
+ 291 0088 FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
+ 292              	.LVL12:
+  53:startup.cpp   **** 		if(currentValue >= maxValue) {maxValue=currentValue;}
+ 293              		.loc 1 53 41 view .LVU68
+ 294 008c B4EE480A 		vcmp.f32	s0, s16
+  54:startup.cpp   **** 		// for now it takes measurement every millisecond (not so great approach)
+  55:startup.cpp   **** 		hw->DelayMs(1);
+ 295              		.loc 1 55 14 view .LVU69
+ 296 0090 0121     		movs	r1, #1
+ 297 0092 2846     		mov	r0, r5
+ 298              	.LVL13:
+  53:startup.cpp   **** 		if(currentValue >= maxValue) {maxValue=currentValue;}
+ 299              		.loc 1 53 3 is_stmt 1 view .LVU70
+  53:startup.cpp   **** 		if(currentValue >= maxValue) {maxValue=currentValue;}
+ 300              		.loc 1 53 41 is_stmt 0 view .LVU71
+ 301 0094 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 302 0098 20FE088A 		vselge.f32	s16, s0, s16
+ 303              	.LVL14:
+ 304              		.loc 1 55 3 is_stmt 1 view .LVU72
+ 305              		.loc 1 55 14 is_stmt 0 view .LVU73
+ 306 009c FFF7FEFF 		bl	_ZN5daisy9DaisySeed7DelayMsEj
+ 307              	.LVL15:
+  51:startup.cpp   **** 		currentValue = hw->adc.GetFloat(0);
+ 308              		.loc 1 51 2 is_stmt 1 view .LVU74
+  51:startup.cpp   **** 		currentValue = hw->adc.GetFloat(0);
+ 309              		.loc 1 51 26 view .LVU75
+ 310 00a0 013C     		subs	r4, r4, #1
+ 311              	.LVL16:
+  51:startup.cpp   **** 		currentValue = hw->adc.GetFloat(0);
+ 312              		.loc 1 51 26 is_stmt 0 view .LVU76
+ 313 00a2 EFD1     		bne	.L5
+ 314              	.LBE87:
+  56:startup.cpp   **** 	}
+  57:startup.cpp   **** 	LOG_MSG ("Ended measurements, writing value to max");
+ 315              		.loc 1 57 2 is_stmt 1 view .LVU77
+ 316              	.LVL17:
+ 317              	.LBB88:
+ 318              	.LBI88:
+ 126:../../libs/libDaisy/src/daisy_seed.h ****     {
+ 319              		.loc 2 126 17 view .LVU78
+ 320              	.LBB89:
+ 321              		.loc 2 128 23 is_stmt 0 view .LVU79
+ 322 00a4 1948     		ldr	r0, .L20+24
+ 323              	.LBE89:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 17
+
+
+ 324              	.LBE88:
+ 325              	.LBB91:
+ 326              	.LBB92:
+ 327 00a6 0326     		movs	r6, #3
+ 328              	.LBE92:
+ 329              	.LBE91:
+ 330              	.LBB95:
+ 331              	.LBB90:
+ 332 00a8 FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
+ 333              	.LVL18:
+ 334              		.loc 2 128 23 view .LVU80
+ 335              	.LBE90:
+ 336              	.LBE95:
+  58:startup.cpp   **** 	
+  59:startup.cpp   **** 	// write result to given destination only if makes sense
+  60:startup.cpp   **** 	maxValue > 0? *maxDestination = maxValue: error = -1; 
+ 337              		.loc 1 60 2 is_stmt 1 view .LVU81
+ 338              		.loc 1 60 14 is_stmt 0 view .LVU82
+ 339 00ac B5EEC08A 		vcmpe.f32	s16, #0
+ 340              	.LBB96:
+ 341              	.LBB93:
+ 342              		.loc 2 128 23 view .LVU83
+ 343 00b0 1748     		ldr	r0, .L20+28
+ 344              	.LBE93:
+ 345              	.LBE96:
+ 346              		.loc 1 60 14 view .LVU84
+ 347 00b2 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 348              		.loc 1 60 32 view .LVU85
+ 349 00b6 CCBF     		ite	gt
+ 350 00b8 88ED008A 		vstrgt.32	s16, [r8]
+ 351              		.loc 1 60 50 view .LVU86
+ 352 00bc 4FF0FF34 		movle	r4, #-1
+ 353              	.LVL19:
+  61:startup.cpp   **** 
+  62:startup.cpp   **** 	// blink 3 times to show correct closing of procedure
+  63:startup.cpp   **** 	LOG_MSG ("END OF PROCEDURE");
+ 354              		.loc 1 63 2 is_stmt 1 view .LVU87
+ 355              	.LBB97:
+ 356              	.LBI91:
+ 126:../../libs/libDaisy/src/daisy_seed.h ****     {
+ 357              		.loc 2 126 17 view .LVU88
+ 358              	.LBB94:
+ 359              		.loc 2 128 23 is_stmt 0 view .LVU89
+ 360 00c0 FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
+ 361              	.LVL20:
+ 362              		.loc 2 128 23 view .LVU90
+ 363              	.LBE94:
+ 364              	.LBE97:
+  64:startup.cpp   **** 	for (int i = 0; i < 3; i++){
+ 365              		.loc 1 64 2 is_stmt 1 view .LVU91
+ 366              	.LBB98:
+ 367              		.loc 1 64 20 view .LVU92
+ 368              	.L8:
+  65:startup.cpp   **** 		hw->SetLed(true);
+ 369              		.loc 1 65 3 discriminator 2 view .LVU93
+ 370              		.loc 1 65 13 is_stmt 0 discriminator 2 view .LVU94
+ 371 00c4 0121     		movs	r1, #1
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 18
+
+
+ 372 00c6 2846     		mov	r0, r5
+ 373 00c8 FFF7FEFF 		bl	_ZN5daisy9DaisySeed6SetLedEb
+ 374              	.LVL21:
+  66:startup.cpp   **** 		hw->DelayMs(200);
+ 375              		.loc 1 66 3 is_stmt 1 discriminator 2 view .LVU95
+ 376              		.loc 1 66 14 is_stmt 0 discriminator 2 view .LVU96
+ 377 00cc C821     		movs	r1, #200
+ 378 00ce 2846     		mov	r0, r5
+ 379 00d0 FFF7FEFF 		bl	_ZN5daisy9DaisySeed7DelayMsEj
+ 380              	.LVL22:
+  67:startup.cpp   ****       	hw->SetLed(false);
+ 381              		.loc 1 67 8 is_stmt 1 discriminator 2 view .LVU97
+ 382              		.loc 1 67 18 is_stmt 0 discriminator 2 view .LVU98
+ 383 00d4 0021     		movs	r1, #0
+ 384 00d6 2846     		mov	r0, r5
+ 385 00d8 FFF7FEFF 		bl	_ZN5daisy9DaisySeed6SetLedEb
+ 386              	.LVL23:
+  68:startup.cpp   ****       	hw->DelayMs(200);    
+ 387              		.loc 1 68 8 is_stmt 1 discriminator 2 view .LVU99
+ 388              		.loc 1 68 19 is_stmt 0 discriminator 2 view .LVU100
+ 389 00dc C821     		movs	r1, #200
+ 390 00de 2846     		mov	r0, r5
+ 391 00e0 FFF7FEFF 		bl	_ZN5daisy9DaisySeed7DelayMsEj
+ 392              	.LVL24:
+  64:startup.cpp   **** 		hw->SetLed(true);
+ 393              		.loc 1 64 2 is_stmt 1 discriminator 2 view .LVU101
+  64:startup.cpp   **** 		hw->SetLed(true);
+ 394              		.loc 1 64 20 discriminator 2 view .LVU102
+ 395 00e4 013E     		subs	r6, r6, #1
+ 396              	.LVL25:
+  64:startup.cpp   **** 		hw->SetLed(true);
+ 397              		.loc 1 64 20 is_stmt 0 discriminator 2 view .LVU103
+ 398 00e6 EDD1     		bne	.L8
+ 399              	.LBE98:
+  69:startup.cpp   **** 	}
+  70:startup.cpp   **** 	return error;
+ 400              		.loc 1 70 2 is_stmt 1 view .LVU104
+  71:startup.cpp   **** }
+ 401              		.loc 1 71 1 is_stmt 0 view .LVU105
+ 402 00e8 2046     		mov	r0, r4
+ 403 00ea 07B0     		add	sp, sp, #28
+ 404              		.cfi_def_cfa_offset 36
+ 405              		@ sp needed
+ 406 00ec BDEC028B 		vldm	sp!, {d8}
+ 407              		.cfi_restore 80
+ 408              		.cfi_restore 81
+ 409              		.cfi_def_cfa_offset 28
+ 410              	.LVL26:
+ 411              		.loc 1 71 1 view .LVU106
+ 412 00f0 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 413              	.LVL27:
+ 414              	.L21:
+ 415              		.loc 1 71 1 view .LVU107
+ 416              		.align	2
+ 417              	.L20:
+ 418 00f4 00000000 		.word	.LC0
+ 419 00f8 20000000 		.word	.LC1
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 19
+
+
+ 420 00fc 58000000 		.word	.LC2
+ 421 0100 90000000 		.word	.LC3
+ 422 0104 C0000000 		.word	.LC4
+ 423 0108 00000000 		.word	0
+ 424 010c 08010000 		.word	.LC5
+ 425 0110 3C010000 		.word	.LC6
+ 426              		.cfi_endproc
+ 427              	.LFE4815:
+ 429              		.text
+ 430              	.Letext0:
+ 431              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 432              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 433              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 434              		.file 7 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 435              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 436              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 437              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 438              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 439              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 440              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 441              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 442              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 443              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 444              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 445              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 446              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 447              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 448              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 449              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 450              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 451              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
+ 452              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 453              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 454              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 455              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 456              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 457              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 458              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 459              		.file 32 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 460              		.file 33 "../../libs/libDaisy/src/daisy_core.h"
+ 461              		.file 34 "../../libs/libDaisy/src/per/tim.h"
+ 462              		.file 35 "../../libs/libDaisy/src/sys/system.h"
+ 463              		.file 36 "../../libs/libDaisy/src/per/qspi.h"
+ 464              		.file 37 "../../libs/libDaisy/src/per/dac.h"
+ 465              		.file 38 "../../libs/libDaisy/src/per/gpio.h"
+ 466              		.file 39 "../../libs/libDaisy/src/per/i2c.h"
+ 467              		.file 40 "../../libs/libDaisy/src/per/sai.h"
+ 468              		.file 41 "../../libs/libDaisy/src/hid/audio.h"
+ 469              		.file 42 "../../libs/libDaisy/src/per/adc.h"
+ 470              		.file 43 "../../libs/libDaisy/src/hid/usb.h"
+ 471              		.file 44 "../../libs/libDaisy/src/hid/logger_impl.h"
+ 472              		.file 45 "../../libs/libDaisy/src/util/wav_format.h"
+ 473              		.file 46 "../../libs/libDaisy/src/dev/sr_595.h"
+ 474              		.file 47 "../../libs/libDaisy/src/dev/codec_ak4556.h"
+ 475              		.file 48 "../../libs/libDaisy/src/dev/max11300.h"
+ 476              		.file 49 "../../libs/libDaisy/src/hid/logger.h"
+ 477              		.file 50 "../../libs/libDaisy/src/dev/sdram.h"
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 20
+
+
+ 478              		.file 51 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 479              		.file 52 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 480              		.file 53 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 481              		.file 54 "../../libs/DaisySP/Source/Control/adenv.h"
+ 482              		.file 55 "../../libs/DaisySP/Source/Utility/dsp.h"
+ 483              		.file 56 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 484              		.file 57 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 485              		.file 58 "<built-in>"
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s 			page 21
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 startup.cpp
+C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s:17     .rodata._Z19startup_getMaxValuePfPN5daisy6Mpr121INS0_18Mpr121I2CTransportEEEPNS0_9DaisySeedE.str1.4:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s:42     .text._Z19startup_getMaxValuePfPN5daisy6Mpr121INS0_18Mpr121I2CTransportEEEPNS0_9DaisySeedE:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s:51     .text._Z19startup_getMaxValuePfPN5daisy6Mpr121INS0_18Mpr121I2CTransportEEEPNS0_9DaisySeedE:00000000 _Z19startup_getMaxValuePfPN5daisy6Mpr121INS0_18Mpr121I2CTransportEEEPNS0_9DaisySeedE
+C:\Users\matte\AppData\Local\Temp\cc5UHfxc.s:418    .text._Z19startup_getMaxValuePfPN5daisy6Mpr121INS0_18Mpr121I2CTransportEEEPNS0_9DaisySeedE:000000f4 $d
+
+UNDEFINED SYMBOLS
+_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
+_ZN5daisy9I2CHandle8Mem_readEtttPhtm
+_ZNK5daisy9AdcHandle8GetFloatEh
+_ZN5daisy9DaisySeed7DelayMsEj
+_ZN5daisy9DaisySeed6SetLedEb
