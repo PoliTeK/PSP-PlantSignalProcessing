@@ -9,14 +9,14 @@
 
 // Macro function to avoid writing every time "ifdef then endif"
 #ifdef LOGGING
-    #define LOG_MSG(STR) hw->PrintLine("STARTUP:" STR)
+    #define LOG_MSG(STR) hw.PrintLine("STARTUP:" STR)
 #else
     #define LOG_MSG(STR) ((void)0)
 #endif
 
 int startup_getMaxValue (float* maxDestination,
 						 daisy::Mpr121<daisy::Mpr121I2CTransport>* cap_sensor,
-						 daisy::DaisySeed* hw){
+						 daisy::DaisySeed& hw){
 	
 	LOG_MSG ("Entered startup routine");
 	int error = 0;
@@ -49,10 +49,10 @@ int startup_getMaxValue (float* maxDestination,
 	/// @todo check if this method is valid, maybe better to take mean value? 
 	LOG_MSG("Starting measurement of maximum, wait for led to blink 3 times");
 	for (int time = 0; time < MAX_TIMEOUT_VAL_MS; time++){
-		currentValue = hw->adc.GetFloat(0);
+		currentValue = hw.adc.GetFloat(0);
 		if(currentValue >= maxValue) {maxValue=currentValue;}
 		// for now it takes measurement every millisecond (not so great approach)
-		hw->DelayMs(1);
+		hw.DelayMs(1);
 	}
 	LOG_MSG ("Ended measurements, writing value to max");
 	
@@ -62,10 +62,10 @@ int startup_getMaxValue (float* maxDestination,
 	// blink 3 times to show correct closing of procedure
 	LOG_MSG ("END OF PROCEDURE");
 	for (int i = 0; i < 3; i++){
-		hw->SetLed(true);
-		hw->DelayMs(200);
-      	hw->SetLed(false);
-      	hw->DelayMs(200);    
+		hw.SetLed(true);
+		hw.DelayMs(200);
+      	hw.SetLed(false);
+      	hw.DelayMs(200);    
 	}
 	return error;
 }

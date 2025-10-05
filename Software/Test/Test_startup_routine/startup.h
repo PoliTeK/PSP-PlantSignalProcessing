@@ -22,7 +22,7 @@
 int startup_getMaxValue (
     float* maxDestination,
     daisy::Mpr121<daisy::Mpr121I2CTransport>* cap_sensor,
-    daisy::DaisySeed hw
+    daisy::DaisySeed& hw
 );
 
 #endif //STARTUP_H
