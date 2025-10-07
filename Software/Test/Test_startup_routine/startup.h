@@ -6,6 +6,7 @@
 
 #include "../../libs/libDaisy/src/daisy_seed.h"
 #include "../../libs/DaisySP/Source/daisysp.h"
+#include "../../Classes/Temperamento/PlantConditioner.h"
 #include <cstdint>
 
 // if true, logs status of startup to serial console
@@ -18,11 +19,11 @@
 /// @param cap_sensor reference to object of cap sensor
 /// @param hw hardware object to make usage of adc reading and serial
 /// @returns Error value if is < 0
-/// @todo understand why cannot pass *hw to function
 int startup_getMaxValue (
     float* maxDestination,
     daisy::Mpr121<daisy::Mpr121I2CTransport>* cap_sensor,
-    daisy::DaisySeed& hw
+    daisy::DaisySeed& hw,
+    PlantConditioner& pc
 );
 
 #endif //STARTUP_H
