@@ -173,7 +173,12 @@ int main()
   #endif
 
   #ifdef csvAcquisition
-    hw.PrintLine("%f, %f, %f, %d", f, pc.getDelta(), pc.getDeltaFilt());
+    if (gate) {
+      hw.PrintLine("%f, %f, 1", pc.getDelta(), pc.getDeltaFilt());
+    } else {
+      hw.PrintLine("%f, %f, 0", pc.getDelta(), pc.getDeltaFilt());
+    }
+    
     //hw.PrintLine(" ");
     //hw.PrintLine("%d, %d ", cap.BaselineData(0), cap.FilteredData(0));
     //hw.PrintLine(" ");
