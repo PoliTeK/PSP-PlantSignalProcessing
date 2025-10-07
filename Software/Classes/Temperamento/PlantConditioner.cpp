@@ -85,6 +85,7 @@ float PlantConditioner::Process(uint16_t baseline, uint16_t filtered) {
         //Dimensione Crescente Bin
         float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
         float upper = _deltaMin + _range * powf((float)(i+1) / _scaleLength, _curveType);
+        float histeresis = _histeresis * powf((float)(i+1) / _scaleLength, _curveType); //histeresis proporzionale alla dimensione del bin
 
         //Dimensione Decrescente Bin
         //float lower = _deltaMin + _range * (1.0f - powf(1.0f - (float)i / _scaleLength, _curveType));
