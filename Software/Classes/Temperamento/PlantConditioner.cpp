@@ -11,6 +11,7 @@ void PlantConditioner::Init(CapFir::ResType res_type) {
     _deltaFilt = 0;
     _octave = 4;
 }
+
 void PlantConditioner::setScale( enum Notes root_note, enum ScaleType scale_type) {
     switch (scale_type) 
     {
@@ -79,26 +80,26 @@ float PlantConditioner::Process(uint16_t baseline, uint16_t filtered) {
     _deltaFilt = _deltaFir.Process(_delta);
     if (_deltaFilt < _deltaMin) out = _scale[0] * (1 << _octave);
     else if (_deltaFilt > _deltaMax) out = _scale[_scaleLength - 1] * (1 << _octave);
-    else {
+    else if ( (_deltaFilt < _hysteresisL) || (_deltaFilt > _hysteresisU)){
         for (int i = 0; i < _scaleLength; i++) {
 
         //Dimensione Crescente Bin
         float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
         float upper = _deltaMin + _range * powf((float)(i+1) / _scaleLength, _curveType);
-        float histeresis = _histeresis * powf((float)(i+1) / _scaleLength, _curveType); //histeresis proporzionale alla dimensione del bin
+        float hysteresis = _hysteresis * powf((float)(i+1) / _scaleLength, _curveType); //histeresis proporzionale alla dimensione del bin
 
         //Dimensione Decrescente Bin
         //float lower = _deltaMin + _range * (1.0f - powf(1.0f - (float)i / _scaleLength, _curveType));
         //float upper = _deltaMin + _range * (1.0f - powf(1.0f - (float)(i + 1) / _scaleLength, _curveType));
             
-            if (_deltaFilt >= lower && _deltaFilt < upper) {
+            if (_deltaFilt >= lower  && _deltaFilt < upper ) {
                 out = _scale[i] * (1 << _octave);
+                _hysteresisL = lower - hysteresis;
+                _hysteresisU = upper + hysteresis;
                 break;
             }
         }
     }
-    
-    
     return out;
 }
 

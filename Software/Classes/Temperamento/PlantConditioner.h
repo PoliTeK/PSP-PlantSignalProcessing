@@ -62,11 +62,14 @@ public:
     
     uint8_t getRange(){ return _range; } 
 
+    float getHysteresisU () {return _hysteresisU;}
+    float getHysteresisL () {return _hysteresisL;}
+
 private:
 
     const uint8_t touchTreshold = MPR121_TOUCH_THRESHOLD_DEFAULT;
     CapFir _deltaFir, _maxFir, _curveFir;
-    const float _histeresis = 2.0f; //valore fisso di isteresi
+    const float _hysteresis = 2.0f; //valore fisso di isteresi
     float _hysteresisU, _hysteresisL = 0;
     float _curveType = 0; //0 linear, 1 exponential, 2 logarithmic
     uint8_t _octave, _scaleLength = 7;

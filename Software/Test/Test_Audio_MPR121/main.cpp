@@ -8,7 +8,8 @@
 #endif
 #define ADC_CH 2 // Numero di canali ADC da utilizzare
 //#define DEBUG
-#define csvAcquisition
+//#define csvAcquisition
+//#define HYSTERESIS
 
 
 
@@ -65,7 +66,7 @@ int main()
   sampleRate = hw.AudioSampleRate();
 
   pc.Init(CapFir::ResType::HIGH); 
-  pc.setScale(PlantConditioner::C, PlantConditioner::MinorArm);
+  pc.setScale(PlantConditioner::C, PlantConditioner::Chromatic);
   pc.setOctave(3);
   pc.setCurve(100,1.1);
   
@@ -89,6 +90,11 @@ int main()
   adcConfig[1].InitSingle(daisy::seed::A1); 
   hw.adc.Init(adcConfig, ADC_CH);              
   hw.adc.Start();                
+
+
+  #ifdef HYSTERESIS 
+    hw.StartLog(false); // starts the log to the serial port
+  #endif
 
   #ifdef DEBUG 
     hw.StartLog(false); // starts the log to the serial port
@@ -183,7 +189,22 @@ int main()
     //hw.PrintLine("%d, %d ", cap.BaselineData(0), cap.FilteredData(0));
     //hw.PrintLine(" ");
   #endif
-    
+  
+  #ifdef HYSTERESIS
+  float* bins = pc.getBin();
+  if (gate){
+    hw.Print ("hysteresis value: %f %f, range %f  ", pc.getHysteresisL(), pc.getHysteresisU(),pc.getHysteresisU() - pc.getHysteresisL());
+    hw.PrintLine ("DeltaFilt: %f", pc.getDeltaFilt());
+  }
+  else { 
+  for (int i = 0; i < 12; i++){
+    hw.Print("%f | ", bins[i]);
+  }
+  hw.PrintLine(" ");
+
+  }
+  #endif //HYSTERESIS
+  
   lastTouched = currTouched;
   hw.DelayMs(10);
     
