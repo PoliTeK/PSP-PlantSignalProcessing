@@ -71,6 +71,7 @@ private:
     CapFir _deltaFir, _maxFir, _curveFir;
     const float _hysteresis = 2.0f; //valore fisso di isteresi
     float _hysteresisU, _hysteresisL = 0;
+    int _lastIndex = 0;
     float _curveType = 0; //0 linear, 1 exponential, 2 logarithmic
     uint8_t _octave, _scaleLength = 7;
     uint8_t  _deltaMin = 1, _deltaMax = 101, _range = 100;

@@ -94,12 +94,17 @@ float PlantConditioner::Process(uint16_t baseline, uint16_t filtered) {
             
             if (_deltaFilt >= lower  && _deltaFilt < upper ) {
                 out = _scale[i] * (1 << _octave);
+                _lastIndex = i;
                 _hysteresisL = lower - hysteresis;
                 _hysteresisU = upper + hysteresis;
                 break;
             }
         }
     }
+    else {
+        out = _scale [_lastIndex] * (1 << _octave);
+    }
+    
     return out;
 }
 
