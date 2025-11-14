@@ -21,5 +21,6 @@
         "xtree": "cpp",
         "chrono": "cpp",
         "forward_list": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "C:/Users/skipi/Desktop/Leo/Politek/Progetti/PSP-PlantSignalProcessing/Software/libs/DaisySP"
 }

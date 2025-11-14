@@ -24,3 +24,7 @@ fprintf('%.8ff\n};\n', b(end));
 fprintf('float _coeffH[%d] = {\n', Nc);
 fprintf('\t%.8ff, ', c(1:end-1));
 fprintf('%.8ff\n};\n', c(end));
+
+%%
+x = linspace(0,1,100);
+plot (x, 1./x);
