@@ -87,7 +87,7 @@ public:
     int AddSetParam (int (*SetParamFunction_ptr)(t_param1), const char* paramName) {
         if (_setParamCounter < MAX_N_OF_PARAM_SETTERS ){
             _SetParamFunction_ptr [_setParamCounter] = SetParamFunction_ptr;
-            paramNames[_setParamCounter] = paramName; 
+            _paramNames[_setParamCounter] = paramName; 
             _setParamCounter++;
         }
         else {
@@ -109,7 +109,11 @@ public:
         
     }
 
-    
+    /// @brief  add function that sets two parameters, with given name
+    /// @param SetParamsFunction_ptr pointer to function that sets parameters
+    /// @param paramName1 name of parameter 1
+    /// @param paramName2 name of parameter 2  
+    /// @return -1 if full
     int AddSetParams(int(*SetParamsFunction_ptr)(t_param1,t_param2),
                      const char* paramName1,
                      const char* paramName2)
