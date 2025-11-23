@@ -1,3 +1,6 @@
+// TO DO: 
+//      - add const char with instantiation (e.g. name of param of set param)
+
 #include "../../Classes/Effect/sigChain_handler.hpp"
 #include "../../Classes/Effect/effectWrapper.hpp"
 #include "../../libs/libDaisy/src/daisy_seed.h"
