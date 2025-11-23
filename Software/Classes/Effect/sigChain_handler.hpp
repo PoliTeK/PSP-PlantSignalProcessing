@@ -37,6 +37,19 @@ public:
         for (unsigned int i = 0; i < _effectsCounter; i++){
             partial = _effects[i]->Process(partial);
         }
+        return partial;
+    }
+
+    /// @brief Run the signal chain without passing a sample (use at own risk).
+    /// useful if at start of chain there is an oscillator, or something that generates
+    /// the sample for the rest of the chain
+    /// @return processed sample
+    float Process (){
+        float dummySample = 0;
+        for (unsigned int i = 0; i < _effectsCounter; i++){
+            dummySample = _effects[i]->Process(dummySample);
+        }
+        return dummySample;
     }
 };
 

@@ -83,13 +83,15 @@ public:
     /// @brief adds the function pointer for a parameter setting
     /// @param SetParamFunction_ptr function pointer of the setter of original effect
     int AddSetParam (t_retVal1 (t_effect::*SetParamFunction_ptr)(t_param1)) {
+        int oneIfFull = 0;
         if (_setParamCounter < MAX_N_OF_PARAM_SETTERS ){
             _SetParamFunction_ptr [_setParamCounter] = SetParamFunction_ptr;
             _setParamCounter++;
         }
         else {
-            return -1;
+            oneIfFull = 1;
         }         
+        return oneIfFull;
     }
 
     /// @brief adds set param function to array and pointer to name of parameter
