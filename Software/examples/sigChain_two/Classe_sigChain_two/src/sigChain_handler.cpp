@@ -51,5 +51,17 @@ public:
         }
         return dummySample;
     }
+
+    /// @brief get name of effect in a position 
+    /// @param numOfEffect index of effect to get name
+    /// @return pointer to name (read until \0) OR 0 if too high index
+    const char* getEffectName (unsigned int numOfEffect) {
+        if (numOfEffect < _effectsCounter){
+            return _effects[numOfEffect]->getName();
+        }
+        else {
+            return 0;
+        } 
+    }
 };
 

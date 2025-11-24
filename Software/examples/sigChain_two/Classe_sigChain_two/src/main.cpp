@@ -77,9 +77,9 @@ int main (){
 
     // the wrapper can be created on a oneliner
     EffectWrapper <AnalogDelay,float,float> delayWrapper (
-        &delay1,
-        &AnalogDelay::Process,
-        &AnalogDelay::setDelayTime
+        &delay1, "Analog Delay",
+        &AnalogDelay::setDelayTime, "Time",
+        &AnalogDelay::Process
     );
 
     float delayTime = .1f;

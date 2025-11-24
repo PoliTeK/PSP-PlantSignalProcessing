@@ -7,6 +7,8 @@
 //      divide implementation and definition
 //      add constructor impl
 //      update comments
+//      add correct setParam instantiation
+
 #include "effectInterface.cpp"
 
 /// defines maximum number of param setter for a single block
@@ -29,6 +31,9 @@ private:
     
     // pointer to wrapped object
     t_effect* _effectPtr = nullptr;
+
+    // name of wrapper -> what will be accessed by sigChain 
+    const char* _name = nullptr;
 
     // array of function pointers for setter of effect with single param
     t_retVal1 (t_effect::*_SetParamFunction_ptr [MAX_N_OF_PARAM_SETTERS]) (t_param1 param1) = {nullptr};
@@ -86,6 +91,27 @@ public:
     }
 
 
+    /// @brief parameter constructor that sets process function, name, setter function and parameter name
+    /// @param effectPtr real effect obj pointer
+    /// @param Process_ptr Function pointer to process 
+    /// @param effectName name of effect to be displayed
+    /// @param SetParamFunction_ptr Function pointer of setter
+    /// @param paramName Pointer to string containing param name
+    EffectWrapper(
+            t_effect* effectPtr, 
+            const char* effectName,
+            void (t_effect::*SetParamFunction_ptr)(t_param1), 
+            const char* paramName,
+            float (t_effect::*Process_ptr)(t_process)  
+        )
+    {
+        _effectPtr = effectPtr;
+        _name = effectName;
+        AddProcess(Process_ptr);
+        AddSetParam(SetParamFunction_ptr, paramName);
+    }
+
+
     ~EffectWrapper(){};
 
 
@@ -112,6 +138,7 @@ public:
             _SetParamFunction_ptr [_setParamCounter] = SetParamFunction_ptr;
             _paramNames[_setParamCounter] = paramName; 
             _setParamCounter++;
+            return 0;
         }
         else {
             return -1;
@@ -124,7 +151,8 @@ public:
     int AddSetParams(t_retVal1 (*SetParamsFunction_ptr)(t_param1,t_param2)){
         if(_setParamsCounter < MAX_N_OF_PARAM_SETTERS){
             _SetParamsFunction_ptr = SetParamsFunction_ptr;
-            _setParamsCounter++;    
+            _setParamsCounter++;
+            return 0;    
         }
         else {
             return -1;
@@ -189,6 +217,10 @@ public:
 
         return processedSample;
     }
+
+    /// @brief getters that returns pointer to name
+    /// @return pointer to name
+    const char* getName() {return _name;}
     
     /// @brief call set param function of original effect
     /// @param param1 new value of parameter
