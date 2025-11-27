@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -27,7 +27,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   24              		.fpu fpv5-d16
   26              	_ZN5daisy9DaisySeedD2Ev:
   27              	.LVL0:
-  28              	.LFB2664:
+  28              	.LFB2667:
   29              		.file 1 "../../../libs/libDaisy/src/daisy_seed.h"
    1:../../../libs/libDaisy/src/daisy_seed.h **** #pragma once
    2:../../../libs/libDaisy/src/daisy_seed.h **** #ifndef DSY_SEED_H
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   34              		@ link register save eliminated.
   35              	.LBB182:
   36              	.LBI182:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 2
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 2
 
 
   37              		.file 2 "../../../libs/libDaisy/src/dev/codec_ak4556.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   27:../../../libs/libDaisy/src/sys/system.h ****             FREQ_400MHZ,
   28:../../../libs/libDaisy/src/sys/system.h ****             FREQ_480MHZ,
   29:../../../libs/libDaisy/src/sys/system.h ****         };
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 3
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 3
 
 
   30:../../../libs/libDaisy/src/sys/system.h **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   84:../../../libs/libDaisy/src/sys/system.h ****         } status;
   85:../../../libs/libDaisy/src/sys/system.h ****         uint32_t data;
   86:../../../libs/libDaisy/src/sys/system.h ****         enum class Version : uint32_t
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 4
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 4
 
 
   87:../../../libs/libDaisy/src/sys/system.h ****         {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   38:../../../libs/libDaisy/src/hid/usb.h ****     typedef void (*ReceiveCallback)(uint8_t* buff, uint32_t* len);
   39:../../../libs/libDaisy/src/hid/usb.h **** 
   40:../../../libs/libDaisy/src/hid/usb.h ****     UsbHandle() {}
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 5
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 5
 
 
   41:../../../libs/libDaisy/src/hid/usb.h **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   47:../../../libs/libDaisy/src/per/adc.h ****         SPEED_8CYCLES_5,
   48:../../../libs/libDaisy/src/per/adc.h ****         SPEED_16CYCLES_5,
   49:../../../libs/libDaisy/src/per/adc.h ****         SPEED_32CYCLES_5,
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 6
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 6
 
 
   50:../../../libs/libDaisy/src/per/adc.h ****         SPEED_64CYCLES_5,
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  104:../../../libs/libDaisy/src/per/adc.h ****         OVS_512,  /**< & */
  105:../../../libs/libDaisy/src/per/adc.h ****         OVS_1024, /**< & */
  106:../../../libs/libDaisy/src/per/adc.h ****         OVS_LAST, /**< & */
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 7
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 7
 
 
  107:../../../libs/libDaisy/src/per/adc.h ****     };
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   45:../../../libs/libDaisy/src/hid/audio.h ****     enum class Result
   46:../../../libs/libDaisy/src/hid/audio.h ****     {
   47:../../../libs/libDaisy/src/hid/audio.h ****         OK,
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 8
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 8
 
 
   48:../../../libs/libDaisy/src/hid/audio.h ****         ERR,
@@ -468,7 +468,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   65              		.loc 1 22 19 view .LVU11
   66 0000 7047     		bx	lr
   67              		.cfi_endproc
-  68              	.LFE2664:
+  68              	.LFE2667:
   70              		.weak	_ZN5daisy9DaisySeedD1Ev
   71              		.thumb_set _ZN5daisy9DaisySeedD1Ev,_ZN5daisy9DaisySeedD2Ev
   72 0002 00BF     		.section	.text._ZN7daisysp10OscillatorD2Ev,"axG",%progbits,_ZN7daisysp10OscillatorD5Ev,comdat
@@ -478,13 +478,13 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   76              		.syntax unified
   77              		.thumb
   78              		.thumb_func
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 9
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 9
 
 
   79              		.fpu fpv5-d16
   81              	_ZN7daisysp10OscillatorD2Ev:
   82              	.LVL1:
-  83              	.LFB4349:
+  83              	.LFB4352:
   84              		.file 7 "../../../libs/DaisySP/Source/Synthesis/oscillator.h"
    1:../../../libs/DaisySP/Source/Synthesis/oscillator.h **** /*
    2:../../../libs/DaisySP/Source/Synthesis/oscillator.h **** Copyright (c) 2020 Electrosmith, Corp
@@ -518,7 +518,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   90              		.loc 7 24 20 is_stmt 0 view .LVU13
   91 0000 7047     		bx	lr
   92              		.cfi_endproc
-  93              	.LFE4349:
+  93              	.LFE4352:
   95              		.weak	_ZN7daisysp10OscillatorD1Ev
   96              		.thumb_set _ZN7daisysp10OscillatorD1Ev,_ZN7daisysp10OscillatorD2Ev
   97              		.section	.text._Z13AudioCallbackPKPKfPPfj,"ax",%progbits
@@ -531,14 +531,14 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  104              		.fpu fpv5-d16
  106              	_Z13AudioCallbackPKPKfPPfj:
  107              	.LVL2:
- 108              	.LFB4836:
+ 108              	.LFB4839:
  109              		.file 8 "src/main.cpp"
    1:src/main.cpp  **** // TO DO: 
    2:src/main.cpp  **** //      - add const char with instantiation (e.g. name of param of set param)
    3:src/main.cpp  **** 
    4:src/main.cpp  **** #include "sigChain_handler.cpp"
    5:src/main.cpp  **** #include "effectWrapper.cpp"
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 10
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 10
 
 
    6:src/main.cpp  **** #include "daisy_seed.h"
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  141              	.LBB194:
  142              		.file 9 "src/sigChain_handler.cpp"
    1:src/sigChain_handler.cpp **** // TODO:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 11
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 11
 
 
    2:src/sigChain_handler.cpp **** //      - divide implementation and declaration
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  149              	.LBE194:
   48:src/sigChain_handler.cpp ****         for (unsigned int i = 0; i < _effectsCounter; i++){
  150              		.loc 9 48 15 view .LVU21
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 12
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 12
 
 
  151 001e 9FED110A 		vldr.32	s0, .L19+4
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  189 0042 03EB8603 		add	r3, r3, r6, lsl #2
   27:src/main.cpp  **** 	{
  190              		.loc 8 27 2 view .LVU37
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 13
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 13
 
 
  191 0046 0136     		adds	r6, r6, #1
@@ -777,8 +777,8 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  236              	.LBE197:
  237              	.LBE199:
  238              		.cfi_endproc
- 239              	.LFE4836:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 14
+ 239              	.LFE4839:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 14
 
 
  241              		.section	.text._ZN13EffectWrapperIN7daisysp10OscillatorEfffvE8SetParamEf,"axG",%progbits,_ZN13Effe
@@ -791,7 +791,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  248              		.fpu fpv5-d16
  250              	_ZN13EffectWrapperIN7daisysp10OscillatorEfffvE8SetParamEf:
  251              	.LVL13:
- 252              	.LFB5155:
+ 252              	.LFB5158:
  253              		.file 10 "src/effectWrapper.cpp"
    1:src/effectWrapper.cpp **** /// @file effect.hpp
    2:src/effectWrapper.cpp **** 
@@ -802,239 +802,271 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
    7:src/effectWrapper.cpp **** //      divide implementation and definition
    8:src/effectWrapper.cpp **** //      add constructor impl
    9:src/effectWrapper.cpp **** //      update comments
-  10:src/effectWrapper.cpp **** #include "effectInterface.cpp"
+  10:src/effectWrapper.cpp **** //      add correct setParam instantiation
   11:src/effectWrapper.cpp **** 
-  12:src/effectWrapper.cpp **** /// defines maximum number of param setter for a single block
-  13:src/effectWrapper.cpp **** #define MAX_N_OF_PARAM_SETTERS  4
-  14:src/effectWrapper.cpp **** 
-  15:src/effectWrapper.cpp **** /// @brief  template for signal chain block. Use it after instantiating the real effect
-  16:src/effectWrapper.cpp **** /// @tparam t_effect class of object that is to be wrapped
-  17:src/effectWrapper.cpp **** /// @tparam t_process type of process argument (default = float)
-  18:src/effectWrapper.cpp **** /// @tparam t_param1 type of first param (default = float)
-  19:src/effectWrapper.cpp **** /// @tparam t_param2 type of second param (default = float)
-  20:src/effectWrapper.cpp **** /// @tparam t_retVal1 type of return value of setter function (default = void)
-  21:src/effectWrapper.cpp **** template <  typename t_effect,
-  22:src/effectWrapper.cpp ****             typename t_process = float, 
-  23:src/effectWrapper.cpp ****             typename t_param1 = float, 
-  24:src/effectWrapper.cpp ****             typename t_param2 = float,
-  25:src/effectWrapper.cpp ****             typename t_retVal1 = void 
-  26:src/effectWrapper.cpp ****             > 
-  27:src/effectWrapper.cpp **** class EffectWrapper : public EffectInterface {
-  28:src/effectWrapper.cpp **** private:
-  29:src/effectWrapper.cpp ****     
-  30:src/effectWrapper.cpp ****     // pointer to wrapped object
-  31:src/effectWrapper.cpp ****     t_effect* _effectPtr = nullptr;
-  32:src/effectWrapper.cpp **** 
-  33:src/effectWrapper.cpp ****     // array of function pointers for setter of effect with single param
-  34:src/effectWrapper.cpp ****     t_retVal1 (t_effect::*_SetParamFunction_ptr [MAX_N_OF_PARAM_SETTERS]) (t_param1 param1) = {null
-  35:src/effectWrapper.cpp ****     
-  36:src/effectWrapper.cpp ****     // counter to keep track of latest addition to array
-  37:src/effectWrapper.cpp ****     unsigned int _setParamCounter = 0;
-  38:src/effectWrapper.cpp ****     
-  39:src/effectWrapper.cpp ****     // array of pointers to string containing param name
-  40:src/effectWrapper.cpp ****     const char* _paramNames[MAX_N_OF_PARAM_SETTERS] ;
-  41:src/effectWrapper.cpp ****     
-  42:src/effectWrapper.cpp ****     // array of function pointers for setter of effect with 2 params
-  43:src/effectWrapper.cpp ****     t_retVal1 (t_effect::*_SetParamsFunction_ptr[MAX_N_OF_PARAM_SETTERS]) (t_param1 param1, t_param
-  44:src/effectWrapper.cpp ****     
-  45:src/effectWrapper.cpp ****     // counter to keep track of latest addition to array
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 15
+  12:src/effectWrapper.cpp **** #include "effectInterface.cpp"
+  13:src/effectWrapper.cpp **** 
+  14:src/effectWrapper.cpp **** /// defines maximum number of param setter for a single block
+  15:src/effectWrapper.cpp **** #define MAX_N_OF_PARAM_SETTERS  4
+  16:src/effectWrapper.cpp **** 
+  17:src/effectWrapper.cpp **** /// @brief  template for signal chain block. Use it after instantiating the real effect
+  18:src/effectWrapper.cpp **** /// @tparam t_effect class of object that is to be wrapped
+  19:src/effectWrapper.cpp **** /// @tparam t_process type of process argument (default = float)
+  20:src/effectWrapper.cpp **** /// @tparam t_param1 type of first param (default = float)
+  21:src/effectWrapper.cpp **** /// @tparam t_param2 type of second param (default = float)
+  22:src/effectWrapper.cpp **** /// @tparam t_retVal1 type of return value of setter function (default = void)
+  23:src/effectWrapper.cpp **** template <  typename t_effect,
+  24:src/effectWrapper.cpp ****             typename t_process = float, 
+  25:src/effectWrapper.cpp ****             typename t_param1 = float, 
+  26:src/effectWrapper.cpp ****             typename t_param2 = float,
+  27:src/effectWrapper.cpp ****             typename t_retVal1 = void 
+  28:src/effectWrapper.cpp ****             > 
+  29:src/effectWrapper.cpp **** class EffectWrapper : public EffectInterface {
+  30:src/effectWrapper.cpp **** private:
+  31:src/effectWrapper.cpp ****     
+  32:src/effectWrapper.cpp ****     // pointer to wrapped object
+  33:src/effectWrapper.cpp ****     t_effect* _effectPtr = nullptr;
+  34:src/effectWrapper.cpp **** 
+  35:src/effectWrapper.cpp ****     // name of wrapper -> what will be accessed by sigChain 
+  36:src/effectWrapper.cpp ****     const char* _name = nullptr;
+  37:src/effectWrapper.cpp **** 
+  38:src/effectWrapper.cpp ****     // array of function pointers for setter of effect with single param
+  39:src/effectWrapper.cpp ****     t_retVal1 (t_effect::*_SetParamFunction_ptr [MAX_N_OF_PARAM_SETTERS]) (t_param1 param1) = {null
+  40:src/effectWrapper.cpp ****     
+  41:src/effectWrapper.cpp ****     // counter to keep track of latest addition to array
+  42:src/effectWrapper.cpp ****     unsigned int _setParamCounter = 0;
+  43:src/effectWrapper.cpp ****     
+  44:src/effectWrapper.cpp ****     // array of pointers to string containing param name
+  45:src/effectWrapper.cpp ****     const char* _paramNames[MAX_N_OF_PARAM_SETTERS] ;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 15
 
 
-  46:src/effectWrapper.cpp ****     unsigned int _setParamsCounter = 0;
-  47:src/effectWrapper.cpp ****     
-  48:src/effectWrapper.cpp ****     // array of string pointers containing the name of 2 param for the setters
-  49:src/effectWrapper.cpp ****     const char* _paramsNames [MAX_N_OF_PARAM_SETTERS][2];      
-  50:src/effectWrapper.cpp ****     
-  51:src/effectWrapper.cpp ****     // function pointer for process
-  52:src/effectWrapper.cpp ****     float (t_effect::*_Process_ptr) (t_process) = nullptr;
-  53:src/effectWrapper.cpp **** 
-  54:src/effectWrapper.cpp ****     // function pointer for process with no arguments (e.g. oscillator)
-  55:src/effectWrapper.cpp ****     float (t_effect::*_ProcessWithNoArgs_ptr) () = nullptr;
-  56:src/effectWrapper.cpp **** public:
-  57:src/effectWrapper.cpp **** 
-  58:src/effectWrapper.cpp ****     EffectWrapper(){};
-  59:src/effectWrapper.cpp **** 
-  60:src/effectWrapper.cpp ****     /// @brief Parameter constructor for instantiating process function pointer
-  61:src/effectWrapper.cpp ****     /// @param Process_ptr process function pointer of original effect
-  62:src/effectWrapper.cpp ****     EffectWrapper(float (*Process_ptr)(t_process)){ addProcess(Process_ptr);}
-  63:src/effectWrapper.cpp **** 
-  64:src/effectWrapper.cpp ****     /// @brief Parameter constructor for instantiating parameter and process functions pointer
-  65:src/effectWrapper.cpp ****     /// @param Process_ptr process function pointer of original effect
-  66:src/effectWrapper.cpp ****     /// @param SetParamFunction_ptr function pointer of the setter of original effect
-  67:src/effectWrapper.cpp ****     EffectWrapper(  t_effect* effectPtr,
-  68:src/effectWrapper.cpp ****                     float (t_effect::*Process_ptr)(t_process), 
-  69:src/effectWrapper.cpp ****                     void (t_effect::*SetParamFunction_ptr)(t_param1))
-  70:src/effectWrapper.cpp ****     {
-  71:src/effectWrapper.cpp ****         _effectPtr = effectPtr;
-  72:src/effectWrapper.cpp ****         AddProcess(Process_ptr);
-  73:src/effectWrapper.cpp ****         AddSetParam(SetParamFunction_ptr);
-  74:src/effectWrapper.cpp ****     };
-  75:src/effectWrapper.cpp ****     
-  76:src/effectWrapper.cpp ****     /// @brief parameter constructor that sets process function, setter function and parameter name
-  77:src/effectWrapper.cpp ****     /// @param Process_ptr Function pointer to process 
-  78:src/effectWrapper.cpp ****     /// @param SetParamFunction_ptr Function pointer of setter
-  79:src/effectWrapper.cpp ****     /// @param paramName Pointer to string containing param name
-  80:src/effectWrapper.cpp ****     EffectWrapper( float (t_effect::*Process_ptr)(t_process),
-  81:src/effectWrapper.cpp ****             int (*SetParamFunction_ptr)(t_param1), 
-  82:src/effectWrapper.cpp ****             const char* paramName)
-  83:src/effectWrapper.cpp ****     {
-  84:src/effectWrapper.cpp ****         AddProcess(Process_ptr);
-  85:src/effectWrapper.cpp ****         AddSetParam(SetParamFunction_ptr, paramName);
-  86:src/effectWrapper.cpp ****     }
-  87:src/effectWrapper.cpp **** 
-  88:src/effectWrapper.cpp **** 
-  89:src/effectWrapper.cpp ****     ~EffectWrapper(){};
-  90:src/effectWrapper.cpp **** 
-  91:src/effectWrapper.cpp **** 
-  92:src/effectWrapper.cpp ****     /// @brief adds the function pointer for a parameter setting
-  93:src/effectWrapper.cpp ****     /// @param SetParamFunction_ptr function pointer of the setter of original effect
-  94:src/effectWrapper.cpp ****     int AddSetParam (t_retVal1 (t_effect::*SetParamFunction_ptr)(t_param1)) {
-  95:src/effectWrapper.cpp ****         int oneIfFull = 0;
-  96:src/effectWrapper.cpp ****         if (_setParamCounter < MAX_N_OF_PARAM_SETTERS ){
-  97:src/effectWrapper.cpp ****             _SetParamFunction_ptr [_setParamCounter] = SetParamFunction_ptr;
-  98:src/effectWrapper.cpp ****             _setParamCounter++;
-  99:src/effectWrapper.cpp ****         }
- 100:src/effectWrapper.cpp ****         else {
- 101:src/effectWrapper.cpp ****             oneIfFull = 1;
- 102:src/effectWrapper.cpp ****         }         
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 16
+  46:src/effectWrapper.cpp ****     
+  47:src/effectWrapper.cpp ****     // array of function pointers for setter of effect with 2 params
+  48:src/effectWrapper.cpp ****     t_retVal1 (t_effect::*_SetParamsFunction_ptr[MAX_N_OF_PARAM_SETTERS]) (t_param1 param1, t_param
+  49:src/effectWrapper.cpp ****     
+  50:src/effectWrapper.cpp ****     // counter to keep track of latest addition to array
+  51:src/effectWrapper.cpp ****     unsigned int _setParamsCounter = 0;
+  52:src/effectWrapper.cpp ****     
+  53:src/effectWrapper.cpp ****     // array of string pointers containing the name of 2 param for the setters
+  54:src/effectWrapper.cpp ****     const char* _paramsNames [MAX_N_OF_PARAM_SETTERS][2];      
+  55:src/effectWrapper.cpp ****     
+  56:src/effectWrapper.cpp ****     // function pointer for process
+  57:src/effectWrapper.cpp ****     float (t_effect::*_Process_ptr) (t_process) = nullptr;
+  58:src/effectWrapper.cpp **** 
+  59:src/effectWrapper.cpp ****     // function pointer for process with no arguments (e.g. oscillator)
+  60:src/effectWrapper.cpp ****     float (t_effect::*_ProcessWithNoArgs_ptr) () = nullptr;
+  61:src/effectWrapper.cpp **** public:
+  62:src/effectWrapper.cpp **** 
+  63:src/effectWrapper.cpp ****     EffectWrapper(){};
+  64:src/effectWrapper.cpp **** 
+  65:src/effectWrapper.cpp ****     /// @brief Parameter constructor for instantiating process function pointer
+  66:src/effectWrapper.cpp ****     /// @param Process_ptr process function pointer of original effect
+  67:src/effectWrapper.cpp ****     EffectWrapper(float (*Process_ptr)(t_process)){ addProcess(Process_ptr);}
+  68:src/effectWrapper.cpp **** 
+  69:src/effectWrapper.cpp ****     /// @brief Parameter constructor for instantiating parameter and process functions pointer
+  70:src/effectWrapper.cpp ****     /// @param Process_ptr process function pointer of original effect
+  71:src/effectWrapper.cpp ****     /// @param SetParamFunction_ptr function pointer of the setter of original effect
+  72:src/effectWrapper.cpp ****     EffectWrapper(  t_effect* effectPtr,
+  73:src/effectWrapper.cpp ****                     float (t_effect::*Process_ptr)(t_process), 
+  74:src/effectWrapper.cpp ****                     void (t_effect::*SetParamFunction_ptr)(t_param1))
+  75:src/effectWrapper.cpp ****     {
+  76:src/effectWrapper.cpp ****         _effectPtr = effectPtr;
+  77:src/effectWrapper.cpp ****         AddProcess(Process_ptr);
+  78:src/effectWrapper.cpp ****         AddSetParam(SetParamFunction_ptr);
+  79:src/effectWrapper.cpp ****     };
+  80:src/effectWrapper.cpp ****     
+  81:src/effectWrapper.cpp ****     /// @brief parameter constructor that sets process function, setter function and parameter name
+  82:src/effectWrapper.cpp ****     /// @param Process_ptr Function pointer to process 
+  83:src/effectWrapper.cpp ****     /// @param SetParamFunction_ptr Function pointer of setter
+  84:src/effectWrapper.cpp ****     /// @param paramName Pointer to string containing param name
+  85:src/effectWrapper.cpp ****     EffectWrapper( float (t_effect::*Process_ptr)(t_process),
+  86:src/effectWrapper.cpp ****             int (*SetParamFunction_ptr)(t_param1), 
+  87:src/effectWrapper.cpp ****             const char* paramName)
+  88:src/effectWrapper.cpp ****     {
+  89:src/effectWrapper.cpp ****         AddProcess(Process_ptr);
+  90:src/effectWrapper.cpp ****         AddSetParam(SetParamFunction_ptr, paramName);
+  91:src/effectWrapper.cpp ****     }
+  92:src/effectWrapper.cpp **** 
+  93:src/effectWrapper.cpp **** 
+  94:src/effectWrapper.cpp ****     /// @brief parameter constructor that sets process function, name, setter function and paramete
+  95:src/effectWrapper.cpp ****     /// @param effectPtr real effect obj pointer
+  96:src/effectWrapper.cpp ****     /// @param Process_ptr Function pointer to process 
+  97:src/effectWrapper.cpp ****     /// @param effectName name of effect to be displayed
+  98:src/effectWrapper.cpp ****     /// @param SetParamFunction_ptr Function pointer of setter
+  99:src/effectWrapper.cpp ****     /// @param paramName Pointer to string containing param name
+ 100:src/effectWrapper.cpp ****     EffectWrapper(
+ 101:src/effectWrapper.cpp ****             t_effect* effectPtr, 
+ 102:src/effectWrapper.cpp ****             const char* effectName,
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 16
 
 
- 103:src/effectWrapper.cpp ****         return oneIfFull;
- 104:src/effectWrapper.cpp ****     }
- 105:src/effectWrapper.cpp **** 
- 106:src/effectWrapper.cpp ****     /// @brief adds set param function to array and pointer to name of parameter
- 107:src/effectWrapper.cpp ****     /// @param SetParamFunction_ptr setParam function of original block
- 108:src/effectWrapper.cpp ****     /// @param paramName pointer to name of parameter
- 109:src/effectWrapper.cpp ****     /// @return -1 if no more functions can be added
- 110:src/effectWrapper.cpp ****     int AddSetParam (t_retVal1 (t_effect::*SetParamFunction_ptr)(t_param1), const char* paramName) 
- 111:src/effectWrapper.cpp ****         if (_setParamCounter < MAX_N_OF_PARAM_SETTERS ){
- 112:src/effectWrapper.cpp ****             _SetParamFunction_ptr [_setParamCounter] = SetParamFunction_ptr;
- 113:src/effectWrapper.cpp ****             _paramNames[_setParamCounter] = paramName; 
- 114:src/effectWrapper.cpp ****             _setParamCounter++;
- 115:src/effectWrapper.cpp ****         }
- 116:src/effectWrapper.cpp ****         else {
- 117:src/effectWrapper.cpp ****             return -1;
- 118:src/effectWrapper.cpp ****         }         
- 119:src/effectWrapper.cpp ****     }
- 120:src/effectWrapper.cpp **** 
- 121:src/effectWrapper.cpp ****     /// @brief add function that sets two parameters
- 122:src/effectWrapper.cpp ****     /// @param SetParamsFunction_ptr pointer to function that sets two parameters
- 123:src/effectWrapper.cpp ****     /// @return -1 if full
- 124:src/effectWrapper.cpp ****     int AddSetParams(t_retVal1 (*SetParamsFunction_ptr)(t_param1,t_param2)){
- 125:src/effectWrapper.cpp ****         if(_setParamsCounter < MAX_N_OF_PARAM_SETTERS){
- 126:src/effectWrapper.cpp ****             _SetParamsFunction_ptr = SetParamsFunction_ptr;
- 127:src/effectWrapper.cpp ****             _setParamsCounter++;    
- 128:src/effectWrapper.cpp ****         }
- 129:src/effectWrapper.cpp ****         else {
- 130:src/effectWrapper.cpp ****             return -1;
- 131:src/effectWrapper.cpp ****         }
- 132:src/effectWrapper.cpp ****         
- 133:src/effectWrapper.cpp ****     }
- 134:src/effectWrapper.cpp **** 
- 135:src/effectWrapper.cpp ****     /// @brief  add function that sets two parameters, with given name
- 136:src/effectWrapper.cpp ****     /// @param SetParamsFunction_ptr pointer to function that sets parameters
- 137:src/effectWrapper.cpp ****     /// @param paramName1 name of parameter 1
- 138:src/effectWrapper.cpp ****     /// @param paramName2 name of parameter 2  
- 139:src/effectWrapper.cpp ****     /// @return -1 if full
- 140:src/effectWrapper.cpp ****     int AddSetParams(t_retVal1 (*SetParamsFunction_ptr)(t_param1,t_param2),
- 141:src/effectWrapper.cpp ****                      const char* paramName1,
- 142:src/effectWrapper.cpp ****                      const char* paramName2)
- 143:src/effectWrapper.cpp ****     {
- 144:src/effectWrapper.cpp **** 
- 145:src/effectWrapper.cpp ****         if(_setParamsCounter < MAX_N_OF_PARAM_SETTERS){
- 146:src/effectWrapper.cpp ****             _SetParamsFunction_ptr = SetParamsFunction_ptr;
- 147:src/effectWrapper.cpp ****             _paramsNames[_setParamsCounter][0] = paramName1; // position of first parameter
- 148:src/effectWrapper.cpp ****             _paramsNames[_setParamsCounter][1] = paramName2; // position of second parameter
- 149:src/effectWrapper.cpp ****             _setParamsCounter++;    
- 150:src/effectWrapper.cpp ****         }
- 151:src/effectWrapper.cpp ****         else {
- 152:src/effectWrapper.cpp ****             return -1;
- 153:src/effectWrapper.cpp ****         }        
- 154:src/effectWrapper.cpp ****     }
- 155:src/effectWrapper.cpp **** 
- 156:src/effectWrapper.cpp ****     /// @brief sets the function pointer for Process
- 157:src/effectWrapper.cpp ****     /// @param Process_ptr function pointer of Process of original effect
- 158:src/effectWrapper.cpp ****     inline void AddProcess (float (t_effect::*Process_ptr)(t_process)) {_Process_ptr = Process_ptr;
- 159:src/effectWrapper.cpp ****    
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 17
+ 103:src/effectWrapper.cpp ****             void (t_effect::*SetParamFunction_ptr)(t_param1), 
+ 104:src/effectWrapper.cpp ****             const char* paramName,
+ 105:src/effectWrapper.cpp ****             float (t_effect::*Process_ptr)(t_process)  
+ 106:src/effectWrapper.cpp ****         )
+ 107:src/effectWrapper.cpp ****     {
+ 108:src/effectWrapper.cpp ****         _effectPtr = effectPtr;
+ 109:src/effectWrapper.cpp ****         _name = effectName;
+ 110:src/effectWrapper.cpp ****         AddProcess(Process_ptr);
+ 111:src/effectWrapper.cpp ****         AddSetParam(SetParamFunction_ptr, paramName);
+ 112:src/effectWrapper.cpp ****     }
+ 113:src/effectWrapper.cpp **** 
+ 114:src/effectWrapper.cpp **** 
+ 115:src/effectWrapper.cpp ****     ~EffectWrapper(){};
+ 116:src/effectWrapper.cpp **** 
+ 117:src/effectWrapper.cpp **** 
+ 118:src/effectWrapper.cpp ****     /// @brief adds the function pointer for a parameter setting
+ 119:src/effectWrapper.cpp ****     /// @param SetParamFunction_ptr function pointer of the setter of original effect
+ 120:src/effectWrapper.cpp ****     int AddSetParam (t_retVal1 (t_effect::*SetParamFunction_ptr)(t_param1)) {
+ 121:src/effectWrapper.cpp ****         int oneIfFull = 0;
+ 122:src/effectWrapper.cpp ****         if (_setParamCounter < MAX_N_OF_PARAM_SETTERS ){
+ 123:src/effectWrapper.cpp ****             _SetParamFunction_ptr [_setParamCounter] = SetParamFunction_ptr;
+ 124:src/effectWrapper.cpp ****             _setParamCounter++;
+ 125:src/effectWrapper.cpp ****         }
+ 126:src/effectWrapper.cpp ****         else {
+ 127:src/effectWrapper.cpp ****             oneIfFull = 1;
+ 128:src/effectWrapper.cpp ****         }         
+ 129:src/effectWrapper.cpp ****         return oneIfFull;
+ 130:src/effectWrapper.cpp ****     }
+ 131:src/effectWrapper.cpp **** 
+ 132:src/effectWrapper.cpp ****     /// @brief adds set param function to array and pointer to name of parameter
+ 133:src/effectWrapper.cpp ****     /// @param SetParamFunction_ptr setParam function of original block
+ 134:src/effectWrapper.cpp ****     /// @param paramName pointer to name of parameter
+ 135:src/effectWrapper.cpp ****     /// @return -1 if no more functions can be added
+ 136:src/effectWrapper.cpp ****     int AddSetParam (t_retVal1 (t_effect::*SetParamFunction_ptr)(t_param1), const char* paramName) 
+ 137:src/effectWrapper.cpp ****         if (_setParamCounter < MAX_N_OF_PARAM_SETTERS ){
+ 138:src/effectWrapper.cpp ****             _SetParamFunction_ptr [_setParamCounter] = SetParamFunction_ptr;
+ 139:src/effectWrapper.cpp ****             _paramNames[_setParamCounter] = paramName; 
+ 140:src/effectWrapper.cpp ****             _setParamCounter++;
+ 141:src/effectWrapper.cpp ****             return 0;
+ 142:src/effectWrapper.cpp ****         }
+ 143:src/effectWrapper.cpp ****         else {
+ 144:src/effectWrapper.cpp ****             return -1;
+ 145:src/effectWrapper.cpp ****         }         
+ 146:src/effectWrapper.cpp ****     }
+ 147:src/effectWrapper.cpp **** 
+ 148:src/effectWrapper.cpp ****     /// @brief add function that sets two parameters
+ 149:src/effectWrapper.cpp ****     /// @param SetParamsFunction_ptr pointer to function that sets two parameters
+ 150:src/effectWrapper.cpp ****     /// @return -1 if full
+ 151:src/effectWrapper.cpp ****     int AddSetParams(t_retVal1 (*SetParamsFunction_ptr)(t_param1,t_param2)){
+ 152:src/effectWrapper.cpp ****         if(_setParamsCounter < MAX_N_OF_PARAM_SETTERS){
+ 153:src/effectWrapper.cpp ****             _SetParamsFunction_ptr = SetParamsFunction_ptr;
+ 154:src/effectWrapper.cpp ****             _setParamsCounter++;
+ 155:src/effectWrapper.cpp ****             return 0;    
+ 156:src/effectWrapper.cpp ****         }
+ 157:src/effectWrapper.cpp ****         else {
+ 158:src/effectWrapper.cpp ****             return -1;
+ 159:src/effectWrapper.cpp ****         }
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 17
 
 
- 160:src/effectWrapper.cpp ****     
- 161:src/effectWrapper.cpp ****     
- 162:src/effectWrapper.cpp ****     /// @brief sets the function pointer for Process without args
- 163:src/effectWrapper.cpp ****     /// @param Process_ptr function pointer of Process of original effect
- 164:src/effectWrapper.cpp ****     inline void AddProcess (float (t_effect::*ProcWithNoArgs_ptr)()) {_ProcessWithNoArgs_ptr = Proc
- 165:src/effectWrapper.cpp ****    
- 166:src/effectWrapper.cpp ****     /// @brief Sets the effect pointer
- 167:src/effectWrapper.cpp ****     /// @param effectPtr effect pointer
- 168:src/effectWrapper.cpp ****     inline void AddEffectPtr (t_effect* effectPtr) {_effectPtr=effectPtr;}
- 169:src/effectWrapper.cpp ****     
- 170:src/effectWrapper.cpp ****     /// @brief Process function
- 171:src/effectWrapper.cpp ****     /// @param sample sample to process
- 172:src/effectWrapper.cpp ****     /// @return processed sample
- 173:src/effectWrapper.cpp ****     inline float Process (t_process sample) {
- 174:src/effectWrapper.cpp ****         float processedSample = 0;
- 175:src/effectWrapper.cpp **** 
- 176:src/effectWrapper.cpp ****         // IMPORTANT: is used to make the signal chain work in case
- 177:src/effectWrapper.cpp ****         // the effect doesn't use process with arg (e.g. oscillator)
- 178:src/effectWrapper.cpp ****         
- 179:src/effectWrapper.cpp ****         if (_Process_ptr == nullptr){
- 180:src/effectWrapper.cpp ****             
- 181:src/effectWrapper.cpp ****             // means no one used the process with args: no args case
- 182:src/effectWrapper.cpp ****             processedSample = (_effectPtr->*_ProcessWithNoArgs_ptr)();
- 183:src/effectWrapper.cpp ****         }
- 184:src/effectWrapper.cpp ****         else {
- 185:src/effectWrapper.cpp **** 
- 186:src/effectWrapper.cpp ****             // if also this wasn't setted properly it shouldnt compile
- 187:src/effectWrapper.cpp ****             processedSample = (_effectPtr->*_Process_ptr) (sample);
- 188:src/effectWrapper.cpp ****         }
- 189:src/effectWrapper.cpp **** 
- 190:src/effectWrapper.cpp ****         return processedSample;
- 191:src/effectWrapper.cpp ****     }
- 192:src/effectWrapper.cpp ****     
- 193:src/effectWrapper.cpp ****     /// @brief call set param function of original effect
- 194:src/effectWrapper.cpp ****     /// @param param1 new value of parameter
- 195:src/effectWrapper.cpp ****     inline void SetParam (t_param1 param1) {return (_effectPtr->*_SetParamFunction_ptr[0]) (param1)
- 254              		.loc 10 195 17 is_stmt 1 view -0
+ 160:src/effectWrapper.cpp ****         
+ 161:src/effectWrapper.cpp ****     }
+ 162:src/effectWrapper.cpp **** 
+ 163:src/effectWrapper.cpp ****     /// @brief  add function that sets two parameters, with given name
+ 164:src/effectWrapper.cpp ****     /// @param SetParamsFunction_ptr pointer to function that sets parameters
+ 165:src/effectWrapper.cpp ****     /// @param paramName1 name of parameter 1
+ 166:src/effectWrapper.cpp ****     /// @param paramName2 name of parameter 2  
+ 167:src/effectWrapper.cpp ****     /// @return -1 if full
+ 168:src/effectWrapper.cpp ****     int AddSetParams(t_retVal1 (*SetParamsFunction_ptr)(t_param1,t_param2),
+ 169:src/effectWrapper.cpp ****                      const char* paramName1,
+ 170:src/effectWrapper.cpp ****                      const char* paramName2)
+ 171:src/effectWrapper.cpp ****     {
+ 172:src/effectWrapper.cpp **** 
+ 173:src/effectWrapper.cpp ****         if(_setParamsCounter < MAX_N_OF_PARAM_SETTERS){
+ 174:src/effectWrapper.cpp ****             _SetParamsFunction_ptr = SetParamsFunction_ptr;
+ 175:src/effectWrapper.cpp ****             _paramsNames[_setParamsCounter][0] = paramName1; // position of first parameter
+ 176:src/effectWrapper.cpp ****             _paramsNames[_setParamsCounter][1] = paramName2; // position of second parameter
+ 177:src/effectWrapper.cpp ****             _setParamsCounter++;    
+ 178:src/effectWrapper.cpp ****         }
+ 179:src/effectWrapper.cpp ****         else {
+ 180:src/effectWrapper.cpp ****             return -1;
+ 181:src/effectWrapper.cpp ****         }        
+ 182:src/effectWrapper.cpp ****     }
+ 183:src/effectWrapper.cpp **** 
+ 184:src/effectWrapper.cpp ****     /// @brief sets the function pointer for Process
+ 185:src/effectWrapper.cpp ****     /// @param Process_ptr function pointer of Process of original effect
+ 186:src/effectWrapper.cpp ****     inline void AddProcess (float (t_effect::*Process_ptr)(t_process)) {_Process_ptr = Process_ptr;
+ 187:src/effectWrapper.cpp ****    
+ 188:src/effectWrapper.cpp ****     
+ 189:src/effectWrapper.cpp ****     
+ 190:src/effectWrapper.cpp ****     /// @brief sets the function pointer for Process without args
+ 191:src/effectWrapper.cpp ****     /// @param Process_ptr function pointer of Process of original effect
+ 192:src/effectWrapper.cpp ****     inline void AddProcess (float (t_effect::*ProcWithNoArgs_ptr)()) {_ProcessWithNoArgs_ptr = Proc
+ 193:src/effectWrapper.cpp ****    
+ 194:src/effectWrapper.cpp ****     /// @brief Sets the effect pointer
+ 195:src/effectWrapper.cpp ****     /// @param effectPtr effect pointer
+ 196:src/effectWrapper.cpp ****     inline void AddEffectPtr (t_effect* effectPtr) {_effectPtr=effectPtr;}
+ 197:src/effectWrapper.cpp ****     
+ 198:src/effectWrapper.cpp ****     /// @brief Process function
+ 199:src/effectWrapper.cpp ****     /// @param sample sample to process
+ 200:src/effectWrapper.cpp ****     /// @return processed sample
+ 201:src/effectWrapper.cpp ****     inline float Process (t_process sample) {
+ 202:src/effectWrapper.cpp ****         float processedSample = 0;
+ 203:src/effectWrapper.cpp **** 
+ 204:src/effectWrapper.cpp ****         // IMPORTANT: is used to make the signal chain work in case
+ 205:src/effectWrapper.cpp ****         // the effect doesn't use process with arg (e.g. oscillator)
+ 206:src/effectWrapper.cpp ****         
+ 207:src/effectWrapper.cpp ****         if (_Process_ptr == nullptr){
+ 208:src/effectWrapper.cpp ****             
+ 209:src/effectWrapper.cpp ****             // means no one used the process with args: no args case
+ 210:src/effectWrapper.cpp ****             processedSample = (_effectPtr->*_ProcessWithNoArgs_ptr)();
+ 211:src/effectWrapper.cpp ****         }
+ 212:src/effectWrapper.cpp ****         else {
+ 213:src/effectWrapper.cpp **** 
+ 214:src/effectWrapper.cpp ****             // if also this wasn't setted properly it shouldnt compile
+ 215:src/effectWrapper.cpp ****             processedSample = (_effectPtr->*_Process_ptr) (sample);
+ 216:src/effectWrapper.cpp ****         }
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 18
+
+
+ 217:src/effectWrapper.cpp **** 
+ 218:src/effectWrapper.cpp ****         return processedSample;
+ 219:src/effectWrapper.cpp ****     }
+ 220:src/effectWrapper.cpp **** 
+ 221:src/effectWrapper.cpp ****     /// @brief getters that returns pointer to name
+ 222:src/effectWrapper.cpp ****     /// @return pointer to name
+ 223:src/effectWrapper.cpp ****     const char* getName() {return _name;}
+ 224:src/effectWrapper.cpp ****     
+ 225:src/effectWrapper.cpp ****     /// @brief call set param function of original effect
+ 226:src/effectWrapper.cpp ****     /// @param param1 new value of parameter
+ 227:src/effectWrapper.cpp ****     inline void SetParam (t_param1 param1) {return (_effectPtr->*_SetParamFunction_ptr[0]) (param1)
+ 254              		.loc 10 227 17 is_stmt 1 view -0
  255              		.cfi_startproc
  256              		@ args = 0, pretend = 0, frame = 0
  257              		@ frame_needed = 0, uses_anonymous_args = 0
  258              		@ link register save eliminated.
- 259              		.loc 10 195 92 is_stmt 0 view .LVU48
- 260 0000 C268     		ldr	r2, [r0, #12]
- 261              		.loc 10 195 17 view .LVU49
+ 259              		.loc 10 227 92 is_stmt 0 view .LVU48
+ 260 0000 0269     		ldr	r2, [r0, #16]
+ 261              		.loc 10 227 17 view .LVU49
  262 0002 0346     		mov	r3, r0
- 263              		.loc 10 195 92 view .LVU50
+ 263              		.loc 10 227 92 view .LVU50
  264 0004 4168     		ldr	r1, [r0, #4]
  265 0006 4FEA620C 		asr	ip, r2, #1
  266 000a 01EB6200 		add	r0, r1, r2, asr #1
  267              	.LVL14:
- 268              		.loc 10 195 92 view .LVU51
+ 268              		.loc 10 227 92 view .LVU51
  269 000e D207     		lsls	r2, r2, #31
  270 0010 01D4     		bmi	.L22
- 271              		.loc 10 195 92 discriminator 1 view .LVU52
- 272 0012 9B68     		ldr	r3, [r3, #8]
+ 271              		.loc 10 227 92 discriminator 1 view .LVU52
+ 272 0012 DB68     		ldr	r3, [r3, #12]
  273              	.LVL15:
- 274              		.loc 10 195 92 discriminator 1 view .LVU53
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 18
-
-
+ 274              		.loc 10 227 92 discriminator 1 view .LVU53
  275 0014 1847     		bx	r3	@ indirect register sibling call
  276              	.LVL16:
  277              	.L22:
- 278              		.loc 10 195 92 discriminator 2 view .LVU54
+ 278              		.loc 10 227 92 discriminator 2 view .LVU54
  279 0016 51F80C20 		ldr	r2, [r1, ip]
- 280 001a 9B68     		ldr	r3, [r3, #8]
+ 280 001a DB68     		ldr	r3, [r3, #12]
  281              	.LVL17:
- 282              		.loc 10 195 92 discriminator 2 view .LVU55
+ 282              		.loc 10 227 92 discriminator 2 view .LVU55
  283 001c D358     		ldr	r3, [r2, r3]
  284 001e 1847     		bx	r3	@ indirect register sibling call
  285              	.LVL18:
- 286              		.loc 10 195 92 discriminator 2 view .LVU56
+ 286              		.loc 10 227 92 discriminator 2 view .LVU56
  287              		.cfi_endproc
- 288              	.LFE5155:
+ 288              	.LFE5158:
  290              		.section	.text._ZN13EffectWrapperI11AnalogDelayfffvE8SetParamEf,"axG",%progbits,_ZN13EffectWrapper
  291              		.align	1
  292              		.p2align 2,,3
@@ -1045,56 +1077,111 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  297              		.fpu fpv5-d16
  299              	_ZN13EffectWrapperI11AnalogDelayfffvE8SetParamEf:
  300              	.LVL19:
- 301              	.LFB5162:
- 302              		.loc 10 195 17 is_stmt 1 view -0
+ 301              	.LFB5165:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 19
+
+
+ 302              		.loc 10 227 17 is_stmt 1 view -0
  303              		.cfi_startproc
  304              		@ args = 0, pretend = 0, frame = 0
  305              		@ frame_needed = 0, uses_anonymous_args = 0
  306              		@ link register save eliminated.
- 307              		.loc 10 195 92 is_stmt 0 view .LVU58
- 308 0000 C268     		ldr	r2, [r0, #12]
- 309              		.loc 10 195 17 view .LVU59
+ 307              		.loc 10 227 92 is_stmt 0 view .LVU58
+ 308 0000 0269     		ldr	r2, [r0, #16]
+ 309              		.loc 10 227 17 view .LVU59
  310 0002 0346     		mov	r3, r0
- 311              		.loc 10 195 92 view .LVU60
+ 311              		.loc 10 227 92 view .LVU60
  312 0004 4168     		ldr	r1, [r0, #4]
  313 0006 4FEA620C 		asr	ip, r2, #1
  314 000a 01EB6200 		add	r0, r1, r2, asr #1
  315              	.LVL20:
- 316              		.loc 10 195 92 view .LVU61
+ 316              		.loc 10 227 92 view .LVU61
  317 000e D207     		lsls	r2, r2, #31
  318 0010 01D4     		bmi	.L25
- 319              		.loc 10 195 92 discriminator 1 view .LVU62
- 320 0012 9B68     		ldr	r3, [r3, #8]
+ 319              		.loc 10 227 92 discriminator 1 view .LVU62
+ 320 0012 DB68     		ldr	r3, [r3, #12]
  321              	.LVL21:
- 322              		.loc 10 195 92 discriminator 1 view .LVU63
+ 322              		.loc 10 227 92 discriminator 1 view .LVU63
  323 0014 1847     		bx	r3	@ indirect register sibling call
  324              	.LVL22:
  325              	.L25:
- 326              		.loc 10 195 92 discriminator 2 view .LVU64
+ 326              		.loc 10 227 92 discriminator 2 view .LVU64
  327 0016 51F80C20 		ldr	r2, [r1, ip]
- 328 001a 9B68     		ldr	r3, [r3, #8]
+ 328 001a DB68     		ldr	r3, [r3, #12]
  329              	.LVL23:
- 330              		.loc 10 195 92 discriminator 2 view .LVU65
+ 330              		.loc 10 227 92 discriminator 2 view .LVU65
  331 001c D358     		ldr	r3, [r2, r3]
  332 001e 1847     		bx	r3	@ indirect register sibling call
  333              	.LVL24:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 19
-
-
- 334              		.loc 10 195 92 discriminator 2 view .LVU66
+ 334              		.loc 10 227 92 discriminator 2 view .LVU66
  335              		.cfi_endproc
- 336              	.LFE5162:
- 338              		.section	.text._ZN7daisysp10Oscillator7SetFreqEf,"axG",%progbits,_ZN7daisysp10Oscillator7SetFreqEf
+ 336              	.LFE5165:
+ 338              		.section	.text._ZN13EffectWrapperI11AnalogDelayfffvE7getNameEv,"axG",%progbits,_ZN13EffectWrapperI
  339              		.align	1
  340              		.p2align 2,,3
- 341              		.weak	_ZN7daisysp10Oscillator7SetFreqEf
+ 341              		.weak	_ZN13EffectWrapperI11AnalogDelayfffvE7getNameEv
  342              		.syntax unified
  343              		.thumb
  344              		.thumb_func
  345              		.fpu fpv5-d16
- 347              	_ZN7daisysp10Oscillator7SetFreqEf:
+ 347              	_ZN13EffectWrapperI11AnalogDelayfffvE7getNameEv:
  348              	.LVL25:
- 349              	.LFB4352:
+ 349              	.LFB5426:
+ 223:src/effectWrapper.cpp ****     
+ 350              		.loc 10 223 17 is_stmt 1 view -0
+ 351              		.cfi_startproc
+ 352              		@ args = 0, pretend = 0, frame = 0
+ 353              		@ frame_needed = 0, uses_anonymous_args = 0
+ 354              		@ link register save eliminated.
+ 223:src/effectWrapper.cpp ****     
+ 355              		.loc 10 223 41 is_stmt 0 view .LVU68
+ 356 0000 8068     		ldr	r0, [r0, #8]
+ 357              	.LVL26:
+ 223:src/effectWrapper.cpp ****     
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 20
+
+
+ 358              		.loc 10 223 41 view .LVU69
+ 359 0002 7047     		bx	lr
+ 360              		.cfi_endproc
+ 361              	.LFE5426:
+ 363              		.section	.text._ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7getNameEv,"axG",%progbits,_ZN13Effec
+ 364              		.align	1
+ 365              		.p2align 2,,3
+ 366              		.weak	_ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7getNameEv
+ 367              		.syntax unified
+ 368              		.thumb
+ 369              		.thumb_func
+ 370              		.fpu fpv5-d16
+ 372              	_ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7getNameEv:
+ 373              	.LVL27:
+ 374              	.LFB5428:
+ 223:src/effectWrapper.cpp ****     
+ 375              		.loc 10 223 17 is_stmt 1 view -0
+ 376              		.cfi_startproc
+ 377              		@ args = 0, pretend = 0, frame = 0
+ 378              		@ frame_needed = 0, uses_anonymous_args = 0
+ 379              		@ link register save eliminated.
+ 223:src/effectWrapper.cpp ****     
+ 380              		.loc 10 223 41 is_stmt 0 view .LVU71
+ 381 0000 8068     		ldr	r0, [r0, #8]
+ 382              	.LVL28:
+ 223:src/effectWrapper.cpp ****     
+ 383              		.loc 10 223 41 view .LVU72
+ 384 0002 7047     		bx	lr
+ 385              		.cfi_endproc
+ 386              	.LFE5428:
+ 388              		.section	.text._ZN7daisysp10Oscillator7SetFreqEf,"axG",%progbits,_ZN7daisysp10Oscillator7SetFreqEf
+ 389              		.align	1
+ 390              		.p2align 2,,3
+ 391              		.weak	_ZN7daisysp10Oscillator7SetFreqEf
+ 392              		.syntax unified
+ 393              		.thumb
+ 394              		.thumb_func
+ 395              		.fpu fpv5-d16
+ 397              	_ZN7daisysp10Oscillator7SetFreqEf:
+ 398              	.LVL29:
+ 399              	.LFB4355:
   25:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Choices for output waveforms, POLYBLEP are appropriately labeled. Others are naive forms.
   26:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     */
   27:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     enum
@@ -1111,6 +1198,9 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   38:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     };
   39:../../../libs/DaisySP/Source/Synthesis/oscillator.h **** 
   40:../../../libs/DaisySP/Source/Synthesis/oscillator.h **** 
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 21
+
+
   41:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Initializes the Oscillator
   42:../../../libs/DaisySP/Source/Synthesis/oscillator.h **** 
   43:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         \param sample_rate - sample rate of the audio engine being run, and the frequency that the 
@@ -1138,288 +1228,299 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   65:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Changes the frequency of the Oscillator, and recalculates phase increment.
   66:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     */
   67:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     inline void SetFreq(const float f)
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 20
-
-
- 350              		.loc 7 67 17 is_stmt 1 view -0
- 351              		.cfi_startproc
- 352              		@ args = 0, pretend = 0, frame = 0
- 353              		@ frame_needed = 0, uses_anonymous_args = 0
+ 400              		.loc 7 67 17 is_stmt 1 view -0
+ 401              		.cfi_startproc
+ 402              		@ args = 0, pretend = 0, frame = 0
+ 403              		@ frame_needed = 0, uses_anonymous_args = 0
   68:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     {
   69:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = f;
- 354              		.loc 7 69 9 view .LVU68
+ 404              		.loc 7 69 9 view .LVU74
   67:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     {
- 355              		.loc 7 67 17 is_stmt 0 view .LVU69
- 356 0000 10B5     		push	{r4, lr}
- 357              		.cfi_def_cfa_offset 8
- 358              		.cfi_offset 4, -8
- 359              		.cfi_offset 14, -4
+ 405              		.loc 7 67 17 is_stmt 0 view .LVU75
+ 406 0000 10B5     		push	{r4, lr}
+ 407              		.cfi_def_cfa_offset 8
+ 408              		.cfi_offset 4, -8
+ 409              		.cfi_offset 14, -4
   67:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     {
- 360              		.loc 7 67 17 view .LVU70
- 361 0002 0446     		mov	r4, r0
- 362              		.loc 7 69 20 view .LVU71
- 363 0004 80ED020A 		vstr.32	s0, [r0, #8]
+ 410              		.loc 7 67 17 view .LVU76
+ 411 0002 0446     		mov	r4, r0
+ 412              		.loc 7 69 20 view .LVU77
+ 413 0004 80ED020A 		vstr.32	s0, [r0, #8]
   70:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
- 364              		.loc 7 70 9 is_stmt 1 view .LVU72
- 365              		.loc 7 70 34 is_stmt 0 view .LVU73
- 366 0008 FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
- 367              	.LVL26:
- 368              		.loc 7 70 20 view .LVU74
- 369 000c 84ED070A 		vstr.32	s0, [r4, #28]
+ 414              		.loc 7 70 9 is_stmt 1 view .LVU78
+ 415              		.loc 7 70 34 is_stmt 0 view .LVU79
+ 416 0008 FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
+ 417              	.LVL30:
+ 418              		.loc 7 70 20 view .LVU80
+ 419 000c 84ED070A 		vstr.32	s0, [r4, #28]
   71:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 370              		.loc 7 71 5 view .LVU75
- 371 0010 10BD     		pop	{r4, pc}
- 372              		.loc 7 71 5 view .LVU76
- 373              		.cfi_endproc
- 374              	.LFE4352:
- 376 0012 00BF     		.section	.text._ZN13EffectWrapperI11AnalogDelayfffvE7ProcessEf,"axG",%progbits,_ZN13EffectWrapperI
- 377              		.align	1
- 378              		.p2align 2,,3
- 379              		.weak	_ZN13EffectWrapperI11AnalogDelayfffvE7ProcessEf
- 380              		.syntax unified
- 381              		.thumb
- 382              		.thumb_func
- 383              		.fpu fpv5-d16
- 385              	_ZN13EffectWrapperI11AnalogDelayfffvE7ProcessEf:
- 386              	.LVL27:
- 387              	.LFB5422:
- 173:src/effectWrapper.cpp ****         float processedSample = 0;
- 388              		.loc 10 173 18 is_stmt 1 view -0
- 389              		.cfi_startproc
- 390              		@ args = 0, pretend = 0, frame = 0
- 391              		@ frame_needed = 0, uses_anonymous_args = 0
- 392              		@ link register save eliminated.
- 179:src/effectWrapper.cpp ****             
- 393              		.loc 10 179 26 is_stmt 0 view .LVU78
- 394 0000 D0E92021 		ldrd	r2, r1, [r0, #128]
- 173:src/effectWrapper.cpp ****         float processedSample = 0;
- 395              		.loc 10 173 18 view .LVU79
- 396 0004 0346     		mov	r3, r0
- 397              	.LVL28:
- 179:src/effectWrapper.cpp ****             
- 398              		.loc 10 179 26 view .LVU80
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 21
+ 420              		.loc 7 71 5 view .LVU81
+ 421 0010 10BD     		pop	{r4, pc}
+ 422              		.loc 7 71 5 view .LVU82
+ 423              		.cfi_endproc
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 22
 
 
- 399 0006 2AB1     		cbz	r2, .L39
- 187:src/effectWrapper.cpp ****         }
- 400              		.loc 10 187 59 view .LVU81
- 401 0008 4068     		ldr	r0, [r0, #4]
- 402              	.LVL29:
- 187:src/effectWrapper.cpp ****         }
- 403              		.loc 10 187 59 view .LVU82
- 404 000a CB07     		lsls	r3, r1, #31
- 405              	.LVL30:
- 187:src/effectWrapper.cpp ****         }
- 406              		.loc 10 187 59 view .LVU83
- 407 000c 00EB6100 		add	r0, r0, r1, asr #1
- 408 0010 05D4     		bmi	.L35
- 187:src/effectWrapper.cpp ****         }
- 409              		.loc 10 187 59 discriminator 4 view .LVU84
- 410 0012 1047     		bx	r2
- 411              	.LVL31:
- 412              	.L39:
- 179:src/effectWrapper.cpp ****             
- 413              		.loc 10 179 26 discriminator 1 view .LVU85
- 414 0014 C807     		lsls	r0, r1, #31
- 415              	.LVL32:
- 179:src/effectWrapper.cpp ****             
- 416              		.loc 10 179 26 discriminator 1 view .LVU86
- 417 0016 05D5     		bpl	.L40
- 187:src/effectWrapper.cpp ****         }
- 418              		.loc 10 187 59 view .LVU87
- 419 0018 5868     		ldr	r0, [r3, #4]
- 420 001a 00EB6100 		add	r0, r0, r1, asr #1
- 421              	.LVL33:
- 422              	.L35:
- 187:src/effectWrapper.cpp ****         }
- 423              		.loc 10 187 59 discriminator 2 view .LVU88
- 424 001e 0368     		ldr	r3, [r0]
- 425 0020 9A58     		ldr	r2, [r3, r2]
- 426 0022 1047     		bx	r2
- 427              	.LVL34:
- 428              	.L40:
- 429              	.LBB202:
- 430              	.LBI202:
- 173:src/effectWrapper.cpp ****         float processedSample = 0;
- 431              		.loc 10 173 18 is_stmt 1 view .LVU89
- 432              	.LBB203:
- 182:src/effectWrapper.cpp ****         }
- 433              		.loc 10 182 68 is_stmt 0 view .LVU90
- 434 0024 D3F88C20 		ldr	r2, [r3, #140]
- 435 0028 5968     		ldr	r1, [r3, #4]
- 436 002a 4FEA620C 		asr	ip, r2, #1
- 437 002e 01EB6200 		add	r0, r1, r2, asr #1
- 438 0032 D207     		lsls	r2, r2, #31
- 439 0034 02D4     		bmi	.L32
- 440 0036 D3F88830 		ldr	r3, [r3, #136]
- 441              	.LVL35:
- 442              	.L33:
- 182:src/effectWrapper.cpp ****         }
- 443              		.loc 10 182 68 view .LVU91
- 444 003a 1847     		bx	r3
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 22
+ 424              	.LFE4355:
+ 426 0012 00BF     		.section	.text._ZN13EffectWrapperI11AnalogDelayfffvE7ProcessEf,"axG",%progbits,_ZN13EffectWrapperI
+ 427              		.align	1
+ 428              		.p2align 2,,3
+ 429              		.weak	_ZN13EffectWrapperI11AnalogDelayfffvE7ProcessEf
+ 430              		.syntax unified
+ 431              		.thumb
+ 432              		.thumb_func
+ 433              		.fpu fpv5-d16
+ 435              	_ZN13EffectWrapperI11AnalogDelayfffvE7ProcessEf:
+ 436              	.LVL31:
+ 437              	.LFB5425:
+ 201:src/effectWrapper.cpp ****         float processedSample = 0;
+ 438              		.loc 10 201 18 is_stmt 1 view -0
+ 439              		.cfi_startproc
+ 440              		@ args = 0, pretend = 0, frame = 0
+ 441              		@ frame_needed = 0, uses_anonymous_args = 0
+ 442              		@ link register save eliminated.
+ 207:src/effectWrapper.cpp ****             
+ 443              		.loc 10 207 26 is_stmt 0 view .LVU84
+ 444 0000 D0E92121 		ldrd	r2, r1, [r0, #132]
+ 201:src/effectWrapper.cpp ****         float processedSample = 0;
+ 445              		.loc 10 201 18 view .LVU85
+ 446 0004 0346     		mov	r3, r0
+ 447              	.LVL32:
+ 207:src/effectWrapper.cpp ****             
+ 448              		.loc 10 207 26 view .LVU86
+ 449 0006 2AB1     		cbz	r2, .L41
+ 215:src/effectWrapper.cpp ****         }
+ 450              		.loc 10 215 59 view .LVU87
+ 451 0008 4068     		ldr	r0, [r0, #4]
+ 452              	.LVL33:
+ 215:src/effectWrapper.cpp ****         }
+ 453              		.loc 10 215 59 view .LVU88
+ 454 000a CB07     		lsls	r3, r1, #31
+ 455              	.LVL34:
+ 215:src/effectWrapper.cpp ****         }
+ 456              		.loc 10 215 59 view .LVU89
+ 457 000c 00EB6100 		add	r0, r0, r1, asr #1
+ 458 0010 05D4     		bmi	.L37
+ 215:src/effectWrapper.cpp ****         }
+ 459              		.loc 10 215 59 discriminator 4 view .LVU90
+ 460 0012 1047     		bx	r2
+ 461              	.LVL35:
+ 462              	.L41:
+ 207:src/effectWrapper.cpp ****             
+ 463              		.loc 10 207 26 discriminator 1 view .LVU91
+ 464 0014 C807     		lsls	r0, r1, #31
+ 465              	.LVL36:
+ 207:src/effectWrapper.cpp ****             
+ 466              		.loc 10 207 26 discriminator 1 view .LVU92
+ 467 0016 05D5     		bpl	.L42
+ 215:src/effectWrapper.cpp ****         }
+ 468              		.loc 10 215 59 view .LVU93
+ 469 0018 5868     		ldr	r0, [r3, #4]
+ 470 001a 00EB6100 		add	r0, r0, r1, asr #1
+ 471              	.LVL37:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 23
 
 
- 445              	.LVL36:
- 446              	.L32:
- 182:src/effectWrapper.cpp ****         }
- 447              		.loc 10 182 68 view .LVU92
- 448 003c 51F80C20 		ldr	r2, [r1, ip]
- 449 0040 D3F88830 		ldr	r3, [r3, #136]
- 450              	.LVL37:
- 182:src/effectWrapper.cpp ****         }
- 451              		.loc 10 182 68 view .LVU93
- 452 0044 D358     		ldr	r3, [r2, r3]
- 453 0046 F8E7     		b	.L33
- 454              	.LBE203:
- 455              	.LBE202:
- 456              		.cfi_endproc
- 457              	.LFE5422:
- 459              		.section	.text._ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7ProcessEf,"axG",%progbits,_ZN13Effec
- 460              		.align	1
- 461              		.p2align 2,,3
- 462              		.weak	_ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7ProcessEf
- 463              		.syntax unified
- 464              		.thumb
- 465              		.thumb_func
- 466              		.fpu fpv5-d16
- 468              	_ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7ProcessEf:
- 469              	.LVL38:
- 470              	.LFB5423:
- 173:src/effectWrapper.cpp ****         float processedSample = 0;
- 471              		.loc 10 173 18 is_stmt 1 view -0
- 472              		.cfi_startproc
- 473              		@ args = 0, pretend = 0, frame = 0
- 474              		@ frame_needed = 0, uses_anonymous_args = 0
- 475              		@ link register save eliminated.
- 179:src/effectWrapper.cpp ****             
- 476              		.loc 10 179 26 is_stmt 0 view .LVU95
- 477 0000 D0E92021 		ldrd	r2, r1, [r0, #128]
- 173:src/effectWrapper.cpp ****         float processedSample = 0;
- 478              		.loc 10 173 18 view .LVU96
- 479 0004 0346     		mov	r3, r0
- 480              	.LVL39:
- 179:src/effectWrapper.cpp ****             
- 481              		.loc 10 179 26 view .LVU97
- 482 0006 2AB1     		cbz	r2, .L51
- 187:src/effectWrapper.cpp ****         }
- 483              		.loc 10 187 59 view .LVU98
- 484 0008 4068     		ldr	r0, [r0, #4]
- 485              	.LVL40:
- 187:src/effectWrapper.cpp ****         }
- 486              		.loc 10 187 59 view .LVU99
- 487 000a CB07     		lsls	r3, r1, #31
- 488              	.LVL41:
- 187:src/effectWrapper.cpp ****         }
- 489              		.loc 10 187 59 view .LVU100
- 490 000c 00EB6100 		add	r0, r0, r1, asr #1
- 491 0010 05D4     		bmi	.L47
- 187:src/effectWrapper.cpp ****         }
- 492              		.loc 10 187 59 discriminator 4 view .LVU101
- 493 0012 1047     		bx	r2
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 23
+ 472              	.L37:
+ 215:src/effectWrapper.cpp ****         }
+ 473              		.loc 10 215 59 discriminator 2 view .LVU94
+ 474 001e 0368     		ldr	r3, [r0]
+ 475 0020 9A58     		ldr	r2, [r3, r2]
+ 476 0022 1047     		bx	r2
+ 477              	.LVL38:
+ 478              	.L42:
+ 479              	.LBB202:
+ 480              	.LBI202:
+ 201:src/effectWrapper.cpp ****         float processedSample = 0;
+ 481              		.loc 10 201 18 is_stmt 1 view .LVU95
+ 482              	.LBB203:
+ 210:src/effectWrapper.cpp ****         }
+ 483              		.loc 10 210 68 is_stmt 0 view .LVU96
+ 484 0024 D3F89020 		ldr	r2, [r3, #144]
+ 485 0028 5968     		ldr	r1, [r3, #4]
+ 486 002a 4FEA620C 		asr	ip, r2, #1
+ 487 002e 01EB6200 		add	r0, r1, r2, asr #1
+ 488 0032 D207     		lsls	r2, r2, #31
+ 489 0034 02D4     		bmi	.L34
+ 490 0036 D3F88C30 		ldr	r3, [r3, #140]
+ 491              	.LVL39:
+ 492              	.L35:
+ 210:src/effectWrapper.cpp ****         }
+ 493              		.loc 10 210 68 view .LVU97
+ 494 003a 1847     		bx	r3
+ 495              	.LVL40:
+ 496              	.L34:
+ 210:src/effectWrapper.cpp ****         }
+ 497              		.loc 10 210 68 view .LVU98
+ 498 003c 51F80C20 		ldr	r2, [r1, ip]
+ 499 0040 D3F88C30 		ldr	r3, [r3, #140]
+ 500              	.LVL41:
+ 210:src/effectWrapper.cpp ****         }
+ 501              		.loc 10 210 68 view .LVU99
+ 502 0044 D358     		ldr	r3, [r2, r3]
+ 503 0046 F8E7     		b	.L35
+ 504              	.LBE203:
+ 505              	.LBE202:
+ 506              		.cfi_endproc
+ 507              	.LFE5425:
+ 509              		.section	.text._ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7ProcessEf,"axG",%progbits,_ZN13Effec
+ 510              		.align	1
+ 511              		.p2align 2,,3
+ 512              		.weak	_ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7ProcessEf
+ 513              		.syntax unified
+ 514              		.thumb
+ 515              		.thumb_func
+ 516              		.fpu fpv5-d16
+ 518              	_ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7ProcessEf:
+ 519              	.LVL42:
+ 520              	.LFB5427:
+ 201:src/effectWrapper.cpp ****         float processedSample = 0;
+ 521              		.loc 10 201 18 is_stmt 1 view -0
+ 522              		.cfi_startproc
+ 523              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 24
 
 
- 494              	.LVL42:
- 495              	.L51:
- 179:src/effectWrapper.cpp ****             
- 496              		.loc 10 179 26 discriminator 1 view .LVU102
- 497 0014 C807     		lsls	r0, r1, #31
- 498              	.LVL43:
- 179:src/effectWrapper.cpp ****             
- 499              		.loc 10 179 26 discriminator 1 view .LVU103
- 500 0016 05D5     		bpl	.L52
- 187:src/effectWrapper.cpp ****         }
- 501              		.loc 10 187 59 view .LVU104
- 502 0018 5868     		ldr	r0, [r3, #4]
- 503 001a 00EB6100 		add	r0, r0, r1, asr #1
- 504              	.LVL44:
- 505              	.L47:
- 187:src/effectWrapper.cpp ****         }
- 506              		.loc 10 187 59 discriminator 2 view .LVU105
- 507 001e 0368     		ldr	r3, [r0]
- 508 0020 9A58     		ldr	r2, [r3, r2]
- 509 0022 1047     		bx	r2
- 510              	.LVL45:
- 511              	.L52:
- 512              	.LBB206:
- 513              	.LBI206:
- 173:src/effectWrapper.cpp ****         float processedSample = 0;
- 514              		.loc 10 173 18 is_stmt 1 view .LVU106
- 515              	.LBB207:
- 182:src/effectWrapper.cpp ****         }
- 516              		.loc 10 182 68 is_stmt 0 view .LVU107
- 517 0024 D3F88C20 		ldr	r2, [r3, #140]
- 518 0028 5968     		ldr	r1, [r3, #4]
- 519 002a 4FEA620C 		asr	ip, r2, #1
- 520 002e 01EB6200 		add	r0, r1, r2, asr #1
- 521 0032 D207     		lsls	r2, r2, #31
- 522 0034 02D4     		bmi	.L44
- 523 0036 D3F88830 		ldr	r3, [r3, #136]
- 524              	.LVL46:
- 525              	.L45:
- 182:src/effectWrapper.cpp ****         }
- 526              		.loc 10 182 68 view .LVU108
- 527 003a 1847     		bx	r3
- 528              	.LVL47:
- 529              	.L44:
- 182:src/effectWrapper.cpp ****         }
- 530              		.loc 10 182 68 view .LVU109
- 531 003c 51F80C20 		ldr	r2, [r1, ip]
- 532 0040 D3F88830 		ldr	r3, [r3, #136]
- 533              	.LVL48:
- 182:src/effectWrapper.cpp ****         }
- 534              		.loc 10 182 68 view .LVU110
- 535 0044 D358     		ldr	r3, [r2, r3]
- 536 0046 F8E7     		b	.L45
- 537              	.LBE207:
- 538              	.LBE206:
- 539              		.cfi_endproc
- 540              	.LFE5423:
- 542              		.section	.text.startup.main,"ax",%progbits
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 24
+ 524              		@ frame_needed = 0, uses_anonymous_args = 0
+ 525              		@ link register save eliminated.
+ 207:src/effectWrapper.cpp ****             
+ 526              		.loc 10 207 26 is_stmt 0 view .LVU101
+ 527 0000 D0E92121 		ldrd	r2, r1, [r0, #132]
+ 201:src/effectWrapper.cpp ****         float processedSample = 0;
+ 528              		.loc 10 201 18 view .LVU102
+ 529 0004 0346     		mov	r3, r0
+ 530              	.LVL43:
+ 207:src/effectWrapper.cpp ****             
+ 531              		.loc 10 207 26 view .LVU103
+ 532 0006 2AB1     		cbz	r2, .L53
+ 215:src/effectWrapper.cpp ****         }
+ 533              		.loc 10 215 59 view .LVU104
+ 534 0008 4068     		ldr	r0, [r0, #4]
+ 535              	.LVL44:
+ 215:src/effectWrapper.cpp ****         }
+ 536              		.loc 10 215 59 view .LVU105
+ 537 000a CB07     		lsls	r3, r1, #31
+ 538              	.LVL45:
+ 215:src/effectWrapper.cpp ****         }
+ 539              		.loc 10 215 59 view .LVU106
+ 540 000c 00EB6100 		add	r0, r0, r1, asr #1
+ 541 0010 05D4     		bmi	.L49
+ 215:src/effectWrapper.cpp ****         }
+ 542              		.loc 10 215 59 discriminator 4 view .LVU107
+ 543 0012 1047     		bx	r2
+ 544              	.LVL46:
+ 545              	.L53:
+ 207:src/effectWrapper.cpp ****             
+ 546              		.loc 10 207 26 discriminator 1 view .LVU108
+ 547 0014 C807     		lsls	r0, r1, #31
+ 548              	.LVL47:
+ 207:src/effectWrapper.cpp ****             
+ 549              		.loc 10 207 26 discriminator 1 view .LVU109
+ 550 0016 05D5     		bpl	.L54
+ 215:src/effectWrapper.cpp ****         }
+ 551              		.loc 10 215 59 view .LVU110
+ 552 0018 5868     		ldr	r0, [r3, #4]
+ 553 001a 00EB6100 		add	r0, r0, r1, asr #1
+ 554              	.LVL48:
+ 555              	.L49:
+ 215:src/effectWrapper.cpp ****         }
+ 556              		.loc 10 215 59 discriminator 2 view .LVU111
+ 557 001e 0368     		ldr	r3, [r0]
+ 558 0020 9A58     		ldr	r2, [r3, r2]
+ 559 0022 1047     		bx	r2
+ 560              	.LVL49:
+ 561              	.L54:
+ 562              	.LBB206:
+ 563              	.LBI206:
+ 201:src/effectWrapper.cpp ****         float processedSample = 0;
+ 564              		.loc 10 201 18 is_stmt 1 view .LVU112
+ 565              	.LBB207:
+ 210:src/effectWrapper.cpp ****         }
+ 566              		.loc 10 210 68 is_stmt 0 view .LVU113
+ 567 0024 D3F89020 		ldr	r2, [r3, #144]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 25
 
 
- 543              		.align	1
- 544              		.p2align 2,,3
- 545              		.global	main
- 546              		.syntax unified
- 547              		.thumb
- 548              		.thumb_func
- 549              		.fpu fpv5-d16
- 551              	main:
- 552              	.LFB4837:
+ 568 0028 5968     		ldr	r1, [r3, #4]
+ 569 002a 4FEA620C 		asr	ip, r2, #1
+ 570 002e 01EB6200 		add	r0, r1, r2, asr #1
+ 571 0032 D207     		lsls	r2, r2, #31
+ 572 0034 02D4     		bmi	.L46
+ 573 0036 D3F88C30 		ldr	r3, [r3, #140]
+ 574              	.LVL50:
+ 575              	.L47:
+ 210:src/effectWrapper.cpp ****         }
+ 576              		.loc 10 210 68 view .LVU114
+ 577 003a 1847     		bx	r3
+ 578              	.LVL51:
+ 579              	.L46:
+ 210:src/effectWrapper.cpp ****         }
+ 580              		.loc 10 210 68 view .LVU115
+ 581 003c 51F80C20 		ldr	r2, [r1, ip]
+ 582 0040 D3F88C30 		ldr	r3, [r3, #140]
+ 583              	.LVL52:
+ 210:src/effectWrapper.cpp ****         }
+ 584              		.loc 10 210 68 view .LVU116
+ 585 0044 D358     		ldr	r3, [r2, r3]
+ 586 0046 F8E7     		b	.L47
+ 587              	.LBE207:
+ 588              	.LBE206:
+ 589              		.cfi_endproc
+ 590              	.LFE5427:
+ 592              		.section	.rodata.main.str1.4,"aMS",%progbits,1
+ 593              		.align	2
+ 594              	.LC0:
+ 595 0000 416E616C 		.ascii	"Analog Delay\000"
+ 595      6F672044 
+ 595      656C6179 
+ 595      00
+ 596 000d 000000   		.align	2
+ 597              	.LC1:
+ 598 0010 54696D65 		.ascii	"Time\000"
+ 598      00
+ 599              		.section	.text.startup.main,"ax",%progbits
+ 600              		.align	1
+ 601              		.p2align 2,,3
+ 602              		.global	main
+ 603              		.syntax unified
+ 604              		.thumb
+ 605              		.thumb_func
+ 606              		.fpu fpv5-d16
+ 608              	main:
+ 609              	.LFB4840:
   35:src/main.cpp  **** 
   36:src/main.cpp  **** int main (){
- 553              		.loc 8 36 12 is_stmt 1 view -0
- 554              		.cfi_startproc
- 555              		@ args = 0, pretend = 0, frame = 288
- 556              		@ frame_needed = 0, uses_anonymous_args = 0
+ 610              		.loc 8 36 12 is_stmt 1 view -0
+ 611              		.cfi_startproc
+ 612              		@ args = 0, pretend = 0, frame = 296
+ 613              		@ frame_needed = 0, uses_anonymous_args = 0
   37:src/main.cpp  **** 
   38:src/main.cpp  **** 	hw.Init();
- 557              		.loc 8 38 2 view .LVU112
+ 614              		.loc 8 38 2 view .LVU118
   36:src/main.cpp  **** 
- 558              		.loc 8 36 12 is_stmt 0 view .LVU113
- 559 0000 70B5     		push	{r4, r5, r6, lr}
- 560              		.cfi_def_cfa_offset 16
- 561              		.cfi_offset 4, -16
- 562              		.cfi_offset 5, -12
- 563              		.cfi_offset 6, -8
- 564              		.cfi_offset 14, -4
- 565              		.loc 8 38 9 view .LVU114
- 566 0002 0021     		movs	r1, #0
- 567 0004 5548     		ldr	r0, .L65
- 568              	.LBB234:
- 569              	.LBB235:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 26
+
+
+ 615              		.loc 8 36 12 is_stmt 0 view .LVU119
+ 616 0000 70B5     		push	{r4, r5, r6, lr}
+ 617              		.cfi_def_cfa_offset 16
+ 618              		.cfi_offset 4, -16
+ 619              		.cfi_offset 5, -12
+ 620              		.cfi_offset 6, -8
+ 621              		.cfi_offset 14, -4
+ 622              		.loc 8 38 9 view .LVU120
+ 623 0002 0021     		movs	r1, #0
+ 624 0004 5848     		ldr	r0, .L67
+ 625              	.LBB234:
+ 626              	.LBB235:
   52:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
- 570              		.loc 7 52 20 view .LVU115
- 571 0006 564D     		ldr	r5, .L65+4
+ 627              		.loc 7 52 20 view .LVU121
+ 628 0006 594D     		ldr	r5, .L67+4
   59:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
- 572              		.loc 7 59 20 view .LVU116
- 573 0008 0024     		movs	r4, #0
- 574              	.LBE235:
- 575              	.LBE234:
+ 629              		.loc 7 59 20 view .LVU122
+ 630 0008 0024     		movs	r4, #0
+ 631              	.LBE235:
+ 632              	.LBE234:
   39:src/main.cpp  **** 	hw.SetAudioBlockSize(4); // number of samples handled per callback
   40:src/main.cpp  **** 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
   41:src/main.cpp  **** 	hw.StartAudio(AudioCallback);
@@ -1430,161 +1531,161 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   46:src/main.cpp  ****   
   47:src/main.cpp  ****     lfo1.Init(sample_rate);
   48:src/main.cpp  ****     delay1.Init(sample_rate);
- 576              		.loc 8 48 16 view .LVU117
- 577 000a 564E     		ldr	r6, .L65+8
+ 633              		.loc 8 48 16 view .LVU123
+ 634 000a 594E     		ldr	r6, .L67+8
   36:src/main.cpp  **** 
- 578              		.loc 8 36 12 view .LVU118
- 579 000c 2DED028B 		vpush.64	{d8}
- 580              		.cfi_def_cfa_offset 24
- 581              		.cfi_offset 80, -24
- 582              		.cfi_offset 81, -20
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 25
-
-
- 583 0010 C8B0     		sub	sp, sp, #288
- 584              		.cfi_def_cfa_offset 312
- 585              	.LBB240:
- 586              	.LBB236:
+ 635              		.loc 8 36 12 view .LVU124
+ 636 000c 2DED028B 		vpush.64	{d8}
+ 637              		.cfi_def_cfa_offset 24
+ 638              		.cfi_offset 80, -24
+ 639              		.cfi_offset 81, -20
+ 640 0010 CAB0     		sub	sp, sp, #296
+ 641              		.cfi_def_cfa_offset 320
+ 642              	.LBB240:
+ 643              	.LBB236:
   52:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
- 587              		.loc 7 52 20 view .LVU119
- 588 0012 9FED558A 		vldr.32	s16, .L65+12
- 589              	.LBE236:
- 590              	.LBE240:
+ 644              		.loc 7 52 20 view .LVU125
+ 645 0012 9FED588A 		vldr.32	s16, .L67+12
+ 646              	.LBE236:
+ 647              	.LBE240:
   38:src/main.cpp  **** 	hw.SetAudioBlockSize(4); // number of samples handled per callback
- 591              		.loc 8 38 9 view .LVU120
- 592 0016 FFF7FEFF 		bl	_ZN5daisy9DaisySeed4InitEb
- 593              	.LVL49:
+ 648              		.loc 8 38 9 view .LVU126
+ 649 0016 FFF7FEFF 		bl	_ZN5daisy9DaisySeed4InitEb
+ 650              	.LVL53:
   39:src/main.cpp  **** 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
- 594              		.loc 8 39 2 is_stmt 1 view .LVU121
+ 651              		.loc 8 39 2 is_stmt 1 view .LVU127
   39:src/main.cpp  **** 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
- 595              		.loc 8 39 22 is_stmt 0 view .LVU122
- 596 001a 0421     		movs	r1, #4
- 597 001c 4F48     		ldr	r0, .L65
- 598 001e FFF7FEFF 		bl	_ZN5daisy9DaisySeed17SetAudioBlockSizeEj
- 599              	.LVL50:
+ 652              		.loc 8 39 22 is_stmt 0 view .LVU128
+ 653 001a 0421     		movs	r1, #4
+ 654 001c 5248     		ldr	r0, .L67
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 27
+
+
+ 655 001e FFF7FEFF 		bl	_ZN5daisy9DaisySeed17SetAudioBlockSizeEj
+ 656              	.LVL54:
   40:src/main.cpp  **** 	hw.StartAudio(AudioCallback);
- 600              		.loc 8 40 2 is_stmt 1 view .LVU123
+ 657              		.loc 8 40 2 is_stmt 1 view .LVU129
   40:src/main.cpp  **** 	hw.StartAudio(AudioCallback);
- 601              		.loc 8 40 23 is_stmt 0 view .LVU124
- 602 0022 0321     		movs	r1, #3
- 603 0024 4D48     		ldr	r0, .L65
- 604 0026 FFF7FEFF 		bl	_ZN5daisy9DaisySeed18SetAudioSampleRateENS_9SaiHandle6Config10SampleRateE
- 605              	.LVL51:
+ 658              		.loc 8 40 23 is_stmt 0 view .LVU130
+ 659 0022 0321     		movs	r1, #3
+ 660 0024 5048     		ldr	r0, .L67
+ 661 0026 FFF7FEFF 		bl	_ZN5daisy9DaisySeed18SetAudioSampleRateENS_9SaiHandle6Config10SampleRateE
+ 662              	.LVL55:
   41:src/main.cpp  ****     int sample_rate = 48000;
- 606              		.loc 8 41 2 is_stmt 1 view .LVU125
+ 663              		.loc 8 41 2 is_stmt 1 view .LVU131
   41:src/main.cpp  ****     int sample_rate = 48000;
- 607              		.loc 8 41 15 is_stmt 0 view .LVU126
- 608 002a 5049     		ldr	r1, .L65+16
- 609 002c 4B48     		ldr	r0, .L65
- 610 002e FFF7FEFF 		bl	_ZN5daisy9DaisySeed10StartAudioEPFvPKPKfPPfjE
- 611              	.LVL52:
+ 664              		.loc 8 41 15 is_stmt 0 view .LVU132
+ 665 002a 5349     		ldr	r1, .L67+16
+ 666 002c 4E48     		ldr	r0, .L67
+ 667 002e FFF7FEFF 		bl	_ZN5daisy9DaisySeed10StartAudioEPFvPKPKfPPfjE
+ 668              	.LVL56:
   42:src/main.cpp  **** 
- 612              		.loc 8 42 5 is_stmt 1 view .LVU127
+ 669              		.loc 8 42 5 is_stmt 1 view .LVU133
   47:src/main.cpp  ****     delay1.Init(sample_rate);
- 613              		.loc 8 47 5 view .LVU128
- 614              	.LBB241:
- 615              	.LBI234:
+ 670              		.loc 8 47 5 view .LVU134
+ 671              	.LBB241:
+ 672              	.LBI234:
   50:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     {
- 616              		.loc 7 50 10 view .LVU129
- 617              	.LBB237:
+ 673              		.loc 7 50 10 view .LVU135
+ 674              	.LBB237:
   52:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
- 618              		.loc 7 52 9 view .LVU130
+ 675              		.loc 7 52 9 view .LVU136
   55:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         pw_        = 0.5f;
- 619              		.loc 7 55 20 is_stmt 0 view .LVU131
- 620 0032 4FF07C53 		mov	r3, #1056964608
+ 676              		.loc 7 55 20 is_stmt 0 view .LVU137
+ 677 0032 4FF07C53 		mov	r3, #1056964608
   53:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
- 621              		.loc 7 53 20 view .LVU132
- 622 0036 4E49     		ldr	r1, .L65+20
+ 678              		.loc 7 53 20 view .LVU138
+ 679 0036 5149     		ldr	r1, .L67+20
   57:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(freq_);
- 623              		.loc 7 57 20 view .LVU133
- 624 0038 0022     		movs	r2, #0
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 26
-
-
+ 680              		.loc 7 57 20 view .LVU139
+ 681 0038 0022     		movs	r2, #0
   54:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
- 625              		.loc 7 54 20 view .LVU134
- 626 003a 9FED4E0A 		vldr.32	s0, .L65+24
+ 682              		.loc 7 54 20 view .LVU140
+ 683 003a 9FED510A 		vldr.32	s0, .L67+24
   58:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
- 627              		.loc 7 58 34 view .LVU135
- 628 003e 2846     		mov	r0, r5
+ 684              		.loc 7 58 34 view .LVU141
+ 685 003e 2846     		mov	r0, r5
   53:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
- 629              		.loc 7 53 20 view .LVU136
- 630 0040 6961     		str	r1, [r5, #20]	@ float
+ 686              		.loc 7 53 20 view .LVU142
+ 687 0040 6961     		str	r1, [r5, #20]	@ float
   57:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(freq_);
- 631              		.loc 7 57 20 view .LVU137
- 632 0042 AA61     		str	r2, [r5, #24]	@ float
+ 688              		.loc 7 57 20 view .LVU143
+ 689 0042 AA61     		str	r2, [r5, #24]	@ float
   55:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         pw_        = 0.5f;
- 633              		.loc 7 55 20 view .LVU138
- 634 0044 6B60     		str	r3, [r5, #4]	@ float
+ 690              		.loc 7 55 20 view .LVU144
+ 691 0044 6B60     		str	r3, [r5, #4]	@ float
   56:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_     = 0.0f;
- 635              		.loc 7 56 20 view .LVU139
- 636 0046 EB60     		str	r3, [r5, #12]	@ float
+ 692              		.loc 7 56 20 view .LVU145
+ 693 0046 EB60     		str	r3, [r5, #12]	@ float
   52:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
- 637              		.loc 7 52 20 view .LVU140
- 638 0048 85ED048A 		vstr.32	s16, [r5, #16]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 28
+
+
+ 694              		.loc 7 52 20 view .LVU146
+ 695 0048 85ED048A 		vstr.32	s16, [r5, #16]
   53:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
- 639              		.loc 7 53 9 is_stmt 1 view .LVU141
+ 696              		.loc 7 53 9 is_stmt 1 view .LVU147
   54:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
- 640              		.loc 7 54 9 view .LVU142
+ 697              		.loc 7 54 9 view .LVU148
   54:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
- 641              		.loc 7 54 20 is_stmt 0 view .LVU143
- 642 004c 85ED020A 		vstr.32	s0, [r5, #8]
+ 698              		.loc 7 54 20 is_stmt 0 view .LVU149
+ 699 004c 85ED020A 		vstr.32	s0, [r5, #8]
   55:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         pw_        = 0.5f;
- 643              		.loc 7 55 9 is_stmt 1 view .LVU144
+ 700              		.loc 7 55 9 is_stmt 1 view .LVU150
   56:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_     = 0.0f;
- 644              		.loc 7 56 9 view .LVU145
+ 701              		.loc 7 56 9 view .LVU151
   57:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(freq_);
- 645              		.loc 7 57 9 view .LVU146
+ 702              		.loc 7 57 9 view .LVU152
   58:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
- 646              		.loc 7 58 9 view .LVU147
+ 703              		.loc 7 58 9 view .LVU153
   58:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
- 647              		.loc 7 58 34 is_stmt 0 view .LVU148
- 648 0050 FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
- 649              	.LVL53:
+ 704              		.loc 7 58 34 is_stmt 0 view .LVU154
+ 705 0050 FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
+ 706              	.LVL57:
   61:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 650              		.loc 7 61 20 view .LVU149
- 651 0054 40F20113 		movw	r3, #257
+ 707              		.loc 7 61 20 view .LVU155
+ 708 0054 40F20113 		movw	r3, #257
   58:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
- 652              		.loc 7 58 34 view .LVU150
- 653 0058 F0EE407A 		vmov.f32	s15, s0
- 654              	.LBE237:
- 655              	.LBE241:
- 656              		.loc 8 48 16 view .LVU151
- 657 005c 3046     		mov	r0, r6
- 658 005e B0EE480A 		vmov.f32	s0, s16
- 659              	.LBB242:
- 660              	.LBB238:
+ 709              		.loc 7 58 34 view .LVU156
+ 710 0058 F0EE407A 		vmov.f32	s15, s0
+ 711              	.LBE237:
+ 712              	.LBE241:
+ 713              		.loc 8 48 16 view .LVU157
+ 714 005c 3046     		mov	r0, r6
+ 715 005e B0EE480A 		vmov.f32	s0, s16
+ 716              	.LBB242:
+ 717              	.LBB238:
   61:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 661              		.loc 7 61 20 view .LVU152
- 662 0062 2B85     		strh	r3, [r5, #40]	@ movhi
+ 718              		.loc 7 61 20 view .LVU158
+ 719 0062 2B85     		strh	r3, [r5, #40]	@ movhi
   58:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 27
-
-
- 663              		.loc 7 58 20 view .LVU153
- 664 0064 C5ED077A 		vstr.32	s15, [r5, #28]
+ 720              		.loc 7 58 20 view .LVU159
+ 721 0064 C5ED077A 		vstr.32	s15, [r5, #28]
   59:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
- 665              		.loc 7 59 9 is_stmt 1 view .LVU154
+ 722              		.loc 7 59 9 is_stmt 1 view .LVU160
   60:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         eor_       = true;
- 666              		.loc 7 60 9 view .LVU155
+ 723              		.loc 7 60 9 view .LVU161
   61:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 667              		.loc 7 61 9 view .LVU156
- 668              	.LVL54:
+ 724              		.loc 7 61 9 view .LVU162
+ 725              	.LVL58:
   61:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 669              		.loc 7 61 9 is_stmt 0 view .LVU157
- 670              	.LBE238:
- 671              	.LBE242:
- 672              		.loc 8 48 5 is_stmt 1 view .LVU158
- 673              	.LBB243:
- 674              	.LBB239:
+ 726              		.loc 7 61 9 is_stmt 0 view .LVU163
+ 727              	.LBE238:
+ 728              	.LBE242:
+ 729              		.loc 8 48 5 is_stmt 1 view .LVU164
+ 730              	.LBB243:
+ 731              	.LBB239:
   59:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
- 675              		.loc 7 59 20 is_stmt 0 view .LVU159
- 676 0068 2C70     		strb	r4, [r5]
- 677              	.LBE239:
- 678              	.LBE243:
- 679              		.loc 8 48 16 view .LVU160
- 680 006a FFF7FEFF 		bl	_ZN11AnalogDelay4InitEf
- 681              	.LVL55:
+ 732              		.loc 7 59 20 is_stmt 0 view .LVU165
+ 733 0068 2C70     		strb	r4, [r5]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 29
+
+
+ 734              	.LBE239:
+ 735              	.LBE243:
+ 736              		.loc 8 48 16 view .LVU166
+ 737 006a FFF7FEFF 		bl	_ZN11AnalogDelay4InitEf
+ 738              	.LVL59:
   49:src/main.cpp  **** 
   50:src/main.cpp  ****     /* WRAPPER INSTANTIATION*/
   51:src/main.cpp  **** 
@@ -1598,65 +1699,66 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   59:src/main.cpp  ****     //   the second argument of the setter function that takes 2 args
   60:src/main.cpp  ****     // - the fifth templated argument would be the return type of setters   
   61:src/main.cpp  ****     EffectWrapper <daisysp::Oscillator, float, float> oscWrapper;
- 682              		.loc 8 61 5 is_stmt 1 view .LVU161
- 683              	.LBB244:
- 684              	.LBI244:
-  58:src/effectWrapper.cpp **** 
- 685              		.loc 10 58 5 view .LVU162
- 686              	.LBB245:
- 687              	.LBB246:
- 688              	.LBB247:
- 689              	.LBI247:
- 690              		.file 11 "src/EffectInterface.cpp"
+ 739              		.loc 8 61 5 is_stmt 1 view .LVU167
+ 740              	.LBB244:
+ 741              	.LBI244:
+  63:src/effectWrapper.cpp **** 
+ 742              		.loc 10 63 5 view .LVU168
+ 743              	.LBB245:
+ 744              	.LBB246:
+ 745              	.LBB247:
+ 746              	.LBI247:
+ 747              		.file 11 "src/EffectInterface.cpp"
    1:src/EffectInterface.cpp **** #ifndef EFFECT_INTERFACE
    2:src/EffectInterface.cpp **** #define EFFECT_INTERFACE
    3:src/EffectInterface.cpp **** class EffectInterface {
- 691              		.loc 11 3 7 view .LVU163
- 692              		.loc 11 3 7 is_stmt 0 view .LVU164
- 693              	.LBE247:
-  58:src/effectWrapper.cpp **** 
- 694              		.loc 10 58 20 view .LVU165
- 695 006e 424B     		ldr	r3, .L65+28
- 696 0070 2022     		movs	r2, #32
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 28
+ 748              		.loc 11 3 7 view .LVU169
+ 749              		.loc 11 3 7 is_stmt 0 view .LVU170
+ 750              	.LBE247:
+  63:src/effectWrapper.cpp **** 
+ 751              		.loc 10 63 20 view .LVU171
+ 752 006e 454B     		ldr	r3, .L67+28
+ 753 0070 2022     		movs	r2, #32
+ 754 0072 2146     		mov	r1, r4
+ 755 0074 10A8     		add	r0, sp, #64
+ 756 0076 0093     		str	r3, [sp]
+ 757 0078 0294     		str	r4, [sp, #8]
+ 758 007a 0A94     		str	r4, [sp, #40]
+ 759 007c CDE90444 		strd	r4, r4, [sp, #16]
+ 760 0080 CDE90644 		strd	r4, r4, [sp, #24]
+ 761 0084 CDE90844 		strd	r4, r4, [sp, #32]
+ 762 0088 FFF7FEFF 		bl	memset
+ 763              	.LVL60:
+ 764              	.LBE246:
+ 765              	.LBE245:
+ 766              	.LBE244:
+ 767              	.LBB252:
+ 768              	.LBB253:
+ 123:src/effectWrapper.cpp ****             _setParamCounter++;
+ 769              		.loc 10 123 54 view .LVU172
+ 770 008c 3E4B     		ldr	r3, .L67+32
+ 771              	.LBE253:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 30
 
 
- 697 0072 2146     		mov	r1, r4
- 698 0074 0FA8     		add	r0, sp, #60
- 699 0076 0093     		str	r3, [sp]
- 700 0078 0994     		str	r4, [sp, #36]
- 701 007a CDE90344 		strd	r4, r4, [sp, #12]
- 702 007e CDE90544 		strd	r4, r4, [sp, #20]
- 703 0082 CDE90744 		strd	r4, r4, [sp, #28]
- 704 0086 FFF7FEFF 		bl	memset
- 705              	.LVL56:
- 706              	.LBE246:
- 707              	.LBE245:
- 708              	.LBE244:
- 709              	.LBB252:
- 710              	.LBB253:
-  97:src/effectWrapper.cpp ****             _setParamCounter++;
- 711              		.loc 10 97 54 view .LVU166
- 712 008a 3C4B     		ldr	r3, .L65+32
- 713              	.LBE253:
- 714              	.LBE252:
- 715              	.LBB256:
- 716              	.LBB257:
- 168:src/effectWrapper.cpp ****     
- 717              		.loc 10 168 63 view .LVU167
- 718 008c 0195     		str	r5, [sp, #4]
- 719              	.LBE257:
- 720              	.LBE256:
- 721              	.LBB258:
- 722              	.LBB254:
-  98:src/effectWrapper.cpp ****         }
- 723              		.loc 10 98 13 view .LVU168
- 724 008e 0125     		movs	r5, #1
-  97:src/effectWrapper.cpp ****             _setParamCounter++;
- 725              		.loc 10 97 54 view .LVU169
- 726 0090 0293     		str	r3, [sp, #8]
- 727              	.LBE254:
- 728              	.LBE258:
+ 772              	.LBE252:
+ 773              	.LBB256:
+ 774              	.LBB257:
+ 196:src/effectWrapper.cpp ****     
+ 775              		.loc 10 196 63 view .LVU173
+ 776 008e 0195     		str	r5, [sp, #4]
+ 777              	.LBE257:
+ 778              	.LBE256:
+ 779              	.LBB258:
+ 780              	.LBB254:
+ 124:src/effectWrapper.cpp ****         }
+ 781              		.loc 10 124 13 view .LVU174
+ 782 0090 0125     		movs	r5, #1
+ 123:src/effectWrapper.cpp ****             _setParamCounter++;
+ 783              		.loc 10 123 54 view .LVU175
+ 784 0092 0393     		str	r3, [sp, #12]
+ 785              	.LBE254:
+ 786              	.LBE258:
   62:src/main.cpp  ****     
   63:src/main.cpp  ****     // creation of function pointers to pass to effect wrapper
   64:src/main.cpp  ****     // can be done before to use constructor (cleaner)     
@@ -1671,473 +1773,503 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   73:src/main.cpp  ****     // setting parameter
   74:src/main.cpp  ****     float frequency = 440;
   75:src/main.cpp  ****     oscWrapper.SetParam(frequency);
- 729              		.loc 8 75 24 view .LVU170
- 730 0092 6846     		mov	r0, sp
- 731              	.LBB259:
- 732              	.LBB260:
- 164:src/effectWrapper.cpp ****    
- 733              		.loc 10 164 94 view .LVU171
- 734 0094 3A4B     		ldr	r3, .L65+36
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 29
+ 787              		.loc 8 75 24 view .LVU176
+ 788 0094 6846     		mov	r0, sp
+ 789              	.LBB259:
+ 790              	.LBB260:
+ 192:src/effectWrapper.cpp ****    
+ 791              		.loc 10 192 94 view .LVU177
+ 792 0096 3D4B     		ldr	r3, .L67+36
+ 793              	.LBE260:
+ 794              	.LBE259:
+ 795              		.loc 8 75 24 view .LVU178
+ 796 0098 9FED3D0A 		vldr.32	s0, .L67+40
+ 797              	.LBB262:
+ 798              	.LBB261:
+ 192:src/effectWrapper.cpp ****    
+ 799              		.loc 10 192 94 view .LVU179
+ 800 009c 2393     		str	r3, [sp, #140]
+ 801              	.LBE261:
+ 802              	.LBE262:
+ 803              	.LBB263:
+ 804              	.LBB250:
+ 805              	.LBB248:
+  63:src/effectWrapper.cpp **** 
+ 806              		.loc 10 63 20 view .LVU180
+ 807 009e 1894     		str	r4, [sp, #96]
+ 808 00a0 2494     		str	r4, [sp, #144]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 31
 
 
- 735              	.LBE260:
- 736              	.LBE259:
- 737              		.loc 8 75 24 view .LVU172
- 738 0096 9FED3B0A 		vldr.32	s0, .L65+40
- 739              	.LBB262:
- 740              	.LBB261:
- 164:src/effectWrapper.cpp ****    
- 741              		.loc 10 164 94 view .LVU173
- 742 009a 2293     		str	r3, [sp, #136]
- 743              	.LBE261:
- 744              	.LBE262:
- 745              	.LBB263:
- 746              	.LBB250:
- 747              	.LBB248:
-  58:src/effectWrapper.cpp **** 
- 748              		.loc 10 58 20 view .LVU174
- 749 009c 1794     		str	r4, [sp, #92]
- 750 009e 2394     		str	r4, [sp, #140]
- 751              	.LVL57:
-  58:src/effectWrapper.cpp **** 
- 752              		.loc 10 58 20 view .LVU175
- 753              	.LBE248:
- 754              	.LBE250:
- 755              	.LBE263:
+ 809              	.LVL61:
+  63:src/effectWrapper.cpp **** 
+ 810              		.loc 10 63 20 view .LVU181
+ 811              	.LBE248:
+ 812              	.LBE250:
+ 813              	.LBE263:
   65:src/main.cpp  ****     float (daisysp::Oscillator::* processPtr)() = &daisysp::Oscillator::Process; 
- 756              		.loc 8 65 5 is_stmt 1 view .LVU176
+ 814              		.loc 8 65 5 is_stmt 1 view .LVU182
   66:src/main.cpp  **** 
- 757              		.loc 8 66 5 view .LVU177
+ 815              		.loc 8 66 5 view .LVU183
   69:src/main.cpp  ****     oscWrapper.AddProcess (processPtr);
- 758              		.loc 8 69 5 view .LVU178
- 759              	.LBB264:
- 760              	.LBI252:
-  94:src/effectWrapper.cpp ****         int oneIfFull = 0;
- 761              		.loc 10 94 9 view .LVU179
- 762              	.LBB255:
-  98:src/effectWrapper.cpp ****         }
- 763              		.loc 10 98 13 is_stmt 0 view .LVU180
- 764 00a0 0A95     		str	r5, [sp, #40]
- 765              	.LVL58:
-  98:src/effectWrapper.cpp ****         }
- 766              		.loc 10 98 13 view .LVU181
- 767              	.LBE255:
- 768              	.LBE264:
+ 816              		.loc 8 69 5 view .LVU184
+ 817              	.LBB264:
+ 818              	.LBI252:
+ 120:src/effectWrapper.cpp ****         int oneIfFull = 0;
+ 819              		.loc 10 120 9 view .LVU185
+ 820              	.LBB255:
+ 124:src/effectWrapper.cpp ****         }
+ 821              		.loc 10 124 13 is_stmt 0 view .LVU186
+ 822 00a2 0B95     		str	r5, [sp, #44]
+ 823              	.LVL62:
+ 124:src/effectWrapper.cpp ****         }
+ 824              		.loc 10 124 13 view .LVU187
+ 825              	.LBE255:
+ 826              	.LBE264:
   70:src/main.cpp  ****     oscWrapper.AddEffectPtr(&lfo1);
- 769              		.loc 8 70 5 is_stmt 1 view .LVU182
- 770              	.LBB265:
- 771              	.LBI259:
- 164:src/effectWrapper.cpp ****    
- 772              		.loc 10 164 17 view .LVU183
- 164:src/effectWrapper.cpp ****    
- 773              		.loc 10 164 17 is_stmt 0 view .LVU184
- 774              	.LBE265:
+ 827              		.loc 8 70 5 is_stmt 1 view .LVU188
+ 828              	.LBB265:
+ 829              	.LBI259:
+ 192:src/effectWrapper.cpp ****    
+ 830              		.loc 10 192 17 view .LVU189
+ 192:src/effectWrapper.cpp ****    
+ 831              		.loc 10 192 17 is_stmt 0 view .LVU190
+ 832              	.LBE265:
   71:src/main.cpp  **** 
- 775              		.loc 8 71 5 is_stmt 1 view .LVU185
- 776              	.LBB266:
- 777              	.LBI256:
- 168:src/effectWrapper.cpp ****     
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 30
-
-
- 778              		.loc 10 168 17 view .LVU186
- 168:src/effectWrapper.cpp ****     
- 779              		.loc 10 168 17 is_stmt 0 view .LVU187
- 780              	.LBE266:
+ 833              		.loc 8 71 5 is_stmt 1 view .LVU191
+ 834              	.LBB266:
+ 835              	.LBI256:
+ 196:src/effectWrapper.cpp ****     
+ 836              		.loc 10 196 17 view .LVU192
+ 196:src/effectWrapper.cpp ****     
+ 837              		.loc 10 196 17 is_stmt 0 view .LVU193
+ 838              	.LBE266:
   74:src/main.cpp  ****     oscWrapper.SetParam(frequency);
- 781              		.loc 8 74 5 is_stmt 1 view .LVU188
- 782              		.loc 8 75 5 view .LVU189
- 783              	.LBB267:
- 784              	.LBB251:
- 785              	.LBB249:
-  58:src/effectWrapper.cpp **** 
- 786              		.loc 10 58 20 is_stmt 0 view .LVU190
- 787 00a2 CDE92044 		strd	r4, r4, [sp, #128]
- 788              	.LBE249:
- 789              	.LBE251:
- 790              	.LBE267:
- 791              		.loc 8 75 24 view .LVU191
- 792 00a6 FFF7FEFF 		bl	_ZN13EffectWrapperIN7daisysp10OscillatorEfffvE8SetParamEf
- 793              	.LVL59:
+ 839              		.loc 8 74 5 is_stmt 1 view .LVU194
+ 840              		.loc 8 75 5 view .LVU195
+ 841              	.LBB267:
+ 842              	.LBB251:
+ 843              	.LBB249:
+  63:src/effectWrapper.cpp **** 
+ 844              		.loc 10 63 20 is_stmt 0 view .LVU196
+ 845 00a4 CDE92144 		strd	r4, r4, [sp, #132]
+ 846              	.LBE249:
+ 847              	.LBE251:
+ 848              	.LBE267:
+ 849              		.loc 8 75 24 view .LVU197
+ 850 00a8 FFF7FEFF 		bl	_ZN13EffectWrapperIN7daisysp10OscillatorEfffvE8SetParamEf
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 32
+
+
+ 851              	.LVL63:
   76:src/main.cpp  **** 
   77:src/main.cpp  **** 
   78:src/main.cpp  ****     // the wrapper can be created on a oneliner
   79:src/main.cpp  ****     EffectWrapper <AnalogDelay,float,float> delayWrapper (
- 794              		.loc 8 79 5 is_stmt 1 view .LVU192
- 795              	.LBB268:
- 796              	.LBI268:
-  67:src/effectWrapper.cpp ****                     float (t_effect::*Process_ptr)(t_process), 
- 797              		.loc 10 67 5 view .LVU193
- 798              	.LBB269:
- 799              	.LBB270:
- 800              	.LBB271:
- 801              	.LBI271:
- 802              		.loc 11 3 7 view .LVU194
- 803              		.loc 11 3 7 is_stmt 0 view .LVU195
- 804              	.LBE271:
-  70:src/effectWrapper.cpp ****         _effectPtr = effectPtr;
- 805              		.loc 10 70 5 view .LVU196
- 806 00aa 374B     		ldr	r3, .L65+44
- 807 00ac 2022     		movs	r2, #32
- 808 00ae 2146     		mov	r1, r4
- 809 00b0 33A8     		add	r0, sp, #204
- 810 00b2 2493     		str	r3, [sp, #144]
- 811 00b4 2D94     		str	r4, [sp, #180]
- 812 00b6 CDE92744 		strd	r4, r4, [sp, #156]
- 813 00ba CDE92944 		strd	r4, r4, [sp, #164]
- 814 00be CDE92B44 		strd	r4, r4, [sp, #172]
- 815 00c2 FFF7FEFF 		bl	memset
- 816              	.LVL60:
- 817              	.LBB272:
- 818              	.LBB273:
- 158:src/effectWrapper.cpp ****    
- 819              		.loc 10 158 86 view .LVU197
- 820 00c6 314A     		ldr	r2, .L65+48
- 821              	.LBE273:
- 822              	.LBE272:
- 823              	.LBB276:
- 824              	.LBB277:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 31
-
-
-  97:src/effectWrapper.cpp ****             _setParamCounter++;
- 825              		.loc 10 97 54 view .LVU198
- 826 00c8 314B     		ldr	r3, .L65+52
- 827              	.LBE277:
- 828              	.LBE276:
- 829              	.LBE270:
- 830              	.LBE269:
- 831              	.LBE268:
-  80:src/main.cpp  ****         &delay1,
-  81:src/main.cpp  ****         &AnalogDelay::Process,
-  82:src/main.cpp  ****         &AnalogDelay::setDelayTime
+ 852              		.loc 8 79 5 is_stmt 1 view .LVU198
+ 853              	.LBB268:
+ 854              	.LBI268:
+ 100:src/effectWrapper.cpp ****             t_effect* effectPtr, 
+ 855              		.loc 10 100 5 view .LVU199
+ 856              	.LBB269:
+ 857              	.LBB270:
+ 858              	.LBB271:
+ 859              	.LBI271:
+ 860              		.loc 11 3 7 view .LVU200
+ 861              		.loc 11 3 7 is_stmt 0 view .LVU201
+ 862              	.LBE271:
+ 107:src/effectWrapper.cpp ****         _effectPtr = effectPtr;
+ 863              		.loc 10 107 5 view .LVU202
+ 864 00ac 394B     		ldr	r3, .L67+44
+ 865 00ae 2022     		movs	r2, #32
+ 866 00b0 2146     		mov	r1, r4
+ 867 00b2 35A8     		add	r0, sp, #212
+ 868 00b4 2593     		str	r3, [sp, #148]
+ 869 00b6 2F94     		str	r4, [sp, #188]
+ 870 00b8 CDE92944 		strd	r4, r4, [sp, #164]
+ 871 00bc CDE92B44 		strd	r4, r4, [sp, #172]
+ 872 00c0 CDE92D44 		strd	r4, r4, [sp, #180]
+ 873 00c4 FFF7FEFF 		bl	memset
+ 874              	.LVL64:
+ 109:src/effectWrapper.cpp ****         AddProcess(Process_ptr);
+ 875              		.loc 10 109 15 view .LVU203
+ 876 00c8 334A     		ldr	r2, .L67+48
+ 877              	.LBB272:
+ 878              	.LBB273:
+ 138:src/effectWrapper.cpp ****             _paramNames[_setParamCounter] = paramName; 
+ 879              		.loc 10 138 54 view .LVU204
+ 880 00ca 344B     		ldr	r3, .L67+52
+ 881              	.LBE273:
+ 882              	.LBE272:
+ 883              	.LBE270:
+ 884              	.LBE269:
+ 885              	.LBE268:
+  80:src/main.cpp  ****         &delay1, "Analog Delay",
+  81:src/main.cpp  ****         &AnalogDelay::setDelayTime, "Time",
+  82:src/main.cpp  ****         &AnalogDelay::Process
   83:src/main.cpp  ****     );
   84:src/main.cpp  **** 
   85:src/main.cpp  ****     float delayTime = .1f;
   86:src/main.cpp  ****     delayWrapper.SetParam(delayTime);
- 832              		.loc 8 86 26 view .LVU199
- 833 00ca 24A8     		add	r0, sp, #144
- 834              	.LVL61:
- 835              		.loc 8 86 26 view .LVU200
- 836 00cc 9FED310A 		vldr.32	s0, .L65+56
- 837              	.LBB288:
- 838              	.LBB286:
- 839              	.LBB284:
- 840              	.LBB280:
- 841              	.LBB274:
- 158:src/effectWrapper.cpp ****    
- 842              		.loc 10 158 86 view .LVU201
- 843 00d0 4492     		str	r2, [sp, #272]
- 844              	.LBE274:
- 845              	.LBE280:
- 846              	.LBB281:
- 847              	.LBB278:
-  97:src/effectWrapper.cpp ****             _setParamCounter++;
- 848              		.loc 10 97 54 view .LVU202
- 849 00d2 2693     		str	r3, [sp, #152]
- 850              	.LBE278:
- 851              	.LBE281:
-  70:src/effectWrapper.cpp ****         _effectPtr = effectPtr;
- 852              		.loc 10 70 5 view .LVU203
- 853 00d4 3B94     		str	r4, [sp, #236]
-  71:src/effectWrapper.cpp ****         AddProcess(Process_ptr);
- 854              		.loc 10 71 20 view .LVU204
- 855 00d6 2596     		str	r6, [sp, #148]
- 856              	.LVL62:
- 857              	.LBB282:
- 858              	.LBI272:
- 158:src/effectWrapper.cpp ****    
- 859              		.loc 10 158 17 is_stmt 1 view .LVU205
- 860              	.LBB275:
- 158:src/effectWrapper.cpp ****    
- 861              		.loc 10 158 86 is_stmt 0 view .LVU206
- 862 00d8 4594     		str	r4, [sp, #276]
- 863              	.LVL63:
- 158:src/effectWrapper.cpp ****    
- 864              		.loc 10 158 86 view .LVU207
- 865              	.LBE275:
- 866              	.LBE282:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 32
+ 886              		.loc 8 86 26 view .LVU205
+ 887 00cc 25A8     		add	r0, sp, #148
+ 888              	.LVL65:
+ 889              	.LBB296:
+ 890              	.LBB293:
+ 891              	.LBB290:
+ 109:src/effectWrapper.cpp ****         AddProcess(Process_ptr);
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 33
 
 
- 867              	.LBB283:
- 868              	.LBI276:
-  94:src/effectWrapper.cpp ****         int oneIfFull = 0;
- 869              		.loc 10 94 9 is_stmt 1 view .LVU208
- 870              	.LBB279:
-  98:src/effectWrapper.cpp ****         }
- 871              		.loc 10 98 13 is_stmt 0 view .LVU209
- 872 00da 2E95     		str	r5, [sp, #184]
- 873              	.LVL64:
-  98:src/effectWrapper.cpp ****         }
- 874              		.loc 10 98 13 view .LVU210
- 875              	.LBE279:
- 876              	.LBE283:
- 877              	.LBE284:
- 878              	.LBE286:
- 879              	.LBE288:
+ 892              		.loc 10 109 15 view .LVU206
+ 893 00ce 2792     		str	r2, [sp, #156]
+ 894              	.LVL66:
+ 895              	.LBB278:
+ 896              	.LBI278:
+ 186:src/effectWrapper.cpp ****    
+ 897              		.loc 10 186 17 is_stmt 1 view .LVU207
+ 186:src/effectWrapper.cpp ****    
+ 898              		.loc 10 186 17 is_stmt 0 view .LVU208
+ 899              	.LBE278:
+ 900              	.LBB282:
+ 901              	.LBI272:
+ 136:src/effectWrapper.cpp ****         if (_setParamCounter < MAX_N_OF_PARAM_SETTERS ){
+ 902              		.loc 10 136 9 is_stmt 1 view .LVU209
+ 136:src/effectWrapper.cpp ****         if (_setParamCounter < MAX_N_OF_PARAM_SETTERS ){
+ 903              		.loc 10 136 9 is_stmt 0 view .LVU210
+ 904              	.LBE282:
+ 905              	.LBE290:
+ 906              	.LBE293:
+ 907              	.LBE296:
   85:src/main.cpp  ****     delayWrapper.SetParam(delayTime);
- 880              		.loc 8 85 5 is_stmt 1 view .LVU211
- 881              		.loc 8 86 5 view .LVU212
- 882              	.LBB289:
- 883              	.LBB287:
- 884              	.LBB285:
-  70:src/effectWrapper.cpp ****         _effectPtr = effectPtr;
- 885              		.loc 10 70 5 is_stmt 0 view .LVU213
- 886 00dc CDE94644 		strd	r4, r4, [sp, #280]
- 887              	.LBE285:
- 888              	.LBE287:
- 889              	.LBE289:
- 890              		.loc 8 86 26 view .LVU214
- 891 00e0 FFF7FEFF 		bl	_ZN13EffectWrapperI11AnalogDelayfffvE8SetParamEf
- 892              	.LVL65:
+ 908              		.loc 8 85 5 is_stmt 1 view .LVU211
+ 909              		.loc 8 86 5 view .LVU212
+ 910              	.LBB297:
+ 911              	.LBB294:
+ 912              	.LBB291:
+ 913              	.LBB283:
+ 914              	.LBB274:
+ 138:src/effectWrapper.cpp ****             _paramNames[_setParamCounter] = paramName; 
+ 915              		.loc 10 138 54 is_stmt 0 view .LVU213
+ 916 00d0 2893     		str	r3, [sp, #160]
+ 917              	.LBE274:
+ 918              	.LBE283:
+ 919              	.LBB284:
+ 920              	.LBB279:
+ 186:src/effectWrapper.cpp ****    
+ 921              		.loc 10 186 86 view .LVU214
+ 922 00d2 334A     		ldr	r2, .L67+56
+ 923              	.LBE279:
+ 924              	.LBE284:
+ 925              	.LBB285:
+ 926              	.LBB275:
+ 139:src/effectWrapper.cpp ****             _setParamCounter++;
+ 927              		.loc 10 139 43 view .LVU215
+ 928 00d4 334B     		ldr	r3, .L67+60
+ 929              	.LBE275:
+ 930              	.LBE285:
+ 931              	.LBE291:
+ 932              	.LBE294:
+ 933              	.LBE297:
+ 934              		.loc 8 86 26 view .LVU216
+ 935 00d6 9FED340A 		vldr.32	s0, .L67+64
+ 936              	.LBB298:
+ 937              	.LBB295:
+ 938              	.LBB292:
+ 939              	.LBB286:
+ 940              	.LBB280:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 34
+
+
+ 186:src/effectWrapper.cpp ****    
+ 941              		.loc 10 186 86 view .LVU217
+ 942 00da 4692     		str	r2, [sp, #280]
+ 943              	.LBE280:
+ 944              	.LBE286:
+ 945              	.LBB287:
+ 946              	.LBB276:
+ 139:src/effectWrapper.cpp ****             _setParamCounter++;
+ 947              		.loc 10 139 43 view .LVU218
+ 948 00dc 3193     		str	r3, [sp, #196]
+ 949              	.LBE276:
+ 950              	.LBE287:
+ 107:src/effectWrapper.cpp ****         _effectPtr = effectPtr;
+ 951              		.loc 10 107 5 view .LVU219
+ 952 00de 3D94     		str	r4, [sp, #244]
+ 108:src/effectWrapper.cpp ****         _name = effectName;
+ 953              		.loc 10 108 20 view .LVU220
+ 954 00e0 2696     		str	r6, [sp, #152]
+ 955              	.LBB288:
+ 956              	.LBB281:
+ 186:src/effectWrapper.cpp ****    
+ 957              		.loc 10 186 86 view .LVU221
+ 958 00e2 4794     		str	r4, [sp, #284]
+ 959              	.LBE281:
+ 960              	.LBE288:
+ 961              	.LBB289:
+ 962              	.LBB277:
+ 140:src/effectWrapper.cpp ****             return 0;
+ 963              		.loc 10 140 13 view .LVU222
+ 964 00e4 3095     		str	r5, [sp, #192]
+ 965              	.LBE277:
+ 966              	.LBE289:
+ 107:src/effectWrapper.cpp ****         _effectPtr = effectPtr;
+ 967              		.loc 10 107 5 view .LVU223
+ 968 00e6 CDE94844 		strd	r4, r4, [sp, #288]
+ 969              	.LBE292:
+ 970              	.LBE295:
+ 971              	.LBE298:
+ 972              		.loc 8 86 26 view .LVU224
+ 973 00ea FFF7FEFF 		bl	_ZN13EffectWrapperI11AnalogDelayfffvE8SetParamEf
+ 974              	.LVL67:
   87:src/main.cpp  **** 
   88:src/main.cpp  ****     // first block inserted: works because of POLYMORPHISM
   89:src/main.cpp  ****     chain1.addEffect (&oscWrapper);
- 893              		.loc 8 89 5 is_stmt 1 view .LVU215
- 894              	.LBB290:
- 895              	.LBI290:
+ 975              		.loc 8 89 5 is_stmt 1 view .LVU225
+ 976              	.LBB299:
+ 977              	.LBI299:
   19:src/sigChain_handler.cpp ****         int oneIfFull = 0;
- 896              		.loc 9 19 9 view .LVU216
- 897              	.LBB291:
+ 978              		.loc 9 19 9 view .LVU226
+ 979              	.LBB300:
   20:src/sigChain_handler.cpp ****         if (_effectsCounter < MAX_NUM_OF_BLOCKS){
- 898              		.loc 9 20 9 view .LVU217
+ 980              		.loc 9 20 9 view .LVU227
   21:src/sigChain_handler.cpp ****              _effects[_effectsCounter] = effect;
- 899              		.loc 9 21 9 view .LVU218
+ 981              		.loc 9 21 9 view .LVU228
   21:src/sigChain_handler.cpp ****              _effects[_effectsCounter] = effect;
- 900              		.loc 9 21 13 is_stmt 0 view .LVU219
- 901 00e4 2C4A     		ldr	r2, .L65+60
- 902 00e6 136A     		ldr	r3, [r2, #32]
-  21:src/sigChain_handler.cpp ****              _effects[_effectsCounter] = effect;
- 903              		.loc 9 21 9 view .LVU220
- 904 00e8 072B     		cmp	r3, #7
- 905 00ea 0AD8     		bhi	.L55
-  22:src/sigChain_handler.cpp ****              _effectsCounter++;
- 906              		.loc 9 22 14 is_stmt 1 view .LVU221
-  23:src/sigChain_handler.cpp ****          } 
- 907              		.loc 9 23 29 is_stmt 0 view .LVU222
- 908 00ec 5919     		adds	r1, r3, r5
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 33
+ 982              		.loc 9 21 13 is_stmt 0 view .LVU229
+ 983 00ee 2F4A     		ldr	r2, .L67+68
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 35
 
 
-  22:src/sigChain_handler.cpp ****              _effectsCounter++;
- 909              		.loc 9 22 40 view .LVU223
- 910 00ee 42F823D0 		str	sp, [r2, r3, lsl #2]
-  23:src/sigChain_handler.cpp ****          } 
- 911              		.loc 9 23 14 is_stmt 1 view .LVU224
- 912              	.LBE291:
- 913              	.LBE290:
- 914              	.LBB293:
- 915              	.LBB294:
+ 984 00f0 136A     		ldr	r3, [r2, #32]
   21:src/sigChain_handler.cpp ****              _effects[_effectsCounter] = effect;
- 916              		.loc 9 21 9 is_stmt 0 view .LVU225
- 917 00f2 0829     		cmp	r1, #8
- 918              	.LBE294:
- 919              	.LBE293:
- 920              	.LBB296:
- 921              	.LBB292:
+ 985              		.loc 9 21 9 view .LVU230
+ 986 00f2 072B     		cmp	r3, #7
+ 987 00f4 0AD8     		bhi	.L57
+  22:src/sigChain_handler.cpp ****              _effectsCounter++;
+ 988              		.loc 9 22 14 is_stmt 1 view .LVU231
   23:src/sigChain_handler.cpp ****          } 
- 922              		.loc 9 23 29 view .LVU226
- 923 00f4 1162     		str	r1, [r2, #32]
- 924              	.LVL66:
+ 989              		.loc 9 23 29 is_stmt 0 view .LVU232
+ 990 00f6 5919     		adds	r1, r3, r5
+  22:src/sigChain_handler.cpp ****              _effectsCounter++;
+ 991              		.loc 9 22 40 view .LVU233
+ 992 00f8 42F823D0 		str	sp, [r2, r3, lsl #2]
+  23:src/sigChain_handler.cpp ****          } 
+ 993              		.loc 9 23 14 is_stmt 1 view .LVU234
+ 994              	.LBE300:
+ 995              	.LBE299:
+ 996              	.LBB302:
+ 997              	.LBB303:
+  21:src/sigChain_handler.cpp ****              _effects[_effectsCounter] = effect;
+ 998              		.loc 9 21 9 is_stmt 0 view .LVU235
+ 999 00fc 0829     		cmp	r1, #8
+ 1000              	.LBE303:
+ 1001              	.LBE302:
+ 1002              	.LBB305:
+ 1003              	.LBB301:
+  23:src/sigChain_handler.cpp ****          } 
+ 1004              		.loc 9 23 29 view .LVU236
+ 1005 00fe 1162     		str	r1, [r2, #32]
+ 1006              	.LVL68:
   28:src/sigChain_handler.cpp ****     }
- 925              		.loc 9 28 9 is_stmt 1 view .LVU227
+ 1007              		.loc 9 28 9 is_stmt 1 view .LVU237
   28:src/sigChain_handler.cpp ****     }
- 926              		.loc 9 28 9 is_stmt 0 view .LVU228
- 927              	.LBE292:
- 928              	.LBE296:
+ 1008              		.loc 9 28 9 is_stmt 0 view .LVU238
+ 1009              	.LBE301:
+ 1010              	.LBE305:
   90:src/main.cpp  ****     chain1.addEffect (&delayWrapper);
- 929              		.loc 8 90 5 is_stmt 1 view .LVU229
- 930              	.LBB297:
- 931              	.LBI293:
+ 1011              		.loc 8 90 5 is_stmt 1 view .LVU239
+ 1012              	.LBB306:
+ 1013              	.LBI302:
   19:src/sigChain_handler.cpp ****         int oneIfFull = 0;
- 932              		.loc 9 19 9 view .LVU230
- 933              	.LBB295:
+ 1014              		.loc 9 19 9 view .LVU240
+ 1015              	.LBB304:
   20:src/sigChain_handler.cpp ****         if (_effectsCounter < MAX_NUM_OF_BLOCKS){
- 934              		.loc 9 20 9 view .LVU231
+ 1016              		.loc 9 20 9 view .LVU241
   21:src/sigChain_handler.cpp ****              _effects[_effectsCounter] = effect;
- 935              		.loc 9 21 9 view .LVU232
- 936 00f6 04D0     		beq	.L55
+ 1017              		.loc 9 21 9 view .LVU242
+ 1018 0100 04D0     		beq	.L57
   22:src/sigChain_handler.cpp ****              _effectsCounter++;
- 937              		.loc 9 22 14 view .LVU233
+ 1019              		.loc 9 22 14 view .LVU243
   23:src/sigChain_handler.cpp ****          } 
- 938              		.loc 9 23 29 is_stmt 0 view .LVU234
- 939 00f8 0233     		adds	r3, r3, #2
+ 1020              		.loc 9 23 29 is_stmt 0 view .LVU244
+ 1021 0102 0233     		adds	r3, r3, #2
   22:src/sigChain_handler.cpp ****              _effectsCounter++;
- 940              		.loc 9 22 40 view .LVU235
- 941 00fa 24A8     		add	r0, sp, #144
- 942              	.LVL67:
-  23:src/sigChain_handler.cpp ****          } 
- 943              		.loc 9 23 29 view .LVU236
- 944 00fc 1362     		str	r3, [r2, #32]
-  22:src/sigChain_handler.cpp ****              _effectsCounter++;
- 945              		.loc 9 22 40 view .LVU237
- 946 00fe 42F82100 		str	r0, [r2, r1, lsl #2]
-  23:src/sigChain_handler.cpp ****          } 
- 947              		.loc 9 23 14 is_stmt 1 view .LVU238
- 948              	.LVL68:
- 949              	.L55:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 34
+ 1022              		.loc 9 22 40 view .LVU245
+ 1023 0104 25A8     		add	r0, sp, #148
+ 1024              	.LVL69:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 36
 
 
   23:src/sigChain_handler.cpp ****          } 
- 950              		.loc 9 23 14 is_stmt 0 view .LVU239
- 951              	.LBE295:
- 952              	.LBE297:
+ 1025              		.loc 9 23 29 view .LVU246
+ 1026 0106 1362     		str	r3, [r2, #32]
+  22:src/sigChain_handler.cpp ****              _effectsCounter++;
+ 1027              		.loc 9 22 40 view .LVU247
+ 1028 0108 42F82100 		str	r0, [r2, r1, lsl #2]
+  23:src/sigChain_handler.cpp ****          } 
+ 1029              		.loc 9 23 14 is_stmt 1 view .LVU248
+ 1030              	.LVL70:
+ 1031              	.L57:
+  23:src/sigChain_handler.cpp ****          } 
+ 1032              		.loc 9 23 14 is_stmt 0 view .LVU249
+ 1033              	.LBE304:
+ 1034              	.LBE306:
   36:src/main.cpp  **** 
- 953              		.loc 8 36 12 discriminator 1 view .LVU240
- 954 0102 9FED208A 		vldr.32	s16, .L65+40
- 955 0106 01E0     		b	.L59
- 956              	.LVL69:
- 957              	.L64:
- 958              	.LBB298:
- 959              	.LBB299:
- 960              		.loc 10 195 92 view .LVU241
- 961 0108 029B     		ldr	r3, [sp, #8]
- 962              	.L58:
- 963 010a 9847     		blx	r3
- 964              	.LVL70:
- 965              	.L59:
- 966              		.loc 10 195 92 view .LVU242
- 967              	.LBE299:
- 968              	.LBE298:
+ 1035              		.loc 8 36 12 discriminator 1 view .LVU250
+ 1036 010c 9FED208A 		vldr.32	s16, .L67+40
+ 1037 0110 01E0     		b	.L61
+ 1038              	.LVL71:
+ 1039              	.L66:
+ 1040              	.LBB307:
+ 1041              	.LBB308:
+ 1042              		.loc 10 227 92 view .LVU251
+ 1043 0112 039B     		ldr	r3, [sp, #12]
+ 1044              	.L60:
+ 1045 0114 9847     		blx	r3
+ 1046              	.LVL72:
+ 1047              	.L61:
+ 1048              		.loc 10 227 92 view .LVU252
+ 1049              	.LBE308:
+ 1050              	.LBE307:
   91:src/main.cpp  ****     while (1)
- 969              		.loc 8 91 5 is_stmt 1 discriminator 1 view .LVU243
+ 1051              		.loc 8 91 5 is_stmt 1 discriminator 1 view .LVU253
   92:src/main.cpp  ****     {
   93:src/main.cpp  ****         hw.DelayMs(10);
- 970              		.loc 8 93 9 discriminator 1 view .LVU244
- 971              		.loc 8 93 19 is_stmt 0 discriminator 1 view .LVU245
- 972 010c 0A21     		movs	r1, #10
- 973 010e 1348     		ldr	r0, .L65
- 974 0110 FFF7FEFF 		bl	_ZN5daisy9DaisySeed7DelayMsEj
- 975              	.LVL71:
+ 1052              		.loc 8 93 9 discriminator 1 view .LVU254
+ 1053              		.loc 8 93 19 is_stmt 0 discriminator 1 view .LVU255
+ 1054 0116 0A21     		movs	r1, #10
+ 1055 0118 1348     		ldr	r0, .L67
+ 1056 011a FFF7FEFF 		bl	_ZN5daisy9DaisySeed7DelayMsEj
+ 1057              	.LVL73:
   94:src/main.cpp  **** 
   95:src/main.cpp  ****         // should do a glissando up to 440Hz
   96:src/main.cpp  ****         oscWrapper.SetParam((float) (( (int)frequency++ % 440 )+ 50) );
- 976              		.loc 8 96 9 is_stmt 1 discriminator 1 view .LVU246
- 977              		.loc 8 96 40 is_stmt 0 discriminator 1 view .LVU247
- 978 0114 FDEEC87A 		vcvt.s32.f32	s15, s16
- 979              		.loc 8 96 57 discriminator 1 view .LVU248
- 980 0118 2048     		ldr	r0, .L65+64
- 981 011a 4FF4DC7C 		mov	ip, #440
- 982              	.LBB305:
- 983              	.LBB300:
- 984              		.loc 10 195 92 discriminator 1 view .LVU249
- 985 011e 039A     		ldr	r2, [sp, #12]
- 986              	.LBE300:
- 987              	.LBE305:
- 988              		.loc 8 96 40 discriminator 1 view .LVU250
- 989 0120 17EE903A 		vmov	r3, s15	@ int
- 990              		.loc 8 96 54 discriminator 1 view .LVU251
- 991 0124 F7EE007A 		vmov.f32	s15, #1.0e+0
- 992              	.LBB306:
- 993              	.LBB301:
- 994              		.loc 10 195 92 discriminator 1 view .LVU252
- 995 0128 019C     		ldr	r4, [sp, #4]
- 996 012a 4FEA620E 		asr	lr, r2, #1
- 997              	.LBE301:
- 998              	.LBE306:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 35
+ 1058              		.loc 8 96 9 is_stmt 1 discriminator 1 view .LVU256
+ 1059              		.loc 8 96 40 is_stmt 0 discriminator 1 view .LVU257
+ 1060 011e FDEEC87A 		vcvt.s32.f32	s15, s16
+ 1061              		.loc 8 96 57 discriminator 1 view .LVU258
+ 1062 0122 2348     		ldr	r0, .L67+72
+ 1063 0124 4FF4DC7C 		mov	ip, #440
+ 1064              	.LBB314:
+ 1065              	.LBB309:
+ 1066              		.loc 10 227 92 discriminator 1 view .LVU259
+ 1067 0128 049A     		ldr	r2, [sp, #16]
+ 1068              	.LBE309:
+ 1069              	.LBE314:
+ 1070              		.loc 8 96 40 discriminator 1 view .LVU260
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 37
 
 
- 999              		.loc 8 96 57 discriminator 1 view .LVU253
- 1000 012e 80FB0310 		smull	r1, r0, r0, r3
- 1001 0132 D917     		asrs	r1, r3, #31
- 1002              		.loc 8 96 54 discriminator 1 view .LVU254
- 1003 0134 38EE278A 		vadd.f32	s16, s16, s15
- 1004              	.LVL72:
- 1005              		.loc 8 96 57 discriminator 1 view .LVU255
- 1006 0138 C1EB2011 		rsb	r1, r1, r0, asr #4
- 1007              	.LBB307:
- 1008              	.LBB302:
- 1009              		.loc 10 195 92 discriminator 1 view .LVU256
- 1010 013c 04EB6200 		add	r0, r4, r2, asr #1
- 1011              	.LBE302:
- 1012              	.LBE307:
- 1013              		.loc 8 96 57 discriminator 1 view .LVU257
- 1014 0140 0CFB1133 		mls	r3, ip, r1, r3
- 1015              		.loc 8 96 64 discriminator 1 view .LVU258
- 1016 0144 3233     		adds	r3, r3, #50
- 1017              		.loc 8 96 28 discriminator 1 view .LVU259
- 1018 0146 07EE903A 		vmov	s15, r3	@ int
- 1019              	.LBB308:
- 1020              	.LBB303:
- 1021              		.loc 10 195 92 discriminator 1 view .LVU260
- 1022 014a D307     		lsls	r3, r2, #31
- 1023              	.LBE303:
- 1024              	.LBE308:
- 1025              		.loc 8 96 28 discriminator 1 view .LVU261
- 1026 014c B8EEE70A 		vcvt.f32.s32	s0, s15
- 1027              	.LVL73:
- 1028              	.LBB309:
- 1029              	.LBI298:
- 1030              		.loc 10 195 17 is_stmt 1 discriminator 1 view .LVU262
- 1031              	.LBB304:
- 1032              		.loc 10 195 92 is_stmt 0 discriminator 1 view .LVU263
- 1033 0150 DAD5     		bpl	.L64
- 1034              		.loc 10 195 92 view .LVU264
- 1035 0152 54F80E20 		ldr	r2, [r4, lr]
- 1036 0156 029B     		ldr	r3, [sp, #8]
- 1037 0158 D358     		ldr	r3, [r2, r3]
- 1038 015a D6E7     		b	.L58
- 1039              	.L66:
- 1040              		.align	2
- 1041              	.L65:
- 1042 015c 00000000 		.word	.LANCHOR2
- 1043 0160 00000000 		.word	.LANCHOR3
- 1044 0164 00000000 		.word	delay1
- 1045 0168 00803B47 		.word	1195081728
- 1046 016c 00000000 		.word	_Z13AudioCallbackPKPKfPPfj
- 1047 0170 3EC3AE37 		.word	934200126
- 1048 0174 0000C842 		.word	1120403456
- 1049 0178 08000000 		.word	_ZTV13EffectWrapperIN7daisysp10OscillatorEfffvE+8
- 1050 017c 00000000 		.word	_ZN7daisysp10Oscillator7SetFreqEf
- 1051 0180 00000000 		.word	_ZN7daisysp10Oscillator7ProcessEv
- 1052 0184 0000DC43 		.word	1138491392
- 1053 0188 08000000 		.word	_ZTV13EffectWrapperI11AnalogDelayfffvE+8
- 1054 018c 00000000 		.word	_ZN11AnalogDelay7ProcessEf
- 1055 0190 00000000 		.word	_ZN11AnalogDelay12setDelayTimeEf
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 36
+ 1071 012a 17EE903A 		vmov	r3, s15	@ int
+ 1072              		.loc 8 96 54 discriminator 1 view .LVU261
+ 1073 012e F7EE007A 		vmov.f32	s15, #1.0e+0
+ 1074              	.LBB315:
+ 1075              	.LBB310:
+ 1076              		.loc 10 227 92 discriminator 1 view .LVU262
+ 1077 0132 019C     		ldr	r4, [sp, #4]
+ 1078 0134 4FEA620E 		asr	lr, r2, #1
+ 1079              	.LBE310:
+ 1080              	.LBE315:
+ 1081              		.loc 8 96 57 discriminator 1 view .LVU263
+ 1082 0138 80FB0310 		smull	r1, r0, r0, r3
+ 1083 013c D917     		asrs	r1, r3, #31
+ 1084              		.loc 8 96 54 discriminator 1 view .LVU264
+ 1085 013e 38EE278A 		vadd.f32	s16, s16, s15
+ 1086              	.LVL74:
+ 1087              		.loc 8 96 57 discriminator 1 view .LVU265
+ 1088 0142 C1EB2011 		rsb	r1, r1, r0, asr #4
+ 1089              	.LBB316:
+ 1090              	.LBB311:
+ 1091              		.loc 10 227 92 discriminator 1 view .LVU266
+ 1092 0146 04EB6200 		add	r0, r4, r2, asr #1
+ 1093              	.LBE311:
+ 1094              	.LBE316:
+ 1095              		.loc 8 96 57 discriminator 1 view .LVU267
+ 1096 014a 0CFB1133 		mls	r3, ip, r1, r3
+ 1097              		.loc 8 96 64 discriminator 1 view .LVU268
+ 1098 014e 3233     		adds	r3, r3, #50
+ 1099              		.loc 8 96 28 discriminator 1 view .LVU269
+ 1100 0150 07EE903A 		vmov	s15, r3	@ int
+ 1101              	.LBB317:
+ 1102              	.LBB312:
+ 1103              		.loc 10 227 92 discriminator 1 view .LVU270
+ 1104 0154 D307     		lsls	r3, r2, #31
+ 1105              	.LBE312:
+ 1106              	.LBE317:
+ 1107              		.loc 8 96 28 discriminator 1 view .LVU271
+ 1108 0156 B8EEE70A 		vcvt.f32.s32	s0, s15
+ 1109              	.LVL75:
+ 1110              	.LBB318:
+ 1111              	.LBI307:
+ 1112              		.loc 10 227 17 is_stmt 1 discriminator 1 view .LVU272
+ 1113              	.LBB313:
+ 1114              		.loc 10 227 92 is_stmt 0 discriminator 1 view .LVU273
+ 1115 015a DAD5     		bpl	.L66
+ 1116              		.loc 10 227 92 view .LVU274
+ 1117 015c 54F80E20 		ldr	r2, [r4, lr]
+ 1118 0160 039B     		ldr	r3, [sp, #12]
+ 1119 0162 D358     		ldr	r3, [r2, r3]
+ 1120 0164 D6E7     		b	.L60
+ 1121              	.L68:
+ 1122 0166 00BF     		.align	2
+ 1123              	.L67:
+ 1124 0168 00000000 		.word	.LANCHOR2
+ 1125 016c 00000000 		.word	.LANCHOR3
+ 1126 0170 00000000 		.word	delay1
+ 1127 0174 00803B47 		.word	1195081728
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 38
 
 
- 1056 0194 CDCCCC3D 		.word	1036831949
- 1057 0198 00000000 		.word	.LANCHOR0
- 1058 019c 95204F09 		.word	156180629
- 1059              	.LBE304:
- 1060              	.LBE309:
- 1061              		.cfi_endproc
- 1062              	.LFE4837:
- 1064              		.section	.text.startup._GLOBAL__sub_I_hw,"ax",%progbits
- 1065              		.align	1
- 1066              		.p2align 2,,3
- 1067              		.syntax unified
- 1068              		.thumb
- 1069              		.thumb_func
- 1070              		.fpu fpv5-d16
- 1072              	_GLOBAL__sub_I_hw:
- 1073              	.LFB5424:
+ 1128 0178 00000000 		.word	_Z13AudioCallbackPKPKfPPfj
+ 1129 017c 3EC3AE37 		.word	934200126
+ 1130 0180 0000C842 		.word	1120403456
+ 1131 0184 08000000 		.word	_ZTV13EffectWrapperIN7daisysp10OscillatorEfffvE+8
+ 1132 0188 00000000 		.word	_ZN7daisysp10Oscillator7SetFreqEf
+ 1133 018c 00000000 		.word	_ZN7daisysp10Oscillator7ProcessEv
+ 1134 0190 0000DC43 		.word	1138491392
+ 1135 0194 08000000 		.word	_ZTV13EffectWrapperI11AnalogDelayfffvE+8
+ 1136 0198 00000000 		.word	.LC0
+ 1137 019c 00000000 		.word	_ZN11AnalogDelay12setDelayTimeEf
+ 1138 01a0 00000000 		.word	_ZN11AnalogDelay7ProcessEf
+ 1139 01a4 10000000 		.word	.LC1
+ 1140 01a8 CDCCCC3D 		.word	1036831949
+ 1141 01ac 00000000 		.word	.LANCHOR0
+ 1142 01b0 95204F09 		.word	156180629
+ 1143              	.LBE313:
+ 1144              	.LBE318:
+ 1145              		.cfi_endproc
+ 1146              	.LFE4840:
+ 1148              		.section	.text.startup._GLOBAL__sub_I_hw,"ax",%progbits
+ 1149              		.align	1
+ 1150              		.p2align 2,,3
+ 1151              		.syntax unified
+ 1152              		.thumb
+ 1153              		.thumb_func
+ 1154              		.fpu fpv5-d16
+ 1156              	_GLOBAL__sub_I_hw:
+ 1157              	.LFB5429:
   97:src/main.cpp  ****         
   98:src/main.cpp  ****     }
   99:src/main.cpp  ****     return 0;
  100:src/main.cpp  **** }...
- 1074              		.loc 8 100 1 is_stmt 1 view -0
- 1075              		.cfi_startproc
- 1076              		@ args = 0, pretend = 0, frame = 0
- 1077              		@ frame_needed = 0, uses_anonymous_args = 0
- 1078              	.LBB380:
- 1079              	.LBI380:
- 1080              		.loc 8 100 1 view .LVU266
- 1081              	.LVL74:
- 1082              	.LBB381:
- 1083              	.LBB382:
- 1084              	.LBI382:
+ 1158              		.loc 8 100 1 is_stmt 1 view -0
+ 1159              		.cfi_startproc
+ 1160              		@ args = 0, pretend = 0, frame = 0
+ 1161              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1162              	.LBB389:
+ 1163              	.LBI389:
+ 1164              		.loc 8 100 1 view .LVU276
+ 1165              	.LVL76:
+ 1166              	.LBB390:
+ 1167              	.LBB391:
+ 1168              	.LBI391:
   21:../../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
- 1085              		.loc 1 21 5 view .LVU267
- 1086              	.LBB383:
- 1087              	.LBB384:
- 1088              	.LBI384:
- 1089              		.file 12 "../../../libs/libDaisy/src/per/qspi.h"
+ 1169              		.loc 1 21 5 view .LVU277
+ 1170              	.LBB392:
+ 1171              	.LBB393:
+ 1172              	.LBI393:
+ 1173              		.file 12 "../../../libs/libDaisy/src/per/qspi.h"
    1:../../../libs/libDaisy/src/per/qspi.h **** #ifndef DSY_QSPI
    2:../../../libs/libDaisy/src/per/qspi.h **** #define DSY_QSPI /**< Macro */
    3:../../../libs/libDaisy/src/per/qspi.h **** 
@@ -2146,6 +2278,9 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
    6:../../../libs/libDaisy/src/per/qspi.h **** #include <cstdint>
    7:../../../libs/libDaisy/src/per/qspi.h **** #include "daisy_core.h"
    8:../../../libs/libDaisy/src/per/qspi.h **** #include "util/hal_map.h"
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 39
+
+
    9:../../../libs/libDaisy/src/per/qspi.h **** 
   10:../../../libs/libDaisy/src/per/qspi.h **** #define DSY_QSPI_TEXT       \
   11:../../../libs/libDaisy/src/per/qspi.h ****     __attribute__((section( \
@@ -2158,9 +2293,6 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   18:../../../libs/libDaisy/src/per/qspi.h ****         ".qspiflash_bss"))) /**< used for reading memory in memory_mapped mode. */
   19:../../../libs/libDaisy/src/per/qspi.h **** 
   20:../../../libs/libDaisy/src/per/qspi.h **** namespace daisy
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 37
-
-
   21:../../../libs/libDaisy/src/per/qspi.h **** {
   22:../../../libs/libDaisy/src/per/qspi.h **** /** @addtogroup serial
   23:../../../libs/libDaisy/src/per/qspi.h **** @{
@@ -2206,6 +2338,9 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   63:../../../libs/libDaisy/src/per/qspi.h ****             IS25LP080D,  /**< & */
   64:../../../libs/libDaisy/src/per/qspi.h ****             IS25LP064A,  /**< & */
   65:../../../libs/libDaisy/src/per/qspi.h ****             DEVICE_LAST, /**< & */
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 40
+
+
   66:../../../libs/libDaisy/src/per/qspi.h ****         };
   67:../../../libs/libDaisy/src/per/qspi.h **** 
   68:../../../libs/libDaisy/src/per/qspi.h ****         /** 
@@ -2218,9 +2353,6 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   75:../../../libs/libDaisy/src/per/qspi.h ****         enum Mode
   76:../../../libs/libDaisy/src/per/qspi.h ****         {
   77:../../../libs/libDaisy/src/per/qspi.h ****             MEMORY_MAPPED,    /**< & */
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 38
-
-
   78:../../../libs/libDaisy/src/per/qspi.h ****             INDIRECT_POLLING, /**< & */
   79:../../../libs/libDaisy/src/per/qspi.h ****             MODE_LAST,
   80:../../../libs/libDaisy/src/per/qspi.h ****         };
@@ -2266,6 +2398,9 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  120:../../../libs/libDaisy/src/per/qspi.h ****         \param size Buffer size
  121:../../../libs/libDaisy/src/per/qspi.h ****         \param buffer Buffer to write
  122:../../../libs/libDaisy/src/per/qspi.h ****         \return Result::OK or Result::ERR
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 41
+
+
  123:../../../libs/libDaisy/src/per/qspi.h ****         */
  124:../../../libs/libDaisy/src/per/qspi.h ****     Result WritePage(uint32_t address, uint32_t size, uint8_t* buffer);
  125:../../../libs/libDaisy/src/per/qspi.h **** 
@@ -2278,9 +2413,6 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  132:../../../libs/libDaisy/src/per/qspi.h ****         \return Result::OK or Result::ERR
  133:../../../libs/libDaisy/src/per/qspi.h ****         */
  134:../../../libs/libDaisy/src/per/qspi.h ****     Result Write(uint32_t address, uint32_t size, uint8_t* buffer);
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 39
-
-
  135:../../../libs/libDaisy/src/per/qspi.h **** 
  136:../../../libs/libDaisy/src/per/qspi.h ****     /** 
  137:../../../libs/libDaisy/src/per/qspi.h ****         Erases the area specified on the chip.
@@ -2315,20 +2447,23 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  166:../../../libs/libDaisy/src/per/qspi.h ****     void* GetData(uint32_t offset = 0);
  167:../../../libs/libDaisy/src/per/qspi.h **** 
  168:../../../libs/libDaisy/src/per/qspi.h ****     QSPIHandle() : pimpl_(nullptr) {}
- 1090              		.loc 12 168 5 view .LVU268
- 1091              		.loc 12 168 5 is_stmt 0 view .LVU269
- 1092              	.LBE384:
- 1093              	.LBB387:
- 1094              	.LBI387:
+ 1174              		.loc 12 168 5 view .LVU278
+ 1175              		.loc 12 168 5 is_stmt 0 view .LVU279
+ 1176              	.LBE393:
+ 1177              	.LBB396:
+ 1178              	.LBI396:
   58:../../../libs/libDaisy/src/per/qspi.h ****     {
- 1095              		.loc 12 58 12 is_stmt 1 view .LVU270
- 1096              	.LBB388:
- 1097              	.LBI388:
+ 1179              		.loc 12 58 12 is_stmt 1 view .LVU280
+ 1180              	.LBB397:
+ 1181              	.LBI397:
   84:../../../libs/libDaisy/src/per/qspi.h ****             Pin io0; /**< & */
- 1098              		.loc 12 84 9 view .LVU271
- 1099              	.LBB389:
- 1100              	.LBI389:
- 1101              		.file 13 "../../../libs/libDaisy/src/daisy_core.h"
+ 1182              		.loc 12 84 9 view .LVU281
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 42
+
+
+ 1183              	.LBB398:
+ 1184              	.LBI398:
+ 1185              		.file 13 "../../../libs/libDaisy/src/daisy_core.h"
    1:../../../libs/libDaisy/src/daisy_core.h **** #pragma once
    2:../../../libs/libDaisy/src/daisy_core.h **** #ifndef DSY_CORE_HW_H
    3:../../../libs/libDaisy/src/daisy_core.h **** #define DSY_CORE_HW_H /**< & */
@@ -2338,9 +2473,6 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
    7:../../../libs/libDaisy/src/daisy_core.h **** #if defined(_MSC_VER)
    8:../../../libs/libDaisy/src/daisy_core.h **** #define FORCE_INLINE __forceinline /**< & */
    9:../../../libs/libDaisy/src/daisy_core.h **** #elif defined(__clang__)
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 40
-
-
   10:../../../libs/libDaisy/src/daisy_core.h **** #define FORCE_INLINE inline __attribute__((always_inline)) /**< & */
   11:../../../libs/libDaisy/src/daisy_core.h **** #pragma clang diagnostic ignored "-Wduplicate-decl-specifier"
   12:../../../libs/libDaisy/src/daisy_core.h **** #elif defined(__GNUC__)
@@ -2386,6 +2518,9 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   52:../../../libs/libDaisy/src/daisy_core.h **** /** shorthand macro for simplifying the reading of the right 
   53:../../../libs/libDaisy/src/daisy_core.h ****  *  channel of a non-interleaved output buffer named out */
   54:../../../libs/libDaisy/src/daisy_core.h **** #define OUT_R out[1]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 43
+
+
   55:../../../libs/libDaisy/src/daisy_core.h **** 
   56:../../../libs/libDaisy/src/daisy_core.h **** /** shorthand macro for simplifying the reading of the left 
   57:../../../libs/libDaisy/src/daisy_core.h ****  *  channel of a non-interleaved input buffer named in */
@@ -2398,9 +2533,6 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   64:../../../libs/libDaisy/src/daisy_core.h **** /** 
   65:../../../libs/libDaisy/src/daisy_core.h ****     Computes cube.
   66:../../../libs/libDaisy/src/daisy_core.h ****     \param x Number to be cubed
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 41
-
-
   67:../../../libs/libDaisy/src/daisy_core.h ****     \return x ^ 3
   68:../../../libs/libDaisy/src/daisy_core.h **** */
   69:../../../libs/libDaisy/src/daisy_core.h **** FORCE_INLINE float cube(float x)
@@ -2446,6 +2578,9 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  109:../../../libs/libDaisy/src/daisy_core.h **** {
  110:../../../libs/libDaisy/src/daisy_core.h ****     x = x <= FBIPMIN ? FBIPMIN : x;
  111:../../../libs/libDaisy/src/daisy_core.h ****     x = x >= FBIPMAX ? FBIPMAX : x;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 44
+
+
  112:../../../libs/libDaisy/src/daisy_core.h ****     return (int32_t)(x * F2S8_SCALE);
  113:../../../libs/libDaisy/src/daisy_core.h **** }
  114:../../../libs/libDaisy/src/daisy_core.h **** 
@@ -2458,9 +2593,6 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  121:../../../libs/libDaisy/src/daisy_core.h **** {
  122:../../../libs/libDaisy/src/daisy_core.h ****     return (float)x * S162F_SCALE;
  123:../../../libs/libDaisy/src/daisy_core.h **** }
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 42
-
-
  124:../../../libs/libDaisy/src/daisy_core.h **** 
  125:../../../libs/libDaisy/src/daisy_core.h **** /**
  126:../../../libs/libDaisy/src/daisy_core.h ****     Converts float to Signed 16-bit
@@ -2506,6 +2638,9 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  166:../../../libs/libDaisy/src/daisy_core.h ****     x = x >= FBIPMAX ? FBIPMAX : x;
  167:../../../libs/libDaisy/src/daisy_core.h ****     return (int32_t)(x * F2S32_SCALE);
  168:../../../libs/libDaisy/src/daisy_core.h **** }
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 45
+
+
  169:../../../libs/libDaisy/src/daisy_core.h **** 
  170:../../../libs/libDaisy/src/daisy_core.h **** #ifdef __cplusplus
  171:../../../libs/libDaisy/src/daisy_core.h **** 
@@ -2518,9 +2653,6 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  178:../../../libs/libDaisy/src/daisy_core.h ****     PORTB, /**< Port B */
  179:../../../libs/libDaisy/src/daisy_core.h ****     PORTC, /**< Port C */
  180:../../../libs/libDaisy/src/daisy_core.h ****     PORTD, /**< Port D */
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 43
-
-
  181:../../../libs/libDaisy/src/daisy_core.h ****     PORTE, /**< Port E */
  182:../../../libs/libDaisy/src/daisy_core.h ****     PORTF, /**< Port F */
  183:../../../libs/libDaisy/src/daisy_core.h ****     PORTG, /**< Port G */
@@ -2545,56 +2677,56 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  202:../../../libs/libDaisy/src/daisy_core.h **** 
  203:../../../libs/libDaisy/src/daisy_core.h ****     /** @brief Basic Constructor creates an invalid Pin object */
  204:../../../libs/libDaisy/src/daisy_core.h ****     constexpr Pin() : port(PORTX), pin(255) {}
- 1102              		.loc 13 204 15 view .LVU272
- 1103              		.loc 13 204 15 is_stmt 0 view .LVU273
- 1104              	.LBE389:
- 1105              	.LBB390:
- 1106              	.LBI390:
- 1107              		.loc 13 204 15 is_stmt 1 view .LVU274
- 1108              		.loc 13 204 15 is_stmt 0 view .LVU275
- 1109              	.LBE390:
- 1110              	.LBB391:
- 1111              	.LBI391:
- 1112              		.loc 13 204 15 is_stmt 1 view .LVU276
- 1113              		.loc 13 204 15 is_stmt 0 view .LVU277
- 1114              	.LBE391:
- 1115              	.LBB392:
- 1116              	.LBI392:
- 1117              		.loc 13 204 15 is_stmt 1 view .LVU278
- 1118              		.loc 13 204 15 is_stmt 0 view .LVU279
- 1119              	.LBE392:
- 1120              	.LBB393:
- 1121              	.LBI393:
- 1122              		.loc 13 204 15 is_stmt 1 view .LVU280
- 1123              		.loc 13 204 15 is_stmt 0 view .LVU281
- 1124              	.LBE393:
- 1125              	.LBB394:
- 1126              	.LBI394:
- 1127              		.loc 13 204 15 is_stmt 1 view .LVU282
- 1128              		.loc 13 204 15 is_stmt 0 view .LVU283
- 1129              	.LBE394:
- 1130              	.LBE388:
- 1131              	.LBE387:
- 1132              	.LBB395:
- 1133              	.LBI395:
-  87:../../../libs/libDaisy/src/hid/audio.h ****     ~AudioHandle() {}
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 44
+ 1186              		.loc 13 204 15 view .LVU282
+ 1187              		.loc 13 204 15 is_stmt 0 view .LVU283
+ 1188              	.LBE398:
+ 1189              	.LBB399:
+ 1190              	.LBI399:
+ 1191              		.loc 13 204 15 is_stmt 1 view .LVU284
+ 1192              		.loc 13 204 15 is_stmt 0 view .LVU285
+ 1193              	.LBE399:
+ 1194              	.LBB400:
+ 1195              	.LBI400:
+ 1196              		.loc 13 204 15 is_stmt 1 view .LVU286
+ 1197              		.loc 13 204 15 is_stmt 0 view .LVU287
+ 1198              	.LBE400:
+ 1199              	.LBB401:
+ 1200              	.LBI401:
+ 1201              		.loc 13 204 15 is_stmt 1 view .LVU288
+ 1202              		.loc 13 204 15 is_stmt 0 view .LVU289
+ 1203              	.LBE401:
+ 1204              	.LBB402:
+ 1205              	.LBI402:
+ 1206              		.loc 13 204 15 is_stmt 1 view .LVU290
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 46
 
 
- 1134              		.loc 6 87 5 is_stmt 1 view .LVU284
+ 1207              		.loc 13 204 15 is_stmt 0 view .LVU291
+ 1208              	.LBE402:
+ 1209              	.LBB403:
+ 1210              	.LBI403:
+ 1211              		.loc 13 204 15 is_stmt 1 view .LVU292
+ 1212              		.loc 13 204 15 is_stmt 0 view .LVU293
+ 1213              	.LBE403:
+ 1214              	.LBE397:
+ 1215              	.LBE396:
+ 1216              	.LBB404:
+ 1217              	.LBI404:
   87:../../../libs/libDaisy/src/hid/audio.h ****     ~AudioHandle() {}
- 1135              		.loc 6 87 5 is_stmt 0 view .LVU285
- 1136              	.LBE395:
- 1137              	.LBB398:
- 1138              	.LBI398:
+ 1218              		.loc 6 87 5 is_stmt 1 view .LVU294
+  87:../../../libs/libDaisy/src/hid/audio.h ****     ~AudioHandle() {}
+ 1219              		.loc 6 87 5 is_stmt 0 view .LVU295
+ 1220              	.LBE404:
+ 1221              	.LBB407:
+ 1222              	.LBI407:
  109:../../../libs/libDaisy/src/per/adc.h ****     ~AdcHandle() {}
- 1139              		.loc 5 109 5 is_stmt 1 view .LVU286
+ 1223              		.loc 5 109 5 is_stmt 1 view .LVU296
  109:../../../libs/libDaisy/src/per/adc.h ****     ~AdcHandle() {}
- 1140              		.loc 5 109 5 is_stmt 0 view .LVU287
- 1141              	.LBE398:
- 1142              	.LBB399:
- 1143              	.LBI399:
- 1144              		.file 14 "../../../libs/libDaisy/src/per/dac.h"
+ 1224              		.loc 5 109 5 is_stmt 0 view .LVU297
+ 1225              	.LBE407:
+ 1226              	.LBB408:
+ 1227              	.LBI408:
+ 1228              		.file 14 "../../../libs/libDaisy/src/per/dac.h"
    1:../../../libs/libDaisy/src/per/dac.h **** #pragma once
    2:../../../libs/libDaisy/src/per/dac.h **** #ifndef DSY_DAC_H
    3:../../../libs/libDaisy/src/per/dac.h **** #define DSY_DAC_H
@@ -2626,6 +2758,9 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   29:../../../libs/libDaisy/src/per/dac.h ****     };
   30:../../../libs/libDaisy/src/per/dac.h **** 
   31:../../../libs/libDaisy/src/per/dac.h ****     /** Selects which channel(s) will be configured for use. */
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 47
+
+
   32:../../../libs/libDaisy/src/per/dac.h ****     enum class Channel
   33:../../../libs/libDaisy/src/per/dac.h ****     {
   34:../../../libs/libDaisy/src/per/dac.h ****         ONE,
@@ -2638,9 +2773,6 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   41:../../../libs/libDaisy/src/per/dac.h ****      ** Polling mode uses the blocking mode to transmit a single value at a time.
   42:../../../libs/libDaisy/src/per/dac.h ****      **
   43:../../../libs/libDaisy/src/per/dac.h ****      ** DMA mode uses a buffer, and periodically transmits it triggering a 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 45
-
-
   44:../../../libs/libDaisy/src/per/dac.h ****      ** callback to fill the buffer when it is ready for more samples.
   45:../../../libs/libDaisy/src/per/dac.h ****      ***/
   46:../../../libs/libDaisy/src/per/dac.h ****     enum class Mode
@@ -2682,25 +2814,25 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   82:../../../libs/libDaisy/src/per/dac.h ****     };
   83:../../../libs/libDaisy/src/per/dac.h **** 
   84:../../../libs/libDaisy/src/per/dac.h ****     DacHandle() : pimpl_(nullptr) {}
- 1145              		.loc 14 84 5 is_stmt 1 view .LVU288
- 1146              		.loc 14 84 5 is_stmt 0 view .LVU289
- 1147              	.LBE399:
- 1148              	.LBB402:
- 1149              	.LBI402:
+ 1229              		.loc 14 84 5 is_stmt 1 view .LVU298
+ 1230              		.loc 14 84 5 is_stmt 0 view .LVU299
+ 1231              	.LBE408:
+ 1232              	.LBB411:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 48
+
+
+ 1233              	.LBI411:
   40:../../../libs/libDaisy/src/hid/usb.h **** 
- 1150              		.loc 4 40 5 is_stmt 1 view .LVU290
+ 1234              		.loc 4 40 5 is_stmt 1 view .LVU300
   40:../../../libs/libDaisy/src/hid/usb.h **** 
- 1151              		.loc 4 40 5 is_stmt 0 view .LVU291
- 1152              	.LBE402:
- 1153              	.LBB403:
- 1154              	.LBI403:
- 1155              		.file 15 "../../../libs/libDaisy/src/per/gpio.h"
+ 1235              		.loc 4 40 5 is_stmt 0 view .LVU301
+ 1236              	.LBE411:
+ 1237              	.LBB412:
+ 1238              	.LBI412:
+ 1239              		.file 15 "../../../libs/libDaisy/src/per/gpio.h"
    1:../../../libs/libDaisy/src/per/gpio.h **** #pragma once
    2:../../../libs/libDaisy/src/per/gpio.h **** #ifndef DSY_GPIO_H
    3:../../../libs/libDaisy/src/per/gpio.h **** #define DSY_GPIO_H
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 46
-
-
    4:../../../libs/libDaisy/src/per/gpio.h **** #include "daisy_core.h"
    5:../../../libs/libDaisy/src/per/gpio.h **** 
    6:../../../libs/libDaisy/src/per/gpio.h **** #ifdef __cplusplus
@@ -2746,6 +2878,9 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   46:../../../libs/libDaisy/src/per/gpio.h ****     };
   47:../../../libs/libDaisy/src/per/gpio.h **** 
   48:../../../libs/libDaisy/src/per/gpio.h ****     /** @brief Output speed controls the drive strength, and slew rate of the pin */
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 49
+
+
   49:../../../libs/libDaisy/src/per/gpio.h ****     enum class Speed
   50:../../../libs/libDaisy/src/per/gpio.h ****     {
   51:../../../libs/libDaisy/src/per/gpio.h ****         LOW,
@@ -2758,9 +2893,6 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   58:../../../libs/libDaisy/src/per/gpio.h ****     struct Config
   59:../../../libs/libDaisy/src/per/gpio.h ****     {
   60:../../../libs/libDaisy/src/per/gpio.h ****         Pin   pin;
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 47
-
-
   61:../../../libs/libDaisy/src/per/gpio.h ****         Mode  mode;
   62:../../../libs/libDaisy/src/per/gpio.h ****         Pull  pull;
   63:../../../libs/libDaisy/src/per/gpio.h ****         Speed speed;
@@ -2775,82 +2907,82 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   72:../../../libs/libDaisy/src/per/gpio.h ****     };
   73:../../../libs/libDaisy/src/per/gpio.h **** 
   74:../../../libs/libDaisy/src/per/gpio.h ****     GPIO() {}
- 1156              		.loc 15 74 5 is_stmt 1 view .LVU292
- 1157              	.LBB404:
- 1158              	.LBB405:
- 1159              	.LBI405:
+ 1240              		.loc 15 74 5 is_stmt 1 view .LVU302
+ 1241              	.LBB413:
+ 1242              	.LBB414:
+ 1243              	.LBI414:
   68:../../../libs/libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
- 1160              		.loc 15 68 9 view .LVU293
- 1161              	.LBB406:
- 1162              	.LBB407:
- 1163              	.LBB408:
- 1164              	.LBI408:
- 1165              		.loc 13 204 15 view .LVU294
- 1166              		.loc 13 204 15 is_stmt 0 view .LVU295
- 1167              	.LBE408:
- 1168              	.LBE407:
- 1169              	.LBE406:
- 1170              	.LBE405:
- 1171              	.LBE404:
- 1172              	.LBE403:
- 1173              	.LBB417:
- 1174              	.LBI417:
- 1175              		.loc 15 74 5 is_stmt 1 view .LVU296
- 1176              	.LBB418:
- 1177              	.LBB419:
- 1178              	.LBI419:
+ 1244              		.loc 15 68 9 view .LVU303
+ 1245              	.LBB415:
+ 1246              	.LBB416:
+ 1247              	.LBB417:
+ 1248              	.LBI417:
+ 1249              		.loc 13 204 15 view .LVU304
+ 1250              		.loc 13 204 15 is_stmt 0 view .LVU305
+ 1251              	.LBE417:
+ 1252              	.LBE416:
+ 1253              	.LBE415:
+ 1254              	.LBE414:
+ 1255              	.LBE413:
+ 1256              	.LBE412:
+ 1257              	.LBB426:
+ 1258              	.LBI426:
+ 1259              		.loc 15 74 5 is_stmt 1 view .LVU306
+ 1260              	.LBB427:
+ 1261              	.LBB428:
+ 1262              	.LBI428:
   68:../../../libs/libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
- 1179              		.loc 15 68 9 view .LVU297
- 1180              	.LBB420:
- 1181              	.LBB421:
- 1182              	.LBB422:
- 1183              	.LBI422:
- 1184              		.loc 13 204 15 view .LVU298
- 1185              		.loc 13 204 15 is_stmt 0 view .LVU299
- 1186              	.LBE422:
- 1187              	.LBE421:
- 1188              	.LBE420:
- 1189              	.LBE419:
- 1190              	.LBE418:
- 1191              	.LBE417:
- 1192              	.LBB431:
- 1193              	.LBI431:
-  96:../../../libs/libDaisy/src/sys/system.h ****     ~System() {}
- 1194              		.loc 3 96 5 is_stmt 1 view .LVU300
-  96:../../../libs/libDaisy/src/sys/system.h ****     ~System() {}
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 48
+ 1263              		.loc 15 68 9 view .LVU307
+ 1264              	.LBB429:
+ 1265              	.LBB430:
+ 1266              	.LBB431:
+ 1267              	.LBI431:
+ 1268              		.loc 13 204 15 view .LVU308
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 50
 
 
- 1195              		.loc 3 96 5 is_stmt 0 view .LVU301
- 1196              	.LBE431:
- 1197              	.LBB432:
- 1198              	.LBI432:
+ 1269              		.loc 13 204 15 is_stmt 0 view .LVU309
+ 1270              	.LBE431:
+ 1271              	.LBE430:
+ 1272              	.LBE429:
+ 1273              	.LBE428:
+ 1274              	.LBE427:
+ 1275              	.LBE426:
+ 1276              	.LBB440:
+ 1277              	.LBI440:
+  96:../../../libs/libDaisy/src/sys/system.h ****     ~System() {}
+ 1278              		.loc 3 96 5 is_stmt 1 view .LVU310
+  96:../../../libs/libDaisy/src/sys/system.h ****     ~System() {}
+ 1279              		.loc 3 96 5 is_stmt 0 view .LVU311
+ 1280              	.LBE440:
+ 1281              	.LBB441:
+ 1282              	.LBI441:
   20:../../../libs/libDaisy/src/dev/codec_ak4556.h ****     ~Ak4556() {}
- 1199              		.loc 2 20 5 is_stmt 1 view .LVU302
- 1200              	.LBB433:
- 1201              	.LBI433:
- 1202              		.loc 15 74 5 view .LVU303
- 1203              	.LBB434:
- 1204              	.LBB435:
- 1205              	.LBI435:
+ 1283              		.loc 2 20 5 is_stmt 1 view .LVU312
+ 1284              	.LBB442:
+ 1285              	.LBI442:
+ 1286              		.loc 15 74 5 view .LVU313
+ 1287              	.LBB443:
+ 1288              	.LBB444:
+ 1289              	.LBI444:
   68:../../../libs/libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
- 1206              		.loc 15 68 9 view .LVU304
- 1207              	.LBB436:
- 1208              	.LBB437:
- 1209              	.LBB438:
- 1210              	.LBI438:
- 1211              		.loc 13 204 15 view .LVU305
- 1212              		.loc 13 204 15 is_stmt 0 view .LVU306
- 1213              	.LBE438:
- 1214              	.LBE437:
- 1215              	.LBE436:
- 1216              	.LBE435:
- 1217              	.LBE434:
- 1218              	.LBE433:
- 1219              	.LBE432:
- 1220              	.LBB449:
- 1221              	.LBI449:
- 1222              		.file 16 "../../../libs/libDaisy/src/per/sai.h"
+ 1290              		.loc 15 68 9 view .LVU314
+ 1291              	.LBB445:
+ 1292              	.LBB446:
+ 1293              	.LBB447:
+ 1294              	.LBI447:
+ 1295              		.loc 13 204 15 view .LVU315
+ 1296              		.loc 13 204 15 is_stmt 0 view .LVU316
+ 1297              	.LBE447:
+ 1298              	.LBE446:
+ 1299              	.LBE445:
+ 1300              	.LBE444:
+ 1301              	.LBE443:
+ 1302              	.LBE442:
+ 1303              	.LBE441:
+ 1304              	.LBB458:
+ 1305              	.LBI458:
+ 1306              		.file 16 "../../../libs/libDaisy/src/per/sai.h"
    1:../../../libs/libDaisy/src/per/sai.h **** #pragma once
    2:../../../libs/libDaisy/src/per/sai.h **** #ifndef DSY_SAI_H
    3:../../../libs/libDaisy/src/per/sai.h **** #define DSY_SAI_H
@@ -2866,6 +2998,9 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   13:../../../libs/libDaisy/src/per/sai.h ****  * and other behavior for each peripheral, and block.
   14:../../../libs/libDaisy/src/per/sai.h ****  * 
   15:../../../libs/libDaisy/src/per/sai.h ****  * DMA Transfer commands must use buffers located within non-cached memory or use cache maintenance
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 51
+
+
   16:../../../libs/libDaisy/src/per/sai.h ****  * To declare an unitialized global element in the DMA memory section:
   17:../../../libs/libDaisy/src/per/sai.h ****  *    int32_t DSY_DMA_BUFFER_SECTOR my_buffer[96];
   18:../../../libs/libDaisy/src/per/sai.h ****  *
@@ -2878,9 +3013,6 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   25:../../../libs/libDaisy/src/per/sai.h ****  *  sai_config.periph          = SaiHandle::Config::Peripheral::SAI_1;
   26:../../../libs/libDaisy/src/per/sai.h ****  *  sai_config.sr              = SaiHandle::Config::SampleRate::SAI_48KHZ;
   27:../../../libs/libDaisy/src/per/sai.h ****  *  sai_config.bit_depth       = SaiHandle::Config::BitDepth::SAI_24BIT;
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 49
-
-
   28:../../../libs/libDaisy/src/per/sai.h ****  *  sai_config.a_sync          = SaiHandle::Config::Sync::MASTER;
   29:../../../libs/libDaisy/src/per/sai.h ****  *  sai_config.b_sync          = SaiHandle::Config::Sync::SLAVE;
   30:../../../libs/libDaisy/src/per/sai.h ****  *  sai_config.a_dir           = SaiHandle::Config::Direction::RECEIVE;
@@ -2926,6 +3058,9 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   70:../../../libs/libDaisy/src/per/sai.h ****             SAI_24BIT,
   71:../../../libs/libDaisy/src/per/sai.h ****             SAI_32BIT,
   72:../../../libs/libDaisy/src/per/sai.h ****         };
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 52
+
+
   73:../../../libs/libDaisy/src/per/sai.h **** 
   74:../../../libs/libDaisy/src/per/sai.h ****         /** Specifies whether a particular block is the master or the slave 
   75:../../../libs/libDaisy/src/per/sai.h ****          ** If both are set to slave, no MCLK signal will be used, and it is
@@ -2938,9 +3073,6 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
   82:../../../libs/libDaisy/src/per/sai.h ****         };
   83:../../../libs/libDaisy/src/per/sai.h **** 
   84:../../../libs/libDaisy/src/per/sai.h ****         /** Specifies the direction for each peripheral block. */
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 50
-
-
   85:../../../libs/libDaisy/src/per/sai.h ****         enum class Direction
   86:../../../libs/libDaisy/src/per/sai.h ****         {
   87:../../../libs/libDaisy/src/per/sai.h ****             TRANSMIT,
@@ -2966,425 +3098,432 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 1
  107:../../../libs/libDaisy/src/per/sai.h ****     };
  108:../../../libs/libDaisy/src/per/sai.h **** 
  109:../../../libs/libDaisy/src/per/sai.h ****     SaiHandle() : pimpl_(nullptr) {}
- 1223              		.loc 16 109 5 is_stmt 1 view .LVU307
- 1224              	.LBE449:
- 1225              	.LBE383:
- 1226              	.LBE382:
- 1227              	.LBE381:
- 1228              	.LBE380:
- 1229              		.loc 8 100 1 is_stmt 0 view .LVU308
- 1230 0000 38B5     		push	{r3, r4, r5, lr}
- 1231              		.cfi_def_cfa_offset 16
- 1232              		.cfi_offset 3, -16
- 1233              		.cfi_offset 4, -12
- 1234              		.cfi_offset 5, -8
- 1235              		.cfi_offset 14, -4
- 1236              	.LBB477:
- 1237              	.LBB475:
- 1238              	.LBB466:
- 1239              	.LBB462:
- 1240              	.LBB452:
- 1241              	.LBB385:
- 1242              	.LBB386:
- 1243              		.loc 12 168 34 view .LVU309
- 1244 0002 1748     		ldr	r0, .L69
- 1245 0004 0024     		movs	r4, #0
- 1246              	.LBE386:
- 1247              	.LBE385:
- 1248              	.LBE452:
+ 1307              		.loc 16 109 5 is_stmt 1 view .LVU317
+ 1308              	.LBE458:
+ 1309              	.LBE392:
+ 1310              	.LBE391:
+ 1311              	.LBE390:
+ 1312              	.LBE389:
+ 1313              		.loc 8 100 1 is_stmt 0 view .LVU318
+ 1314 0000 38B5     		push	{r3, r4, r5, lr}
+ 1315              		.cfi_def_cfa_offset 16
+ 1316              		.cfi_offset 3, -16
+ 1317              		.cfi_offset 4, -12
+ 1318              		.cfi_offset 5, -8
+ 1319              		.cfi_offset 14, -4
+ 1320              	.LBB486:
+ 1321              	.LBB484:
+ 1322              	.LBB475:
+ 1323              	.LBB471:
+ 1324              	.LBB461:
+ 1325              	.LBB394:
+ 1326              	.LBB395:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 53
+
+
+ 1327              		.loc 12 168 34 view .LVU319
+ 1328 0002 1748     		ldr	r0, .L71
+ 1329 0004 0024     		movs	r4, #0
+ 1330              	.LBE395:
+ 1331              	.LBE394:
+ 1332              	.LBE461:
   21:../../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
- 1249              		.loc 1 21 17 view .LVU310
- 1250 0006 4FF60B73 		movw	r3, #65291
- 1251 000a 6FF0F411 		mvn	r1, #15991028
- 1252              	.LBE462:
- 1253              	.LBE466:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 51
-
-
+ 1333              		.loc 1 21 17 view .LVU320
+ 1334 0006 4FF60B73 		movw	r3, #65291
+ 1335 000a 6FF0F411 		mvn	r1, #15991028
+ 1336              	.LBE471:
+ 1337              	.LBE475:
   12:src/main.cpp  **** DaisySeed hw;
- 1254              		.loc 8 12 11 view .LVU311
- 1255 000e 154A     		ldr	r2, .L69+4
- 1256              	.LBB467:
- 1257              	.LBB463:
- 1258              	.LBB453:
- 1259              	.LBB396:
- 1260              	.LBB397:
+ 1338              		.loc 8 12 11 view .LVU321
+ 1339 000e 154A     		ldr	r2, .L71+4
+ 1340              	.LBB476:
+ 1341              	.LBB472:
+ 1342              	.LBB462:
+ 1343              	.LBB405:
+ 1344              	.LBB406:
   87:../../../libs/libDaisy/src/hid/audio.h ****     ~AudioHandle() {}
- 1261              		.loc 6 87 35 view .LVU312
- 1262 0010 4461     		str	r4, [r0, #20]
- 1263              	.LBE397:
- 1264              	.LBE396:
- 1265              	.LBE453:
- 1266              	.LBB454:
- 1267              	.LBB400:
- 1268              	.LBB401:
- 1269              		.loc 14 84 33 view .LVU313
- 1270 0012 0462     		str	r4, [r0, #32]
- 1271              	.LBE401:
- 1272              	.LBE400:
- 1273              	.LBE454:
+ 1345              		.loc 6 87 35 view .LVU322
+ 1346 0010 4461     		str	r4, [r0, #20]
+ 1347              	.LBE406:
+ 1348              	.LBE405:
+ 1349              	.LBE462:
+ 1350              	.LBB463:
+ 1351              	.LBB409:
+ 1352              	.LBB410:
+ 1353              		.loc 14 84 33 view .LVU323
+ 1354 0012 0462     		str	r4, [r0, #32]
+ 1355              	.LBE410:
+ 1356              	.LBE409:
+ 1357              	.LBE463:
   21:../../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
- 1274              		.loc 1 21 17 view .LVU314
- 1275 0014 8365     		str	r3, [r0, #88]
- 1276              	.LBB455:
- 1277              	.LBB447:
- 1278              	.LBB445:
- 1279              	.LBB443:
- 1280              	.LBB441:
- 1281              	.LBB439:
+ 1358              		.loc 1 21 17 view .LVU324
+ 1359 0014 8365     		str	r3, [r0, #88]
+ 1360              	.LBB464:
+ 1361              	.LBB456:
+ 1362              	.LBB454:
+ 1363              	.LBB452:
+ 1364              	.LBB450:
+ 1365              	.LBB448:
   69:../../../libs/libDaisy/src/per/gpio.h ****         {
- 1282              		.loc 15 69 73 view .LVU315
- 1283 0016 4466     		str	r4, [r0, #100]
- 1284              	.LBE439:
- 1285              	.LBE441:
- 1286              	.LBE443:
- 1287              	.LBE445:
- 1288              	.LBE447:
- 1289              	.LBE455:
- 1290              	.LBB456:
- 1291              	.LBB450:
- 1292              	.LBB451:
- 1293              		.loc 16 109 33 view .LVU316
- 1294 0018 0467     		str	r4, [r0, #112]
- 1295              	.LVL75:
- 1296              		.loc 16 109 33 view .LVU317
- 1297              	.LBE451:
- 1298              	.LBE450:
- 1299              	.LBE456:
- 1300              	.LBE463:
- 1301              	.LBE467:
+ 1366              		.loc 15 69 73 view .LVU325
+ 1367 0016 4466     		str	r4, [r0, #100]
+ 1368              	.LBE448:
+ 1369              	.LBE450:
+ 1370              	.LBE452:
+ 1371              	.LBE454:
+ 1372              	.LBE456:
+ 1373              	.LBE464:
+ 1374              	.LBB465:
+ 1375              	.LBB459:
+ 1376              	.LBB460:
+ 1377              		.loc 16 109 33 view .LVU326
+ 1378 0018 0467     		str	r4, [r0, #112]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 54
+
+
+ 1379              	.LVL77:
+ 1380              		.loc 16 109 33 view .LVU327
+ 1381              	.LBE460:
+ 1382              	.LBE459:
+ 1383              	.LBE465:
+ 1384              	.LBE472:
+ 1385              	.LBE476:
   22:src/main.cpp  **** AnalogDelay delay1;
- 1302              		.loc 8 22 13 view .LVU318
- 1303 001a 134D     		ldr	r5, .L69+8
- 1304              	.LBB468:
- 1305              	.LBB464:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 52
+ 1386              		.loc 8 22 13 view .LVU328
+ 1387 001a 134D     		ldr	r5, .L71+8
+ 1388              	.LBB477:
+ 1389              	.LBB473:
+  21:../../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
+ 1390              		.loc 1 21 17 view .LVU329
+ 1391 001c C0E90041 		strd	r4, r1, [r0]
+ 1392              	.LBB466:
+ 1393              	.LBB424:
+ 1394              	.LBB422:
+ 1395              	.LBB420:
+ 1396              	.LBB418:
+  69:../../../libs/libDaisy/src/per/gpio.h ****         {
+ 1397              		.loc 15 69 73 view .LVU330
+ 1398 0020 C0E90A34 		strd	r3, r4, [r0, #40]
+ 1399              	.LBE418:
+ 1400              	.LBE420:
+ 1401              	.LBE422:
+ 1402              	.LBE424:
+ 1403              	.LBE466:
+ 1404              	.LBB467:
+ 1405              	.LBB438:
+ 1406              	.LBB436:
+ 1407              	.LBB434:
+ 1408              	.LBB432:
+ 1409 0024 C0E90F34 		strd	r3, r4, [r0, #60]
+ 1410              	.LBE432:
+ 1411              	.LBE434:
+ 1412              	.LBE436:
+ 1413              	.LBE438:
+ 1414              	.LBE467:
+  21:../../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
+ 1415              		.loc 1 21 17 view .LVU331
+ 1416 0028 C0E90211 		strd	r1, r1, [r0, #8]
+ 1417              	.LBB468:
+ 1418              	.LBB425:
+ 1419              	.LBB423:
+ 1420              	.LBB421:
+ 1421              	.LBB419:
+  69:../../../libs/libDaisy/src/per/gpio.h ****         {
+ 1422              		.loc 15 69 73 view .LVU332
+ 1423 002c C0E90C44 		strd	r4, r4, [r0, #48]
+ 1424              	.LBE419:
+ 1425              	.LBE421:
+ 1426              	.LBE423:
+ 1427              	.LBE425:
+ 1428              	.LBE468:
+ 1429              	.LBE473:
+ 1430              	.LBE477:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 55
 
 
-  21:../../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
- 1306              		.loc 1 21 17 view .LVU319
- 1307 001c C0E90041 		strd	r4, r1, [r0]
- 1308              	.LBB457:
- 1309              	.LBB415:
- 1310              	.LBB413:
- 1311              	.LBB411:
- 1312              	.LBB409:
-  69:../../../libs/libDaisy/src/per/gpio.h ****         {
- 1313              		.loc 15 69 73 view .LVU320
- 1314 0020 C0E90A34 		strd	r3, r4, [r0, #40]
- 1315              	.LBE409:
- 1316              	.LBE411:
- 1317              	.LBE413:
- 1318              	.LBE415:
- 1319              	.LBE457:
- 1320              	.LBB458:
- 1321              	.LBB429:
- 1322              	.LBB427:
- 1323              	.LBB425:
- 1324              	.LBB423:
- 1325 0024 C0E90F34 		strd	r3, r4, [r0, #60]
- 1326              	.LBE423:
- 1327              	.LBE425:
- 1328              	.LBE427:
- 1329              	.LBE429:
- 1330              	.LBE458:
-  21:../../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
- 1331              		.loc 1 21 17 view .LVU321
- 1332 0028 C0E90211 		strd	r1, r1, [r0, #8]
- 1333              	.LBB459:
- 1334              	.LBB416:
- 1335              	.LBB414:
- 1336              	.LBB412:
- 1337              	.LBB410:
-  69:../../../libs/libDaisy/src/per/gpio.h ****         {
- 1338              		.loc 15 69 73 view .LVU322
- 1339 002c C0E90C44 		strd	r4, r4, [r0, #48]
- 1340              	.LBE410:
- 1341              	.LBE412:
- 1342              	.LBE414:
- 1343              	.LBE416:
- 1344              	.LBE459:
- 1345              	.LBE464:
- 1346              	.LBE468:
   12:src/main.cpp  **** DaisySeed hw;
- 1347              		.loc 8 12 11 view .LVU323
- 1348 0030 0E49     		ldr	r1, .L69+12
- 1349              	.LBB469:
- 1350              	.LBB465:
- 1351              	.LBB460:
- 1352              	.LBB430:
- 1353              	.LBB428:
- 1354              	.LBB426:
- 1355              	.LBB424:
+ 1431              		.loc 8 12 11 view .LVU333
+ 1432 0030 0E49     		ldr	r1, .L71+12
+ 1433              	.LBB478:
+ 1434              	.LBB474:
+ 1435              	.LBB469:
+ 1436              	.LBB439:
+ 1437              	.LBB437:
+ 1438              	.LBB435:
+ 1439              	.LBB433:
   69:../../../libs/libDaisy/src/per/gpio.h ****         {
- 1356              		.loc 15 69 73 view .LVU324
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 53
-
-
- 1357 0032 C0E91144 		strd	r4, r4, [r0, #68]
- 1358              	.LBE424:
- 1359              	.LBE426:
- 1360              	.LBE428:
- 1361              	.LBE430:
- 1362              	.LBE460:
- 1363              	.LBB461:
- 1364              	.LBB448:
- 1365              	.LBB446:
- 1366              	.LBB444:
- 1367              	.LBB442:
- 1368              	.LBB440:
- 1369 0036 C0E91744 		strd	r4, r4, [r0, #92]
- 1370              	.LBE440:
- 1371              	.LBE442:
- 1372              	.LBE444:
- 1373              	.LBE446:
- 1374              	.LBE448:
- 1375              	.LBE461:
- 1376              	.LBE465:
- 1377              	.LBE469:
+ 1440              		.loc 15 69 73 view .LVU334
+ 1441 0032 C0E91144 		strd	r4, r4, [r0, #68]
+ 1442              	.LBE433:
+ 1443              	.LBE435:
+ 1444              	.LBE437:
+ 1445              	.LBE439:
+ 1446              	.LBE469:
+ 1447              	.LBB470:
+ 1448              	.LBB457:
+ 1449              	.LBB455:
+ 1450              	.LBB453:
+ 1451              	.LBB451:
+ 1452              	.LBB449:
+ 1453 0036 C0E91744 		strd	r4, r4, [r0, #92]
+ 1454              	.LBE449:
+ 1455              	.LBE451:
+ 1456              	.LBE453:
+ 1457              	.LBE455:
+ 1458              	.LBE457:
+ 1459              	.LBE470:
+ 1460              	.LBE474:
+ 1461              	.LBE478:
   12:src/main.cpp  **** DaisySeed hw;
- 1378              		.loc 8 12 11 view .LVU325
- 1379 003a FFF7FEFF 		bl	__aeabi_atexit
- 1380              	.LVL76:
- 1381              	.LBB470:
- 1382              	.LBI470:
+ 1462              		.loc 8 12 11 view .LVU335
+ 1463 003a FFF7FEFF 		bl	__aeabi_atexit
+ 1464              	.LVL78:
+ 1465              	.LBB479:
+ 1466              	.LBI479:
    8:src/sigChain_handler.cpp **** 
- 1383              		.loc 9 8 7 is_stmt 1 view .LVU326
- 1384              	.LBB471:
- 1385 003e 0C4B     		ldr	r3, .L69+16
- 1386              	.LBE471:
- 1387              	.LBE470:
+ 1467              		.loc 9 8 7 is_stmt 1 view .LVU336
+ 1468              	.LBB480:
+ 1469 003e 0C4B     		ldr	r3, .L71+16
+ 1470              	.LBE480:
+ 1471              	.LBE479:
   21:src/main.cpp  **** daisysp::Oscillator lfo1;
- 1388              		.loc 8 21 21 is_stmt 0 view .LVU327
- 1389 0040 0C49     		ldr	r1, .L69+20
- 1390 0042 084A     		ldr	r2, .L69+4
- 1391              	.LBB473:
- 1392              	.LBB472:
+ 1472              		.loc 8 21 21 is_stmt 0 view .LVU337
+ 1473 0040 0C49     		ldr	r1, .L71+20
+ 1474 0042 084A     		ldr	r2, .L71+4
+ 1475              	.LBB482:
+ 1476              	.LBB481:
    8:src/sigChain_handler.cpp **** 
- 1393              		.loc 9 8 7 view .LVU328
- 1394 0044 1C62     		str	r4, [r3, #32]
- 1395              	.LVL77:
+ 1477              		.loc 9 8 7 view .LVU338
+ 1478 0044 1C62     		str	r4, [r3, #32]
+ 1479              	.LVL79:
    8:src/sigChain_handler.cpp **** 
- 1396              		.loc 9 8 7 view .LVU329
- 1397              	.LBE472:
- 1398              	.LBE473:
- 1399              	.LBB474:
- 1400              	.LBI474:
+ 1480              		.loc 9 8 7 view .LVU339
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 56
+
+
+ 1481              	.LBE481:
+ 1482              	.LBE482:
+ 1483              	.LBB483:
+ 1484              	.LBI483:
   23:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     ~Oscillator() {}
- 1401              		.loc 7 23 5 is_stmt 1 view .LVU330
+ 1485              		.loc 7 23 5 is_stmt 1 view .LVU340
   23:../../../libs/DaisySP/Source/Synthesis/oscillator.h ****     ~Oscillator() {}
- 1402              		.loc 7 23 5 is_stmt 0 view .LVU331
- 1403              	.LBE474:
+ 1486              		.loc 7 23 5 is_stmt 0 view .LVU341
+ 1487              	.LBE483:
   21:src/main.cpp  **** daisysp::Oscillator lfo1;
- 1404              		.loc 8 21 21 view .LVU332
- 1405 0046 0C48     		ldr	r0, .L69+24
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 54
-
-
- 1406 0048 FFF7FEFF 		bl	__aeabi_atexit
- 1407              	.LVL78:
+ 1488              		.loc 8 21 21 view .LVU342
+ 1489 0046 0C48     		ldr	r0, .L71+24
+ 1490 0048 FFF7FEFF 		bl	__aeabi_atexit
+ 1491              	.LVL80:
   22:src/main.cpp  **** AnalogDelay delay1;
- 1408              		.loc 8 22 13 view .LVU333
- 1409 004c 2846     		mov	r0, r5
- 1410 004e FFF7FEFF 		bl	_ZN11AnalogDelayC1Ev
- 1411              	.LVL79:
- 1412 0052 2846     		mov	r0, r5
- 1413 0054 034A     		ldr	r2, .L69+4
- 1414 0056 0949     		ldr	r1, .L69+28
- 1415              	.LBE475:
- 1416              	.LBE477:
- 1417              		.loc 8 100 1 view .LVU334
- 1418 0058 BDE83840 		pop	{r3, r4, r5, lr}
- 1419              		.cfi_restore 14
- 1420              		.cfi_restore 5
- 1421              		.cfi_restore 4
- 1422              		.cfi_restore 3
- 1423              		.cfi_def_cfa_offset 0
- 1424              	.LBB478:
- 1425              	.LBB476:
+ 1492              		.loc 8 22 13 view .LVU343
+ 1493 004c 2846     		mov	r0, r5
+ 1494 004e FFF7FEFF 		bl	_ZN11AnalogDelayC1Ev
+ 1495              	.LVL81:
+ 1496 0052 2846     		mov	r0, r5
+ 1497 0054 034A     		ldr	r2, .L71+4
+ 1498 0056 0949     		ldr	r1, .L71+28
+ 1499              	.LBE484:
+ 1500              	.LBE486:
+ 1501              		.loc 8 100 1 view .LVU344
+ 1502 0058 BDE83840 		pop	{r3, r4, r5, lr}
+ 1503              		.cfi_restore 14
+ 1504              		.cfi_restore 5
+ 1505              		.cfi_restore 4
+ 1506              		.cfi_restore 3
+ 1507              		.cfi_def_cfa_offset 0
+ 1508              	.LBB487:
+ 1509              	.LBB485:
   22:src/main.cpp  **** AnalogDelay delay1;
- 1426              		.loc 8 22 13 view .LVU335
- 1427 005c FFF7FEBF 		b	__aeabi_atexit
- 1428              	.LVL80:
- 1429              	.L70:
- 1430              		.align	2
- 1431              	.L69:
- 1432 0060 00000000 		.word	.LANCHOR2
- 1433 0064 00000000 		.word	__dso_handle
- 1434 0068 00000000 		.word	delay1
- 1435 006c 00000000 		.word	_ZN5daisy9DaisySeedD1Ev
- 1436 0070 00000000 		.word	.LANCHOR0
- 1437 0074 00000000 		.word	_ZN7daisysp10OscillatorD1Ev
- 1438 0078 00000000 		.word	.LANCHOR3
- 1439 007c 00000000 		.word	_ZN11AnalogDelayD1Ev
- 1440              	.LBE476:
- 1441              	.LBE478:
- 1442              		.cfi_endproc
- 1443              	.LFE5424:
- 1445              		.section	.init_array,"aw",%init_array
- 1446              		.align	2
- 1447 0000 00000000 		.word	_GLOBAL__sub_I_hw(target1)
- 1448              		.weak	_ZTV13EffectWrapperIN7daisysp10OscillatorEfffvE
- 1449              		.section	.rodata._ZTV13EffectWrapperIN7daisysp10OscillatorEfffvE,"aG",%progbits,_ZTV13EffectWrappe
- 1450              		.align	2
- 1453              	_ZTV13EffectWrapperIN7daisysp10OscillatorEfffvE:
- 1454 0000 00000000 		.word	0
- 1455 0004 00000000 		.word	0
- 1456 0008 00000000 		.word	_ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7ProcessEf
- 1457 000c 00000000 		.word	_ZN13EffectWrapperIN7daisysp10OscillatorEfffvE8SetParamEf
- 1458              		.weak	_ZTV13EffectWrapperI11AnalogDelayfffvE
- 1459              		.section	.rodata._ZTV13EffectWrapperI11AnalogDelayfffvE,"aG",%progbits,_ZTV13EffectWrapperI11Analo
- 1460              		.align	2
- 1463              	_ZTV13EffectWrapperI11AnalogDelayfffvE:
- 1464 0000 00000000 		.word	0
- 1465 0004 00000000 		.word	0
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 55
+ 1510              		.loc 8 22 13 view .LVU345
+ 1511 005c FFF7FEBF 		b	__aeabi_atexit
+ 1512              	.LVL82:
+ 1513              	.L72:
+ 1514              		.align	2
+ 1515              	.L71:
+ 1516 0060 00000000 		.word	.LANCHOR2
+ 1517 0064 00000000 		.word	__dso_handle
+ 1518 0068 00000000 		.word	delay1
+ 1519 006c 00000000 		.word	_ZN5daisy9DaisySeedD1Ev
+ 1520 0070 00000000 		.word	.LANCHOR0
+ 1521 0074 00000000 		.word	_ZN7daisysp10OscillatorD1Ev
+ 1522 0078 00000000 		.word	.LANCHOR3
+ 1523 007c 00000000 		.word	_ZN11AnalogDelayD1Ev
+ 1524              	.LBE485:
+ 1525              	.LBE487:
+ 1526              		.cfi_endproc
+ 1527              	.LFE5429:
+ 1529              		.section	.init_array,"aw",%init_array
+ 1530              		.align	2
+ 1531 0000 00000000 		.word	_GLOBAL__sub_I_hw(target1)
+ 1532              		.weak	_ZTV13EffectWrapperIN7daisysp10OscillatorEfffvE
+ 1533              		.section	.rodata._ZTV13EffectWrapperIN7daisysp10OscillatorEfffvE,"aG",%progbits,_ZTV13EffectWrappe
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 57
 
 
- 1466 0008 00000000 		.word	_ZN13EffectWrapperI11AnalogDelayfffvE7ProcessEf
- 1467 000c 00000000 		.word	_ZN13EffectWrapperI11AnalogDelayfffvE8SetParamEf
- 1468              		.global	delay1
- 1469              		.global	lfo1
- 1470              		.global	chain1
- 1471              		.global	outSample
- 1472              		.global	hw
- 1473              		.section	.bss.chain1,"aw",%nobits
- 1474              		.align	2
- 1475              		.set	.LANCHOR0,. + 0
- 1478              	chain1:
- 1479 0000 00000000 		.space	36
- 1479      00000000 
- 1479      00000000 
- 1479      00000000 
- 1479      00000000 
- 1480              		.section	.bss.delay1,"aw",%nobits
- 1481              		.align	2
- 1484              	delay1:
- 1485 0000 00000000 		.space	131344
- 1485      00000000 
- 1485      00000000 
- 1485      00000000 
- 1485      00000000 
- 1486              		.section	.bss.hw,"aw",%nobits
- 1487              		.align	2
- 1488              		.set	.LANCHOR2,. + 0
- 1491              	hw:
- 1492 0000 00000000 		.space	116
- 1492      00000000 
- 1492      00000000 
- 1492      00000000 
- 1492      00000000 
- 1493              		.section	.bss.lfo1,"aw",%nobits
- 1494              		.align	2
- 1495              		.set	.LANCHOR3,. + 0
- 1498              	lfo1:
- 1499 0000 00000000 		.space	44
- 1499      00000000 
- 1499      00000000 
- 1499      00000000 
- 1499      00000000 
- 1500              		.section	.bss.outSample,"aw",%nobits
- 1501              		.align	2
- 1502              		.set	.LANCHOR1,. + 0
- 1505              	outSample:
- 1506 0000 00000000 		.space	4
- 1507              		.text
- 1508              	.Letext0:
- 1509              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
- 1510              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
- 1511              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
- 1512              		.file 20 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
- 1513              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
- 1514              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
- 1515              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
- 1516              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 56
+ 1534              		.align	2
+ 1537              	_ZTV13EffectWrapperIN7daisysp10OscillatorEfffvE:
+ 1538 0000 00000000 		.word	0
+ 1539 0004 00000000 		.word	0
+ 1540 0008 00000000 		.word	_ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7ProcessEf
+ 1541 000c 00000000 		.word	_ZN13EffectWrapperIN7daisysp10OscillatorEfffvE8SetParamEf
+ 1542 0010 00000000 		.word	_ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7getNameEv
+ 1543              		.weak	_ZTV13EffectWrapperI11AnalogDelayfffvE
+ 1544              		.section	.rodata._ZTV13EffectWrapperI11AnalogDelayfffvE,"aG",%progbits,_ZTV13EffectWrapperI11Analo
+ 1545              		.align	2
+ 1548              	_ZTV13EffectWrapperI11AnalogDelayfffvE:
+ 1549 0000 00000000 		.word	0
+ 1550 0004 00000000 		.word	0
+ 1551 0008 00000000 		.word	_ZN13EffectWrapperI11AnalogDelayfffvE7ProcessEf
+ 1552 000c 00000000 		.word	_ZN13EffectWrapperI11AnalogDelayfffvE8SetParamEf
+ 1553 0010 00000000 		.word	_ZN13EffectWrapperI11AnalogDelayfffvE7getNameEv
+ 1554              		.global	delay1
+ 1555              		.global	lfo1
+ 1556              		.global	chain1
+ 1557              		.global	outSample
+ 1558              		.global	hw
+ 1559              		.section	.bss.chain1,"aw",%nobits
+ 1560              		.align	2
+ 1561              		.set	.LANCHOR0,. + 0
+ 1564              	chain1:
+ 1565 0000 00000000 		.space	36
+ 1565      00000000 
+ 1565      00000000 
+ 1565      00000000 
+ 1565      00000000 
+ 1566              		.section	.bss.delay1,"aw",%nobits
+ 1567              		.align	2
+ 1570              	delay1:
+ 1571 0000 00000000 		.space	131344
+ 1571      00000000 
+ 1571      00000000 
+ 1571      00000000 
+ 1571      00000000 
+ 1572              		.section	.bss.hw,"aw",%nobits
+ 1573              		.align	2
+ 1574              		.set	.LANCHOR2,. + 0
+ 1577              	hw:
+ 1578 0000 00000000 		.space	116
+ 1578      00000000 
+ 1578      00000000 
+ 1578      00000000 
+ 1578      00000000 
+ 1579              		.section	.bss.lfo1,"aw",%nobits
+ 1580              		.align	2
+ 1581              		.set	.LANCHOR3,. + 0
+ 1584              	lfo1:
+ 1585 0000 00000000 		.space	44
+ 1585      00000000 
+ 1585      00000000 
+ 1585      00000000 
+ 1585      00000000 
+ 1586              		.section	.bss.outSample,"aw",%nobits
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 58
 
 
- 1517              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
- 1518              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
- 1519              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
- 1520              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
- 1521              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
- 1522              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
- 1523              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
- 1524              		.file 32 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
- 1525              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
- 1526              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
- 1527              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
- 1528              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
- 1529              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
- 1530              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
- 1531              		.file 39 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
- 1532              		.file 40 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
- 1533              		.file 41 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
- 1534              		.file 42 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
- 1535              		.file 43 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
- 1536              		.file 44 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
- 1537              		.file 45 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
- 1538              		.file 46 "../../../libs/libDaisy/src/per/tim.h"
- 1539              		.file 47 "../../../libs/libDaisy/src/util/wav_format.h"
- 1540              		.file 48 "../../../libs/libDaisy/src/dev/sr_595.h"
- 1541              		.file 49 "../../../libs/libDaisy/src/dev/max11300.h"
- 1542              		.file 50 "../../../libs/libDaisy/src/dev/sdram.h"
- 1543              		.file 51 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
- 1544              		.file 52 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
- 1545              		.file 53 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
- 1546              		.file 54 "../../../libs/DaisySP/Source/Control/adenv.h"
- 1547              		.file 55 "../../../libs/DaisySP/Source/Control/phasor.h"
- 1548              		.file 56 "../../../libs/DaisySP/Source/Utility/dsp.h"
- 1549              		.file 57 "../../../libs/DaisySP/Source/Dynamics/crossfade.h"
- 1550              		.file 58 "../../../libs/DaisySP/Source/Utility/delayline.h"
- 1551              		.file 59 "../../../libs/DaisySP/Source/Effects/pitchshifter.h"
- 1552              		.file 60 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
- 1553              		.file 61 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
- 1554              		.file 62 "src/AnalogDelay.h"
- 1555              		.file 63 "<built-in>"
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 57
+ 1587              		.align	2
+ 1588              		.set	.LANCHOR1,. + 0
+ 1591              	outSample:
+ 1592 0000 00000000 		.space	4
+ 1593              		.text
+ 1594              	.Letext0:
+ 1595              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 1596              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 1597              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 1598              		.file 20 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 1599              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 1600              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 1601              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 1602              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 1603              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 1604              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 1605              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 1606              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 1607              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 1608              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 1609              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 1610              		.file 32 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 1611              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 1612              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 1613              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 1614              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 1615              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
+ 1616              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 1617              		.file 39 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 1618              		.file 40 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 1619              		.file 41 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 1620              		.file 42 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 1621              		.file 43 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 1622              		.file 44 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 1623              		.file 45 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 1624              		.file 46 "../../../libs/libDaisy/src/per/tim.h"
+ 1625              		.file 47 "../../../libs/libDaisy/src/util/wav_format.h"
+ 1626              		.file 48 "../../../libs/libDaisy/src/dev/sr_595.h"
+ 1627              		.file 49 "../../../libs/libDaisy/src/dev/max11300.h"
+ 1628              		.file 50 "../../../libs/libDaisy/src/dev/sdram.h"
+ 1629              		.file 51 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 1630              		.file 52 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 1631              		.file 53 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 1632              		.file 54 "../../../libs/DaisySP/Source/Control/adenv.h"
+ 1633              		.file 55 "../../../libs/DaisySP/Source/Control/phasor.h"
+ 1634              		.file 56 "../../../libs/DaisySP/Source/Utility/dsp.h"
+ 1635              		.file 57 "../../../libs/DaisySP/Source/Dynamics/crossfade.h"
+ 1636              		.file 58 "../../../libs/DaisySP/Source/Utility/delayline.h"
+ 1637              		.file 59 "../../../libs/DaisySP/Source/Effects/pitchshifter.h"
+ 1638              		.file 60 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 1639              		.file 61 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 1640              		.file 62 "src/AnalogDelay.h"
+ 1641              		.file 63 "<built-in>"
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 59
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.cpp
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:73     .text._ZN7daisysp10OscillatorD2Ev:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:81     .text._ZN7daisysp10OscillatorD2Ev:00000000 _ZN7daisysp10OscillatorD2Ev
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:81     .text._ZN7daisysp10OscillatorD2Ev:00000000 _ZN7daisysp10OscillatorD1Ev
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:98     .text._Z13AudioCallbackPKPKfPPfj:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:106    .text._Z13AudioCallbackPKPKfPPfj:00000000 _Z13AudioCallbackPKPKfPPfj
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:231    .text._Z13AudioCallbackPKPKfPPfj:00000060 $d
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:242    .text._ZN13EffectWrapperIN7daisysp10OscillatorEfffvE8SetParamEf:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:250    .text._ZN13EffectWrapperIN7daisysp10OscillatorEfffvE8SetParamEf:00000000 _ZN13EffectWrapperIN7daisysp10OscillatorEfffvE8SetParamEf
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:291    .text._ZN13EffectWrapperI11AnalogDelayfffvE8SetParamEf:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:299    .text._ZN13EffectWrapperI11AnalogDelayfffvE8SetParamEf:00000000 _ZN13EffectWrapperI11AnalogDelayfffvE8SetParamEf
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:339    .text._ZN7daisysp10Oscillator7SetFreqEf:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:347    .text._ZN7daisysp10Oscillator7SetFreqEf:00000000 _ZN7daisysp10Oscillator7SetFreqEf
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:377    .text._ZN13EffectWrapperI11AnalogDelayfffvE7ProcessEf:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:385    .text._ZN13EffectWrapperI11AnalogDelayfffvE7ProcessEf:00000000 _ZN13EffectWrapperI11AnalogDelayfffvE7ProcessEf
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:460    .text._ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7ProcessEf:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:468    .text._ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7ProcessEf:00000000 _ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7ProcessEf
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:543    .text.startup.main:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:551    .text.startup.main:00000000 main
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1042   .text.startup.main:0000015c $d
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1484   .bss.delay1:00000000 delay1
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1453   .rodata._ZTV13EffectWrapperIN7daisysp10OscillatorEfffvE:00000000 _ZTV13EffectWrapperIN7daisysp10OscillatorEfffvE
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1463   .rodata._ZTV13EffectWrapperI11AnalogDelayfffvE:00000000 _ZTV13EffectWrapperI11AnalogDelayfffvE
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1065   .text.startup._GLOBAL__sub_I_hw:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1072   .text.startup._GLOBAL__sub_I_hw:00000000 _GLOBAL__sub_I_hw
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1432   .text.startup._GLOBAL__sub_I_hw:00000060 $d
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1446   .init_array:00000000 $d
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1450   .rodata._ZTV13EffectWrapperIN7daisysp10OscillatorEfffvE:00000000 $d
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1460   .rodata._ZTV13EffectWrapperI11AnalogDelayfffvE:00000000 $d
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1498   .bss.lfo1:00000000 lfo1
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1478   .bss.chain1:00000000 chain1
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1505   .bss.outSample:00000000 outSample
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1491   .bss.hw:00000000 hw
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1474   .bss.chain1:00000000 $d
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1481   .bss.delay1:00000000 $d
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1487   .bss.hw:00000000 $d
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1494   .bss.lfo1:00000000 $d
-C:\Users\matte\AppData\Local\Temp\ccRRh96S.s:1501   .bss.outSample:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:73     .text._ZN7daisysp10OscillatorD2Ev:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:81     .text._ZN7daisysp10OscillatorD2Ev:00000000 _ZN7daisysp10OscillatorD2Ev
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:81     .text._ZN7daisysp10OscillatorD2Ev:00000000 _ZN7daisysp10OscillatorD1Ev
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:98     .text._Z13AudioCallbackPKPKfPPfj:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:106    .text._Z13AudioCallbackPKPKfPPfj:00000000 _Z13AudioCallbackPKPKfPPfj
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:231    .text._Z13AudioCallbackPKPKfPPfj:00000060 $d
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:242    .text._ZN13EffectWrapperIN7daisysp10OscillatorEfffvE8SetParamEf:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:250    .text._ZN13EffectWrapperIN7daisysp10OscillatorEfffvE8SetParamEf:00000000 _ZN13EffectWrapperIN7daisysp10OscillatorEfffvE8SetParamEf
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:291    .text._ZN13EffectWrapperI11AnalogDelayfffvE8SetParamEf:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:299    .text._ZN13EffectWrapperI11AnalogDelayfffvE8SetParamEf:00000000 _ZN13EffectWrapperI11AnalogDelayfffvE8SetParamEf
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:339    .text._ZN13EffectWrapperI11AnalogDelayfffvE7getNameEv:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:347    .text._ZN13EffectWrapperI11AnalogDelayfffvE7getNameEv:00000000 _ZN13EffectWrapperI11AnalogDelayfffvE7getNameEv
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:364    .text._ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7getNameEv:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:372    .text._ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7getNameEv:00000000 _ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7getNameEv
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:389    .text._ZN7daisysp10Oscillator7SetFreqEf:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:397    .text._ZN7daisysp10Oscillator7SetFreqEf:00000000 _ZN7daisysp10Oscillator7SetFreqEf
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:427    .text._ZN13EffectWrapperI11AnalogDelayfffvE7ProcessEf:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:435    .text._ZN13EffectWrapperI11AnalogDelayfffvE7ProcessEf:00000000 _ZN13EffectWrapperI11AnalogDelayfffvE7ProcessEf
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:510    .text._ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7ProcessEf:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:518    .text._ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7ProcessEf:00000000 _ZN13EffectWrapperIN7daisysp10OscillatorEfffvE7ProcessEf
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:593    .rodata.main.str1.4:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:600    .text.startup.main:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:608    .text.startup.main:00000000 main
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1124   .text.startup.main:00000168 $d
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1570   .bss.delay1:00000000 delay1
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1537   .rodata._ZTV13EffectWrapperIN7daisysp10OscillatorEfffvE:00000000 _ZTV13EffectWrapperIN7daisysp10OscillatorEfffvE
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1548   .rodata._ZTV13EffectWrapperI11AnalogDelayfffvE:00000000 _ZTV13EffectWrapperI11AnalogDelayfffvE
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1149   .text.startup._GLOBAL__sub_I_hw:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1156   .text.startup._GLOBAL__sub_I_hw:00000000 _GLOBAL__sub_I_hw
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1516   .text.startup._GLOBAL__sub_I_hw:00000060 $d
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1530   .init_array:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1534   .rodata._ZTV13EffectWrapperIN7daisysp10OscillatorEfffvE:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1545   .rodata._ZTV13EffectWrapperI11AnalogDelayfffvE:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1584   .bss.lfo1:00000000 lfo1
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1564   .bss.chain1:00000000 chain1
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1591   .bss.outSample:00000000 outSample
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1577   .bss.hw:00000000 hw
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1560   .bss.chain1:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1567   .bss.delay1:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1573   .bss.hw:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1580   .bss.lfo1:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc54jq1d.s:1587   .bss.outSample:00000000 $d
                            .group:00000000 _ZN5daisy9DaisySeedD5Ev
                            .group:00000000 _ZN7daisysp10OscillatorD5Ev
 
@@ -3395,14 +3534,14 @@ _ZN5daisy9DaisySeed17SetAudioBlockSizeEj
 _ZN5daisy9DaisySeed18SetAudioSampleRateENS_9SaiHandle6Config10SampleRateE
 _ZN5daisy9DaisySeed10StartAudioEPFvPKPKfPPfjE
 _ZN11AnalogDelay4InitEf
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc54jq1d.s 			page 60
+
+
 memset
 _ZN5daisy9DaisySeed7DelayMsEj
 _ZN7daisysp10Oscillator7ProcessEv
-_ZN11AnalogDelay7ProcessEf
 _ZN11AnalogDelay12setDelayTimeEf
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRRh96S.s 			page 58
-
-
+_ZN11AnalogDelay7ProcessEf
 __aeabi_atexit
 _ZN11AnalogDelayC1Ev
 __dso_handle

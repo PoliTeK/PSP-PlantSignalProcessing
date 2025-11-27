@@ -87,7 +87,7 @@ def has_extension(fname, ext_list):
 def update_project(destination, libs, include_vs=False):
     basedir = os.path.abspath(destination)
     root = os.path.dirname(os.path.realpath(__file__))
-    tdir = os.path.sep.join((root, 'utils', 'Template'))
+    tdir = os.path.sep.join((root, 'Software', 'Template'))
     if not os.path.isdir(basedir):
         print('destination should be a directory')
         return
@@ -186,7 +186,7 @@ def create_from_template(destination, board, libs, include_vs = False):
     libs=pathlib.Path(os.path.relpath(libs, destination)).as_posix()
     file_path=pathlib.Path(__file__).as_posix().replace('helper.py', '')
 
-    template_dir=os.path.join(file_path, 'utils', 'Template')
+    template_dir=os.path.join(file_path, 'Software', 'Template')
     copy_project(destination, template_dir, include_vs)
 
     libdaisy_dir=libs + "/libDaisy/"
