@@ -191,6 +191,7 @@ public:
     /// @param Process_ptr function pointer of Process of original effect
     inline void AddProcess (float (t_effect::*ProcWithNoArgs_ptr)()) {_ProcessWithNoArgs_ptr = ProcWithNoArgs_ptr;}
    
+
     /// @brief Sets the effect pointer
     /// @param effectPtr effect pointer
     inline void AddEffectPtr (t_effect* effectPtr) {_effectPtr=effectPtr;}

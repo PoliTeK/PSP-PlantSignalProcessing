@@ -33,6 +33,7 @@ private:
     float _dispBuffer_ptr [BUFFER_SIZE];
 
     int _writeHead = 0;
+    bool _triggerEnabled;
 
     // might not be needed      
     float* _potValuePtr;
@@ -55,6 +56,6 @@ public:
     // Set new fsm state
     void SetState (DisplayState newState);
 
-    void pushAudioSample (float sample)
+    void pushAudioSample (float sample);
 
 };

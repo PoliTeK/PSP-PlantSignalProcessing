@@ -3,6 +3,7 @@
 
 #include "sigChain_handler.cpp"
 #include "effectWrapper.cpp"
+#include "displayHandler.hpp"
 #include "daisy_seed.h"
 #include "daisysp.h"
 #include "AnalogDelay.h"
@@ -22,16 +23,28 @@ daisysp::Oscillator lfo1;
 AnalogDelay delay1;
 
 
+MyOledDisplay realDisp;
+
+// display handling
+DisplayHandler disp1 (&realDisp);
+
+
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
 	for (size_t i = 0; i < size; i++)
 	{
+        // process sample through chain
         outSample = chain1.Process();
-		//outSample = lfo1.Process();
+
+        // updates display (even if not displaying waveform)
+        disp1.pushAudioSample (outSample);
+        
+        // output audio
         out[0][i] = outSample;
 		out[1][i] = outSample;
 	}
 }
+
 
 int main (){
 
@@ -43,9 +56,15 @@ int main (){
 
     /* MAIN BLOCKS INITIALIZATION */
     // here the blocks of the signal chain are initialized
-  
     lfo1.Init(sample_rate);
+    lfo1.SetWaveform(Oscillator::WAVE_SAW);
     delay1.Init(sample_rate);
+
+    // init real display, PINS
+    // - SDA  i2c_config.pin_config.scl = Pin(PORTB, 8);
+    // - SCL i2c_config.pin_config.sda = Pin(PORTB, 9);
+    MyOledDisplay::Config disp_cfg;
+    realDisp.Init(disp_cfg);
 
     /* WRAPPER INSTANTIATION*/
 
@@ -71,7 +90,7 @@ int main (){
     oscWrapper.AddEffectPtr(&lfo1);
 
     // setting parameter
-    float frequency = 440;
+    float frequency = 0;
     oscWrapper.SetParam(frequency);
 
 
@@ -88,13 +107,32 @@ int main (){
     // first block inserted: works because of POLYMORPHISM
     chain1.addEffect (&oscWrapper);
     chain1.addEffect (&delayWrapper);
+
+
+    // set display state at start
+    disp1.SetState(DisplayState::STANDBY);
+    bool flag = false;  
     while (1)
     {
         hw.DelayMs(10);
 
         // should do a glissando up to 440Hz
-        oscWrapper.SetParam((float) (( (int)frequency++ % 440 )+ 50) );
+        oscWrapper.SetParam(frequency);
+        frequency = ((int)frequency + 5) % 880;
         
+        // Switches between standby and waveform every cycle of audio
+       if (frequency == 875){
+            if (flag == false){
+                disp1.SetState(DisplayState::WAVEFORM_VIEWER);
+                flag = true;
+            }
+            else{
+                disp1.SetState(DisplayState::STANDBY);
+                flag = false;
+            }
+        }
+        disp1.Update(); 
     }
+
     return 0;
 }

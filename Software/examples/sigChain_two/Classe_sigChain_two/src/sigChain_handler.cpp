@@ -19,7 +19,7 @@ public:
     int addEffect (EffectInterface* effect){
         int oneIfFull = 0;
         if (_effectsCounter < MAX_NUM_OF_BLOCKS){
-             _effects[_effectsCounter] = effect;
+             _effects[_effectsCounter] = effect;    
              _effectsCounter++;
          } 
          else {
