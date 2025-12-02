@@ -7,6 +7,7 @@
 #include "../../../../libs/libDaisy/src/daisy_seed.h"
 
 #define BUFFER_SIZE 256
+#define WINDOW_SIZE 128
 // Setting the display type (should be changed based on display) 
 using MyOledDisplay = daisy::OledDisplay<daisy::SSD130xI2c128x64Driver>;
 
@@ -32,13 +33,14 @@ private:
     // used as local stable version of circ buffer
     float _dispBuffer_ptr [BUFFER_SIZE];
 
+    int _windowSize = WINDOW_SIZE;
     int _writeHead = 0;
     bool _triggerEnabled;
 
     // might not be needed      
     float* _potValuePtr;
 
-
+    int findTrigger();
     /* internal drawing functions */
     void drawStandbyScreen();
     void drawWaveForm();
@@ -48,7 +50,7 @@ private:
     
 public:
 
-    DisplayHandler (MyOledDisplay* displayPtr) ;
+    DisplayHandler (MyOledDisplay* displayPtr, bool triggerEnabled = true) ;
 
     // Update fsm
     void Update();
