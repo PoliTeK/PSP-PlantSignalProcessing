@@ -1,3 +1,7 @@
+// CURVE TYPE PINS ARE:
+// ADC0 -> 22
+// ADC1 -> 23
+
 #include "../../libs/libDaisy/src/daisy_seed.h"
 #include "../../libs/DaisySP/Source/daisysp.h"
 #include "../../Classes/Temperamento/PlantConditioner.h"
