@@ -6,13 +6,15 @@
 #include "../../libs/DaisySP/Source/daisysp.h"
 #include "../../Classes/Temperamento/PlantConditioner.h"
 #include "../../Classes/Effects/AnalogDelay/src/AnalogDelay.h"
+#include "displayHandler.hpp"
+
 
 #ifndef _BV
 #define _BV(bit) (1 << (bit))
 #endif
 #define ADC_CH 2 // Numero di canali ADC da utilizzare
 //#define DEBUG
-#define csvAcquisition
+//#define csvAcquisition
 
 
 
@@ -44,6 +46,13 @@ uint16_t currTouched = 0;                               // current touched value
 
 float output = 0.0f; // used to store the output value
 
+// true display object
+MyOledDisplay realDisp;
+
+// display wrapper
+DisplayHandler disp1 (&realDisp);
+
+
 static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::InterleavingOutputBuffer out, size_t size)
 {
   float envOut, oscOut;
@@ -54,7 +63,7 @@ static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::
     osc.SetAmp(envOut);
 
     oscOut = osc.Process();
- 
+    disp1.pushAudioSample (oscOut/1.25);
     out[i] = out[i + 1] = oscOut;               // outputs the same value to left and right channels
   }
 }
@@ -68,6 +77,12 @@ int main()
   hw.SetAudioBlockSize(4);
   sampleRate = hw.AudioSampleRate();
 
+
+    MyOledDisplay::Config disp_cfg;
+    realDisp.Init(disp_cfg);
+  disp1.SetState(DisplayState::WAVEFORM_VIEWER);
+
+
   pc.Init(CapFir::ResType::HIGH); 
   pc.setScale(PlantConditioner::C, PlantConditioner::MinorArm);
   pc.setOctave(3);
@@ -76,7 +91,7 @@ int main()
 
   osc.Init(sampleRate);                  // initializes the oscillator with the sample rate
   osc.SetWaveform(Oscillator::WAVE_TRI); // sets the waveform
-  osc.SetFreq(440.0f);                   // sets the frequency
+  osc.SetFreq(880.0f);                   // sets the frequency
   osc.SetAmp(0.5f);                      // sets the amplitude
 
   env.Init(sampleRate); // initializes the envelope with the sample rate
@@ -132,7 +147,7 @@ int main()
     {
       gate = true; // sets the gate to true
       f = pc.Process(cap.BaselineData(0), cap.FilteredData(0));
-      osc.SetFreq(f);
+      osc.SetFreq(f*2);
       
     }
 
@@ -189,6 +204,7 @@ int main()
   #endif
     
   lastTouched = currTouched;
+  disp1.Update();
   hw.DelayMs(10);
     
 

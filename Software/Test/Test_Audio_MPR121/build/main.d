@@ -109,7 +109,7 @@ build/main.o: main.cpp \
  ../../libs/libDaisy/src/sys/system.h ../../libs/libDaisy/src/per/tim.h \
  ../../libs/libDaisy/src/per/qspi.h \
  ../../libs/libDaisy/src/util/hal_map.h ../../libs/libDaisy/src/per/dac.h \
- ../../libs/libDaisy/src/per/gpio.h ../../libs/libDaisy/src/per/pwm.h \
+ ../../libs/libDaisy/src/per/gpio.h \
  ../../libs/libDaisy/src/dev/leddriver.h \
  ../../libs/libDaisy/src/per/i2c.h ../../libs/libDaisy/src/dev/mpr121.h \
  ../../libs/libDaisy/src/dev/sdram.h \
@@ -241,7 +241,8 @@ build/main.o: main.cpp \
  ../../libs/DaisySP/Source/Utility/smooth_random.h \
  ../../Classes/Temperamento/PlantConditioner.h \
  ../../Classes/Temperamento/../FIIR/CapFir.h \
- ../../Classes/Effects/AnalogDelay/src/AnalogDelay.h
+ ../../Classes/Effects/AnalogDelay/src/AnalogDelay.h displayHandler.hpp \
+ ../../libs/libDaisy/src/sys/../../../../libs/libDaisy/src/dev/oled_ssd130x.h
 ../../libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../../libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -357,7 +358,6 @@ build/main.o: main.cpp \
 ../../libs/libDaisy/src/util/hal_map.h:
 ../../libs/libDaisy/src/per/dac.h:
 ../../libs/libDaisy/src/per/gpio.h:
-../../libs/libDaisy/src/per/pwm.h:
 ../../libs/libDaisy/src/dev/leddriver.h:
 ../../libs/libDaisy/src/per/i2c.h:
 ../../libs/libDaisy/src/dev/mpr121.h:
@@ -499,3 +499,5 @@ build/main.o: main.cpp \
 ../../Classes/Temperamento/PlantConditioner.h:
 ../../Classes/Temperamento/../FIIR/CapFir.h:
 ../../Classes/Effects/AnalogDelay/src/AnalogDelay.h:
+displayHandler.hpp:
+../../libs/libDaisy/src/sys/../../../../libs/libDaisy/src/dev/oled_ssd130x.h:
