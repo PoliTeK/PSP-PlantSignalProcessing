@@ -52,6 +52,8 @@ MyOledDisplay realDisp;
 // display wrapper
 DisplayHandler disp1 (&realDisp);
 
+// used for better wave (otherwise freq is too low and wont fit)
+bool decimate = true;
 
 static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::InterleavingOutputBuffer out, size_t size)
 {
@@ -63,7 +65,9 @@ static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::
     osc.SetAmp(envOut);
 
     oscOut = osc.Process();
-    disp1.pushAudioSample (oscOut/1.25);
+    // should decimate -> frequency displayed is double the true one 
+    if (decimate) disp1.pushAudioSample (oscOut/1.25);
+    decimate = !decimate;
     out[i] = out[i + 1] = oscOut;               // outputs the same value to left and right channels
   }
 }
