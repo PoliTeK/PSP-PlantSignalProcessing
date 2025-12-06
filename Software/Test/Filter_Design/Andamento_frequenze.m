@@ -1,3 +1,4 @@
+%%Data Acquirement
 close all
 clear
 clc
@@ -10,7 +11,7 @@ DSUp_path = ["Datasets/Dataset2/DiscreteSweepUp1.txt" "Datasets/Dataset2/Discret
 DSDown_path = ["Datasets/Dataset2/DiscreteSweepDown1.txt" "Datasets/Dataset2/DiscreteSweepDown2.txt" "Datasets/Dataset2/DiscreteSweepDown3.txt"];
 SSDown_path = ["Datasets/Dataset2/SemidisSweepDown1.txt" "Datasets/Dataset2/SemidisSweepDown2.txt" "Datasets/Dataset2/SemidisSweepDown3.txt"];
 SSUp_path = ["Datasets/Dataset2/SemidisSweepUp1.txt" "Datasets/Dataset2/SemidisSweepUp2.txt" "Datasets/Dataset2/SemidisSweepUp3.txt"];
-%matrici di n samles e 3 colonne e m righe
+
 Max1s  = zeros(n,m);
 Max5s  = zeros(n,m);
 Min    = zeros(n,m);
@@ -19,6 +20,7 @@ DSDown = zeros(n,m);
 SSUp   = zeros(n,m);
 SSDown = zeros(n,m);
 temp   = zeros (n,m);
+% matrix creation with padding
 for i = 1 : 3
     temp1 = readmatrix(Max1s_path(i));
     temp (1:length(temp1), 1:3)=temp1;
@@ -55,7 +57,7 @@ for i = 1 : 3
     SSDown(:,i) = temp(:,1);
     temp = zeros (n,m);
 end    
-
+%removing useless firmaware data stabilization
 for i = 1:n
     for j = 1:m
         if rem(Max1s(i,j),1) ~= 0
@@ -87,7 +89,7 @@ Ts = 0.01;                  %t sample = 10 ms
 fs = 1/Ts;
 ts = Ts * (0:n-1);
 
-
+% plot of every dataset
 figure
 for i = 1:3
     subplot (2,3,i)
@@ -127,3 +129,23 @@ for i = 1:3
     plot (ts, SSDown(:,i));
     title ("SSDown"); 
 end 
+%% FIR Design
+clc
+
+fc = [1 2 3 4 5 6 7 8 9 10];             %various cutoff frequencies of the filter
+N  = [4 8 16 32 64 128 256];             %various filter order
+
+%every combination of fc and N will be a different filter with N(k) coeffs
+%h is a 3D matrix containing:
+% for every row (i) a different fc
+% for every column (j) a different N
+% for every "depth" a coefficient
+% !!! padding will be necessary since every filter has a different # of
+% coeffs
+h = zeros (10,7,256); 
+
+for i = 1 : 10
+    for j = 1 : 7
+        h(i,j,1:N(j)) = fir1(N(j)-1, fc(i)/(fs/2), 'low', hamming(N(j)));
+    end 
+end
