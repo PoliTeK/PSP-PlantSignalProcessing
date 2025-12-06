@@ -1,132 +1,129 @@
 close all
 clear
 clc
-
-Max_path = ["Datasets/Dataset2/Max1_1s.txt" "Datasets/Dataset2/Max2_1s.txt" "Datasets/Dataset2/Max3_1s.txt" "Datasets/Dataset2/Max1_5s.txt" "Datasets/Dataset2/Max2_5s.txt" "Datasets/Dataset2/Max3_5s.txt"];
+n = 2496;  % # of samples x measurements
+m = 3;     % # of measurements
+Max1s_path = ["Datasets/Dataset2/Max1_1s.txt" "Datasets/Dataset2/Max2_1s.txt" "Datasets/Dataset2/Max3_1s.txt"];
+Max5s_path = [ "Datasets/Dataset2/Max1_5s.txt" "Datasets/Dataset2/Max2_5s.txt" "Datasets/Dataset2/Max3_5s.txt"];
 Min_path = ["Datasets/Dataset2/Min1_5s.txt" "Datasets/Dataset2/Min2_5s.txt" "Datasets/Dataset2/Min3_5s.txt"];
 DSUp_path = ["Datasets/Dataset2/DiscreteSweepUp1.txt" "Datasets/Dataset2/DiscreteSweepUp2.txt" "Datasets/Dataset2/DiscreteSweepUp3.txt"];
 DSDown_path = ["Datasets/Dataset2/DiscreteSweepDown1.txt" "Datasets/Dataset2/DiscreteSweepDown2.txt" "Datasets/Dataset2/DiscreteSweepDown3.txt"];
 SSDown_path = ["Datasets/Dataset2/SemidisSweepDown1.txt" "Datasets/Dataset2/SemidisSweepDown2.txt" "Datasets/Dataset2/SemidisSweepDown3.txt"];
 SSUp_path = ["Datasets/Dataset2/SemidisSweepUp1.txt" "Datasets/Dataset2/SemidisSweepUp2.txt" "Datasets/Dataset2/SemidisSweepUp3.txt"];
-
-% Inizializza le matrici - Max ha 18 colonne (6 file x 3 colonne)
-Max_data    = zeros(2496,18);
-Min_data    = zeros(2496,9);
-DSUp_data   = zeros(2496,9);
-DSDown_data = zeros(2496,9);
-SSDown_data = zeros(2496,9);
-SSUp_data   = zeros(2496,9);
-
-% Carica dati Max (6 file -> 18 colonne)
-for i = 3:3:18
-    file_index = i/3;
-    fid = fopen(Max_path(file_index),'r');
-    data = table2array(readtable(Max_path(file_index), 'Delimiter', ','));   
-    righe_data = size(data, 1);
-    Max_data(1:righe_data,i-2:i) = data;
-    fclose(fid);
-end
-
-% Carica dati Min (3 file -> 9 colonne)
-for i = 3:3:9
-    file_index = i/3;
-    fid = fopen(Min_path(file_index),'r');
-    data = table2array(readtable(Min_path(file_index), 'Delimiter', ','));   
-    righe_data = size(data, 1);
-    Min_data(1:righe_data,i-2:i) = data;
-    fclose(fid);
-end
-
-% Carica dati Discrete Sweep Up (3 file -> 9 colonne)
-for i = 3:3:9
-    file_index = i/3;
-    fid = fopen(DSUp_path(file_index),'r');
-    data = table2array(readtable(DSUp_path(file_index), 'Delimiter', ','));   
-    righe_data = size(data, 1);
-    DSUp_data(1:righe_data,i-2:i) = data;
-    fclose(fid);
-end
-
-% Carica dati Discrete Sweep Down (3 file -> 9 colonne)
-for i = 3:3:9
-    file_index = i/3;
-    fid = fopen(DSDown_path(file_index),'r');
-    data = table2array(readtable(DSDown_path(file_index), 'Delimiter', ','));   
-    righe_data = size(data, 1);
-    DSDown_data(1:righe_data,i-2:i) = data;
-    fclose(fid);
-end
-
-% Carica dati Semi-discrete Sweep Down (3 file -> 9 colonne)
-for i = 3:3:9
-    file_index = i/3;
-    fid = fopen(SSDown_path(file_index),'r');
-    data = table2array(readtable(SSDown_path(file_index), 'Delimiter', ','));   
-    righe_data = size(data, 1);
-    SSDown_data(1:righe_data,i-2:i) = data;
-    fclose(fid);
-end
-
-% Carica dati Semi-discrete Sweep Up (3 file -> 9 colonne)
-for i = 3:3:9
-    file_index = i/3;
-    fid = fopen(SSUp_path(file_index),'r');
-    data = table2array(readtable(SSUp_path(file_index), 'Delimiter', ','));   
-    righe_data = size(data, 1);
-    SSUp_data(1:righe_data,i-2:i) = data;
-    fclose(fid);
-end
-
-
-%%
-% Number of samples
-Ns = 2496;
-% salmpling step length(10 ms = 0.01 s)  !!!!!! corrsiponde al wait time del while(1)
-Ts = 0.01;
-% Time Axis
-t = (0:Ns-1) * Ts;
-
-%%
-%evaluate optimal cutoff frequency
-k = 0;
-for i = 1:3:18
-    k = k+1;
-    figure(k);
-    plot(t,Max_data(:,i));
+%matrici di n samles e 3 colonne e m righe
+Max1s  = zeros(n,m);
+Max5s  = zeros(n,m);
+Min    = zeros(n,m);
+DSUp   = zeros(n,m);
+DSDown = zeros(n,m);
+SSUp   = zeros(n,m);
+SSDown = zeros(n,m);
+temp   = zeros (n,m);
+for i = 1 : 3
+    temp1 = readmatrix(Max1s_path(i));
+    temp (1:length(temp1), 1:3)=temp1;
+    Max1s(:,i) = temp(:,1);
+    temp = zeros (n,m);
     
-end
-fprintf("il tempo di salita medio è di  0.3s")
-fprintf("la ft ottimale è di 1.2 Hz")
+     temp1 = readmatrix(Max5s_path(i));
+    temp (1:length(temp1), 1:3)=temp1;
+    Max5s(:,i) = temp(:,1);
+    temp = zeros (n,m);
 
-%% confronto FIR con ft di 1, 1.2, 1.4 Hz e ordine 16, 24, 32 - Calcolo coefficienti
+    temp1 = readmatrix(Min_path(i));
+    temp (1:length(temp1), 1:3)=temp1;
+    Min(:,i) = temp(:,1);
+    temp = zeros (n,m);
 
-fs = 1/Ts;                      % frequenza di campionamento effettiva
-fc = [1, 1.2, 1.4];             % frequenza di taglio desiderata
-fs_norm =fc./(fs/2);            % frequenza di taglio normalizzata
+    temp1 = readmatrix(DSUp_path(i));
+    temp (1:length(temp1), 1:3)=temp1;
+    DSUp(:,i) = temp(:,1);
+    temp = zeros (n,m);
 
-N = [16, 24, 32];               % filter order (# coeffi)
+    temp1 = readmatrix(DSDown_path(i));
+    temp (1:length(temp1), 1:3)=temp1;
+    DSDown(:,i) = temp(:,1);
+    temp = zeros (n,m);
 
-h_16 = zeros(3,16);
-h_24 = zeros(3,24);
-h_32 = zeros(3,32);
-% calcolo dei coefficienti
-for i = 1:3
-    h_16(i,:) = fir1(N(1)-1, fs_norm(i), "low", hamming(N(1))); % 3 vettori di coefficienti da 16 x le 3 ft
-    h_24(i,:) = fir1(N(2)-1, fs_norm(i), "low", hamming(N(2))); % 3 vettori di coefficienti da 24 x le 3 ft
-    h_32(i,:) = fir1(N(3)-1, fs_norm(i), "low", hamming(N(3))); % 3 vettori di coefficienti da 16 x le 3 ft
+    temp1 = readmatrix(SSUp_path(i));
+    temp (1:length(temp1), 1:3)=temp1;
+    SSUp(:,i) = temp(:,1);
+    temp = zeros (n,m);
 
-end
+    temp1 = readmatrix(SSDown_path(i));
+    temp (1:length(temp1), 1:3)=temp1;
+    SSDown(:,i) = temp(:,1);
+    temp = zeros (n,m);
+end    
 
-%% confronto FIR con ft di 1, 1.2, 1.4 Hz e ordine 16, 24, 32 - Plot delle opzioni
-out = zeros(1,2496);
-buffer = zeros(1,16);
-SSUp_out = zeros(2496);
-for i = 1:2495
-    for j = 1:15
-        buffer(j+1) = buffer(j);
+for i = 1:n
+    for j = 1:m
+        if rem(Max1s(i,j),1) ~= 0
+            Max1s(i,j) = 0;
+        end
+        if rem(Max5s(i,j),1) ~= 0
+            Max5s(i,j) = 0;
+        end
+        if rem(Min(i,j),1) ~= 0
+            Min(i,j) = 0;
+        end
+        if rem(DSUp(i,j),1) ~= 0
+            DSUp(i,j) = 0;
+        end
+        if rem(DSDown(i,j),1) ~= 0
+            DSDown(i,j) = 0;
+        end
+        if rem(SSUp(i,j),1) ~= 0
+            SSUp(i,j) = 0;
+        end
+        if rem(SSDown(i,j),1) ~= 0
+            SSDown(i,j) = 0;
+        end
     end
-    buffer(1) = SSUp_data(i,1); 
-    SSUp_out(i) = sum(h_16(1).*buffer);
 end
 
-plot(t,SSUp_data(:,1),t,SSUp_out);
+
+Ts = 0.01;                  %t sample = 10 ms
+fs = 1/Ts;
+ts = Ts * (0:n-1);
+
+
+figure
+for i = 1:3
+    subplot (2,3,i)
+    plot (ts, Max1s(:,i));
+    title ("Max1s");
+    
+    subplot (2,3,i+3)
+    plot (ts, Max5s(:,i));
+    title ("Max5s");
+end 
+
+figure
+for i = 1:3
+    subplot (1,3,i)
+    plot (ts, Min(:,i));
+    title ("Min");  
+end 
+
+figure
+for i = 1:3
+   subplot (2,3,i)
+    plot (ts, DSUp(:,i));
+    title ("DSUp");
+    
+    subplot (2,3,i+3)
+    plot (ts, SSUp(:,i));
+    title ("SSUp"); 
+end 
+
+figure
+for i = 1:3
+   subplot (2,3,i)
+    plot (ts, DSDown(:,i));
+    title ("DSDown");
+    
+    subplot (2,3,i+3)
+    plot (ts, SSDown(:,i));
+    title ("SSDown"); 
+end 
