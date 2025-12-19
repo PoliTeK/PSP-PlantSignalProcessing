@@ -4,6 +4,7 @@ clear
 clc
 n = 2496;  % # of samples x measurements
 m = 3;     % # of measurements
+D = m * 7;
 Max1s_path = ["Datasets/Dataset2/Max1_1s.txt" "Datasets/Dataset2/Max2_1s.txt" "Datasets/Dataset2/Max3_1s.txt"];
 Max5s_path = [ "Datasets/Dataset2/Max1_5s.txt" "Datasets/Dataset2/Max2_5s.txt" "Datasets/Dataset2/Max3_5s.txt"];
 Min_path = ["Datasets/Dataset2/Min1_5s.txt" "Datasets/Dataset2/Min2_5s.txt" "Datasets/Dataset2/Min3_5s.txt"];
@@ -132,21 +133,51 @@ end
 %% FIR Design
 clc
 
-fc = [1 2 3 4 5 6 7 8 9 10];             %various cutoff frequencies of the filter
-N  = [4 8 16 32 64 128 256];             %various filter order
-
+fc = [1 2 3 4 5 6 7 8 9 10];             %various cutoff frequencies of the filter    p => index of cutoff vector
+N  = [4 8 16 32 64 128 256];             %various filter order                        k => index of filter order vector
+K = 7;
+P = 10;
 %every combination of fc and N will be a different filter with N(k) coeffs
 %h is a 3D matrix containing:
-% for every row (i) a different fc
-% for every column (j) a different N
+% for every row (p) a different fc
+% for every column (k) a different N
 % for every "depth" a coefficient
 % !!! padding will be necessary since every filter has a different # of
 % coeffs
-h = zeros (10,10,256); 
+h = zeros (length(fc),length(N),max(N)); 
 
-for i = i : 10
-    for i = 1 : 10
-         temp2 = fir1(N(j)-1, fc(i)/(fs/2), 'low', hamming(N(j)));
-         h(i,j,1:j) = temp;
+for p = 1 : P
+    for k = 1 : K
+        h(p,k,1:N(k)) = fir1(N(k)-1, fc(p)/(fs/2), 'low', hamming(N(k)));
     end 
 end
+
+%% FIR implementation
+
+DUT = [Max1s, Max5s, Min, DSUp, DSDown, SSUp, SSDown];
+FDUT = zeros (D,P,K,n); % Filtered Dataset Under Test
+for d = 1 : D
+    for p = 1 : P
+        for k = 1:K
+            w = N(k); %dimensione buffer
+            buffer = zeros(w,1); % inizializzazione buffer a zero
+            hw = h(p,k,1:w);
+            hw = hw(:);
+            for i = 1 : n
+                buffer(2:end) = buffer(1:end-1);
+                buffer(1) = DUT(i,d);
+                FDUT(d,p,k,i) = sum(buffer.*hw);
+            end
+        end
+    end
+end
+
+% ho appena scoperto che il ritardo di gruppo è facilmente calcolabile ( ci
+% sta PD) secondo la formula T_Delay = (N(k)-1)/2 * fs ==> l'ottimo è 41 e
+% dunque 32, adesso ragioniamo sulla frequenza di taglio.
+
+% ho scoparto un'altra cosa mannaggia alla madonna. Fissata una fc, avrai
+% -3dB solo dopo 3*fs/N e quindi vuol dire che se io metto un filtro di
+% ordine 32 con fc a 2 Hz , inizierà a tagliare effettivamente a 11Hz.....
+
+
