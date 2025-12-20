@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
   51 000c BEE80F00 		ldmia	lr!, {r0, r1, r2, r3}
   52              	.LVL1:
   53              		.loc 1 5 16 view .LVU5
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 2
 
 
   54 0010 ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
  110 0002 00BF     		.section	.text._ZN6CapFir4InitENS_7ResTypeE,"ax",%progbits
  111              		.align	1
  112              		.p2align 2,,3
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 3
 
 
  113              		.global	_ZN6CapFir4InitENS_7ResTypeE
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
  143              	.L8:
  144              	.LBB9:
  145              	.LBB5:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 4
 
 
   19:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
  190              		.global	_ZN6CapFir7ProcessEf
  191              		.syntax unified
  192              		.thumb
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 5
 
 
  193              		.thumb_func
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
   44:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             break;
   45:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
   46:../../Classes/SensorFilters/FIIR/CapFir.cpp ****         case MID:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 6
 
 
   47:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 31; i > 0; i--) {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
   50:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
  262              		.loc 1 50 13 is_stmt 1 view .LVU42
  263              	.LBE11:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 7
 
 
  264              	.LBE24:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
  307              	.LBB19:
  308              	.LBB14:
   38:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 8
 
 
  309              		.loc 1 38 29 view .LVU55
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
  350              		.loc 1 41 13 is_stmt 1 discriminator 2 view .LVU68
   41:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
  351              		.loc 1 41 31 discriminator 2 view .LVU69
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 9
 
 
  352 0084 F7D1     		bne	.L29
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
   62:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  398              		.loc 1 62 34 is_stmt 0 view .LVU79
  399 00ac B3EC018A 		vldmia.32	r3!, {s16}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 10
 
 
  400              	.LVL37:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
   71:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     switch (_resType) {
  448              		.loc 1 71 5 view .LVU89
  449              	.LBB30:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 11
 
 
  450              		.loc 1 71 13 is_stmt 0 view .LVU90
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
  478 0020 021D     		adds	r2, r0, #4
  479 0022 00F14403 		add	r3, r0, #68
  480              	.L37:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 12
 
 
  481              	.LBE31:
@@ -708,126 +708,126 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
  515              		.align	2
  516              		.set	.LANCHOR0,. + 0
  517              	.LC0:
- 518 0000 4D011F3C 		.word	1008664909
- 519 0004 66996E3C 		.word	1013881190
- 520 0008 72BFE73C 		.word	1021820786
- 521 000c BDDD463D 		.word	1028054461
- 522 0010 952B933D 		.word	1033055125
- 523 0014 D8E2C03D 		.word	1036051160
- 524 0018 0FA5E43D 		.word	1038394639
- 525 001c 713AF83D 		.word	1039678065
- 526 0020 713AF83D 		.word	1039678065
- 527 0024 0FA5E43D 		.word	1038394639
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 13
+ 518 0000 179F023C 		.word	1006804759
+ 519 0004 DB3D503C 		.word	1011891675
+ 520 0008 F4C1D43C 		.word	1020576244
+ 521 000c 66443E3D 		.word	1027490918
+ 522 0010 1C75913D 		.word	1032942876
+ 523 0014 2A49C33D 		.word	1036208426
+ 524 0018 8033EB3D 		.word	1038824320
+ 525 001c F7AF003E 		.word	1040232439
+ 526 0020 F7AF003E 		.word	1040232439
+ 527 0024 8033EB3D 		.word	1038824320
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 13
 
 
- 528 0028 D8E2C03D 		.word	1036051160
- 529 002c 952B933D 		.word	1033055125
- 530 0030 BDDD463D 		.word	1028054461
- 531 0034 72BFE73C 		.word	1021820786
- 532 0038 66996E3C 		.word	1013881190
- 533 003c 4D011F3C 		.word	1008664909
+ 528 0028 2A49C33D 		.word	1036208426
+ 529 002c 1C75913D 		.word	1032942876
+ 530 0030 66443E3D 		.word	1027490918
+ 531 0034 F4C1D43C 		.word	1020576244
+ 532 0038 DB3D503C 		.word	1011891675
+ 533 003c 179F023C 		.word	1006804759
  534              	.LC1:
- 535 0040 33BE963B 		.word	999734835
- 536 0044 F854A93B 		.word	1000953080
- 537 0048 FB22DF3B 		.word	1004479227
- 538 004c 3B351B3C 		.word	1008416059
- 539 0050 B5FB553C 		.word	1012267957
- 540 0054 FDCF8E3C 		.word	1015992317
- 541 0058 08A5B73C 		.word	1018668296
- 542 005c DFD6E33C 		.word	1021564639
- 543 0060 89CB083D 		.word	1023986569
- 544 0064 62811F3D 		.word	1025474914
- 545 0068 BE1B353D 		.word	1026890686
- 546 006c FCB3483D 		.word	1028174844
- 547 0070 2478593D 		.word	1029273636
- 548 0074 0FB4663D 		.word	1030140943
- 549 0078 37D96F3D 		.word	1030740279
- 550 007c 0085743D 		.word	1031046400
- 551 0080 0085743D 		.word	1031046400
- 552 0084 37D96F3D 		.word	1030740279
- 553 0088 0FB4663D 		.word	1030140943
- 554 008c 2478593D 		.word	1029273636
- 555 0090 FCB3483D 		.word	1028174844
- 556 0094 BE1B353D 		.word	1026890686
- 557 0098 62811F3D 		.word	1025474914
- 558 009c 89CB083D 		.word	1023986569
- 559 00a0 DFD6E33C 		.word	1021564639
- 560 00a4 08A5B73C 		.word	1018668296
- 561 00a8 FDCF8E3C 		.word	1015992317
- 562 00ac B5FB553C 		.word	1012267957
- 563 00b0 3B351B3C 		.word	1008416059
- 564 00b4 FB22DF3B 		.word	1004479227
- 565 00b8 F854A93B 		.word	1000953080
- 566 00bc 33BE963B 		.word	999734835
+ 535 0040 154CC23A 		.word	985811989
+ 536 0044 15E7073B 		.word	990373653
+ 537 0048 A1AD563B 		.word	995536289
+ 538 004c AAFDAD3B 		.word	1001258410
+ 539 0050 69AA083C 		.word	1007200873
+ 540 0054 C6174C3C 		.word	1011619782
+ 541 0058 738E903C 		.word	1016106611
+ 542 005c 55EDC23C 		.word	1019407701
+ 543 0060 4762FB3C 		.word	1023107655
+ 544 0064 EAB41B3D 		.word	1025225962
+ 545 0068 29F8393D 		.word	1027209257
+ 546 006c 3FC7563D 		.word	1029097279
+ 547 0070 4068703D 		.word	1030776896
+ 548 0074 10A0823D 		.word	1031970832
+ 549 0078 17FB893D 		.word	1032452887
+ 550 007c 15C98D3D 		.word	1032702229
+ 551 0080 15C98D3D 		.word	1032702229
+ 552 0084 17FB893D 		.word	1032452887
+ 553 0088 10A0823D 		.word	1031970832
+ 554 008c 4068703D 		.word	1030776896
+ 555 0090 3FC7563D 		.word	1029097279
+ 556 0094 29F8393D 		.word	1027209257
+ 557 0098 EAB41B3D 		.word	1025225962
+ 558 009c 4762FB3C 		.word	1023107655
+ 559 00a0 55EDC23C 		.word	1019407701
+ 560 00a4 738E903C 		.word	1016106611
+ 561 00a8 C6174C3C 		.word	1011619782
+ 562 00ac 69AA083C 		.word	1007200873
+ 563 00b0 AAFDAD3B 		.word	1001258410
+ 564 00b4 A1AD563B 		.word	995536289
+ 565 00b8 15E7073B 		.word	990373653
+ 566 00bc 154CC23A 		.word	985811989
  567              	.LC2:
- 568 00c0 9153053B 		.word	990204817
- 569 00c4 B2A30A3B 		.word	990553010
- 570 00c8 CCBD173B 		.word	991411660
- 571 00cc 3BBF2C3B 		.word	992788283
- 572 00d0 DDAC493B 		.word	994684125
- 573 00d4 E5726E3B 		.word	997094117
- 574 00d8 2E728D3B 		.word	999125550
- 575 00dc A75DA73B 		.word	1000824231
- 576 00e0 B9CCC43B 		.word	1002753209
- 577 00e4 9484E53B 		.word	1004897428
- 578 00e8 8C9F043C 		.word	1006935948
- 579 00ec EAD5173C 		.word	1008195050
- 580 00f0 4D382C3C 		.word	1009530957
- 581 00f4 6C95413C 		.word	1010931052
- 582 00f8 38B8573C 		.word	1012381752
- 583 00fc 7E686E3C 		.word	1013868670
- 584 0100 C8B5823C 		.word	1015199176
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 14
+ 568 00c0 457050BA 		.word	-1169133499
+ 569 00c4 EF0263BA 		.word	-1167916305
+ 570 00c8 23347EBA 		.word	-1166134237
+ 571 00cc 479D90BA 		.word	-1164927673
+ 572 00d0 0DA3A4BA 		.word	-1163615475
+ 573 00d4 8DB1B8BA 		.word	-1162301043
+ 574 00d8 2C44C9BA 		.word	-1161214932
+ 575 00dc B8E3D1BA 		.word	-1160649800
+ 576 00e0 AB50CDBA 		.word	-1160949589
+ 577 00e4 E6BCB5BA 		.word	-1162494746
+ 578 00e8 281585BA 		.word	-1165683416
+ 579 00ec CC4BD5B9 		.word	-1177203764
+ 580 00f0 D0A0FC39 		.word	972857552
+ 581 00f4 D638DD3A 		.word	987576534
+ 582 00f8 7A50543B 		.word	995381370
+ 583 00fc CAEDA83B 		.word	1000926666
+ 584 0100 10C9F33B 		.word	1005832464
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 14
 
 
- 585 0104 8E428E3C 		.word	1015956110
- 586 0108 D9BB993C 		.word	1016708057
- 587 010c C402A53C 		.word	1017447108
- 588 0110 B6F8AF3C 		.word	1018165430
- 589 0114 A37FBA3C 		.word	1018855331
- 590 0118 7E7AC43C 		.word	1019509374
- 591 011c 89CDCD3C 		.word	1020120457
- 592 0120 C25ED63C 		.word	1020681922
- 593 0124 1616DE3C 		.word	1021187606
- 594 0128 C0DDE43C 		.word	1021631936
- 595 012c A1A2EA3C 		.word	1022010017
- 596 0130 5154EF3C 		.word	1022317649
- 597 0134 7BE5F23C 		.word	1022551419
- 598 0138 F74BF53C 		.word	1022708727
- 599 013c F180F63C 		.word	1022787825
- 600 0140 F180F63C 		.word	1022787825
- 601 0144 F74BF53C 		.word	1022708727
- 602 0148 7BE5F23C 		.word	1022551419
- 603 014c 5154EF3C 		.word	1022317649
- 604 0150 A1A2EA3C 		.word	1022010017
- 605 0154 C0DDE43C 		.word	1021631936
- 606 0158 1616DE3C 		.word	1021187606
- 607 015c C25ED63C 		.word	1020681922
- 608 0160 89CDCD3C 		.word	1020120457
- 609 0164 7E7AC43C 		.word	1019509374
- 610 0168 A37FBA3C 		.word	1018855331
- 611 016c B6F8AF3C 		.word	1018165430
- 612 0170 C402A53C 		.word	1017447108
- 613 0174 D9BB993C 		.word	1016708057
- 614 0178 8E428E3C 		.word	1015956110
- 615 017c C8B5823C 		.word	1015199176
- 616 0180 7E686E3C 		.word	1013868670
- 617 0184 38B8573C 		.word	1012381752
- 618 0188 6C95413C 		.word	1010931052
- 619 018c 4D382C3C 		.word	1009530957
- 620 0190 EAD5173C 		.word	1008195050
- 621 0194 8C9F043C 		.word	1006935948
- 622 0198 9484E53B 		.word	1004897428
- 623 019c B9CCC43B 		.word	1002753209
- 624 01a0 A75DA73B 		.word	1000824231
- 625 01a4 2E728D3B 		.word	999125550
- 626 01a8 E5726E3B 		.word	997094117
- 627 01ac DDAC493B 		.word	994684125
- 628 01b0 3BBF2C3B 		.word	992788283
- 629 01b4 CCBD173B 		.word	991411660
- 630 01b8 B2A30A3B 		.word	990553010
- 631 01bc 9153053B 		.word	990204817
+ 585 0104 3036253C 		.word	1009071664
+ 586 0108 3A05563C 		.word	1012270394
+ 587 010c 3CD5853C 		.word	1015403836
+ 588 0110 4EA0A23C 		.word	1017290830
+ 589 0114 91D4C03C 		.word	1019270289
+ 590 0118 70CADF3C 		.word	1021299312
+ 591 011c 56C7FE3C 		.word	1023330134
+ 592 0120 11820E3D 		.word	1024360977
+ 593 0124 44DA1C3D 		.word	1025301060
+ 594 0128 6B072A3D 		.word	1026164587
+ 595 012c E3A9353D 		.word	1026927075
+ 596 0130 1D6B3F3D 		.word	1027566365
+ 597 0134 1B01473D 		.word	1028063515
+ 598 0138 84314C3D 		.word	1028403588
+ 599 013c 03D44E3D 		.word	1028576259
+ 600 0140 03D44E3D 		.word	1028576259
+ 601 0144 84314C3D 		.word	1028403588
+ 602 0148 1B01473D 		.word	1028063515
+ 603 014c 1D6B3F3D 		.word	1027566365
+ 604 0150 E3A9353D 		.word	1026927075
+ 605 0154 6B072A3D 		.word	1026164587
+ 606 0158 44DA1C3D 		.word	1025301060
+ 607 015c 11820E3D 		.word	1024360977
+ 608 0160 56C7FE3C 		.word	1023330134
+ 609 0164 70CADF3C 		.word	1021299312
+ 610 0168 91D4C03C 		.word	1019270289
+ 611 016c 4EA0A23C 		.word	1017290830
+ 612 0170 3CD5853C 		.word	1015403836
+ 613 0174 3A05563C 		.word	1012270394
+ 614 0178 3036253C 		.word	1009071664
+ 615 017c 10C9F33B 		.word	1005832464
+ 616 0180 CAEDA83B 		.word	1000926666
+ 617 0184 7A50543B 		.word	995381370
+ 618 0188 D638DD3A 		.word	987576534
+ 619 018c D0A0FC39 		.word	972857552
+ 620 0190 CC4BD5B9 		.word	-1177203764
+ 621 0194 281585BA 		.word	-1165683416
+ 622 0198 E6BCB5BA 		.word	-1162494746
+ 623 019c AB50CDBA 		.word	-1160949589
+ 624 01a0 B8E3D1BA 		.word	-1160649800
+ 625 01a4 2C44C9BA 		.word	-1161214932
+ 626 01a8 8DB1B8BA 		.word	-1162301043
+ 627 01ac 0DA3A4BA 		.word	-1163615475
+ 628 01b0 479D90BA 		.word	-1164927673
+ 629 01b4 23347EBA 		.word	-1166134237
+ 630 01b8 EF0263BA 		.word	-1167916305
+ 631 01bc 457050BA 		.word	-1169133499
  632              		.text
  633              	.Letext0:
  634              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
  639              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
  640              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
  641              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 15
 
 
  642              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
@@ -876,26 +876,26 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
  674              		.file 42 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
  675              		.file 43 "../../Classes/SensorFilters/FIIR/CapFir.h"
  676              		.file 44 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 16
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 CapFir.cpp
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:17     .text._ZN6CapFirC2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:26     .text._ZN6CapFirC2Ev:00000000 _ZN6CapFirC2Ev
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:80     .text._ZN6CapFirC2Ev:00000050 $d
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:26     .text._ZN6CapFirC2Ev:00000000 _ZN6CapFirC1Ev
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:87     .text._ZN6CapFirD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:95     .text._ZN6CapFirD2Ev:00000000 _ZN6CapFirD2Ev
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:95     .text._ZN6CapFirD2Ev:00000000 _ZN6CapFirD1Ev
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:111    .text._ZN6CapFir4InitENS_7ResTypeE:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:119    .text._ZN6CapFir4InitENS_7ResTypeE:00000000 _ZN6CapFir4InitENS_7ResTypeE
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:188    .text._ZN6CapFir7ProcessEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:196    .text._ZN6CapFir7ProcessEf:00000000 _ZN6CapFir7ProcessEf
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:427    .text._ZN6CapFir7ProcessEf:000000c4 $d
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:432    .text._ZN6CapFir9setBufferEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:440    .text._ZN6CapFir9setBufferEf:00000000 _ZN6CapFir9setBufferEf
-C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:515    .rodata:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:17     .text._ZN6CapFirC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:26     .text._ZN6CapFirC2Ev:00000000 _ZN6CapFirC2Ev
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:80     .text._ZN6CapFirC2Ev:00000050 $d
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:26     .text._ZN6CapFirC2Ev:00000000 _ZN6CapFirC1Ev
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:87     .text._ZN6CapFirD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:95     .text._ZN6CapFirD2Ev:00000000 _ZN6CapFirD2Ev
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:95     .text._ZN6CapFirD2Ev:00000000 _ZN6CapFirD1Ev
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:111    .text._ZN6CapFir4InitENS_7ResTypeE:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:119    .text._ZN6CapFir4InitENS_7ResTypeE:00000000 _ZN6CapFir4InitENS_7ResTypeE
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:188    .text._ZN6CapFir7ProcessEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:196    .text._ZN6CapFir7ProcessEf:00000000 _ZN6CapFir7ProcessEf
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:427    .text._ZN6CapFir7ProcessEf:000000c4 $d
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:432    .text._ZN6CapFir9setBufferEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:440    .text._ZN6CapFir9setBufferEf:00000000 _ZN6CapFir9setBufferEf
+C:\Users\skipi\AppData\Local\Temp\cc2Dt70X.s:515    .rodata:00000000 $d
 
 UNDEFINED SYMBOLS
 memcpy
