@@ -2,7 +2,7 @@
 clc
 clear
 
-fs = 100;                                               % frequenza di campionamento effettiva
+fs = 200;                                               % frequenza di campionamento effettiva
 fc_bes = 5;                                             % frequenza di taglio desiderata Bessel
 fc_but = 4;                                             % frequenza di taglio desiderata Butterworth
 N = 2;                                                  % ordine del filtro
@@ -49,5 +49,3 @@ fprintf('float bessel_a[%d] = {', length(a_bes));
 fprintf('%.8ff, ', a_bes(1:end-1));
 fprintf('%.8ff};\n', a_bes(end));
 
-fprintf('\n// Ricorda: nell''implementazione IIR Direct Form II,\n');
-fprintf('// spesso a[0] è 1.0 e i coefficienti a[1]...a[n] vanno sottratti.\n');
