@@ -82,40 +82,40 @@ fs = 1/Ts;
 ts = Ts * (0:n-1);
 
 %% Preparazione Coefficienti Filtri (Ordini 2, 4, 6, 8) BUTTERWORTH
-% fc_val = 4; 
-% freq_norm = fc_val / (fs/2);
+ fc_val = 4; 
+ freq_norm = fc_val / (fs/2);
 % 
 % % Ordine 2 (NUOVO)
-% [b2, a2] = butter(2, freq_norm, 'low');
+ [b2, a2] = butter(2, freq_norm, 'low');
 % % Ordine 4
-% [b4, a4] = butter(4, freq_norm, 'low');
+ [b4, a4] = butter(4, freq_norm, 'low');
 % % Ordine 6
-% [b6, a6] = butter(6, freq_norm, 'low');
+ [b6, a6] = butter(6, freq_norm, 'low');
 % % Ordine 8
-% [b8, a8] = butter(8, freq_norm, 'low');
+ [b8, a8] = butter(8, freq_norm, 'low');
 %% Preparazione Coefficienti Filtri (Ordini 2, 4, 6, 8) - BESSEL
-fc_val = 5; 
-% Per besself serve la frequenza angolare analogica (rad/s), non quella normalizzata
-Wo = 2 * pi * fc_val; 
-
-% Nota: besself restituisce coefficienti analogici (dominio S).
-% Dobbiamo convertirli in digitale (dominio Z) usando 'bilinear'.
-
-% Ordine 2
-[b2_s, a2_s] = besself(2, Wo);      % Calcolo analogico
-[b2, a2] = bilinear(b2_s, a2_s, fs); % Conversione digitale
-
-% Ordine 4
-[b4_s, a4_s] = besself(4, Wo);
-[b4, a4] = bilinear(b4_s, a4_s, fs);
-
-% Ordine 6
-[b6_s, a6_s] = besself(6, Wo);
-[b6, a6] = bilinear(b6_s, a6_s, fs);
-
-% Ordine 8
-[b8_s, a8_s] = besself(8, Wo);
-[b8, a8] = bilinear(b8_s, a8_s, fs);
+% fc_val = 5; 
+% % Per besself serve la frequenza angolare analogica (rad/s), non quella normalizzata
+% Wo = 2 * pi * fc_val; 
+% 
+% % Nota: besself restituisce coefficienti analogici (dominio S).
+% % Dobbiamo convertirli in digitale (dominio Z) usando 'bilinear'.
+% 
+% % Ordine 2
+% [b2_s, a2_s] = besself(2, Wo);      % Calcolo analogico
+% [b2, a2] = bilinear(b2_s, a2_s, fs); % Conversione digitale
+% 
+% % Ordine 4
+% [b4_s, a4_s] = besself(4, Wo);
+% [b4, a4] = bilinear(b4_s, a4_s, fs);
+% 
+% % Ordine 6
+% [b6_s, a6_s] = besself(6, Wo);
+% [b6, a6] = bilinear(b6_s, a6_s, fs);
+% 
+% % Ordine 8
+% [b8_s, a8_s] = besself(8, Wo);
+% [b8, a8] = bilinear(b8_s, a8_s, fs);
 %% Elaborazione e Plotting (21 Grafici totali)
 DUT = [Max1s, Max5s, Min, DSUp, DSDown, SSUp, SSDown];
 num_signals = size(DUT, 2);

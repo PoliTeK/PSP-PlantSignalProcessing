@@ -1,4 +1,4 @@
-build/CapFir.o: ../../Classes/SensorFilters/FIIR/CapFir.cpp \
+build/IIR.o: ../../Classes/SensorFilters/IIR/IIR.cpp \
  ../../libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h \
  ../../libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h \
@@ -252,7 +252,7 @@ build/CapFir.o: ../../Classes/SensorFilters/FIIR/CapFir.cpp \
  ../../libs/libDaisy/../../libs/DaisySP/Source/Utility/metro.h \
  ../../libs/libDaisy/../../libs/DaisySP/Source/Utility/samplehold.h \
  ../../libs/libDaisy/../../libs/DaisySP/Source/Utility/smooth_random.h \
- ../../Classes/SensorFilters/FIIR/CapFir.h
+ ../../Classes/SensorFilters/IIR/iir.h
 ../../libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../../libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -507,4 +507,4 @@ build/CapFir.o: ../../Classes/SensorFilters/FIIR/CapFir.cpp \
 ../../libs/libDaisy/../../libs/DaisySP/Source/Utility/metro.h:
 ../../libs/libDaisy/../../libs/DaisySP/Source/Utility/samplehold.h:
 ../../libs/libDaisy/../../libs/DaisySP/Source/Utility/smooth_random.h:
-../../Classes/SensorFilters/FIIR/CapFir.h:
+../../Classes/SensorFilters/IIR/iir.h:

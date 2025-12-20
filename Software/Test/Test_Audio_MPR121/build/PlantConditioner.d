@@ -240,7 +240,9 @@ build/PlantConditioner.o: ../../Classes/Temperamento/PlantConditioner.cpp \
  ../../libs/libDaisy/src/util/WaveTableLoader.h \
  ../../libs/libDaisy/src/sys/fatfs.h \
  ../../libs/libDaisy/src/util/WavWriter.h \
- ../../Classes/Temperamento/../FIIR/CapFir.h
+ ../../Classes/Temperamento/../SensorFilters/FIIR/CapFir.h \
+ ../../Classes/Temperamento/../SensorFilters/IIR/iir.h \
+ ../../Classes/Temperamento/../SensorFilters/MF/MF.h
 ../../libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../../libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -496,4 +498,6 @@ build/PlantConditioner.o: ../../Classes/Temperamento/PlantConditioner.cpp \
 ../../libs/libDaisy/src/util/WaveTableLoader.h:
 ../../libs/libDaisy/src/sys/fatfs.h:
 ../../libs/libDaisy/src/util/WavWriter.h:
-../../Classes/Temperamento/../FIIR/CapFir.h:
+../../Classes/Temperamento/../SensorFilters/FIIR/CapFir.h:
+../../Classes/Temperamento/../SensorFilters/IIR/iir.h:
+../../Classes/Temperamento/../SensorFilters/MF/MF.h:

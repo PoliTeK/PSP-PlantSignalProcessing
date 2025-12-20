@@ -1,0 +1,475 @@
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"MF.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN2MFC2Ev,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_ZN2MFC2Ev
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
+  26              	_ZN2MFC2Ev:
+  27              	.LVL0:
+  28              	.LFB4841:
+  29              		.file 1 "../../Classes/SensorFilters/MF/MF.cpp"
+   1:../../Classes/SensorFilters/MF/MF.cpp **** #include "../../libs/libDaisy/src/daisy_seed.h"
+   2:../../Classes/SensorFilters/MF/MF.cpp **** #include "../../libs/DaisySP/Source/daisysp.h"
+   3:../../Classes/SensorFilters/MF/MF.cpp **** #include "MF.h"
+   4:../../Classes/SensorFilters/MF/MF.cpp **** 
+   5:../../Classes/SensorFilters/MF/MF.cpp **** MF::MF() {}
+  30              		.loc 1 5 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  35              	.LBB2:
+  36              		.loc 1 5 8 is_stmt 0 view .LVU1
+  37 0000 0022     		movs	r2, #0
+  38 0002 0346     		mov	r3, r0
+  39 0004 DFF810C0 		ldr	ip, .L3
+  40 0008 43F804CB 		str	ip, [r3], #4	@ float
+  41 000c 4260     		str	r2, [r0, #4]
+  42 000e C3E90122 		strd	r2, r2, [r3, #4]
+  43 0012 C3E90322 		strd	r2, r2, [r3, #12]
+  44              	.LBE2:
+  45              		.loc 1 5 11 view .LVU2
+  46 0016 7047     		bx	lr
+  47              	.L4:
+  48              		.align	2
+  49              	.L3:
+  50 0018 0000C842 		.word	1120403456
+  51              		.cfi_endproc
+  52              	.LFE4841:
+  54              		.global	_ZN2MFC1Ev
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s 			page 2
+
+
+  55              		.thumb_set _ZN2MFC1Ev,_ZN2MFC2Ev
+  56              		.section	.text._ZN2MFD2Ev,"ax",%progbits
+  57              		.align	1
+  58              		.p2align 2,,3
+  59              		.global	_ZN2MFD2Ev
+  60              		.syntax unified
+  61              		.thumb
+  62              		.thumb_func
+  63              		.fpu fpv5-d16
+  65              	_ZN2MFD2Ev:
+  66              	.LVL1:
+  67              	.LFB4844:
+   6:../../Classes/SensorFilters/MF/MF.cpp **** MF::~MF() {}
+  68              		.loc 1 6 1 is_stmt 1 view -0
+  69              		.cfi_startproc
+  70              		@ args = 0, pretend = 0, frame = 0
+  71              		@ frame_needed = 0, uses_anonymous_args = 0
+  72              		@ link register save eliminated.
+  73              		.loc 1 6 12 is_stmt 0 view .LVU4
+  74 0000 7047     		bx	lr
+  75              		.cfi_endproc
+  76              	.LFE4844:
+  78              		.global	_ZN2MFD1Ev
+  79              		.thumb_set _ZN2MFD1Ev,_ZN2MFD2Ev
+  80 0002 00BF     		.section	.text._ZN2MF4InitEv,"ax",%progbits
+  81              		.align	1
+  82              		.p2align 2,,3
+  83              		.global	_ZN2MF4InitEv
+  84              		.syntax unified
+  85              		.thumb
+  86              		.thumb_func
+  87              		.fpu fpv5-d16
+  89              	_ZN2MF4InitEv:
+  90              	.LVL2:
+  91              	.LFB4846:
+   7:../../Classes/SensorFilters/MF/MF.cpp **** 
+   8:../../Classes/SensorFilters/MF/MF.cpp **** void MF::Init() {
+  92              		.loc 1 8 17 is_stmt 1 view -0
+  93              		.cfi_startproc
+  94              		@ args = 0, pretend = 0, frame = 0
+  95              		@ frame_needed = 0, uses_anonymous_args = 0
+  96              		@ link register save eliminated.
+   9:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = 0; i < _ORDER ; i++) {
+  97              		.loc 1 9 5 view .LVU6
+  98              	.LBB3:
+  99              		.loc 1 9 23 view .LVU7
+  10:../../Classes/SensorFilters/MF/MF.cpp ****         _buff[i] = 0.0f;
+ 100              		.loc 1 10 9 view .LVU8
+ 101              		.loc 1 10 18 is_stmt 0 view .LVU9
+ 102 0000 0023     		movs	r3, #0
+ 103 0002 4360     		str	r3, [r0, #4]	@ float
+   9:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = 0; i < _ORDER ; i++) {
+ 104              		.loc 1 9 5 is_stmt 1 view .LVU10
+ 105              	.LVL3:
+   9:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = 0; i < _ORDER ; i++) {
+ 106              		.loc 1 9 23 view .LVU11
+ 107              		.loc 1 10 9 view .LVU12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s 			page 3
+
+
+ 108              		.loc 1 10 18 is_stmt 0 view .LVU13
+ 109 0004 8360     		str	r3, [r0, #8]	@ float
+   9:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = 0; i < _ORDER ; i++) {
+ 110              		.loc 1 9 5 is_stmt 1 view .LVU14
+ 111              	.LVL4:
+   9:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = 0; i < _ORDER ; i++) {
+ 112              		.loc 1 9 23 view .LVU15
+ 113              		.loc 1 10 9 view .LVU16
+ 114              		.loc 1 10 18 is_stmt 0 view .LVU17
+ 115 0006 C360     		str	r3, [r0, #12]	@ float
+   9:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = 0; i < _ORDER ; i++) {
+ 116              		.loc 1 9 5 is_stmt 1 view .LVU18
+ 117              	.LVL5:
+   9:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = 0; i < _ORDER ; i++) {
+ 118              		.loc 1 9 23 view .LVU19
+ 119              		.loc 1 10 9 view .LVU20
+ 120              		.loc 1 10 18 is_stmt 0 view .LVU21
+ 121 0008 0361     		str	r3, [r0, #16]	@ float
+   9:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = 0; i < _ORDER ; i++) {
+ 122              		.loc 1 9 5 is_stmt 1 view .LVU22
+ 123              	.LVL6:
+   9:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = 0; i < _ORDER ; i++) {
+ 124              		.loc 1 9 23 view .LVU23
+ 125              		.loc 1 10 9 view .LVU24
+ 126              		.loc 1 10 18 is_stmt 0 view .LVU25
+ 127 000a 4361     		str	r3, [r0, #20]	@ float
+   9:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = 0; i < _ORDER ; i++) {
+ 128              		.loc 1 9 5 is_stmt 1 view .LVU26
+ 129              	.LVL7:
+   9:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = 0; i < _ORDER ; i++) {
+ 130              		.loc 1 9 23 view .LVU27
+ 131              	.LBE3:
+  11:../../Classes/SensorFilters/MF/MF.cpp ****     }
+  12:../../Classes/SensorFilters/MF/MF.cpp **** }
+ 132              		.loc 1 12 1 is_stmt 0 view .LVU28
+ 133 000c 7047     		bx	lr
+ 134              		.cfi_endproc
+ 135              	.LFE4846:
+ 137 000e 00BF     		.section	.text._ZN2MF7ProcessEf,"ax",%progbits
+ 138              		.align	1
+ 139              		.p2align 2,,3
+ 140              		.global	_ZN2MF7ProcessEf
+ 141              		.syntax unified
+ 142              		.thumb
+ 143              		.thumb_func
+ 144              		.fpu fpv5-d16
+ 146              	_ZN2MF7ProcessEf:
+ 147              	.LVL8:
+ 148              	.LFB4847:
+  13:../../Classes/SensorFilters/MF/MF.cpp **** 
+  14:../../Classes/SensorFilters/MF/MF.cpp **** float MF::Process(float in) {
+ 149              		.loc 1 14 29 is_stmt 1 view -0
+ 150              		.cfi_startproc
+ 151              		@ args = 0, pretend = 0, frame = 24
+ 152              		@ frame_needed = 0, uses_anonymous_args = 0
+ 153              		@ link register save eliminated.
+  15:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = _ORDER - 1; i > 0; i--) {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s 			page 4
+
+
+ 154              		.loc 1 15 5 view .LVU30
+ 155              	.LBB4:
+ 156              		.loc 1 15 32 view .LVU31
+  16:../../Classes/SensorFilters/MF/MF.cpp ****         _buff[i] = _buff[i - 1];
+ 157              		.loc 1 16 9 view .LVU32
+ 158              	.LBE4:
+  14:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = _ORDER - 1; i > 0; i--) {
+ 159              		.loc 1 14 29 is_stmt 0 view .LVU33
+ 160 0000 86B0     		sub	sp, sp, #24
+ 161              		.cfi_def_cfa_offset 24
+ 162              	.LBB5:
+ 163              		.loc 1 16 31 view .LVU34
+ 164 0002 4168     		ldr	r1, [r0, #4]	@ float
+ 165 0004 0369     		ldr	r3, [r0, #16]	@ float
+ 166 0006 C268     		ldr	r2, [r0, #12]	@ float
+ 167 0008 D0F808C0 		ldr	ip, [r0, #8]	@ float
+ 168              		.loc 1 16 18 view .LVU35
+ 169 000c 4361     		str	r3, [r0, #20]	@ float
+  15:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = _ORDER - 1; i > 0; i--) {
+ 170              		.loc 1 15 5 is_stmt 1 view .LVU36
+ 171              	.LVL9:
+  15:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = _ORDER - 1; i > 0; i--) {
+ 172              		.loc 1 15 32 view .LVU37
+ 173              		.loc 1 16 9 view .LVU38
+ 174              		.loc 1 16 18 is_stmt 0 view .LVU39
+ 175 000e 8160     		str	r1, [r0, #8]	@ float
+ 176 0010 0261     		str	r2, [r0, #16]	@ float
+  15:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = _ORDER - 1; i > 0; i--) {
+ 177              		.loc 1 15 5 is_stmt 1 view .LVU40
+ 178              	.LVL10:
+  15:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = _ORDER - 1; i > 0; i--) {
+ 179              		.loc 1 15 32 view .LVU41
+ 180              		.loc 1 16 9 view .LVU42
+ 181              		.loc 1 16 18 is_stmt 0 view .LVU43
+ 182 0012 C0F80CC0 		str	ip, [r0, #12]	@ float
+  15:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = _ORDER - 1; i > 0; i--) {
+ 183              		.loc 1 15 5 is_stmt 1 view .LVU44
+ 184              	.LVL11:
+  15:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = _ORDER - 1; i > 0; i--) {
+ 185              		.loc 1 15 32 view .LVU45
+ 186              		.loc 1 16 9 view .LVU46
+  15:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = _ORDER - 1; i > 0; i--) {
+ 187              		.loc 1 15 5 view .LVU47
+  15:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = _ORDER - 1; i > 0; i--) {
+ 188              		.loc 1 15 32 view .LVU48
+ 189              	.LBE5:
+  17:../../Classes/SensorFilters/MF/MF.cpp ****     }
+  18:../../Classes/SensorFilters/MF/MF.cpp ****     _buff[0] = in; 
+ 190              		.loc 1 18 5 view .LVU49
+ 191              		.loc 1 18 14 is_stmt 0 view .LVU50
+ 192 0016 80ED010A 		vstr.32	s0, [r0, #4]
+  19:../../Classes/SensorFilters/MF/MF.cpp ****     
+  20:../../Classes/SensorFilters/MF/MF.cpp ****     float tempBuffer[_ORDER];
+ 193              		.loc 1 20 5 is_stmt 1 view .LVU51
+  21:../../Classes/SensorFilters/MF/MF.cpp ****     
+  22:../../Classes/SensorFilters/MF/MF.cpp ****    for (int i = 0; i < _ORDER ; i++) {
+ 194              		.loc 1 22 4 view .LVU52
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s 			page 5
+
+
+ 195              	.LVL12:
+ 196              	.LBB6:
+ 197              		.loc 1 22 22 view .LVU53
+  23:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[i] = _buff[i];
+ 198              		.loc 1 23 9 view .LVU54
+ 199 001a 02A8     		add	r0, sp, #8
+ 200              	.LVL13:
+ 201              		.loc 1 23 23 is_stmt 0 view .LVU55
+ 202 001c 0291     		str	r1, [sp, #8]	@ float
+ 203 001e 0021     		movs	r1, #0
+ 204 0020 8DED010A 		vstr.32	s0, [sp, #4]
+  22:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[i] = _buff[i];
+ 205              		.loc 1 22 4 is_stmt 1 view .LVU56
+ 206              	.LVL14:
+  22:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[i] = _buff[i];
+ 207              		.loc 1 22 22 view .LVU57
+ 208              		.loc 1 23 9 view .LVU58
+  22:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[i] = _buff[i];
+ 209              		.loc 1 22 4 view .LVU59
+  22:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[i] = _buff[i];
+ 210              		.loc 1 22 22 view .LVU60
+ 211              		.loc 1 23 9 view .LVU61
+ 212              		.loc 1 23 23 is_stmt 0 view .LVU62
+ 213 0024 CDF80CC0 		str	ip, [sp, #12]	@ float
+  22:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[i] = _buff[i];
+ 214              		.loc 1 22 4 is_stmt 1 view .LVU63
+ 215              	.LVL15:
+  22:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[i] = _buff[i];
+ 216              		.loc 1 22 22 view .LVU64
+ 217              		.loc 1 23 9 view .LVU65
+ 218              		.loc 1 23 23 is_stmt 0 view .LVU66
+ 219 0028 0492     		str	r2, [sp, #16]	@ float
+  22:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[i] = _buff[i];
+ 220              		.loc 1 22 4 is_stmt 1 view .LVU67
+ 221              	.LVL16:
+  22:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[i] = _buff[i];
+ 222              		.loc 1 22 22 view .LVU68
+ 223              		.loc 1 23 9 view .LVU69
+ 224              		.loc 1 23 23 is_stmt 0 view .LVU70
+ 225 002a 0593     		str	r3, [sp, #20]	@ float
+  22:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[i] = _buff[i];
+ 226              		.loc 1 22 4 is_stmt 1 view .LVU71
+ 227              	.LVL17:
+  22:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[i] = _buff[i];
+ 228              		.loc 1 22 22 view .LVU72
+ 229              	.L12:
+  22:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[i] = _buff[i];
+ 230              		.loc 1 22 22 is_stmt 0 view .LVU73
+ 231              	.LBE6:
+ 232              	.LBB7:
+ 233              	.LBB8:
+  24:../../Classes/SensorFilters/MF/MF.cpp ****     }
+  25:../../Classes/SensorFilters/MF/MF.cpp ****     
+  26:../../Classes/SensorFilters/MF/MF.cpp ****     for (int i = 1; i < _ORDER; i++) {
+  27:../../Classes/SensorFilters/MF/MF.cpp ****         float key = tempBuffer[i];
+ 234              		.loc 1 27 9 is_stmt 1 view .LVU74
+ 235              		.loc 1 27 15 is_stmt 0 view .LVU75
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s 			page 6
+
+
+ 236 002c B0EC017A 		vldmia.32	r0!, {s14}
+ 237              	.LVL18:
+  28:../../Classes/SensorFilters/MF/MF.cpp ****         int j = i - 1;
+ 238              		.loc 1 28 9 is_stmt 1 view .LVU76
+ 239              		.loc 1 28 13 is_stmt 0 view .LVU77
+ 240 0030 0B46     		mov	r3, r1
+ 241              	.LVL19:
+  29:../../Classes/SensorFilters/MF/MF.cpp ****         while (j >= 0 && tempBuffer[j] > key) {
+ 242              		.loc 1 29 9 is_stmt 1 view .LVU78
+ 243              		.loc 1 29 23 view .LVU79
+  28:../../Classes/SensorFilters/MF/MF.cpp ****         int j = i - 1;
+ 244              		.loc 1 28 13 is_stmt 0 view .LVU80
+ 245 0032 0246     		mov	r2, r0
+ 246              	.LVL20:
+ 247              	.L11:
+  30:../../Classes/SensorFilters/MF/MF.cpp ****             tempBuffer[j + 1] = tempBuffer[j];
+ 248              		.loc 1 30 13 is_stmt 1 discriminator 1 view .LVU81
+  29:../../Classes/SensorFilters/MF/MF.cpp ****         while (j >= 0 && tempBuffer[j] > key) {
+ 249              		.loc 1 29 38 is_stmt 0 discriminator 1 view .LVU82
+ 250 0034 52ED027A 		vldr.32	s15, [r2, #-8]
+  29:../../Classes/SensorFilters/MF/MF.cpp ****         while (j >= 0 && tempBuffer[j] > key) {
+ 251              		.loc 1 29 23 discriminator 1 view .LVU83
+ 252 0038 F4EEC77A 		vcmpe.f32	s15, s14
+ 253 003c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 254 0040 12DD     		ble	.L17
+  31:../../Classes/SensorFilters/MF/MF.cpp ****             j = j - 1;
+ 255              		.loc 1 31 15 view .LVU84
+ 256 0042 013B     		subs	r3, r3, #1
+ 257              	.LVL21:
+  30:../../Classes/SensorFilters/MF/MF.cpp ****             tempBuffer[j + 1] = tempBuffer[j];
+ 258              		.loc 1 30 31 view .LVU85
+ 259 0044 62ED017A 		vstmdb.32	r2!, {s15}
+ 260              		.loc 1 31 13 is_stmt 1 view .LVU86
+ 261              	.LVL22:
+  29:../../Classes/SensorFilters/MF/MF.cpp ****         while (j >= 0 && tempBuffer[j] > key) {
+ 262              		.loc 1 29 9 view .LVU87
+  29:../../Classes/SensorFilters/MF/MF.cpp ****         while (j >= 0 && tempBuffer[j] > key) {
+ 263              		.loc 1 29 23 view .LVU88
+ 264 0048 B3F1FF3F 		cmp	r3, #-1
+ 265 004c F2D1     		bne	.L11
+ 266 004e 0023     		movs	r3, #0
+ 267              	.LVL23:
+ 268              	.L10:
+  32:../../Classes/SensorFilters/MF/MF.cpp ****         }
+  33:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[j + 1] = key;
+ 269              		.loc 1 33 9 discriminator 2 view .LVU89
+ 270              		.loc 1 33 27 is_stmt 0 discriminator 2 view .LVU90
+ 271 0050 06AA     		add	r2, sp, #24
+ 272              	.LBE8:
+  26:../../Classes/SensorFilters/MF/MF.cpp ****         float key = tempBuffer[i];
+ 273              		.loc 1 26 23 discriminator 2 view .LVU91
+ 274 0052 0131     		adds	r1, r1, #1
+ 275              	.LVL24:
+ 276              	.LBB9:
+ 277              		.loc 1 33 27 discriminator 2 view .LVU92
+ 278 0054 02EB8303 		add	r3, r2, r3, lsl #2
+ 279              	.LBE9:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s 			page 7
+
+
+  26:../../Classes/SensorFilters/MF/MF.cpp ****         float key = tempBuffer[i];
+ 280              		.loc 1 26 23 discriminator 2 view .LVU93
+ 281 0058 0429     		cmp	r1, #4
+ 282              	.LBB10:
+ 283              		.loc 1 33 27 discriminator 2 view .LVU94
+ 284 005a 03ED057A 		vstr.32	s14, [r3, #-20]
+ 285              	.LBE10:
+  26:../../Classes/SensorFilters/MF/MF.cpp ****         float key = tempBuffer[i];
+ 286              		.loc 1 26 5 is_stmt 1 discriminator 2 view .LVU95
+ 287              	.LVL25:
+  26:../../Classes/SensorFilters/MF/MF.cpp ****         float key = tempBuffer[i];
+ 288              		.loc 1 26 23 discriminator 2 view .LVU96
+ 289 005e E5D1     		bne	.L12
+  26:../../Classes/SensorFilters/MF/MF.cpp ****         float key = tempBuffer[i];
+ 290              		.loc 1 26 23 is_stmt 0 discriminator 2 view .LVU97
+ 291              	.LBE7:
+  34:../../Classes/SensorFilters/MF/MF.cpp ****     }
+  35:../../Classes/SensorFilters/MF/MF.cpp **** 
+  36:../../Classes/SensorFilters/MF/MF.cpp ****     return tempBuffer[_ORDER / 2];
+ 292              		.loc 1 36 5 is_stmt 1 view .LVU98
+  37:../../Classes/SensorFilters/MF/MF.cpp **** }...
+ 293              		.loc 1 37 1 is_stmt 0 view .LVU99
+ 294 0060 9DED030A 		vldr.32	s0, [sp, #12]
+ 295              	.LVL26:
+ 296              		.loc 1 37 1 view .LVU100
+ 297 0064 06B0     		add	sp, sp, #24
+ 298              		.cfi_remember_state
+ 299              		.cfi_def_cfa_offset 0
+ 300              		@ sp needed
+ 301 0066 7047     		bx	lr
+ 302              	.LVL27:
+ 303              	.L17:
+ 304              		.cfi_restore_state
+ 305              	.LBB12:
+ 306              	.LBB11:
+  33:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[j + 1] = key;
+ 307              		.loc 1 33 22 view .LVU101
+ 308 0068 0133     		adds	r3, r3, #1
+ 309              	.LVL28:
+  33:../../Classes/SensorFilters/MF/MF.cpp ****         tempBuffer[j + 1] = key;
+ 310              		.loc 1 33 22 view .LVU102
+ 311 006a F1E7     		b	.L10
+ 312              	.LBE11:
+ 313              	.LBE12:
+ 314              		.cfi_endproc
+ 315              	.LFE4847:
+ 317              		.text
+ 318              	.Letext0:
+ 319              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 320              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 321              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 322              		.file 5 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 323              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 324              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 325              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 326              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 327              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s 			page 8
+
+
+ 328              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 329              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 330              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 331              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 332              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 333              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 334              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 335              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 336              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 337              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 338              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 339              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
+ 340              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 341              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 342              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 343              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 344              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 345              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 346              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 347              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 348              		.file 31 "../../libs/libDaisy/../../libs/libDaisy/src/daisy_core.h"
+ 349              		.file 32 "../../libs/libDaisy/src/util/wav_format.h"
+ 350              		.file 33 "../../libs/libDaisy/../../libs/libDaisy/src/dev/sr_595.h"
+ 351              		.file 34 "../../libs/libDaisy/../../libs/libDaisy/src/dev/max11300.h"
+ 352              		.file 35 "../../libs/libDaisy/../../libs/libDaisy/src/daisy_seed.h"
+ 353              		.file 36 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 354              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 355              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 356              		.file 39 "../../libs/libDaisy/../../libs/DaisySP/Source/Control/adenv.h"
+ 357              		.file 40 "../../libs/DaisySP/Source/Utility/dsp.h"
+ 358              		.file 41 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 359              		.file 42 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 360              		.file 43 "../../Classes/SensorFilters/MF/MF.h"
+ 361              		.file 44 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 MF.cpp
+C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s:17     .text._ZN2MFC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s:26     .text._ZN2MFC2Ev:00000000 _ZN2MFC2Ev
+C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s:50     .text._ZN2MFC2Ev:00000018 $d
+C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s:26     .text._ZN2MFC2Ev:00000000 _ZN2MFC1Ev
+C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s:57     .text._ZN2MFD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s:65     .text._ZN2MFD2Ev:00000000 _ZN2MFD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s:65     .text._ZN2MFD2Ev:00000000 _ZN2MFD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s:81     .text._ZN2MF4InitEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s:89     .text._ZN2MF4InitEv:00000000 _ZN2MF4InitEv
+C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s:138    .text._ZN2MF7ProcessEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccszHp2y.s:146    .text._ZN2MF7ProcessEf:00000000 _ZN2MF7ProcessEf
+
+NO UNDEFINED SYMBOLS

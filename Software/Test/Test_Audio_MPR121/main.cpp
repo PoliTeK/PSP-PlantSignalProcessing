@@ -2,191 +2,162 @@
 #include "../../libs/DaisySP/Source/daisysp.h"
 #include "../../Classes/Temperamento/PlantConditioner.h"
 #include "../../Classes/Effects/AnalogDelay/src/AnalogDelay.h"
+#include "../../Classes/SensorFilters/IIR/IIR.h"
+#include "../../Classes/SensorFilters/MF/MF.h"
 
 #ifndef _BV
 #define _BV(bit) (1 << (bit))
 #endif
-#define ADC_CH 2 // Numero di canali ADC da utilizzare
+
+// Configurazioni
+#define ADC_CH 2
 //#define DEBUG
-#define csvAcquisition
-
-
+//#define csvAcquisition
 
 using namespace daisy;
 using namespace daisysp;
 
-daisy::Mpr121I2C::Config mpr121ObjConf; // creates config for mpr121 (constructor sets all to deafult)
-daisy::Mpr121I2C cap;                   // creates object for mpr121ù
-
+// Oggetti Globali
+daisy::Mpr121I2C::Config mpr121ObjConf;
+daisy::Mpr121I2C cap;
 DaisySeed hw;
 AdcChannelConfig adcConfig[ADC_CH];
-
 PlantConditioner pc;
-
-static Oscillator osc;     
-float f = 0.0f;     
-bool gate = false;  
-
-
-bool flag = false; // used for debug printing
-int k = 0;        // used for debug printing
-
+static Oscillator osc;
 static Adsr env;
 
+// Variabili di stato
+float f = 440.0f; // Frequenza corrente
+bool gate = false;
+uint16_t lastTouched = 0;
+uint16_t currTouched = 0;
 
-uint16_t lastTouched = 0;                               // last touched value
-uint16_t currTouched = 0;                               // current touched value                                        ù
-
-
-float output = 0.0f; // used to store the output value
+// Variabili per debug/stampa
+bool flag = false;
+int k = 0;
 
 static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::InterleavingOutputBuffer out, size_t size)
 {
-  float envOut, oscOut;
-  for (size_t i = 0; i < size; i += 2)
-  {
+    float envOut, oscOut;
+    for (size_t i = 0; i < size; i += 2)
+    {
+        // Calcolo Enviluppo e Oscillatore
+        envOut = env.Process(gate);
+        osc.SetAmp(envOut);
+        oscOut = osc.Process();
 
-    envOut = env.Process(gate); 
-    osc.SetAmp(envOut);
-
-    oscOut = osc.Process();
- 
-    out[i] = out[i + 1] = oscOut;               // outputs the same value to left and right channels
-  }
+        out[i] = out[i + 1] = oscOut;
+    }
 }
 
 int main()
 {
+    // 1. Inizializzazione Hardware
+    hw.Configure();
+    hw.Init();
+    hw.SetAudioBlockSize(4);
+    float sampleRate = hw.AudioSampleRate();
 
-  float sampleRate;
-  hw.Configure();
-  hw.Init();
-  hw.SetAudioBlockSize(4);
-  sampleRate = hw.AudioSampleRate();
+    // 2. Inizializzazione DSP
+    pc.Init(IIR::Butterworth); // Il filtro lavora bene a 100Hz
+    pc.setScale(PlantConditioner::C, PlantConditioner::MinorArm);
+    pc.setOctave(2);
+    pc.setCurve(50, 1.1);
 
-  pc.Init(CapFir::ResType::HIGH); 
-  pc.setScale(PlantConditioner::C, PlantConditioner::MinorArm);
-  pc.setOctave(3);
-  pc.setCurve(100,1.1);
-  
+    osc.Init(sampleRate);
+    osc.SetWaveform(Oscillator::WAVE_TRI);
+    osc.SetFreq(440.0f);
+    osc.SetAmp(0.5f);
 
-  osc.Init(sampleRate);                  // initializes the oscillator with the sample rate
-  osc.SetWaveform(Oscillator::WAVE_TRI); // sets the waveform
-  osc.SetFreq(440.0f);                   // sets the frequency
-  osc.SetAmp(0.5f);                      // sets the amplitude
+    env.Init(sampleRate);
+    env.SetTime(ADSR_SEG_ATTACK, 0.05f);
+    env.SetTime(ADSR_SEG_DECAY, 0.1f);
+    env.SetSustainLevel(0.7f);
+    env.SetTime(ADSR_SEG_RELEASE, 0.5f); // Aumentato leggermente per sentire la coda
 
-  env.Init(sampleRate); // initializes the envelope with the sample rate
-  env.SetTime(ADSR_SEG_ATTACK, 0.05f);
-  env.SetTime(ADSR_SEG_DECAY, 0.1f);
-  env.SetSustainLevel(0.7f);
-  env.SetTime(ADSR_SEG_RELEASE, 0.2f);
+    // 3. Inizializzazione ADC e Sensori
+    adcConfig[0].InitSingle(daisy::seed::A0);
+    adcConfig[1].InitSingle(daisy::seed::A1);
+    hw.adc.Init(adcConfig, ADC_CH);
+    hw.adc.Start();
 
+    #if defined(DEBUG) || defined(csvAcquisition)
+        hw.StartLog(false);
+    #endif
 
+    // Init MPR121
+    if (cap.Init(mpr121ObjConf) != daisy::Mpr121I2C::Result::OK)
+    {
+        // Errore: Lampeggia LED infinito
+        while (1) {
+            hw.SetLed(true); hw.DelayMs(200);
+            hw.SetLed(false); hw.DelayMs(200);
+        }
+    }
 
+    hw.StartAudio(AudioCallback);
 
+    // 4. Loop Principale a 100Hz (Non bloccante)
+    uint32_t last_tick = System::GetNow();
 
-  adcConfig[0].InitSingle(daisy::seed::A0); 
-  adcConfig[1].InitSingle(daisy::seed::A1); 
-  hw.adc.Init(adcConfig, ADC_CH);              
-  hw.adc.Start();                
-
-  #ifdef DEBUG 
-    hw.StartLog(false); // starts the log to the serial port
-  #endif
-  #ifdef csvAcquisition
-    hw.StartLog(false); // starts the log to the serial port
-  #endif
-  
-
-  daisy::Mpr121I2C::Result status = cap.Init(mpr121ObjConf);
-  if (status != daisy::Mpr121I2C::Result::OK) // initializes the mpr121 with the config and see if the comunication is ok
-  {
     while (1)
     {
-      hw.SetLed(true); // blink if not ok
-      hw.DelayMs(500);
-      hw.SetLed(false);
-      hw.DelayMs(500);    }
-  }
-  else
-  {
-    hw.SetLed(true);
-  }
+        uint32_t now = System::GetNow();
 
-  // cap.SetThresholds(12, 6);                                           // sets the touch and release thresholds for all 12 channels         // non funziona PD
-  hw.StartAudio(AudioCallback);
+        // Esegui la logica sensori ogni 10ms esatti
+        if (now - last_tick >= 1)
+        {
+            last_tick = now;
 
-  while (1)
-  {
-    float curve_type = hw.adc.GetFloat(1)*2 + 1;
-    float delta_max = hw.adc.GetFloat(0)*100 + 20;
-    pc.setCurve(delta_max, curve_type);
-    
+            // A. Lettura Parametri (Knobs)
+            float curve_type = hw.adc.GetFloat(1) * 2 + 1;
+            float delta_max = hw.adc.GetFloat(0) * 100 + 20;
+            pc.setCurve(delta_max, curve_type);
 
-    currTouched = cap.Touched();                                   // reads the touched channels from the mpr121
-    if ((currTouched & _BV(0)) && !(lastTouched & _BV(0)) || gate) // if the channel 0 is touched and it was not touched before
-    {
-      gate = true; // sets the gate to true
-      f = pc.Process(cap.BaselineData(0), cap.FilteredData(0));
-      osc.SetFreq(f);
-      
+            // B. Lettura Sensore Capacitivo
+            currTouched = cap.Touched();
+            
+            // C. Elaborazione Filtri (SEMPRE ATTIVA)
+            // Calcoliamo la frequenza target continuamente per tenere i filtri "caldi"
+            float target_freq = pc.Process(cap.BaselineData(0), cap.FilteredData(0));
+
+            // D. Logica Gate e Aggiornamento Audio
+            bool is_touched_now = (currTouched & _BV(0));
+
+            if (is_touched_now)
+            {
+                // Se tocco: attivo il gate e aggiorno la frequenza
+                if (!gate) gate = true;
+                
+                f = target_freq;
+                osc.SetFreq(f);
+            }
+            else
+            {
+                // Se rilascio: disattivo il gate MA NON aggiorno la frequenza.
+                // In questo modo la "coda" (release) dell'inviluppo suona 
+                // con l'ultima nota valida, invece di cadere a 0Hz o fare glitch.
+                if (gate) gate = false;
+            }
+
+            lastTouched = currTouched;
+
+            // E. Debugging (Sicuro a 100Hz)
+            #ifdef DEBUG
+                if (gate) {
+                    if (!flag) { hw.PrintLine("--- TOUCH ---"); flag = true; }
+                    hw.PrintLine("Delta: %.2f | Freq: %.2f", pc.getDelta(), f);
+                } else {
+                    if (flag) { hw.PrintLine("--- RELEASE ---"); flag = false; }
+                }
+            #endif
+
+            #ifdef csvAcquisition
+                // Stampa CSV: DeltaRaw, DeltaFiltered, GateStatus
+                hw.PrintLine("%.2f,%.2f,%d", pc.getDelta(), pc.getDeltaFilt(), gate ? 1 : 0);
+            #endif
+        }
+        
+       
     }
-
-    if (!(currTouched & _BV(0)) && (lastTouched & _BV(0))) // if the channel 0 was touched and it is not touched now
-    {
-      gate = false; // sets the gate to false
-      pc.setBuffer();
-    }
-
-    // calculates the frequency based on the delta value
-
-  #ifdef DEBUG
-    if (gate)
-    {
-      if (!flag){
-        hw.PrintLine("--------------------------------------------------------------------------------");
-        hw.PrintLine("CAP touched");
-        flag = true;
-      }
-      hw.PrintLine("| ");
-      hw.PrintLine("| Delta : %f, | DeltaFiltered :  %f | Frequency : %f ", pc.getDelta(), pc.getDeltaFilt(), f);
-      hw.PrintLine("| ");
-      
-    }
-    else
-    {
-      if ( flag)
-      {
-        hw.PrintLine("CAP released");
-        hw.PrintLine("--------------------------------------------------------------------------------");
-        hw.PrintLine(" ");
-        flag = false;
-      }
-      k++;
-      if (k>50){
-        hw.PrintLine(" ");
-        hw.PrintLine("deltaMax : %f", delta_max);
-        hw.PrintLine("curveType : %f", curve_type);
-        k = 0;
-      }
-    }
-  #endif
-
-  #ifdef csvAcquisition
-    if (gate) {
-      hw.PrintLine("%f, %f, 1", pc.getDelta(), pc.getDeltaFilt());
-    } else {
-      hw.PrintLine("%f, %f, 0", pc.getDelta(), pc.getDeltaFilt());
-    }
-    
-    //hw.PrintLine(" ");
-    //hw.PrintLine("%d, %d ", cap.BaselineData(0), cap.FilteredData(0));
-    //hw.PrintLine(" ");
-  #endif
-    
-  lastTouched = currTouched;
-  hw.DelayMs(10);
-    
-
-  }
 }

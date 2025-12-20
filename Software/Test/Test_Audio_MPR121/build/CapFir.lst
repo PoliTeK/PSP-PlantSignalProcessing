@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -28,12 +28,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
   26              	_ZN6CapFirC2Ev:
   27              	.LVL0:
   28              	.LFB4841:
-  29              		.file 1 "../../Classes/FIIR/CapFir.cpp"
-   1:../../Classes/FIIR/CapFir.cpp **** #include "../../libs/libDaisy/src/daisy_seed.h"
-   2:../../Classes/FIIR/CapFir.cpp **** #include "../../libs/DaisySP/Source/daisysp.h"
-   3:../../Classes/FIIR/CapFir.cpp **** #include "CapFir.h"
-   4:../../Classes/FIIR/CapFir.cpp **** 
-   5:../../Classes/FIIR/CapFir.cpp **** CapFir::CapFir() {}
+  29              		.file 1 "../../Classes/SensorFilters/FIIR/CapFir.cpp"
+   1:../../Classes/SensorFilters/FIIR/CapFir.cpp **** #include "../../libs/libDaisy/src/daisy_seed.h"
+   2:../../Classes/SensorFilters/FIIR/CapFir.cpp **** #include "../../libs/DaisySP/Source/daisysp.h"
+   3:../../Classes/SensorFilters/FIIR/CapFir.cpp **** #include "CapFir.h"
+   4:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
+   5:../../Classes/SensorFilters/FIIR/CapFir.cpp **** CapFir::CapFir() {}
   30              		.loc 1 5 1 view -0
   31              		.cfi_startproc
   32              		@ args = 0, pretend = 0, frame = 0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
   51 000c BEE80F00 		ldmia	lr!, {r0, r1, r2, r3}
   52              	.LVL1:
   53              		.loc 1 5 16 view .LVU5
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 2
 
 
   54 0010 ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
@@ -103,7 +103,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
   95              	_ZN6CapFirD2Ev:
   96              	.LVL5:
   97              	.LFB4844:
-   6:../../Classes/FIIR/CapFir.cpp **** CapFir::~CapFir() {}
+   6:../../Classes/SensorFilters/FIIR/CapFir.cpp **** CapFir::~CapFir() {}
   98              		.loc 1 6 1 is_stmt 1 view -0
   99              		.cfi_startproc
  100              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  110 0002 00BF     		.section	.text._ZN6CapFir4InitENS_7ResTypeE,"ax",%progbits
  111              		.align	1
  112              		.p2align 2,,3
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 3
 
 
  113              		.global	_ZN6CapFir4InitENS_7ResTypeE
@@ -129,21 +129,21 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  119              	_ZN6CapFir4InitENS_7ResTypeE:
  120              	.LVL6:
  121              	.LFB4846:
-   7:../../Classes/FIIR/CapFir.cpp **** 
-   8:../../Classes/FIIR/CapFir.cpp **** void CapFir::Init(enum ResType res_type) {
+   7:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
+   8:../../Classes/SensorFilters/FIIR/CapFir.cpp **** void CapFir::Init(enum ResType res_type) {
  122              		.loc 1 8 42 is_stmt 1 view -0
  123              		.cfi_startproc
  124              		@ args = 0, pretend = 0, frame = 0
  125              		@ frame_needed = 0, uses_anonymous_args = 0
  126              		@ link register save eliminated.
-   9:../../Classes/FIIR/CapFir.cpp ****     _resType = res_type;
+   9:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     _resType = res_type;
  127              		.loc 1 9 5 view .LVU11
  128              	.LBB4:
-  10:../../Classes/FIIR/CapFir.cpp ****     switch (_resType) {
+  10:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     switch (_resType) {
  129              		.loc 1 10 5 is_stmt 0 view .LVU12
  130 0000 0129     		cmp	r1, #1
  131              	.LBE4:
-   9:../../Classes/FIIR/CapFir.cpp ****     _resType = res_type;
+   9:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     _resType = res_type;
  132              		.loc 1 9 14 view .LVU13
  133 0002 0170     		strb	r1, [r0]
  134              		.loc 1 10 5 is_stmt 1 view .LVU14
@@ -153,80 +153,80 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  138 0008 0AD0     		beq	.L9
  139 000a 29B1     		cbz	r1, .L11
  140              	.LBE8:
-  11:../../Classes/FIIR/CapFir.cpp ****         case LOW:
-  12:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
-  13:../../Classes/FIIR/CapFir.cpp ****                 _bufferL[i] = 0.0f;
-  14:../../Classes/FIIR/CapFir.cpp ****                 }
-  15:../../Classes/FIIR/CapFir.cpp ****             break;
-  16:../../Classes/FIIR/CapFir.cpp **** 
-  17:../../Classes/FIIR/CapFir.cpp ****         case MID:
-  18:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
-  19:../../Classes/FIIR/CapFir.cpp ****                 _bufferM[i] = 0.0f;
-  20:../../Classes/FIIR/CapFir.cpp ****             }
-  21:../../Classes/FIIR/CapFir.cpp ****             break;
-  22:../../Classes/FIIR/CapFir.cpp **** 
-  23:../../Classes/FIIR/CapFir.cpp ****         case HIGH:
-  24:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
-  25:../../Classes/FIIR/CapFir.cpp ****                 _bufferH[i] = 0.0f;
-  26:../../Classes/FIIR/CapFir.cpp ****             }
-  27:../../Classes/FIIR/CapFir.cpp ****             break;
-  28:../../Classes/FIIR/CapFir.cpp ****     }      
-  29:../../Classes/FIIR/CapFir.cpp ****     
-  30:../../Classes/FIIR/CapFir.cpp **** }
+  11:../../Classes/SensorFilters/FIIR/CapFir.cpp ****         case LOW:
+  12:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
+  13:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferL[i] = 0.0f;
+  14:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 }
+  15:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             break;
+  16:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
+  17:../../Classes/SensorFilters/FIIR/CapFir.cpp ****         case MID:
+  18:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
+  19:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferM[i] = 0.0f;
+  20:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
+  21:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             break;
+  22:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
+  23:../../Classes/SensorFilters/FIIR/CapFir.cpp ****         case HIGH:
+  24:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
+  25:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferH[i] = 0.0f;
+  26:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
+  27:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             break;
+  28:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     }      
+  29:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     
+  30:../../Classes/SensorFilters/FIIR/CapFir.cpp **** }
  141              		.loc 1 30 1 is_stmt 0 view .LVU15
  142 000c 7047     		bx	lr
  143              	.L8:
  144              	.LBB9:
  145              	.LBB5:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 4
 
 
-  19:../../Classes/FIIR/CapFir.cpp ****             }
+  19:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  146              		.loc 1 19 29 view .LVU16
  147 000e 8022     		movs	r2, #128
  148 0010 0021     		movs	r1, #0
  149              	.LVL7:
-  19:../../Classes/FIIR/CapFir.cpp ****             }
+  19:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  150              		.loc 1 19 29 view .LVU17
  151 0012 4430     		adds	r0, r0, #68
  152              	.LVL8:
-  19:../../Classes/FIIR/CapFir.cpp ****             }
+  19:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  153              		.loc 1 19 29 view .LVU18
  154 0014 FFF7FEBF 		b	memset
  155              	.LVL9:
  156              	.L11:
-  19:../../Classes/FIIR/CapFir.cpp ****             }
+  19:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  157              		.loc 1 19 29 view .LVU19
  158              	.LBE5:
  159              	.LBB6:
-  13:../../Classes/FIIR/CapFir.cpp ****                 }
+  13:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 }
  160              		.loc 1 13 29 view .LVU20
  161 0018 4022     		movs	r2, #64
  162 001a 0430     		adds	r0, r0, #4
  163              	.LVL10:
-  13:../../Classes/FIIR/CapFir.cpp ****                 }
+  13:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 }
  164              		.loc 1 13 29 view .LVU21
  165 001c FFF7FEBF 		b	memset
  166              	.LVL11:
  167              	.L9:
-  13:../../Classes/FIIR/CapFir.cpp ****                 }
+  13:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 }
  168              		.loc 1 13 29 view .LVU22
  169              	.LBE6:
  170              	.LBB7:
-  25:../../Classes/FIIR/CapFir.cpp ****             }
+  25:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  171              		.loc 1 25 29 view .LVU23
  172 0020 4FF48072 		mov	r2, #256
  173 0024 0021     		movs	r1, #0
  174              	.LVL12:
-  25:../../Classes/FIIR/CapFir.cpp ****             }
+  25:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  175              		.loc 1 25 29 view .LVU24
  176 0026 C430     		adds	r0, r0, #196
  177              	.LVL13:
-  25:../../Classes/FIIR/CapFir.cpp ****             }
+  25:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  178              		.loc 1 25 29 view .LVU25
  179 0028 FFF7FEBF 		b	memset
  180              	.LVL14:
-  25:../../Classes/FIIR/CapFir.cpp ****             }
+  25:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  181              		.loc 1 25 29 view .LVU26
  182              	.LBE7:
  183              	.LBE9:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  190              		.global	_ZN6CapFir7ProcessEf
  191              		.syntax unified
  192              		.thumb
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 5
 
 
  193              		.thumb_func
@@ -246,16 +246,16 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  196              	_ZN6CapFir7ProcessEf:
  197              	.LVL15:
  198              	.LFB4847:
-  31:../../Classes/FIIR/CapFir.cpp **** 
-  32:../../Classes/FIIR/CapFir.cpp **** float CapFir::Process(float in) {
+  31:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
+  32:../../Classes/SensorFilters/FIIR/CapFir.cpp **** float CapFir::Process(float in) {
  199              		.loc 1 32 33 is_stmt 1 view -0
  200              		.cfi_startproc
  201              		@ args = 0, pretend = 0, frame = 0
  202              		@ frame_needed = 0, uses_anonymous_args = 0
-  33:../../Classes/FIIR/CapFir.cpp ****     float out = 0.0f;
+  33:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     float out = 0.0f;
  203              		.loc 1 33 5 view .LVU28
-  34:../../Classes/FIIR/CapFir.cpp **** 
-  35:../../Classes/FIIR/CapFir.cpp ****     switch (_resType) {
+  34:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
+  35:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     switch (_resType) {
  204              		.loc 1 35 5 view .LVU29
  205              	.LBB10:
  206              		.loc 1 35 13 is_stmt 0 view .LVU30
@@ -263,7 +263,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  208              		.loc 1 35 5 view .LVU31
  209 0002 012B     		cmp	r3, #1
  210              	.LBE10:
-  32:../../Classes/FIIR/CapFir.cpp ****     float out = 0.0f;
+  32:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     float out = 0.0f;
  211              		.loc 1 32 33 view .LVU32
  212 0004 10B5     		push	{r4, lr}
  213              		.cfi_def_cfa_offset 8
@@ -274,7 +274,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  218              		.cfi_def_cfa_offset 16
  219              		.cfi_offset 80, -16
  220              		.cfi_offset 81, -12
-  32:../../Classes/FIIR/CapFir.cpp ****     float out = 0.0f;
+  32:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     float out = 0.0f;
  221              		.loc 1 32 33 view .LVU33
  222 000c B0EE408A 		vmov.f32	s16, s0
  223              	.LBB23:
@@ -287,43 +287,43 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  230              	.LVL16:
  231              		.loc 1 35 5 view .LVU35
  232              	.LBE23:
-  36:../../Classes/FIIR/CapFir.cpp ****         case LOW:
-  37:../../Classes/FIIR/CapFir.cpp ****             for (int i = 15; i > 0; i--) {
-  38:../../Classes/FIIR/CapFir.cpp ****                 _bufferL[i] = _bufferL[i - 1];
-  39:../../Classes/FIIR/CapFir.cpp ****             }
-  40:../../Classes/FIIR/CapFir.cpp ****             _bufferL[0] = in;
-  41:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
-  42:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
-  43:../../Classes/FIIR/CapFir.cpp ****             }
-  44:../../Classes/FIIR/CapFir.cpp ****             break;
-  45:../../Classes/FIIR/CapFir.cpp **** 
-  46:../../Classes/FIIR/CapFir.cpp ****         case MID:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 6
+  36:../../Classes/SensorFilters/FIIR/CapFir.cpp ****         case LOW:
+  37:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 15; i > 0; i--) {
+  38:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferL[i] = _bufferL[i - 1];
+  39:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
+  40:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             _bufferL[0] = in;
+  41:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
+  42:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
+  43:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
+  44:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             break;
+  45:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
+  46:../../Classes/SensorFilters/FIIR/CapFir.cpp ****         case MID:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 6
 
 
-  47:../../Classes/FIIR/CapFir.cpp ****             for (int i = 31; i > 0; i--) {
-  48:../../Classes/FIIR/CapFir.cpp ****                 _bufferM[i] = _bufferM[i - 1];
-  49:../../Classes/FIIR/CapFir.cpp ****             }
-  50:../../Classes/FIIR/CapFir.cpp ****             _bufferM[0] = in;
-  51:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
-  52:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
-  53:../../Classes/FIIR/CapFir.cpp ****             }
-  54:../../Classes/FIIR/CapFir.cpp ****             break;
-  55:../../Classes/FIIR/CapFir.cpp **** 
-  56:../../Classes/FIIR/CapFir.cpp ****         case HIGH:
-  57:../../Classes/FIIR/CapFir.cpp ****             for (int i = 63; i > 0; i--) {
-  58:../../Classes/FIIR/CapFir.cpp ****                 _bufferH[i] = _bufferH[i - 1];
-  59:../../Classes/FIIR/CapFir.cpp ****             }
-  60:../../Classes/FIIR/CapFir.cpp ****             _bufferH[0] = in;
-  61:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
-  62:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
-  63:../../Classes/FIIR/CapFir.cpp ****             }
-  64:../../Classes/FIIR/CapFir.cpp ****             break;
-  65:../../Classes/FIIR/CapFir.cpp ****     }
-  66:../../Classes/FIIR/CapFir.cpp **** 
-  67:../../Classes/FIIR/CapFir.cpp ****     return out;
+  47:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 31; i > 0; i--) {
+  48:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferM[i] = _bufferM[i - 1];
+  49:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
+  50:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             _bufferM[0] = in;
+  51:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
+  52:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
+  53:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
+  54:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             break;
+  55:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
+  56:../../Classes/SensorFilters/FIIR/CapFir.cpp ****         case HIGH:
+  57:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 63; i > 0; i--) {
+  58:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferH[i] = _bufferH[i - 1];
+  59:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
+  60:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             _bufferH[0] = in;
+  61:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
+  62:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
+  63:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
+  64:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             break;
+  65:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     }
+  66:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
+  67:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     return out;
  233              		.loc 1 67 5 is_stmt 1 view .LVU36
-  68:../../Classes/FIIR/CapFir.cpp **** }
+  68:../../Classes/SensorFilters/FIIR/CapFir.cpp **** }
  234              		.loc 1 68 1 is_stmt 0 view .LVU37
  235 001c BDEC028B 		vldm	sp!, {d8}
  236              		.cfi_remember_state
@@ -339,66 +339,66 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  246              	.LBB24:
  247              	.LBB11:
  248              	.LBB12:
-  48:../../Classes/FIIR/CapFir.cpp ****             }
+  48:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  249              		.loc 1 48 29 view .LVU39
  250 0022 00F14803 		add	r3, r0, #72
  251 0026 7C22     		movs	r2, #124
  252 0028 00F14401 		add	r1, r0, #68
  253 002c 1846     		mov	r0, r3
  254              	.LVL19:
-  48:../../Classes/FIIR/CapFir.cpp ****             }
+  48:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  255              		.loc 1 48 29 view .LVU40
  256 002e FFF7FEFF 		bl	memmove
  257              	.LVL20:
-  48:../../Classes/FIIR/CapFir.cpp ****             }
+  48:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  258              		.loc 1 48 29 view .LVU41
  259 0032 04F1C402 		add	r2, r4, #196
  260 0036 0346     		mov	r3, r0
  261              	.LBE12:
-  50:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
+  50:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
  262              		.loc 1 50 13 is_stmt 1 view .LVU42
  263              	.LBE11:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 7
 
 
  264              	.LBE24:
-  33:../../Classes/FIIR/CapFir.cpp **** 
+  33:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
  265              		.loc 1 33 11 is_stmt 0 view .LVU43
  266 0038 9FED220A 		vldr.32	s0, .L31
  267              	.LBB25:
  268              	.LBB18:
-  50:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
+  50:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
  269              		.loc 1 50 25 view .LVU44
  270 003c 84ED118A 		vstr.32	s16, [r4, #68]
-  51:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
+  51:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
  271              		.loc 1 51 13 is_stmt 1 view .LVU45
  272              	.LVL21:
  273              	.LBB13:
-  51:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
+  51:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
  274              		.loc 1 51 31 view .LVU46
  275 0040 01E0     		b	.L17
  276              	.LVL22:
  277              	.L28:
-  52:../../Classes/FIIR/CapFir.cpp ****             }
+  52:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  278              		.loc 1 52 34 is_stmt 0 view .LVU47
  279 0042 B3EC018A 		vldmia.32	r3!, {s16}
  280              	.LVL23:
  281              	.L17:
-  52:../../Classes/FIIR/CapFir.cpp ****             }
+  52:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  282              		.loc 1 52 17 is_stmt 1 discriminator 2 view .LVU48
-  52:../../Classes/FIIR/CapFir.cpp ****             }
+  52:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  283              		.loc 1 52 21 is_stmt 0 discriminator 2 view .LVU49
  284 0046 D3ED6F7A 		vldr.32	s15, [r3, #444]
-  51:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
+  51:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
  285              		.loc 1 51 31 discriminator 2 view .LVU50
  286 004a 9A42     		cmp	r2, r3
-  52:../../Classes/FIIR/CapFir.cpp ****             }
+  52:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  287              		.loc 1 52 21 discriminator 2 view .LVU51
  288 004c A7EE880A 		vfma.f32	s0, s15, s16
  289              	.LVL24:
-  51:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
+  51:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
  290              		.loc 1 51 13 is_stmt 1 discriminator 2 view .LVU52
-  51:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
+  51:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferM[i] * _coeffM[i];
  291              		.loc 1 51 31 discriminator 2 view .LVU53
  292 0050 F7D1     		bne	.L28
  293              	.LBE13:
@@ -417,8 +417,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  306              	.LBB26:
  307              	.LBB19:
  308              	.LBB14:
-  38:../../Classes/FIIR/CapFir.cpp ****             }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 8
+  38:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 8
 
 
  309              		.loc 1 38 29 view .LVU55
@@ -427,58 +427,58 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  312 005e 011D     		adds	r1, r0, #4
  313 0060 1846     		mov	r0, r3
  314              	.LVL26:
-  38:../../Classes/FIIR/CapFir.cpp ****             }
+  38:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  315              		.loc 1 38 29 view .LVU56
  316 0062 FFF7FEFF 		bl	memmove
  317              	.LVL27:
-  38:../../Classes/FIIR/CapFir.cpp ****             }
+  38:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  318              		.loc 1 38 29 view .LVU57
  319 0066 04F14402 		add	r2, r4, #68
  320 006a 0346     		mov	r3, r0
  321              	.LBE14:
-  40:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
+  40:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
  322              		.loc 1 40 13 is_stmt 1 view .LVU58
  323              	.LBE19:
  324              	.LBE26:
-  33:../../Classes/FIIR/CapFir.cpp **** 
+  33:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
  325              		.loc 1 33 11 is_stmt 0 view .LVU59
  326 006c 9FED150A 		vldr.32	s0, .L31
  327              	.LBB27:
  328              	.LBB20:
-  40:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
+  40:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
  329              		.loc 1 40 25 view .LVU60
  330 0070 84ED018A 		vstr.32	s16, [r4, #4]
-  41:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
+  41:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
  331              		.loc 1 41 13 is_stmt 1 view .LVU61
  332              	.LVL28:
  333              	.LBB15:
-  41:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
+  41:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
  334              		.loc 1 41 31 view .LVU62
  335 0074 01E0     		b	.L16
  336              	.LVL29:
  337              	.L29:
-  42:../../Classes/FIIR/CapFir.cpp ****             }
+  42:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  338              		.loc 1 42 34 is_stmt 0 view .LVU63
  339 0076 B3EC018A 		vldmia.32	r3!, {s16}
  340              	.LVL30:
  341              	.L16:
-  42:../../Classes/FIIR/CapFir.cpp ****             }
+  42:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  342              		.loc 1 42 17 is_stmt 1 discriminator 2 view .LVU64
-  42:../../Classes/FIIR/CapFir.cpp ****             }
+  42:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  343              		.loc 1 42 21 is_stmt 0 discriminator 2 view .LVU65
  344 007a D3ED6F7A 		vldr.32	s15, [r3, #444]
-  41:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
+  41:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
  345              		.loc 1 41 31 discriminator 2 view .LVU66
  346 007e 9A42     		cmp	r2, r3
-  42:../../Classes/FIIR/CapFir.cpp ****             }
+  42:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  347              		.loc 1 42 21 discriminator 2 view .LVU67
  348 0080 A7EE880A 		vfma.f32	s0, s15, s16
  349              	.LVL31:
-  41:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
+  41:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
  350              		.loc 1 41 13 is_stmt 1 discriminator 2 view .LVU68
-  41:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
+  41:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferL[i] * _coeffL[i];
  351              		.loc 1 41 31 discriminator 2 view .LVU69
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 9
 
 
  352 0084 F7D1     		bne	.L29
@@ -498,66 +498,66 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  366              	.LBB28:
  367              	.LBB21:
  368              	.LBB16:
-  58:../../Classes/FIIR/CapFir.cpp ****             }
+  58:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  369              		.loc 1 58 29 view .LVU71
  370 008c 00F1C803 		add	r3, r0, #200
  371 0090 FC22     		movs	r2, #252
  372 0092 00F1C401 		add	r1, r0, #196
  373 0096 1846     		mov	r0, r3
  374              	.LVL33:
-  58:../../Classes/FIIR/CapFir.cpp ****             }
+  58:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  375              		.loc 1 58 29 view .LVU72
  376 0098 FFF7FEFF 		bl	memmove
  377              	.LVL34:
-  58:../../Classes/FIIR/CapFir.cpp ****             }
+  58:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  378              		.loc 1 58 29 view .LVU73
  379 009c 04F5E272 		add	r2, r4, #452
  380 00a0 0346     		mov	r3, r0
  381              	.LBE16:
-  60:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
+  60:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
  382              		.loc 1 60 13 is_stmt 1 view .LVU74
  383              	.LBE21:
  384              	.LBE28:
-  33:../../Classes/FIIR/CapFir.cpp **** 
+  33:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
  385              		.loc 1 33 11 is_stmt 0 view .LVU75
  386 00a2 9FED080A 		vldr.32	s0, .L31
  387              	.LBB29:
  388              	.LBB22:
-  60:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
+  60:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
  389              		.loc 1 60 25 view .LVU76
  390 00a6 84ED318A 		vstr.32	s16, [r4, #196]
-  61:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
+  61:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
  391              		.loc 1 61 13 is_stmt 1 view .LVU77
  392              	.LVL35:
  393              	.LBB17:
-  61:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
+  61:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
  394              		.loc 1 61 31 view .LVU78
  395 00aa 01E0     		b	.L18
  396              	.LVL36:
  397              	.L30:
-  62:../../Classes/FIIR/CapFir.cpp ****             }
+  62:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  398              		.loc 1 62 34 is_stmt 0 view .LVU79
  399 00ac B3EC018A 		vldmia.32	r3!, {s16}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 10
 
 
  400              	.LVL37:
  401              	.L18:
-  62:../../Classes/FIIR/CapFir.cpp ****             }
+  62:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  402              		.loc 1 62 17 is_stmt 1 discriminator 2 view .LVU80
-  62:../../Classes/FIIR/CapFir.cpp ****             }
+  62:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  403              		.loc 1 62 21 is_stmt 0 discriminator 2 view .LVU81
  404 00b0 D3ED6F7A 		vldr.32	s15, [r3, #444]
-  61:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
+  61:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
  405              		.loc 1 61 31 discriminator 2 view .LVU82
  406 00b4 9A42     		cmp	r2, r3
-  62:../../Classes/FIIR/CapFir.cpp ****             }
+  62:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  407              		.loc 1 62 21 discriminator 2 view .LVU83
  408 00b6 A7EE880A 		vfma.f32	s0, s15, s16
  409              	.LVL38:
-  61:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
+  61:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
  410              		.loc 1 61 13 is_stmt 1 discriminator 2 view .LVU84
-  61:../../Classes/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
+  61:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 out += _bufferH[i] * _coeffH[i];
  411              		.loc 1 61 31 discriminator 2 view .LVU85
  412 00ba F7D1     		bne	.L30
  413              	.LBE17:
@@ -588,17 +588,17 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  440              	_ZN6CapFir9setBufferEf:
  441              	.LVL40:
  442              	.LFB4848:
-  69:../../Classes/FIIR/CapFir.cpp **** 
-  70:../../Classes/FIIR/CapFir.cpp **** void CapFir::setBuffer(float value) {
+  69:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
+  70:../../Classes/SensorFilters/FIIR/CapFir.cpp **** void CapFir::setBuffer(float value) {
  443              		.loc 1 70 37 is_stmt 1 view -0
  444              		.cfi_startproc
  445              		@ args = 0, pretend = 0, frame = 0
  446              		@ frame_needed = 0, uses_anonymous_args = 0
  447              		@ link register save eliminated.
-  71:../../Classes/FIIR/CapFir.cpp ****     switch (_resType) {
+  71:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     switch (_resType) {
  448              		.loc 1 71 5 view .LVU89
  449              	.LBB30:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 11
 
 
  450              		.loc 1 71 13 is_stmt 0 view .LVU90
@@ -610,26 +610,26 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  456 0008 12D0     		beq	.L35
  457 000a 4BB1     		cbz	r3, .L44
  458              	.LBE30:
-  72:../../Classes/FIIR/CapFir.cpp ****         case LOW:
-  73:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
-  74:../../Classes/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
-  75:../../Classes/FIIR/CapFir.cpp ****                 }
-  76:../../Classes/FIIR/CapFir.cpp ****             break;
-  77:../../Classes/FIIR/CapFir.cpp **** 
-  78:../../Classes/FIIR/CapFir.cpp ****         case MID:
-  79:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
-  80:../../Classes/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
-  81:../../Classes/FIIR/CapFir.cpp ****             }
-  82:../../Classes/FIIR/CapFir.cpp ****             break;
-  83:../../Classes/FIIR/CapFir.cpp **** 
-  84:../../Classes/FIIR/CapFir.cpp ****         case HIGH:
-  85:../../Classes/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
-  86:../../Classes/FIIR/CapFir.cpp ****                 _bufferH[i] = value;
-  87:../../Classes/FIIR/CapFir.cpp ****             }
-  88:../../Classes/FIIR/CapFir.cpp ****             break;
-  89:../../Classes/FIIR/CapFir.cpp ****     }      
-  90:../../Classes/FIIR/CapFir.cpp ****     
-  91:../../Classes/FIIR/CapFir.cpp **** }
+  72:../../Classes/SensorFilters/FIIR/CapFir.cpp ****         case LOW:
+  73:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 16; i++) {
+  74:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
+  75:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 }
+  76:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             break;
+  77:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
+  78:../../Classes/SensorFilters/FIIR/CapFir.cpp ****         case MID:
+  79:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 32; i++) {
+  80:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
+  81:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
+  82:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             break;
+  83:../../Classes/SensorFilters/FIIR/CapFir.cpp **** 
+  84:../../Classes/SensorFilters/FIIR/CapFir.cpp ****         case HIGH:
+  85:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             for (int i = 0; i < 64; i++) {
+  86:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferH[i] = value;
+  87:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
+  88:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             break;
+  89:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     }      
+  90:../../Classes/SensorFilters/FIIR/CapFir.cpp ****     
+  91:../../Classes/SensorFilters/FIIR/CapFir.cpp **** }
  459              		.loc 1 91 1 view .LVU92
  460 000c 7047     		bx	lr
  461              	.L34:
@@ -638,65 +638,65 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  464              	.L39:
  465              	.LBB34:
  466              	.LBB31:
-  80:../../Classes/FIIR/CapFir.cpp ****             }
+  80:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  467              		.loc 1 80 17 is_stmt 1 discriminator 2 view .LVU93
-  80:../../Classes/FIIR/CapFir.cpp ****             }
+  80:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  468              		.loc 1 80 29 is_stmt 0 discriminator 2 view .LVU94
  469 0016 A2EC010A 		vstmia.32	r2!, {s0}
-  79:../../Classes/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
+  79:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
  470              		.loc 1 79 13 is_stmt 1 discriminator 2 view .LVU95
-  79:../../Classes/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
+  79:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
  471              		.loc 1 79 31 discriminator 2 view .LVU96
  472 001a 9A42     		cmp	r2, r3
  473 001c FBD1     		bne	.L39
-  79:../../Classes/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
+  79:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
  474              		.loc 1 79 31 is_stmt 0 discriminator 2 view .LVU97
  475 001e 7047     		bx	lr
  476              	.L44:
-  79:../../Classes/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
+  79:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferM[i] = value;
  477              		.loc 1 79 31 discriminator 2 view .LVU98
  478 0020 021D     		adds	r2, r0, #4
  479 0022 00F14403 		add	r3, r0, #68
  480              	.L37:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 12
 
 
  481              	.LBE31:
  482              	.LBB32:
-  74:../../Classes/FIIR/CapFir.cpp ****                 }
+  74:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 }
  483              		.loc 1 74 17 is_stmt 1 discriminator 2 view .LVU99
-  74:../../Classes/FIIR/CapFir.cpp ****                 }
+  74:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 }
  484              		.loc 1 74 29 is_stmt 0 discriminator 2 view .LVU100
  485 0026 A2EC010A 		vstmia.32	r2!, {s0}
-  73:../../Classes/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
+  73:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
  486              		.loc 1 73 13 is_stmt 1 discriminator 2 view .LVU101
-  73:../../Classes/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
+  73:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
  487              		.loc 1 73 31 discriminator 2 view .LVU102
  488 002a 9A42     		cmp	r2, r3
  489 002c FBD1     		bne	.L37
-  73:../../Classes/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
+  73:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
  490              		.loc 1 73 31 is_stmt 0 discriminator 2 view .LVU103
  491 002e 7047     		bx	lr
  492              	.L35:
-  73:../../Classes/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
+  73:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferL[i] = value;
  493              		.loc 1 73 31 discriminator 2 view .LVU104
  494 0030 00F1C403 		add	r3, r0, #196
  495 0034 00F5E272 		add	r2, r0, #452
  496              	.L40:
  497              	.LBE32:
  498              	.LBB33:
-  86:../../Classes/FIIR/CapFir.cpp ****             }
+  86:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  499              		.loc 1 86 17 is_stmt 1 discriminator 2 view .LVU105
-  86:../../Classes/FIIR/CapFir.cpp ****             }
+  86:../../Classes/SensorFilters/FIIR/CapFir.cpp ****             }
  500              		.loc 1 86 29 is_stmt 0 discriminator 2 view .LVU106
  501 0038 A3EC010A 		vstmia.32	r3!, {s0}
-  85:../../Classes/FIIR/CapFir.cpp ****                 _bufferH[i] = value;
+  85:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferH[i] = value;
  502              		.loc 1 85 13 is_stmt 1 discriminator 2 view .LVU107
-  85:../../Classes/FIIR/CapFir.cpp ****                 _bufferH[i] = value;
+  85:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferH[i] = value;
  503              		.loc 1 85 31 discriminator 2 view .LVU108
  504 003c 9342     		cmp	r3, r2
  505 003e FBD1     		bne	.L40
-  85:../../Classes/FIIR/CapFir.cpp ****                 _bufferH[i] = value;
+  85:../../Classes/SensorFilters/FIIR/CapFir.cpp ****                 _bufferH[i] = value;
  506              		.loc 1 85 31 is_stmt 0 discriminator 2 view .LVU109
  507              	.LBE33:
  508              	.LBE34:
@@ -708,126 +708,126 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  515              		.align	2
  516              		.set	.LANCHOR0,. + 0
  517              	.LC0:
- 518 0000 6A7E63BB 		.word	-1151107478
- 519 0004 D1F69EBB 		.word	-1147210031
- 520 0008 ED1E8BBB 		.word	-1148510483
- 521 000c AFAB113C 		.word	1007791023
- 522 0010 3132353D 		.word	1026896433
- 523 0014 0447CD3D 		.word	1036863236
- 524 0018 54F1233E 		.word	1042542932
- 525 001c 8BE24B3E 		.word	1045160587
- 526 0020 8BE24B3E 		.word	1045160587
- 527 0024 54F1233E 		.word	1042542932
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 13
+ 518 0000 4D011F3C 		.word	1008664909
+ 519 0004 66996E3C 		.word	1013881190
+ 520 0008 72BFE73C 		.word	1021820786
+ 521 000c BDDD463D 		.word	1028054461
+ 522 0010 952B933D 		.word	1033055125
+ 523 0014 D8E2C03D 		.word	1036051160
+ 524 0018 0FA5E43D 		.word	1038394639
+ 525 001c 713AF83D 		.word	1039678065
+ 526 0020 713AF83D 		.word	1039678065
+ 527 0024 0FA5E43D 		.word	1038394639
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 13
 
 
- 528 0028 0447CD3D 		.word	1036863236
- 529 002c 3132353D 		.word	1026896433
- 530 0030 AFAB113C 		.word	1007791023
- 531 0034 ED1E8BBB 		.word	-1148510483
- 532 0038 D1F69EBB 		.word	-1147210031
- 533 003c 6A7E63BB 		.word	-1151107478
+ 528 0028 D8E2C03D 		.word	1036051160
+ 529 002c 952B933D 		.word	1033055125
+ 530 0030 BDDD463D 		.word	1028054461
+ 531 0034 72BFE73C 		.word	1021820786
+ 532 0038 66996E3C 		.word	1013881190
+ 533 003c 4D011F3C 		.word	1008664909
  534              	.LC1:
- 535 0040 93EF04BA 		.word	-1174081645
- 536 0044 97D41E3A 		.word	975099031
- 537 0048 DF72123B 		.word	991064799
- 538 004c 3B66873B 		.word	998729275
- 539 0050 4D80A33B 		.word	1000570957
- 540 0054 66EF353B 		.word	993390438
- 541 0058 B4DC80BB 		.word	-1149182796
- 542 005c E13369BC 		.word	-1133956127
- 543 0060 53A0C3BC 		.word	-1128030125
- 544 0064 6570D4BC 		.word	-1126928283
- 545 0068 8A5759BC 		.word	-1134995574
- 546 006c ACF2923C 		.word	1016263340
- 547 0070 E2CF853D 		.word	1032179682
- 548 0074 0369F53D 		.word	1039493379
- 549 0078 6DE52B3E 		.word	1043064173
- 550 007c DDBE483E 		.word	1044954845
- 551 0080 DDBE483E 		.word	1044954845
- 552 0084 6DE52B3E 		.word	1043064173
- 553 0088 0369F53D 		.word	1039493379
- 554 008c E2CF853D 		.word	1032179682
- 555 0090 ACF2923C 		.word	1016263340
- 556 0094 8A5759BC 		.word	-1134995574
- 557 0098 6570D4BC 		.word	-1126928283
- 558 009c 53A0C3BC 		.word	-1128030125
- 559 00a0 E13369BC 		.word	-1133956127
- 560 00a4 B4DC80BB 		.word	-1149182796
- 561 00a8 66EF353B 		.word	993390438
- 562 00ac 4D80A33B 		.word	1000570957
- 563 00b0 3B66873B 		.word	998729275
- 564 00b4 DF72123B 		.word	991064799
- 565 00b8 97D41E3A 		.word	975099031
- 566 00bc 93EF04BA 		.word	-1174081645
+ 535 0040 33BE963B 		.word	999734835
+ 536 0044 F854A93B 		.word	1000953080
+ 537 0048 FB22DF3B 		.word	1004479227
+ 538 004c 3B351B3C 		.word	1008416059
+ 539 0050 B5FB553C 		.word	1012267957
+ 540 0054 FDCF8E3C 		.word	1015992317
+ 541 0058 08A5B73C 		.word	1018668296
+ 542 005c DFD6E33C 		.word	1021564639
+ 543 0060 89CB083D 		.word	1023986569
+ 544 0064 62811F3D 		.word	1025474914
+ 545 0068 BE1B353D 		.word	1026890686
+ 546 006c FCB3483D 		.word	1028174844
+ 547 0070 2478593D 		.word	1029273636
+ 548 0074 0FB4663D 		.word	1030140943
+ 549 0078 37D96F3D 		.word	1030740279
+ 550 007c 0085743D 		.word	1031046400
+ 551 0080 0085743D 		.word	1031046400
+ 552 0084 37D96F3D 		.word	1030740279
+ 553 0088 0FB4663D 		.word	1030140943
+ 554 008c 2478593D 		.word	1029273636
+ 555 0090 FCB3483D 		.word	1028174844
+ 556 0094 BE1B353D 		.word	1026890686
+ 557 0098 62811F3D 		.word	1025474914
+ 558 009c 89CB083D 		.word	1023986569
+ 559 00a0 DFD6E33C 		.word	1021564639
+ 560 00a4 08A5B73C 		.word	1018668296
+ 561 00a8 FDCF8E3C 		.word	1015992317
+ 562 00ac B5FB553C 		.word	1012267957
+ 563 00b0 3B351B3C 		.word	1008416059
+ 564 00b4 FB22DF3B 		.word	1004479227
+ 565 00b8 F854A93B 		.word	1000953080
+ 566 00bc 33BE963B 		.word	999734835
  567              	.LC2:
- 568 00c0 BA8E2B3A 		.word	975933114
- 569 00c4 2D388B39 		.word	965425197
- 570 00c8 A4E59BB9 		.word	-1180965468
- 571 00cc 8F0D6EBA 		.word	-1167192689
- 572 00d0 5E49B0BA 		.word	-1162852002
- 573 00d4 195CADBA 		.word	-1163043815
- 574 00d8 F9D221BA 		.word	-1172188423
- 575 00dc 4E97453A 		.word	977639246
- 576 00e0 143E1D3B 		.word	991772180
- 577 00e4 3DE66A3B 		.word	996861501
- 578 00e8 7A1F643B 		.word	996417402
- 579 00ec CDC3CF3A 		.word	986694605
- 580 00f0 C112F6BA 		.word	-1158278463
- 581 00f4 809ABDBB 		.word	-1145202048
- 582 00f8 B43509BC 		.word	-1140247116
- 583 00fc 1D6001BC 		.word	-1140760547
- 584 0100 CC7F65BB 		.word	-1150976052
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 14
+ 568 00c0 9153053B 		.word	990204817
+ 569 00c4 B2A30A3B 		.word	990553010
+ 570 00c8 CCBD173B 		.word	991411660
+ 571 00cc 3BBF2C3B 		.word	992788283
+ 572 00d0 DDAC493B 		.word	994684125
+ 573 00d4 E5726E3B 		.word	997094117
+ 574 00d8 2E728D3B 		.word	999125550
+ 575 00dc A75DA73B 		.word	1000824231
+ 576 00e0 B9CCC43B 		.word	1002753209
+ 577 00e4 9484E53B 		.word	1004897428
+ 578 00e8 8C9F043C 		.word	1006935948
+ 579 00ec EAD5173C 		.word	1008195050
+ 580 00f0 4D382C3C 		.word	1009530957
+ 581 00f4 6C95413C 		.word	1010931052
+ 582 00f8 38B8573C 		.word	1012381752
+ 583 00fc 7E686E3C 		.word	1013868670
+ 584 0100 C8B5823C 		.word	1015199176
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 14
 
 
- 585 0104 D3D5843B 		.word	998561235
- 586 0108 1EE3483C 		.word	1011409694
- 587 010c 604D8F3C 		.word	1016024416
- 588 0110 DFD9853C 		.word	1015405023
- 589 0114 8E84EC3B 		.word	1005356174
- 590 0118 0E3F09BC 		.word	-1140244722
- 591 011c B5B2D1BC 		.word	-1127107915
- 592 0120 599718BD 		.word	-1122461863
- 593 0124 3C3A13BD 		.word	-1122813380
- 594 0128 56B588BC 		.word	-1131891370
- 595 012c 8B04AB3C 		.word	1017840779
- 596 0130 6499923D 		.word	1033017700
- 597 0134 AA9B003E 		.word	1040227242
- 598 0138 36022F3E 		.word	1043268150
- 599 013c 6376493E 		.word	1045001827
- 600 0140 6376493E 		.word	1045001827
- 601 0144 36022F3E 		.word	1043268150
- 602 0148 AA9B003E 		.word	1040227242
- 603 014c 6499923D 		.word	1033017700
- 604 0150 8B04AB3C 		.word	1017840779
- 605 0154 56B588BC 		.word	-1131891370
- 606 0158 3C3A13BD 		.word	-1122813380
- 607 015c 599718BD 		.word	-1122461863
- 608 0160 B5B2D1BC 		.word	-1127107915
- 609 0164 0E3F09BC 		.word	-1140244722
- 610 0168 8E84EC3B 		.word	1005356174
- 611 016c DFD9853C 		.word	1015405023
- 612 0170 604D8F3C 		.word	1016024416
- 613 0174 1EE3483C 		.word	1011409694
- 614 0178 D3D5843B 		.word	998561235
- 615 017c CC7F65BB 		.word	-1150976052
- 616 0180 1D6001BC 		.word	-1140760547
- 617 0184 B43509BC 		.word	-1140247116
- 618 0188 809ABDBB 		.word	-1145202048
- 619 018c C112F6BA 		.word	-1158278463
- 620 0190 CDC3CF3A 		.word	986694605
- 621 0194 7A1F643B 		.word	996417402
- 622 0198 3DE66A3B 		.word	996861501
- 623 019c 143E1D3B 		.word	991772180
- 624 01a0 4E97453A 		.word	977639246
- 625 01a4 F9D221BA 		.word	-1172188423
- 626 01a8 195CADBA 		.word	-1163043815
- 627 01ac 5E49B0BA 		.word	-1162852002
- 628 01b0 8F0D6EBA 		.word	-1167192689
- 629 01b4 A4E59BB9 		.word	-1180965468
- 630 01b8 2D388B39 		.word	965425197
- 631 01bc BA8E2B3A 		.word	975933114
+ 585 0104 8E428E3C 		.word	1015956110
+ 586 0108 D9BB993C 		.word	1016708057
+ 587 010c C402A53C 		.word	1017447108
+ 588 0110 B6F8AF3C 		.word	1018165430
+ 589 0114 A37FBA3C 		.word	1018855331
+ 590 0118 7E7AC43C 		.word	1019509374
+ 591 011c 89CDCD3C 		.word	1020120457
+ 592 0120 C25ED63C 		.word	1020681922
+ 593 0124 1616DE3C 		.word	1021187606
+ 594 0128 C0DDE43C 		.word	1021631936
+ 595 012c A1A2EA3C 		.word	1022010017
+ 596 0130 5154EF3C 		.word	1022317649
+ 597 0134 7BE5F23C 		.word	1022551419
+ 598 0138 F74BF53C 		.word	1022708727
+ 599 013c F180F63C 		.word	1022787825
+ 600 0140 F180F63C 		.word	1022787825
+ 601 0144 F74BF53C 		.word	1022708727
+ 602 0148 7BE5F23C 		.word	1022551419
+ 603 014c 5154EF3C 		.word	1022317649
+ 604 0150 A1A2EA3C 		.word	1022010017
+ 605 0154 C0DDE43C 		.word	1021631936
+ 606 0158 1616DE3C 		.word	1021187606
+ 607 015c C25ED63C 		.word	1020681922
+ 608 0160 89CDCD3C 		.word	1020120457
+ 609 0164 7E7AC43C 		.word	1019509374
+ 610 0168 A37FBA3C 		.word	1018855331
+ 611 016c B6F8AF3C 		.word	1018165430
+ 612 0170 C402A53C 		.word	1017447108
+ 613 0174 D9BB993C 		.word	1016708057
+ 614 0178 8E428E3C 		.word	1015956110
+ 615 017c C8B5823C 		.word	1015199176
+ 616 0180 7E686E3C 		.word	1013868670
+ 617 0184 38B8573C 		.word	1012381752
+ 618 0188 6C95413C 		.word	1010931052
+ 619 018c 4D382C3C 		.word	1009530957
+ 620 0190 EAD5173C 		.word	1008195050
+ 621 0194 8C9F043C 		.word	1006935948
+ 622 0198 9484E53B 		.word	1004897428
+ 623 019c B9CCC43B 		.word	1002753209
+ 624 01a0 A75DA73B 		.word	1000824231
+ 625 01a4 2E728D3B 		.word	999125550
+ 626 01a8 E5726E3B 		.word	997094117
+ 627 01ac DDAC493B 		.word	994684125
+ 628 01b0 3BBF2C3B 		.word	992788283
+ 629 01b4 CCBD173B 		.word	991411660
+ 630 01b8 B2A30A3B 		.word	990553010
+ 631 01bc 9153053B 		.word	990204817
  632              		.text
  633              	.Letext0:
  634              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  639              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
  640              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
  641              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 15
 
 
  642              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
@@ -862,40 +862,40 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 1
  660              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
  661              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
  662              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
- 663              		.file 31 "../../Classes/FIIR/../../libs/libDaisy/src/daisy_core.h"
+ 663              		.file 31 "../../libs/libDaisy/../../libs/libDaisy/src/daisy_core.h"
  664              		.file 32 "../../libs/libDaisy/src/util/wav_format.h"
- 665              		.file 33 "../../Classes/FIIR/../../libs/libDaisy/src/dev/sr_595.h"
- 666              		.file 34 "../../Classes/FIIR/../../libs/libDaisy/src/dev/max11300.h"
- 667              		.file 35 "../../Classes/FIIR/../../libs/libDaisy/src/daisy_seed.h"
+ 665              		.file 33 "../../libs/libDaisy/../../libs/libDaisy/src/dev/sr_595.h"
+ 666              		.file 34 "../../libs/libDaisy/../../libs/libDaisy/src/dev/max11300.h"
+ 667              		.file 35 "../../libs/libDaisy/../../libs/libDaisy/src/daisy_seed.h"
  668              		.file 36 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
  669              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
  670              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
- 671              		.file 39 "../../Classes/FIIR/../../libs/DaisySP/Source/Control/adenv.h"
+ 671              		.file 39 "../../libs/libDaisy/../../libs/DaisySP/Source/Control/adenv.h"
  672              		.file 40 "../../libs/DaisySP/Source/Utility/dsp.h"
  673              		.file 41 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
  674              		.file 42 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
- 675              		.file 43 "../../Classes/FIIR/CapFir.h"
+ 675              		.file 43 "../../Classes/SensorFilters/FIIR/CapFir.h"
  676              		.file 44 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s 			page 16
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 CapFir.cpp
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:17     .text._ZN6CapFirC2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:26     .text._ZN6CapFirC2Ev:00000000 _ZN6CapFirC2Ev
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:80     .text._ZN6CapFirC2Ev:00000050 $d
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:26     .text._ZN6CapFirC2Ev:00000000 _ZN6CapFirC1Ev
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:87     .text._ZN6CapFirD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:95     .text._ZN6CapFirD2Ev:00000000 _ZN6CapFirD2Ev
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:95     .text._ZN6CapFirD2Ev:00000000 _ZN6CapFirD1Ev
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:111    .text._ZN6CapFir4InitENS_7ResTypeE:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:119    .text._ZN6CapFir4InitENS_7ResTypeE:00000000 _ZN6CapFir4InitENS_7ResTypeE
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:188    .text._ZN6CapFir7ProcessEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:196    .text._ZN6CapFir7ProcessEf:00000000 _ZN6CapFir7ProcessEf
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:427    .text._ZN6CapFir7ProcessEf:000000c4 $d
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:432    .text._ZN6CapFir9setBufferEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:440    .text._ZN6CapFir9setBufferEf:00000000 _ZN6CapFir9setBufferEf
-C:\Users\skipi\AppData\Local\Temp\ccdWOmBh.s:515    .rodata:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:17     .text._ZN6CapFirC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:26     .text._ZN6CapFirC2Ev:00000000 _ZN6CapFirC2Ev
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:80     .text._ZN6CapFirC2Ev:00000050 $d
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:26     .text._ZN6CapFirC2Ev:00000000 _ZN6CapFirC1Ev
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:87     .text._ZN6CapFirD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:95     .text._ZN6CapFirD2Ev:00000000 _ZN6CapFirD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:95     .text._ZN6CapFirD2Ev:00000000 _ZN6CapFirD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:111    .text._ZN6CapFir4InitENS_7ResTypeE:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:119    .text._ZN6CapFir4InitENS_7ResTypeE:00000000 _ZN6CapFir4InitENS_7ResTypeE
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:188    .text._ZN6CapFir7ProcessEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:196    .text._ZN6CapFir7ProcessEf:00000000 _ZN6CapFir7ProcessEf
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:427    .text._ZN6CapFir7ProcessEf:000000c4 $d
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:432    .text._ZN6CapFir9setBufferEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:440    .text._ZN6CapFir9setBufferEf:00000000 _ZN6CapFir9setBufferEf
+C:\Users\skipi\AppData\Local\Temp\ccaRE4gu.s:515    .rodata:00000000 $d
 
 UNDEFINED SYMBOLS
 memcpy
