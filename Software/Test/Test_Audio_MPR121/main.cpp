@@ -33,7 +33,6 @@ bool gate = false;
 uint16_t lastTouched = 0;   
 uint16_t currTouched = 0;   
 
-// Fixed: Added initialization and missing semicolon
 float curve_type = 1.0f;
 float delta_max = 50.0f;
 
@@ -93,7 +92,7 @@ int main()
     // 3. DSP INIT
     pc.Init(IIR::Butterworth); 
     pc.setScale(PlantConditioner::C, PlantConditioner::MinorArm);
-    pc.setOctave(2);
+    pc.setOctave(4);
     pc.setCurve(50, 1.1);
 
     osc.Init(hw.AudioSampleRate());

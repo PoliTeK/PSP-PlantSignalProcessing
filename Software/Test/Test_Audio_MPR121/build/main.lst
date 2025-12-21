@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   34              		@ link register save eliminated.
   35              	.LBB349:
   36              	.LBI349:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 2
 
 
   37              		.file 2 "../../libs/libDaisy/src/dev/codec_ak4556.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   27:../../libs/libDaisy/src/sys/system.h ****             FREQ_400MHZ,
   28:../../libs/libDaisy/src/sys/system.h ****             FREQ_480MHZ,
   29:../../libs/libDaisy/src/sys/system.h ****         };
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 3
 
 
   30:../../libs/libDaisy/src/sys/system.h **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   84:../../libs/libDaisy/src/sys/system.h ****         } status;
   85:../../libs/libDaisy/src/sys/system.h ****         uint32_t data;
   86:../../libs/libDaisy/src/sys/system.h ****         enum class Version : uint32_t
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 4
 
 
   87:../../libs/libDaisy/src/sys/system.h ****         {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   38:../../libs/libDaisy/src/hid/usb.h ****     typedef void (*ReceiveCallback)(uint8_t* buff, uint32_t* len);
   39:../../libs/libDaisy/src/hid/usb.h **** 
   40:../../libs/libDaisy/src/hid/usb.h ****     UsbHandle() {}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 5
 
 
   41:../../libs/libDaisy/src/hid/usb.h **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   47:../../libs/libDaisy/src/per/adc.h ****         SPEED_8CYCLES_5,
   48:../../libs/libDaisy/src/per/adc.h ****         SPEED_16CYCLES_5,
   49:../../libs/libDaisy/src/per/adc.h ****         SPEED_32CYCLES_5,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 6
 
 
   50:../../libs/libDaisy/src/per/adc.h ****         SPEED_64CYCLES_5,
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  104:../../libs/libDaisy/src/per/adc.h ****         OVS_512,  /**< & */
  105:../../libs/libDaisy/src/per/adc.h ****         OVS_1024, /**< & */
  106:../../libs/libDaisy/src/per/adc.h ****         OVS_LAST, /**< & */
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 7
 
 
  107:../../libs/libDaisy/src/per/adc.h ****     };
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   45:../../libs/libDaisy/src/hid/audio.h ****     enum class Result
   46:../../libs/libDaisy/src/hid/audio.h ****     {
   47:../../libs/libDaisy/src/hid/audio.h ****         OK,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 8
 
 
   48:../../libs/libDaisy/src/hid/audio.h ****         ERR,
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   76              		.syntax unified
   77              		.thumb
   78              		.thumb_func
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 9
 
 
   79              		.fpu fpv5-d16
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   89              		@ link register save eliminated.
   90              		.loc 7 45 14 is_stmt 0 view .LVU13
   91 0000 7047     		bx	lr
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 10
 
 
   92              		.cfi_endproc
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  125              		.weak	_ZN5daisy6Mpr121INS_18Mpr121I2CTransportEED2Ev
  126              		.syntax unified
  127              		.thumb
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 11
 
 
  128              		.thumb_func
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   49:../../libs/libDaisy/src/dev/mpr121.h ****         config_ = config;
   50:../../libs/libDaisy/src/dev/mpr121.h **** 
   51:../../libs/libDaisy/src/dev/mpr121.h ****         I2CHandle::Config i2c_conf;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 12
 
 
   52:../../libs/libDaisy/src/dev/mpr121.h ****         i2c_conf.mode   = I2CHandle::Config::Mode::I2C_MASTER;
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  142              		.loc 9 21 5 view .LVU17
   21:../../libs/libDaisy/src/dev/mpr121.h **** 
  143              		.loc 9 21 5 is_stmt 0 view .LVU18
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 13
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 13
 
 
  144              	.LBE354:
@@ -774,33 +774,32 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   33:main.cpp      **** uint16_t lastTouched = 0;   
   34:main.cpp      **** uint16_t currTouched = 0;   
   35:main.cpp      **** 
-  36:main.cpp      **** // Fixed: Added initialization and missing semicolon
-  37:main.cpp      **** float curve_type = 1.0f;
-  38:main.cpp      **** float delta_max = 50.0f;
-  39:main.cpp      **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 14
+  36:main.cpp      **** float curve_type = 1.0f;
+  37:main.cpp      **** float delta_max = 50.0f;
+  38:main.cpp      **** 
+  39:main.cpp      **** // --- AUDIO CALLBACK (High Priority) ---
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 14
 
 
-  40:main.cpp      **** // --- AUDIO CALLBACK (High Priority) ---
-  41:main.cpp      **** static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::InterleavingOutputB
-  42:main.cpp      **** {
- 164              		.loc 10 42 1 is_stmt 1 view -0
+  40:main.cpp      **** static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::InterleavingOutputB
+  41:main.cpp      **** {
+ 164              		.loc 10 41 1 is_stmt 1 view -0
  165              		.cfi_startproc
  166              		@ args = 0, pretend = 0, frame = 0
  167              		@ frame_needed = 0, uses_anonymous_args = 0
-  43:main.cpp      ****     float envOut, oscOut;
- 168              		.loc 10 43 5 view .LVU21
-  44:main.cpp      ****     for (size_t i = 0; i < size; i += 2)
- 169              		.loc 10 44 5 view .LVU22
+  42:main.cpp      ****     float envOut, oscOut;
+ 168              		.loc 10 42 5 view .LVU21
+  43:main.cpp      ****     for (size_t i = 0; i < size; i += 2)
+ 169              		.loc 10 43 5 view .LVU22
  170              	.LBB355:
- 171              		.loc 10 44 26 view .LVU23
+ 171              		.loc 10 43 26 view .LVU23
  172 0000 72B3     		cbz	r2, .L14
  173 0002 013A     		subs	r2, r2, #1
  174              	.LVL5:
- 175              		.loc 10 44 26 is_stmt 0 view .LVU24
+ 175              		.loc 10 43 26 is_stmt 0 view .LVU24
  176              	.LBE355:
-  42:main.cpp      ****     float envOut, oscOut;
- 177              		.loc 10 42 1 view .LVU25
+  41:main.cpp      ****     float envOut, oscOut;
+ 177              		.loc 10 41 1 view .LVU25
  178 0004 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
  179              		.cfi_def_cfa_offset 32
  180              		.cfi_offset 3, -32
@@ -813,7 +812,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  187              		.cfi_offset 14, -4
  188 0008 0C46     		mov	r4, r1
  189              	.LBB364:
- 190              		.loc 10 44 26 view .LVU26
+ 190              		.loc 10 43 26 view .LVU26
  191 000a 0026     		movs	r6, #0
  192 000c DFF86080 		ldr	r8, .L17+12
  193 0010 5708     		lsrs	r7, r2, #1
@@ -821,11 +820,11 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  195 0014 DFF85C90 		ldr	r9, .L17+16
  196              	.LVL6:
  197              	.L8:
-  45:main.cpp      ****     {
-  46:main.cpp      ****         // 1. FREQUENCY CONTROL
-  47:main.cpp      ****         osc.SetFreq(target_freq);
- 198              		.loc 10 47 9 is_stmt 1 discriminator 2 view .LVU27
- 199              		.loc 10 47 20 is_stmt 0 discriminator 2 view .LVU28
+  44:main.cpp      ****     {
+  45:main.cpp      ****         // 1. FREQUENCY CONTROL
+  46:main.cpp      ****         osc.SetFreq(target_freq);
+ 198              		.loc 10 46 9 is_stmt 1 discriminator 2 view .LVU27
+ 199              		.loc 10 46 20 is_stmt 0 discriminator 2 view .LVU28
  200 0018 98ED000A 		vldr.32	s0, [r8]
  201              	.LVL7:
  202              	.LBB356:
@@ -838,10 +837,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   30:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_TRI,
   31:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_SAW,
   32:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_RAMP,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 15
-
-
   33:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_SQUARE,
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 15
+
+
   34:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_POLYBLEP_TRI,
   35:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_POLYBLEP_SAW,
   36:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_POLYBLEP_SQUARE,
@@ -894,14 +893,14 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  215              		.loc 8 70 34 discriminator 2 view .LVU35
  216              	.LBE357:
  217              	.LBE356:
-  48:main.cpp      **** 
-  49:main.cpp      ****         // 2. ENVELOPE GENERATION
-  50:main.cpp      ****         envOut = env.Process(gate);
- 218              		.loc 10 50 29 discriminator 2 view .LVU36
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 16
-
-
+  47:main.cpp      **** 
+  48:main.cpp      ****         // 2. ENVELOPE GENERATION
+  49:main.cpp      ****         envOut = env.Process(gate);
+ 218              		.loc 10 49 29 discriminator 2 view .LVU36
  219 0026 99F80010 		ldrb	r1, [r9]	@ zero_extendqisi2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 16
+
+
  220 002a 0F48     		ldr	r0, .L17+4
  221              	.LBB359:
  222              	.LBB358:
@@ -911,14 +910,14 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  226              		.loc 8 70 20 discriminator 2 view .LVU38
  227              	.LBE358:
  228              	.LBE359:
- 229              		.loc 10 50 9 is_stmt 1 discriminator 2 view .LVU39
- 230              		.loc 10 50 29 is_stmt 0 discriminator 2 view .LVU40
+ 229              		.loc 10 49 9 is_stmt 1 discriminator 2 view .LVU39
+ 230              		.loc 10 49 29 is_stmt 0 discriminator 2 view .LVU40
  231 0030 FFF7FEFF 		bl	_ZN7daisysp4Adsr7ProcessEb
  232              	.LVL10:
-  51:main.cpp      ****         
-  52:main.cpp      ****         // 3. GAIN STAGING
-  53:main.cpp      ****         osc.SetAmp(envOut * 0.85f); 
- 233              		.loc 10 53 9 is_stmt 1 discriminator 2 view .LVU41
+  50:main.cpp      ****         
+  51:main.cpp      ****         // 3. GAIN STAGING
+  52:main.cpp      ****         osc.SetAmp(envOut * 0.85f); 
+ 233              		.loc 10 52 9 is_stmt 1 discriminator 2 view .LVU41
  234              	.LBB360:
  235              	.LBI360:
   71:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     }
@@ -932,15 +931,15 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  238              		.loc 8 76 41 discriminator 2 view .LVU43
  239              	.LBE361:
  240              	.LBE360:
- 241              		.loc 10 53 19 is_stmt 0 discriminator 2 view .LVU44
+ 241              		.loc 10 52 19 is_stmt 0 discriminator 2 view .LVU44
  242 0034 DFED0D7A 		vldr.32	s15, .L17+8
-  54:main.cpp      **** 
-  55:main.cpp      ****         // 4. OSCILLATOR PROCESSING
-  56:main.cpp      ****         oscOut = osc.Process();
- 243              		.loc 10 56 29 discriminator 2 view .LVU45
- 244 0038 0A48     		ldr	r0, .L17
   53:main.cpp      **** 
- 245              		.loc 10 53 19 discriminator 2 view .LVU46
+  54:main.cpp      ****         // 4. OSCILLATOR PROCESSING
+  55:main.cpp      ****         oscOut = osc.Process();
+ 243              		.loc 10 55 29 discriminator 2 view .LVU45
+ 244 0038 0A48     		ldr	r0, .L17
+  52:main.cpp      **** 
+ 245              		.loc 10 52 19 discriminator 2 view .LVU46
  246 003a 20EE270A 		vmul.f32	s0, s0, s15
  247              	.LVL11:
  248              	.LBB363:
@@ -951,40 +950,40 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  253              		.loc 8 76 46 discriminator 2 view .LVU48
  254              	.LBE362:
  255              	.LBE363:
- 256              		.loc 10 56 9 is_stmt 1 discriminator 2 view .LVU49
- 257              		.loc 10 56 29 is_stmt 0 discriminator 2 view .LVU50
+ 256              		.loc 10 55 9 is_stmt 1 discriminator 2 view .LVU49
+ 257              		.loc 10 55 29 is_stmt 0 discriminator 2 view .LVU50
  258 0042 FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
  259              	.LVL13:
-  57:main.cpp      ****         
-  58:main.cpp      ****         out[i] = out[i + 1] = oscOut;
- 260              		.loc 10 58 9 is_stmt 1 discriminator 2 view .LVU51
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 17
+  56:main.cpp      ****         
+  57:main.cpp      ****         out[i] = out[i + 1] = oscOut;
+ 260              		.loc 10 57 9 is_stmt 1 discriminator 2 view .LVU51
+ 261              		.loc 10 57 16 is_stmt 0 discriminator 2 view .LVU52
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 17
 
 
- 261              		.loc 10 58 16 is_stmt 0 discriminator 2 view .LVU52
  262 0046 2246     		mov	r2, r4
-  44:main.cpp      ****     {
- 263              		.loc 10 44 26 discriminator 2 view .LVU53
+  43:main.cpp      ****     {
+ 263              		.loc 10 43 26 discriminator 2 view .LVU53
  264 0048 B742     		cmp	r7, r6
- 265              		.loc 10 58 29 discriminator 2 view .LVU54
+ 265              		.loc 10 57 29 discriminator 2 view .LVU54
  266 004a 84ED010A 		vstr.32	s0, [r4, #4]
-  44:main.cpp      ****     {
- 267              		.loc 10 44 26 discriminator 2 view .LVU55
+  43:main.cpp      ****     {
+ 267              		.loc 10 43 26 discriminator 2 view .LVU55
  268 004e 06F10106 		add	r6, r6, #1
  269              	.LVL14:
- 270              		.loc 10 58 16 discriminator 2 view .LVU56
+ 270              		.loc 10 57 16 discriminator 2 view .LVU56
  271 0052 04F10804 		add	r4, r4, #8
  272 0056 82ED000A 		vstr.32	s0, [r2]
-  44:main.cpp      ****     {
- 273              		.loc 10 44 5 is_stmt 1 discriminator 2 view .LVU57
+  43:main.cpp      ****     {
+ 273              		.loc 10 43 5 is_stmt 1 discriminator 2 view .LVU57
  274              	.LVL15:
-  44:main.cpp      ****     {
- 275              		.loc 10 44 26 discriminator 2 view .LVU58
+  43:main.cpp      ****     {
+ 275              		.loc 10 43 26 discriminator 2 view .LVU58
  276 005a DDD1     		bne	.L8
  277              	.LBE364:
-  59:main.cpp      ****     }
-  60:main.cpp      **** }
- 278              		.loc 10 60 1 is_stmt 0 view .LVU59
+  58:main.cpp      ****     }
+  59:main.cpp      **** }
+ 278              		.loc 10 59 1 is_stmt 0 view .LVU59
  279 005c BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
  280              	.LVL16:
  281              	.L14:
@@ -997,7 +996,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  288              		.cfi_restore 8
  289              		.cfi_restore 9
  290              		.cfi_restore 14
- 291              		.loc 10 60 1 view .LVU60
+ 291              		.loc 10 59 1 view .LVU60
  292 0060 7047     		bx	lr
  293              	.L18:
  294 0062 00BF     		.align	2
@@ -1018,10 +1017,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  310              		.thumb_func
  311              		.fpu fpv5-d16
  313              	_ZN5daisy6Mpr121INS_18Mpr121I2CTransportEE13WriteRegisterEhh:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 18
-
-
  314              	.LVL17:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 18
+
+
  315              	.LFB5285:
   98:../../libs/libDaisy/src/dev/mpr121.h **** 
   99:../../libs/libDaisy/src/dev/mpr121.h ****     struct Config
@@ -1078,10 +1077,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  150:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NHDT, 0x00);
  151:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NCLT, 0x00);
  152:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_FDLT, 0x00);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 19
-
-
  153:../../libs/libDaisy/src/dev/mpr121.h **** 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 19
+
+
  154:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_DEBOUNCE, 0);
  155:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_CONFIG1, 0x10); // default, 16uA charge current
  156:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_CONFIG2, 0x20); // 0.5uS encoding, 1ms period
@@ -1138,10 +1137,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  207:../../libs/libDaisy/src/dev/mpr121.h **** 
  208:../../libs/libDaisy/src/dev/mpr121.h ****     /** Read the baseline value for the channel. The 3rd level filtered
  209:../../libs/libDaisy/src/dev/mpr121.h ****         result is internally 10bit but only high 8 bits are readable
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 20
-
-
  210:../../libs/libDaisy/src/dev/mpr121.h ****         from registers 0x1E~0x2A as the baseline value output for each channel.
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 20
+
+
  211:../../libs/libDaisy/src/dev/mpr121.h ****         \param      t the channel to read.
  212:../../libs/libDaisy/src/dev/mpr121.h ****         \returns    the baseline data that was read
  213:../../libs/libDaisy/src/dev/mpr121.h ****     */
@@ -1198,10 +1197,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  322              		.cfi_def_cfa_offset 28
  323              		.cfi_offset 4, -28
  324              		.cfi_offset 5, -24
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 21
-
-
  325              		.cfi_offset 6, -20
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 21
+
+
  326              		.cfi_offset 7, -16
  327              		.cfi_offset 8, -12
  328              		.cfi_offset 9, -8
@@ -1258,10 +1257,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  364              		.loc 9 66 40 view .LVU73
  365 0028 3046     		mov	r0, r6
  366              	.LVL19:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 22
-
-
   66:../../libs/libDaisy/src/dev/mpr121.h ****     }
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 22
+
+
  367              		.loc 9 66 40 view .LVU74
  368 002a 03AA     		add	r2, sp, #12
  369              	.LVL20:
@@ -1318,10 +1317,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  291:../../libs/libDaisy/src/dev/mpr121.h ****         }
  292:../../libs/libDaisy/src/dev/mpr121.h ****     }
  293:../../libs/libDaisy/src/dev/mpr121.h **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 23
-
-
  294:../../libs/libDaisy/src/dev/mpr121.h ****     /** Device register map */
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 23
+
+
  295:../../libs/libDaisy/src/dev/mpr121.h ****     enum RegMap
  296:../../libs/libDaisy/src/dev/mpr121.h ****     {
  297:../../libs/libDaisy/src/dev/mpr121.h ****         MPR121_TOUCHSTATUS_L = 0x00,
@@ -1378,10 +1377,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   73:../../libs/libDaisy/src/dev/mpr121.h ****     }
  393              		.loc 9 73 39 is_stmt 0 view .LVU82
  394 0034 CDF80080 		str	r8, [sp]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 24
-
-
  395 0038 0DF10B02 		add	r2, sp, #11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 24
+
+
  396              	.LBE408:
  397              	.LBE407:
  398              	.LBB412:
@@ -1438,10 +1437,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   73:../../libs/libDaisy/src/dev/mpr121.h ****     }
  443              		.loc 9 73 39 view .LVU93
  444              	.LBE411:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 25
-
-
  445              	.LBE417:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 25
+
+
  446              	.LBB418:
  447              	.LBI418:
  448              		.loc 9 343 10 is_stmt 1 view .LVU94
@@ -1498,10 +1497,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  492              	.LBB423:
   65:../../libs/libDaisy/src/dev/mpr121.h ****                != i2c_.TransmitBlocking(config_.dev_addr, data, size, 10);
  493              		.loc 9 65 9 view .LVU104
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 26
-
-
  494              	.L23:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 26
+
+
   66:../../libs/libDaisy/src/dev/mpr121.h ****     }
  495              		.loc 9 66 40 is_stmt 0 view .LVU105
  496 0086 94F82C10 		ldrb	r1, [r4, #44]	@ zero_extendqisi2
@@ -1558,10 +1557,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  540              		.loc 9 66 40 view .LVU115
  541              	.LBE438:
  542              	.LBE437:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 27
-
-
  543              	.LBB439:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 27
+
+
  544              	.LBI439:
  545              		.loc 9 343 10 is_stmt 1 view .LVU116
  546              	.LBE439:
@@ -1618,10 +1617,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  592              	.LBB449:
   63:../../libs/libDaisy/src/dev/mpr121.h ****     {
  593              		.loc 9 63 10 is_stmt 1 view .LVU126
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 28
-
-
  594              	.LBB427:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 28
+
+
   65:../../libs/libDaisy/src/dev/mpr121.h ****                != i2c_.TransmitBlocking(config_.dev_addr, data, size, 10);
  595              		.loc 9 65 9 view .LVU127
   66:../../libs/libDaisy/src/dev/mpr121.h ****     }
@@ -1678,10 +1677,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  639              		.loc 9 66 40 view .LVU137
  640 00f0 3046     		mov	r0, r6
  641              	.LVL38:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 29
-
-
   66:../../libs/libDaisy/src/dev/mpr121.h ****     }
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 29
+
+
  642              		.loc 9 66 40 view .LVU138
  643              	.LBE454:
  644              	.LBE460:
@@ -1738,10 +1737,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  687              	.LC1:
  688 001c 4D505231 		.ascii	"MPR121 OK @ 400kHz\000"
  688      3231204F 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 30
-
-
  688      4B204020 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 30
+
+
  688      3430306B 
  688      487A00
  689 002f 00       		.align	2
@@ -1768,19 +1767,19 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  702              		.fpu fpv5-d16
  704              	main:
  705              	.LFB4849:
-  61:main.cpp      **** 
-  62:main.cpp      **** // --- MAIN FUNCTION ---
-  63:main.cpp      **** int main()
-  64:main.cpp      **** {
- 706              		.loc 10 64 1 view -0
+  60:main.cpp      **** 
+  61:main.cpp      **** // --- MAIN FUNCTION ---
+  62:main.cpp      **** int main()
+  63:main.cpp      **** {
+ 706              		.loc 10 63 1 view -0
  707              		.cfi_startproc
  708              		@ args = 0, pretend = 0, frame = 72
  709              		@ frame_needed = 0, uses_anonymous_args = 0
-  65:main.cpp      ****     // 1. HARDWARE INIT
-  66:main.cpp      ****     hw.Configure();
- 710              		.loc 10 66 5 view .LVU148
   64:main.cpp      ****     // 1. HARDWARE INIT
- 711              		.loc 10 64 1 is_stmt 0 view .LVU149
+  65:main.cpp      ****     hw.Configure();
+ 710              		.loc 10 65 5 view .LVU148
+  63:main.cpp      ****     // 1. HARDWARE INIT
+ 711              		.loc 10 63 1 is_stmt 0 view .LVU149
  712 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
  713              		.cfi_def_cfa_offset 36
  714              		.cfi_offset 4, -36
@@ -1792,23 +1791,23 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  720              		.cfi_offset 10, -12
  721              		.cfi_offset 11, -8
  722              		.cfi_offset 14, -4
- 723              		.loc 10 66 17 view .LVU150
+ 723              		.loc 10 65 17 view .LVU150
  724 0004 CB48     		ldr	r0, .L41
  725              	.LBB586:
  726              	.LBB587:
  139:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_MHDR, 0x01);
  727              		.loc 9 139 22 view .LVU151
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 31
-
-
  728 0006 4125     		movs	r5, #65
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 31
+
+
  123:../../libs/libDaisy/src/dev/mpr121.h **** 
  729              		.loc 9 123 9 view .LVU152
  730 0008 CB4C     		ldr	r4, .L41+4
  731              	.LBE587:
  732              	.LBE586:
-  64:main.cpp      ****     // 1. HARDWARE INIT
- 733              		.loc 10 64 1 view .LVU153
+  63:main.cpp      ****     // 1. HARDWARE INIT
+ 733              		.loc 10 63 1 view .LVU153
  734 000a 2DED028B 		vpush.64	{d8}
  735              		.cfi_def_cfa_offset 44
  736              		.cfi_offset 80, -44
@@ -1816,20 +1815,20 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  738 000e 97B0     		sub	sp, sp, #92
  739              		.cfi_def_cfa_offset 136
  740 0010 A346     		mov	fp, r4
- 741              		.loc 10 66 17 view .LVU154
+ 741              		.loc 10 65 17 view .LVU154
  742 0012 FFF7FEFF 		bl	_ZN5daisy9DaisySeed9ConfigureEv
  743              	.LVL40:
-  67:main.cpp      ****     hw.Init();
- 744              		.loc 10 67 5 is_stmt 1 view .LVU155
- 745              		.loc 10 67 12 is_stmt 0 view .LVU156
+  66:main.cpp      ****     hw.Init();
+ 744              		.loc 10 66 5 is_stmt 1 view .LVU155
+ 745              		.loc 10 66 12 is_stmt 0 view .LVU156
  746 0016 0021     		movs	r1, #0
  747 0018 C648     		ldr	r0, .L41
  748 001a 10AE     		add	r6, sp, #64
  749 001c FFF7FEFF 		bl	_ZN5daisy9DaisySeed4InitEb
  750              	.LVL41:
-  68:main.cpp      ****     hw.SetAudioBlockSize(4);
- 751              		.loc 10 68 5 is_stmt 1 view .LVU157
- 752              		.loc 10 68 25 is_stmt 0 view .LVU158
+  67:main.cpp      ****     hw.SetAudioBlockSize(4);
+ 751              		.loc 10 67 5 is_stmt 1 view .LVU157
+ 752              		.loc 10 67 25 is_stmt 0 view .LVU158
  753 0020 0421     		movs	r1, #4
  754 0022 C448     		ldr	r0, .L41
  755              	.LBB771:
@@ -1839,13 +1838,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  758 0024 3746     		mov	r7, r6
  759              	.LBE766:
  760              	.LBE771:
- 761              		.loc 10 68 25 view .LVU160
+ 761              		.loc 10 67 25 view .LVU160
  762 0026 FFF7FEFF 		bl	_ZN5daisy9DaisySeed17SetAudioBlockSizeEj
  763              	.LVL42:
-  69:main.cpp      **** 
-  70:main.cpp      ****     #ifdef Debug
-  71:main.cpp      ****     hw.StartLog(false);
- 764              		.loc 10 71 5 is_stmt 1 view .LVU161
+  68:main.cpp      **** 
+  69:main.cpp      ****     #ifdef Debug
+  70:main.cpp      ****     hw.StartLog(false);
+ 764              		.loc 10 70 5 is_stmt 1 view .LVU161
  765              	.LBB772:
  766              	.LBI772:
   23:../../libs/libDaisy/src/daisy_seed.h **** 
@@ -1858,10 +1857,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   30:../../libs/libDaisy/src/daisy_seed.h ****     Initializes the Daisy Seed and the following peripherals:
   31:../../libs/libDaisy/src/daisy_seed.h ****     SDRAM, QSPI, 24-bit 48kHz Audio via AK4556, Internal USB,
   32:../../libs/libDaisy/src/daisy_seed.h ****     as well as the built-in LED and Testpoint.
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 32
-
-
   33:../../libs/libDaisy/src/daisy_seed.h **** 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 32
+
+
   34:../../libs/libDaisy/src/daisy_seed.h ****     ADCs, DACs, and other special peripherals (such as I2C, SPI, etc.)
   35:../../libs/libDaisy/src/daisy_seed.h ****     can be initialized using their specific initializers within libdaisy
   36:../../libs/libDaisy/src/daisy_seed.h ****     for a specific application.
@@ -1918,10 +1917,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   87:../../libs/libDaisy/src/daisy_seed.h ****      */
   88:../../libs/libDaisy/src/daisy_seed.h ****     float AudioSampleRate();
   89:../../libs/libDaisy/src/daisy_seed.h **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 33
-
-
   90:../../libs/libDaisy/src/daisy_seed.h ****     /** Sets the number of samples processed per channel by the audio callback.
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 33
+
+
   91:../../libs/libDaisy/src/daisy_seed.h ****      */
   92:../../libs/libDaisy/src/daisy_seed.h ****     void SetAudioBlockSize(size_t blocksize);
   93:../../libs/libDaisy/src/daisy_seed.h **** 
@@ -1977,15 +1976,15 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  774              		.loc 1 135 22 view .LVU165
  775              	.LBE773:
  776              	.LBE772:
-  72:main.cpp      ****     #endif
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 34
+  71:main.cpp      ****     #endif
+  72:main.cpp      **** 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 34
 
 
-  73:main.cpp      **** 
-  74:main.cpp      ****     // 2. MPR121 INIT
-  75:main.cpp      ****     mpr121ObjConf.transport_config.speed = daisy::I2CHandle::Config::Speed::I2C_400KHZ;
- 777              		.loc 10 75 5 is_stmt 1 view .LVU166
- 778              		.loc 10 75 42 is_stmt 0 view .LVU167
+  73:main.cpp      ****     // 2. MPR121 INIT
+  74:main.cpp      ****     mpr121ObjConf.transport_config.speed = daisy::I2CHandle::Config::Speed::I2C_400KHZ;
+ 777              		.loc 10 74 5 is_stmt 1 view .LVU166
+ 778              		.loc 10 74 42 is_stmt 0 view .LVU167
  779 0030 C24B     		ldr	r3, .L41+8
  780 0032 0122     		movs	r2, #1
  781              	.LBB774:
@@ -1997,13 +1996,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  786 0038 0DF1180A 		add	r10, sp, #24
  787              	.LBE767:
  788              	.LBE774:
- 789              		.loc 10 75 42 view .LVU169
+ 789              		.loc 10 74 42 view .LVU169
  790 003c 5A60     		str	r2, [r3, #4]
-  76:main.cpp      **** 
-  77:main.cpp      ****     if (cap.Init(mpr121ObjConf) != daisy::Mpr121I2C::Result::OK)
- 791              		.loc 10 77 5 is_stmt 1 view .LVU170
+  75:main.cpp      **** 
+  76:main.cpp      ****     if (cap.Init(mpr121ObjConf) != daisy::Mpr121I2C::Result::OK)
+ 791              		.loc 10 76 5 is_stmt 1 view .LVU170
  792              	.LVL44:
- 793              		.loc 10 77 5 is_stmt 0 view .LVU171
+ 793              		.loc 10 76 5 is_stmt 0 view .LVU171
  794 003e A446     		mov	ip, r4
  795              	.LBB775:
  796              	.LBB768:
@@ -2038,10 +2037,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  821 0066 BBE80F00 		ldmia	fp!, {r0, r1, r2, r3}
  822 006a AAE80F00 		stmia	r10!, {r0, r1, r2, r3}
  823              	.LBB601:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 35
-
-
  824              	.LBB599:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 35
+
+
  825              	.LBB590:
  826              	.LBB591:
  827              		.file 11 "../../libs/libDaisy/src/per/i2c.h"
@@ -2098,10 +2097,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  846              		.loc 9 54 25 view .LVU180
  847              	.LBE599:
  848              	.LBI588:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 36
-
-
   47:../../libs/libDaisy/src/dev/mpr121.h ****     {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 36
+
+
  849              		.loc 9 47 17 is_stmt 1 view .LVU181
  850              	.LBB600:
   49:../../libs/libDaisy/src/dev/mpr121.h **** 
@@ -2158,10 +2157,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   44:../../libs/libDaisy/src/per/i2c.h ****             I2C_4,     /**< & */
   45:../../libs/libDaisy/src/per/i2c.h ****         };
   46:../../libs/libDaisy/src/per/i2c.h **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 37
-
-
   47:../../libs/libDaisy/src/per/i2c.h ****         /** Rate at which the clock/data will be sent/received. The device being used will have max
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 37
+
+
   48:../../libs/libDaisy/src/per/i2c.h ****          *  1MHZ Mode is currently 886kHz
   49:../../libs/libDaisy/src/per/i2c.h ****          */
   50:../../libs/libDaisy/src/per/i2c.h ****         enum class Speed
@@ -2218,10 +2217,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   38:../../libs/libDaisy/src/daisy_core.h **** #define F2S8_SCALE 127.0f             /**< (2 ** 7) - 1 */
   39:../../libs/libDaisy/src/daisy_core.h **** #define S162F_SCALE 3.0517578125e-05f /**< 1 / (2** 15) */
   40:../../libs/libDaisy/src/daisy_core.h **** #define F2S16_SCALE 32767.0f          /**< (2 ** 15) - 1 */
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 38
-
-
   41:../../libs/libDaisy/src/daisy_core.h **** #define F2S24_SCALE 8388608.0f        /**< 2 ** 23 */
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 38
+
+
   42:../../libs/libDaisy/src/daisy_core.h **** #define S242F_SCALE 1.192092896e-07f  /**< 1 / (2 ** 23) */
   43:../../libs/libDaisy/src/daisy_core.h **** #define S24SIGN 0x800000              /**< 2 ** 23 */
   44:../../libs/libDaisy/src/daisy_core.h **** #define S322F_SCALE 4.6566129e-10f    /**< 1 / (2** 31) */
@@ -2278,10 +2277,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   95:../../libs/libDaisy/src/daisy_core.h **** /** 
   96:../../libs/libDaisy/src/daisy_core.h ****     Converts Signed 8-bit to float
   97:../../libs/libDaisy/src/daisy_core.h ****     \param x Number to be scaled.
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 39
-
-
   98:../../libs/libDaisy/src/daisy_core.h ****     \return Scaled number.
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 39
+
+
   99:../../libs/libDaisy/src/daisy_core.h **** */
  100:../../libs/libDaisy/src/daisy_core.h **** FORCE_INLINE float s82f(int8_t x)
  101:../../libs/libDaisy/src/daisy_core.h **** {
@@ -2338,10 +2337,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  152:../../libs/libDaisy/src/daisy_core.h **** 
  153:../../libs/libDaisy/src/daisy_core.h **** /**
  154:../../libs/libDaisy/src/daisy_core.h ****     Converts Signed 32-bit to float
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 40
-
-
  155:../../libs/libDaisy/src/daisy_core.h ****  */
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 40
+
+
  156:../../libs/libDaisy/src/daisy_core.h **** FORCE_INLINE float s322f(int32_t x)
  157:../../libs/libDaisy/src/daisy_core.h **** {
  158:../../libs/libDaisy/src/daisy_core.h ****     return (float)x * S322F_SCALE;
@@ -2398,10 +2397,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  886              	.LBI594:
  887              		.loc 12 204 15 is_stmt 1 view .LVU196
  888              		.loc 12 204 15 is_stmt 0 view .LVU197
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 41
-
-
  889              	.LBE594:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 41
+
+
  890              	.LBE592:
  891              	.LBE596:
  892              	.LBE598:
@@ -2458,10 +2457,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  932              		.loc 9 343 55 view .LVU212
  933 00c2 84F83030 		strb	r3, [r4, #48]
  934              	.LVL51:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 42
-
-
  935              		.loc 9 343 55 view .LVU213
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 42
+
+
  936              	.LBE605:
  937              	.LBE607:
  128:../../libs/libDaisy/src/dev/mpr121.h ****         System::Delay(1);
@@ -2518,10 +2517,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  979 00ee 94F82C10 		ldrb	r1, [r4, #44]	@ zero_extendqisi2
  980 00f2 0096     		str	r6, [sp]
  981 00f4 9248     		ldr	r0, .L41+12
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 43
-
-
  982              	.LBE614:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 43
+
+
  983              	.LBE616:
  264:../../libs/libDaisy/src/dev/mpr121.h **** 
  984              		.loc 9 264 17 view .LVU224
@@ -2578,10 +2577,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1028              		.loc 9 73 39 view .LVU234
  1029              	.LBE624:
  1030              	.LBE627:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 44
-
-
  1031              	.LBB628:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 44
+
+
  1032              	.LBB621:
  1033              		.loc 9 343 55 view .LVU235
  1034 0118 84F83020 		strb	r2, [r4, #48]
@@ -2638,10 +2637,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1078              		.loc 9 66 40 view .LVU246
  1079 0134 0096     		str	r6, [sp]
  1080 0136 8248     		ldr	r0, .L41+12
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 45
-
-
  1081              	.LVL62:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 45
+
+
   66:../../libs/libDaisy/src/dev/mpr121.h ****     }
  1082              		.loc 9 66 40 view .LVU247
  1083              	.LBE636:
@@ -2698,10 +2697,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1128              	.LBE644:
  1129              	.LBE651:
  1130              	.LBB652:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 46
-
-
  1131              	.LBB648:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 46
+
+
   66:../../libs/libDaisy/src/dev/mpr121.h ****     }
  1132              		.loc 9 66 40 view .LVU259
  1133 0154 0096     		str	r6, [sp]
@@ -2758,10 +2757,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1175 016a 94F83010 		ldrb	r1, [r4, #48]	@ zero_extendqisi2
  1176              	.LBE657:
  1177              	.LBE656:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 47
-
-
  1178              	.LBB660:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 47
+
+
  1179              	.LBB661:
   66:../../libs/libDaisy/src/dev/mpr121.h ****     }
  1180              		.loc 9 66 40 view .LVU273
@@ -2818,10 +2817,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1224              	.LBE664:
  1225              	.LBE670:
  288:../../libs/libDaisy/src/dev/mpr121.h ****             buff[1] = ecr_backup;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 48
-
-
  1226              		.loc 9 288 21 view .LVU284
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 48
+
+
  1227 018e 8DF82C70 		strb	r7, [sp, #44]
  1228              	.LBB671:
  1229              	.LBB665:
@@ -2878,10 +2877,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1276              	.LVL72:
   66:../../libs/libDaisy/src/dev/mpr121.h ****     }
  1277              		.loc 9 66 40 view .LVU292
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 49
-
-
  1278              	.LBE684:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 49
+
+
  1279              	.LBE687:
  1280              	.LBE750:
  1281              	.LBE756:
@@ -2938,10 +2937,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1324              		.loc 9 343 55 is_stmt 0 view .LVU304
  1325 01be 94F83020 		ldrb	r2, [r4, #48]	@ zero_extendqisi2
  1326              	.LBE691:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 50
-
-
  1327              	.LBE690:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 50
+
+
  1328              	.LBB694:
  1329              	.LBB695:
   73:../../libs/libDaisy/src/dev/mpr121.h ****     }
@@ -2998,10 +2997,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1373              	.LBE701:
  1374              	.LBB702:
  1375              	.LBI702:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 51
-
-
  1376              		.loc 9 343 10 is_stmt 1 view .LVU316
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 51
+
+
  1377              	.LBB703:
  1378              		.loc 9 343 55 is_stmt 0 view .LVU317
  1379 01de 94F83020 		ldrb	r2, [r4, #48]	@ zero_extendqisi2
@@ -3058,10 +3057,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1423 01fa FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
  1424              	.LVL83:
   66:../../libs/libDaisy/src/dev/mpr121.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 52
-
-
  1425              		.loc 9 66 40 view .LVU328
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 52
+
+
  1426              	.LBE709:
  1427              	.LBE713:
  1428              	.LBB714:
@@ -3118,10 +3117,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1474              	.LBB729:
  1475              	.LBI718:
   63:../../libs/libDaisy/src/dev/mpr121.h ****     {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 53
-
-
  1476              		.loc 9 63 10 is_stmt 1 view .LVU339
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 53
+
+
  1477              	.LBB722:
   65:../../libs/libDaisy/src/dev/mpr121.h ****                != i2c_.TransmitBlocking(config_.dev_addr, data, size, 10);
  1478              		.loc 9 65 9 view .LVU340
@@ -3178,10 +3177,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1522 0230 0223     		movs	r3, #2
  1523              	.LBE737:
  1524              	.LBE736:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 54
-
-
  289:../../libs/libDaisy/src/dev/mpr121.h ****             SetTransportErr(transport_.Write(buff, 2));
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 54
+
+
  1525              		.loc 9 289 21 view .LVU350
  1526 0232 9DF81810 		ldrb	r1, [sp, #24]	@ zero_extendqisi2
  1527              	.LBB741:
@@ -3238,10 +3237,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1570 0256 FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
  1571              	.LVL89:
   66:../../libs/libDaisy/src/dev/mpr121.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 55
-
-
  1572              		.loc 9 66 40 view .LVU362
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 55
+
+
  1573              	.LBE740:
  1574              	.LBE745:
  1575              	.LBB746:
@@ -3298,10 +3297,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1620              	.LVL93:
  142:../../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_FDLR, 0x00);
  1621              		.loc 9 142 22 view .LVU373
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 56
-
-
  1622 0284 0E22     		movs	r2, #14
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 56
+
+
  1623 0286 2D21     		movs	r1, #45
  1624 0288 2B48     		ldr	r0, .L41+4
  1625 028a FFF7FEFF 		bl	_ZN5daisy6Mpr121INS_18Mpr121I2CTransportEE13WriteRegisterEhh
@@ -3358,10 +3357,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  152:../../libs/libDaisy/src/dev/mpr121.h **** 
  1669              		.loc 9 152 22 view .LVU381
  1670 02d4 4246     		mov	r2, r8
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 57
-
-
  1671 02d6 3521     		movs	r1, #53
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 57
+
+
  1672 02d8 1748     		ldr	r0, .L41+4
  1673 02da FFF7FEFF 		bl	_ZN5daisy6Mpr121INS_18Mpr121I2CTransportEE13WriteRegisterEhh
  1674              	.LVL102:
@@ -3418,10 +3417,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1715 030c 0D48     		ldr	r0, .L41+16
  1716              	.LBE777:
  1717              	.LBE776:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 58
-
-
  1718              	.LBB779:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 58
+
+
  1719              	.LBB770:
  1720              	.LBB765:
  1721              	.LBB764:
@@ -3434,10 +3433,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1727              	.LBE765:
  1728              	.LBE770:
  1729              	.LBE779:
-  78:main.cpp      ****     {
-  79:main.cpp      ****         #ifdef Debug
-  80:main.cpp      ****         hw.PrintLine("ERROR: MPR121 not found.");
- 1730              		.loc 10 80 9 is_stmt 1 view .LVU392
+  77:main.cpp      ****     {
+  78:main.cpp      ****         #ifdef Debug
+  79:main.cpp      ****         hw.PrintLine("ERROR: MPR121 not found.");
+ 1730              		.loc 10 79 9 is_stmt 1 view .LVU392
  1731              	.LBB780:
  1732              	.LBI776:
  126:../../libs/libDaisy/src/daisy_seed.h ****     {
@@ -3452,36 +3451,36 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1739              		.loc 1 128 23 view .LVU395
  1740              	.LBE778:
  1741              	.LBE780:
-  81:main.cpp      ****         #endif
-  82:main.cpp      ****         while (1) {
- 1742              		.loc 10 82 9 is_stmt 1 discriminator 1 view .LVU396
-  83:main.cpp      ****             hw.SetLed(true); hw.DelayMs(100);
- 1743              		.loc 10 83 13 discriminator 1 view .LVU397
- 1744              		.loc 10 83 22 is_stmt 0 discriminator 1 view .LVU398
+  80:main.cpp      ****         #endif
+  81:main.cpp      ****         while (1) {
+ 1742              		.loc 10 81 9 is_stmt 1 discriminator 1 view .LVU396
+  82:main.cpp      ****             hw.SetLed(true); hw.DelayMs(100);
+ 1743              		.loc 10 82 13 discriminator 1 view .LVU397
+ 1744              		.loc 10 82 22 is_stmt 0 discriminator 1 view .LVU398
  1745 0316 0121     		movs	r1, #1
  1746 0318 0648     		ldr	r0, .L41
  1747 031a FFF7FEFF 		bl	_ZN5daisy9DaisySeed6SetLedEb
  1748              	.LVL110:
- 1749              		.loc 10 83 30 is_stmt 1 discriminator 1 view .LVU399
- 1750              		.loc 10 83 40 is_stmt 0 discriminator 1 view .LVU400
+ 1749              		.loc 10 82 30 is_stmt 1 discriminator 1 view .LVU399
+ 1750              		.loc 10 82 40 is_stmt 0 discriminator 1 view .LVU400
  1751 031e 6421     		movs	r1, #100
  1752 0320 0448     		ldr	r0, .L41
  1753 0322 FFF7FEFF 		bl	_ZN5daisy9DaisySeed7DelayMsEj
  1754              	.LVL111:
-  84:main.cpp      ****             hw.SetLed(false); hw.DelayMs(100);
- 1755              		.loc 10 84 13 is_stmt 1 discriminator 1 view .LVU401
- 1756              		.loc 10 84 22 is_stmt 0 discriminator 1 view .LVU402
+  83:main.cpp      ****             hw.SetLed(false); hw.DelayMs(100);
+ 1755              		.loc 10 83 13 is_stmt 1 discriminator 1 view .LVU401
+ 1756              		.loc 10 83 22 is_stmt 0 discriminator 1 view .LVU402
  1757 0326 0021     		movs	r1, #0
  1758 0328 0248     		ldr	r0, .L41
  1759 032a FFF7FEFF 		bl	_ZN5daisy9DaisySeed6SetLedEb
  1760              	.LVL112:
- 1761              		.loc 10 84 31 is_stmt 1 discriminator 1 view .LVU403
- 1762              		.loc 10 84 41 is_stmt 0 discriminator 1 view .LVU404
+ 1761              		.loc 10 83 31 is_stmt 1 discriminator 1 view .LVU403
+ 1762              		.loc 10 83 41 is_stmt 0 discriminator 1 view .LVU404
  1763 032e 6421     		movs	r1, #100
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 59
-
-
  1764 0330 0AE0     		b	.L42
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 59
+
+
  1765              	.L43:
  1766 0332 00BF     		.align	2
  1767              	.L41:
@@ -3494,17 +3493,17 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1774 0348 AB48     		ldr	r0, .L44
  1775 034a FFF7FEFF 		bl	_ZN5daisy9DaisySeed7DelayMsEj
  1776              	.LVL113:
-  82:main.cpp      ****             hw.SetLed(true); hw.DelayMs(100);
- 1777              		.loc 10 82 9 is_stmt 1 discriminator 1 view .LVU405
+  81:main.cpp      ****             hw.SetLed(true); hw.DelayMs(100);
+ 1777              		.loc 10 81 9 is_stmt 1 discriminator 1 view .LVU405
  1778 034e E2E7     		b	.L28
  1779              	.LVL114:
  1780              	.L27:
-  85:main.cpp      ****         }
-  86:main.cpp      ****     }
-  87:main.cpp      ****     
-  88:main.cpp      ****     #ifdef Debug
-  89:main.cpp      ****     hw.PrintLine("MPR121 OK @ 400kHz");
- 1781              		.loc 10 89 5 view .LVU406
+  84:main.cpp      ****         }
+  85:main.cpp      ****     }
+  86:main.cpp      ****     
+  87:main.cpp      ****     #ifdef Debug
+  88:main.cpp      ****     hw.PrintLine("MPR121 OK @ 400kHz");
+ 1781              		.loc 10 88 5 view .LVU406
  1782              	.LBB781:
  1783              	.LBI781:
  126:../../libs/libDaisy/src/daisy_seed.h ****     {
@@ -3532,53 +3531,53 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1801              		.loc 1 128 23 view .LVU411
  1802              	.LBE783:
  1803              	.LBE790:
-  90:main.cpp      ****     #endif
-  91:main.cpp      ****     hw.SetLed(true);
- 1804              		.loc 10 91 5 is_stmt 1 view .LVU412
- 1805              		.loc 10 91 14 is_stmt 0 view .LVU413
+  89:main.cpp      ****     #endif
+  90:main.cpp      ****     hw.SetLed(true);
+ 1804              		.loc 10 90 5 is_stmt 1 view .LVU412
+ 1805              		.loc 10 90 14 is_stmt 0 view .LVU413
  1806 035a 0121     		movs	r1, #1
  1807 035c A648     		ldr	r0, .L44
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 60
-
-
  1808 035e FFF7FEFF 		bl	_ZN5daisy9DaisySeed6SetLedEb
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 60
+
+
  1809              	.LVL116:
-  92:main.cpp      **** 
-  93:main.cpp      ****     // 3. DSP INIT
-  94:main.cpp      ****     pc.Init(IIR::Butterworth); 
- 1810              		.loc 10 94 5 is_stmt 1 view .LVU414
- 1811              		.loc 10 94 12 is_stmt 0 view .LVU415
+  91:main.cpp      **** 
+  92:main.cpp      ****     // 3. DSP INIT
+  93:main.cpp      ****     pc.Init(IIR::Butterworth); 
+ 1810              		.loc 10 93 5 is_stmt 1 view .LVU414
+ 1811              		.loc 10 93 12 is_stmt 0 view .LVU415
  1812 0362 0121     		movs	r1, #1
  1813 0364 A648     		ldr	r0, .L44+8
  1814 0366 FFF7FEFF 		bl	_ZN16PlantConditioner4InitEN3IIR10FilterTypeE
  1815              	.LVL117:
-  95:main.cpp      ****     pc.setScale(PlantConditioner::C, PlantConditioner::MinorArm);
- 1816              		.loc 10 95 5 is_stmt 1 view .LVU416
- 1817              		.loc 10 95 16 is_stmt 0 view .LVU417
+  94:main.cpp      ****     pc.setScale(PlantConditioner::C, PlantConditioner::MinorArm);
+ 1816              		.loc 10 94 5 is_stmt 1 view .LVU416
+ 1817              		.loc 10 94 16 is_stmt 0 view .LVU417
  1818 036a 0222     		movs	r2, #2
  1819 036c 3146     		mov	r1, r6
  1820 036e A448     		ldr	r0, .L44+8
  1821 0370 FFF7FEFF 		bl	_ZN16PlantConditioner8setScaleENS_5NotesENS_9ScaleTypeE
  1822              	.LVL118:
-  96:main.cpp      ****     pc.setOctave(2);
- 1823              		.loc 10 96 5 is_stmt 1 view .LVU418
- 1824              		.loc 10 96 17 is_stmt 0 view .LVU419
- 1825 0374 0221     		movs	r1, #2
+  95:main.cpp      ****     pc.setOctave(4);
+ 1823              		.loc 10 95 5 is_stmt 1 view .LVU418
+ 1824              		.loc 10 95 17 is_stmt 0 view .LVU419
+ 1825 0374 0421     		movs	r1, #4
  1826 0376 A248     		ldr	r0, .L44+8
  1827 0378 FFF7FEFF 		bl	_ZN16PlantConditioner9setOctaveEh
  1828              	.LVL119:
-  97:main.cpp      ****     pc.setCurve(50, 1.1);
- 1829              		.loc 10 97 5 is_stmt 1 view .LVU420
- 1830              		.loc 10 97 16 is_stmt 0 view .LVU421
+  96:main.cpp      ****     pc.setCurve(50, 1.1);
+ 1829              		.loc 10 96 5 is_stmt 1 view .LVU420
+ 1830              		.loc 10 96 16 is_stmt 0 view .LVU421
  1831 037c 3221     		movs	r1, #50
  1832 037e 9FEDA10A 		vldr.32	s0, .L44+12
  1833 0382 9F48     		ldr	r0, .L44+8
  1834 0384 FFF7FEFF 		bl	_ZN16PlantConditioner8setCurveEhf
  1835              	.LVL120:
-  98:main.cpp      **** 
-  99:main.cpp      ****     osc.Init(hw.AudioSampleRate());
- 1836              		.loc 10 99 5 is_stmt 1 view .LVU422
- 1837              		.loc 10 99 13 is_stmt 0 view .LVU423
+  97:main.cpp      **** 
+  98:main.cpp      ****     osc.Init(hw.AudioSampleRate());
+ 1836              		.loc 10 98 5 is_stmt 1 view .LVU422
+ 1837              		.loc 10 98 13 is_stmt 0 view .LVU423
  1838 0388 9B48     		ldr	r0, .L44
  1839 038a FFF7FEFF 		bl	_ZN5daisy9DaisySeed15AudioSampleRateEv
  1840              	.LVL121:
@@ -3589,7 +3588,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1844 038e F7EE006A 		vmov.f32	s13, #1.0e+0
  1845              	.LBE786:
  1846              	.LBE791:
- 1847              		.loc 10 99 13 view .LVU425
+ 1847              		.loc 10 98 13 view .LVU425
  1848 0392 F0EE407A 		vmov.f32	s15, s0
  1849              	.LVL122:
  1850              	.LBB792:
@@ -3598,10 +3597,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1852              		.loc 8 50 10 is_stmt 1 view .LVU426
  1853              	.LBB787:
   52:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 61
-
-
  1854              		.loc 8 52 9 view .LVU427
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 61
+
+
   52:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
  1855              		.loc 8 52 20 is_stmt 0 view .LVU428
  1856 0396 9C4D     		ldr	r5, .L44+16
@@ -3658,10 +3657,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   61:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  1890              		.loc 8 61 20 view .LVU446
  1891 03ca 40F20113 		movw	r3, #257
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 62
-
-
   58:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 62
+
+
  1892              		.loc 8 58 34 view .LVU447
  1893 03ce F0EE407A 		vmov.f32	s15, s0
  1894              	.LBE787:
@@ -3695,16 +3694,16 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1914              		.loc 8 61 9 is_stmt 0 view .LVU455
  1915              	.LBE788:
  1916              	.LBE798:
- 100:main.cpp      ****     osc.SetWaveform(Oscillator::WAVE_SIN); 
- 1917              		.loc 10 100 5 is_stmt 1 view .LVU456
+  99:main.cpp      ****     osc.SetWaveform(Oscillator::WAVE_SIN); 
+ 1917              		.loc 10 99 5 is_stmt 1 view .LVU456
   77:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
   78:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     */
   79:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     inline void SetWaveform(const uint8_t wf)
   80:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     {
   81:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_ = wf < WAVE_LAST ? wf : WAVE_SIN;
  1918              		.loc 8 81 9 view .LVU457
- 101:main.cpp      ****     osc.SetFreq(440.0f);
- 1919              		.loc 10 101 5 view .LVU458
+ 100:main.cpp      ****     osc.SetFreq(440.0f);
+ 1919              		.loc 10 100 5 view .LVU458
  1920              	.LBB799:
  1921              	.LBI793:
   67:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     {
@@ -3718,10 +3717,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1928              	.LBB789:
   59:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
  1929              		.loc 8 59 20 is_stmt 0 view .LVU461
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 63
-
-
  1930 03de 2E70     		strb	r6, [r5]
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 63
+
+
  1931              	.LBE789:
  1932              	.LBE800:
  1933              	.LBB801:
@@ -3737,10 +3736,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1940              	.LVL126:
  1941              	.LBE796:
  1942              	.LBE801:
- 102:main.cpp      ****     osc.SetAmp(0.85f); 
- 103:main.cpp      **** 
- 104:main.cpp      ****     env.Init(hw.AudioSampleRate());
- 1943              		.loc 10 104 13 view .LVU465
+ 101:main.cpp      ****     osc.SetAmp(0.85f); 
+ 102:main.cpp      **** 
+ 103:main.cpp      ****     env.Init(hw.AudioSampleRate());
+ 1943              		.loc 10 103 13 view .LVU465
  1944 03e8 8A4E     		ldr	r6, .L44+28
  1945              	.LBB802:
  1946              	.LBB803:
@@ -3749,7 +3748,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1948 03ea 8B4B     		ldr	r3, .L44+32
  1949              	.LBE803:
  1950              	.LBE802:
- 1951              		.loc 10 104 13 view .LVU467
+ 1951              		.loc 10 103 13 view .LVU467
  1952 03ec 8248     		ldr	r0, .L44
  1953              	.LBB806:
  1954              	.LBB804:
@@ -3768,8 +3767,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  1964              		.loc 8 70 20 view .LVU470
  1965              	.LBE797:
  1966              	.LBE807:
- 102:main.cpp      ****     osc.SetAmp(0.85f); 
- 1967              		.loc 10 102 5 is_stmt 1 view .LVU471
+ 101:main.cpp      ****     osc.SetAmp(0.85f); 
+ 1967              		.loc 10 101 5 is_stmt 1 view .LVU471
  1968              	.LBB808:
  1969              	.LBI802:
   76:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
@@ -3778,38 +3777,38 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   76:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  1972              		.loc 8 76 41 view .LVU473
   76:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 64
-
-
  1973              		.loc 8 76 41 is_stmt 0 view .LVU474
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 64
+
+
  1974              	.LBE805:
  1975              	.LBE808:
- 1976              		.loc 10 104 5 is_stmt 1 view .LVU475
- 1977              		.loc 10 104 13 is_stmt 0 view .LVU476
+ 1976              		.loc 10 103 5 is_stmt 1 view .LVU475
+ 1977              		.loc 10 103 13 is_stmt 0 view .LVU476
  1978 03f4 FFF7FEFF 		bl	_ZN5daisy9DaisySeed15AudioSampleRateEv
  1979              	.LVL128:
  1980 03f8 3046     		mov	r0, r6
  1981 03fa 0121     		movs	r1, #1
  1982 03fc FFF7FEFF 		bl	_ZN7daisysp4Adsr4InitEfi
  1983              	.LVL129:
- 105:main.cpp      ****     env.SetTime(ADSR_SEG_ATTACK, 0.05f);
- 1984              		.loc 10 105 5 is_stmt 1 view .LVU477
- 1985              		.loc 10 105 16 is_stmt 0 view .LVU478
+ 104:main.cpp      ****     env.SetTime(ADSR_SEG_ATTACK, 0.05f);
+ 1984              		.loc 10 104 5 is_stmt 1 view .LVU477
+ 1985              		.loc 10 104 16 is_stmt 0 view .LVU478
  1986 0400 3046     		mov	r0, r6
  1987 0402 9FED860A 		vldr.32	s0, .L44+36
  1988 0406 0121     		movs	r1, #1
  1989 0408 FFF7FEFF 		bl	_ZN7daisysp4Adsr7SetTimeEif
  1990              	.LVL130:
- 106:main.cpp      ****     env.SetTime(ADSR_SEG_DECAY, 0.1f);
- 1991              		.loc 10 106 5 is_stmt 1 view .LVU479
- 1992              		.loc 10 106 16 is_stmt 0 view .LVU480
+ 105:main.cpp      ****     env.SetTime(ADSR_SEG_DECAY, 0.1f);
+ 1991              		.loc 10 105 5 is_stmt 1 view .LVU479
+ 1992              		.loc 10 105 16 is_stmt 0 view .LVU480
  1993 040c 3046     		mov	r0, r6
  1994 040e 9FED840A 		vldr.32	s0, .L44+40
  1995 0412 0221     		movs	r1, #2
  1996 0414 FFF7FEFF 		bl	_ZN7daisysp4Adsr7SetTimeEif
  1997              	.LVL131:
- 107:main.cpp      ****     env.SetSustainLevel(0.7f);
- 1998              		.loc 10 107 5 is_stmt 1 view .LVU481
+ 106:main.cpp      ****     env.SetSustainLevel(0.7f);
+ 1998              		.loc 10 106 5 is_stmt 1 view .LVU481
  1999              	.LBB809:
  2000              	.LBI809:
   46:../../libs/DaisySP/Source/Control/adsr.h ****     /** Initializes the Adsr module.
@@ -3838,10 +3837,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   69:../../libs/DaisySP/Source/Control/adsr.h **** 
   70:../../libs/DaisySP/Source/Control/adsr.h ****   public:
   71:../../libs/DaisySP/Source/Control/adsr.h ****     /** Sustain level
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 65
-
-
   72:../../libs/DaisySP/Source/Control/adsr.h ****         \param sus_level - sets sustain level, 0...1.0
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 65
+
+
   73:../../libs/DaisySP/Source/Control/adsr.h ****     */
   74:../../libs/DaisySP/Source/Control/adsr.h ****     inline void SetSustainLevel(float sus_level)
  2001              		.loc 7 74 17 view .LVU482
@@ -3856,8 +3855,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2006 0418 824B     		ldr	r3, .L44+44
  2007              	.LBE810:
  2008              	.LBE809:
- 108:main.cpp      ****     env.SetTime(ADSR_SEG_RELEASE, 0.5f);
- 2009              		.loc 10 108 16 view .LVU486
+ 107:main.cpp      ****     env.SetTime(ADSR_SEG_RELEASE, 0.5f);
+ 2009              		.loc 10 107 16 view .LVU486
  2010 041a B0EE480A 		vmov.f32	s0, s16
  2011 041e 3046     		mov	r0, r6
  2012 0420 0421     		movs	r1, #4
@@ -3869,133 +3868,133 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2018              		.loc 7 78 20 view .LVU488
  2019              	.LBE811:
  2020              	.LBE812:
- 2021              		.loc 10 108 5 is_stmt 1 view .LVU489
- 2022              		.loc 10 108 16 is_stmt 0 view .LVU490
+ 2021              		.loc 10 107 5 is_stmt 1 view .LVU489
+ 2022              		.loc 10 107 16 is_stmt 0 view .LVU490
  2023 0424 FFF7FEFF 		bl	_ZN7daisysp4Adsr7SetTimeEif
  2024              	.LVL133:
- 109:main.cpp      **** 
- 110:main.cpp      ****     // 4. ADC INIT
- 111:main.cpp      ****     adcConfig[0].InitSingle(daisy::seed::A0);
- 2025              		.loc 10 111 5 is_stmt 1 view .LVU491
- 2026              		.loc 10 111 28 is_stmt 0 view .LVU492
+ 108:main.cpp      **** 
+ 109:main.cpp      ****     // 4. ADC INIT
+ 110:main.cpp      ****     adcConfig[0].InitSingle(daisy::seed::A0);
+ 2025              		.loc 10 110 5 is_stmt 1 view .LVU491
+ 2026              		.loc 10 110 28 is_stmt 0 view .LVU492
  2027 0428 7F4B     		ldr	r3, .L44+48
  2028 042a 0222     		movs	r2, #2
  2029 042c 7F48     		ldr	r0, .L44+52
  2030 042e 1968     		ldr	r1, [r3]
  2031 0430 FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleENS_3PinENS0_15ConversionSpeedE
  2032              	.LVL134:
- 112:main.cpp      ****     adcConfig[1].InitSingle(daisy::seed::A1);
- 2033              		.loc 10 112 5 is_stmt 1 view .LVU493
- 2034              		.loc 10 112 28 is_stmt 0 view .LVU494
+ 111:main.cpp      ****     adcConfig[1].InitSingle(daisy::seed::A1);
+ 2033              		.loc 10 111 5 is_stmt 1 view .LVU493
+ 2034              		.loc 10 111 28 is_stmt 0 view .LVU494
  2035 0434 7E4B     		ldr	r3, .L44+56
  2036 0436 0222     		movs	r2, #2
  2037 0438 7E48     		ldr	r0, .L44+60
  2038 043a 1968     		ldr	r1, [r3]
  2039 043c FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleENS_3PinENS0_15ConversionSpeedE
  2040              	.LVL135:
- 113:main.cpp      ****     hw.adc.Init(adcConfig, ADC_CH);
- 2041              		.loc 10 113 5 is_stmt 1 view .LVU495
- 2042              		.loc 10 113 16 is_stmt 0 view .LVU496
+ 112:main.cpp      ****     hw.adc.Init(adcConfig, ADC_CH);
+ 2041              		.loc 10 112 5 is_stmt 1 view .LVU495
+ 2042              		.loc 10 112 16 is_stmt 0 view .LVU496
  2043 0440 0423     		movs	r3, #4
  2044 0442 0222     		movs	r2, #2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 66
-
-
  2045 0444 7949     		ldr	r1, .L44+52
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 66
+
+
  2046 0446 7C48     		ldr	r0, .L44+64
  2047 0448 FFF7FEFF 		bl	_ZN5daisy9AdcHandle4InitEPNS_16AdcChannelConfigEjNS0_12OverSamplingE
  2048              	.LVL136:
- 114:main.cpp      ****     hw.adc.Start();
- 2049              		.loc 10 114 5 is_stmt 1 view .LVU497
- 2050              		.loc 10 114 17 is_stmt 0 view .LVU498
+ 113:main.cpp      ****     hw.adc.Start();
+ 2049              		.loc 10 113 5 is_stmt 1 view .LVU497
+ 2050              		.loc 10 113 17 is_stmt 0 view .LVU498
  2051 044c 7A48     		ldr	r0, .L44+64
  2052 044e FFF7FEFF 		bl	_ZN5daisy9AdcHandle5StartEv
  2053              	.LVL137:
- 115:main.cpp      **** 
- 116:main.cpp      ****     hw.StartAudio(AudioCallback);
- 2054              		.loc 10 116 5 is_stmt 1 view .LVU499
- 2055              		.loc 10 116 18 is_stmt 0 view .LVU500
+ 114:main.cpp      **** 
+ 115:main.cpp      ****     hw.StartAudio(AudioCallback);
+ 2054              		.loc 10 115 5 is_stmt 1 view .LVU499
+ 2055              		.loc 10 115 18 is_stmt 0 view .LVU500
  2056 0452 7A49     		ldr	r1, .L44+68
  2057 0454 6848     		ldr	r0, .L44
  2058 0456 FFF7FEFF 		bl	_ZN5daisy9DaisySeed10StartAudioEPFvPKfPfjE
  2059              	.LVL138:
- 117:main.cpp      **** 
- 118:main.cpp      ****     // --- MAIN LOOP ---
- 119:main.cpp      ****     uint32_t last_tick = System::GetNow();
- 2060              		.loc 10 119 5 is_stmt 1 view .LVU501
- 2061              		.loc 10 119 40 is_stmt 0 view .LVU502
+ 116:main.cpp      **** 
+ 117:main.cpp      ****     // --- MAIN LOOP ---
+ 118:main.cpp      ****     uint32_t last_tick = System::GetNow();
+ 2060              		.loc 10 118 5 is_stmt 1 view .LVU501
+ 2061              		.loc 10 118 40 is_stmt 0 view .LVU502
  2062 045a FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
  2063              	.LVL139:
  2064 045e 0746     		mov	r7, r0
  2065              	.LVL140:
- 120:main.cpp      ****     #ifdef Debug
- 121:main.cpp      ****         uint32_t last_print = System::GetNow();
- 2066              		.loc 10 121 9 is_stmt 1 view .LVU503
- 2067              		.loc 10 121 45 is_stmt 0 view .LVU504
+ 119:main.cpp      ****     #ifdef Debug
+ 120:main.cpp      ****         uint32_t last_print = System::GetNow();
+ 2066              		.loc 10 120 9 is_stmt 1 view .LVU503
+ 2067              		.loc 10 120 45 is_stmt 0 view .LVU504
  2068 0460 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
  2069              	.LVL141:
- 2070              		.loc 10 121 45 view .LVU505
+ 2070              		.loc 10 120 45 view .LVU505
  2071 0464 0646     		mov	r6, r0
  2072              	.LVL142:
- 2073              		.loc 10 121 45 view .LVU506
+ 2073              		.loc 10 120 45 view .LVU506
  2074 0466 21E0     		b	.L29
  2075              	.LVL143:
  2076              	.L30:
  2077              	.LBB813:
- 122:main.cpp      ****     #endif
- 123:main.cpp      **** 
- 124:main.cpp      ****     while (1)
- 125:main.cpp      ****     {
- 126:main.cpp      ****         uint32_t now = System::GetNow();
- 127:main.cpp      **** 
- 128:main.cpp      ****         // A. FAST LOOP (200Hz)
- 129:main.cpp      ****         if (now - last_tick >= 5)
- 130:main.cpp      ****         {
- 131:main.cpp      ****             last_tick = now;
- 132:main.cpp      **** 
- 133:main.cpp      ****             // Read Analog Controls
- 134:main.cpp      ****             curve_type = hw.adc.GetFloat(1) * 2 + 1;
- 135:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
- 136:main.cpp      ****             pc.setCurve(delta_max, curve_type);
- 137:main.cpp      **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 67
+ 121:main.cpp      ****     #endif
+ 122:main.cpp      **** 
+ 123:main.cpp      ****     while (1)
+ 124:main.cpp      ****     {
+ 125:main.cpp      ****         uint32_t now = System::GetNow();
+ 126:main.cpp      **** 
+ 127:main.cpp      ****         // A. FAST LOOP (200Hz)
+ 128:main.cpp      ****         if (now - last_tick >= 5)
+ 129:main.cpp      ****         {
+ 130:main.cpp      ****             last_tick = now;
+ 131:main.cpp      **** 
+ 132:main.cpp      ****             // Read Analog Controls
+ 133:main.cpp      ****             curve_type = hw.adc.GetFloat(1) * 2 + 1;
+ 134:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
+ 135:main.cpp      ****             pc.setCurve(delta_max, curve_type);
+ 136:main.cpp      **** 
+ 137:main.cpp      ****             // Read Digital Sensor
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 67
 
 
- 138:main.cpp      ****             // Read Digital Sensor
- 139:main.cpp      ****             currTouched = cap.Touched();
- 140:main.cpp      ****             
- 141:main.cpp      ****             // Calculate Frequency (but don't apply it to the oscillator yet)
- 142:main.cpp      ****             float calculated_freq = pc.Process(cap.BaselineData(0), cap.FilteredData(0));
- 143:main.cpp      **** 
- 144:main.cpp      ****             // Update Gate and Target Frequency based on Touch State
- 145:main.cpp      ****             if (currTouched & _BV(0))
- 146:main.cpp      ****             {
- 147:main.cpp      ****                 if (!gate) gate = true; 
- 148:main.cpp      ****                 // We just update the variable here. The Audio Callback picks it up instantly.
- 149:main.cpp      ****                 target_freq = calculated_freq; 
- 150:main.cpp      ****             }
- 151:main.cpp      ****             else
- 152:main.cpp      ****             {
- 153:main.cpp      ****                 if (gate) gate = false; 
- 154:main.cpp      ****             }
- 155:main.cpp      ****             lastTouched = currTouched;
- 156:main.cpp      ****         }
- 157:main.cpp      **** 
- 158:main.cpp      ****         // B. DEBUG LOOP (4Hz)
- 159:main.cpp      ****         #ifdef Debug
- 160:main.cpp      ****         if (now - last_print >= 250)
- 2078              		.loc 10 160 9 is_stmt 1 view .LVU507
- 2079              		.loc 10 160 17 is_stmt 0 view .LVU508
+ 138:main.cpp      ****             currTouched = cap.Touched();
+ 139:main.cpp      ****             
+ 140:main.cpp      ****             // Calculate Frequency (but don't apply it to the oscillator yet)
+ 141:main.cpp      ****             float calculated_freq = pc.Process(cap.BaselineData(0), cap.FilteredData(0));
+ 142:main.cpp      **** 
+ 143:main.cpp      ****             // Update Gate and Target Frequency based on Touch State
+ 144:main.cpp      ****             if (currTouched & _BV(0))
+ 145:main.cpp      ****             {
+ 146:main.cpp      ****                 if (!gate) gate = true; 
+ 147:main.cpp      ****                 // We just update the variable here. The Audio Callback picks it up instantly.
+ 148:main.cpp      ****                 target_freq = calculated_freq; 
+ 149:main.cpp      ****             }
+ 150:main.cpp      ****             else
+ 151:main.cpp      ****             {
+ 152:main.cpp      ****                 if (gate) gate = false; 
+ 153:main.cpp      ****             }
+ 154:main.cpp      ****             lastTouched = currTouched;
+ 155:main.cpp      ****         }
+ 156:main.cpp      **** 
+ 157:main.cpp      ****         // B. DEBUG LOOP (4Hz)
+ 158:main.cpp      ****         #ifdef Debug
+ 159:main.cpp      ****         if (now - last_print >= 250)
+ 2078              		.loc 10 159 9 is_stmt 1 view .LVU507
+ 2079              		.loc 10 159 17 is_stmt 0 view .LVU508
  2080 0468 AB1B     		subs	r3, r5, r6
- 2081              		.loc 10 160 9 view .LVU509
+ 2081              		.loc 10 159 9 view .LVU509
  2082 046a F92B     		cmp	r3, #249
  2083 046c 1BD9     		bls	.L34
- 161:main.cpp      ****         {
- 162:main.cpp      ****             last_print = now;
- 2084              		.loc 10 162 13 is_stmt 1 view .LVU510
+ 160:main.cpp      ****         {
+ 161:main.cpp      ****             last_print = now;
+ 2084              		.loc 10 161 13 is_stmt 1 view .LVU510
  2085              	.LVL144:
- 163:main.cpp      ****             if (gate) {
- 2086              		.loc 10 163 13 view .LVU511
+ 162:main.cpp      ****             if (gate) {
+ 2086              		.loc 10 162 13 view .LVU511
  2087 046e 98F80030 		ldrb	r3, [r8]	@ zero_extendqisi2
  2088              	.LBB814:
  2089              	.LBB815:
@@ -4005,12 +4004,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2092 0476 9BED007A 		vldr.32	s14, [fp]
  2093              	.LBE815:
  2094              	.LBE814:
- 2095              		.loc 10 163 13 view .LVU513
+ 2095              		.loc 10 162 13 view .LVU513
  2096 047a 002B     		cmp	r3, #0
  2097 047c 00F0A180 		beq	.L35
- 164:main.cpp      ****                 hw.PrintLine("TOUCH | Freq: %.2f | Delta: %.2f | DeltaFilt: %.2f", target_freq, pc.
- 2098              		.loc 10 164 17 is_stmt 1 view .LVU514
- 2099              		.loc 10 164 29 is_stmt 0 view .LVU515
+ 163:main.cpp      ****                 hw.PrintLine("TOUCH | Freq: %.2f | Delta: %.2f | DeltaFilt: %.2f", target_freq, pc.
+ 2098              		.loc 10 163 17 is_stmt 1 view .LVU514
+ 2099              		.loc 10 163 29 is_stmt 0 view .LVU515
  2100 0480 6F4B     		ldr	r3, .L44+72
  2101              	.LBB818:
  2102              	.LBB816:
@@ -4018,13 +4017,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2103              		.loc 1 128 23 view .LVU516
  2104 0482 B7EEC77A 		vcvt.f64.f32	d7, s14
  2105 0486 B7EEC66A 		vcvt.f64.f32	d6, s12
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 68
-
-
  2106 048a 6E48     		ldr	r0, .L44+76
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 68
+
+
  2107              	.LBE816:
  2108              	.LBE818:
- 2109              		.loc 10 164 29 view .LVU517
+ 2109              		.loc 10 163 29 view .LVU517
  2110 048c D3ED005A 		vldr.32	s11, [r3]
  2111              	.LVL145:
  2112              	.LBB819:
@@ -4078,10 +4077,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   46:../../Classes/Temperamento/PlantConditioner.h ****     };
   47:../../Classes/Temperamento/PlantConditioner.h **** 
   48:../../Classes/Temperamento/PlantConditioner.h ****     void Init(IIR::FilterType filter_type);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 69
-
-
   49:../../Classes/Temperamento/PlantConditioner.h **** 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 69
+
+
   50:../../Classes/Temperamento/PlantConditioner.h ****     void setCurve(uint8_t delta_max, float curve_type);
   51:../../Classes/Temperamento/PlantConditioner.h **** 
   52:../../Classes/Temperamento/PlantConditioner.h ****     void setScale(enum Notes root_note, enum ScaleType scale_type);
@@ -4113,8 +4112,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  126:../../libs/libDaisy/src/daisy_seed.h ****     {
  2131              		.loc 1 126 17 is_stmt 1 view .LVU524
  2132              	.LBE823:
- 162:main.cpp      ****             if (gate) {
- 2133              		.loc 10 162 24 is_stmt 0 view .LVU525
+ 161:main.cpp      ****             if (gate) {
+ 2133              		.loc 10 161 24 is_stmt 0 view .LVU525
  2134 0490 2E46     		mov	r6, r5
  2135              	.LBB824:
  2136              	.LBB817:
@@ -4131,77 +4130,77 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2145              		.loc 1 128 23 view .LVU527
  2146              	.LBE817:
  2147              	.LBE824:
- 165:main.cpp      ****             } else {
- 166:main.cpp      ****                 hw.PrintLine("..... | Freq: %.2f | Delta: %.2f | DeltaFilt: %.2f", target_freq, pc.
- 167:main.cpp      ****             }
- 168:main.cpp      ****         }
- 169:main.cpp      ****         #endif
- 170:main.cpp      ****         
- 171:main.cpp      ****         // C. CPU REST
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 70
+ 164:main.cpp      ****             } else {
+ 165:main.cpp      ****                 hw.PrintLine("..... | Freq: %.2f | Delta: %.2f | DeltaFilt: %.2f", target_freq, pc.
+ 166:main.cpp      ****             }
+ 167:main.cpp      ****         }
+ 168:main.cpp      ****         #endif
+ 169:main.cpp      ****         
+ 170:main.cpp      ****         // C. CPU REST
+ 171:main.cpp      ****         System::Delay(1);
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 70
 
 
- 172:main.cpp      ****         System::Delay(1);
- 2148              		.loc 10 172 9 is_stmt 1 view .LVU528
- 2149              		.loc 10 172 22 is_stmt 0 view .LVU529
+ 2148              		.loc 10 171 9 is_stmt 1 view .LVU528
+ 2149              		.loc 10 171 22 is_stmt 0 view .LVU529
  2150 04a6 0120     		movs	r0, #1
  2151 04a8 FFF7FEFF 		bl	_ZN5daisy6System5DelayEm
  2152              	.LVL147:
  2153              	.LBE813:
- 124:main.cpp      ****     {
- 2154              		.loc 10 124 5 is_stmt 1 view .LVU530
+ 123:main.cpp      ****     {
+ 2154              		.loc 10 123 5 is_stmt 1 view .LVU530
  2155              	.L29:
- 124:main.cpp      ****     {
- 2156              		.loc 10 124 5 view .LVU531
+ 123:main.cpp      ****     {
+ 2156              		.loc 10 123 5 view .LVU531
  2157              	.LBB980:
- 126:main.cpp      **** 
- 2158              		.loc 10 126 9 view .LVU532
- 126:main.cpp      **** 
- 2159              		.loc 10 126 38 is_stmt 0 view .LVU533
+ 125:main.cpp      **** 
+ 2158              		.loc 10 125 9 view .LVU532
+ 125:main.cpp      **** 
+ 2159              		.loc 10 125 38 is_stmt 0 view .LVU533
  2160 04ac FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
  2161              	.LVL148:
  2162              	.LBB825:
- 129:main.cpp      ****         {
- 2163              		.loc 10 129 17 view .LVU534
+ 128:main.cpp      ****         {
+ 2163              		.loc 10 128 17 view .LVU534
  2164 04b0 C31B     		subs	r3, r0, r7
  2165              	.LBE825:
- 126:main.cpp      **** 
- 2166              		.loc 10 126 38 view .LVU535
+ 125:main.cpp      **** 
+ 2166              		.loc 10 125 38 view .LVU535
  2167 04b2 0546     		mov	r5, r0
  2168              	.LVL149:
- 129:main.cpp      ****         {
- 2169              		.loc 10 129 9 is_stmt 1 view .LVU536
+ 128:main.cpp      ****         {
+ 2169              		.loc 10 128 9 is_stmt 1 view .LVU536
  2170              	.LBB969:
  2171 04b4 042B     		cmp	r3, #4
  2172 04b6 D7D9     		bls	.L30
  2173              	.LBB826:
- 131:main.cpp      **** 
- 2174              		.loc 10 131 13 view .LVU537
+ 130:main.cpp      **** 
+ 2174              		.loc 10 130 13 view .LVU537
  2175              	.LVL150:
- 134:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
- 2176              		.loc 10 134 13 view .LVU538
- 134:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
- 2177              		.loc 10 134 41 is_stmt 0 view .LVU539
+ 133:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
+ 2176              		.loc 10 133 13 view .LVU538
+ 133:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
+ 2177              		.loc 10 133 41 is_stmt 0 view .LVU539
  2178 04b8 0121     		movs	r1, #1
  2179 04ba 5F48     		ldr	r0, .L44+64
  2180              	.LVL151:
- 134:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
- 2181              		.loc 10 134 41 view .LVU540
+ 133:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
+ 2181              		.loc 10 133 41 view .LVU540
  2182 04bc FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
  2183              	.LVL152:
- 134:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
- 2184              		.loc 10 134 49 view .LVU541
+ 133:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
+ 2184              		.loc 10 133 49 view .LVU541
  2185 04c0 B0EE007A 		vmov.f32	s14, #2.0e+0
  2186 04c4 F7EE007A 		vmov.f32	s15, #1.0e+0
- 134:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
- 2187              		.loc 10 134 24 view .LVU542
+ 133:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
+ 2187              		.loc 10 133 24 view .LVU542
  2188 04c8 5F4F     		ldr	r7, .L44+80
- 135:main.cpp      ****             pc.setCurve(delta_max, curve_type);
- 2189              		.loc 10 135 40 view .LVU543
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 71
-
-
+ 134:main.cpp      ****             pc.setCurve(delta_max, curve_type);
+ 2189              		.loc 10 134 40 view .LVU543
  2190 04ca 0021     		movs	r1, #0
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 71
+
+
  2191 04cc 5A48     		ldr	r0, .L44+64
  2192              	.LBB827:
  2193              	.LBB828:
@@ -4222,30 +4221,30 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2207              	.LBE829:
  2208              	.LBE828:
  2209              	.LBE827:
- 134:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
- 2210              		.loc 10 134 49 view .LVU545
+ 133:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
+ 2210              		.loc 10 133 49 view .LVU545
  2211 04d2 E0EE077A 		vfma.f32	s15, s0, s14
- 134:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
- 2212              		.loc 10 134 24 view .LVU546
+ 133:main.cpp      ****             delta_max = hw.adc.GetFloat(0) * 100 + 20;
+ 2212              		.loc 10 133 24 view .LVU546
  2213 04d6 C7ED007A 		vstr.32	s15, [r7]
- 135:main.cpp      ****             pc.setCurve(delta_max, curve_type);
- 2214              		.loc 10 135 13 is_stmt 1 view .LVU547
- 135:main.cpp      ****             pc.setCurve(delta_max, curve_type);
- 2215              		.loc 10 135 40 is_stmt 0 view .LVU548
+ 134:main.cpp      ****             pc.setCurve(delta_max, curve_type);
+ 2214              		.loc 10 134 13 is_stmt 1 view .LVU547
+ 134:main.cpp      ****             pc.setCurve(delta_max, curve_type);
+ 2215              		.loc 10 134 40 is_stmt 0 view .LVU548
  2216 04da FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
  2217              	.LVL153:
- 135:main.cpp      ****             pc.setCurve(delta_max, curve_type);
- 2218              		.loc 10 135 50 view .LVU549
+ 134:main.cpp      ****             pc.setCurve(delta_max, curve_type);
+ 2218              		.loc 10 134 50 view .LVU549
  2219 04de F3EE047A 		vmov.f32	s15, #2.0e+1
  2220 04e2 9FED4A7A 		vldr.32	s14, .L44+20
- 135:main.cpp      ****             pc.setCurve(delta_max, curve_type);
- 2221              		.loc 10 135 40 view .LVU550
+ 134:main.cpp      ****             pc.setCurve(delta_max, curve_type);
+ 2221              		.loc 10 134 40 view .LVU550
  2222 04e6 F0EE406A 		vmov.f32	s13, s0
- 135:main.cpp      ****             pc.setCurve(delta_max, curve_type);
- 2223              		.loc 10 135 23 view .LVU551
+ 134:main.cpp      ****             pc.setCurve(delta_max, curve_type);
+ 2223              		.loc 10 134 23 view .LVU551
  2224 04ea 584B     		ldr	r3, .L44+84
- 136:main.cpp      **** 
- 2225              		.loc 10 136 24 view .LVU552
+ 135:main.cpp      **** 
+ 2225              		.loc 10 135 24 view .LVU552
  2226 04ec 97ED000A 		vldr.32	s0, [r7]
  2227              	.LBB891:
  2228              	.LBB892:
@@ -4258,35 +4257,35 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2234 04f0 0A27     		movs	r7, #10
  2235              	.LBE896:
  2236              	.LBE895:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 72
-
-
  2237              	.LBE894:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 72
+
+
  2238              	.LBE893:
  2239              	.LBE892:
  2240              	.LBE891:
- 136:main.cpp      **** 
- 2241              		.loc 10 136 24 view .LVU554
+ 135:main.cpp      **** 
+ 2241              		.loc 10 135 24 view .LVU554
  2242 04f2 4348     		ldr	r0, .L44+8
- 135:main.cpp      ****             pc.setCurve(delta_max, curve_type);
- 2243              		.loc 10 135 50 view .LVU555
+ 134:main.cpp      ****             pc.setCurve(delta_max, curve_type);
+ 2243              		.loc 10 134 50 view .LVU555
  2244 04f4 E6EE877A 		vfma.f32	s15, s13, s14
- 136:main.cpp      **** 
- 2245              		.loc 10 136 24 view .LVU556
+ 135:main.cpp      **** 
+ 2245              		.loc 10 135 24 view .LVU556
  2246 04f8 BCEEE77A 		vcvt.u32.f32	s14, s15
- 135:main.cpp      ****             pc.setCurve(delta_max, curve_type);
- 2247              		.loc 10 135 23 view .LVU557
+ 134:main.cpp      ****             pc.setCurve(delta_max, curve_type);
+ 2247              		.loc 10 134 23 view .LVU557
  2248 04fc C3ED007A 		vstr.32	s15, [r3]
- 136:main.cpp      **** 
- 2249              		.loc 10 136 13 is_stmt 1 view .LVU558
- 136:main.cpp      **** 
- 2250              		.loc 10 136 24 is_stmt 0 view .LVU559
+ 135:main.cpp      **** 
+ 2249              		.loc 10 135 13 is_stmt 1 view .LVU558
+ 135:main.cpp      **** 
+ 2250              		.loc 10 135 24 is_stmt 0 view .LVU559
  2251 0500 8DED057A 		vstr.32	s14, [sp, #20]	@ int
  2252 0504 9DF81410 		ldrb	r1, [sp, #20]	@ zero_extendqisi2
  2253 0508 FFF7FEFF 		bl	_ZN16PlantConditioner8setCurveEhf
  2254              	.LVL154:
- 139:main.cpp      ****             
- 2255              		.loc 10 139 13 is_stmt 1 view .LVU560
+ 138:main.cpp      ****             
+ 2255              		.loc 10 138 13 is_stmt 1 view .LVU560
  2256              	.LBB918:
  2257              	.LBI891:
  227:../../libs/libDaisy/src/dev/mpr121.h ****     {
@@ -4318,10 +4317,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2278 051a 0093     		str	r3, [sp]
  2279 051c 0123     		movs	r3, #1
  2280              	.LVL156:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 73
-
-
   78:../../libs/libDaisy/src/dev/mpr121.h ****                    config_.dev_addr, memAddress, 1, data, memSize, 10);
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 73
+
+
  2281              		.loc 9 78 32 view .LVU567
  2282 051e 4C48     		ldr	r0, .L44+88
  2283 0520 FFF7FEFF 		bl	_ZN5daisy9I2CHandle8Mem_readEtttPhtm
@@ -4358,8 +4357,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2311              	.LBE875:
  2312              	.LBE883:
  2313              	.LBE919:
- 139:main.cpp      ****             
- 2314              		.loc 10 139 25 view .LVU571
+ 138:main.cpp      ****             
+ 2314              		.loc 10 138 25 view .LVU571
  2315 0526 4B4A     		ldr	r2, .L44+92
  2316              	.LBB920:
  2317              	.LBB884:
@@ -4378,10 +4377,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2329              	.LBE860:
  2330              	.LBE868:
  2331              	.LBE876:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 74
-
-
  2332              	.LBE884:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 74
+
+
  2333              	.LBE920:
  2334              	.LBB921:
  2335              	.LBB915:
@@ -4438,10 +4437,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2383              	.LBB886:
  2384              	.LBB878:
  2385              	.LBB870:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 75
-
-
  2386              	.LBB862:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 75
+
+
  2387              	.LBB854:
  2388              	.LBB843:
  2389              	.LBB838:
@@ -4487,21 +4486,21 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2422 0546 C3F30B03 		ubfx	r3, r3, #0, #12
  2423              	.LBE917:
  2424              	.LBE925:
- 139:main.cpp      ****             
- 2425              		.loc 10 139 25 view .LVU583
+ 138:main.cpp      ****             
+ 2425              		.loc 10 138 25 view .LVU583
  2426 054a 1380     		strh	r3, [r2]	@ movhi
- 142:main.cpp      **** 
- 2427              		.loc 10 142 13 is_stmt 1 view .LVU584
+ 141:main.cpp      **** 
+ 2427              		.loc 10 141 13 is_stmt 1 view .LVU584
  2428              	.LVL161:
  2429              	.LBB926:
  2430              	.LBI827:
  214:../../libs/libDaisy/src/dev/mpr121.h ****     {
  2431              		.loc 9 214 14 view .LVU585
  2432              	.LBB887:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 76
-
-
  2433              	.LBB879:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 76
+
+
  2434              	.LBI829:
  214:../../libs/libDaisy/src/dev/mpr121.h ****     {
  2435              		.loc 9 214 14 view .LVU586
@@ -4558,10 +4557,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2478              	.LBE932:
  2479              	.LBE931:
  2480              	.LBE930:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 77
-
-
  2481              	.LBE929:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 77
+
+
  2482              	.LBE928:
  2483              	.LBE927:
  2484              	.LBB960:
@@ -4618,10 +4617,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2531              		.loc 9 343 55 view .LVU598
  2532              	.LBE848:
  2533              	.LBE850:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 78
-
-
  2534              	.LBE857:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 78
+
+
  2535              	.LBE865:
  2536              	.LBE873:
  2537              	.LBE881:
@@ -4678,10 +4677,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2582              	.LBB947:
  2583              	.LBB938:
  2584              	.LBI931:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 79
-
-
   75:../../libs/libDaisy/src/dev/mpr121.h ****     {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 79
+
+
  2585              		.loc 9 75 10 view .LVU605
  2586              	.LBB935:
   77:../../libs/libDaisy/src/dev/mpr121.h ****                != i2c_.Mem_read(
@@ -4708,8 +4707,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2603              	.LBE952:
  2604              	.LBE957:
  2605              	.LBE965:
- 142:main.cpp      **** 
- 2606              		.loc 10 142 47 view .LVU611
+ 141:main.cpp      **** 
+ 2606              		.loc 10 141 47 view .LVU611
  2607 0588 B900     		lsls	r1, r7, #2
  2608              	.LBB966:
  2609              	.LBB958:
@@ -4728,8 +4727,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2621              	.LBE953:
  2622              	.LBE958:
  2623              	.LBE966:
- 142:main.cpp      **** 
- 2624              		.loc 10 142 47 view .LVU613
+ 141:main.cpp      **** 
+ 2624              		.loc 10 141 47 view .LVU613
  2625 0592 1B48     		ldr	r0, .L44+8
  2626              	.LVL166:
  2627              	.LBB967:
@@ -4738,10 +4737,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2630              	.LBB949:
  2631              	.LBB944:
  2632              	.LBB942:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 80
-
-
  343:../../libs/libDaisy/src/dev/mpr121.h **** 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 80
+
+
  2633              		.loc 9 343 55 view .LVU614
  2634 0594 84F83020 		strb	r2, [r4, #48]
  2635              	.LVL167:
@@ -4753,63 +4752,63 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2640              	.LBE954:
  2641              	.LBE959:
  2642              	.LBE967:
- 142:main.cpp      **** 
- 2643              		.loc 10 142 47 view .LVU616
+ 141:main.cpp      **** 
+ 2643              		.loc 10 141 47 view .LVU616
  2644 0598 BDF84020 		ldrh	r2, [sp, #64]
  2645 059c FFF7FEFF 		bl	_ZN16PlantConditioner7ProcessEtt
  2646              	.LVL168:
- 145:main.cpp      ****             {
- 2647              		.loc 10 145 13 is_stmt 1 view .LVU617
- 145:main.cpp      ****             {
- 2648              		.loc 10 145 17 is_stmt 0 view .LVU618
+ 144:main.cpp      ****             {
+ 2647              		.loc 10 144 13 is_stmt 1 view .LVU617
+ 144:main.cpp      ****             {
+ 2648              		.loc 10 144 17 is_stmt 0 view .LVU618
  2649 05a0 2C4A     		ldr	r2, .L44+92
  2650 05a2 1288     		ldrh	r2, [r2]
- 145:main.cpp      ****             {
- 2651              		.loc 10 145 13 view .LVU619
+ 144:main.cpp      ****             {
+ 2651              		.loc 10 144 13 view .LVU619
  2652 05a4 12EA0901 		ands	r1, r2, r9
  2653 05a8 1FD0     		beq	.L31
- 147:main.cpp      ****                 // We just update the variable here. The Audio Callback picks it up instantly.
- 2654              		.loc 10 147 17 is_stmt 1 view .LVU620
+ 146:main.cpp      ****                 // We just update the variable here. The Audio Callback picks it up instantly.
+ 2654              		.loc 10 146 17 is_stmt 1 view .LVU620
  2655 05aa 98F80010 		ldrb	r1, [r8]	@ zero_extendqisi2
  2656 05ae 09B9     		cbnz	r1, .L32
- 147:main.cpp      ****                 // We just update the variable here. The Audio Callback picks it up instantly.
- 2657              		.loc 10 147 28 discriminator 1 view .LVU621
- 147:main.cpp      ****                 // We just update the variable here. The Audio Callback picks it up instantly.
- 2658              		.loc 10 147 33 is_stmt 0 discriminator 1 view .LVU622
+ 146:main.cpp      ****                 // We just update the variable here. The Audio Callback picks it up instantly.
+ 2657              		.loc 10 146 28 discriminator 1 view .LVU621
+ 146:main.cpp      ****                 // We just update the variable here. The Audio Callback picks it up instantly.
+ 2658              		.loc 10 146 33 is_stmt 0 discriminator 1 view .LVU622
  2659 05b0 88F80090 		strb	r9, [r8]
  2660              	.L32:
- 149:main.cpp      ****             }
- 2661              		.loc 10 149 17 is_stmt 1 view .LVU623
- 149:main.cpp      ****             }
- 2662              		.loc 10 149 29 is_stmt 0 view .LVU624
+ 148:main.cpp      ****             }
+ 2661              		.loc 10 148 17 is_stmt 1 view .LVU623
+ 148:main.cpp      ****             }
+ 2662              		.loc 10 148 29 is_stmt 0 view .LVU624
  2663 05b4 224B     		ldr	r3, .L44+72
  2664 05b6 83ED000A 		vstr.32	s0, [r3]
  2665              	.L33:
- 155:main.cpp      ****         }
- 2666              		.loc 10 155 13 is_stmt 1 view .LVU625
- 155:main.cpp      ****         }
- 2667              		.loc 10 155 25 is_stmt 0 view .LVU626
+ 154:main.cpp      ****         }
+ 2666              		.loc 10 154 13 is_stmt 1 view .LVU625
+ 154:main.cpp      ****         }
+ 2667              		.loc 10 154 25 is_stmt 0 view .LVU626
  2668 05ba 274B     		ldr	r3, .L44+96
- 131:main.cpp      **** 
- 2669              		.loc 10 131 23 view .LVU627
+ 130:main.cpp      **** 
+ 2669              		.loc 10 130 23 view .LVU627
  2670 05bc 2F46     		mov	r7, r5
- 155:main.cpp      ****         }
- 2671              		.loc 10 155 25 view .LVU628
+ 154:main.cpp      ****         }
+ 2671              		.loc 10 154 25 view .LVU628
  2672 05be 1A80     		strh	r2, [r3]	@ movhi
  2673              	.LBE826:
  2674 05c0 52E7     		b	.L30
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 81
-
-
  2675              	.LVL169:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 81
+
+
  2676              	.L35:
- 155:main.cpp      ****         }
- 2677              		.loc 10 155 25 view .LVU629
+ 154:main.cpp      ****         }
+ 2677              		.loc 10 154 25 view .LVU629
  2678              	.LBE969:
- 166:main.cpp      ****             }
- 2679              		.loc 10 166 17 is_stmt 1 view .LVU630
- 166:main.cpp      ****             }
- 2680              		.loc 10 166 29 is_stmt 0 view .LVU631
+ 165:main.cpp      ****             }
+ 2679              		.loc 10 165 17 is_stmt 1 view .LVU630
+ 165:main.cpp      ****             }
+ 2680              		.loc 10 165 29 is_stmt 0 view .LVU631
  2681 05c2 1F4B     		ldr	r3, .L44+72
  2682              	.LBB970:
  2683              	.LBB971:
@@ -4820,8 +4819,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2687 05cc 2348     		ldr	r0, .L44+100
  2688              	.LBE971:
  2689              	.LBE970:
- 166:main.cpp      ****             }
- 2690              		.loc 10 166 29 view .LVU633
+ 165:main.cpp      ****             }
+ 2690              		.loc 10 165 29 view .LVU633
  2691 05ce D3ED005A 		vldr.32	s11, [r3]
  2692              	.LVL170:
  2693              	.LBB973:
@@ -4848,8 +4847,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  126:../../libs/libDaisy/src/daisy_seed.h ****     {
  2711              		.loc 1 126 17 is_stmt 1 view .LVU640
  2712              	.LBE977:
- 162:main.cpp      ****             if (gate) {
- 2713              		.loc 10 162 24 is_stmt 0 view .LVU641
+ 161:main.cpp      ****             if (gate) {
+ 2713              		.loc 10 161 24 is_stmt 0 view .LVU641
  2714 05d2 2E46     		mov	r6, r5
  2715              	.LBB978:
  2716              	.LBB972:
@@ -4858,10 +4857,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2718 05d4 8DED007B 		vstr.64	d7, [sp]
  2719 05d8 B7EEE57A 		vcvt.f64.f32	d7, s11
  2720 05dc 8DED026B 		vstr.64	d6, [sp, #8]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 82
-
-
  2721 05e0 53EC172B 		vmov	r2, r3, d7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 82
+
+
  2722 05e4 FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
  2723              	.LVL171:
  129:../../libs/libDaisy/src/daisy_seed.h **** 
@@ -4875,15 +4874,15 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2730              	.LBE978:
  2731              	.LBB979:
  2732              	.LBB968:
- 153:main.cpp      ****             }
- 2733              		.loc 10 153 17 is_stmt 1 view .LVU645
+ 152:main.cpp      ****             }
+ 2733              		.loc 10 152 17 is_stmt 1 view .LVU645
  2734 05ea 98F80030 		ldrb	r3, [r8]	@ zero_extendqisi2
  2735 05ee 002B     		cmp	r3, #0
  2736 05f0 E3D0     		beq	.L33
- 153:main.cpp      ****             }
- 2737              		.loc 10 153 27 discriminator 1 view .LVU646
- 153:main.cpp      ****             }
- 2738              		.loc 10 153 32 is_stmt 0 discriminator 1 view .LVU647
+ 152:main.cpp      ****             }
+ 2737              		.loc 10 152 27 discriminator 1 view .LVU646
+ 152:main.cpp      ****             }
+ 2738              		.loc 10 152 32 is_stmt 0 discriminator 1 view .LVU647
  2739 05f2 88F80010 		strb	r1, [r8]
  2740 05f6 E0E7     		b	.L33
  2741              	.L45:
@@ -4918,10 +4917,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2770 0660 8C070000 		.word	.LANCHOR7+1932
  2771 0664 00000000 		.word	.LANCHOR2
  2772              	.LBE968:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 83
-
-
  2773              	.LBE979:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 83
+
+
  2774              	.LBE980:
  2775              		.cfi_endproc
  2776              	.LFE4849:
@@ -4934,15 +4933,15 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2784              		.fpu fpv5-d16
  2786              	_GLOBAL__sub_I_mpr121ObjConf:
  2787              	.LFB5433:
- 173:main.cpp      ****     }
- 174:main.cpp      **** }...
- 2788              		.loc 10 174 1 is_stmt 1 view -0
+ 172:main.cpp      ****     }
+ 173:main.cpp      **** }...
+ 2788              		.loc 10 173 1 is_stmt 1 view -0
  2789              		.cfi_startproc
  2790              		@ args = 0, pretend = 0, frame = 0
  2791              		@ frame_needed = 0, uses_anonymous_args = 0
  2792              	.LBB1111:
  2793              	.LBI1111:
- 2794              		.loc 10 174 1 view .LVU649
+ 2794              		.loc 10 173 1 view .LVU649
  2795              	.LVL173:
  2796              	.LBB1112:
  2797              	.LBB1113:
@@ -4978,10 +4977,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2821              		.loc 12 201 15 view .LVU659
  201:../../libs/libDaisy/src/daisy_core.h **** 
  2822              		.loc 12 201 15 is_stmt 0 view .LVU660
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 84
-
-
  2823              	.LBE1120:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 84
+
+
   40:../../libs/libDaisy/src/dev/mpr121.h **** 
  2824              		.loc 9 40 13 is_stmt 1 view .LVU661
  2825              	.LBB1121:
@@ -5002,7 +5001,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2836              	.LBE1113:
  2837              	.LBE1112:
  2838              	.LBE1111:
- 2839              		.loc 10 174 1 view .LVU666
+ 2839              		.loc 10 173 1 view .LVU666
  2840 0000 38B5     		push	{r3, r4, r5, lr}
  2841              		.cfi_def_cfa_offset 16
  2842              		.cfi_offset 3, -16
@@ -5038,10 +5037,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2870              	.LBB1122:
   36:../../libs/libDaisy/src/dev/mpr121.h ****             speed  = I2CHandle::Config::Speed::I2C_400KHZ;
  2871              		.loc 9 36 20 view .LVU669
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 85
-
-
  2872 0006 3C4B     		ldr	r3, .L52+4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 85
+
+
  2873 0008 0024     		movs	r4, #0
   37:../../libs/libDaisy/src/dev/mpr121.h **** 
  2874              		.loc 9 37 20 view .LVU670
@@ -5098,10 +5097,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2918              	.LBE1138:
  2919              	.LBB1139:
  2920              	.LBI1139:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 86
-
-
  2921              		.loc 12 204 15 is_stmt 1 view .LVU680
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 86
+
+
  2922              		.loc 12 204 15 is_stmt 0 view .LVU681
  2923              	.LBE1139:
   36:../../libs/libDaisy/src/dev/mpr121.h ****             speed  = I2CHandle::Config::Speed::I2C_400KHZ;
@@ -5158,10 +5157,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   73:../../libs/libDaisy/src/per/i2c.h ****         OK, /**< & */
   74:../../libs/libDaisy/src/per/i2c.h ****         ERR /**< & */
   75:../../libs/libDaisy/src/per/i2c.h ****     };
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 87
-
-
   76:../../libs/libDaisy/src/per/i2c.h **** 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 87
+
+
   77:../../libs/libDaisy/src/per/i2c.h ****     enum class Direction
   78:../../libs/libDaisy/src/per/i2c.h ****     {
   79:../../libs/libDaisy/src/per/i2c.h ****         TRANSMIT, /**< & */
@@ -5218,10 +5217,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  2986              	.LBE1156:
  2987              	.LBE1155:
  2988              	.LBE1154:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 88
-
-
  2989              	.LBE1152:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 88
+
+
  2990              	.LBE1151:
   96:../../libs/libDaisy/src/dev/mpr121.h ****     ~Mpr121() {}
  2991              		.loc 9 96 5 view .LVU710
@@ -5278,10 +5277,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   23:main.cpp      **** daisy::Mpr121I2C cap;
  3039              		.loc 10 23 18 view .LVU714
  3040 0034 FFF7FEFF 		bl	__aeabi_atexit
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 89
-
-
  3041              	.LVL175:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 89
+
+
  3042              	.LBB1176:
  3043              	.LBI1176:
   21:../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
@@ -5338,10 +5337,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   46:../../libs/libDaisy/src/per/qspi.h ****          *  \param E_SWITCHING_MODES - An error was encountered while switching QSPI peripheral mod
   47:../../libs/libDaisy/src/per/qspi.h ****          *  \param E_INVALID_MODE - QSPI should not be written to while the program is executing fr
   48:../../libs/libDaisy/src/per/qspi.h ****          */
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 90
-
-
   49:../../libs/libDaisy/src/per/qspi.h ****     enum Status
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 90
+
+
   50:../../libs/libDaisy/src/per/qspi.h ****     {
   51:../../libs/libDaisy/src/per/qspi.h ****         GOOD = 0,
   52:../../libs/libDaisy/src/per/qspi.h ****         E_HAL_ERROR,
@@ -5398,10 +5397,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  103:../../libs/libDaisy/src/per/qspi.h **** 
  104:../../libs/libDaisy/src/per/qspi.h ****     /** Returns the current config. */
  105:../../libs/libDaisy/src/per/qspi.h ****     const Config& GetConfig() const;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 91
-
-
  106:../../libs/libDaisy/src/per/qspi.h **** 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 91
+
+
  107:../../libs/libDaisy/src/per/qspi.h ****     // Couldn't this just be called before anything else in init? That
  108:../../libs/libDaisy/src/per/qspi.h ****     // would make manually calling it unnecessary.
  109:../../libs/libDaisy/src/per/qspi.h ****     /**
@@ -5458,10 +5457,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  160:../../libs/libDaisy/src/per/qspi.h ****      *  to write to it use the Write function.
  161:../../libs/libDaisy/src/per/qspi.h ****      *
  162:../../libs/libDaisy/src/per/qspi.h ****      *  \param offset returns the pointer starting this
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 92
-
-
  163:../../libs/libDaisy/src/per/qspi.h ****      *                many bytes into the memory
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 92
+
+
  164:../../libs/libDaisy/src/per/qspi.h ****     */
  165:../../libs/libDaisy/src/per/qspi.h ****     void* GetData(uint32_t offset = 0);
  166:../../libs/libDaisy/src/per/qspi.h **** 
@@ -5518,10 +5517,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  3094              	.LBE1189:
  3095              	.LBB1192:
  3096              	.LBI1192:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 93
-
-
  109:../../libs/libDaisy/src/per/adc.h ****     ~AdcHandle() {}
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 93
+
+
  3097              		.loc 5 109 5 is_stmt 1 view .LVU734
  109:../../libs/libDaisy/src/per/adc.h ****     ~AdcHandle() {}
  3098              		.loc 5 109 5 is_stmt 0 view .LVU735
@@ -5578,10 +5577,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   47:../../libs/libDaisy/src/per/dac.h ****     {
   48:../../libs/libDaisy/src/per/dac.h ****         POLLING,
   49:../../libs/libDaisy/src/per/dac.h ****         DMA,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 94
-
-
   50:../../libs/libDaisy/src/per/dac.h ****     };
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 94
+
+
   51:../../libs/libDaisy/src/per/dac.h **** 
   52:../../libs/libDaisy/src/per/dac.h ****     /** Sets the number of bits per sample transmitted out of the DAC.
   53:../../libs/libDaisy/src/per/dac.h ****      ** The output range will be: 0V - VDDA
@@ -5638,10 +5637,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
    7:../../libs/libDaisy/src/per/gpio.h **** 
    8:../../libs/libDaisy/src/per/gpio.h **** namespace daisy
    9:../../libs/libDaisy/src/per/gpio.h **** {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 95
-
-
   10:../../libs/libDaisy/src/per/gpio.h **** /** @brief General Purpose I/O control 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 95
+
+
   11:../../libs/libDaisy/src/per/gpio.h ****  *  @details peripheral control over a single GPIO
   12:../../libs/libDaisy/src/per/gpio.h ****  *  @ingroup peripheral
   13:../../libs/libDaisy/src/per/gpio.h ****  *   
@@ -5698,10 +5697,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   64:../../libs/libDaisy/src/per/gpio.h **** 
   65:../../libs/libDaisy/src/per/gpio.h ****         /** Constructor with no arguments will prepare an invalid GPIO set as
   66:../../libs/libDaisy/src/per/gpio.h ****          *  an input, with no pullup. 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 96
-
-
   67:../../libs/libDaisy/src/per/gpio.h ****          */
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 96
+
+
   68:../../libs/libDaisy/src/per/gpio.h ****         Config()
   69:../../libs/libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
   70:../../libs/libDaisy/src/per/gpio.h ****         {
@@ -5758,10 +5757,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  3156              	.LBI1222:
   20:../../libs/libDaisy/src/dev/codec_ak4556.h ****     ~Ak4556() {}
  3157              		.loc 2 20 5 is_stmt 1 view .LVU750
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 97
-
-
  3158              	.LBB1223:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 97
+
+
  3159              	.LBI1223:
  3160              		.loc 16 74 5 view .LVU751
  3161              	.LBB1224:
@@ -5818,10 +5817,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   31:../../libs/libDaisy/src/per/sai.h ****  *  sai_config.b_dir           = SaiHandle::Config::Direction::TRANSMIT;
   32:../../libs/libDaisy/src/per/sai.h ****  *  sai_config.pin_config.fs   = {DSY_GPIOE, 4};
   33:../../libs/libDaisy/src/per/sai.h ****  *  sai_config.pin_config.mclk = {DSY_GPIOE, 2};
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 98
-
-
   34:../../libs/libDaisy/src/per/sai.h ****  *  sai_config.pin_config.sck  = {DSY_GPIOE, 5};
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 98
+
+
   35:../../libs/libDaisy/src/per/sai.h ****  *  sai_config.pin_config.sa   = {DSY_GPIOE, 6};
   36:../../libs/libDaisy/src/per/sai.h ****  *  sai_config.pin_config.sb   = {DSY_GPIOE, 3};
   37:../../libs/libDaisy/src/per/sai.h ****  *  // Then Initialize
@@ -5878,10 +5877,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
   88:../../libs/libDaisy/src/per/sai.h ****             RECEIVE,
   89:../../libs/libDaisy/src/per/sai.h ****         };
   90:../../libs/libDaisy/src/per/sai.h **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 99
-
-
   91:../../libs/libDaisy/src/per/sai.h ****         Peripheral periph;
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 99
+
+
   92:../../libs/libDaisy/src/per/sai.h ****         struct
   93:../../libs/libDaisy/src/per/sai.h ****         {
   94:../../libs/libDaisy/src/per/sai.h ****             Pin mclk, fs, sck, sa, sb;
@@ -5938,10 +5937,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  3213              	.LBE1195:
  3214              	.LBE1194:
  3215              	.LBE1244:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 100
-
-
   21:../../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 100
+
+
  3216              		.loc 1 21 17 view .LVU761
  3217 0048 8365     		str	r3, [r0, #88]
  3218              	.LBB1245:
@@ -5998,10 +5997,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  3265              	.LBB1208:
  3266              	.LBB1206:
  3267              	.LBB1204:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 101
-
-
   69:../../libs/libDaisy/src/per/gpio.h ****         {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 101
+
+
  3268              		.loc 16 69 73 view .LVU768
  3269 005c C0E90C44 		strd	r4, r4, [r0, #48]
  3270              	.LBE1204:
@@ -6058,10 +6057,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  3318              	.LBI1258:
   68:../../libs/libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
  3319              		.loc 16 68 9 view .LVU773
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 102
-
-
  3320              	.LBB1259:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 102
+
+
  3321              	.LBB1260:
  3322              	.LBI1260:
  3323              		.loc 12 204 15 view .LVU774
@@ -6118,10 +6117,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  3368              	.LBE1265:
   31:../../libs/libDaisy/src/per/adc.h **** {
  3369              		.loc 5 31 8 is_stmt 0 view .LVU786
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 103
-
-
  3370 0090 1433     		adds	r3, r3, #20
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 103
+
+
  3371              	.LVL181:
  3372              	.LBB1277:
  3373              	.LBB1275:
@@ -6178,10 +6177,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  3416              	.LBE1255:
   25:main.cpp      **** AdcChannelConfig adcConfig[ADC_CH];
  3417              		.loc 10 25 34 is_stmt 1 view .LVU798
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 104
-
-
   25:main.cpp      **** AdcChannelConfig adcConfig[ADC_CH];
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 104
+
+
  3418              		.loc 10 25 34 view .LVU799
  3419 00ac 5432     		adds	r2, r2, #84
  3420 00ae AA42     		cmp	r2, r5
@@ -6238,10 +6237,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  3464 00e4 0362     		str	r3, [r0, #32]	@ float
  3465 00e6 4362     		str	r3, [r0, #36]	@ float
  3466              	.LBE1283:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 105
-
-
  3467              	.LBE1281:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 105
+
+
  3468              	.LBE1280:
   28:main.cpp      **** static Adsr env;
  3469              		.loc 10 28 13 view .LVU807
@@ -6249,7 +6248,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  3471 00ea 1049     		ldr	r1, .L52+56
  3472              	.LBE1284:
  3473              	.LBE1286:
- 3474              		.loc 10 174 1 view .LVU808
+ 3474              		.loc 10 173 1 view .LVU808
  3475 00ec BDE83840 		pop	{r3, r4, r5, lr}
  3476              		.cfi_restore 14
  3477              		.cfi_restore 5
@@ -6298,10 +6297,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  3520              		.global	hw
  3521              		.global	cap
  3522              		.global	mpr121ObjConf
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 106
-
-
  3523              		.section	.bss._ZL3env,"aw",%nobits
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 106
+
+
  3524              		.align	2
  3525              		.set	.LANCHOR3,. + 0
  3528              	_ZL3env:
@@ -6358,10 +6357,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  3571              		.section	.bss.lastTouched,"aw",%nobits
  3572              		.align	1
  3573              		.set	.LANCHOR14,. + 0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 107
-
-
  3576              	lastTouched:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 107
+
+
  3577 0000 0000     		.space	2
  3578              		.section	.bss.mpr121ObjConf,"aw",%nobits
  3579              		.align	2
@@ -6418,10 +6417,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  3636              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
  3637              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
  3638              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 108
-
-
  3639              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 108
+
+
  3640              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
  3641              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
  3642              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
@@ -6461,71 +6460,71 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 1
  3676              		.file 63 "../../Classes/Temperamento/../SensorFilters/MF/MF.h"
  3677              		.file 64 "../../Classes/Effects/AnalogDelay/src/AnalogDelay.h"
  3678              		.file 65 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 109
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 109
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.cpp
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:73     .text._ZN7daisysp4AdsrD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:81     .text._ZN7daisysp4AdsrD2Ev:00000000 _ZN7daisysp4AdsrD2Ev
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:81     .text._ZN7daisysp4AdsrD2Ev:00000000 _ZN7daisysp4AdsrD1Ev
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:98     .text._ZN7daisysp10OscillatorD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:106    .text._ZN7daisysp10OscillatorD2Ev:00000000 _ZN7daisysp10OscillatorD2Ev
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:106    .text._ZN7daisysp10OscillatorD2Ev:00000000 _ZN7daisysp10OscillatorD1Ev
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:123    .text._ZN5daisy6Mpr121INS_18Mpr121I2CTransportEED2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:131    .text._ZN5daisy6Mpr121INS_18Mpr121I2CTransportEED2Ev:00000000 _ZN5daisy6Mpr121INS_18Mpr121I2CTransportEED2Ev
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:131    .text._ZN5daisy6Mpr121INS_18Mpr121I2CTransportEED2Ev:00000000 _ZN5daisy6Mpr121INS_18Mpr121I2CTransportEED1Ev
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:153    .text._ZL13AudioCallbackPKfPfj:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:160    .text._ZL13AudioCallbackPKfPfj:00000000 _ZL13AudioCallbackPKfPfj
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:296    .text._ZL13AudioCallbackPKfPfj:00000064 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:305    .text._ZN5daisy6Mpr121INS_18Mpr121I2CTransportEE13WriteRegisterEhh:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:313    .text._ZN5daisy6Mpr121INS_18Mpr121I2CTransportEE13WriteRegisterEhh:00000000 _ZN5daisy6Mpr121INS_18Mpr121I2CTransportEE13WriteRegisterEhh
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:683    .rodata.main.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:696    .text.startup.main:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:704    .text.startup.main:00000000 main
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:1768   .text.startup.main:00000334 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:1774   .text.startup.main:00000348 $t
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:2744   .text.startup.main:000005f8 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:2779   .text.startup._GLOBAL__sub_I_mpr121ObjConf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:2786   .text.startup._GLOBAL__sub_I_mpr121ObjConf:00000000 _GLOBAL__sub_I_mpr121ObjConf
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3489   .text.startup._GLOBAL__sub_I_mpr121ObjConf:000000f4 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3510   .init_array:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3604   .data.delta_max:00000000 delta_max
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3597   .data.curve_type:00000000 curve_type
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3556   .bss.currTouched:00000000 currTouched
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3576   .bss.lastTouched:00000000 lastTouched
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3562   .bss.gate:00000000 gate
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3611   .data.target_freq:00000000 target_freq
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3590   .bss.pc:00000000 pc
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3542   .bss.adcConfig:00000000 adcConfig
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3569   .bss.hw:00000000 hw
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3549   .bss.cap:00000000 cap
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3583   .bss.mpr121ObjConf:00000000 mpr121ObjConf
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3524   .bss._ZL3env:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3528   .bss._ZL3env:00000000 _ZL3env
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3531   .bss._ZL3osc:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3535   .bss._ZL3osc:00000000 _ZL3osc
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3538   .bss.adcConfig:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3545   .bss.cap:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3552   .bss.currTouched:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3563   .bss.gate:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3565   .bss.hw:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3572   .bss.lastTouched:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3579   .bss.mpr121ObjConf:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3586   .bss.pc:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3593   .data.curve_type:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3600   .data.delta_max:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3607   .data.target_freq:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3614   .rodata._ZN5daisy4seedL2A0E:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3618   .rodata._ZN5daisy4seedL2A0E:00000000 _ZN5daisy4seedL2A0E
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s 			page 110
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:73     .text._ZN7daisysp4AdsrD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:81     .text._ZN7daisysp4AdsrD2Ev:00000000 _ZN7daisysp4AdsrD2Ev
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:81     .text._ZN7daisysp4AdsrD2Ev:00000000 _ZN7daisysp4AdsrD1Ev
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:98     .text._ZN7daisysp10OscillatorD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:106    .text._ZN7daisysp10OscillatorD2Ev:00000000 _ZN7daisysp10OscillatorD2Ev
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:106    .text._ZN7daisysp10OscillatorD2Ev:00000000 _ZN7daisysp10OscillatorD1Ev
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:123    .text._ZN5daisy6Mpr121INS_18Mpr121I2CTransportEED2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:131    .text._ZN5daisy6Mpr121INS_18Mpr121I2CTransportEED2Ev:00000000 _ZN5daisy6Mpr121INS_18Mpr121I2CTransportEED2Ev
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:131    .text._ZN5daisy6Mpr121INS_18Mpr121I2CTransportEED2Ev:00000000 _ZN5daisy6Mpr121INS_18Mpr121I2CTransportEED1Ev
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:153    .text._ZL13AudioCallbackPKfPfj:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:160    .text._ZL13AudioCallbackPKfPfj:00000000 _ZL13AudioCallbackPKfPfj
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:296    .text._ZL13AudioCallbackPKfPfj:00000064 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:305    .text._ZN5daisy6Mpr121INS_18Mpr121I2CTransportEE13WriteRegisterEhh:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:313    .text._ZN5daisy6Mpr121INS_18Mpr121I2CTransportEE13WriteRegisterEhh:00000000 _ZN5daisy6Mpr121INS_18Mpr121I2CTransportEE13WriteRegisterEhh
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:683    .rodata.main.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:696    .text.startup.main:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:704    .text.startup.main:00000000 main
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:1768   .text.startup.main:00000334 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:1774   .text.startup.main:00000348 $t
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:2744   .text.startup.main:000005f8 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:2779   .text.startup._GLOBAL__sub_I_mpr121ObjConf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:2786   .text.startup._GLOBAL__sub_I_mpr121ObjConf:00000000 _GLOBAL__sub_I_mpr121ObjConf
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3489   .text.startup._GLOBAL__sub_I_mpr121ObjConf:000000f4 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3510   .init_array:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3604   .data.delta_max:00000000 delta_max
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3597   .data.curve_type:00000000 curve_type
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3556   .bss.currTouched:00000000 currTouched
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3576   .bss.lastTouched:00000000 lastTouched
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3562   .bss.gate:00000000 gate
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3611   .data.target_freq:00000000 target_freq
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3590   .bss.pc:00000000 pc
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3542   .bss.adcConfig:00000000 adcConfig
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3569   .bss.hw:00000000 hw
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3549   .bss.cap:00000000 cap
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3583   .bss.mpr121ObjConf:00000000 mpr121ObjConf
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3524   .bss._ZL3env:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3528   .bss._ZL3env:00000000 _ZL3env
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3531   .bss._ZL3osc:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3535   .bss._ZL3osc:00000000 _ZL3osc
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3538   .bss.adcConfig:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3545   .bss.cap:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3552   .bss.currTouched:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3563   .bss.gate:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3565   .bss.hw:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3572   .bss.lastTouched:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3579   .bss.mpr121ObjConf:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3586   .bss.pc:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3593   .data.curve_type:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3600   .data.delta_max:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3607   .data.target_freq:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3614   .rodata._ZN5daisy4seedL2A0E:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3618   .rodata._ZN5daisy4seedL2A0E:00000000 _ZN5daisy4seedL2A0E
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s 			page 110
 
 
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3622   .rodata._ZN5daisy4seedL2A1E:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccPxdLwf.s:3626   .rodata._ZN5daisy4seedL2A1E:00000000 _ZN5daisy4seedL2A1E
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3622   .rodata._ZN5daisy4seedL2A1E:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc6ev9XQ.s:3626   .rodata._ZN5daisy4seedL2A1E:00000000 _ZN5daisy4seedL2A1E
                            .group:00000000 _ZN5daisy9DaisySeedD5Ev
                            .group:00000000 _ZN7daisysp4AdsrD5Ev
                            .group:00000000 _ZN7daisysp10OscillatorD5Ev
