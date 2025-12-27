@@ -79,6 +79,7 @@ private:
     // Parametri Logici
     const float _histeresis = 2.0f; // Isteresi (zona morta tra le note)
     int _lastNoteIndex = -1;        // IMPORTANTE: Serve per ricordare l'ultima nota e applicare l'isteresi
+    float _lastFreq = 0.0f;
     
     float _curveType = 0; // 0 linear, >1 exponential, <1 logarithmic
     uint8_t _octave = 4;

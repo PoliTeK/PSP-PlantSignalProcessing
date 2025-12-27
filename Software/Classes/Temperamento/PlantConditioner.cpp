@@ -1,4 +1,7 @@
 #include "PlantConditioner.h"
+#include "../../libs/DaisySP/Source/utility/dsp.h"
+
+using namespace daisysp;
 
 PlantConditioner::PlantConditioner() {}
 PlantConditioner::~PlantConditioner() {}
@@ -11,6 +14,7 @@ void PlantConditioner::Init(IIR::FilterType filter_type) {
     _delta = 0;
     _deltaFilt = 0;
     _octave = 4;
+    _lastFreq = 440.0f;
     _lastNoteIndex = -1; // Reset indice nota
 }
 
@@ -65,52 +69,55 @@ void PlantConditioner::setOctave(uint8_t octave) {
 }
 
 float PlantConditioner::Process(uint16_t baseline, uint16_t filtered) {
-    float out = 0.0f;
+    float out = _lastFreq;
     
     // Calcolo Delta
-    // Nota: cast a int per gestire numeri negativi prima del float
     _delta = (float)baseline - (float)filtered - (float)_touchThreshold;
     
-    // Filtraggio
+    // Filtraggio e Clamp
     _deltaFilt = _deltaFilter.Process(_deltaFilterMF.Process(_delta));
+    _deltaFilt = fclamp(_deltaFilt, _deltaMin, _deltaMax - 0.001f);
+    
+    // ---------------------------------------------------------
+    // FASE 1: STICKY CHECK (Priorità alla nota corrente)
+    // Controlliamo subito se possiamo rimanere sulla nota attuale
+    // ---------------------------------------------------------
+    if (_lastNoteIndex >= 0 && _lastNoteIndex < _scaleLength) {
+        int i = _lastNoteIndex;
+        
+        // Ricalcoliamo i limiti SOLO per la nota corrente
+        float pct_lower = (float)i / _scaleLength;
+        float pct_upper = (float)(i+1) / _scaleLength;
+        
+        float lower = _deltaMin + _range * powf(pct_lower, _curveType);
+        float upper = _deltaMin + _range * powf(pct_upper, _curveType);
+        float hyst  = _histeresis * powf(pct_upper, _curveType); // Isteresi corretta
 
-    // Saturazione limiti
-    if (_deltaFilt < _deltaMin) {
-        // Sotto il minimo: suona la nota più bassa o silenzio? 
-        // Dal tuo codice sembra suonare la prima nota scale[0]
-        out = _scale[0] * (1 << _octave); 
-        _lastNoteIndex = 0;
+        // Allarghiamo i confini
+        lower -= hyst;
+        upper += hyst;
+
+        // Se siamo ancora dentro questi confini allargati, NON cambiare nulla!
+        if (_deltaFilt >= lower && _deltaFilt < upper) {
+            return _lastFreq; // Ritorna subito, ignora il loop sotto
+        }
     }
-    else if (_deltaFilt > _deltaMax) {
-        // Sopra il massimo: suona l'ultima nota
-        out = _scale[_scaleLength - 1] * (1 << _octave);
-        _lastNoteIndex = _scaleLength - 1;
-    }
-    else {
-        // Ricerca del Bin corretto
-        for (int i = 0; i < _scaleLength; i++) {
 
-            // Calcolo limiti del bin corrente
-            float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
-            float upper = _deltaMin + _range * powf((float)(i+1) / _scaleLength, _curveType);
-            
-            // Calcolo Isteresi dinamica (più grande per note alte)
-            float currentHisteresis = _histeresis * powf((float)(i+1) / _scaleLength, _curveType); 
-
-            // --- LOGICA ISTERESI APPLICATA ---
-            // Se questa è la nota che stiamo già suonando, allarghiamo i suoi confini
-            // per renderla "appiccicosa" e non farla cambiare per piccoli rumori.
-            if (i == _lastNoteIndex) {
-                lower -= currentHisteresis;
-                upper += currentHisteresis;
-            }
-
-            // Check se siamo dentro il bin
-            if (_deltaFilt >= lower && _deltaFilt < upper) {
-                out = _scale[i] * (1 << _octave); // Frequenza base * 2^ottava
-                _lastNoteIndex = i; // Memorizza questa nota come attiva
-                break;
-            }
+    // ---------------------------------------------------------
+    // FASE 2: RICERCA (Se siamo usciti dalla nota corrente)
+    // ---------------------------------------------------------
+    for (int i = 0; i < _scaleLength; i++) {
+        // Se siamo qui, non siamo nella nota corrente, quindi calcoliamo
+        // i bin "puliti" senza isteresi (o con isteresi minima standard)
+        
+        float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
+        float upper = _deltaMin + _range * powf((float)(i+1) / _scaleLength, _curveType);
+        
+        if (_deltaFilt >= lower && _deltaFilt < upper) {
+            out = _scale[i] * (1 << _octave);
+            _lastNoteIndex = i; // Aggiorna la nuova nota corrente
+            _lastFreq = out;    // Aggiorna la frequenza
+            break;
         }
     }
     
