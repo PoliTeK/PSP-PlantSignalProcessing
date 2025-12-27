@@ -26,15 +26,18 @@ AdcChannelConfig adcConfig[ADC_CH];
 PlantConditioner pc;
 static Oscillator osc;
 static Adsr env;
+static OnePole SmoothFreq;
 
 // --- STATE VARIABLES ---
-volatile float target_freq = 440.0f; 
+static volatile float target_freq = 440.0f; 
 bool gate = false;          
 uint16_t lastTouched = 0;   
 uint16_t currTouched = 0;   
 
 float curve_type = 1.0f;
 float delta_max = 50.0f;
+float last_curve_type = 1.0f;
+float last_delta_max = 50.0f;
 
 // --- AUDIO CALLBACK (High Priority) ---
 static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::InterleavingOutputBuffer out, size_t size)
@@ -43,7 +46,8 @@ static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::
     for (size_t i = 0; i < size; i += 2)
     {
         // 1. FREQUENCY CONTROL
-        osc.SetFreq(target_freq);
+        float smoothedFreq = SmoothFreq.Process(target_freq);
+        osc.SetFreq(smoothedFreq);
 
         // 2. ENVELOPE GENERATION
         envOut = env.Process(gate);
@@ -64,7 +68,7 @@ int main()
     // 1. HARDWARE INIT
     hw.Configure();
     hw.Init();
-    hw.SetAudioBlockSize(4);
+    hw.SetAudioBlockSize(48);
 
     #ifdef Debug
     hw.StartLog(false);
@@ -106,6 +110,9 @@ int main()
     env.SetSustainLevel(0.7f);
     env.SetTime(ADSR_SEG_RELEASE, 0.5f);
 
+    SmoothFreq.Init();
+    SmoothFreq.SetFrequency(10/hw.AudioSampleRate()); // 10 Hz smoothing
+
     // 4. ADC INIT
     adcConfig[0].InitSingle(daisy::seed::A0);
     adcConfig[1].InitSingle(daisy::seed::A1);
@@ -130,18 +137,28 @@ int main()
             last_tick = now;
 
             // Read Analog Controls
-            curve_type = hw.adc.GetFloat(1) * 2 + 1;
-            delta_max = hw.adc.GetFloat(0) * 100 + 20;
-            pc.setCurve(delta_max, curve_type);
+            float raw_curve = hw.adc.GetFloat(1) * 2 + 1;
+            float raw_delta = hw.adc.GetFloat(0) * 100 + 20;
+            if (abs(raw_curve - last_curve_type)/last_curve_type > 0.01f || abs(raw_delta - last_delta_max)/last_delta_max > 0.01f) 
+            {
+                curve_type = raw_curve;
+                delta_max = raw_delta;
+                
+                pc.setCurve(delta_max, curve_type); // Il calcolo pesante avviene solo qui
+                
+                last_curve_type = curve_type;
+                last_delta_max = delta_max;
+            }
+            
 
             // Read Digital Sensor
-            currTouched = cap.Touched();
+
             
             // Calculate Frequency (but don't apply it to the oscillator yet)
             float calculated_freq = pc.Process(cap.BaselineData(0), cap.FilteredData(0));
 
             // Update Gate and Target Frequency based on Touch State
-            if (currTouched & _BV(0))
+            if (cap.Touched() & _BV(0))
             {
                 if (!gate) gate = true; 
                 // We just update the variable here. The Audio Callback picks it up instantly.
@@ -151,7 +168,7 @@ int main()
             {
                 if (gate) gate = false; 
             }
-            lastTouched = currTouched;
+
         }
 
         // B. DEBUG LOOP (4Hz)
@@ -163,6 +180,7 @@ int main()
                 hw.PrintLine("TOUCH | Freq: %.2f | Delta: %.2f | DeltaFilt: %.2f", target_freq, pc.getDelta(), pc.getDeltaFilt());
             } else {
                 hw.PrintLine("..... | Freq: %.2f | Delta: %.2f | DeltaFilt: %.2f", target_freq, pc.getDelta(), pc.getDeltaFilt());
+                hw.PrintLine("..... | CurveType: %.2f | DeltaMax: %.2f", curve_type, delta_max);
             }
         }
         #endif
