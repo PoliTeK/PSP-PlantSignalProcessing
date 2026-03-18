@@ -42,7 +42,7 @@ private:
 
     PlantConditioner    _pc;
   
-    // --- Variabili di Stato (Dati privati scambiati internamente) ---
+    // --- Variabili di Stato
     float    _target_freq = 440.0f;
     bool     _is_touched  = false;
     float    _delta_max   = 50.0f;

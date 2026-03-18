@@ -1,1 +1,0 @@
-Classe contenente funzioni utili per processing/filtraggio dei segnali

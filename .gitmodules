@@ -1,7 +1,3 @@
-[submodule "Software/libs/DaisySP"]
-    path = Software/libs/DaisySP
-    url = https://github.com/electro-smith/DaisySP.git
-    branch = master
-[submodule "Software/libs/libDaisy"]
-    path = Software/libs/libDaisy
-    url = https://github.com/PoliTeK/libDaisy.git
+[submodule "Software/libs/PoliTeKDSP"]
+    path = Software/libs/PoliTeKDSP
+    url = https://github.com/PoliTeK/PoliTeKDSP.git
