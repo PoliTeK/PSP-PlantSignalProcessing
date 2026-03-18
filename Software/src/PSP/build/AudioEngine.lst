@@ -1,0 +1,1329 @@
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"AudioEngine.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN11AudioEngineC2Ev,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_ZN11AudioEngineC2Ev
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
+  26              	_ZN11AudioEngineC2Ev:
+  27              	.LVL0:
+  28              	.LFB3573:
+  29              		.file 1 "AudioEngine.cpp"
+   1:AudioEngine.cpp **** #include "AudioEngine.h"
+   2:AudioEngine.cpp **** 
+   3:AudioEngine.cpp **** AudioEngine::AudioEngine() {}
+  30              		.loc 1 3 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  35              	.LBB36:
+  36              	.LBB37:
+  37              		.file 2 "../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h"
+   1:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** /*
+   2:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** Copyright (c) 2020 Electrosmith, Corp, Paul Batchelor
+   3:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** 
+   4:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** Use of this source code is governed by an MIT-style
+   5:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** license that can be found in the LICENSE file or at
+   6:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** https://opensource.org/licenses/MIT.
+   7:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** */
+   8:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** 
+   9:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** #pragma once
+  10:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** #ifndef DSY_ADSR_H
+  11:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** #define DSY_ADSR_H
+  12:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** 
+  13:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** #include <stdint.h>
+  14:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** #ifdef __cplusplus
+  15:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** 
+  16:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** namespace daisysp
+  17:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** {
+  18:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** /** Distinct stages that the phase of the envelope can be located in.
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 2
+
+
+  19:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** - IDLE   = located at phase location 0, and not currently running
+  20:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** - ATTACK  = First segment of envelope where phase moves from 0 to 1
+  21:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** - DECAY   = Second segment of envelope where phase moves from 1 to SUSTAIN value
+  22:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** - RELEASE =     Fourth segment of envelop where phase moves from SUSTAIN to 0
+  23:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** */
+  24:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** enum
+  25:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** {
+  26:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     ADSR_SEG_IDLE    = 0,
+  27:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     ADSR_SEG_ATTACK  = 1,
+  28:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     ADSR_SEG_DECAY   = 2,
+  29:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     ADSR_SEG_RELEASE = 4
+  30:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** };
+  31:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** 
+  32:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** 
+  33:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** /** adsr envelope module
+  34:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** 
+  35:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** Original author(s) : Paul Batchelor
+  36:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** 
+  37:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** Ported from Soundpipe by Ben Sergentanis, May 2020
+  38:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****  
+  39:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** Remake by Steffan DIedrichsen, May 2021
+  40:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** */
+  41:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** class Adsr
+  42:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** {
+  43:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****   public:
+  44:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     Adsr() {}
+  38              		.loc 2 44 12 is_stmt 0 view .LVU1
+  39 0000 0022     		movs	r2, #0
+  40 0002 0849     		ldr	r1, .L3
+  41 0004 4FF0000C 		mov	ip, #0
+  42              	.LVL1:
+  43              		.loc 2 44 12 view .LVU2
+  44              	.LBE37:
+  45              	.LBE36:
+  46              	.LBB39:
+  47              	.LBI39:
+  48              		.file 3 "../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h"
+   1:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** /*
+   2:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** Copyright (c) 2020 Electrosmith, Corp
+   3:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
+   4:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** Use of this source code is governed by an MIT-style
+   5:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** license that can be found in the LICENSE file or at
+   6:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** https://opensource.org/licenses/MIT.
+   7:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** */
+   8:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
+   9:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** #pragma once
+  10:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** #ifndef DSY_OSCILLATOR_H
+  11:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** #define DSY_OSCILLATOR_H
+  12:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** #include <stdint.h>
+  13:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** #include "Utility/dsp.h"
+  14:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** #ifdef __cplusplus
+  15:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
+  16:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** namespace daisysp
+  17:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** {
+  18:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** /** Synthesis of several waveforms, including polyBLEP bandlimited waveforms.
+  19:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** */
+  20:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** class Oscillator
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 3
+
+
+  21:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** {
+  22:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****   public:
+  23:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     Oscillator() {}
+  49              		.loc 3 23 5 is_stmt 1 view .LVU3
+  50              		.loc 3 23 5 is_stmt 0 view .LVU4
+  51              	.LBE39:
+  52              	.LBB40:
+  53              	.LBI36:
+  54              		.loc 2 44 5 is_stmt 1 view .LVU5
+  55              	.LBB38:
+  56              		.loc 2 44 12 is_stmt 0 view .LVU6
+  57 0008 C262     		str	r2, [r0, #44]	@ float
+  58 000a 0263     		str	r2, [r0, #48]	@ float
+  59 000c 4163     		str	r1, [r0, #52]	@ float
+  60 000e 8263     		str	r2, [r0, #56]	@ float
+  61 0010 C163     		str	r1, [r0, #60]	@ float
+  62 0012 0164     		str	r1, [r0, #64]	@ float
+  63 0014 4164     		str	r1, [r0, #68]	@ float
+  64 0016 8264     		str	r2, [r0, #72]	@ float
+  65 0018 C264     		str	r2, [r0, #76]	@ float
+  66 001a 0265     		str	r2, [r0, #80]	@ float
+  67 001c A0F858C0 		strh	ip, [r0, #88]	@ movhi
+  68              	.LVL2:
+  69              		.loc 2 44 12 view .LVU7
+  70              	.LBE38:
+  71              	.LBE40:
+  72              	.LBB41:
+  73              	.LBI41:
+  74              		.file 4 "../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h"
+   1:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** /*
+   2:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** Copyright (c) 2020 Electrosmith, Corp
+   3:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** 
+   4:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** Use of this source code is governed by an MIT-style
+   5:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** license that can be found in the LICENSE file or at
+   6:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** https://opensource.org/licenses/MIT.
+   7:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** */
+   8:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** 
+   9:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** #pragma once
+  10:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** #ifndef DSY_SVF_H
+  11:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** #define DSY_SVF_H
+  12:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** 
+  13:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** namespace daisysp
+  14:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** {
+  15:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** /**      Double Sampled, Stable State Variable Filter
+  16:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** 
+  17:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** Credit to Andrew Simper from musicdsp.org
+  18:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** 
+  19:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** This is his "State Variable Filter (Double Sampled, Stable)"
+  20:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** 
+  21:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** Additional thanks to Laurent de Soras for stability limit, and 
+  22:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** Stefan Diedrichsen for the correct notch output
+  23:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** 
+  24:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** Ported by: Stephen Hensley
+  25:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** */
+  26:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** class Svf
+  27:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** {
+  28:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****   public:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 4
+
+
+  29:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     Svf() {}
+  75              		.loc 4 29 5 is_stmt 1 view .LVU8
+  76              		.loc 4 29 5 is_stmt 0 view .LVU9
+  77              	.LBE41:
+  78              		.loc 1 3 29 view .LVU10
+  79 0020 7047     		bx	lr
+  80              	.L4:
+  81 0022 00BF     		.align	2
+  82              	.L3:
+  83 0024 000080BF 		.word	-1082130432
+  84              		.cfi_endproc
+  85              	.LFE3573:
+  87              		.global	_ZN11AudioEngineC1Ev
+  88              		.thumb_set _ZN11AudioEngineC1Ev,_ZN11AudioEngineC2Ev
+  89              		.section	.text._ZN11AudioEngineD2Ev,"ax",%progbits
+  90              		.align	1
+  91              		.p2align 2,,3
+  92              		.global	_ZN11AudioEngineD2Ev
+  93              		.syntax unified
+  94              		.thumb
+  95              		.thumb_func
+  96              		.fpu fpv5-d16
+  98              	_ZN11AudioEngineD2Ev:
+  99              	.LVL3:
+ 100              	.LFB3576:
+   4:AudioEngine.cpp **** AudioEngine::~AudioEngine() {}
+ 101              		.loc 1 4 1 is_stmt 1 view -0
+ 102              		.cfi_startproc
+ 103              		@ args = 0, pretend = 0, frame = 0
+ 104              		@ frame_needed = 0, uses_anonymous_args = 0
+ 105              		@ link register save eliminated.
+ 106              	.LBB42:
+ 107              	.LBI42:
+  30:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     ~Svf() {}
+ 108              		.loc 4 30 5 view .LVU12
+ 109              		.loc 4 30 5 is_stmt 0 view .LVU13
+ 110              	.LBE42:
+ 111              	.LBB43:
+ 112              	.LBI43:
+  45:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     ~Adsr() {}
+ 113              		.loc 2 45 5 is_stmt 1 view .LVU14
+ 114              		.loc 2 45 5 is_stmt 0 view .LVU15
+ 115              	.LBE43:
+ 116              	.LBB44:
+ 117              	.LBI44:
+  24:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     ~Oscillator() {}
+ 118              		.loc 3 24 5 is_stmt 1 view .LVU16
+ 119              		.loc 3 24 5 is_stmt 0 view .LVU17
+ 120              	.LBE44:
+ 121              		.loc 1 4 30 view .LVU18
+ 122 0000 7047     		bx	lr
+ 123              		.cfi_endproc
+ 124              	.LFE3576:
+ 126              		.global	_ZN11AudioEngineD1Ev
+ 127              		.thumb_set _ZN11AudioEngineD1Ev,_ZN11AudioEngineD2Ev
+ 128 0002 00BF     		.section	.text._ZN11AudioEngine9SetPresetE11SynthPreset,"ax",%progbits
+ 129              		.align	1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 5
+
+
+ 130              		.p2align 2,,3
+ 131              		.global	_ZN11AudioEngine9SetPresetE11SynthPreset
+ 132              		.syntax unified
+ 133              		.thumb
+ 134              		.thumb_func
+ 135              		.fpu fpv5-d16
+ 137              	_ZN11AudioEngine9SetPresetE11SynthPreset:
+ 138              	.LVL4:
+ 139              	.LFB3579:
+   5:AudioEngine.cpp **** 
+   6:AudioEngine.cpp **** void AudioEngine::Init(float sample_rate) {
+   7:AudioEngine.cpp ****     // Inizializzazione moduli
+   8:AudioEngine.cpp ****     _osc.Init(sample_rate);
+   9:AudioEngine.cpp ****     _env.Init(sample_rate);
+  10:AudioEngine.cpp ****     _filter.Init(sample_rate);
+  11:AudioEngine.cpp **** 
+  12:AudioEngine.cpp ****     _lastGate = false;
+  13:AudioEngine.cpp ****     _currentFreq = 440.0f;
+  14:AudioEngine.cpp ****     
+  15:AudioEngine.cpp ****     // Configura un preset di default
+  16:AudioEngine.cpp ****     SetPreset(PRESET_PAD);
+  17:AudioEngine.cpp **** }
+  18:AudioEngine.cpp **** 
+  19:AudioEngine.cpp **** void AudioEngine::SetPreset(SynthPreset preset) {
+ 140              		.loc 1 19 49 is_stmt 1 view -0
+ 141              		.cfi_startproc
+ 142              		@ args = 0, pretend = 0, frame = 8
+ 143              		@ frame_needed = 0, uses_anonymous_args = 0
+  20:AudioEngine.cpp ****     _currentPreset = preset;
+ 144              		.loc 1 20 5 view .LVU20
+  21:AudioEngine.cpp **** 
+  22:AudioEngine.cpp ****     switch (preset) {
+ 145              		.loc 1 22 5 is_stmt 0 view .LVU21
+ 146 0000 0129     		cmp	r1, #1
+  19:AudioEngine.cpp ****     _currentPreset = preset;
+ 147              		.loc 1 19 49 view .LVU22
+ 148 0002 30B5     		push	{r4, r5, lr}
+ 149              		.cfi_def_cfa_offset 12
+ 150              		.cfi_offset 4, -12
+ 151              		.cfi_offset 5, -8
+ 152              		.cfi_offset 14, -4
+ 153 0004 0546     		mov	r5, r0
+ 154 0006 83B0     		sub	sp, sp, #12
+ 155              		.cfi_def_cfa_offset 24
+  20:AudioEngine.cpp ****     _currentPreset = preset;
+ 156              		.loc 1 20 20 view .LVU23
+ 157 0008 80F8A810 		strb	r1, [r0, #168]
+ 158              		.loc 1 22 5 is_stmt 1 view .LVU24
+ 159 000c 05D0     		beq	.L7
+ 160 000e 0229     		cmp	r1, #2
+ 161 0010 0C46     		mov	r4, r1
+ 162 0012 4CD0     		beq	.L8
+ 163 0014 31B3     		cbz	r1, .L12
+  23:AudioEngine.cpp ****         case PRESET_PAD:
+  24:AudioEngine.cpp ****             _osc.SetWaveform(0);
+  25:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_ATTACK, 0.5f);
+  26:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.2f);
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 6
+
+
+  27:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_RELEASE, 1.2f);
+  28:AudioEngine.cpp ****             _env.SetSustainLevel(0.8f);
+  29:AudioEngine.cpp ****             _filter.SetFreq(6000.0f);
+  30:AudioEngine.cpp ****             _filter.SetRes(0.1f);
+  31:AudioEngine.cpp ****             break;
+  32:AudioEngine.cpp **** 
+  33:AudioEngine.cpp ****         case PRESET_PLUCK:
+  34:AudioEngine.cpp ****             _osc.SetWaveform(daisysp::Oscillator::WAVE_SQUARE);
+  35:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_ATTACK, 0.01f);
+  36:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.15f);
+  37:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_RELEASE, 0.3f);
+  38:AudioEngine.cpp ****             _env.SetSustainLevel(0.0f); // Pluck non ha sustain
+  39:AudioEngine.cpp ****             _filter.SetFreq(1500.0f);
+  40:AudioEngine.cpp ****             _filter.SetRes(0.4f);
+  41:AudioEngine.cpp ****             break;
+  42:AudioEngine.cpp **** 
+  43:AudioEngine.cpp ****         case PRESET_LEAD:
+  44:AudioEngine.cpp ****             _osc.SetWaveform(daisysp::Oscillator::WAVE_POLYBLEP_SAW);
+  45:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_ATTACK, 0.05f);
+  46:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.1f);
+  47:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_RELEASE, 0.4f);
+  48:AudioEngine.cpp ****             _env.SetSustainLevel(0.7f);
+  49:AudioEngine.cpp ****             _filter.SetFreq(8000.0f);
+  50:AudioEngine.cpp ****             _filter.SetRes(0.3f);
+  51:AudioEngine.cpp ****             break;
+  52:AudioEngine.cpp **** 
+  53:AudioEngine.cpp ****         default:
+  54:AudioEngine.cpp ****             break;
+  55:AudioEngine.cpp ****     }
+  56:AudioEngine.cpp **** }
+ 164              		.loc 1 56 1 is_stmt 0 view .LVU25
+ 165 0016 03B0     		add	sp, sp, #12
+ 166              		.cfi_remember_state
+ 167              		.cfi_def_cfa_offset 12
+ 168              		@ sp needed
+ 169 0018 30BD     		pop	{r4, r5, pc}
+ 170              	.L7:
+ 171              		.cfi_restore_state
+  33:AudioEngine.cpp ****             _osc.SetWaveform(daisysp::Oscillator::WAVE_SQUARE);
+ 172              		.loc 1 33 9 is_stmt 1 view .LVU26
+  34:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_ATTACK, 0.01f);
+ 173              		.loc 1 34 13 view .LVU27
+ 174              	.LVL5:
+ 175              	.LBB45:
+ 176              	.LBI45:
+  25:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Choices for output waveforms, POLYBLEP are appropriately labeled. Others are naive forms.
+  26:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     */
+  27:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     enum
+  28:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
+  29:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_SIN,
+  30:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_TRI,
+  31:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_SAW,
+  32:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_RAMP,
+  33:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_SQUARE,
+  34:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_POLYBLEP_TRI,
+  35:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_POLYBLEP_SAW,
+  36:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_POLYBLEP_SQUARE,
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 7
+
+
+  37:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_LAST,
+  38:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     };
+  39:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
+  40:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
+  41:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Initializes the Oscillator
+  42:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
+  43:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         \param sample_rate - sample rate of the audio engine being run, and the frequency that the 
+  44:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
+  45:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         Defaults:
+  46:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         - freq_ = 100 Hz
+  47:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         - amp_ = 0.5
+  48:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         - waveform_ = sine wave.
+  49:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     */
+  50:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     void Init(float sample_rate)
+  51:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
+  52:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_        = sample_rate;
+  53:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
+  54:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
+  55:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
+  56:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         pw_        = 0.5f;
+  57:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_     = 0.0f;
+  58:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(freq_);
+  59:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
+  60:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
+  61:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eor_       = true;
+  62:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
+  63:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
+  64:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
+  65:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Changes the frequency of the Oscillator, and recalculates phase increment.
+  66:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     */
+  67:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     inline void SetFreq(const float f)
+  68:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
+  69:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = f;
+  70:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
+  71:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
+  72:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
+  73:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
+  74:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the amplitude of the waveform.
+  75:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     */
+  76:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     inline void SetAmp(const float a) { amp_ = a; }
+  77:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
+  78:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     */
+  79:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     inline void SetWaveform(const uint8_t wf)
+ 177              		.loc 3 79 17 view .LVU28
+ 178              	.LBB46:
+  80:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
+  81:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_ = wf < WAVE_LAST ? wf : WAVE_SIN;
+ 179              		.loc 3 81 9 view .LVU29
+ 180              		.loc 3 81 19 is_stmt 0 view .LVU30
+ 181 001a 0424     		movs	r4, #4
+ 182              	.LBE46:
+ 183              	.LBE45:
+  35:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.15f);
+ 184              		.loc 1 35 25 view .LVU31
+ 185 001c 9FED370A 		vldr.32	s0, .L13
+ 186              	.LBB48:
+ 187              	.LBB47:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 8
+
+
+ 188              		.loc 3 81 19 view .LVU32
+ 189 0020 00F82C4B 		strb	r4, [r0], #44
+ 190              	.LVL6:
+ 191              		.loc 3 81 19 view .LVU33
+ 192              	.LBE47:
+ 193              	.LBE48:
+  35:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.15f);
+ 194              		.loc 1 35 13 is_stmt 1 view .LVU34
+  35:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.15f);
+ 195              		.loc 1 35 25 is_stmt 0 view .LVU35
+ 196 0024 0190     		str	r0, [sp, #4]
+ 197 0026 FFF7FEFF 		bl	_ZN7daisysp4Adsr7SetTimeEif
+ 198              	.LVL7:
+  36:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_RELEASE, 0.3f);
+ 199              		.loc 1 36 13 is_stmt 1 view .LVU36
+  36:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_RELEASE, 0.3f);
+ 200              		.loc 1 36 25 is_stmt 0 view .LVU37
+ 201 002a 0198     		ldr	r0, [sp, #4]
+ 202 002c 0221     		movs	r1, #2
+ 203 002e 9FED340A 		vldr.32	s0, .L13+4
+ 204 0032 FFF7FEFF 		bl	_ZN7daisysp4Adsr7SetTimeEif
+ 205              	.LVL8:
+  37:AudioEngine.cpp ****             _env.SetSustainLevel(0.0f); // Pluck non ha sustain
+ 206              		.loc 1 37 13 is_stmt 1 view .LVU38
+  37:AudioEngine.cpp ****             _env.SetSustainLevel(0.0f); // Pluck non ha sustain
+ 207              		.loc 1 37 25 is_stmt 0 view .LVU39
+ 208 0036 2146     		mov	r1, r4
+ 209 0038 0198     		ldr	r0, [sp, #4]
+ 210 003a 9FED320A 		vldr.32	s0, .L13+8
+ 211 003e FFF7FEFF 		bl	_ZN7daisysp4Adsr7SetTimeEif
+ 212              	.LVL9:
+  38:AudioEngine.cpp ****             _filter.SetFreq(1500.0f);
+ 213              		.loc 1 38 13 is_stmt 1 view .LVU40
+ 214              	.LBB49:
+ 215              	.LBI49:
+  46:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     /** Initializes the Adsr module.
+  47:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****         \param sample_rate - The sample rate of the audio engine being run. 
+  48:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     */
+  49:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     void Init(float sample_rate, int blockSize = 1);
+  50:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     /**
+  51:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****      \function Retrigger forces the envelope back to attack phase
+  52:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****      \param hard  resets the history to zero, results in a click.
+  53:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****      */
+  54:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     void Retrigger(bool hard);
+  55:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     /** Processes one sample through the filter and returns one sample.
+  56:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****         \param gate - trigger the envelope, hold it to sustain 
+  57:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     */
+  58:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     float Process(bool gate);
+  59:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     /** Sets time
+  60:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****         Set time per segment in seconds
+  61:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     */
+  62:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     void SetTime(int seg, float time);
+  63:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     void SetAttackTime(float timeInS, float shape = 0.0f);
+  64:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     void SetDecayTime(float timeInS);
+  65:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     void SetReleaseTime(float timeInS);
+  66:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** 
+  67:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****   private:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 9
+
+
+  68:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     void SetTimeConstant(float timeInS, float& time, float& coeff);
+  69:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** 
+  70:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****   public:
+  71:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  72:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****         \param sus_level - sets sustain level, 0...1.0
+  73:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     */
+  74:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     inline void SetSustainLevel(float sus_level)
+ 216              		.loc 2 74 17 view .LVU41
+ 217              	.LBB50:
+  75:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     {
+  76:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****         sus_level = (sus_level <= 0.f) ? -0.01f // forces envelope into idle
+ 218              		.loc 2 76 9 view .LVU42
+  77:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****                                        : (sus_level > 1.f) ? 1.f : sus_level;
+  78:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****         sus_level_ = sus_level;
+ 219              		.loc 2 78 9 view .LVU43
+ 220              		.loc 2 78 20 is_stmt 0 view .LVU44
+ 221 0042 314B     		ldr	r3, .L13+12
+ 222              	.LBE50:
+ 223              	.LBE49:
+  39:AudioEngine.cpp ****             _filter.SetRes(0.4f);
+ 224              		.loc 1 39 28 view .LVU45
+ 225 0044 05F15C00 		add	r0, r5, #92
+ 226 0048 9FED300A 		vldr.32	s0, .L13+16
+ 227              	.LBB52:
+ 228              	.LBB51:
+ 229              		.loc 2 78 20 view .LVU46
+ 230 004c EB62     		str	r3, [r5, #44]	@ float
+ 231              	.LVL10:
+ 232              		.loc 2 78 20 view .LVU47
+ 233              	.LBE51:
+ 234              	.LBE52:
+  39:AudioEngine.cpp ****             _filter.SetRes(0.4f);
+ 235              		.loc 1 39 13 is_stmt 1 view .LVU48
+  39:AudioEngine.cpp ****             _filter.SetRes(0.4f);
+ 236              		.loc 1 39 28 is_stmt 0 view .LVU49
+ 237 004e 0190     		str	r0, [sp, #4]
+ 238 0050 FFF7FEFF 		bl	_ZN7daisysp3Svf7SetFreqEf
+ 239              	.LVL11:
+  40:AudioEngine.cpp ****             break;
+ 240              		.loc 1 40 13 is_stmt 1 view .LVU50
+  40:AudioEngine.cpp ****             break;
+ 241              		.loc 1 40 27 is_stmt 0 view .LVU51
+ 242 0054 9FED2E0A 		vldr.32	s0, .L13+20
+  50:AudioEngine.cpp ****             break;
+ 243              		.loc 1 50 27 view .LVU52
+ 244 0058 0198     		ldr	r0, [sp, #4]
+ 245              		.loc 1 56 1 view .LVU53
+ 246 005a 03B0     		add	sp, sp, #12
+ 247              		.cfi_remember_state
+ 248              		.cfi_def_cfa_offset 12
+ 249              		@ sp needed
+ 250 005c BDE83040 		pop	{r4, r5, lr}
+ 251              		.cfi_restore 14
+ 252              		.cfi_restore 5
+ 253              		.cfi_restore 4
+ 254              		.cfi_def_cfa_offset 0
+ 255              	.LVL12:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 10
+
+
+  50:AudioEngine.cpp ****             break;
+ 256              		.loc 1 50 27 view .LVU54
+ 257 0060 FFF7FEBF 		b	_ZN7daisysp3Svf6SetResEf
+ 258              	.LVL13:
+ 259              	.L12:
+ 260              		.cfi_restore_state
+  23:AudioEngine.cpp ****             _osc.SetWaveform(0);
+ 261              		.loc 1 23 9 is_stmt 1 view .LVU55
+  24:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_ATTACK, 0.5f);
+ 262              		.loc 1 24 13 view .LVU56
+ 263              	.LBB53:
+ 264              	.LBI53:
+  79:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
+ 265              		.loc 3 79 17 view .LVU57
+ 266              	.LBB54:
+ 267              		.loc 3 81 9 view .LVU58
+ 268              		.loc 3 81 19 is_stmt 0 view .LVU59
+ 269 0064 00F82C4B 		strb	r4, [r0], #44
+ 270              	.LVL14:
+ 271              		.loc 3 81 19 view .LVU60
+ 272              	.LBE54:
+ 273              	.LBE53:
+  25:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.2f);
+ 274              		.loc 1 25 13 is_stmt 1 view .LVU61
+  25:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.2f);
+ 275              		.loc 1 25 25 is_stmt 0 view .LVU62
+ 276 0068 B6EE000A 		vmov.f32	s0, #5.0e-1
+ 277 006c 0121     		movs	r1, #1
+ 278              	.LVL15:
+  25:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.2f);
+ 279              		.loc 1 25 25 view .LVU63
+ 280 006e 0190     		str	r0, [sp, #4]
+ 281 0070 FFF7FEFF 		bl	_ZN7daisysp4Adsr7SetTimeEif
+ 282              	.LVL16:
+  26:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_RELEASE, 1.2f);
+ 283              		.loc 1 26 13 is_stmt 1 view .LVU64
+  26:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_RELEASE, 1.2f);
+ 284              		.loc 1 26 25 is_stmt 0 view .LVU65
+ 285 0074 0198     		ldr	r0, [sp, #4]
+ 286 0076 9FED270A 		vldr.32	s0, .L13+24
+ 287 007a 0221     		movs	r1, #2
+ 288 007c FFF7FEFF 		bl	_ZN7daisysp4Adsr7SetTimeEif
+ 289              	.LVL17:
+  27:AudioEngine.cpp ****             _env.SetSustainLevel(0.8f);
+ 290              		.loc 1 27 13 is_stmt 1 view .LVU66
+  27:AudioEngine.cpp ****             _env.SetSustainLevel(0.8f);
+ 291              		.loc 1 27 25 is_stmt 0 view .LVU67
+ 292 0080 0421     		movs	r1, #4
+ 293 0082 0198     		ldr	r0, [sp, #4]
+ 294 0084 9FED240A 		vldr.32	s0, .L13+28
+ 295 0088 FFF7FEFF 		bl	_ZN7daisysp4Adsr7SetTimeEif
+ 296              	.LVL18:
+  28:AudioEngine.cpp ****             _filter.SetFreq(6000.0f);
+ 297              		.loc 1 28 13 is_stmt 1 view .LVU68
+ 298              	.LBB55:
+ 299              	.LBI55:
+  74:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 11
+
+
+ 300              		.loc 2 74 17 view .LVU69
+ 301              	.LBB56:
+  76:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****                                        : (sus_level > 1.f) ? 1.f : sus_level;
+ 302              		.loc 2 76 9 view .LVU70
+ 303              		.loc 2 78 9 view .LVU71
+ 304              		.loc 2 78 20 is_stmt 0 view .LVU72
+ 305 008c 234B     		ldr	r3, .L13+32
+ 306              	.LBE56:
+ 307              	.LBE55:
+  29:AudioEngine.cpp ****             _filter.SetRes(0.1f);
+ 308              		.loc 1 29 28 view .LVU73
+ 309 008e 05F15C00 		add	r0, r5, #92
+ 310 0092 9FED230A 		vldr.32	s0, .L13+36
+ 311              	.LBB58:
+ 312              	.LBB57:
+ 313              		.loc 2 78 20 view .LVU74
+ 314 0096 EB62     		str	r3, [r5, #44]	@ float
+ 315              	.LVL19:
+ 316              		.loc 2 78 20 view .LVU75
+ 317              	.LBE57:
+ 318              	.LBE58:
+  29:AudioEngine.cpp ****             _filter.SetRes(0.1f);
+ 319              		.loc 1 29 13 is_stmt 1 view .LVU76
+  29:AudioEngine.cpp ****             _filter.SetRes(0.1f);
+ 320              		.loc 1 29 28 is_stmt 0 view .LVU77
+ 321 0098 0190     		str	r0, [sp, #4]
+ 322 009a FFF7FEFF 		bl	_ZN7daisysp3Svf7SetFreqEf
+ 323              	.LVL20:
+  30:AudioEngine.cpp ****             break;
+ 324              		.loc 1 30 13 is_stmt 1 view .LVU78
+  30:AudioEngine.cpp ****             break;
+ 325              		.loc 1 30 27 is_stmt 0 view .LVU79
+ 326 009e 9FED210A 		vldr.32	s0, .L13+40
+  50:AudioEngine.cpp ****             break;
+ 327              		.loc 1 50 27 view .LVU80
+ 328 00a2 0198     		ldr	r0, [sp, #4]
+ 329              		.loc 1 56 1 view .LVU81
+ 330 00a4 03B0     		add	sp, sp, #12
+ 331              		.cfi_remember_state
+ 332              		.cfi_def_cfa_offset 12
+ 333              		@ sp needed
+ 334 00a6 BDE83040 		pop	{r4, r5, lr}
+ 335              		.cfi_restore 14
+ 336              		.cfi_restore 5
+ 337              		.cfi_restore 4
+ 338              		.cfi_def_cfa_offset 0
+ 339              	.LVL21:
+  50:AudioEngine.cpp ****             break;
+ 340              		.loc 1 50 27 view .LVU82
+ 341 00aa FFF7FEBF 		b	_ZN7daisysp3Svf6SetResEf
+ 342              	.LVL22:
+ 343              	.L8:
+ 344              		.cfi_restore_state
+  43:AudioEngine.cpp ****             _osc.SetWaveform(daisysp::Oscillator::WAVE_POLYBLEP_SAW);
+ 345              		.loc 1 43 9 is_stmt 1 view .LVU83
+  44:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_ATTACK, 0.05f);
+ 346              		.loc 1 44 13 view .LVU84
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 12
+
+
+ 347              	.LBB59:
+ 348              	.LBI59:
+  79:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
+ 349              		.loc 3 79 17 view .LVU85
+ 350              	.LBB60:
+ 351              		.loc 3 81 9 view .LVU86
+ 352              		.loc 3 81 19 is_stmt 0 view .LVU87
+ 353 00ae 0623     		movs	r3, #6
+ 354              	.LBE60:
+ 355              	.LBE59:
+  45:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.1f);
+ 356              		.loc 1 45 25 view .LVU88
+ 357 00b0 9FED1D0A 		vldr.32	s0, .L13+44
+ 358 00b4 0121     		movs	r1, #1
+ 359              	.LVL23:
+ 360              	.LBB62:
+ 361              	.LBB61:
+ 362              		.loc 3 81 19 view .LVU89
+ 363 00b6 00F82C3B 		strb	r3, [r0], #44
+ 364              	.LVL24:
+ 365              		.loc 3 81 19 view .LVU90
+ 366              	.LBE61:
+ 367              	.LBE62:
+  45:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.1f);
+ 368              		.loc 1 45 13 is_stmt 1 view .LVU91
+  45:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.1f);
+ 369              		.loc 1 45 25 is_stmt 0 view .LVU92
+ 370 00ba 0190     		str	r0, [sp, #4]
+ 371 00bc FFF7FEFF 		bl	_ZN7daisysp4Adsr7SetTimeEif
+ 372              	.LVL25:
+  46:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_RELEASE, 0.4f);
+ 373              		.loc 1 46 13 is_stmt 1 view .LVU93
+  46:AudioEngine.cpp ****             _env.SetTime(daisysp::ADSR_SEG_RELEASE, 0.4f);
+ 374              		.loc 1 46 25 is_stmt 0 view .LVU94
+ 375 00c0 2146     		mov	r1, r4
+ 376 00c2 0198     		ldr	r0, [sp, #4]
+ 377 00c4 9FED170A 		vldr.32	s0, .L13+40
+ 378 00c8 FFF7FEFF 		bl	_ZN7daisysp4Adsr7SetTimeEif
+ 379              	.LVL26:
+  47:AudioEngine.cpp ****             _env.SetSustainLevel(0.7f);
+ 380              		.loc 1 47 13 is_stmt 1 view .LVU95
+  47:AudioEngine.cpp ****             _env.SetSustainLevel(0.7f);
+ 381              		.loc 1 47 25 is_stmt 0 view .LVU96
+ 382 00cc 0421     		movs	r1, #4
+ 383 00ce 0198     		ldr	r0, [sp, #4]
+ 384 00d0 9FED0F0A 		vldr.32	s0, .L13+20
+ 385 00d4 FFF7FEFF 		bl	_ZN7daisysp4Adsr7SetTimeEif
+ 386              	.LVL27:
+  48:AudioEngine.cpp ****             _filter.SetFreq(8000.0f);
+ 387              		.loc 1 48 13 is_stmt 1 view .LVU97
+ 388              	.LBB63:
+ 389              	.LBI63:
+  74:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     {
+ 390              		.loc 2 74 17 view .LVU98
+ 391              	.LBB64:
+  76:../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****                                        : (sus_level > 1.f) ? 1.f : sus_level;
+ 392              		.loc 2 76 9 view .LVU99
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 13
+
+
+ 393              		.loc 2 78 9 view .LVU100
+ 394              		.loc 2 78 20 is_stmt 0 view .LVU101
+ 395 00d8 144B     		ldr	r3, .L13+48
+ 396              	.LBE64:
+ 397              	.LBE63:
+  49:AudioEngine.cpp ****             _filter.SetRes(0.3f);
+ 398              		.loc 1 49 28 view .LVU102
+ 399 00da 05F15C00 		add	r0, r5, #92
+ 400 00de 9FED140A 		vldr.32	s0, .L13+52
+ 401              	.LBB66:
+ 402              	.LBB65:
+ 403              		.loc 2 78 20 view .LVU103
+ 404 00e2 EB62     		str	r3, [r5, #44]	@ float
+ 405              	.LVL28:
+ 406              		.loc 2 78 20 view .LVU104
+ 407              	.LBE65:
+ 408              	.LBE66:
+  49:AudioEngine.cpp ****             _filter.SetRes(0.3f);
+ 409              		.loc 1 49 13 is_stmt 1 view .LVU105
+  49:AudioEngine.cpp ****             _filter.SetRes(0.3f);
+ 410              		.loc 1 49 28 is_stmt 0 view .LVU106
+ 411 00e4 0190     		str	r0, [sp, #4]
+ 412 00e6 FFF7FEFF 		bl	_ZN7daisysp3Svf7SetFreqEf
+ 413              	.LVL29:
+  50:AudioEngine.cpp ****             break;
+ 414              		.loc 1 50 13 is_stmt 1 view .LVU107
+  50:AudioEngine.cpp ****             break;
+ 415              		.loc 1 50 27 is_stmt 0 view .LVU108
+ 416 00ea 9FED060A 		vldr.32	s0, .L13+8
+ 417 00ee 0198     		ldr	r0, [sp, #4]
+ 418              		.loc 1 56 1 view .LVU109
+ 419 00f0 03B0     		add	sp, sp, #12
+ 420              		.cfi_def_cfa_offset 12
+ 421              		@ sp needed
+ 422 00f2 BDE83040 		pop	{r4, r5, lr}
+ 423              		.cfi_restore 14
+ 424              		.cfi_restore 5
+ 425              		.cfi_restore 4
+ 426              		.cfi_def_cfa_offset 0
+ 427              	.LVL30:
+  50:AudioEngine.cpp ****             break;
+ 428              		.loc 1 50 27 view .LVU110
+ 429 00f6 FFF7FEBF 		b	_ZN7daisysp3Svf6SetResEf
+ 430              	.LVL31:
+ 431              	.L14:
+ 432 00fa 00BF     		.align	2
+ 433              	.L13:
+ 434 00fc 0AD7233C 		.word	1008981770
+ 435 0100 9A99193E 		.word	1041865114
+ 436 0104 9A99993E 		.word	1050253722
+ 437 0108 0AD723BC 		.word	-1138501878
+ 438 010c 0080BB44 		.word	1153138688
+ 439 0110 CDCCCC3E 		.word	1053609165
+ 440 0114 CDCC4C3E 		.word	1045220557
+ 441 0118 9A99993F 		.word	1067030938
+ 442 011c CDCC4C3F 		.word	1061997773
+ 443 0120 0080BB45 		.word	1169915904
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 14
+
+
+ 444 0124 CDCCCC3D 		.word	1036831949
+ 445 0128 CDCC4C3D 		.word	1028443341
+ 446 012c 3333333F 		.word	1060320051
+ 447 0130 0000FA45 		.word	1174011904
+ 448              		.cfi_endproc
+ 449              	.LFE3579:
+ 451              		.section	.text._ZN11AudioEngine4InitEf,"ax",%progbits
+ 452              		.align	1
+ 453              		.p2align 2,,3
+ 454              		.global	_ZN11AudioEngine4InitEf
+ 455              		.syntax unified
+ 456              		.thumb
+ 457              		.thumb_func
+ 458              		.fpu fpv5-d16
+ 460              	_ZN11AudioEngine4InitEf:
+ 461              	.LVL32:
+ 462              	.LFB3578:
+   6:AudioEngine.cpp ****     // Inizializzazione moduli
+ 463              		.loc 1 6 43 is_stmt 1 view -0
+ 464              		.cfi_startproc
+ 465              		@ args = 0, pretend = 0, frame = 0
+ 466              		@ frame_needed = 0, uses_anonymous_args = 0
+   8:AudioEngine.cpp ****     _env.Init(sample_rate);
+ 467              		.loc 1 8 5 view .LVU112
+   6:AudioEngine.cpp ****     // Inizializzazione moduli
+ 468              		.loc 1 6 43 is_stmt 0 view .LVU113
+ 469 0000 38B5     		push	{r3, r4, r5, lr}
+ 470              		.cfi_def_cfa_offset 16
+ 471              		.cfi_offset 3, -16
+ 472              		.cfi_offset 4, -12
+ 473              		.cfi_offset 5, -8
+ 474              		.cfi_offset 14, -4
+ 475              	.LBB69:
+ 476              	.LBB70:
+  53:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
+ 477              		.loc 3 53 27 view .LVU114
+ 478 0002 B7EE007A 		vmov.f32	s14, #1.0e+0
+  55:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         pw_        = 0.5f;
+ 479              		.loc 3 55 20 view .LVU115
+ 480 0006 4FF07C53 		mov	r3, #1056964608
+  57:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(freq_);
+ 481              		.loc 3 57 20 view .LVU116
+ 482 000a 0022     		movs	r2, #0
+ 483              	.LBE70:
+ 484              	.LBE69:
+   6:AudioEngine.cpp ****     // Inizializzazione moduli
+ 485              		.loc 1 6 43 view .LVU117
+ 486 000c 0446     		mov	r4, r0
+ 487              	.LVL33:
+ 488              	.LBB74:
+ 489              	.LBB71:
+  59:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
+ 490              		.loc 3 59 20 view .LVU118
+ 491 000e 0025     		movs	r5, #0
+ 492              	.LBE71:
+ 493              	.LBE74:
+   6:AudioEngine.cpp ****     // Inizializzazione moduli
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 15
+
+
+ 494              		.loc 1 6 43 view .LVU119
+ 495 0010 2DED028B 		vpush.64	{d8}
+ 496              		.cfi_def_cfa_offset 24
+ 497              		.cfi_offset 80, -24
+ 498              		.cfi_offset 81, -20
+   6:AudioEngine.cpp ****     // Inizializzazione moduli
+ 499              		.loc 1 6 43 view .LVU120
+ 500 0014 B0EE408A 		vmov.f32	s16, s0
+ 501              	.LVL34:
+ 502              	.LBB75:
+ 503              	.LBI69:
+  50:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
+ 504              		.loc 3 50 10 is_stmt 1 view .LVU121
+ 505              	.LBB72:
+  52:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
+ 506              		.loc 3 52 9 view .LVU122
+  54:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
+ 507              		.loc 3 54 20 is_stmt 0 view .LVU123
+ 508 0018 9FED180A 		vldr.32	s0, .L17
+ 509              	.LVL35:
+  57:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(freq_);
+ 510              		.loc 3 57 20 view .LVU124
+ 511 001c 8261     		str	r2, [r0, #24]	@ float
+  55:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         pw_        = 0.5f;
+ 512              		.loc 3 55 20 view .LVU125
+ 513 001e 4360     		str	r3, [r0, #4]	@ float
+  53:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
+ 514              		.loc 3 53 27 view .LVU126
+ 515 0020 C7EE087A 		vdiv.f32	s15, s14, s16
+  52:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
+ 516              		.loc 3 52 20 view .LVU127
+ 517 0024 80ED048A 		vstr.32	s16, [r0, #16]
+  53:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
+ 518              		.loc 3 53 9 is_stmt 1 view .LVU128
+  56:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_     = 0.0f;
+ 519              		.loc 3 56 20 is_stmt 0 view .LVU129
+ 520 0028 C360     		str	r3, [r0, #12]	@ float
+  54:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
+ 521              		.loc 3 54 20 view .LVU130
+ 522 002a 80ED020A 		vstr.32	s0, [r0, #8]
+  53:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
+ 523              		.loc 3 53 20 view .LVU131
+ 524 002e C0ED057A 		vstr.32	s15, [r0, #20]
+  54:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
+ 525              		.loc 3 54 9 is_stmt 1 view .LVU132
+  55:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         pw_        = 0.5f;
+ 526              		.loc 3 55 9 view .LVU133
+  56:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_     = 0.0f;
+ 527              		.loc 3 56 9 view .LVU134
+  57:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(freq_);
+ 528              		.loc 3 57 9 view .LVU135
+  58:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
+ 529              		.loc 3 58 9 view .LVU136
+  58:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
+ 530              		.loc 3 58 34 is_stmt 0 view .LVU137
+ 531 0032 FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
+ 532              	.LVL36:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 16
+
+
+  58:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
+ 533              		.loc 3 58 34 view .LVU138
+ 534 0036 F0EE407A 		vmov.f32	s15, s0
+  61:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
+ 535              		.loc 3 61 20 view .LVU139
+ 536 003a 40F20113 		movw	r3, #257
+ 537              	.LBE72:
+ 538              	.LBE75:
+   9:AudioEngine.cpp ****     _filter.Init(sample_rate);
+ 539              		.loc 1 9 14 view .LVU140
+ 540 003e B0EE480A 		vmov.f32	s0, s16
+ 541 0042 0121     		movs	r1, #1
+ 542 0044 04F12C00 		add	r0, r4, #44
+ 543              	.LBB76:
+ 544              	.LBB73:
+  61:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
+ 545              		.loc 3 61 20 view .LVU141
+ 546 0048 2385     		strh	r3, [r4, #40]	@ movhi
+  58:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
+ 547              		.loc 3 58 20 view .LVU142
+ 548 004a C4ED077A 		vstr.32	s15, [r4, #28]
+  59:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
+ 549              		.loc 3 59 9 is_stmt 1 view .LVU143
+  59:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
+ 550              		.loc 3 59 20 is_stmt 0 view .LVU144
+ 551 004e 2570     		strb	r5, [r4]
+  60:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eor_       = true;
+ 552              		.loc 3 60 9 is_stmt 1 view .LVU145
+  61:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
+ 553              		.loc 3 61 9 view .LVU146
+ 554              	.LVL37:
+  61:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
+ 555              		.loc 3 61 9 is_stmt 0 view .LVU147
+ 556              	.LBE73:
+ 557              	.LBE76:
+   9:AudioEngine.cpp ****     _filter.Init(sample_rate);
+ 558              		.loc 1 9 5 is_stmt 1 view .LVU148
+   9:AudioEngine.cpp ****     _filter.Init(sample_rate);
+ 559              		.loc 1 9 14 is_stmt 0 view .LVU149
+ 560 0050 FFF7FEFF 		bl	_ZN7daisysp4Adsr4InitEfi
+ 561              	.LVL38:
+  10:AudioEngine.cpp **** 
+ 562              		.loc 1 10 5 is_stmt 1 view .LVU150
+  10:AudioEngine.cpp **** 
+ 563              		.loc 1 10 17 is_stmt 0 view .LVU151
+ 564 0054 04F15C00 		add	r0, r4, #92
+ 565 0058 B0EE480A 		vmov.f32	s0, s16
+ 566 005c FFF7FEFF 		bl	_ZN7daisysp3Svf4InitEf
+ 567              	.LVL39:
+  12:AudioEngine.cpp ****     _currentFreq = 440.0f;
+ 568              		.loc 1 12 5 is_stmt 1 view .LVU152
+  13:AudioEngine.cpp ****     
+ 569              		.loc 1 13 18 is_stmt 0 view .LVU153
+ 570 0060 074B     		ldr	r3, .L17+4
+  16:AudioEngine.cpp **** }
+ 571              		.loc 1 16 14 view .LVU154
+ 572 0062 2946     		mov	r1, r5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 17
+
+
+ 573 0064 2046     		mov	r0, r4
+  12:AudioEngine.cpp ****     _currentFreq = 440.0f;
+ 574              		.loc 1 12 15 view .LVU155
+ 575 0066 84F8A950 		strb	r5, [r4, #169]
+  13:AudioEngine.cpp ****     
+ 576              		.loc 1 13 5 is_stmt 1 view .LVU156
+  13:AudioEngine.cpp ****     
+ 577              		.loc 1 13 18 is_stmt 0 view .LVU157
+ 578 006a C4F8AC30 		str	r3, [r4, #172]	@ float
+  16:AudioEngine.cpp **** }
+ 579              		.loc 1 16 5 is_stmt 1 view .LVU158
+  17:AudioEngine.cpp **** 
+ 580              		.loc 1 17 1 is_stmt 0 view .LVU159
+ 581 006e BDEC028B 		vldm	sp!, {d8}
+ 582              		.cfi_restore 80
+ 583              		.cfi_restore 81
+ 584              		.cfi_def_cfa_offset 16
+ 585              	.LVL40:
+  17:AudioEngine.cpp **** 
+ 586              		.loc 1 17 1 view .LVU160
+ 587 0072 BDE83840 		pop	{r3, r4, r5, lr}
+ 588              		.cfi_restore 14
+ 589              		.cfi_restore 5
+ 590              		.cfi_restore 4
+ 591              		.cfi_restore 3
+ 592              		.cfi_def_cfa_offset 0
+ 593              	.LVL41:
+  16:AudioEngine.cpp **** }
+ 594              		.loc 1 16 14 view .LVU161
+ 595 0076 FFF7FEBF 		b	_ZN11AudioEngine9SetPresetE11SynthPreset
+ 596              	.LVL42:
+ 597              	.L18:
+  16:AudioEngine.cpp **** }
+ 598              		.loc 1 16 14 view .LVU162
+ 599 007a 00BF     		.align	2
+ 600              	.L17:
+ 601 007c 0000C842 		.word	1120403456
+ 602 0080 0000DC43 		.word	1138491392
+ 603              		.cfi_endproc
+ 604              	.LFE3578:
+ 606              		.section	.text._ZN11AudioEngine6UpdateE14ControlsStruct,"ax",%progbits
+ 607              		.align	1
+ 608              		.p2align 2,,3
+ 609              		.global	_ZN11AudioEngine6UpdateE14ControlsStruct
+ 610              		.syntax unified
+ 611              		.thumb
+ 612              		.thumb_func
+ 613              		.fpu fpv5-d16
+ 615              	_ZN11AudioEngine6UpdateE14ControlsStruct:
+ 616              	.LVL43:
+ 617              	.LFB3580:
+  57:AudioEngine.cpp **** 
+  58:AudioEngine.cpp **** void AudioEngine::Update(ControlsStruct Controls) {
+ 618              		.loc 1 58 51 is_stmt 1 view -0
+ 619              		.cfi_startproc
+ 620              		@ args = 0, pretend = 0, frame = 8
+ 621              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 18
+
+
+ 622              		.loc 1 58 51 is_stmt 0 view .LVU164
+ 623 0000 30B5     		push	{r4, r5, lr}
+ 624              		.cfi_def_cfa_offset 12
+ 625              		.cfi_offset 4, -12
+ 626              		.cfi_offset 5, -8
+ 627              		.cfi_offset 14, -4
+ 628 0002 83B0     		sub	sp, sp, #12
+ 629              		.cfi_def_cfa_offset 24
+ 630              		.loc 1 58 51 view .LVU165
+ 631 0004 0446     		mov	r4, r0
+ 632 0006 02AB     		add	r3, sp, #8
+ 633 0008 03E90600 		stmdb	r3, {r1, r2}
+  59:AudioEngine.cpp ****     // Aggiorna la frequenza in modo continuo o usa un portamento se necessario
+  60:AudioEngine.cpp ****     _currentFreq = Controls.freq;
+ 634              		.loc 1 60 29 view .LVU166
+ 635 000c 9DED000A 		vldr.32	s0, [sp]
+ 636 0010 9DF80450 		ldrb	r5, [sp, #4]	@ zero_extendqisi2
+ 637              	.LVL44:
+ 638              		.loc 1 60 5 is_stmt 1 view .LVU167
+ 639              		.loc 1 60 18 is_stmt 0 view .LVU168
+ 640 0014 80ED2B0A 		vstr.32	s0, [r0, #172]
+  61:AudioEngine.cpp ****     _osc.SetFreq(_currentFreq);
+ 641              		.loc 1 61 5 is_stmt 1 view .LVU169
+ 642              	.LVL45:
+ 643              	.LBB77:
+ 644              	.LBI77:
+  67:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
+ 645              		.loc 3 67 17 view .LVU170
+ 646              	.LBB78:
+  69:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
+ 647              		.loc 3 69 9 view .LVU171
+  69:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
+ 648              		.loc 3 69 20 is_stmt 0 view .LVU172
+ 649 0018 80ED020A 		vstr.32	s0, [r0, #8]
+  70:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
+ 650              		.loc 3 70 9 is_stmt 1 view .LVU173
+  70:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
+ 651              		.loc 3 70 34 is_stmt 0 view .LVU174
+ 652 001c FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
+ 653              	.LVL46:
+  70:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
+ 654              		.loc 3 70 20 view .LVU175
+ 655 0020 84ED070A 		vstr.32	s0, [r4, #28]
+ 656              	.LVL47:
+  70:../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
+ 657              		.loc 3 70 20 view .LVU176
+ 658              	.LBE78:
+ 659              	.LBE77:
+  62:AudioEngine.cpp **** 
+  63:AudioEngine.cpp ****     // Gestione del trigger dell'inviluppo (Fronte di salita)
+  64:AudioEngine.cpp ****     if (Controls.gate && !_lastGate) {
+ 660              		.loc 1 64 5 is_stmt 1 view .LVU177
+ 661 0024 15B1     		cbz	r5, .L20
+ 662              		.loc 1 64 23 is_stmt 0 discriminator 1 view .LVU178
+ 663 0026 94F8A910 		ldrb	r1, [r4, #169]	@ zero_extendqisi2
+ 664 002a 19B1     		cbz	r1, .L25
+ 665              	.L20:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 19
+
+
+  65:AudioEngine.cpp ****         _env.Retrigger(false);
+  66:AudioEngine.cpp ****     }
+  67:AudioEngine.cpp ****     
+  68:AudioEngine.cpp ****     // Aggiornamento dello stato del gate
+  69:AudioEngine.cpp ****     _lastGate = Controls.gate;
+ 666              		.loc 1 69 5 is_stmt 1 view .LVU179
+ 667              		.loc 1 69 15 is_stmt 0 view .LVU180
+ 668 002c 84F8A950 		strb	r5, [r4, #169]
+  70:AudioEngine.cpp **** }
+ 669              		.loc 1 70 1 view .LVU181
+ 670 0030 03B0     		add	sp, sp, #12
+ 671              		.cfi_remember_state
+ 672              		.cfi_def_cfa_offset 12
+ 673              		@ sp needed
+ 674 0032 30BD     		pop	{r4, r5, pc}
+ 675              	.LVL48:
+ 676              	.L25:
+ 677              		.cfi_restore_state
+  65:AudioEngine.cpp ****         _env.Retrigger(false);
+ 678              		.loc 1 65 9 is_stmt 1 view .LVU182
+  65:AudioEngine.cpp ****         _env.Retrigger(false);
+ 679              		.loc 1 65 23 is_stmt 0 view .LVU183
+ 680 0034 04F12C00 		add	r0, r4, #44
+ 681 0038 FFF7FEFF 		bl	_ZN7daisysp4Adsr9RetriggerEb
+ 682              	.LVL49:
+  69:AudioEngine.cpp **** }
+ 683              		.loc 1 69 5 is_stmt 1 view .LVU184
+  69:AudioEngine.cpp **** }
+ 684              		.loc 1 69 15 is_stmt 0 view .LVU185
+ 685 003c 84F8A950 		strb	r5, [r4, #169]
+ 686              		.loc 1 70 1 view .LVU186
+ 687 0040 03B0     		add	sp, sp, #12
+ 688              		.cfi_def_cfa_offset 12
+ 689              		@ sp needed
+ 690 0042 30BD     		pop	{r4, r5, pc}
+ 691              		.loc 1 70 1 view .LVU187
+ 692              		.cfi_endproc
+ 693              	.LFE3580:
+ 695              		.section	.text._ZN11AudioEngine7ProcessEv,"ax",%progbits
+ 696              		.align	1
+ 697              		.p2align 2,,3
+ 698              		.global	_ZN11AudioEngine7ProcessEv
+ 699              		.syntax unified
+ 700              		.thumb
+ 701              		.thumb_func
+ 702              		.fpu fpv5-d16
+ 704              	_ZN11AudioEngine7ProcessEv:
+ 705              	.LVL50:
+ 706              	.LFB3581:
+  71:AudioEngine.cpp **** 
+  72:AudioEngine.cpp **** float AudioEngine::Process() {
+ 707              		.loc 1 72 30 is_stmt 1 view -0
+ 708              		.cfi_startproc
+ 709              		@ args = 0, pretend = 0, frame = 0
+ 710              		@ frame_needed = 0, uses_anonymous_args = 0
+  73:AudioEngine.cpp ****     // 1. Processa l'inviluppo passando lo stato del gate
+  74:AudioEngine.cpp ****     float env_out = _env.Process(_lastGate);
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 20
+
+
+ 711              		.loc 1 74 5 view .LVU189
+  72:AudioEngine.cpp ****     // 1. Processa l'inviluppo passando lo stato del gate
+ 712              		.loc 1 72 30 is_stmt 0 view .LVU190
+ 713 0000 10B5     		push	{r4, lr}
+ 714              		.cfi_def_cfa_offset 8
+ 715              		.cfi_offset 4, -8
+ 716              		.cfi_offset 14, -4
+ 717              		.loc 1 74 33 view .LVU191
+ 718 0002 90F8A910 		ldrb	r1, [r0, #169]	@ zero_extendqisi2
+  72:AudioEngine.cpp ****     // 1. Processa l'inviluppo passando lo stato del gate
+ 719              		.loc 1 72 30 view .LVU192
+ 720 0006 0446     		mov	r4, r0
+ 721              		.loc 1 74 33 view .LVU193
+ 722 0008 2C30     		adds	r0, r0, #44
+ 723              	.LVL51:
+  72:AudioEngine.cpp ****     // 1. Processa l'inviluppo passando lo stato del gate
+ 724              		.loc 1 72 30 view .LVU194
+ 725 000a 2DED028B 		vpush.64	{d8}
+ 726              		.cfi_def_cfa_offset 16
+ 727              		.cfi_offset 80, -16
+ 728              		.cfi_offset 81, -12
+ 729              		.loc 1 74 33 view .LVU195
+ 730 000e FFF7FEFF 		bl	_ZN7daisysp4Adsr7ProcessEb
+ 731              	.LVL52:
+ 732 0012 B0EE408A 		vmov.f32	s16, s0
+ 733              	.LVL53:
+  75:AudioEngine.cpp **** 
+  76:AudioEngine.cpp ****     // 2. Processa l'oscillatore
+  77:AudioEngine.cpp ****     float sig = _osc.Process();
+ 734              		.loc 1 77 5 is_stmt 1 view .LVU196
+ 735              		.loc 1 77 29 is_stmt 0 view .LVU197
+ 736 0016 2046     		mov	r0, r4
+ 737 0018 FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
+ 738              	.LVL54:
+  78:AudioEngine.cpp **** 
+  79:AudioEngine.cpp ****     // 3. Applica l'inviluppo all'ampiezza
+  80:AudioEngine.cpp ****     sig *= env_out;
+ 739              		.loc 1 80 5 is_stmt 1 view .LVU198
+  81:AudioEngine.cpp **** 
+  82:AudioEngine.cpp ****     // 4. (Opzionale) Modula il filtro con l'inviluppo per dare dinamica
+  83:AudioEngine.cpp ****     // _filter.SetFreq(200.0f + (env_out * 4000.0f));
+  84:AudioEngine.cpp **** 
+  85:AudioEngine.cpp ****     // 5. Processa il segnale attraverso il filtro
+  86:AudioEngine.cpp ****     _filter.Process(sig);
+ 740              		.loc 1 86 5 view .LVU199
+ 741              		.loc 1 86 20 is_stmt 0 view .LVU200
+ 742 001c 04F15C00 		add	r0, r4, #92
+ 743 0020 28EE000A 		vmul.f32	s0, s16, s0
+ 744              	.LVL55:
+ 745              		.loc 1 86 20 view .LVU201
+ 746 0024 FFF7FEFF 		bl	_ZN7daisysp3Svf7ProcessEf
+ 747              	.LVL56:
+  87:AudioEngine.cpp **** 
+  88:AudioEngine.cpp ****     // Ritorna l'uscita passa-basso
+  89:AudioEngine.cpp ****     return _filter.Low();
+ 748              		.loc 1 89 5 is_stmt 1 view .LVU202
+ 749              	.LBB79:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 21
+
+
+ 750              	.LBI79:
+  31:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     /** Initializes the filter
+  32:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****         float sample_rate - sample rate of the audio engine being run, and the frequency that the P
+  33:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     */
+  34:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     void Init(float sample_rate);
+  35:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** 
+  36:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** 
+  37:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     /** 
+  38:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****         Process the input signal, updating all of the outputs.
+  39:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     */
+  40:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     void Process(float in);
+  41:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** 
+  42:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** 
+  43:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     /** sets the frequency of the cutoff frequency. 
+  44:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****         f must be between 0.0 and sample_rate / 3
+  45:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     */
+  46:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     void SetFreq(float f);
+  47:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** 
+  48:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     /** sets the resonance of the filter.
+  49:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****         Must be between 0.0 and 1.0 to ensure stability.
+  50:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     */
+  51:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     void SetRes(float r);
+  52:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h **** 
+  53:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     /** sets the drive of the filter 
+  54:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****         affects the response of the resonance of the filter
+  55:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     */
+  56:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     void SetDrive(float d);
+  57:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     /** lowpass output
+  58:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****         \return low pass output of the filter
+  59:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     */
+  60:../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h ****     inline float Low() { return out_low_; }
+ 751              		.loc 4 60 18 view .LVU203
+ 752              	.LBB80:
+ 753              		.loc 4 60 26 view .LVU204
+ 754              		.loc 4 60 26 is_stmt 0 view .LVU205
+ 755              	.LBE80:
+ 756              	.LBE79:
+  90:AudioEngine.cpp **** }...
+ 757              		.loc 1 90 1 view .LVU206
+ 758 0028 94ED230A 		vldr.32	s0, [r4, #140]
+ 759 002c BDEC028B 		vldm	sp!, {d8}
+ 760              		.cfi_restore 80
+ 761              		.cfi_restore 81
+ 762              		.cfi_def_cfa_offset 8
+ 763              	.LVL57:
+ 764              		.loc 1 90 1 view .LVU207
+ 765 0030 10BD     		pop	{r4, pc}
+ 766              		.loc 1 90 1 view .LVU208
+ 767              		.cfi_endproc
+ 768              	.LFE3581:
+ 770 0032 00BF     		.text
+ 771              	.Letext0:
+ 772              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 773              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 774              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 775              		.file 8 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 776              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 22
+
+
+ 777              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 778              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 779              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 780              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 781              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 782              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 783              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 784              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 785              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 786              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 787              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 788              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 789              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\charconv.h
+ 790              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 791              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 792              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 793              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 794              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 795              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 796              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 797              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 798              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 799              		.file 32 "../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adenv.h"
+ 800              		.file 33 "../../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h"
+ 801              		.file 34 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 802              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 803              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 804              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 805              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 806              		.file 39 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 807              		.file 40 "AudioEngine.h"
+ 808              		.file 41 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s 			page 23
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 AudioEngine.cpp
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:17     .text._ZN11AudioEngineC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:26     .text._ZN11AudioEngineC2Ev:00000000 _ZN11AudioEngineC2Ev
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:83     .text._ZN11AudioEngineC2Ev:00000024 $d
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:26     .text._ZN11AudioEngineC2Ev:00000000 _ZN11AudioEngineC1Ev
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:90     .text._ZN11AudioEngineD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:98     .text._ZN11AudioEngineD2Ev:00000000 _ZN11AudioEngineD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:98     .text._ZN11AudioEngineD2Ev:00000000 _ZN11AudioEngineD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:129    .text._ZN11AudioEngine9SetPresetE11SynthPreset:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:137    .text._ZN11AudioEngine9SetPresetE11SynthPreset:00000000 _ZN11AudioEngine9SetPresetE11SynthPreset
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:434    .text._ZN11AudioEngine9SetPresetE11SynthPreset:000000fc $d
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:452    .text._ZN11AudioEngine4InitEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:460    .text._ZN11AudioEngine4InitEf:00000000 _ZN11AudioEngine4InitEf
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:601    .text._ZN11AudioEngine4InitEf:0000007c $d
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:607    .text._ZN11AudioEngine6UpdateE14ControlsStruct:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:615    .text._ZN11AudioEngine6UpdateE14ControlsStruct:00000000 _ZN11AudioEngine6UpdateE14ControlsStruct
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:696    .text._ZN11AudioEngine7ProcessEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccgmdLwo.s:704    .text._ZN11AudioEngine7ProcessEv:00000000 _ZN11AudioEngine7ProcessEv
+
+UNDEFINED SYMBOLS
+_ZN7daisysp4Adsr7SetTimeEif
+_ZN7daisysp3Svf7SetFreqEf
+_ZN7daisysp3Svf6SetResEf
+_ZN7daisysp10Oscillator12CalcPhaseIncEf
+_ZN7daisysp4Adsr4InitEfi
+_ZN7daisysp3Svf4InitEf
+_ZN7daisysp4Adsr9RetriggerEb
+_ZN7daisysp4Adsr7ProcessEb
+_ZN7daisysp10Oscillator7ProcessEv
+_ZN7daisysp3Svf7ProcessEf
