@@ -21,6 +21,7 @@ void PlantConditioner::Init(IIR::FilterType filter_type, daisy::DaisySeed* hw) {
     _hw->SetLed(true);
 
 
+
     _deltaFilter.Init(filter_type);
     _deltaFilterMF.Init();
     _delta = 0;
@@ -99,7 +100,6 @@ PlantConditioner::PlantState PlantConditioner::Process() {
         if (_lastNoteIndex >= 0 && _lastNoteIndex < _scaleLength) {
             int i = _lastNoteIndex;
             
-            // Leggiamo i limiti pre-calcolati! Nessun calcolo matematico pesante qui.
             float lower = _noteThresholds[i];
             float upper = _noteThresholds[i+1];
             
@@ -150,4 +150,8 @@ void PlantConditioner::updateThresholds() {
         float pct = (float)i / _scaleLength;
         _noteThresholds[i] = _deltaMin + _range * powf(pct, _curveType);
     }
+}
+
+void PlantConditioner::setHisteresis(float histeresis) {
+    _histeresis = histeresis; updateThresholds(); 
 }

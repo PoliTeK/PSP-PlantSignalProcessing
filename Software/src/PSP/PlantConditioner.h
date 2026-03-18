@@ -58,6 +58,12 @@ public:
     */
     void updateThresholds();
 
+    /*
+        * Sets the hysteresis value for note changes to prevent rapid toggling between adjacent notes when the plant signal is near a threshold.
+            * @param histeresis The hysteresis value in Hz. A larger value creates a wider dead zone between notes.
+    */
+    void setHisteresis(float histeresis);
+
 
     /*
         * Sets the musical scale and root note for mapping the plant signal to frequencies.
@@ -102,7 +108,7 @@ private:
     float _lastFreq      = 0.0f;
     
     // --- Configuration Parameters ---
-    const float _histeresis  = 2.0f; // Dead zone between notes
+    float _histeresis  = 2.0f; // Dead zone between notes
     float       _curveType   = 1.0f; // 1.0 linear, >1 exponential, <1 logarithmic
     uint8_t     _octave      = 4;
     uint8_t     _scaleLength = 7;
