@@ -3,7 +3,6 @@
 #include <cmath>
 #include "../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h"
 #include "../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h"
-#include "../../libs/PoliTeKDSP/Utilities/DataFilter/FIIR/CapFir.h"
 
 class PlantConditioner {
 public:
@@ -37,7 +36,9 @@ public:
 
     void Init(IIR::FilterType filter_type, daisy::DaisySeed* hw);
 
-    void setCurve(uint8_t delta_max, float curve_type);
+    void setCurve(float curve_type);
+
+    void setDelta(float delta_max);
 
     void setScale(enum Notes root_note, enum ScaleType scale_type);
 
@@ -46,12 +47,8 @@ public:
     float Process();
 
     // DEBUG FUNCTIONS
-    float* getBin();
     float getDelta() { return _delta; }
     float getDeltaFilt() { return _deltaFilt; }
-    void setBuffer();
-
-    
     float getDeltaMin() { return _deltaMin; }
     float getDeltaMax() { return _deltaMax; }
     float getRange() { return _range; }
@@ -60,24 +57,20 @@ public:
 
 
 
-    daisy::Mpr121I2C  _cap;
-    daisy::Mpr121I2C::Config _mpr121ObjConf;
+   
 
 private:
     // Parametri Hardware
 
     daisy::DaisySeed* _hw;
+    daisy::Mpr121I2C  _cap;
+    daisy::Mpr121I2C::Config _mpr121ObjConf;
     
-
-
     const uint8_t _touchThreshold = MPR121_TOUCH_THRESHOLD_DEFAULT;
     
-
     // Filtri
     IIR _deltaFilter;
     MF  _deltaFilterMF;
-    CapFir _maxFir;
-    CapFir _curveFir;
 
     // Parametri Logici
     const float _histeresis = 2.0f; // Isteresi (zona morta tra le note)
@@ -88,7 +81,7 @@ private:
     uint8_t _octave = 4;
     uint8_t _scaleLength = 7;
 
-    // Cambiati in float per evitare problemi di calcolo/overflow
+ 
     float _deltaMin = 1.0f;
     float _deltaMax = 50.0f;
     float _range = 99.0f;

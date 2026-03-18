@@ -22,8 +22,6 @@ void PlantConditioner::Init(IIR::FilterType filter_type, daisy::DaisySeed* hw) {
 
     _deltaFilter.Init(filter_type);
     _deltaFilterMF.Init();
-    _maxFir.Init(CapFir::ResType::HIGH);
-    _curveFir.Init(CapFir::ResType::HIGH);
     _delta = 0;
     _deltaFilt = 0;
     _octave = 4;
@@ -84,17 +82,14 @@ void PlantConditioner::setOctave(uint8_t octave) {
 float PlantConditioner::Process() {
 
     float out = _lastFreq;
-    float baseline =(float) _cap.BaselineData(0); 
-    float filtered = (float) _cap.FilteredData(0);
 
-    // Calcolo Delta
-    _delta = (float)baseline - (float)filtered - (float)_touchThreshold;
-    // Filtraggio e Clamp
+    // Computation of filtered and clamped delta
+    _delta = _cap.BaselineData(0) - _cap.FilteredData(0) - (float)_touchThreshold;
     _deltaFilt = _deltaFilter.Process(_deltaFilterMF.Process(_delta));
     _deltaFilt = fclamp(_deltaFilt, _deltaMin, _deltaMax - 0.001f);
     
     // ---------------------------------------------------------
-    // FASE 1: STICKY CHECK (Priorità alla nota corrente)
+    // STICKY CHECK (Current Note has the priority)
     // Controlliamo subito se possiamo rimanere sulla nota attuale
     // ---------------------------------------------------------
     if (_lastNoteIndex >= 0 && _lastNoteIndex < _scaleLength) {
@@ -119,7 +114,7 @@ float PlantConditioner::Process() {
     }
 
     // ---------------------------------------------------------
-    // FASE 2: RICERCA (Se siamo usciti dalla nota corrente)
+    // NEW NOTE CHECK
     // ---------------------------------------------------------
     for (int i = 0; i < _scaleLength; i++) {
         // Se siamo qui, non siamo nella nota corrente, quindi calcoliamo
@@ -139,27 +134,12 @@ float PlantConditioner::Process() {
     return out;
 }
 
-void PlantConditioner::setCurve(uint8_t delta_max, float curve_type) {
-    _curveType = _curveFir.Process(curve_type);
-    
-    // Assicuriamoci che deltaMax sia sempre maggiore di deltaMin
-    float newMax = _maxFir.Process((float)delta_max);
-    if (newMax <= _deltaMin) newMax = _deltaMin + 1.0f;
-    
-    _deltaMax = newMax;
+void PlantConditioner::setCurve(float curve_type) {
+    _curveType = curve_type;
+}
+
+void PlantConditioner::setDelta(float delta_max) {
+    if (delta_max <= _deltaMin) delta_max = _deltaMin + 1.0f;
+    _deltaMax = delta_max;
     _range = _deltaMax - _deltaMin;
-}
-
-// DEBUG FUNCTIONS
-float* PlantConditioner::getBin() {
-    for (int i = 0; i < _scaleLength; i++) {
-        float lower = _deltaMin + _range * powf((float)i / _scaleLength, _curveType);
-        float upper = _deltaMin + _range * powf((float)(i+1) / _scaleLength, _curveType);
-        _bin[i] = upper - lower; 
-    }
-    return _bin;
-}
-
-void PlantConditioner::setBuffer() {
-    _delta = _deltaFilt;
 }
