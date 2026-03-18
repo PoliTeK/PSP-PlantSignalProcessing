@@ -1,15 +1,9 @@
 #pragma once
 #include <cstdint>
 #include <cmath>
-#include "daisysp.h"
-#include "daisy_seed.h"
-
-// Assicurati che questi percorsi siano corretti nel tuo progetto!
-// Se i file sono nella stessa cartella, usa semplicemente #include "CapFir.h" ecc.
-#include "../../Classes/SensorFilters/FIIR/CapFir.h"
-#include "../../Classes/SensorFilters/IIR/iir.h"
-#include "../../Classes/SensorFilters/MF/MF.h"
-
+#include "../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h"
+#include "../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h"
+#include "../../libs/PoliTeKDSP/Utilities/DataFilter/FIIR/CapFir.h"
 
 class PlantConditioner {
 public:

@@ -1,5 +1,4 @@
-build/startup_stm32h750xx.o: \
- ../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c \
+build/myEncoder.o: Components/myEncoder.cpp \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h \
@@ -104,7 +103,12 @@ build/startup_stm32h750xx.o: \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
- ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h
+ ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
+ Components/myEncoder.h ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/per/gpio.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/hid/switch.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/sys/system.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/per/tim.h
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -210,3 +214,9 @@ build/startup_stm32h750xx.o: \
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
+Components/myEncoder.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/per/gpio.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/hid/switch.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/sys/system.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/per/tim.h:

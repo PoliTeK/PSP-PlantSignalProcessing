@@ -5,12 +5,12 @@ TARGET = PSP
 
 # Sources
 
-CPP_SOURCES = PSP.cpp classes/ControlPanel.cpp ../Classes/SensorFilters/FIIR/CapFir.cpp ../Classes/SensorFilters/IIR/iir.cpp ../Classes/SensorFilters/MF/MF.cpp classes/PlantConditioner.cpp  ../Classes/Effects/AnalogDelay/src/AnalogDelay.cpp
+CPP_SOURCES = main.cpp PSP/AudioEngine.cpp PSP/PlantConditioner.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/FIIR/CapFir.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.cpp ../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp
 
 
 # Library Locations
-LIBDAISY_DIR = ../libs/libDaisy
-DAISYSP_DIR = ../libs/DaisySP
+LIBDAISY_DIR = ../libs/PoliTeKDSP/libs/libDaisy
+DAISYSP_DIR = ../libs/PoliTeKDSP/libs/DaisySP
 
 LDFLAGS = -u _printf_float
 CFLAGS += -DDEBUG_MODE

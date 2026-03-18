@@ -1,5 +1,4 @@
-build/startup_stm32h750xx.o: \
- ../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c \
+build/AudioEngine.o: PSP/AudioEngine.cpp \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h \
