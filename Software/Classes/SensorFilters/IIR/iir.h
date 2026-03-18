@@ -21,7 +21,7 @@ private:
     float _sampleRate = 100.0f;  
 
     // --------------------------------------------------------
-    // Butterworth Low-Pass (Order: 2, Fc: 4 Hz @ 1000Hz SR)
+    // Butterworth Low-Pass (Order: 2, Fc: 4 Hz @ 200Hz SR)
     // b = numerator, a = denominator
     // --------------------------------------------------------
     static const int _ButterORDER = 2;

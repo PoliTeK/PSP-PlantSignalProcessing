@@ -1,0 +1,1593 @@
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"ControlPanel.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN12ControlPanel4InitEPN5daisy9DaisySeedE,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_ZN12ControlPanel4InitEPN5daisy9DaisySeedE
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
+  26              	_ZN12ControlPanel4InitEPN5daisy9DaisySeedE:
+  27              	.LVL0:
+  28              	.LFB4847:
+  29              		.file 1 "classes/ControlPanel.cpp"
+   1:classes/ControlPanel.cpp **** #include "ControlPanel.h"
+   2:classes/ControlPanel.cpp **** //#define DEBUG_MODE
+   3:classes/ControlPanel.cpp **** void ControlPanel::Init(daisy::DaisySeed* hw) {
+  30              		.loc 1 3 47 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 24
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+   4:classes/ControlPanel.cpp ****     _hw = hw;
+  34              		.loc 1 4 5 view .LVU1
+   3:classes/ControlPanel.cpp ****     _hw = hw;
+  35              		.loc 1 3 47 is_stmt 0 view .LVU2
+  36 0000 10B5     		push	{r4, lr}
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 4, -8
+  39              		.cfi_offset 14, -4
+  40 0002 0A46     		mov	r2, r1
+  41 0004 0446     		mov	r4, r0
+  42 0006 86B0     		sub	sp, sp, #24
+  43              		.cfi_def_cfa_offset 32
+   5:classes/ControlPanel.cpp **** 
+   6:classes/ControlPanel.cpp ****     _pc.Init(IIR::Butterworth, _hw); 
+  44              		.loc 1 6 13 view .LVU3
+  45 0008 6430     		adds	r0, r0, #100
+  46              	.LVL1:
+   4:classes/ControlPanel.cpp **** 
+  47              		.loc 1 4 9 view .LVU4
+  48 000a 6260     		str	r2, [r4, #4]
+  49              		.loc 1 6 5 is_stmt 1 view .LVU5
+  50              		.loc 1 6 13 is_stmt 0 view .LVU6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 2
+
+
+  51 000c 0121     		movs	r1, #1
+  52              	.LVL2:
+  53              		.loc 1 6 13 view .LVU7
+  54 000e 0090     		str	r0, [sp]
+  55 0010 FFF7FEFF 		bl	_ZN16PlantConditioner4InitEN3IIR10FilterTypeEPN5daisy9DaisySeedE
+  56              	.LVL3:
+   7:classes/ControlPanel.cpp ****     _pc.setCurve(_delta_max, _curve_type);
+  57              		.loc 1 7 5 is_stmt 1 view .LVU8
+  58              		.loc 1 7 18 is_stmt 0 view .LVU9
+  59 0014 04F67C12 		addw	r2, r4, #2428
+  60              		.loc 1 7 17 view .LVU10
+  61 0018 04F51863 		add	r3, r4, #2432
+  62 001c 0098     		ldr	r0, [sp]
+  63 001e D2ED007A 		vldr.32	s15, [r2]
+  64 0022 93ED000A 		vldr.32	s0, [r3]
+  65 0026 FCEEE77A 		vcvt.u32.f32	s15, s15
+  66 002a 0190     		str	r0, [sp, #4]
+  67 002c CDED007A 		vstr.32	s15, [sp]	@ int
+  68 0030 9DF80010 		ldrb	r1, [sp]	@ zero_extendqisi2
+  69 0034 FFF7FEFF 		bl	_ZN16PlantConditioner8setCurveEhf
+  70              	.LVL4:
+   8:classes/ControlPanel.cpp ****     _pc.setScale(PlantConditioner::C, PlantConditioner::Major);
+  71              		.loc 1 8 5 is_stmt 1 view .LVU11
+  72              		.loc 1 8 17 is_stmt 0 view .LVU12
+  73 0038 0022     		movs	r2, #0
+  74 003a 0198     		ldr	r0, [sp, #4]
+  75 003c 1146     		mov	r1, r2
+  76 003e 0090     		str	r0, [sp]
+  77 0040 FFF7FEFF 		bl	_ZN16PlantConditioner8setScaleENS_5NotesENS_9ScaleTypeE
+  78              	.LVL5:
+   9:classes/ControlPanel.cpp ****     _pc.setOctave(4);
+  79              		.loc 1 9 5 is_stmt 1 view .LVU13
+  80              		.loc 1 9 18 is_stmt 0 view .LVU14
+  81 0044 0421     		movs	r1, #4
+  82 0046 0098     		ldr	r0, [sp]
+  83 0048 FFF7FEFF 		bl	_ZN16PlantConditioner9setOctaveEh
+  84              	.LVL6:
+  10:classes/ControlPanel.cpp **** 
+  11:classes/ControlPanel.cpp **** 
+  12:classes/ControlPanel.cpp ****     _encoder.Init(_hw->GetPin(13), _hw->GetPin(14), _hw->GetPin(10));
+  85              		.loc 1 12 5 is_stmt 1 view .LVU15
+  86              		.loc 1 12 18 is_stmt 0 view .LVU16
+  87 004c 0D20     		movs	r0, #13
+  88 004e FFF7FEFF 		bl	_ZN5daisy9DaisySeed6GetPinEh
+  89              	.LVL7:
+  90 0052 0346     		mov	r3, r0	@ movhi
+  91 0054 0E20     		movs	r0, #14
+  92 0056 ADF80C30 		strh	r3, [sp, #12]	@ movhi
+  93 005a FFF7FEFF 		bl	_ZN5daisy9DaisySeed6GetPinEh
+  94              	.LVL8:
+  95 005e 0346     		mov	r3, r0	@ movhi
+  96 0060 0A20     		movs	r0, #10
+  97 0062 ADF81030 		strh	r3, [sp, #16]	@ movhi
+  98 0066 FFF7FEFF 		bl	_ZN5daisy9DaisySeed6GetPinEh
+  99              	.LVL9:
+ 100 006a ADF81400 		strh	r0, [sp, #20]	@ movhi
+ 101 006e 04F10800 		add	r0, r4, #8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 3
+
+
+ 102 0072 9FED050A 		vldr.32	s0, .L4
+ 103 0076 059B     		ldr	r3, [sp, #20]
+ 104 0078 DDE90312 		ldrd	r1, r2, [sp, #12]
+  13:classes/ControlPanel.cpp **** 
+  14:classes/ControlPanel.cpp **** }
+ 105              		.loc 1 14 1 view .LVU17
+ 106 007c 06B0     		add	sp, sp, #24
+ 107              		.cfi_def_cfa_offset 8
+ 108              		@ sp needed
+ 109 007e BDE81040 		pop	{r4, lr}
+ 110              		.cfi_restore 14
+ 111              		.cfi_restore 4
+ 112              		.cfi_def_cfa_offset 0
+ 113              	.LVL10:
+  12:classes/ControlPanel.cpp **** 
+ 114              		.loc 1 12 18 view .LVU18
+ 115 0082 FFF7FEBF 		b	_ZN5daisy7Encoder4InitENS_3PinES1_S1_f
+ 116              	.LVL11:
+ 117              	.L5:
+  12:classes/ControlPanel.cpp **** 
+ 118              		.loc 1 12 18 view .LVU19
+ 119 0086 00BF     		.align	2
+ 120              	.L4:
+ 121 0088 00000000 		.word	0
+ 122              		.cfi_endproc
+ 123              	.LFE4847:
+ 125              		.section	.text._ZN12ControlPanel13HandleEncoderEv,"ax",%progbits
+ 126              		.align	1
+ 127              		.p2align 2,,3
+ 128              		.global	_ZN12ControlPanel13HandleEncoderEv
+ 129              		.syntax unified
+ 130              		.thumb
+ 131              		.thumb_func
+ 132              		.fpu fpv5-d16
+ 134              	_ZN12ControlPanel13HandleEncoderEv:
+ 135              	.LVL12:
+ 136              	.LFB4848:
+  15:classes/ControlPanel.cpp **** 
+  16:classes/ControlPanel.cpp **** void ControlPanel::HandleEncoder() {
+ 137              		.loc 1 16 36 is_stmt 1 view -0
+ 138              		.cfi_startproc
+ 139              		@ args = 0, pretend = 0, frame = 0
+ 140              		@ frame_needed = 0, uses_anonymous_args = 0
+ 141              		@ link register save eliminated.
+  17:classes/ControlPanel.cpp ****     int32_t inc = _encoder.Increment();
+ 142              		.loc 1 17 5 view .LVU21
+ 143              	.LBB24:
+ 144              	.LBI24:
+ 145              		.file 2 "../libs/libDaisy/src/hid/encoder.h"
+   1:../libs/libDaisy/src/hid/encoder.h **** #pragma once
+   2:../libs/libDaisy/src/hid/encoder.h **** #ifndef DSY_ENCODER_H
+   3:../libs/libDaisy/src/hid/encoder.h **** #define DSY_ENCODER_H
+   4:../libs/libDaisy/src/hid/encoder.h **** #include "daisy_core.h"
+   5:../libs/libDaisy/src/hid/encoder.h **** #include "per/gpio.h"
+   6:../libs/libDaisy/src/hid/encoder.h **** #include "hid/switch.h"
+   7:../libs/libDaisy/src/hid/encoder.h **** 
+   8:../libs/libDaisy/src/hid/encoder.h **** namespace daisy
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 4
+
+
+   9:../libs/libDaisy/src/hid/encoder.h **** {
+  10:../libs/libDaisy/src/hid/encoder.h **** /** 
+  11:../libs/libDaisy/src/hid/encoder.h ****     @brief Generic Class for handling Quadrature Encoders \n 
+  12:../libs/libDaisy/src/hid/encoder.h ****     Inspired/influenced by Mutable Instruments (pichenettes) Encoder classes
+  13:../libs/libDaisy/src/hid/encoder.h ****     @author Stephen Hensley
+  14:../libs/libDaisy/src/hid/encoder.h ****     @date December 2019
+  15:../libs/libDaisy/src/hid/encoder.h ****     @ingroup controls
+  16:../libs/libDaisy/src/hid/encoder.h **** */
+  17:../libs/libDaisy/src/hid/encoder.h **** class Encoder
+  18:../libs/libDaisy/src/hid/encoder.h **** {
+  19:../libs/libDaisy/src/hid/encoder.h ****   public:
+  20:../libs/libDaisy/src/hid/encoder.h ****     Encoder() {}
+  21:../libs/libDaisy/src/hid/encoder.h ****     ~Encoder() {}
+  22:../libs/libDaisy/src/hid/encoder.h **** 
+  23:../libs/libDaisy/src/hid/encoder.h ****     /** Initializes the encoder with the specified hardware pins.
+  24:../libs/libDaisy/src/hid/encoder.h ****      * Update rate is to be deprecated in a future release
+  25:../libs/libDaisy/src/hid/encoder.h ****      */
+  26:../libs/libDaisy/src/hid/encoder.h ****     void Init(Pin a, Pin b, Pin click, float update_rate = 0.f);
+  27:../libs/libDaisy/src/hid/encoder.h ****     /** Called at update_rate to debounce and handle timing for the switch.
+  28:../libs/libDaisy/src/hid/encoder.h ****      * In order for events not to be missed, its important that the Edge/Pressed checks be made at 
+  29:../libs/libDaisy/src/hid/encoder.h ****      */
+  30:../libs/libDaisy/src/hid/encoder.h ****     void Debounce();
+  31:../libs/libDaisy/src/hid/encoder.h **** 
+  32:../libs/libDaisy/src/hid/encoder.h ****     /** Returns +1 if the encoder was turned clockwise, -1 if it was turned counter-clockwise, or 0
+  33:../libs/libDaisy/src/hid/encoder.h ****     inline int32_t Increment() const { return updated_ ? inc_ : 0; }
+ 146              		.loc 2 33 20 view .LVU22
+ 147              	.LBB25:
+ 148              		.loc 2 33 40 view .LVU23
+ 149              		.loc 2 33 56 is_stmt 0 view .LVU24
+ 150 0000 037B     		ldrb	r3, [r0, #12]	@ zero_extendqisi2
+ 151 0002 EBB1     		cbz	r3, .L7
+ 152              	.LBE25:
+ 153              	.LBE24:
+ 154              	.LBB27:
+ 155              	.LBB28:
+ 156              	.LBB29:
+ 157              		.file 3 "../libs/libDaisy/src/hid/switch.h"
+   1:../libs/libDaisy/src/hid/switch.h **** #pragma once
+   2:../libs/libDaisy/src/hid/switch.h **** #ifndef DSY_SWITCH_H
+   3:../libs/libDaisy/src/hid/switch.h **** #define DSY_SWITCH_H
+   4:../libs/libDaisy/src/hid/switch.h **** #include "daisy_core.h"
+   5:../libs/libDaisy/src/hid/switch.h **** #include "per/gpio.h"
+   6:../libs/libDaisy/src/hid/switch.h **** #include "sys/system.h"
+   7:../libs/libDaisy/src/hid/switch.h **** 
+   8:../libs/libDaisy/src/hid/switch.h **** namespace daisy
+   9:../libs/libDaisy/src/hid/switch.h **** {
+  10:../libs/libDaisy/src/hid/switch.h **** /** 
+  11:../libs/libDaisy/src/hid/switch.h ****     Generic Class for handling momentary/latching switches \n 
+  12:../libs/libDaisy/src/hid/switch.h ****     Inspired/influenced by Mutable Instruments (pichenettes) Switch classes
+  13:../libs/libDaisy/src/hid/switch.h ****     @author Stephen Hensley
+  14:../libs/libDaisy/src/hid/switch.h ****     @date December 2019
+  15:../libs/libDaisy/src/hid/switch.h ****     @ingroup controls
+  16:../libs/libDaisy/src/hid/switch.h **** */
+  17:../libs/libDaisy/src/hid/switch.h **** class Switch
+  18:../libs/libDaisy/src/hid/switch.h **** {
+  19:../libs/libDaisy/src/hid/switch.h ****   public:
+  20:../libs/libDaisy/src/hid/switch.h ****     /** Specifies the expected behavior of the switch */
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 5
+
+
+  21:../libs/libDaisy/src/hid/switch.h ****     enum Type
+  22:../libs/libDaisy/src/hid/switch.h ****     {
+  23:../libs/libDaisy/src/hid/switch.h ****         TYPE_TOGGLE,    /**< & */
+  24:../libs/libDaisy/src/hid/switch.h ****         TYPE_MOMENTARY, /**< & */
+  25:../libs/libDaisy/src/hid/switch.h ****     };
+  26:../libs/libDaisy/src/hid/switch.h ****     /** Specifies whether the pressed is HIGH or LOW. */
+  27:../libs/libDaisy/src/hid/switch.h ****     enum Polarity
+  28:../libs/libDaisy/src/hid/switch.h ****     {
+  29:../libs/libDaisy/src/hid/switch.h ****         POLARITY_NORMAL,   /**< & */
+  30:../libs/libDaisy/src/hid/switch.h ****         POLARITY_INVERTED, /**< & */
+  31:../libs/libDaisy/src/hid/switch.h ****     };
+  32:../libs/libDaisy/src/hid/switch.h **** 
+  33:../libs/libDaisy/src/hid/switch.h ****     Switch() {}
+  34:../libs/libDaisy/src/hid/switch.h ****     ~Switch() {}
+  35:../libs/libDaisy/src/hid/switch.h **** 
+  36:../libs/libDaisy/src/hid/switch.h ****     /** 
+  37:../libs/libDaisy/src/hid/switch.h ****     Initializes the switch object with a given port/pin combo.
+  38:../libs/libDaisy/src/hid/switch.h ****     \param pin port/pin object to tell the switch which hardware pin to use.
+  39:../libs/libDaisy/src/hid/switch.h ****     \param update_rate Does nothing. Backwards compatibility until next breaking update.
+  40:../libs/libDaisy/src/hid/switch.h ****     \param t switch type -- Default: TYPE_MOMENTARY
+  41:../libs/libDaisy/src/hid/switch.h ****     \param pol switch polarity -- Default: POLARITY_INVERTED
+  42:../libs/libDaisy/src/hid/switch.h ****     \param pu switch pull up/down -- Default: PULL_UP
+  43:../libs/libDaisy/src/hid/switch.h ****     */
+  44:../libs/libDaisy/src/hid/switch.h ****     void Init(Pin        pin,
+  45:../libs/libDaisy/src/hid/switch.h ****               float      update_rate,
+  46:../libs/libDaisy/src/hid/switch.h ****               Type       t,
+  47:../libs/libDaisy/src/hid/switch.h ****               Polarity   pol,
+  48:../libs/libDaisy/src/hid/switch.h ****               GPIO::Pull pu = GPIO::Pull::PULLUP);
+  49:../libs/libDaisy/src/hid/switch.h **** 
+  50:../libs/libDaisy/src/hid/switch.h ****     /**
+  51:../libs/libDaisy/src/hid/switch.h ****        Simplified Init.
+  52:../libs/libDaisy/src/hid/switch.h ****        \param pin port/pin object to tell the switch which hardware pin to use.
+  53:../libs/libDaisy/src/hid/switch.h ****        \param update_rate Left for backwards compatibility until next breaking change.
+  54:../libs/libDaisy/src/hid/switch.h ****     */
+  55:../libs/libDaisy/src/hid/switch.h ****     void Init(Pin pin, float update_rate = 0.f);
+  56:../libs/libDaisy/src/hid/switch.h **** 
+  57:../libs/libDaisy/src/hid/switch.h ****     /** 
+  58:../libs/libDaisy/src/hid/switch.h ****     Called at update_rate to debounce and handle timing for the switch.
+  59:../libs/libDaisy/src/hid/switch.h ****     In order for events not to be missed, its important that the Edge/Pressed checks
+  60:../libs/libDaisy/src/hid/switch.h ****     be made at the same rate as the debounce function is being called.
+  61:../libs/libDaisy/src/hid/switch.h ****     */
+  62:../libs/libDaisy/src/hid/switch.h ****     void Debounce();
+  63:../libs/libDaisy/src/hid/switch.h **** 
+  64:../libs/libDaisy/src/hid/switch.h ****     /** \return true if a button was just pressed. */
+  65:../libs/libDaisy/src/hid/switch.h ****     inline bool RisingEdge() const { return updated_ ? state_ == 0x7f : false; }
+ 158              		.loc 3 65 54 view .LVU25
+ 159 0004 027D     		ldrb	r2, [r0, #20]	@ zero_extendqisi2
+ 160              	.LBE29:
+ 161              	.LBE28:
+ 162              	.LBE27:
+ 163              	.LBB34:
+ 164              	.LBB26:
+ 165              		.loc 2 33 56 view .LVU26
+ 166 0006 036E     		ldr	r3, [r0, #96]
+ 167              	.LVL13:
+ 168              		.loc 2 33 56 view .LVU27
+ 169              	.LBE26:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 6
+
+
+ 170              	.LBE34:
+  18:classes/ControlPanel.cpp ****     if (_encoder.RisingEdge()) _tarature_menu_index = (_tarature_menu_index + 1) % 3; // 3 modalitÃ
+ 171              		.loc 1 18 5 is_stmt 1 view .LVU28
+ 172              	.LBB35:
+ 173              	.LBI27:
+  34:../libs/libDaisy/src/hid/encoder.h **** 
+  35:../libs/libDaisy/src/hid/encoder.h ****     /** Returns true if the encoder was just pressed. */
+  36:../libs/libDaisy/src/hid/encoder.h ****     inline bool RisingEdge() const { return sw_.RisingEdge(); }
+ 174              		.loc 2 36 17 view .LVU29
+ 175              	.LBE35:
+ 176              		.loc 2 36 38 view .LVU30
+ 177              	.LBB36:
+ 178              	.LBB32:
+ 179              	.LBI28:
+ 180              		.loc 3 65 17 view .LVU31
+ 181              	.LBB30:
+ 182              		.loc 3 65 38 view .LVU32
+ 183              		.loc 3 65 54 is_stmt 0 view .LVU33
+ 184 0008 72BB     		cbnz	r2, .L31
+ 185              	.LVL14:
+ 186              	.L8:
+ 187              		.loc 3 65 54 view .LVU34
+ 188              	.LBE30:
+ 189              	.LBE32:
+ 190              	.LBE36:
+  19:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 191              		.loc 1 19 5 is_stmt 1 view .LVU35
+ 192 000a 63B3     		cbz	r3, .L6
+  20:classes/ControlPanel.cpp ****         switch (_tarature_menu_index) {
+ 193              		.loc 1 20 9 view .LVU36
+ 194              		.loc 1 20 17 is_stmt 0 view .LVU37
+ 195 000c 90F88429 		ldrb	r2, [r0, #2436]	@ zero_extendqisi2
+ 196              		.loc 1 20 9 view .LVU38
+ 197 0010 002A     		cmp	r2, #0
+ 198 0012 47D0     		beq	.L11
+ 199 0014 012A     		cmp	r2, #1
+ 200 0016 39D1     		bne	.L32
+  21:classes/ControlPanel.cpp ****             case MODE_DELTA:
+  22:classes/ControlPanel.cpp ****                 _delta_max += (inc * 5.0f);
+  23:classes/ControlPanel.cpp ****                 if (_delta_max < 1.0f)   _delta_max = 1.0f;
+  24:classes/ControlPanel.cpp ****                 if (_delta_max > 100.0f) _delta_max = 100.0f; 
+  25:classes/ControlPanel.cpp ****                 break;
+  26:classes/ControlPanel.cpp ****             case MODE_CURVE:
+ 201              		.loc 1 26 13 is_stmt 1 view .LVU39
+  27:classes/ControlPanel.cpp ****                 _curve_type += (inc * 0.1f);
+ 202              		.loc 1 27 17 view .LVU40
+ 203              		.loc 1 27 37 is_stmt 0 view .LVU41
+ 204 0018 07EE903A 		vmov	s15, r3	@ int
+ 205              		.loc 1 27 29 view .LVU42
+ 206 001c 00F51860 		add	r0, r0, #2432
+ 207              	.LVL15:
+ 208              		.loc 1 27 29 view .LVU43
+ 209 0020 DFED2F6A 		vldr.32	s13, .L33
+ 210              		.loc 1 27 37 view .LVU44
+ 211 0024 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 212              		.loc 1 27 29 view .LVU45
+ 213 0028 90ED007A 		vldr.32	s14, [r0]
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 7
+
+
+ 214 002c A7EEA67A 		vfma.f32	s14, s15, s13
+  28:classes/ControlPanel.cpp ****                 if (_curve_type < 0.1f) _curve_type = 0.1f; 
+ 215              		.loc 1 28 17 is_stmt 1 view .LVU46
+ 216 0030 B4EEE67A 		vcmpe.f32	s14, s13
+ 217 0034 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 218 0038 29D5     		bpl	.L29
+ 219              	.LVL16:
+ 220              	.L30:
+ 221              		.loc 1 28 41 discriminator 1 view .LVU47
+ 222              		.loc 1 28 53 is_stmt 0 discriminator 1 view .LVU48
+ 223 003a C0ED006A 		vstr.32	s13, [r0]
+  29:classes/ControlPanel.cpp ****                 if (_curve_type > 2.0f) _curve_type = 2.0f; 
+ 224              		.loc 1 29 17 is_stmt 1 discriminator 1 view .LVU49
+ 225 003e 7047     		bx	lr
+ 226              	.LVL17:
+ 227              	.L7:
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 228              		.loc 1 18 5 view .LVU50
+ 229              	.LBB37:
+ 230              		.loc 2 36 17 view .LVU51
+ 231              	.LBE37:
+ 232              		.loc 2 36 38 view .LVU52
+ 233              	.LBB38:
+ 234              	.LBB33:
+ 235              		.loc 3 65 17 view .LVU53
+ 236              	.LBB31:
+ 237              		.loc 3 65 38 view .LVU54
+ 238              		.loc 3 65 54 is_stmt 0 view .LVU55
+ 239 0040 037D     		ldrb	r3, [r0, #20]	@ zero_extendqisi2
+ 240 0042 83B1     		cbz	r3, .L6
+ 241              	.LVL18:
+ 242              		.loc 3 65 54 view .LVU56
+ 243              	.LBE31:
+ 244              	.LBE33:
+ 245              	.LBE38:
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 246              		.loc 1 18 5 view .LVU57
+ 247 0044 90F82C30 		ldrb	r3, [r0, #44]	@ zero_extendqisi2
+ 248 0048 7F2B     		cmp	r3, #127
+ 249 004a 0CD1     		bne	.L6
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 250              		.loc 1 18 32 is_stmt 1 view .LVU58
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 251              		.loc 1 18 56 is_stmt 0 view .LVU59
+ 252 004c 90F88439 		ldrb	r3, [r0, #2436]	@ zero_extendqisi2
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 253              		.loc 1 18 82 view .LVU60
+ 254 0050 244A     		ldr	r2, .L33+4
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 255              		.loc 1 18 77 view .LVU61
+ 256 0052 0133     		adds	r3, r3, #1
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 257              		.loc 1 18 82 view .LVU62
+ 258 0054 A2FB0312 		umull	r1, r2, r2, r3
+ 259 0058 02F4FF71 		and	r1, r2, #510
+ 260 005c 01EB5202 		add	r2, r1, r2, lsr #1
+ 261 0060 9B1A     		subs	r3, r3, r2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 8
+
+
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 262              		.loc 1 18 53 view .LVU63
+ 263 0062 80F88439 		strb	r3, [r0, #2436]
+  19:classes/ControlPanel.cpp ****         switch (_tarature_menu_index) {
+ 264              		.loc 1 19 5 is_stmt 1 view .LVU64
+ 265              	.LVL19:
+ 266              	.L6:
+  30:classes/ControlPanel.cpp ****                 break;
+  31:classes/ControlPanel.cpp ****             case MODE_IDLE:
+  32:classes/ControlPanel.cpp ****                 break;
+  33:classes/ControlPanel.cpp ****         }
+  34:classes/ControlPanel.cpp ****     }
+  35:classes/ControlPanel.cpp ****     
+  36:classes/ControlPanel.cpp **** }
+ 267              		.loc 1 36 1 is_stmt 0 view .LVU65
+ 268 0066 7047     		bx	lr
+ 269              	.LVL20:
+ 270              	.L31:
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 271              		.loc 1 18 5 view .LVU66
+ 272 0068 90F82C20 		ldrb	r2, [r0, #44]	@ zero_extendqisi2
+ 273 006c 7F2A     		cmp	r2, #127
+ 274 006e CCD1     		bne	.L8
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 275              		.loc 1 18 32 is_stmt 1 discriminator 1 view .LVU67
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 276              		.loc 1 18 56 is_stmt 0 discriminator 1 view .LVU68
+ 277 0070 90F88429 		ldrb	r2, [r0, #2436]	@ zero_extendqisi2
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 278              		.loc 1 18 82 discriminator 1 view .LVU69
+ 279 0074 1B49     		ldr	r1, .L33+4
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 280              		.loc 1 18 77 discriminator 1 view .LVU70
+ 281 0076 0132     		adds	r2, r2, #1
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 282              		.loc 1 18 82 discriminator 1 view .LVU71
+ 283 0078 A1FB02C1 		umull	ip, r1, r1, r2
+ 284 007c 01F4FF7C 		and	ip, r1, #510
+ 285 0080 0CEB5101 		add	r1, ip, r1, lsr #1
+ 286 0084 521A     		subs	r2, r2, r1
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 287              		.loc 1 18 53 discriminator 1 view .LVU72
+ 288 0086 80F88429 		strb	r2, [r0, #2436]
+ 289 008a BEE7     		b	.L8
+ 290              	.L32:
+  18:classes/ControlPanel.cpp ****     if (inc != 0) {
+ 291              		.loc 1 18 53 discriminator 1 view .LVU73
+ 292 008c 7047     		bx	lr
+ 293              	.LVL21:
+ 294              	.L29:
+  29:classes/ControlPanel.cpp ****                 break;
+ 295              		.loc 1 29 17 is_stmt 1 view .LVU74
+ 296 008e F0EE007A 		vmov.f32	s15, #2.0e+0
+  27:classes/ControlPanel.cpp ****                 if (_curve_type < 0.1f) _curve_type = 0.1f; 
+ 297              		.loc 1 27 29 is_stmt 0 view .LVU75
+ 298 0092 B4EEE77A 		vcmpe.f32	s14, s15
+ 299 0096 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 9
+
+
+ 300 009a 77FE877A 		vselgt.f32	s15, s15, s14
+ 301 009e C0ED007A 		vstr.32	s15, [r0]
+ 302 00a2 7047     		bx	lr
+ 303              	.LVL22:
+ 304              	.L11:
+  21:classes/ControlPanel.cpp ****                 _delta_max += (inc * 5.0f);
+ 305              		.loc 1 21 13 is_stmt 1 view .LVU76
+  22:classes/ControlPanel.cpp ****                 if (_delta_max < 1.0f)   _delta_max = 1.0f;
+ 306              		.loc 1 22 17 view .LVU77
+  22:classes/ControlPanel.cpp ****                 if (_delta_max < 1.0f)   _delta_max = 1.0f;
+ 307              		.loc 1 22 36 is_stmt 0 view .LVU78
+ 308 00a4 07EE903A 		vmov	s15, r3	@ int
+  22:classes/ControlPanel.cpp ****                 if (_delta_max < 1.0f)   _delta_max = 1.0f;
+ 309              		.loc 1 22 28 view .LVU79
+ 310 00a8 00F67C10 		addw	r0, r0, #2428
+ 311              	.LVL23:
+  22:classes/ControlPanel.cpp ****                 if (_delta_max < 1.0f)   _delta_max = 1.0f;
+ 312              		.loc 1 22 28 view .LVU80
+ 313 00ac B1EE046A 		vmov.f32	s12, #5.0e+0
+  22:classes/ControlPanel.cpp ****                 if (_delta_max < 1.0f)   _delta_max = 1.0f;
+ 314              		.loc 1 22 36 view .LVU81
+ 315 00b0 F8EEE77A 		vcvt.f32.s32	s15, s15
+  22:classes/ControlPanel.cpp ****                 if (_delta_max < 1.0f)   _delta_max = 1.0f;
+ 316              		.loc 1 22 28 view .LVU82
+ 317 00b4 90ED007A 		vldr.32	s14, [r0]
+  23:classes/ControlPanel.cpp ****                 if (_delta_max > 100.0f) _delta_max = 100.0f; 
+ 318              		.loc 1 23 17 view .LVU83
+ 319 00b8 F7EE006A 		vmov.f32	s13, #1.0e+0
+  22:classes/ControlPanel.cpp ****                 if (_delta_max < 1.0f)   _delta_max = 1.0f;
+ 320              		.loc 1 22 28 view .LVU84
+ 321 00bc A7EE867A 		vfma.f32	s14, s15, s12
+  23:classes/ControlPanel.cpp ****                 if (_delta_max > 100.0f) _delta_max = 100.0f; 
+ 322              		.loc 1 23 17 is_stmt 1 view .LVU85
+ 323 00c0 B4EEE67A 		vcmpe.f32	s14, s13
+ 324 00c4 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 325 00c8 B7D4     		bmi	.L30
+  24:classes/ControlPanel.cpp ****                 break;
+ 326              		.loc 1 24 17 view .LVU86
+ 327 00ca DFED077A 		vldr.32	s15, .L33+8
+  22:classes/ControlPanel.cpp ****                 if (_delta_max < 1.0f)   _delta_max = 1.0f;
+ 328              		.loc 1 22 28 is_stmt 0 view .LVU87
+ 329 00ce B4EEE77A 		vcmpe.f32	s14, s15
+ 330 00d2 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 331 00d6 77FE877A 		vselgt.f32	s15, s15, s14
+ 332 00da C0ED007A 		vstr.32	s15, [r0]
+ 333 00de 7047     		bx	lr
+ 334              	.L34:
+ 335              		.align	2
+ 336              	.L33:
+ 337 00e0 CDCCCC3D 		.word	1036831949
+ 338 00e4 ABAAAAAA 		.word	-1431655765
+ 339 00e8 0000C842 		.word	1120403456
+ 340              		.cfi_endproc
+ 341              	.LFE4848:
+ 343              		.section	.rodata._ZN12ControlPanel13UserInterfaceEv.str1.4,"aMS",%progbits,1
+ 344              		.align	2
+ 345              	.LC0:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 10
+
+
+ 346 0000 44656C74 		.ascii	"Delta Max: %.1f\012\000"
+ 346      61204D61 
+ 346      783A2025 
+ 346      2E31660A 
+ 346      00
+ 347 0011 000000   		.align	2
+ 348              	.LC1:
+ 349 0014 43757276 		.ascii	"Curve Type: %.1f\012\000"
+ 349      65205479 
+ 349      70653A20 
+ 349      252E3166 
+ 349      0A00
+ 350 0026 0000     		.align	2
+ 351              	.LC2:
+ 352 0028 506C6179 		.ascii	"Play Mode\012\000"
+ 352      204D6F64 
+ 352      650A00
+ 353 0033 00       		.align	2
+ 354              	.LC3:
+ 355 0034 546F7563 		.ascii	"Touched! Freq: %.1f Hz\012\000"
+ 355      68656421 
+ 355      20467265 
+ 355      713A2025 
+ 355      2E316620 
+ 356              		.align	2
+ 357              	.LC4:
+ 358 004c 4E6F7420 		.ascii	"Not Touched\012\000"
+ 358      546F7563 
+ 358      6865640A 
+ 358      00
+ 359              		.section	.text._ZN12ControlPanel13UserInterfaceEv,"ax",%progbits
+ 360              		.align	1
+ 361              		.p2align 2,,3
+ 362              		.global	_ZN12ControlPanel13UserInterfaceEv
+ 363              		.syntax unified
+ 364              		.thumb
+ 365              		.thumb_func
+ 366              		.fpu fpv5-d16
+ 368              	_ZN12ControlPanel13UserInterfaceEv:
+ 369              	.LVL24:
+ 370              	.LFB4849:
+  37:classes/ControlPanel.cpp **** 
+  38:classes/ControlPanel.cpp **** void ControlPanel::UserInterface() {
+ 371              		.loc 1 38 36 is_stmt 1 view -0
+ 372              		.cfi_startproc
+ 373              		@ args = 0, pretend = 0, frame = 0
+ 374              		@ frame_needed = 0, uses_anonymous_args = 0
+  39:classes/ControlPanel.cpp ****     switch (_tarature_menu_index) {
+ 375              		.loc 1 39 5 view .LVU89
+  38:classes/ControlPanel.cpp ****     switch (_tarature_menu_index) {
+ 376              		.loc 1 38 36 is_stmt 0 view .LVU90
+ 377 0000 10B5     		push	{r4, lr}
+ 378              		.cfi_def_cfa_offset 8
+ 379              		.cfi_offset 4, -8
+ 380              		.cfi_offset 14, -4
+ 381              		.loc 1 39 13 view .LVU91
+ 382 0002 90F88439 		ldrb	r3, [r0, #2436]	@ zero_extendqisi2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 11
+
+
+  38:classes/ControlPanel.cpp ****     switch (_tarature_menu_index) {
+ 383              		.loc 1 38 36 view .LVU92
+ 384 0006 0446     		mov	r4, r0
+ 385              		.loc 1 39 5 view .LVU93
+ 386 0008 012B     		cmp	r3, #1
+ 387 000a 03D0     		beq	.L36
+ 388 000c 022B     		cmp	r3, #2
+ 389 000e 12D0     		beq	.L37
+ 390 0010 6BB1     		cbz	r3, .L42
+  40:classes/ControlPanel.cpp ****         case MODE_DELTA:
+  41:classes/ControlPanel.cpp ****             _hw->Print("Delta Max: %.1f\n", _delta_max);
+  42:classes/ControlPanel.cpp ****             break;
+  43:classes/ControlPanel.cpp ****         case MODE_CURVE:
+  44:classes/ControlPanel.cpp ****             _hw->Print("Curve Type: %.1f\n", _curve_type);
+  45:classes/ControlPanel.cpp ****             break;
+  46:classes/ControlPanel.cpp ****         case MODE_IDLE:
+  47:classes/ControlPanel.cpp ****             _hw->Print("Play Mode\n");
+  48:classes/ControlPanel.cpp ****             if (_is_touched) {
+  49:classes/ControlPanel.cpp ****                 _hw->Print("Touched! Freq: %.1f Hz\n", _target_freq);
+  50:classes/ControlPanel.cpp ****             } else {
+  51:classes/ControlPanel.cpp ****                 _hw->Print("Not Touched\n");
+  52:classes/ControlPanel.cpp ****             }
+  53:classes/ControlPanel.cpp ****             break;
+  54:classes/ControlPanel.cpp ****     }
+  55:classes/ControlPanel.cpp **** }
+ 391              		.loc 1 55 1 view .LVU94
+ 392 0012 10BD     		pop	{r4, pc}
+ 393              	.L36:
+  43:classes/ControlPanel.cpp ****             _hw->Print("Curve Type: %.1f\n", _curve_type);
+ 394              		.loc 1 43 9 is_stmt 1 view .LVU95
+  44:classes/ControlPanel.cpp ****             break;
+ 395              		.loc 1 44 13 view .LVU96
+ 396              	.LVL25:
+ 397              	.LBB39:
+ 398              	.LBI39:
+ 399              		.file 4 "../libs/libDaisy/src/daisy_seed.h"
+   1:../libs/libDaisy/src/daisy_seed.h **** #pragma once
+   2:../libs/libDaisy/src/daisy_seed.h **** #ifndef DSY_SEED_H
+   3:../libs/libDaisy/src/daisy_seed.h **** #define DSY_SEED_H
+   4:../libs/libDaisy/src/daisy_seed.h **** 
+   5:../libs/libDaisy/src/daisy_seed.h **** #include "daisy.h"
+   6:../libs/libDaisy/src/daisy_seed.h **** 
+   7:../libs/libDaisy/src/daisy_seed.h **** //Uncomment this out if you're still using the rev2 hardware
+   8:../libs/libDaisy/src/daisy_seed.h **** //#define SEED_REV2
+   9:../libs/libDaisy/src/daisy_seed.h **** 
+  10:../libs/libDaisy/src/daisy_seed.h **** namespace daisy
+  11:../libs/libDaisy/src/daisy_seed.h **** {
+  12:../libs/libDaisy/src/daisy_seed.h **** /**
+  13:../libs/libDaisy/src/daisy_seed.h ****    @brief This is the higher-level interface for the Daisy board. \n 
+  14:../libs/libDaisy/src/daisy_seed.h ****     All basic peripheral configuration/initialization is setup here. \n
+  15:../libs/libDaisy/src/daisy_seed.h **** 
+  16:../libs/libDaisy/src/daisy_seed.h ****    @ingroup boards
+  17:../libs/libDaisy/src/daisy_seed.h **** */
+  18:../libs/libDaisy/src/daisy_seed.h **** class DaisySeed
+  19:../libs/libDaisy/src/daisy_seed.h **** {
+  20:../libs/libDaisy/src/daisy_seed.h ****   public:
+  21:../libs/libDaisy/src/daisy_seed.h ****     DaisySeed() {}
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 12
+
+
+  22:../libs/libDaisy/src/daisy_seed.h ****     ~DaisySeed() {}
+  23:../libs/libDaisy/src/daisy_seed.h **** 
+  24:../libs/libDaisy/src/daisy_seed.h ****     /** This function used to provide a pre-initialization configuraiton 
+  25:../libs/libDaisy/src/daisy_seed.h ****      *  it has since been deprecated, and does nothing.
+  26:../libs/libDaisy/src/daisy_seed.h ****      */
+  27:../libs/libDaisy/src/daisy_seed.h ****     void Configure();
+  28:../libs/libDaisy/src/daisy_seed.h **** 
+  29:../libs/libDaisy/src/daisy_seed.h ****     /** 
+  30:../libs/libDaisy/src/daisy_seed.h ****     Initializes the Daisy Seed and the following peripherals:
+  31:../libs/libDaisy/src/daisy_seed.h ****     SDRAM, QSPI, 24-bit 48kHz Audio via AK4556, Internal USB,
+  32:../libs/libDaisy/src/daisy_seed.h ****     as well as the built-in LED and Testpoint.
+  33:../libs/libDaisy/src/daisy_seed.h **** 
+  34:../libs/libDaisy/src/daisy_seed.h ****     ADCs, DACs, and other special peripherals (such as I2C, SPI, etc.)
+  35:../libs/libDaisy/src/daisy_seed.h ****     can be initialized using their specific initializers within libdaisy
+  36:../libs/libDaisy/src/daisy_seed.h ****     for a specific application.
+  37:../libs/libDaisy/src/daisy_seed.h ****     */
+  38:../libs/libDaisy/src/daisy_seed.h ****     void Init(bool boost = false);
+  39:../libs/libDaisy/src/daisy_seed.h **** 
+  40:../libs/libDaisy/src/daisy_seed.h ****     /** 
+  41:../libs/libDaisy/src/daisy_seed.h ****     Deinitializes all peripherals automatically handled by `Init`.
+  42:../libs/libDaisy/src/daisy_seed.h ****     */
+  43:../libs/libDaisy/src/daisy_seed.h ****     void DeInit();
+  44:../libs/libDaisy/src/daisy_seed.h **** 
+  45:../libs/libDaisy/src/daisy_seed.h ****     /** 
+  46:../libs/libDaisy/src/daisy_seed.h ****     Wait some ms before going on.
+  47:../libs/libDaisy/src/daisy_seed.h ****     \param del Delay time in ms.
+  48:../libs/libDaisy/src/daisy_seed.h ****     */
+  49:../libs/libDaisy/src/daisy_seed.h ****     void DelayMs(size_t del);
+  50:../libs/libDaisy/src/daisy_seed.h **** 
+  51:../libs/libDaisy/src/daisy_seed.h ****     /** 
+  52:../libs/libDaisy/src/daisy_seed.h ****     Returns the gpio_pin corresponding to the index 0-31.
+  53:../libs/libDaisy/src/daisy_seed.h ****     For the given GPIO on the Daisy Seed (labeled 1-32 in docs).
+  54:../libs/libDaisy/src/daisy_seed.h ****     */
+  55:../libs/libDaisy/src/daisy_seed.h ****     static Pin GetPin(uint8_t pin_idx);
+  56:../libs/libDaisy/src/daisy_seed.h **** 
+  57:../libs/libDaisy/src/daisy_seed.h ****     /** Begins the audio for the seeds builtin audio.
+  58:../libs/libDaisy/src/daisy_seed.h ****     the specified callback will get called whenever
+  59:../libs/libDaisy/src/daisy_seed.h ****     new data is ready to be prepared.
+  60:../libs/libDaisy/src/daisy_seed.h ****     */
+  61:../libs/libDaisy/src/daisy_seed.h ****     void StartAudio(AudioHandle::InterleavingAudioCallback cb);
+  62:../libs/libDaisy/src/daisy_seed.h **** 
+  63:../libs/libDaisy/src/daisy_seed.h ****     /** Begins the audio for the seeds builtin audio.
+  64:../libs/libDaisy/src/daisy_seed.h ****     the specified callback will get called whenever
+  65:../libs/libDaisy/src/daisy_seed.h ****     new data is ready to be prepared.
+  66:../libs/libDaisy/src/daisy_seed.h ****     This will use the newer non-interleaved callback.
+  67:../libs/libDaisy/src/daisy_seed.h ****     */
+  68:../libs/libDaisy/src/daisy_seed.h ****     void StartAudio(AudioHandle::AudioCallback cb);
+  69:../libs/libDaisy/src/daisy_seed.h **** 
+  70:../libs/libDaisy/src/daisy_seed.h ****     /** Changes to a new interleaved callback
+  71:../libs/libDaisy/src/daisy_seed.h ****      */
+  72:../libs/libDaisy/src/daisy_seed.h ****     void ChangeAudioCallback(AudioHandle::InterleavingAudioCallback cb);
+  73:../libs/libDaisy/src/daisy_seed.h **** 
+  74:../libs/libDaisy/src/daisy_seed.h ****     /** Changes to a new multichannel callback
+  75:../libs/libDaisy/src/daisy_seed.h ****      */
+  76:../libs/libDaisy/src/daisy_seed.h ****     void ChangeAudioCallback(AudioHandle::AudioCallback cb);
+  77:../libs/libDaisy/src/daisy_seed.h **** 
+  78:../libs/libDaisy/src/daisy_seed.h ****     /** Stops the audio if it is running. */
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 13
+
+
+  79:../libs/libDaisy/src/daisy_seed.h ****     void StopAudio();
+  80:../libs/libDaisy/src/daisy_seed.h **** 
+  81:../libs/libDaisy/src/daisy_seed.h ****     /** Updates the Audio Sample Rate, and reinitializes.
+  82:../libs/libDaisy/src/daisy_seed.h ****      ** Audio must be stopped for this to work.
+  83:../libs/libDaisy/src/daisy_seed.h ****      */
+  84:../libs/libDaisy/src/daisy_seed.h ****     void SetAudioSampleRate(SaiHandle::Config::SampleRate samplerate);
+  85:../libs/libDaisy/src/daisy_seed.h **** 
+  86:../libs/libDaisy/src/daisy_seed.h ****     /** Returns the audio sample rate in Hz as a floating point number.
+  87:../libs/libDaisy/src/daisy_seed.h ****      */
+  88:../libs/libDaisy/src/daisy_seed.h ****     float AudioSampleRate();
+  89:../libs/libDaisy/src/daisy_seed.h **** 
+  90:../libs/libDaisy/src/daisy_seed.h ****     /** Sets the number of samples processed per channel by the audio callback.
+  91:../libs/libDaisy/src/daisy_seed.h ****      */
+  92:../libs/libDaisy/src/daisy_seed.h ****     void SetAudioBlockSize(size_t blocksize);
+  93:../libs/libDaisy/src/daisy_seed.h **** 
+  94:../libs/libDaisy/src/daisy_seed.h ****     /** Returns the number of samples per channel in a block of audio. */
+  95:../libs/libDaisy/src/daisy_seed.h ****     size_t AudioBlockSize();
+  96:../libs/libDaisy/src/daisy_seed.h **** 
+  97:../libs/libDaisy/src/daisy_seed.h ****     /** Returns the rate in Hz that the Audio callback is called */
+  98:../libs/libDaisy/src/daisy_seed.h ****     float AudioCallbackRate() const;
+  99:../libs/libDaisy/src/daisy_seed.h **** 
+ 100:../libs/libDaisy/src/daisy_seed.h ****     /** Returns the SAI Handle for the Daisy Seed 
+ 101:../libs/libDaisy/src/daisy_seed.h ****      *  This can be useful when adding a secondary codec,
+ 102:../libs/libDaisy/src/daisy_seed.h ****      *  the result of this function can be passed to the audio reinit 
+ 103:../libs/libDaisy/src/daisy_seed.h ****      *  with an SAI2 configuration
+ 104:../libs/libDaisy/src/daisy_seed.h ****      */
+ 105:../libs/libDaisy/src/daisy_seed.h ****     const SaiHandle& AudioSaiHandle() const;
+ 106:../libs/libDaisy/src/daisy_seed.h **** 
+ 107:../libs/libDaisy/src/daisy_seed.h ****     /** Sets the state of the built in LED
+ 108:../libs/libDaisy/src/daisy_seed.h ****      */
+ 109:../libs/libDaisy/src/daisy_seed.h ****     void SetLed(bool state);
+ 110:../libs/libDaisy/src/daisy_seed.h **** 
+ 111:../libs/libDaisy/src/daisy_seed.h ****     /** Sets the state of the test point near pin 10
+ 112:../libs/libDaisy/src/daisy_seed.h ****      */
+ 113:../libs/libDaisy/src/daisy_seed.h ****     void SetTestPoint(bool state);
+ 114:../libs/libDaisy/src/daisy_seed.h **** 
+ 115:../libs/libDaisy/src/daisy_seed.h ****     /** Print formatted debug log message
+ 116:../libs/libDaisy/src/daisy_seed.h ****      */
+ 117:../libs/libDaisy/src/daisy_seed.h ****     template <typename... VA>
+ 118:../libs/libDaisy/src/daisy_seed.h ****     static void Print(const char* format, VA... va)
+ 400              		.loc 4 118 17 view .LVU97
+ 401              	.LBE39:
+  44:classes/ControlPanel.cpp ****             break;
+ 402              		.loc 1 44 23 is_stmt 0 view .LVU98
+ 403 0014 00F51864 		add	r4, r0, #2432
+ 404              	.LVL26:
+ 405              	.LBB42:
+ 406              	.LBB40:
+ 119:../libs/libDaisy/src/daisy_seed.h ****     {
+ 120:../libs/libDaisy/src/daisy_seed.h ****         Log::Print(format, va...);
+ 407              		.loc 4 120 19 view .LVU99
+ 408 0018 0E48     		ldr	r0, .L43
+ 409              	.LVL27:
+ 410              	.L41:
+ 411              		.loc 4 120 19 view .LVU100
+ 412 001a D4ED007A 		vldr.32	s15, [r4]
+ 413 001e B7EEE77A 		vcvt.f64.f32	d7, s15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 14
+
+
+ 414              	.LBE40:
+ 415              	.LBE42:
+ 416              		.loc 1 55 1 view .LVU101
+ 417 0022 BDE81040 		pop	{r4, lr}
+ 418              		.cfi_remember_state
+ 419              		.cfi_restore 14
+ 420              		.cfi_restore 4
+ 421              		.cfi_def_cfa_offset 0
+ 422              	.LBB43:
+ 423              	.LBB41:
+ 424              		.loc 4 120 19 view .LVU102
+ 425 0026 53EC172B 		vmov	r2, r3, d7
+ 426 002a FFF7FEBF 		b	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE5PrintEPKcz
+ 427              	.LVL28:
+ 428              	.L42:
+ 429              		.cfi_restore_state
+ 430              		.loc 4 120 19 view .LVU103
+ 431              	.LBE41:
+ 432              	.LBE43:
+  40:classes/ControlPanel.cpp ****             _hw->Print("Delta Max: %.1f\n", _delta_max);
+ 433              		.loc 1 40 9 is_stmt 1 view .LVU104
+  41:classes/ControlPanel.cpp ****             break;
+ 434              		.loc 1 41 13 view .LVU105
+ 435              	.LBB44:
+ 436              	.LBI44:
+ 118:../libs/libDaisy/src/daisy_seed.h ****     {
+ 437              		.loc 4 118 17 view .LVU106
+ 438              	.LBE44:
+  41:classes/ControlPanel.cpp ****             break;
+ 439              		.loc 1 41 23 is_stmt 0 view .LVU107
+ 440 002e 00F67C14 		addw	r4, r0, #2428
+ 441              	.LVL29:
+ 442              	.LBB46:
+ 443              	.LBB45:
+ 444              		.loc 4 120 19 view .LVU108
+ 445 0032 0948     		ldr	r0, .L43+4
+ 446              	.LVL30:
+ 447              		.loc 4 120 19 view .LVU109
+ 448 0034 F1E7     		b	.L41
+ 449              	.LVL31:
+ 450              	.L37:
+ 451              		.loc 4 120 19 view .LVU110
+ 452              	.LBE45:
+ 453              	.LBE46:
+  46:classes/ControlPanel.cpp ****             _hw->Print("Play Mode\n");
+ 454              		.loc 1 46 9 is_stmt 1 view .LVU111
+  47:classes/ControlPanel.cpp ****             if (_is_touched) {
+ 455              		.loc 1 47 13 view .LVU112
+ 456              	.LBB47:
+ 457              	.LBI47:
+ 118:../libs/libDaisy/src/daisy_seed.h ****     {
+ 458              		.loc 4 118 17 view .LVU113
+ 459              	.LBB48:
+ 460              		.loc 4 120 19 is_stmt 0 view .LVU114
+ 461 0036 0948     		ldr	r0, .L43+8
+ 462              	.LVL32:
+ 463              		.loc 4 120 19 view .LVU115
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 15
+
+
+ 464 0038 FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE5PrintEPKcz
+ 465              	.LVL33:
+ 466              		.loc 4 120 19 view .LVU116
+ 467              	.LBE48:
+ 468              	.LBE47:
+  48:classes/ControlPanel.cpp ****                 _hw->Print("Touched! Freq: %.1f Hz\n", _target_freq);
+ 469              		.loc 1 48 13 is_stmt 1 view .LVU117
+ 470 003c 94F87839 		ldrb	r3, [r4, #2424]	@ zero_extendqisi2
+ 471 0040 1BB1     		cbz	r3, .L39
+  49:classes/ControlPanel.cpp ****             } else {
+ 472              		.loc 1 49 17 view .LVU118
+ 473              	.LVL34:
+ 474              	.LBB49:
+ 475              	.LBI49:
+ 118:../libs/libDaisy/src/daisy_seed.h ****     {
+ 476              		.loc 4 118 17 view .LVU119
+ 477              	.LBE49:
+  49:classes/ControlPanel.cpp ****             } else {
+ 478              		.loc 1 49 27 is_stmt 0 view .LVU120
+ 479 0042 04F67414 		addw	r4, r4, #2420
+ 480              	.LVL35:
+ 481              	.LBB51:
+ 482              	.LBB50:
+ 483              		.loc 4 120 19 view .LVU121
+ 484 0046 0648     		ldr	r0, .L43+12
+ 485 0048 E7E7     		b	.L41
+ 486              	.LVL36:
+ 487              	.L39:
+ 488              		.loc 4 120 19 view .LVU122
+ 489              	.LBE50:
+ 490              	.LBE51:
+  51:classes/ControlPanel.cpp ****             }
+ 491              		.loc 1 51 17 is_stmt 1 view .LVU123
+ 492              	.LBB52:
+ 493              	.LBI52:
+ 118:../libs/libDaisy/src/daisy_seed.h ****     {
+ 494              		.loc 4 118 17 view .LVU124
+ 495              	.LBB53:
+ 496              		.loc 4 120 19 is_stmt 0 view .LVU125
+ 497 004a 0648     		ldr	r0, .L43+16
+ 498              	.LBE53:
+ 499              	.LBE52:
+ 500              		.loc 1 55 1 view .LVU126
+ 501 004c BDE81040 		pop	{r4, lr}
+ 502              		.cfi_restore 14
+ 503              		.cfi_restore 4
+ 504              		.cfi_def_cfa_offset 0
+ 505              	.LVL37:
+ 506              	.LBB55:
+ 507              	.LBB54:
+ 508              		.loc 4 120 19 view .LVU127
+ 509 0050 FFF7FEBF 		b	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE5PrintEPKcz
+ 510              	.LVL38:
+ 511              	.L44:
+ 512              		.align	2
+ 513              	.L43:
+ 514 0054 14000000 		.word	.LC1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 16
+
+
+ 515 0058 00000000 		.word	.LC0
+ 516 005c 28000000 		.word	.LC2
+ 517 0060 34000000 		.word	.LC3
+ 518 0064 4C000000 		.word	.LC4
+ 519              	.LBE54:
+ 520              	.LBE55:
+ 521              		.cfi_endproc
+ 522              	.LFE4849:
+ 524              		.section	.text._ZN12ControlPanel6UpdateEv,"ax",%progbits
+ 525              		.align	1
+ 526              		.p2align 2,,3
+ 527              		.global	_ZN12ControlPanel6UpdateEv
+ 528              		.syntax unified
+ 529              		.thumb
+ 530              		.thumb_func
+ 531              		.fpu fpv5-d16
+ 533              	_ZN12ControlPanel6UpdateEv:
+ 534              	.LVL39:
+ 535              	.LFB4850:
+  56:classes/ControlPanel.cpp **** 
+  57:classes/ControlPanel.cpp **** void ControlPanel::Update() {
+ 536              		.loc 1 57 29 is_stmt 1 view -0
+ 537              		.cfi_startproc
+ 538              		@ args = 0, pretend = 0, frame = 8
+ 539              		@ frame_needed = 0, uses_anonymous_args = 0
+  58:classes/ControlPanel.cpp **** 
+  59:classes/ControlPanel.cpp ****     //PLANT CONDITIONER
+  60:classes/ControlPanel.cpp ****     float calculated_freq = _pc.Process();
+ 540              		.loc 1 60 5 view .LVU129
+  57:classes/ControlPanel.cpp **** 
+ 541              		.loc 1 57 29 is_stmt 0 view .LVU130
+ 542 0000 10B5     		push	{r4, lr}
+ 543              		.cfi_def_cfa_offset 8
+ 544              		.cfi_offset 4, -8
+ 545              		.cfi_offset 14, -4
+ 546 0002 2DED028B 		vpush.64	{d8}
+ 547              		.cfi_def_cfa_offset 16
+ 548              		.cfi_offset 80, -16
+ 549              		.cfi_offset 81, -12
+ 550 0006 86B0     		sub	sp, sp, #24
+ 551              		.cfi_def_cfa_offset 40
+  57:classes/ControlPanel.cpp **** 
+ 552              		.loc 1 57 29 view .LVU131
+ 553 0008 0446     		mov	r4, r0
+ 554              		.loc 1 60 40 view .LVU132
+ 555 000a 6430     		adds	r0, r0, #100
+ 556              	.LVL40:
+ 557              		.loc 1 60 40 view .LVU133
+ 558 000c FFF7FEFF 		bl	_ZN16PlantConditioner7ProcessEv
+ 559              	.LVL41:
+ 560              	.LBB64:
+ 561              	.LBB65:
+ 562              	.LBB66:
+ 563              	.LBB67:
+ 564              	.LBB68:
+ 565              	.LBB69:
+ 566              		.file 5 "../libs/libDaisy/src/dev/mpr121.h"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 17
+
+
+   1:../libs/libDaisy/src/dev/mpr121.h **** #pragma once
+   2:../libs/libDaisy/src/dev/mpr121.h **** #ifndef DSY_MPR121_H
+   3:../libs/libDaisy/src/dev/mpr121.h **** #define DSY_MPR121_H
+   4:../libs/libDaisy/src/dev/mpr121.h **** 
+   5:../libs/libDaisy/src/dev/mpr121.h **** // The default I2C address
+   6:../libs/libDaisy/src/dev/mpr121.h **** #define MPR121_I2CADDR_DEFAULT 0x5A        ///< default I2C address
+   7:../libs/libDaisy/src/dev/mpr121.h **** #define MPR121_TOUCH_THRESHOLD_DEFAULT 3  ///< default touch threshold value
+   8:../libs/libDaisy/src/dev/mpr121.h **** #define MPR121_RELEASE_THRESHOLD_DEFAULT 2 ///< default relese threshold value
+   9:../libs/libDaisy/src/dev/mpr121.h **** 
+  10:../libs/libDaisy/src/dev/mpr121.h **** namespace daisy
+  11:../libs/libDaisy/src/dev/mpr121.h **** {
+  12:../libs/libDaisy/src/dev/mpr121.h **** /** @addtogroup external 
+  13:../libs/libDaisy/src/dev/mpr121.h ****     @{ 
+  14:../libs/libDaisy/src/dev/mpr121.h **** */
+  15:../libs/libDaisy/src/dev/mpr121.h **** 
+  16:../libs/libDaisy/src/dev/mpr121.h **** /** I2C Transport for MPR121 */
+  17:../libs/libDaisy/src/dev/mpr121.h **** class Mpr121I2CTransport
+  18:../libs/libDaisy/src/dev/mpr121.h **** {
+  19:../libs/libDaisy/src/dev/mpr121.h ****   public:
+  20:../libs/libDaisy/src/dev/mpr121.h ****     Mpr121I2CTransport() {}
+  21:../libs/libDaisy/src/dev/mpr121.h ****     ~Mpr121I2CTransport() {}
+  22:../libs/libDaisy/src/dev/mpr121.h **** 
+  23:../libs/libDaisy/src/dev/mpr121.h ****     struct Config
+  24:../libs/libDaisy/src/dev/mpr121.h ****     {
+  25:../libs/libDaisy/src/dev/mpr121.h ****         I2CHandle::Config::Peripheral periph;
+  26:../libs/libDaisy/src/dev/mpr121.h ****         I2CHandle::Config::Speed      speed;
+  27:../libs/libDaisy/src/dev/mpr121.h ****         Pin                           scl;
+  28:../libs/libDaisy/src/dev/mpr121.h ****         Pin                           sda;
+  29:../libs/libDaisy/src/dev/mpr121.h **** 
+  30:../libs/libDaisy/src/dev/mpr121.h ****         I2CHandle::Config::Mode mode;
+  31:../libs/libDaisy/src/dev/mpr121.h **** 
+  32:../libs/libDaisy/src/dev/mpr121.h ****         uint8_t dev_addr;
+  33:../libs/libDaisy/src/dev/mpr121.h **** 
+  34:../libs/libDaisy/src/dev/mpr121.h ****         Config()
+  35:../libs/libDaisy/src/dev/mpr121.h ****         {
+  36:../libs/libDaisy/src/dev/mpr121.h ****             periph = I2CHandle::Config::Peripheral::I2C_1;
+  37:../libs/libDaisy/src/dev/mpr121.h ****             speed  = I2CHandle::Config::Speed::I2C_400KHZ;
+  38:../libs/libDaisy/src/dev/mpr121.h **** 
+  39:../libs/libDaisy/src/dev/mpr121.h ****             scl = Pin(PORTB, 8);
+  40:../libs/libDaisy/src/dev/mpr121.h ****             sda = Pin(PORTB, 9);
+  41:../libs/libDaisy/src/dev/mpr121.h **** 
+  42:../libs/libDaisy/src/dev/mpr121.h ****             dev_addr = MPR121_I2CADDR_DEFAULT;
+  43:../libs/libDaisy/src/dev/mpr121.h ****         }
+  44:../libs/libDaisy/src/dev/mpr121.h ****     };
+  45:../libs/libDaisy/src/dev/mpr121.h **** 
+  46:../libs/libDaisy/src/dev/mpr121.h ****     /** \return Did the transaction error? i.e. Return true if error, false if ok */
+  47:../libs/libDaisy/src/dev/mpr121.h ****     inline bool Init(Config config)
+  48:../libs/libDaisy/src/dev/mpr121.h ****     {
+  49:../libs/libDaisy/src/dev/mpr121.h ****         config_ = config;
+  50:../libs/libDaisy/src/dev/mpr121.h **** 
+  51:../libs/libDaisy/src/dev/mpr121.h ****         I2CHandle::Config i2c_conf;
+  52:../libs/libDaisy/src/dev/mpr121.h ****         i2c_conf.mode   = I2CHandle::Config::Mode::I2C_MASTER;
+  53:../libs/libDaisy/src/dev/mpr121.h ****         i2c_conf.periph = config.periph;
+  54:../libs/libDaisy/src/dev/mpr121.h ****         i2c_conf.speed  = config.speed;
+  55:../libs/libDaisy/src/dev/mpr121.h **** 
+  56:../libs/libDaisy/src/dev/mpr121.h ****         i2c_conf.pin_config.scl = config.scl;
+  57:../libs/libDaisy/src/dev/mpr121.h ****         i2c_conf.pin_config.sda = config.sda;
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 18
+
+
+  58:../libs/libDaisy/src/dev/mpr121.h **** 
+  59:../libs/libDaisy/src/dev/mpr121.h ****         return I2CHandle::Result::OK != i2c_.Init(i2c_conf);
+  60:../libs/libDaisy/src/dev/mpr121.h ****     }
+  61:../libs/libDaisy/src/dev/mpr121.h **** 
+  62:../libs/libDaisy/src/dev/mpr121.h ****     /** \return Did the transaction error? i.e. Return true if error, false if ok */
+  63:../libs/libDaisy/src/dev/mpr121.h ****     bool Write(uint8_t *data, uint16_t size)
+  64:../libs/libDaisy/src/dev/mpr121.h ****     {
+  65:../libs/libDaisy/src/dev/mpr121.h ****         return I2CHandle::Result::OK
+  66:../libs/libDaisy/src/dev/mpr121.h ****                != i2c_.TransmitBlocking(config_.dev_addr, data, size, 10);
+  67:../libs/libDaisy/src/dev/mpr121.h ****     }
+  68:../libs/libDaisy/src/dev/mpr121.h **** 
+  69:../libs/libDaisy/src/dev/mpr121.h ****     /** \return Did the transaction error? i.e. Return true if error, false if ok */
+  70:../libs/libDaisy/src/dev/mpr121.h ****     bool Read(uint8_t *data, uint16_t size)
+  71:../libs/libDaisy/src/dev/mpr121.h ****     {
+  72:../libs/libDaisy/src/dev/mpr121.h ****         return I2CHandle::Result::OK
+  73:../libs/libDaisy/src/dev/mpr121.h ****                != i2c_.ReceiveBlocking(config_.dev_addr, data, size, 10);
+  74:../libs/libDaisy/src/dev/mpr121.h ****     }
+  75:../libs/libDaisy/src/dev/mpr121.h ****     bool ReadMem(uint8_t *data, uint8_t memAddress, uint16_t memSize)
+  76:../libs/libDaisy/src/dev/mpr121.h ****     {
+  77:../libs/libDaisy/src/dev/mpr121.h ****         return I2CHandle::Result::OK
+  78:../libs/libDaisy/src/dev/mpr121.h ****                != i2c_.Mem_read(
+ 567              		.loc 5 78 32 view .LVU134
+ 568 0010 0A21     		movs	r1, #10
+ 569 0012 0222     		movs	r2, #2
+ 570 0014 0DF11600 		add	r0, sp, #22
+ 571 0018 0123     		movs	r3, #1
+ 572              	.LBE69:
+ 573              	.LBE68:
+ 574              	.LBE67:
+ 575              	.LBE66:
+ 576              	.LBE65:
+ 577              	.LBE64:
+ 578              		.loc 1 60 40 view .LVU135
+ 579 001a B0EE408A 		vmov.f32	s16, s0
+ 580              	.LVL42:
+  61:classes/ControlPanel.cpp **** 
+  62:classes/ControlPanel.cpp ****     if (_pc._cap.Touched() & _BV(0))
+ 581              		.loc 1 62 5 is_stmt 1 view .LVU136
+ 582              	.LBB84:
+ 583              	.LBI64:
+  79:../libs/libDaisy/src/dev/mpr121.h ****                    config_.dev_addr, memAddress, 1, data, memSize, 10);
+  80:../libs/libDaisy/src/dev/mpr121.h ****     }
+  81:../libs/libDaisy/src/dev/mpr121.h **** 
+  82:../libs/libDaisy/src/dev/mpr121.h ****   private:
+  83:../libs/libDaisy/src/dev/mpr121.h ****     I2CHandle i2c_;
+  84:../libs/libDaisy/src/dev/mpr121.h ****     Config    config_;
+  85:../libs/libDaisy/src/dev/mpr121.h **** };
+  86:../libs/libDaisy/src/dev/mpr121.h **** 
+  87:../libs/libDaisy/src/dev/mpr121.h **** 
+  88:../libs/libDaisy/src/dev/mpr121.h **** /** @brief Device support for MPR121 12x Capacitive Touch Sensor
+  89:../libs/libDaisy/src/dev/mpr121.h ****     @author beserge
+  90:../libs/libDaisy/src/dev/mpr121.h ****     @date December 2021
+  91:../libs/libDaisy/src/dev/mpr121.h **** */
+  92:../libs/libDaisy/src/dev/mpr121.h **** template <typename Transport>
+  93:../libs/libDaisy/src/dev/mpr121.h **** class Mpr121
+  94:../libs/libDaisy/src/dev/mpr121.h **** {
+  95:../libs/libDaisy/src/dev/mpr121.h ****   public:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 19
+
+
+  96:../libs/libDaisy/src/dev/mpr121.h ****     Mpr121() {}
+  97:../libs/libDaisy/src/dev/mpr121.h ****     ~Mpr121() {}
+  98:../libs/libDaisy/src/dev/mpr121.h **** 
+  99:../libs/libDaisy/src/dev/mpr121.h ****     struct Config
+ 100:../libs/libDaisy/src/dev/mpr121.h ****     {
+ 101:../libs/libDaisy/src/dev/mpr121.h ****         typename Transport::Config transport_config;
+ 102:../libs/libDaisy/src/dev/mpr121.h ****         uint8_t                    touch_threshold;
+ 103:../libs/libDaisy/src/dev/mpr121.h ****         uint8_t                    release_threshold;
+ 104:../libs/libDaisy/src/dev/mpr121.h **** 
+ 105:../libs/libDaisy/src/dev/mpr121.h ****         Config()
+ 106:../libs/libDaisy/src/dev/mpr121.h ****         {
+ 107:../libs/libDaisy/src/dev/mpr121.h ****             touch_threshold   = MPR121_TOUCH_THRESHOLD_DEFAULT;
+ 108:../libs/libDaisy/src/dev/mpr121.h ****             release_threshold = MPR121_RELEASE_THRESHOLD_DEFAULT;
+ 109:../libs/libDaisy/src/dev/mpr121.h ****         }
+ 110:../libs/libDaisy/src/dev/mpr121.h ****     };
+ 111:../libs/libDaisy/src/dev/mpr121.h **** 
+ 112:../libs/libDaisy/src/dev/mpr121.h ****     enum Result
+ 113:../libs/libDaisy/src/dev/mpr121.h ****     {
+ 114:../libs/libDaisy/src/dev/mpr121.h ****         OK = 0,
+ 115:../libs/libDaisy/src/dev/mpr121.h ****         ERR
+ 116:../libs/libDaisy/src/dev/mpr121.h ****     };
+ 117:../libs/libDaisy/src/dev/mpr121.h **** 
+ 118:../libs/libDaisy/src/dev/mpr121.h ****     /** Initialize the MPR121 device
+ 119:../libs/libDaisy/src/dev/mpr121.h ****         \param config Configuration settings
+ 120:../libs/libDaisy/src/dev/mpr121.h ****     */
+ 121:../libs/libDaisy/src/dev/mpr121.h ****     Result Init(Config config)
+ 122:../libs/libDaisy/src/dev/mpr121.h ****     {
+ 123:../libs/libDaisy/src/dev/mpr121.h ****         config_ = config;
+ 124:../libs/libDaisy/src/dev/mpr121.h **** 
+ 125:../libs/libDaisy/src/dev/mpr121.h ****         SetTransportErr(transport_.Init(config_.transport_config));
+ 126:../libs/libDaisy/src/dev/mpr121.h **** 
+ 127:../libs/libDaisy/src/dev/mpr121.h ****         // soft reset
+ 128:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_SOFTRESET, 0x63);
+ 129:../libs/libDaisy/src/dev/mpr121.h ****         System::Delay(1);
+ 130:../libs/libDaisy/src/dev/mpr121.h **** 
+ 131:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_ECR, 0x0);
+ 132:../libs/libDaisy/src/dev/mpr121.h **** 
+ 133:../libs/libDaisy/src/dev/mpr121.h ****         // this doesn't work for some reason...
+ 134:../libs/libDaisy/src/dev/mpr121.h ****         // uint8_t c = ReadRegister8(MPR121_CONFIG2);
+ 135:../libs/libDaisy/src/dev/mpr121.h **** 
+ 136:../libs/libDaisy/src/dev/mpr121.h ****         // if(c != 0x24)
+ 137:../libs/libDaisy/src/dev/mpr121.h ****         //     return ERR;
+ 138:../libs/libDaisy/src/dev/mpr121.h **** 
+ 139:../libs/libDaisy/src/dev/mpr121.h ****         SetThresholds(config_.touch_threshold, config_.release_threshold);
+ 140:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_MHDR, 0x01);
+ 141:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NHDR, 0x01);
+ 142:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NCLR, 0x0E);
+ 143:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_FDLR, 0x00);
+ 144:../libs/libDaisy/src/dev/mpr121.h **** 
+ 145:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_MHDF, 0x01);
+ 146:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NHDF, 0x05);
+ 147:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NCLF, 0x01);
+ 148:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_FDLF, 0x00);
+ 149:../libs/libDaisy/src/dev/mpr121.h **** 
+ 150:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NHDT, 0x00);
+ 151:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_NCLT, 0x00);
+ 152:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_FDLT, 0x00);
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 20
+
+
+ 153:../libs/libDaisy/src/dev/mpr121.h **** 
+ 154:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_DEBOUNCE, 0);
+ 155:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_CONFIG1, 0x10); // default, 16uA charge current
+ 156:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_CONFIG2, 0x20); // 0.5uS encoding, 1ms period
+ 157:../libs/libDaisy/src/dev/mpr121.h **** 
+ 158:../libs/libDaisy/src/dev/mpr121.h ****         // autoconfig
+ 159:../libs/libDaisy/src/dev/mpr121.h ****         // WriteRegister(MPR121_AUTOCONFIG0, 0x0B);
+ 160:../libs/libDaisy/src/dev/mpr121.h **** 
+ 161:../libs/libDaisy/src/dev/mpr121.h ****         // correct values for Vdd = 3.3V
+ 162:../libs/libDaisy/src/dev/mpr121.h ****         // WriteRegister(MPR121_UPLIMIT, 200);     // ((Vdd - 0.7)/Vdd) * 256
+ 163:../libs/libDaisy/src/dev/mpr121.h ****         // WriteRegister(MPR121_TARGETLIMIT, 180); // UPLIMIT * 0.9
+ 164:../libs/libDaisy/src/dev/mpr121.h ****         // WriteRegister(MPR121_LOWLIMIT, 130);    // UPLIMIT * 0.65
+ 165:../libs/libDaisy/src/dev/mpr121.h ****         // autoconfig
+ 166:../libs/libDaisy/src/dev/mpr121.h **** 
+ 167:../libs/libDaisy/src/dev/mpr121.h ****         // enable X electrodes and start MPR121
+ 168:../libs/libDaisy/src/dev/mpr121.h ****         uint8_t ECR_SETTING
+ 169:../libs/libDaisy/src/dev/mpr121.h ****             = 0x80
+ 170:../libs/libDaisy/src/dev/mpr121.h ****               + 12; // 5 bits for baseline tracking & proximity disabled + X
+ 171:../libs/libDaisy/src/dev/mpr121.h ****                     // amount of electrodes running (12)
+ 172:../libs/libDaisy/src/dev/mpr121.h ****         WriteRegister(MPR121_ECR,
+ 173:../libs/libDaisy/src/dev/mpr121.h ****                       ECR_SETTING); // start with above ECR setting
+ 174:../libs/libDaisy/src/dev/mpr121.h **** 
+ 175:../libs/libDaisy/src/dev/mpr121.h ****         return GetTransportErr();
+ 176:../libs/libDaisy/src/dev/mpr121.h ****     }
+ 177:../libs/libDaisy/src/dev/mpr121.h **** 
+ 178:../libs/libDaisy/src/dev/mpr121.h ****     /** Set the touch and release thresholds for all 13 channels on the
+ 179:../libs/libDaisy/src/dev/mpr121.h ****         device to the passed values.
+ 180:../libs/libDaisy/src/dev/mpr121.h ****         \param      touch The touch threshold value from 0 to 255.
+ 181:../libs/libDaisy/src/dev/mpr121.h ****         \param      release The release threshold from 0 to 255.
+ 182:../libs/libDaisy/src/dev/mpr121.h ****     */
+ 183:../libs/libDaisy/src/dev/mpr121.h ****     void SetThresholds(uint8_t touch, uint8_t release)
+ 184:../libs/libDaisy/src/dev/mpr121.h ****     {
+ 185:../libs/libDaisy/src/dev/mpr121.h ****         // set all thresholds (the same)
+ 186:../libs/libDaisy/src/dev/mpr121.h ****         for(uint8_t i = 0; i < 12; i++)
+ 187:../libs/libDaisy/src/dev/mpr121.h ****         {
+ 188:../libs/libDaisy/src/dev/mpr121.h ****             WriteRegister(MPR121_TOUCHTH_0 + 2 * i, touch);
+ 189:../libs/libDaisy/src/dev/mpr121.h ****             WriteRegister(MPR121_RELEASETH_0 + 2 * i, release);
+ 190:../libs/libDaisy/src/dev/mpr121.h ****         }
+ 191:../libs/libDaisy/src/dev/mpr121.h ****     }
+ 192:../libs/libDaisy/src/dev/mpr121.h **** 
+ 193:../libs/libDaisy/src/dev/mpr121.h **** 
+ 194:../libs/libDaisy/src/dev/mpr121.h ****     /** Read the filtered data from channel t. The ADC raw data outputs
+ 195:../libs/libDaisy/src/dev/mpr121.h ****         run through 3 levels of digital filtering to filter out the high
+ 196:../libs/libDaisy/src/dev/mpr121.h ****         frequency and low frequency noise encountered. For detailed information on
+ 197:../libs/libDaisy/src/dev/mpr121.h ****         this filtering see page 6 of the device datasheet.
+ 198:../libs/libDaisy/src/dev/mpr121.h ****         \param      t the channel to read
+ 199:../libs/libDaisy/src/dev/mpr121.h ****         \returns    the filtered reading as a 10 bit unsigned value
+ 200:../libs/libDaisy/src/dev/mpr121.h ****     */
+ 201:../libs/libDaisy/src/dev/mpr121.h ****     uint16_t FilteredData(uint8_t t)
+ 202:../libs/libDaisy/src/dev/mpr121.h ****     {
+ 203:../libs/libDaisy/src/dev/mpr121.h ****         if(t > 12)
+ 204:../libs/libDaisy/src/dev/mpr121.h ****             return 0;
+ 205:../libs/libDaisy/src/dev/mpr121.h ****         return ReadRegister16(MPR121_FILTDATA_0L + t * 2);
+ 206:../libs/libDaisy/src/dev/mpr121.h ****     }
+ 207:../libs/libDaisy/src/dev/mpr121.h **** 
+ 208:../libs/libDaisy/src/dev/mpr121.h ****     /** Read the baseline value for the channel. The 3rd level filtered
+ 209:../libs/libDaisy/src/dev/mpr121.h ****         result is internally 10bit but only high 8 bits are readable
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 21
+
+
+ 210:../libs/libDaisy/src/dev/mpr121.h ****         from registers 0x1E~0x2A as the baseline value output for each channel.
+ 211:../libs/libDaisy/src/dev/mpr121.h ****         \param      t the channel to read.
+ 212:../libs/libDaisy/src/dev/mpr121.h ****         \returns    the baseline data that was read
+ 213:../libs/libDaisy/src/dev/mpr121.h ****     */
+ 214:../libs/libDaisy/src/dev/mpr121.h ****     uint16_t BaselineData(uint8_t t)
+ 215:../libs/libDaisy/src/dev/mpr121.h ****     {
+ 216:../libs/libDaisy/src/dev/mpr121.h ****         if(t > 12)
+ 217:../libs/libDaisy/src/dev/mpr121.h ****             return 0;
+ 218:../libs/libDaisy/src/dev/mpr121.h ****         uint16_t bl = ReadRegister8(MPR121_BASELINE_0 + t);
+ 219:../libs/libDaisy/src/dev/mpr121.h ****         return (bl << 2);
+ 220:../libs/libDaisy/src/dev/mpr121.h ****     }
+ 221:../libs/libDaisy/src/dev/mpr121.h **** 
+ 222:../libs/libDaisy/src/dev/mpr121.h ****     /** Read the touch status of all 13 channels as bit values in a 12 bit integer.
+ 223:../libs/libDaisy/src/dev/mpr121.h ****         \returns    a 12 bit integer with each bit corresponding to the touch status
+ 224:../libs/libDaisy/src/dev/mpr121.h ****         of a sensor. For example, if bit 0 is set then channel 0 of the
+ 225:../libs/libDaisy/src/dev/mpr121.h ****         device is currently deemed to be touched.
+ 226:../libs/libDaisy/src/dev/mpr121.h ****     */
+ 227:../libs/libDaisy/src/dev/mpr121.h ****     uint16_t Touched()
+ 584              		.loc 5 227 14 view .LVU137
+ 585              	.LBB82:
+ 586              	.LBB80:
+ 587              	.LBI66:
+ 228:../libs/libDaisy/src/dev/mpr121.h ****     {
+ 229:../libs/libDaisy/src/dev/mpr121.h ****         uint16_t t = ReadRegister16(MPR121_TOUCHSTATUS_L);
+ 230:../libs/libDaisy/src/dev/mpr121.h ****         return t & 0x0FFF;
+ 231:../libs/libDaisy/src/dev/mpr121.h ****     }
+ 232:../libs/libDaisy/src/dev/mpr121.h **** 
+ 233:../libs/libDaisy/src/dev/mpr121.h ****     /** Read the contents of an 8 bit device register.
+ 234:../libs/libDaisy/src/dev/mpr121.h ****         \param      reg the register address to read from
+ 235:../libs/libDaisy/src/dev/mpr121.h ****         \returns    the 8 bit value that was read.
+ 236:../libs/libDaisy/src/dev/mpr121.h ****     */
+ 237:../libs/libDaisy/src/dev/mpr121.h ****     uint8_t ReadRegister8(uint8_t reg)
+ 238:../libs/libDaisy/src/dev/mpr121.h ****     {
+ 239:../libs/libDaisy/src/dev/mpr121.h ****         uint8_t buff;
+ 240:../libs/libDaisy/src/dev/mpr121.h ****         SetTransportErr(transport_.ReadMem(&buff, reg, 1));
+ 241:../libs/libDaisy/src/dev/mpr121.h ****         return buff;
+ 242:../libs/libDaisy/src/dev/mpr121.h ****     }
+ 243:../libs/libDaisy/src/dev/mpr121.h **** 
+ 244:../libs/libDaisy/src/dev/mpr121.h ****     uint16_t ReadRegister16(uint8_t reg)
+ 588              		.loc 5 244 14 view .LVU138
+ 589              	.LBB78:
+ 590              	.LBB71:
+ 591              	.LBI68:
+  75:../libs/libDaisy/src/dev/mpr121.h ****     {
+ 592              		.loc 5 75 10 view .LVU139
+ 593              	.LBB70:
+  77:../libs/libDaisy/src/dev/mpr121.h ****                != i2c_.Mem_read(
+ 594              		.loc 5 77 9 view .LVU140
+  78:../libs/libDaisy/src/dev/mpr121.h ****                    config_.dev_addr, memAddress, 1, data, memSize, 10);
+ 595              		.loc 5 78 32 is_stmt 0 view .LVU141
+ 596 001e CDE90121 		strd	r2, r1, [sp, #4]
+ 597 0022 0022     		movs	r2, #0
+ 598 0024 94F89010 		ldrb	r1, [r4, #144]	@ zero_extendqisi2
+ 599 0028 0090     		str	r0, [sp]
+ 600 002a 04F17C00 		add	r0, r4, #124
+ 601              	.LVL43:
+  78:../libs/libDaisy/src/dev/mpr121.h ****                    config_.dev_addr, memAddress, 1, data, memSize, 10);
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 22
+
+
+ 602              		.loc 5 78 32 view .LVU142
+ 603 002e FFF7FEFF 		bl	_ZN5daisy9I2CHandle8Mem_readEtttPhtm
+ 604              	.LVL44:
+  78:../libs/libDaisy/src/dev/mpr121.h ****                    config_.dev_addr, memAddress, 1, data, memSize, 10);
+ 605              		.loc 5 78 32 view .LVU143
+ 606              	.LBE70:
+ 607              	.LBE71:
+ 608              	.LBB72:
+ 609              	.LBI72:
+ 245:../libs/libDaisy/src/dev/mpr121.h ****     {
+ 246:../libs/libDaisy/src/dev/mpr121.h ****         uint16_t buff;
+ 247:../libs/libDaisy/src/dev/mpr121.h ****         SetTransportErr(transport_.ReadMem((uint8_t *)&buff, reg, 2));
+ 248:../libs/libDaisy/src/dev/mpr121.h **** 
+ 249:../libs/libDaisy/src/dev/mpr121.h **** 
+ 250:../libs/libDaisy/src/dev/mpr121.h ****         return buff;
+ 251:../libs/libDaisy/src/dev/mpr121.h ****     }
+ 252:../libs/libDaisy/src/dev/mpr121.h **** 
+ 253:../libs/libDaisy/src/dev/mpr121.h ****     /** Writes 8-bits to the specified destination register
+ 254:../libs/libDaisy/src/dev/mpr121.h ****         \param  reg the register address to write to
+ 255:../libs/libDaisy/src/dev/mpr121.h ****         \param  value the value to write
+ 256:../libs/libDaisy/src/dev/mpr121.h ****     */
+ 257:../libs/libDaisy/src/dev/mpr121.h ****     void WriteRegister(uint8_t reg, uint8_t value)
+ 258:../libs/libDaisy/src/dev/mpr121.h ****     {
+ 259:../libs/libDaisy/src/dev/mpr121.h ****         // MPR121 must be put in Stop Mode to write to most registers
+ 260:../libs/libDaisy/src/dev/mpr121.h ****         bool stop_required = true;
+ 261:../libs/libDaisy/src/dev/mpr121.h **** 
+ 262:../libs/libDaisy/src/dev/mpr121.h ****         // first get the current set value of the MPR121_ECR register
+ 263:../libs/libDaisy/src/dev/mpr121.h ****         uint8_t ecr_reg = MPR121_ECR;
+ 264:../libs/libDaisy/src/dev/mpr121.h ****         uint8_t buff[2] = {ecr_reg, 0x00};
+ 265:../libs/libDaisy/src/dev/mpr121.h **** 
+ 266:../libs/libDaisy/src/dev/mpr121.h ****         SetTransportErr(transport_.Write(buff, 1));
+ 267:../libs/libDaisy/src/dev/mpr121.h **** 
+ 268:../libs/libDaisy/src/dev/mpr121.h ****         uint8_t ecr_backup;
+ 269:../libs/libDaisy/src/dev/mpr121.h ****         SetTransportErr(transport_.Read(&ecr_backup, 1));
+ 270:../libs/libDaisy/src/dev/mpr121.h ****         if((reg == MPR121_ECR) || ((0x73 <= reg) && (reg <= 0x7A)))
+ 271:../libs/libDaisy/src/dev/mpr121.h ****         {
+ 272:../libs/libDaisy/src/dev/mpr121.h ****             stop_required = false;
+ 273:../libs/libDaisy/src/dev/mpr121.h ****         }
+ 274:../libs/libDaisy/src/dev/mpr121.h **** 
+ 275:../libs/libDaisy/src/dev/mpr121.h ****         if(stop_required)
+ 276:../libs/libDaisy/src/dev/mpr121.h ****         {
+ 277:../libs/libDaisy/src/dev/mpr121.h ****             // clear this register to set stop mode
+ 278:../libs/libDaisy/src/dev/mpr121.h ****             SetTransportErr(transport_.Write(buff, 2));
+ 279:../libs/libDaisy/src/dev/mpr121.h ****         }
+ 280:../libs/libDaisy/src/dev/mpr121.h **** 
+ 281:../libs/libDaisy/src/dev/mpr121.h ****         buff[0] = reg;
+ 282:../libs/libDaisy/src/dev/mpr121.h ****         buff[1] = value;
+ 283:../libs/libDaisy/src/dev/mpr121.h ****         SetTransportErr(transport_.Write(buff, 2));
+ 284:../libs/libDaisy/src/dev/mpr121.h **** 
+ 285:../libs/libDaisy/src/dev/mpr121.h ****         if(stop_required)
+ 286:../libs/libDaisy/src/dev/mpr121.h ****         {
+ 287:../libs/libDaisy/src/dev/mpr121.h ****             // write back the previous set ECR settings
+ 288:../libs/libDaisy/src/dev/mpr121.h ****             buff[0] = ecr_reg;
+ 289:../libs/libDaisy/src/dev/mpr121.h ****             buff[1] = ecr_backup;
+ 290:../libs/libDaisy/src/dev/mpr121.h ****             SetTransportErr(transport_.Write(buff, 2));
+ 291:../libs/libDaisy/src/dev/mpr121.h ****         }
+ 292:../libs/libDaisy/src/dev/mpr121.h ****     }
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 23
+
+
+ 293:../libs/libDaisy/src/dev/mpr121.h **** 
+ 294:../libs/libDaisy/src/dev/mpr121.h ****     /** Device register map */
+ 295:../libs/libDaisy/src/dev/mpr121.h ****     enum RegMap
+ 296:../libs/libDaisy/src/dev/mpr121.h ****     {
+ 297:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_TOUCHSTATUS_L = 0x00,
+ 298:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_TOUCHSTATUS_H = 0x01,
+ 299:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_FILTDATA_0L   = 0x04,
+ 300:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_FILTDATA_0H   = 0x05,
+ 301:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_BASELINE_0    = 0x1E,
+ 302:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_MHDR          = 0x2B,
+ 303:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_NHDR          = 0x2C,
+ 304:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_NCLR          = 0x2D,
+ 305:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_FDLR          = 0x2E,
+ 306:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_MHDF          = 0x2F,
+ 307:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_NHDF          = 0x30,
+ 308:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_NCLF          = 0x31,
+ 309:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_FDLF          = 0x32,
+ 310:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_NHDT          = 0x33,
+ 311:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_NCLT          = 0x34,
+ 312:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_FDLT          = 0x35,
+ 313:../libs/libDaisy/src/dev/mpr121.h **** 
+ 314:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_TOUCHTH_0    = 0x41,
+ 315:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_RELEASETH_0  = 0x42,
+ 316:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_DEBOUNCE     = 0x5B,
+ 317:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_CONFIG1      = 0x5C,
+ 318:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_CONFIG2      = 0x5D,
+ 319:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_CHARGECURR_0 = 0x5F,
+ 320:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_CHARGETIME_1 = 0x6C,
+ 321:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_ECR          = 0x5E,
+ 322:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_AUTOCONFIG0  = 0x7B,
+ 323:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_AUTOCONFIG1  = 0x7C,
+ 324:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_UPLIMIT      = 0x7D,
+ 325:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_LOWLIMIT     = 0x7E,
+ 326:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_TARGETLIMIT  = 0x7F,
+ 327:../libs/libDaisy/src/dev/mpr121.h **** 
+ 328:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_GPIODIR    = 0x76,
+ 329:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_GPIOEN     = 0x77,
+ 330:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_GPIOSET    = 0x78,
+ 331:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_GPIOCLR    = 0x79,
+ 332:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_GPIOTOGGLE = 0x7A,
+ 333:../libs/libDaisy/src/dev/mpr121.h **** 
+ 334:../libs/libDaisy/src/dev/mpr121.h ****         MPR121_SOFTRESET = 0x80,
+ 335:../libs/libDaisy/src/dev/mpr121.h ****     };
+ 336:../libs/libDaisy/src/dev/mpr121.h **** 
+ 337:../libs/libDaisy/src/dev/mpr121.h ****   private:
+ 338:../libs/libDaisy/src/dev/mpr121.h ****     Config    config_;
+ 339:../libs/libDaisy/src/dev/mpr121.h ****     Transport transport_;
+ 340:../libs/libDaisy/src/dev/mpr121.h ****     bool      transport_error_;
+ 341:../libs/libDaisy/src/dev/mpr121.h **** 
+ 342:../libs/libDaisy/src/dev/mpr121.h ****     /** Set the global transport_error_ bool */
+ 343:../libs/libDaisy/src/dev/mpr121.h ****     void SetTransportErr(bool err) { transport_error_ |= err; }
+ 610              		.loc 5 343 10 is_stmt 1 view .LVU144
+ 611              	.LBB73:
+ 612              		.loc 5 343 55 is_stmt 0 view .LVU145
+ 613 0032 94F89420 		ldrb	r2, [r4, #148]	@ zero_extendqisi2
+ 614              	.LBE73:
+ 615              	.LBE72:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 24
+
+
+ 250:../libs/libDaisy/src/dev/mpr121.h ****     }
+ 616              		.loc 5 250 16 view .LVU146
+ 617 0036 BDF81630 		ldrh	r3, [sp, #22]
+ 618              	.LBB76:
+ 619              	.LBB74:
+ 620              		.loc 5 343 55 view .LVU147
+ 621 003a 0028     		cmp	r0, #0
+ 622 003c 18BF     		it	ne
+ 623 003e 42F00102 		orrne	r2, r2, #1
+ 624              	.LBE74:
+ 625              	.LBE76:
+ 626              	.LBE78:
+ 627              	.LBE80:
+ 628              	.LBE82:
+ 629              	.LBE84:
+ 630              		.loc 1 62 5 view .LVU148
+ 631 0042 13F00103 		ands	r3, r3, #1
+ 632              	.LBB85:
+ 633              	.LBB83:
+ 634              	.LBB81:
+ 635              	.LBB79:
+ 636              	.LBB77:
+ 637              	.LBB75:
+ 638              		.loc 5 343 55 view .LVU149
+ 639 0046 84F89420 		strb	r2, [r4, #148]
+ 640              	.LVL45:
+ 641              		.loc 5 343 55 view .LVU150
+ 642              	.LBE75:
+ 643              	.LBE77:
+ 644              	.LBE79:
+ 645              	.LBE81:
+ 646              	.LBE83:
+ 647              	.LBE85:
+ 648              		.loc 1 62 5 view .LVU151
+ 649 004a 12D0     		beq	.L46
+  63:classes/ControlPanel.cpp ****     {
+  64:classes/ControlPanel.cpp ****         if (!_is_touched) _is_touched = true; 
+ 650              		.loc 1 64 9 is_stmt 1 view .LVU152
+ 651 004c 94F87839 		ldrb	r3, [r4, #2424]	@ zero_extendqisi2
+ 652 0050 B3B1     		cbz	r3, .L53
+ 653              	.L47:
+  65:classes/ControlPanel.cpp ****         _target_freq = calculated_freq; 
+ 654              		.loc 1 65 9 view .LVU153
+ 655              		.loc 1 65 22 is_stmt 0 view .LVU154
+ 656 0052 04F67413 		addw	r3, r4, #2420
+ 657 0056 83ED008A 		vstr.32	s16, [r3]
+ 658              	.L48:
+  66:classes/ControlPanel.cpp ****         
+  67:classes/ControlPanel.cpp ****     }else{
+  68:classes/ControlPanel.cpp ****         if (_is_touched) _is_touched = false; 
+  69:classes/ControlPanel.cpp ****     }
+  70:classes/ControlPanel.cpp **** 
+  71:classes/ControlPanel.cpp ****     //ENCODER
+  72:classes/ControlPanel.cpp ****      _encoder.Debounce();
+ 659              		.loc 1 72 6 is_stmt 1 view .LVU155
+ 660              		.loc 1 72 23 is_stmt 0 view .LVU156
+ 661 005a 04F10800 		add	r0, r4, #8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 25
+
+
+ 662 005e FFF7FEFF 		bl	_ZN5daisy7Encoder8DebounceEv
+ 663              	.LVL46:
+  73:classes/ControlPanel.cpp ****     HandleEncoder();
+ 664              		.loc 1 73 5 is_stmt 1 view .LVU157
+ 665              		.loc 1 73 18 is_stmt 0 view .LVU158
+ 666 0062 2046     		mov	r0, r4
+  74:classes/ControlPanel.cpp **** 
+  75:classes/ControlPanel.cpp ****     //UI
+  76:classes/ControlPanel.cpp ****     //UserInterface();
+  77:classes/ControlPanel.cpp **** }
+ 667              		.loc 1 77 1 view .LVU159
+ 668 0064 06B0     		add	sp, sp, #24
+ 669              		.cfi_remember_state
+ 670              		.cfi_def_cfa_offset 16
+ 671              		@ sp needed
+ 672 0066 BDEC028B 		vldm	sp!, {d8}
+ 673              		.cfi_restore 80
+ 674              		.cfi_restore 81
+ 675              		.cfi_def_cfa_offset 8
+ 676              	.LVL47:
+ 677              		.loc 1 77 1 view .LVU160
+ 678 006a BDE81040 		pop	{r4, lr}
+ 679              		.cfi_restore 14
+ 680              		.cfi_restore 4
+ 681              		.cfi_def_cfa_offset 0
+ 682              	.LVL48:
+  73:classes/ControlPanel.cpp ****     HandleEncoder();
+ 683              		.loc 1 73 18 view .LVU161
+ 684 006e FFF7FEBF 		b	_ZN12ControlPanel13HandleEncoderEv
+ 685              	.LVL49:
+ 686              	.L46:
+ 687              		.cfi_restore_state
+  68:classes/ControlPanel.cpp ****     }
+ 688              		.loc 1 68 9 is_stmt 1 view .LVU162
+ 689 0072 94F87829 		ldrb	r2, [r4, #2424]	@ zero_extendqisi2
+ 690 0076 002A     		cmp	r2, #0
+ 691 0078 EFD0     		beq	.L48
+  68:classes/ControlPanel.cpp ****     }
+ 692              		.loc 1 68 26 discriminator 1 view .LVU163
+  68:classes/ControlPanel.cpp ****     }
+ 693              		.loc 1 68 38 is_stmt 0 discriminator 1 view .LVU164
+ 694 007a 84F87839 		strb	r3, [r4, #2424]
+ 695 007e ECE7     		b	.L48
+ 696              	.L53:
+  64:classes/ControlPanel.cpp ****         _target_freq = calculated_freq; 
+ 697              		.loc 1 64 27 is_stmt 1 discriminator 1 view .LVU165
+  64:classes/ControlPanel.cpp ****         _target_freq = calculated_freq; 
+ 698              		.loc 1 64 39 is_stmt 0 discriminator 1 view .LVU166
+ 699 0080 0123     		movs	r3, #1
+ 700 0082 84F87839 		strb	r3, [r4, #2424]
+ 701 0086 E4E7     		b	.L47
+ 702              		.cfi_endproc
+ 703              	.LFE4850:
+ 705              		.text
+ 706              	.Letext0:
+ 707              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 708              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 26
+
+
+ 709              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 710              		.file 9 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 711              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 712              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 713              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 714              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 715              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 716              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 717              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 718              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 719              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 720              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 721              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 722              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 723              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 724              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 725              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 726              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 727              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
+ 728              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 729              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 730              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 731              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 732              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 733              		.file 32 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 734              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 735              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 736              		.file 35 "../libs/libDaisy/src/daisy_core.h"
+ 737              		.file 36 "../libs/libDaisy/src/per/tim.h"
+ 738              		.file 37 "../libs/libDaisy/src/sys/system.h"
+ 739              		.file 38 "../libs/libDaisy/src/per/qspi.h"
+ 740              		.file 39 "../libs/libDaisy/src/per/dac.h"
+ 741              		.file 40 "../libs/libDaisy/src/per/gpio.h"
+ 742              		.file 41 "../libs/libDaisy/src/per/i2c.h"
+ 743              		.file 42 "../libs/libDaisy/src/per/sai.h"
+ 744              		.file 43 "../libs/libDaisy/src/hid/audio.h"
+ 745              		.file 44 "../libs/libDaisy/src/per/adc.h"
+ 746              		.file 45 "../libs/libDaisy/src/hid/usb.h"
+ 747              		.file 46 "../libs/libDaisy/src/hid/logger_impl.h"
+ 748              		.file 47 "../libs/libDaisy/src/util/wav_format.h"
+ 749              		.file 48 "../libs/libDaisy/src/dev/sr_595.h"
+ 750              		.file 49 "../libs/libDaisy/src/dev/codec_ak4556.h"
+ 751              		.file 50 "../libs/libDaisy/src/dev/max11300.h"
+ 752              		.file 51 "../libs/libDaisy/src/hid/logger.h"
+ 753              		.file 52 "../libs/libDaisy/src/dev/sdram.h"
+ 754              		.file 53 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 755              		.file 54 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 756              		.file 55 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 757              		.file 56 "../libs/DaisySP/Source/Control/adenv.h"
+ 758              		.file 57 "../libs/DaisySP/Source/Utility/dsp.h"
+ 759              		.file 58 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 760              		.file 59 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 761              		.file 60 "classes/../../Classes/SensorFilters/FIIR/CapFir.h"
+ 762              		.file 61 "classes/../../Classes/SensorFilters/IIR/iir.h"
+ 763              		.file 62 "classes/../../Classes/SensorFilters/MF/MF.h"
+ 764              		.file 63 "classes/PlantConditioner.h"
+ 765              		.file 64 "classes/ControlPanel.h"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 27
+
+
+ 766              		.file 65 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s 			page 28
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ControlPanel.cpp
+C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s:17     .text._ZN12ControlPanel4InitEPN5daisy9DaisySeedE:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s:26     .text._ZN12ControlPanel4InitEPN5daisy9DaisySeedE:00000000 _ZN12ControlPanel4InitEPN5daisy9DaisySeedE
+C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s:121    .text._ZN12ControlPanel4InitEPN5daisy9DaisySeedE:00000088 $d
+C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s:126    .text._ZN12ControlPanel13HandleEncoderEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s:134    .text._ZN12ControlPanel13HandleEncoderEv:00000000 _ZN12ControlPanel13HandleEncoderEv
+C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s:337    .text._ZN12ControlPanel13HandleEncoderEv:000000e0 $d
+C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s:344    .rodata._ZN12ControlPanel13UserInterfaceEv.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s:360    .text._ZN12ControlPanel13UserInterfaceEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s:368    .text._ZN12ControlPanel13UserInterfaceEv:00000000 _ZN12ControlPanel13UserInterfaceEv
+C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s:514    .text._ZN12ControlPanel13UserInterfaceEv:00000054 $d
+C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s:525    .text._ZN12ControlPanel6UpdateEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccTYD0iN.s:533    .text._ZN12ControlPanel6UpdateEv:00000000 _ZN12ControlPanel6UpdateEv
+
+UNDEFINED SYMBOLS
+_ZN16PlantConditioner4InitEN3IIR10FilterTypeEPN5daisy9DaisySeedE
+_ZN16PlantConditioner8setCurveEhf
+_ZN16PlantConditioner8setScaleENS_5NotesENS_9ScaleTypeE
+_ZN16PlantConditioner9setOctaveEh
+_ZN5daisy9DaisySeed6GetPinEh
+_ZN5daisy7Encoder4InitENS_3PinES1_S1_f
+_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE5PrintEPKcz
+_ZN16PlantConditioner7ProcessEv
+_ZN5daisy9I2CHandle8Mem_readEtttPhtm
+_ZN5daisy7Encoder8DebounceEv

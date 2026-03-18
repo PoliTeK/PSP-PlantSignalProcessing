@@ -11,7 +11,7 @@
 
 // DEBUG: Uncomment this line to enable serial printing via USB.
 // Keep commented for best audio performance.
-#define Debug 
+//#define Debug 
 
 #define ADC_CH 2
 
@@ -22,13 +22,15 @@ using namespace daisysp;
 daisy::Mpr121I2C::Config mpr121ObjConf;
 daisy::Mpr121I2C cap;
 DaisySeed hw;
+
 AdcChannelConfig adcConfig[ADC_CH];
 PlantConditioner pc;
+
 static Oscillator osc;
 static Adsr env;
 static OnePole SmoothFreq;
 
-// --- STATE VARIABLES ---
+// --- VARIABLES ---
 static volatile float target_freq = 440.0f; 
 bool gate = false;          
 uint16_t lastTouched = 0;   

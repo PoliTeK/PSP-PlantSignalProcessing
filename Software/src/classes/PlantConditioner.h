@@ -6,14 +6,10 @@
 
 // Assicurati che questi percorsi siano corretti nel tuo progetto!
 // Se i file sono nella stessa cartella, usa semplicemente #include "CapFir.h" ecc.
-#include "../SensorFilters/FIIR/CapFir.h"
-#include "../SensorFilters/IIR/iir.h"
-#include "../SensorFilters/MF/MF.h"
+#include "../../Classes/SensorFilters/FIIR/CapFir.h"
+#include "../../Classes/SensorFilters/IIR/iir.h"
+#include "../../Classes/SensorFilters/MF/MF.h"
 
-// Fallback se la macro non è definita altrove
-#ifndef MPR121_TOUCH_THRESHOLD_DEFAULT
-#define MPR121_TOUCH_THRESHOLD_DEFAULT 12
-#endif
 
 class PlantConditioner {
 public:
@@ -45,7 +41,7 @@ public:
         B,
     };
 
-    void Init(IIR::FilterType filter_type);
+    void Init(IIR::FilterType filter_type, daisy::DaisySeed* hw);
 
     void setCurve(uint8_t delta_max, float curve_type);
 
@@ -53,7 +49,7 @@ public:
 
     void setOctave(uint8_t octave);
 
-    float Process(uint16_t baseline, uint16_t filtered);
+    float Process();
 
     // DEBUG FUNCTIONS
     float* getBin();
@@ -61,14 +57,27 @@ public:
     float getDeltaFilt() { return _deltaFilt; }
     void setBuffer();
 
-    // Getter aggiornati a float per coerenza
+    
     float getDeltaMin() { return _deltaMin; }
     float getDeltaMax() { return _deltaMax; }
     float getRange() { return _range; }
+  
+
+
+
+
+    daisy::Mpr121I2C  _cap;
+    daisy::Mpr121I2C::Config _mpr121ObjConf;
 
 private:
     // Parametri Hardware
+
+    daisy::DaisySeed* _hw;
+    
+
+
     const uint8_t _touchThreshold = MPR121_TOUCH_THRESHOLD_DEFAULT;
+    
 
     // Filtri
     IIR _deltaFilter;
