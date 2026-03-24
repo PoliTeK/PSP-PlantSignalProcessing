@@ -6,7 +6,7 @@
 enum SynthPreset {
     PRESET_PAD = 0,
     PRESET_PLUCK,
-    PRESET_LEAD,
+    PRESET_LEAD,     //BoC Roygbiv like lead sound
     NUM_PRESETS
 };
 
@@ -34,8 +34,11 @@ public:
 
 private:
     // Moduli DaisySP
-    daisysp::Oscillator _osc;
-    daisysp::Adsr       _env;
+    daisysp::Oscillator _osc1;
+    daisysp::Oscillator _osc2;
+    daisysp::Oscillator _lfo;
+    daisysp::Adsr       _Aenv;
+    daisysp::Adsr       _Fenv;
     daisysp::Svf        _filter; // State Variable Filter
 
     // Variabili di stato interne
