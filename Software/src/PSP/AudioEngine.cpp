@@ -5,8 +5,11 @@ AudioEngine::~AudioEngine() {}
 
 void AudioEngine::Init(float sample_rate) {
     // Inizializzazione moduli
-    _osc.Init(sample_rate);
-    _env.Init(sample_rate);
+    _osc1.Init(sample_rate);
+    _osc2.Init(sample_rate);
+    _lfo.Init(sample_rate);
+    _Aenv.Init(sample_rate);
+    _Fenv.Init(sample_rate);
     _filter.Init(sample_rate);
 
     _lastGate = false;
@@ -21,31 +24,39 @@ void AudioEngine::SetPreset(SynthPreset preset) {
 
     switch (preset) {
         case PRESET_PAD:
-            _osc.SetWaveform(0);
-            _env.SetTime(daisysp::ADSR_SEG_ATTACK, 0.5f);
-            _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.2f);
-            _env.SetTime(daisysp::ADSR_SEG_RELEASE, 1.2f);
-            _env.SetSustainLevel(0.8f);
+            _osc1.SetWaveform(0);
+            _Aenv.SetTime(daisysp::ADSR_SEG_ATTACK, 0.5f);
+            _Aenv.SetTime(daisysp::ADSR_SEG_DECAY, 0.2f);
+            _Aenv.SetTime(daisysp::ADSR_SEG_RELEASE, 1.2f);
+            _Aenv.SetSustainLevel(0.8f);
             _filter.SetFreq(6000.0f);
             _filter.SetRes(0.1f);
             break;
 
         case PRESET_PLUCK:
-            _osc.SetWaveform(daisysp::Oscillator::WAVE_SQUARE);
-            _env.SetTime(daisysp::ADSR_SEG_ATTACK, 0.01f);
-            _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.15f);
-            _env.SetTime(daisysp::ADSR_SEG_RELEASE, 0.3f);
-            _env.SetSustainLevel(0.0f); // Pluck non ha sustain
+            _Aenv.SetTime(daisysp::ADSR_SEG_ATTACK, 0.01f);
+            _Aenv.SetTime(daisysp::ADSR_SEG_DECAY, 0.15f);
+            _Aenv.SetTime(daisysp::ADSR_SEG_RELEASE, 0.3f);
+            _Aenv.SetSustainLevel(0.0f); // Pluck non ha sustain
+            
             _filter.SetFreq(1500.0f);
             _filter.SetRes(0.4f);
             break;
 
         case PRESET_LEAD:
-            _osc.SetWaveform(daisysp::Oscillator::WAVE_POLYBLEP_SAW);
-            _env.SetTime(daisysp::ADSR_SEG_ATTACK, 0.05f);
-            _env.SetTime(daisysp::ADSR_SEG_DECAY, 0.1f);
-            _env.SetTime(daisysp::ADSR_SEG_RELEASE, 0.4f);
-            _env.SetSustainLevel(0.7f);
+            _osc1.SetWaveform(daisysp::Oscillator::WAVE_POLYBLEP_SQUARE);
+            _osc2.SetWaveform(daisysp::Oscillator::WAVE_POLYBLEP_SQUARE);
+            _lfo.SetWaveform(daisysp::Oscillator::WAVE_TRI);
+            _lfo.SetFreq(0.7f);
+            _lfo.SetAmp(0.005f);
+            _Aenv.SetTime(daisysp::ADSR_SEG_ATTACK, 0.05f);
+            _Aenv.SetTime(daisysp::ADSR_SEG_DECAY, 2.8f);
+            _Aenv.SetTime(daisysp::ADSR_SEG_RELEASE, 1.3f);
+            _Aenv.SetSustainLevel(0.6f);
+            _Fenv.SetTime(daisysp::ADSR_SEG_ATTACK, 0.1f);
+            _Fenv.SetTime(daisysp::ADSR_SEG_DECAY, 1.8f);
+            _Fenv.SetTime(daisysp::ADSR_SEG_RELEASE, 2.0f);
+            _Fenv.SetSustainLevel(0.4f);
             _filter.SetFreq(8000.0f);
             _filter.SetRes(0.3f);
             break;
@@ -56,33 +67,43 @@ void AudioEngine::SetPreset(SynthPreset preset) {
 }
 
 void AudioEngine::Update(ControlsStruct Controls) {
-    // Aggiorna la frequenza in modo continuo o usa un portamento se necessario
-    _currentFreq = Controls.freq;
-    _osc.SetFreq(_currentFreq);
 
-    // Gestione del trigger dell'inviluppo (Fronte di salita)
+    _currentFreq = Controls.freq;
     if (Controls.gate && !_lastGate) {
-        _env.Retrigger(false);
+        _Aenv.Retrigger(false);
     }
-    
-    // Aggiornamento dello stato del gate
     _lastGate = Controls.gate;
 }
 
 float AudioEngine::Process() {
-    // 1. Processa l'inviluppo passando lo stato del gate
-    float env_out = _env.Process(_lastGate);
+    float Aenv_out;
+    float Fenv_out;
+    float sig;
 
-    // 2. Processa l'oscillatore
-    float sig = _osc.Process();
+    switch (_currentPreset)
+    {
+    case PRESET_PAD:
+        /* PAD code */
+        break;
+    case PRESET_PLUCK:
+        /*PLUCK code*/
+        break;
+    case PRESET_LEAD:
+        _osc1.SetFreq(_currentFreq * (1 +  _lfo.Process()));
+        _osc2.SetFreq(_currentFreq * 2.0f * (1 +  _lfo.Process()));
+        _osc1.SetPw(0.1f);
+        _osc2.SetPw(0.1f);
 
-    // 3. Applica l'inviluppo all'ampiezza
-    sig *= env_out;
+        Aenv_out = _Aenv.Process(_lastGate);
+        Fenv_out = _Fenv.Process(_lastGate);
+        _filter.SetFreq(4000 * (1 + Fenv_out));
+    
+    default:
+        break;
+    }
+    sig = (_osc1.Process() + _osc2.Process())/2.0f;
+    sig *= Aenv_out;
 
-    // 4. (Opzionale) Modula il filtro con l'inviluppo per dare dinamica
-    // _filter.SetFreq(200.0f + (env_out * 4000.0f));
-
-    // 5. Processa il segnale attraverso il filtro
     _filter.Process(sig);
 
     // Ritorna l'uscita passa-basso
