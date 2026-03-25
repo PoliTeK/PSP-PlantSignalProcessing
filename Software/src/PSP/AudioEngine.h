@@ -1,5 +1,6 @@
 #pragma once
 #include "daisysp.h"
+#include "AudioEngineConfig.h"
 
 
 // Definizione dei preset disponibili
@@ -13,6 +14,24 @@ enum SynthPreset {
 struct ControlsStruct {
     float freq; // Frequenza in Hz
     bool gate;       // Stato del gate (on/off)
+};
+
+struct Oscillator_str{
+    uint8_t Waveform;
+    float Amp;
+    float Shape;
+    float Freq;
+};
+
+struct Adsr_str{
+    float Attack;
+    float Decay; 
+    float Sustain;
+    float Release;
+};
+struct Filter_str{
+    float Cutoff;
+    float Resonance;
 };
 
 class AudioEngine {
@@ -34,12 +53,23 @@ public:
 
 private:
     // Moduli DaisySP
-    daisysp::Oscillator _osc1;
-    daisysp::Oscillator _osc2;
-    daisysp::Oscillator _lfo;
-    daisysp::Adsr       _Aenv;
-    daisysp::Adsr       _Fenv;
-    daisysp::Svf        _filter; // State Variable Filter
+    daisysp::Oscillator   _osc1;
+    daisysp::Oscillator   _osc2;
+    daisysp::Oscillator   _lfo1;
+    daisysp::Oscillator   _lfo2;
+    daisysp::Adsr         _Aenv;
+    daisysp::Adsr         _Fenv;
+    daisysp::LadderFilter _filter; // State Variable Filter
+
+    Oscillator_str _osc1Param;
+    Oscillator_str _osc2Param;
+    Oscillator_str _lfo1Param;
+    Oscillator_str _lfo2Param;
+
+    Adsr_str _AmpADSR;
+    Adsr_str _FiltADSR;
+
+    Filter_str _Filt;
 
     // Variabili di stato interne
     SynthPreset _currentPreset;
