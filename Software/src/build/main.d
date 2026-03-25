@@ -257,7 +257,11 @@ build/main.o: main.cpp \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/metro.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/samplehold.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/smooth_random.h \
- ../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.h
+ Display/displayHandler.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h \
+ PSP/PlantConditioner.h \
+ PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h \
+ PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h PSP/AudioEngine.h
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -516,4 +520,9 @@ build/main.o: main.cpp \
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/metro.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/samplehold.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/smooth_random.h:
-../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.h:
+Display/displayHandler.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h:
+PSP/PlantConditioner.h:
+PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h:
+PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h:
+PSP/AudioEngine.h:

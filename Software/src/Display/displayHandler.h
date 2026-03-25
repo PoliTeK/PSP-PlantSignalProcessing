@@ -1,10 +1,12 @@
 /// @file displayHandler.hpp
 /// @brief handler for ssd130x
 
+#pragma once
+
 /// @todo make buffer size statically asserted as a power of 2
 /// @todo improve drawPotValue screen with parameter name
-#include "../../../../libs/libDaisy/src/dev/oled_ssd130x.h"
-#include "../../../../libs/libDaisy/src/daisy_seed.h"
+#include "../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h"
+#include "../../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h"
 
 #define BUFFER_SIZE 256
 #define WINDOW_SIZE 128
@@ -39,6 +41,7 @@ private:
 
     // might not be needed      
     float* _potValuePtr;
+    const char* _standbyText = "PoliTeK PSP";
 
     int findTrigger();
     /* internal drawing functions */
@@ -57,6 +60,9 @@ public:
 
     // Set new fsm state
     void SetState (DisplayState newState);
+
+    // Set text displayed in STANDBY state
+    void SetStandbyText(const char* text);
 
     void pushAudioSample (float sample);
 

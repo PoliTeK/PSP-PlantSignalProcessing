@@ -1,4 +1,4 @@
-build/myEncoder.o: Components/myEncoder.cpp \
+build/displayHandler.o: Display/displayHandler.cpp \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h \
@@ -104,11 +104,105 @@ build/myEncoder.o: Components/myEncoder.cpp \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
- Components/myEncoder.h ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h \
+ Display/displayHandler.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/per/i2c.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/util/hal_map.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/per/spi.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/per/gpio.h \
- ../libs/PoliTeKDSP/libs/libDaisy/src/hid/switch.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/sys/system.h \
- ../libs/PoliTeKDSP/libs/libDaisy/src/per/tim.h
+ ../libs/PoliTeKDSP/libs/libDaisy/src/per/tim.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/version.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/sys/system.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/pwm.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/leddriver.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/mpr121.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/sdram.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/sr_4021.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/audio.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/unique_id.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/adc.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/uart.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/midi.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/util/ringbuffer.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/util/FIFO.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/hid/midi_parser.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/hid/MidiEvent.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/hid/usb_midi.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/hid/usb.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/sys/dma.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/encoder.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/hid/switch.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/switch3.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/ctrl.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/gatein.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/parameter.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/logger.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/logger_impl.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/usb_host.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_def.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/usbh/usbh_conf.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/sdmmc.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/spiMultislave.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/rng.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/util/oled_fonts.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/color_display.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_color_display.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/led.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/rgb_led.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/util/color.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/sr_595.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/apds9960.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/codec_ak4556.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/codec_pcm3060.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/codec_wm8731.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/dps310.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/lcd_hd44780.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/mcp23x17.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/max11300.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/tlv493d.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/dotstar.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/neopixel.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/neotrellis.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/icm20948.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/ButtonMonitor.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/UiEventQueue.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/../util/scopedirqblocker.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/cmsis_gcc.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/../sys/system.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/PotMonitor.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/UI.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/../util/Stack.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/AbstractMenu.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/util/MappedValue.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/util/FixedCapStr.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/FullScreenItemMenu.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/CpuLoadMeter.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/FileReader.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/Middlewares/Third_Party/FatFs/src/ff.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/Middlewares/Third_Party/FatFs/src/integer.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/sys/ffconf.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/util/bsp_sd_diskio.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/FileTable.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/PersistentStorage.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/VoctCalibration.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WaveTableLoader.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/sys/fatfs.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/util/wav_format.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WavParser.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WavPlayer.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h \
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WavWriter.h
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -214,9 +308,102 @@ build/myEncoder.o: Components/myEncoder.cpp \
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
-Components/myEncoder.h:
+Display/displayHandler.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/per/i2c.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/util/hal_map.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/per/spi.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/per/gpio.h:
-../libs/PoliTeKDSP/libs/libDaisy/src/hid/switch.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/sys/system.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/per/tim.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/version.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/sys/system.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/pwm.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/leddriver.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/mpr121.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/sdram.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/sr_4021.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/audio.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/unique_id.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/adc.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/uart.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/midi.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/util/ringbuffer.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/util/FIFO.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/hid/midi_parser.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/hid/MidiEvent.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/hid/usb_midi.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/hid/usb.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/sys/dma.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/encoder.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/hid/switch.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/switch3.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/ctrl.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/gatein.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/parameter.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/logger.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/logger_impl.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/usb_host.h:
+../libs/PoliTeKDSP/libs/libDaisy/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_def.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/usbh/usbh_conf.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/sdmmc.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/spiMultislave.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/per/rng.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/util/oled_fonts.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/color_display.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_color_display.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/led.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/rgb_led.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/util/color.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/sr_595.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/apds9960.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/codec_ak4556.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/codec_pcm3060.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/codec_wm8731.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/dps310.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/lcd_hd44780.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/mcp23x17.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/max11300.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/tlv493d.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/dotstar.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/neopixel.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/neotrellis.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/icm20948.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/ButtonMonitor.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/UiEventQueue.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/../util/scopedirqblocker.h:
+../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/cmsis_gcc.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/../sys/system.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/PotMonitor.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/UI.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/../util/Stack.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/AbstractMenu.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/util/MappedValue.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/util/FixedCapStr.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/ui/FullScreenItemMenu.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/CpuLoadMeter.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/FileReader.h:
+../libs/PoliTeKDSP/libs/libDaisy/Middlewares/Third_Party/FatFs/src/ff.h:
+../libs/PoliTeKDSP/libs/libDaisy/Middlewares/Third_Party/FatFs/src/integer.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/sys/ffconf.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/util/bsp_sd_diskio.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/FileTable.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/PersistentStorage.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/VoctCalibration.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WaveTableLoader.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/sys/fatfs.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/util/wav_format.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WavParser.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WavPlayer.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h:
+Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WavWriter.h:

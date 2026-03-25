@@ -1,11 +1,11 @@
 # Project Name
 
-TARGET = PSP
-#TARGET = main
+#TARGET = PSP
+TARGET = main
 
 # Sources
 
-CPP_SOURCES = main.cpp PSP/AudioEngine.cpp PSP/PlantConditioner.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/FIIR/CapFir.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.cpp ../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp
+CPP_SOURCES = main.cpp Display/displayHandler.cpp PSP/AudioEngine.cpp PSP/PlantConditioner.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/FIIR/CapFir.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.cpp ../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp 
 
 
 # Library Locations

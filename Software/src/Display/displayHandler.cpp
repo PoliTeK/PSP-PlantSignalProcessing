@@ -1,4 +1,4 @@
-#include "displayHandler.hpp"
+#include "displayHandler.h"
 
 
 DisplayHandler::DisplayHandler (MyOledDisplay* displayPtr, bool triggerEnabled){
@@ -50,6 +50,14 @@ void DisplayHandler::SetState(DisplayState newState){
     // clears display at each new state
     _displayPtr->Fill(false);
     _currentState = newState;
+}
+
+void DisplayHandler::SetStandbyText(const char* text){
+    if(text != nullptr)
+    {
+        _standbyText = text;
+        _displayPtr->Fill(false);
+    }
 }
 
 
@@ -122,5 +130,5 @@ void DisplayHandler::drawWaveForm (){
 // LONG FUNCTION AHEAD -> prints test logo atm
 void DisplayHandler::drawStandbyScreen(){
   _displayPtr->SetCursor(0,0);
-  _displayPtr->WriteString("TESTLOGO", Font_16x26, true);  
+        _displayPtr->WriteString(_standbyText, Font_11x18, true);
 }

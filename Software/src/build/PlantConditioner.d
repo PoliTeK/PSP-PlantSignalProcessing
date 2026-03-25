@@ -259,8 +259,7 @@ build/PlantConditioner.o: PSP/PlantConditioner.cpp \
  ../libs/PoliTeKDSP/libs/libDaisy/src/util/WavPlayer.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/util/WavWriter.h \
- PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h \
- PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/FIIR/CapFir.h
+ PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -522,4 +521,3 @@ PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/util/WavWriter.h:
 PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h:
-PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/FIIR/CapFir.h:
