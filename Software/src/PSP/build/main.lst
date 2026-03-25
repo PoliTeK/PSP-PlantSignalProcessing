@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   34              		@ link register save eliminated.
   35              	.LBB143:
   36              	.LBI143:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 2
 
 
   37              		.file 2 "../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/dev/codec_ak4556.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   27:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/sys/system.h ****             FREQ_400MHZ,
   28:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/sys/system.h ****             FREQ_480MHZ,
   29:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/sys/system.h ****         };
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 3
 
 
   30:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/sys/system.h **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   84:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/sys/system.h ****         } status;
   85:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/sys/system.h ****         uint32_t data;
   86:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/sys/system.h ****         enum class Version : uint32_t
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 4
 
 
   87:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/sys/system.h ****         {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   38:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/usb.h ****     typedef void (*ReceiveCallback)(uint8_t* buff, uint32_t* len);
   39:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/usb.h **** 
   40:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/usb.h ****     UsbHandle() {}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 5
 
 
   41:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/usb.h **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   47:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/adc.h ****         SPEED_8CYCLES_5,
   48:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/adc.h ****         SPEED_16CYCLES_5,
   49:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/adc.h ****         SPEED_32CYCLES_5,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 6
 
 
   50:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/adc.h ****         SPEED_64CYCLES_5,
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  104:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/adc.h ****         OVS_512,  /**< & */
  105:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/adc.h ****         OVS_1024, /**< & */
  106:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/adc.h ****         OVS_LAST, /**< & */
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 7
 
 
  107:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/adc.h ****     };
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   45:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/hid/audio.h ****     enum class Result
   46:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/hid/audio.h ****     {
   47:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/hid/audio.h ****         OK,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 8
 
 
   48:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/hid/audio.h ****         ERR,
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   76              		.syntax unified
   77              		.thumb
   78              		.thumb_func
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 9
 
 
   79              		.fpu fpv5-d16
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  111              	.LBB148:
  112              		.loc 7 21 26 view .LVU20
  113 0012 86B1     		cbz	r6, .L3
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 10
 
 
  114              		.loc 7 21 17 is_stmt 0 view .LVU21
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  154              	.LBE148:
   28:main.cpp      ****     }
   29:main.cpp      **** }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 11
 
 
  155              		.loc 7 29 1 view .LVU36
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  202              	.LVL13:
   37:main.cpp      **** 
   38:main.cpp      ****     // Inizializzazione PlantConditioner
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 12
 
 
   39:main.cpp      ****     pc.Init(IIR::Butterworth, &hw);
@@ -683,50 +683,50 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  219 002c 1448     		ldr	r0, .L16+4
  220 002e FFF7FEFF 		bl	_ZN16PlantConditioner8setCurveEf
  221              	.LVL16:
-  42:main.cpp      ****     pc.setScale(PlantConditioner::C, PlantConditioner::Major);
+  42:main.cpp      ****     pc.setScale(PlantConditioner::G, PlantConditioner::Major);
  222              		.loc 7 42 5 is_stmt 1 view .LVU52
  223              		.loc 7 42 16 is_stmt 0 view .LVU53
  224 0032 0022     		movs	r2, #0
- 225 0034 1248     		ldr	r0, .L16+4
- 226 0036 1146     		mov	r1, r2
- 227 0038 134C     		ldr	r4, .L16+12
- 228 003a FFF7FEFF 		bl	_ZN16PlantConditioner8setScaleENS_5NotesENS_9ScaleTypeE
- 229              	.LVL17:
+ 225 0034 0721     		movs	r1, #7
+ 226 0036 1248     		ldr	r0, .L16+4
+ 227 0038 FFF7FEFF 		bl	_ZN16PlantConditioner8setScaleENS_5NotesENS_9ScaleTypeE
+ 228              	.LVL17:
   43:main.cpp      ****     pc.setOctave(4);
- 230              		.loc 7 43 5 is_stmt 1 view .LVU54
- 231              		.loc 7 43 17 is_stmt 0 view .LVU55
- 232 003e 0421     		movs	r1, #4
- 233 0040 0F48     		ldr	r0, .L16+4
- 234 0042 FFF7FEFF 		bl	_ZN16PlantConditioner9setOctaveEh
- 235              	.LVL18:
+ 229              		.loc 7 43 5 is_stmt 1 view .LVU54
+ 230              		.loc 7 43 17 is_stmt 0 view .LVU55
+ 231 003c 0421     		movs	r1, #4
+ 232 003e 1048     		ldr	r0, .L16+4
+ 233 0040 FFF7FEFF 		bl	_ZN16PlantConditioner9setOctaveEh
+ 234              	.LVL18:
   44:main.cpp      **** 
   45:main.cpp      ****     // Inizializzazione AudioEngine
   46:main.cpp      ****     synth.Init(hw.AudioSampleRate());
- 236              		.loc 7 46 5 is_stmt 1 view .LVU56
- 237              		.loc 7 46 15 is_stmt 0 view .LVU57
- 238 0046 0D48     		ldr	r0, .L16
- 239 0048 FFF7FEFF 		bl	_ZN5daisy9DaisySeed15AudioSampleRateEv
- 240              	.LVL19:
- 241 004c 0F48     		ldr	r0, .L16+16
- 242 004e FFF7FEFF 		bl	_ZN11AudioEngine4InitEf
- 243              	.LVL20:
+ 235              		.loc 7 46 5 is_stmt 1 view .LVU56
+ 236              		.loc 7 46 15 is_stmt 0 view .LVU57
+ 237 0044 0D48     		ldr	r0, .L16
+ 238 0046 FFF7FEFF 		bl	_ZN5daisy9DaisySeed15AudioSampleRateEv
+ 239              	.LVL19:
+ 240 004a 0F48     		ldr	r0, .L16+12
+ 241 004c FFF7FEFF 		bl	_ZN11AudioEngine4InitEf
+ 242              	.LVL20:
   47:main.cpp      ****     synth.SetPreset(PRESET_LEAD);
- 244              		.loc 7 47 5 is_stmt 1 view .LVU58
- 245              		.loc 7 47 20 is_stmt 0 view .LVU59
- 246 0052 0221     		movs	r1, #2
- 247 0054 0D48     		ldr	r0, .L16+16
- 248 0056 FFF7FEFF 		bl	_ZN11AudioEngine9SetPresetE11SynthPreset
- 249              	.LVL21:
+ 243              		.loc 7 47 5 is_stmt 1 view .LVU58
+ 244              		.loc 7 47 20 is_stmt 0 view .LVU59
+ 245 0050 0221     		movs	r1, #2
+ 246 0052 0D48     		ldr	r0, .L16+12
+ 247 0054 FFF7FEFF 		bl	_ZN11AudioEngine9SetPresetE11SynthPreset
+ 248              	.LVL21:
   48:main.cpp      **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 13
-
-
   49:main.cpp      ****     // Avvia la callback audio in background
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 13
+
+
   50:main.cpp      ****     hw.StartAudio(AudioCallback);
- 250              		.loc 7 50 5 is_stmt 1 view .LVU60
- 251              		.loc 7 50 18 is_stmt 0 view .LVU61
- 252 005a 0D49     		ldr	r1, .L16+20
- 253 005c 0748     		ldr	r0, .L16
+ 249              		.loc 7 50 5 is_stmt 1 view .LVU60
+ 250              		.loc 7 50 18 is_stmt 0 view .LVU61
+ 251 0058 0C49     		ldr	r1, .L16+16
+ 252 005a 0848     		ldr	r0, .L16
+ 253 005c 0C4C     		ldr	r4, .L16+20
  254 005e FFF7FEFF 		bl	_ZN5daisy9DaisySeed10StartAudioEPFvPKPKfPPfjE
  255              	.LVL22:
  256              	.L14:
@@ -734,7 +734,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   52:main.cpp      ****     while(1) {
  257              		.loc 7 52 5 is_stmt 1 discriminator 1 view .LVU62
  258              	.LBB152:
-  53:main.cpp      ****         // 1. Processa i dati del sensore capacitivo
+  53:main.cpp      **** 
   54:main.cpp      ****         PlantConditioner::PlantState plant_data = pc.Process();
  259              		.loc 7 54 9 discriminator 1 view .LVU63
  260              		.loc 7 54 62 is_stmt 0 discriminator 1 view .LVU64
@@ -743,49 +743,46 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  263 0066 FFF7FEFF 		bl	_ZN16PlantConditioner7ProcessEv
  264              	.LVL23:
   55:main.cpp      **** 
-  56:main.cpp      ****         // 2. Mappa i dati dalla struct della pianta alla struct del synth
-  57:main.cpp      ****         // L'operazione di scrittura su float/bool su Cortex-M7 è atomica, 
-  58:main.cpp      ****         // quindi non ci sono conflitti critici con la callback audio.
-  59:main.cpp      ****         audio_controls.freq = plant_data._freq;
- 265              		.loc 7 59 9 is_stmt 1 discriminator 1 view .LVU65
- 266              		.loc 7 59 29 is_stmt 0 discriminator 1 view .LVU66
+  56:main.cpp      ****         audio_controls.freq = plant_data._freq;
+ 265              		.loc 7 56 9 is_stmt 1 discriminator 1 view .LVU65
+ 266              		.loc 7 56 29 is_stmt 0 discriminator 1 view .LVU66
  267 006a 009A     		ldr	r2, [sp]	@ float
-  60:main.cpp      ****         audio_controls.gate = plant_data._gate;
- 268              		.loc 7 60 29 discriminator 1 view .LVU67
+  57:main.cpp      ****         audio_controls.gate = plant_data._gate;
+ 268              		.loc 7 57 29 discriminator 1 view .LVU67
  269 006c 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
-  61:main.cpp      **** 
-  62:main.cpp      ****         // 3. Pausa di 1 ms per stabilizzare il bus I2C e non saturare la CPU
-  63:main.cpp      ****         System::Delay(1);
- 270              		.loc 7 63 22 discriminator 1 view .LVU68
- 271 0070 0120     		movs	r0, #1
-  59:main.cpp      ****         audio_controls.gate = plant_data._gate;
- 272              		.loc 7 59 29 discriminator 1 view .LVU69
+  58:main.cpp      **** 
+  59:main.cpp      ****         // 3. Pausa di 1 ms per stabilizzare il bus I2C e non saturare la CPU
+  60:main.cpp      ****         System::Delay(5);
+ 270              		.loc 7 60 22 discriminator 1 view .LVU68
+ 271 0070 0520     		movs	r0, #5
+  56:main.cpp      ****         audio_controls.gate = plant_data._gate;
+ 272              		.loc 7 56 29 discriminator 1 view .LVU69
  273 0072 2260     		str	r2, [r4]	@ float
-  60:main.cpp      ****         audio_controls.gate = plant_data._gate;
- 274              		.loc 7 60 9 is_stmt 1 discriminator 1 view .LVU70
-  60:main.cpp      ****         audio_controls.gate = plant_data._gate;
- 275              		.loc 7 60 29 is_stmt 0 discriminator 1 view .LVU71
+  57:main.cpp      ****         audio_controls.gate = plant_data._gate;
+ 274              		.loc 7 57 9 is_stmt 1 discriminator 1 view .LVU70
+  57:main.cpp      ****         audio_controls.gate = plant_data._gate;
+ 275              		.loc 7 57 29 is_stmt 0 discriminator 1 view .LVU71
  276 0074 2371     		strb	r3, [r4, #4]
- 277              		.loc 7 63 9 is_stmt 1 discriminator 1 view .LVU72
- 278              		.loc 7 63 22 is_stmt 0 discriminator 1 view .LVU73
+ 277              		.loc 7 60 9 is_stmt 1 discriminator 1 view .LVU72
+ 278              		.loc 7 60 22 is_stmt 0 discriminator 1 view .LVU73
  279 0076 FFF7FEFF 		bl	_ZN5daisy6System5DelayEm
  280              	.LVL24:
  281              	.LBE152:
-  52:main.cpp      ****         // 1. Processa i dati del sensore capacitivo
+  52:main.cpp      **** 
  282              		.loc 7 52 5 is_stmt 1 discriminator 1 view .LVU74
  283 007a F2E7     		b	.L14
  284              	.L17:
  285              		.align	2
  286              	.L16:
  287 007c 00000000 		.word	.LANCHOR2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 14
-
-
  288 0080 00000000 		.word	.LANCHOR3
  289 0084 00004842 		.word	1112014848
- 290 0088 00000000 		.word	.LANCHOR0
- 291 008c 00000000 		.word	.LANCHOR1
- 292 0090 00000000 		.word	_Z13AudioCallbackPKPKfPPfj
+ 290 0088 00000000 		.word	.LANCHOR1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 14
+
+
+ 291 008c 00000000 		.word	_Z13AudioCallbackPKPKfPPfj
+ 292 0090 00000000 		.word	.LANCHOR0
  293              		.cfi_endproc
  294              	.LFE4907:
  296              		.section	.text.startup._GLOBAL__sub_I_hw,"ax",%progbits
@@ -797,15 +794,15 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  302              		.fpu fpv5-d16
  304              	_GLOBAL__sub_I_hw:
  305              	.LFB5474:
-  64:main.cpp      ****     }
-  65:main.cpp      **** }...
- 306              		.loc 7 65 1 view -0
+  61:main.cpp      ****     }
+  62:main.cpp      **** }...
+ 306              		.loc 7 62 1 view -0
  307              		.cfi_startproc
  308              		@ args = 0, pretend = 0, frame = 0
  309              		@ frame_needed = 0, uses_anonymous_args = 0
  310              	.LBB219:
  311              	.LBI219:
- 312              		.loc 7 65 1 view .LVU76
+ 312              		.loc 7 62 1 view .LVU76
  313              	.LVL25:
  314              	.LBB220:
  315              	.LBB221:
@@ -838,12 +835,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   20:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h **** namespace daisy
   21:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h **** {
   22:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h **** /** @addtogroup serial
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 15
-
-
   23:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h **** @{
   24:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h **** */
   25:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h **** 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 15
+
+
   26:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h **** /**
   27:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****  Driver for QSPI peripheral to interface with external flash memory. \n
   28:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****     Currently supported QSPI Devices: \n
@@ -898,12 +895,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   77:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****             MEMORY_MAPPED,    /**< & */
   78:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****             INDIRECT_POLLING, /**< & */
   79:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****             MODE_LAST,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 16
-
-
   80:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****         };
   81:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h **** 
   82:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****         //SCK,  CE# (active low)
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 16
+
+
   83:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****         struct
   84:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****         {
   85:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****             Pin io0; /**< & */
@@ -958,12 +955,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  134:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h **** 
  135:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****     /**
  136:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****         Erases the area specified on the chip.
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 17
-
-
  137:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****         Erasures will happen by 4K, 32K or 64K increments.
  138:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****         Smallest erase possible is 4kB at a time. (on IS25LP*)
  139:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****         \param start_addr Address to begin erasing from
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 17
+
+
  140:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****         \param end_addr  Address to stop erasing at
  141:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****         \return Result::OK or Result::ERR
  142:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/qspi.h ****         */
@@ -1018,12 +1015,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   10:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** #define FORCE_INLINE inline __attribute__((always_inline)) /**< & */
   11:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** #pragma clang diagnostic ignored "-Wduplicate-decl-specifier"
   12:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** #elif defined(__GNUC__)
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 18
-
-
   13:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** #define FORCE_INLINE inline __attribute__((always_inline)) /**< & */
   14:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** #else
   15:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** #error unknown compiler
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 18
+
+
   16:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** #endif
   17:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** 
   18:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** /** @addtogroup utility
@@ -1078,12 +1075,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   67:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     \return x ^ 3
   68:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** */
   69:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** FORCE_INLINE float cube(float x)
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 19
-
-
   70:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** {
   71:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     return (x * x) * x;
   72:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** }
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 19
+
+
   73:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** 
   74:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** /** 
   75:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     Converts unsigned 8-bit to float
@@ -1138,12 +1135,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  124:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** 
  125:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** /**
  126:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     Converts float to Signed 16-bit
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 20
-
-
  127:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** */
  128:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** FORCE_INLINE int16_t f2s16(float x)
  129:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 20
+
+
  130:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     x = x <= FBIPMIN ? FBIPMIN : x;
  131:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     x = x >= FBIPMAX ? FBIPMAX : x;
  132:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     return (int32_t)(x * F2S16_SCALE);
@@ -1198,12 +1195,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  181:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     PORTE, /**< Port E */
  182:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     PORTF, /**< Port F */
  183:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     PORTG, /**< Port G */
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 21
-
-
  184:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     PORTH, /**< Port H */
  185:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     PORTI, /**< Port I */
  186:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     PORTJ, /**< Port J */
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 21
+
+
  187:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     PORTK, /**< Port K */
  188:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h ****     PORTX, /**< Used as a dummy port to signal an invalid pin. */
  189:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/daisy_core.h **** };
@@ -1258,12 +1255,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  366              		.loc 6 87 5 is_stmt 1 view .LVU94
   87:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/hid/audio.h ****     ~AudioHandle() {}
  367              		.loc 6 87 5 is_stmt 0 view .LVU95
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 22
-
-
  368              	.LBE234:
  369              	.LBB237:
  370              	.LBI237:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 22
+
+
  109:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/adc.h ****     ~AdcHandle() {}
  371              		.loc 5 109 5 is_stmt 1 view .LVU96
  109:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/adc.h ****     ~AdcHandle() {}
@@ -1318,12 +1315,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   44:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/dac.h ****      ** callback to fill the buffer when it is ready for more samples.
   45:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/dac.h ****      ***/
   46:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/dac.h ****     enum class Mode
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 23
-
-
   47:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/dac.h ****     {
   48:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/dac.h ****         POLLING,
   49:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/dac.h ****         DMA,
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 23
+
+
   50:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/dac.h ****     };
   51:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/dac.h **** 
   52:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/dac.h ****     /** Sets the number of bits per sample transmitted out of the DAC.
@@ -1378,12 +1375,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
    4:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h **** #include "daisy_core.h"
    5:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h **** 
    6:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h **** #ifdef __cplusplus
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 24
-
-
    7:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h **** 
    8:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h **** namespace daisy
    9:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h **** {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 24
+
+
   10:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h **** /** @brief General Purpose I/O control 
   11:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h ****  *  @details peripheral control over a single GPIO
   12:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h ****  *  @ingroup peripheral
@@ -1438,12 +1435,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   61:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h ****         Mode  mode;
   62:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h ****         Pull  pull;
   63:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h ****         Speed speed;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 25
-
-
   64:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h **** 
   65:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h ****         /** Constructor with no arguments will prepare an invalid GPIO set as
   66:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h ****          *  an input, with no pullup. 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 25
+
+
   67:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h ****          */
   68:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h ****         Config()
   69:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
@@ -1498,12 +1495,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  427              		.loc 3 96 5 is_stmt 0 view .LVU111
  428              	.LBE270:
  429              	.LBB271:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 26
-
-
  430              	.LBI271:
   20:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/dev/codec_ak4556.h ****     ~Ak4556() {}
  431              		.loc 2 20 5 is_stmt 1 view .LVU112
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 26
+
+
  432              	.LBB272:
  433              	.LBI272:
  434              		.loc 11 74 5 view .LVU113
@@ -1558,12 +1555,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   28:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****  *  sai_config.a_sync          = SaiHandle::Config::Sync::MASTER;
   29:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****  *  sai_config.b_sync          = SaiHandle::Config::Sync::SLAVE;
   30:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****  *  sai_config.a_dir           = SaiHandle::Config::Direction::RECEIVE;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 27
-
-
   31:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****  *  sai_config.b_dir           = SaiHandle::Config::Direction::TRANSMIT;
   32:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****  *  sai_config.pin_config.fs   = {DSY_GPIOE, 4};
   33:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****  *  sai_config.pin_config.mclk = {DSY_GPIOE, 2};
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 27
+
+
   34:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****  *  sai_config.pin_config.sck  = {DSY_GPIOE, 5};
   35:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****  *  sai_config.pin_config.sa   = {DSY_GPIOE, 6};
   36:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****  *  sai_config.pin_config.sb   = {DSY_GPIOE, 3};
@@ -1618,12 +1615,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
   85:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****         enum class Direction
   86:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****         {
   87:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****             TRANSMIT,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 28
-
-
   88:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****             RECEIVE,
   89:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****         };
   90:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h **** 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 28
+
+
   91:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****         Peripheral periph;
   92:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****         struct
   93:../../libs/PoliTeKDSP/libs/libDaisy/src/per/sai.h ****         {
@@ -1649,7 +1646,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  458              	.LBE221:
  459              	.LBE220:
  460              	.LBE219:
- 461              		.loc 7 65 1 is_stmt 0 view .LVU118
+ 461              		.loc 7 62 1 is_stmt 0 view .LVU118
  462 0000 10B5     		push	{r4, lr}
  463              		.cfi_def_cfa_offset 8
  464              		.cfi_offset 4, -8
@@ -1678,12 +1675,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  485              		.loc 6 87 35 view .LVU121
  486 000e 4361     		str	r3, [r0, #20]
  487              	.LBE236:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 29
-
-
  488              	.LBE235:
  489              	.LBE292:
  490              	.LBB293:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 29
+
+
  491              	.LBB239:
  492              	.LBB240:
  493              		.loc 10 84 33 view .LVU122
@@ -1738,12 +1735,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  538              	.LBB296:
  539              	.LBB254:
  540              	.LBB252:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 30
-
-
  541              	.LBB250:
  542              	.LBB248:
   69:../../libs/PoliTeKDSP/libs/libDaisy/../../libs/libDaisy/src/per/gpio.h ****         {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 30
+
+
  543              		.loc 11 69 73 view .LVU129
  544 0024 C0E90A13 		strd	r1, r3, [r0, #40]
  545              	.LBE248:
@@ -1798,12 +1795,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  594              	.LBE287:
  595              	.LBE300:
  596              	.LBE303:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 31
-
-
  597              	.LBE306:
    8:main.cpp      **** DaisySeed hw;
  598              		.loc 7 8 11 view .LVU130
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 31
+
+
  599 0038 0D49     		ldr	r1, .L20+12
  600 003a FFF7FEFF 		bl	__aeabi_atexit
  601              	.LVL27:
@@ -1832,7 +1829,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  620 005a 0849     		ldr	r1, .L20+24
  621              	.LBE307:
  622              	.LBE309:
- 623              		.loc 7 65 1 view .LVU135
+ 623              		.loc 7 62 1 view .LVU135
  624 005c BDE81040 		pop	{r4, lr}
  625              		.cfi_restore 14
  626              		.cfi_restore 4
@@ -1858,12 +1855,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  645              		.cfi_endproc
  646              	.LFE5474:
  648              		.section	.init_array,"aw",%init_array
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 32
-
-
  649              		.align	2
  650 0000 00000000 		.word	_GLOBAL__sub_I_hw(target1)
  651              		.global	audio_controls
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 32
+
+
  652              		.global	synth
  653              		.global	pc
  654              		.global	hw
@@ -1889,7 +1886,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  670              		.align	2
  671              		.set	.LANCHOR1,. + 0
  674              	synth:
- 675 0000 00000000 		.space	312
+ 675 0000 00000000 		.space	484
  675      00000000 
  675      00000000 
  675      00000000 
@@ -1918,12 +1915,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  699              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
  700              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
  701              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 33
-
-
  702              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
  703              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
  704              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstddef"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 33
+
+
  705              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
  706              		.file 32 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
  707              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
@@ -1952,7 +1949,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  730              		.file 56 "../../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h"
  731              		.file 57 "../../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h"
  732              		.file 58 "../../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h"
- 733              		.file 59 "../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h"
+ 733              		.file 59 "../../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h"
  734              		.file 60 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
  735              		.file 61 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
  736              		.file 62 "../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h"
@@ -1960,32 +1957,32 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 1
  738              		.file 64 "PlantConditioner.h"
  739              		.file 65 "AudioEngine.h"
  740              		.file 66 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s 			page 34
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s 			page 34
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.cpp
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:73     .text._Z13AudioCallbackPKPKfPPfj:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:81     .text._Z13AudioCallbackPKPKfPPfj:00000000 _Z13AudioCallbackPKPKfPPfj
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:162    .text._Z13AudioCallbackPKPKfPPfj:00000038 $d
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:168    .text.startup.main:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:176    .text.startup.main:00000000 main
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:287    .text.startup.main:0000007c $d
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:297    .text.startup._GLOBAL__sub_I_hw:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:304    .text.startup._GLOBAL__sub_I_hw:00000000 _GLOBAL__sub_I_hw
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:636    .text.startup._GLOBAL__sub_I_hw:00000064 $d
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:649    .init_array:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:681    .data.audio_controls:00000000 audio_controls
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:674    .bss.synth:00000000 synth
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:667    .bss.pc:00000000 pc
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:660    .bss.hw:00000000 hw
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:656    .bss.hw:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:663    .bss.pc:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:670    .bss.synth:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\cczPFPkZ.s:677    .data.audio_controls:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:73     .text._Z13AudioCallbackPKPKfPPfj:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:81     .text._Z13AudioCallbackPKPKfPPfj:00000000 _Z13AudioCallbackPKPKfPPfj
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:162    .text._Z13AudioCallbackPKPKfPPfj:00000038 $d
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:168    .text.startup.main:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:176    .text.startup.main:00000000 main
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:287    .text.startup.main:0000007c $d
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:297    .text.startup._GLOBAL__sub_I_hw:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:304    .text.startup._GLOBAL__sub_I_hw:00000000 _GLOBAL__sub_I_hw
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:636    .text.startup._GLOBAL__sub_I_hw:00000064 $d
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:649    .init_array:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:681    .data.audio_controls:00000000 audio_controls
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:674    .bss.synth:00000000 synth
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:667    .bss.pc:00000000 pc
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:660    .bss.hw:00000000 hw
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:656    .bss.hw:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:663    .bss.pc:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:670    .bss.synth:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccbQbRoh.s:677    .data.audio_controls:00000000 $d
                            .group:00000000 _ZN5daisy9DaisySeedD5Ev
 
 UNDEFINED SYMBOLS

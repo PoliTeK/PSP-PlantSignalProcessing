@@ -39,7 +39,7 @@ int main() {
     pc.Init(IIR::Butterworth, &hw);
     pc.setDelta(50.0f);
     pc.setCurve(1.0f);
-    pc.setScale(PlantConditioner::C, PlantConditioner::Major);
+    pc.setScale(PlantConditioner::G, PlantConditioner::Major);
     pc.setOctave(4);
 
     // Inizializzazione AudioEngine
@@ -50,16 +50,13 @@ int main() {
     hw.StartAudio(AudioCallback);
 
     while(1) {
-        // 1. Processa i dati del sensore capacitivo
+
         PlantConditioner::PlantState plant_data = pc.Process();
 
-        // 2. Mappa i dati dalla struct della pianta alla struct del synth
-        // L'operazione di scrittura su float/bool su Cortex-M7 è atomica, 
-        // quindi non ci sono conflitti critici con la callback audio.
         audio_controls.freq = plant_data._freq;
         audio_controls.gate = plant_data._gate;
 
         // 3. Pausa di 1 ms per stabilizzare il bus I2C e non saturare la CPU
-        System::Delay(1);
+        System::Delay(5);
     }
 }

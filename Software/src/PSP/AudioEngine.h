@@ -1,6 +1,6 @@
 #pragma once
 #include "daisysp.h"
-#include "AudioEngineConfig.h"
+
 
 
 // Definizione dei preset disponibili
@@ -28,6 +28,7 @@ struct Adsr_str{
     float Decay; 
     float Sustain;
     float Release;
+    float Amp;
 };
 struct Filter_str{
     float Cutoff;
@@ -57,19 +58,19 @@ private:
     daisysp::Oscillator   _osc2;
     daisysp::Oscillator   _lfo1;
     daisysp::Oscillator   _lfo2;
-    daisysp::Adsr         _Aenv;
-    daisysp::Adsr         _Fenv;
-    daisysp::LadderFilter _filter; // State Variable Filter
+    daisysp::Adsr         _Amp_env;
+    daisysp::Adsr         _Filt_env;
+    daisysp::LadderFilter _Filt; // State Variable Filter
 
     Oscillator_str _osc1Param;
     Oscillator_str _osc2Param;
     Oscillator_str _lfo1Param;
     Oscillator_str _lfo2Param;
 
-    Adsr_str _AmpADSR;
-    Adsr_str _FiltADSR;
+    Adsr_str _Amp_envParam;
+    Adsr_str _Filt_envParam;
 
-    Filter_str _Filt;
+    Filter_str _FiltParam;
 
     // Variabili di stato interne
     SynthPreset _currentPreset;
