@@ -4,10 +4,12 @@
 DisplayHandler::DisplayHandler (MyOledDisplay* displayPtr, bool triggerEnabled){
     // should clean circular buffer
     memset((void*) _circBuffer_ptr, 0, sizeof(_circBuffer_ptr));
-    
-    // sets pointer of display
-    _displayPtr = displayPtr;
+    _writeHead = 0;
+    _windowSize = 128; 
     _triggerEnabled = triggerEnabled;
+    _displayPtr = displayPtr;
+    _currentState = DisplayState::WAVEFORM_VIEWER;
+    for(int i = 0; i < BUFFER_SIZE; i++) _circBuffer_ptr[i] = 0.0f;
 
 }
 
@@ -121,8 +123,7 @@ void DisplayHandler::drawWaveForm (){
         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
         _displayPtr->DrawLine(i-idx, y1, (i+1)-idx, y2, true);
     }   
-
-
+    
 }
 
 

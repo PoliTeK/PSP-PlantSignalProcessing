@@ -8,7 +8,7 @@
  * @return int Exit status code (0 for success, non-zero for failure)
  */
  
-#include "displayHandler.hpp"
+#include "displayHandler.h"
 #include "../../libs/libDaisy/src/daisy_seed.h"
 #include "../../libs/DaisySP/Source/daisysp.h"
 

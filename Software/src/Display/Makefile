@@ -7,8 +7,8 @@ CPP_SOURCES = \
 	displayHandler.cpp \
 	
 # Percorsi delle librerie standard di libDaisy e DaisySP
-LIBDAISY_DIR = ../../libs/libDaisy
-DAISYSP_DIR = ../../libs/DaisySP
+LIBDAISY_DIR = ../../libs/PoliTeKDSP/libs/libDaisy
+DAISYSP_DIR = ../../libs/PoliTeKDSP/libs/DaisySP
 
 # Flag del linker per abilitare la stampa dei float (utile se aggiungi log via seriale)
 # LDFLAGS = -u _printf_float
