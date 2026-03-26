@@ -176,15 +176,34 @@ float AudioEngine::Process() {
     float sig;
     float filtered_sig;
 
-
-    _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
-    _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
-    Amp_env_out = _Amp_env.Process(_lastGate);
-    Fenv_out = _Filt_env.Process(_lastGate);
-    _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
+    switch (_currentPreset)
+    {
+    case PRESET_PAD://TODO
+        _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
+        _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
+        Amp_env_out = _Amp_env.Process(_lastGate);
+        Fenv_out = _Filt_env.Process(_lastGate);
+        _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
+        break;
+    case PRESET_PLUCK://TODO
+        _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
+        _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
+        Amp_env_out = _Amp_env.Process(_lastGate);
+        Fenv_out = _Filt_env.Process(_lastGate);
+        _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
+        break;
+    case PRESET_LEAD:
+        _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
+        _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
+        Amp_env_out = _Amp_env.Process(_lastGate);
+        Fenv_out = _Filt_env.Process(_lastGate);
+        _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
+        break;
     
+    default:
+        break;
+    }
 
-    
     sig = (_osc1.Process() + _osc2.Process())/2.0f;
     sig *= Amp_env_out;
     filtered_sig = _Filt.Process(sig);

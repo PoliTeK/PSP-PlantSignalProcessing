@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -38,8 +38,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   32              		@ args = 0, pretend = 0, frame = 0
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		@ link register save eliminated.
-  35              	.LBB120:
-  36              	.LBB121:
+  35              	.LBB128:
+  36              	.LBB129:
   37              		.file 2 "../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h"
    1:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** /*
    2:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** Copyright (c) 2020 Electrosmith, Corp, Paul Batchelor
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   15:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** 
   16:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** namespace daisysp
   17:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 2
 
 
   18:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** /** Distinct stages that the phase of the envelope can be located in.
@@ -92,10 +92,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   39 0000 0021     		movs	r1, #0
   40              	.LVL1:
   41              		.loc 2 44 12 view .LVU2
-  42              	.LBE121:
-  43              	.LBE120:
-  44              	.LBB123:
-  45              	.LBI123:
+  42              	.LBE129:
+  43              	.LBE128:
+  44              	.LBB131:
+  45              	.LBI131:
   46              		.file 3 "../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h"
    1:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** /*
    2:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** Copyright (c) 2020 Electrosmith, Corp
@@ -118,33 +118,33 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   19:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** */
   20:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** class Oscillator
   21:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 3
 
 
   22:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****   public:
   23:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     Oscillator() {}
   47              		.loc 3 23 5 is_stmt 1 view .LVU3
   48              		.loc 3 23 5 is_stmt 0 view .LVU4
-  49              	.LBE123:
-  50              	.LBB124:
-  51              	.LBI124:
+  49              	.LBE131:
+  50              	.LBB132:
+  51              	.LBI132:
   52              		.loc 3 23 5 is_stmt 1 view .LVU5
   53              		.loc 3 23 5 is_stmt 0 view .LVU6
-  54              	.LBE124:
-  55              	.LBB125:
-  56              	.LBI125:
+  54              	.LBE132:
+  55              	.LBB133:
+  56              	.LBI133:
   57              		.loc 3 23 5 is_stmt 1 view .LVU7
   58              		.loc 3 23 5 is_stmt 0 view .LVU8
-  59              	.LBE125:
-  60              	.LBB126:
-  61              	.LBI126:
+  59              	.LBE133:
+  60              	.LBB134:
+  61              	.LBI134:
   62              		.loc 3 23 5 is_stmt 1 view .LVU9
   63              		.loc 3 23 5 is_stmt 0 view .LVU10
-  64              	.LBE126:
-  65              	.LBB127:
-  66              	.LBI120:
+  64              	.LBE134:
+  65              	.LBB135:
+  66              	.LBI128:
   67              		.loc 2 44 5 is_stmt 1 view .LVU11
-  68              	.LBB122:
+  68              	.LBB130:
   69              		.loc 2 44 12 is_stmt 0 view .LVU12
   70 0002 DFF878C0 		ldr	ip, .L3
   71 0006 0022     		movs	r2, #0
@@ -161,12 +161,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   82 0030 A0F8DC20 		strh	r2, [r0, #220]	@ movhi
   83              	.LVL2:
   84              		.loc 2 44 12 view .LVU13
-  85              	.LBE122:
-  86              	.LBE127:
-  87              	.LBB128:
-  88              	.LBI128:
+  85              	.LBE130:
+  86              	.LBE135:
+  87              	.LBB136:
+  88              	.LBI136:
   89              		.loc 2 44 5 is_stmt 1 view .LVU14
-  90              	.LBB129:
+  90              	.LBB137:
   91              		.loc 2 44 12 is_stmt 0 view .LVU15
   92 0034 C0F8E010 		str	r1, [r0, #224]	@ float
   93 0038 C0F8E410 		str	r1, [r0, #228]	@ float
@@ -178,16 +178,16 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   99 0050 C0F8FC10 		str	r1, [r0, #252]	@ float
  100 0054 C0F80011 		str	r1, [r0, #256]	@ float
  101 0058 C0F80411 		str	r1, [r0, #260]	@ float
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 4
 
 
  102 005c A0F80C21 		strh	r2, [r0, #268]	@ movhi
  103              	.LVL3:
  104              		.loc 2 44 12 view .LVU16
- 105              	.LBE129:
- 106              	.LBE128:
- 107              	.LBB130:
- 108              	.LBI130:
+ 105              	.LBE137:
+ 106              	.LBE136:
+ 107              	.LBB138:
+ 108              	.LBI138:
  109              		.file 4 "../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h"
    1:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h **** /* Ported from Audio Library for Teensy, Ladder Filter
    2:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h ****  * Copyright (c) 2021, Richard van Hoesel
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   47:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h **** 
   48:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h **** namespace daisysp
   49:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h **** {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 5
 
 
   50:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h **** /**
@@ -262,7 +262,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   68:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h **** 
   69:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h ****     LadderFilter()  = default;
  110              		.loc 4 69 5 is_stmt 1 view .LVU17
- 111              	.LBB131:
+ 111              	.LBB139:
  112 0060 C0E94722 		strd	r2, r2, [r0, #284]
  113 0064 C0E94922 		strd	r2, r2, [r0, #292]
  114 0068 C0E94B22 		strd	r2, r2, [r0, #300]
@@ -271,8 +271,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  117 0074 C0E95122 		strd	r2, r2, [r0, #324]
  118              	.LVL4:
  119              		.loc 4 69 5 is_stmt 0 view .LVU18
- 120              	.LBE131:
- 121              	.LBE130:
+ 120              	.LBE139:
+ 121              	.LBE138:
  122              		.loc 1 4 29 view .LVU19
  123 0078 7047     		bx	lr
  124              	.L4:
@@ -298,43 +298,43 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  145              		.loc 1 5 1 is_stmt 1 view -0
  146              		.cfi_startproc
  147              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 6
 
 
  148              		@ frame_needed = 0, uses_anonymous_args = 0
  149              		@ link register save eliminated.
- 150              	.LBB132:
- 151              	.LBI132:
+ 150              	.LBB140:
+ 151              	.LBI140:
   45:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     ~Adsr() {}
  152              		.loc 2 45 5 view .LVU21
  153              		.loc 2 45 5 is_stmt 0 view .LVU22
- 154              	.LBE132:
- 155              	.LBB133:
- 156              	.LBI133:
+ 154              	.LBE140:
+ 155              	.LBB141:
+ 156              	.LBI141:
  157              		.loc 2 45 5 is_stmt 1 view .LVU23
  158              		.loc 2 45 5 is_stmt 0 view .LVU24
- 159              	.LBE133:
- 160              	.LBB134:
- 161              	.LBI134:
+ 159              	.LBE141:
+ 160              	.LBB142:
+ 161              	.LBI142:
   24:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     ~Oscillator() {}
  162              		.loc 3 24 5 is_stmt 1 view .LVU25
  163              		.loc 3 24 5 is_stmt 0 view .LVU26
- 164              	.LBE134:
- 165              	.LBB135:
- 166              	.LBI135:
+ 164              	.LBE142:
+ 165              	.LBB143:
+ 166              	.LBI143:
  167              		.loc 3 24 5 is_stmt 1 view .LVU27
  168              		.loc 3 24 5 is_stmt 0 view .LVU28
- 169              	.LBE135:
- 170              	.LBB136:
- 171              	.LBI136:
+ 169              	.LBE143:
+ 170              	.LBB144:
+ 171              	.LBI144:
  172              		.loc 3 24 5 is_stmt 1 view .LVU29
  173              		.loc 3 24 5 is_stmt 0 view .LVU30
- 174              	.LBE136:
- 175              	.LBB137:
- 176              	.LBI137:
+ 174              	.LBE144:
+ 175              	.LBB145:
+ 176              	.LBI145:
  177              		.loc 3 24 5 is_stmt 1 view .LVU31
  178              		.loc 3 24 5 is_stmt 0 view .LVU32
- 179              	.LBE137:
+ 179              	.LBE145:
  180              		.loc 1 5 30 view .LVU33
  181 0000 7047     		bx	lr
  182              		.cfi_endproc
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
    9:PSP/AudioEngine.cpp ****     _osc1.Init(sample_rate);
   10:PSP/AudioEngine.cpp ****     _osc2.Init(sample_rate);
   11:PSP/AudioEngine.cpp ****     _lfo1.Init(sample_rate);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 7
 
 
   12:PSP/AudioEngine.cpp ****     _lfo2.Init(sample_rate);
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   32:PSP/AudioEngine.cpp ****             _osc1Param.Shape    = pad_shape1;
   33:PSP/AudioEngine.cpp ****             
   34:PSP/AudioEngine.cpp ****             _osc2Param.Waveform = pad_waveform2;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 8
 
 
   35:PSP/AudioEngine.cpp ****             _osc2Param.Amp      = pad_amp2;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   89:PSP/AudioEngine.cpp ****             break;
   90:PSP/AudioEngine.cpp **** 
   91:PSP/AudioEngine.cpp ****         case PRESET_LEAD:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 9
 
 
   92:PSP/AudioEngine.cpp ****             _osc1Param.Waveform = lead_waveform1;
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  133:PSP/AudioEngine.cpp ****     _osc2.SetAmp(_osc2Param.Amp);
  241              		.loc 1 133 17 view .LVU47
  242 0034 D0F88001 		ldr	r0, [r0, #384]	@ float
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 10
 
 
  243              	.LVL8:
@@ -558,8 +558,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  128:PSP/AudioEngine.cpp ****     _osc1.SetAmp(_osc1Param.Amp);
  251              		.loc 1 128 5 is_stmt 1 view .LVU51
  252              	.LVL9:
- 253              	.LBB138:
- 254              	.LBI138:
+ 253              	.LBB146:
+ 254              	.LBI146:
   25:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Choices for output waveforms, POLYBLEP are appropriately labeled. Others are naive forms.
   26:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     */
   27:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     enum
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   60:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
   61:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eor_       = true;
   62:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 11
 
 
   63:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
@@ -619,22 +619,22 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   78:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     */
   79:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     inline void SetWaveform(const uint8_t wf)
  255              		.loc 3 79 17 view .LVU52
- 256              	.LBB139:
+ 256              	.LBB147:
   80:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
   81:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_ = wf < WAVE_LAST ? wf : WAVE_SIN;
  257              		.loc 3 81 9 view .LVU53
  258              		.loc 3 81 19 is_stmt 0 view .LVU54
  259 0044 0829     		cmp	r1, #8
- 260              	.LBE139:
- 261              	.LBE138:
+ 260              	.LBE147:
+ 261              	.LBE146:
  139:PSP/AudioEngine.cpp ****     _lfo1.SetFreq(_lfo1Param.Freq);
  262              		.loc 1 139 18 view .LVU55
  263 0046 94ED660A 		vldr.32	s0, [r4, #408]
- 264              	.LBB142:
- 265              	.LBB143:
- 266              	.LBB144:
- 267              	.LBB145:
- 268              	.LBB146:
+ 264              	.LBB150:
+ 265              	.LBB151:
+ 266              	.LBB152:
+ 267              	.LBB153:
+ 268              	.LBB154:
  269              		.file 5 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h"
    1:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** /*
    2:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** Copyright (c) 2020 Electrosmith, Corp, Emilie Gillet
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   20:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** */
   21:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #define PI_F 3.1415927410125732421875f
   22:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #define TWOPI_F (2.0f * PI_F)
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 12
 
 
   23:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #define HALFPI_F (PI_F * 0.5f)
@@ -685,10 +685,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h ****     asm("vmaxnm.f32 %[d], %[n], %[m]" : [d] "=t"(r) : [n] "t"(a), [m] "t"(b) :);
  270              		.loc 5 44 5 view .LVU56
  271 004a DFEDB58A 		vldr.32	s17, .L22
- 272              	.LBE146:
- 273              	.LBE145:
- 274              	.LBB149:
- 275              	.LBB150:
+ 272              	.LBE154:
+ 273              	.LBE153:
+ 274              	.LBB157:
+ 275              	.LBB158:
   45:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
   46:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h ****     r = (a > b) ? a : b;
   47:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #endif // __arm__
@@ -702,83 +702,83 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h ****     asm("vminnm.f32 %[d], %[n], %[m]" : [d] "=t"(r) : [n] "t"(a), [m] "t"(b) :);
  276              		.loc 5 55 5 view .LVU57
  277 004e B7EE008A 		vmov.f32	s16, #1.0e+0
- 278              	.LBE150:
- 279              	.LBE149:
- 280              	.LBE144:
- 281              	.LBE143:
- 282              	.LBE142:
- 283              	.LBB166:
- 284              	.LBB140:
+ 278              	.LBE158:
+ 279              	.LBE157:
+ 280              	.LBE152:
+ 281              	.LBE151:
+ 282              	.LBE150:
+ 283              	.LBB174:
+ 284              	.LBB148:
  285              		.loc 3 81 19 view .LVU58
  286 0052 28BF     		it	cs
  287 0054 0021     		movcs	r1, #0
- 288              	.LBE140:
- 289              	.LBE166:
- 290              	.LBB167:
- 291              	.LBB168:
+ 288              	.LBE148:
+ 289              	.LBE174:
+ 290              	.LBB175:
+ 291              	.LBB176:
  292 0056 082A     		cmp	r2, #8
- 293              	.LBE168:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 13
+ 293              	.LBE176:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 13
 
 
- 294              	.LBE167:
- 295              	.LBB172:
- 296              	.LBB173:
+ 294              	.LBE175:
+ 295              	.LBB180:
+ 296              	.LBB181:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  297              		.loc 3 76 46 view .LVU59
  298 0058 C4F804C0 		str	ip, [r4, #4]	@ float
- 299              	.LBE173:
- 300              	.LBE172:
- 301              	.LBB175:
- 302              	.LBB169:
+ 299              	.LBE181:
+ 300              	.LBE180:
+ 301              	.LBB183:
+ 302              	.LBB177:
  303              		.loc 3 81 19 view .LVU60
  304 005c 28BF     		it	cs
  305 005e 0022     		movcs	r2, #0
- 306              	.LBE169:
- 307              	.LBE175:
- 308              	.LBB176:
- 309              	.LBB177:
+ 306              	.LBE177:
+ 307              	.LBE183:
+ 308              	.LBB184:
+ 309              	.LBB185:
  310 0060 082B     		cmp	r3, #8
- 311              	.LBE177:
- 312              	.LBE176:
- 313              	.LBB181:
- 314              	.LBB141:
+ 311              	.LBE185:
+ 312              	.LBE184:
+ 313              	.LBB189:
+ 314              	.LBB149:
  315 0062 2170     		strb	r1, [r4]
  316              	.LVL10:
  317              		.loc 3 81 19 view .LVU61
- 318              	.LBE141:
- 319              	.LBE181:
+ 318              	.LBE149:
+ 319              	.LBE189:
  129:PSP/AudioEngine.cpp ****     _osc1.SetPw(_osc1Param.Shape);
  320              		.loc 1 129 5 is_stmt 1 view .LVU62
- 321              	.LBB182:
- 322              	.LBI172:
+ 321              	.LBB190:
+ 322              	.LBI180:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  323              		.loc 3 76 17 view .LVU63
- 324              	.LBB174:
+ 324              	.LBB182:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  325              		.loc 3 76 41 view .LVU64
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  326              		.loc 3 76 41 is_stmt 0 view .LVU65
- 327              	.LBE174:
- 328              	.LBE182:
+ 327              	.LBE182:
+ 328              	.LBE190:
  130:PSP/AudioEngine.cpp ****     
  329              		.loc 1 130 5 is_stmt 1 view .LVU66
- 330              	.LBB183:
- 331              	.LBI142:
+ 330              	.LBB191:
+ 331              	.LBI150:
   82:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
   83:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the pulse width for WAVE_SQUARE and WAVE_POLYBLEP_SQUARE (range 0 - 1)
   84:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****      */
   85:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     inline void SetPw(const float pw) { pw_ = fclamp(pw, 0.0f, 1.0f); }
  332              		.loc 3 85 17 view .LVU67
- 333              	.LBB161:
+ 333              	.LBB169:
  334              		.loc 3 85 41 view .LVU68
- 335              	.LBB157:
- 336              	.LBI144:
+ 335              	.LBB165:
+ 336              	.LBI152:
   56:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
   57:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h ****     r = (a < b) ? a : b;
   58:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #endif // __arm__
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h ****     return r;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 14
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 14
 
 
   60:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
@@ -787,75 +787,75 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   63:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** */
   64:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** inline float fclamp(float in, float min, float max)
  337              		.loc 5 64 14 view .LVU69
- 338              	.LBE157:
- 339              	.LBE161:
- 340              	.LBE183:
+ 338              	.LBE165:
+ 339              	.LBE169:
+ 340              	.LBE191:
   65:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
   66:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h ****     return fmin(fmax(in, min), max);
  341              		.loc 5 66 5 view .LVU70
- 342              	.LBB184:
- 343              	.LBB162:
- 344              	.LBB158:
- 345              	.LBB153:
- 346              	.LBI145:
+ 342              	.LBB192:
+ 343              	.LBB170:
+ 344              	.LBB166:
+ 345              	.LBB161:
+ 346              	.LBI153:
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
  347              		.loc 5 40 14 view .LVU71
- 348              	.LBB147:
+ 348              	.LBB155:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
  349              		.loc 5 42 5 view .LVU72
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
  350              		.loc 5 44 5 view .LVU73
- 351              	.LBE147:
- 352              	.LBE153:
- 353              	.LBE158:
- 354              	.LBE162:
- 355              	.LBE184:
- 356              	.LBB185:
- 357              	.LBB178:
+ 351              	.LBE155:
+ 352              	.LBE161:
+ 353              	.LBE166:
+ 354              	.LBE170:
+ 355              	.LBE192:
+ 356              	.LBB193:
+ 357              	.LBB186:
   81:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  358              		.loc 3 81 19 is_stmt 0 view .LVU74
  359 0064 28BF     		it	cs
  360 0066 0023     		movcs	r3, #0
- 361              	.LBE178:
- 362              	.LBE185:
- 363              	.LBB186:
- 364              	.LBB187:
+ 361              	.LBE186:
+ 362              	.LBE193:
+ 363              	.LBB194:
+ 364              	.LBB195:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  365              		.loc 3 76 46 view .LVU75
  366 0068 2063     		str	r0, [r4, #48]	@ float
- 367              	.LBE187:
- 368              	.LBE186:
- 369              	.LBB189:
- 370              	.LBB170:
+ 367              	.LBE195:
+ 368              	.LBE194:
+ 369              	.LBB197:
+ 370              	.LBB178:
   81:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  371              		.loc 3 81 19 view .LVU76
  372 006a 84F82C20 		strb	r2, [r4, #44]
- 373              	.LBE170:
- 374              	.LBE189:
- 375              	.LBB190:
- 376              	.LBB191:
+ 373              	.LBE178:
+ 374              	.LBE197:
+ 375              	.LBB198:
+ 376              	.LBB199:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  377              		.loc 3 70 34 view .LVU77
  378 006e 04F15800 		add	r0, r4, #88
- 379              	.LBE191:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 15
+ 379              	.LBE199:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 15
 
 
- 380              	.LBE190:
- 381              	.LBB196:
- 382              	.LBB179:
+ 380              	.LBE198:
+ 381              	.LBB204:
+ 382              	.LBB187:
   81:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  383              		.loc 3 81 19 view .LVU78
  384 0072 84F85830 		strb	r3, [r4, #88]
- 385              	.LBE179:
- 386              	.LBE196:
- 387              	.LBB197:
- 388              	.LBB198:
+ 385              	.LBE187:
+ 386              	.LBE204:
+ 387              	.LBB205:
+ 388              	.LBB206:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  389              		.loc 3 76 46 view .LVU79
  390 0076 E565     		str	r5, [r4, #92]	@ float
- 391              	.LBE198:
- 392              	.LBE197:
+ 391              	.LBE206:
+ 392              	.LBE205:
  140:PSP/AudioEngine.cpp ****     
  141:PSP/AudioEngine.cpp ****     _lfo2.SetWaveform(_lfo2Param.Waveform);
  142:PSP/AudioEngine.cpp ****     _lfo2.SetAmp(_lfo2Param.Amp);
@@ -865,11 +865,11 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  146:PSP/AudioEngine.cpp ****     _Amp_env.SetTime(daisysp::ADSR_SEG_ATTACK,  _Amp_envParam.Attack);
  393              		.loc 1 146 21 view .LVU80
  394 0078 04F1B005 		add	r5, r4, #176
- 395              	.LBB200:
- 396              	.LBB163:
- 397              	.LBB159:
- 398              	.LBB154:
- 399              	.LBB148:
+ 395              	.LBB208:
+ 396              	.LBB171:
+ 397              	.LBB167:
+ 398              	.LBB162:
+ 399              	.LBB156:
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
  400              		.loc 5 44 5 view .LVU81
  401              		.syntax unified
@@ -883,30 +883,30 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  407              		.loc 5 48 5 is_stmt 0 view .LVU83
  408              		.thumb
  409              		.syntax unified
- 410              	.LBE148:
- 411              	.LBE154:
- 412              	.LBB155:
- 413              	.LBI149:
+ 410              	.LBE156:
+ 411              	.LBE162:
+ 412              	.LBB163:
+ 413              	.LBI157:
   51:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
  414              		.loc 5 51 14 is_stmt 1 view .LVU84
- 415              	.LBB151:
+ 415              	.LBB159:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
  416              		.loc 5 53 5 view .LVU85
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
  417              		.loc 5 55 5 view .LVU86
- 418              	.LBE151:
- 419              	.LBE155:
- 420              	.LBE159:
- 421              	.LBE163:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 16
+ 418              	.LBE159:
+ 419              	.LBE163:
+ 420              	.LBE167:
+ 421              	.LBE171:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 16
 
 
- 422              	.LBE200:
- 423              	.LBB201:
- 424              	.LBB202:
- 425              	.LBB203:
- 426              	.LBB204:
- 427              	.LBB205:
+ 422              	.LBE208:
+ 423              	.LBB209:
+ 424              	.LBB210:
+ 425              	.LBB211:
+ 426              	.LBB212:
+ 427              	.LBB213:
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
  428              		.loc 5 44 5 is_stmt 0 view .LVU87
  429              		.syntax unified
@@ -915,16 +915,16 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  432              	@ 0 "" 2
  433              		.thumb
  434              		.syntax unified
- 435              	.LBE205:
- 436              	.LBE204:
- 437              	.LBE203:
- 438              	.LBE202:
- 439              	.LBE201:
- 440              	.LBB219:
- 441              	.LBB164:
- 442              	.LBB160:
- 443              	.LBB156:
- 444              	.LBB152:
+ 435              	.LBE213:
+ 436              	.LBE212:
+ 437              	.LBE211:
+ 438              	.LBE210:
+ 439              	.LBE209:
+ 440              	.LBB227:
+ 441              	.LBB172:
+ 442              	.LBB168:
+ 443              	.LBB164:
+ 444              	.LBB160:
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
  445              		.loc 5 55 5 view .LVU88
  446              		.syntax unified
@@ -938,16 +938,16 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  452              		.loc 5 59 5 is_stmt 0 view .LVU90
  453              		.thumb
  454              		.syntax unified
- 455              	.LBE152:
- 456              	.LBE156:
- 457              	.LBE160:
- 458              	.LBE164:
- 459              	.LBE219:
- 460              	.LBB220:
- 461              	.LBB215:
- 462              	.LBB212:
- 463              	.LBB207:
- 464              	.LBB208:
+ 455              	.LBE160:
+ 456              	.LBE164:
+ 457              	.LBE168:
+ 458              	.LBE172:
+ 459              	.LBE227:
+ 460              	.LBB228:
+ 461              	.LBB223:
+ 462              	.LBB220:
+ 463              	.LBB215:
+ 464              	.LBB216:
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
  465              		.loc 5 55 5 view .LVU91
  466              		.syntax unified
@@ -956,30 +956,30 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  469              	@ 0 "" 2
  470              		.thumb
  471              		.syntax unified
- 472              	.LBE208:
- 473              	.LBE207:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 17
+ 472              	.LBE216:
+ 473              	.LBE215:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 17
 
 
- 474              	.LBE212:
- 475              	.LBE215:
- 476              	.LBE220:
- 477              	.LBB221:
- 478              	.LBB165:
+ 474              	.LBE220:
+ 475              	.LBE223:
+ 476              	.LBE228:
+ 477              	.LBB229:
+ 478              	.LBB173:
  479              		.loc 3 85 45 view .LVU92
  480 008c C4ED036A 		vstr.32	s13, [r4, #12]
- 481              	.LBE165:
- 482              	.LBE221:
- 483              	.LBB222:
- 484              	.LBB216:
+ 481              	.LBE173:
+ 482              	.LBE229:
+ 483              	.LBB230:
+ 484              	.LBB224:
  485 0090 84ED0E7A 		vstr.32	s14, [r4, #56]
- 486              	.LBE216:
- 487              	.LBE222:
- 488              	.LBB223:
- 489              	.LBB224:
- 490              	.LBB225:
- 491              	.LBB226:
- 492              	.LBB227:
+ 486              	.LBE224:
+ 487              	.LBE230:
+ 488              	.LBB231:
+ 489              	.LBB232:
+ 490              	.LBB233:
+ 491              	.LBB234:
+ 492              	.LBB235:
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
  493              		.loc 5 44 5 view .LVU93
  494              		.syntax unified
@@ -991,63 +991,63 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  499              		.loc 5 44 5 view .LVU94
  500              		.thumb
  501              		.syntax unified
- 502              	.LBE227:
- 503              	.LBE226:
- 504              	.LBE225:
- 505              	.LBE224:
- 506              	.LBE223:
+ 502              	.LBE235:
+ 503              	.LBE234:
+ 504              	.LBE233:
+ 505              	.LBE232:
+ 506              	.LBE231:
  132:PSP/AudioEngine.cpp ****     _osc2.SetAmp(_osc2Param.Amp);
  507              		.loc 1 132 5 is_stmt 1 view .LVU95
- 508              	.LBB240:
- 509              	.LBI167:
+ 508              	.LBB248:
+ 509              	.LBI175:
   79:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
  510              		.loc 3 79 17 view .LVU96
- 511              	.LBB171:
+ 511              	.LBB179:
   81:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  512              		.loc 3 81 9 view .LVU97
   81:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  513              		.loc 3 81 9 is_stmt 0 view .LVU98
- 514              	.LBE171:
- 515              	.LBE240:
+ 514              	.LBE179:
+ 515              	.LBE248:
  133:PSP/AudioEngine.cpp ****     _osc2.SetPw(_osc2Param.Shape);
  516              		.loc 1 133 5 is_stmt 1 view .LVU99
- 517              	.LBB241:
- 518              	.LBI186:
+ 517              	.LBB249:
+ 518              	.LBI194:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  519              		.loc 3 76 17 view .LVU100
- 520              	.LBB188:
+ 520              	.LBB196:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  521              		.loc 3 76 41 view .LVU101
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 18
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 18
 
 
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  522              		.loc 3 76 41 is_stmt 0 view .LVU102
- 523              	.LBE188:
- 524              	.LBE241:
+ 523              	.LBE196:
+ 524              	.LBE249:
  134:PSP/AudioEngine.cpp **** 
  525              		.loc 1 134 5 is_stmt 1 view .LVU103
- 526              	.LBB242:
- 527              	.LBI201:
+ 526              	.LBB250:
+ 527              	.LBI209:
  528              		.loc 3 85 17 view .LVU104
- 529              	.LBB217:
+ 529              	.LBB225:
  530              		.loc 3 85 41 view .LVU105
- 531              	.LBB213:
- 532              	.LBI203:
+ 531              	.LBB221:
+ 532              	.LBI211:
   64:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
  533              		.loc 5 64 14 view .LVU106
- 534              	.LBE213:
- 535              	.LBE217:
- 536              	.LBE242:
+ 534              	.LBE221:
+ 535              	.LBE225:
+ 536              	.LBE250:
  537              		.loc 5 66 5 view .LVU107
- 538              	.LBB243:
- 539              	.LBB218:
- 540              	.LBB214:
- 541              	.LBB210:
- 542              	.LBI204:
+ 538              	.LBB251:
+ 539              	.LBB226:
+ 540              	.LBB222:
+ 541              	.LBB218:
+ 542              	.LBI212:
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
  543              		.loc 5 40 14 view .LVU108
- 544              	.LBB206:
+ 544              	.LBB214:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
  545              		.loc 5 42 5 view .LVU109
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
@@ -1056,13 +1056,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  547              		.loc 5 48 5 view .LVU111
   48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
  548              		.loc 5 48 5 is_stmt 0 view .LVU112
- 549              	.LBE206:
- 550              	.LBE210:
- 551              	.LBB211:
- 552              	.LBI207:
+ 549              	.LBE214:
+ 550              	.LBE218:
+ 551              	.LBB219:
+ 552              	.LBI215:
   51:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
  553              		.loc 5 51 14 is_stmt 1 view .LVU113
- 554              	.LBB209:
+ 554              	.LBB217:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
  555              		.loc 5 53 5 view .LVU114
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
@@ -1071,63 +1071,63 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  557              		.loc 5 59 5 view .LVU116
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
  558              		.loc 5 59 5 is_stmt 0 view .LVU117
- 559              	.LBE209:
- 560              	.LBE211:
- 561              	.LBE214:
- 562              	.LBE218:
- 563              	.LBE243:
+ 559              	.LBE217:
+ 560              	.LBE219:
+ 561              	.LBE222:
+ 562              	.LBE226:
+ 563              	.LBE251:
  136:PSP/AudioEngine.cpp ****     _lfo1.SetAmp(_lfo1Param.Amp);
  564              		.loc 1 136 5 is_stmt 1 view .LVU118
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 19
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 19
 
 
- 565              	.LBB244:
- 566              	.LBI176:
+ 565              	.LBB252:
+ 566              	.LBI184:
   79:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
  567              		.loc 3 79 17 view .LVU119
- 568              	.LBB180:
+ 568              	.LBB188:
   81:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  569              		.loc 3 81 9 view .LVU120
   81:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  570              		.loc 3 81 9 is_stmt 0 view .LVU121
- 571              	.LBE180:
- 572              	.LBE244:
+ 571              	.LBE188:
+ 572              	.LBE252:
  137:PSP/AudioEngine.cpp ****     _lfo1.SetPw(_lfo1Param.Shape);
  573              		.loc 1 137 5 is_stmt 1 view .LVU122
- 574              	.LBB245:
- 575              	.LBI197:
+ 574              	.LBB253:
+ 575              	.LBI205:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  576              		.loc 3 76 17 view .LVU123
- 577              	.LBB199:
+ 577              	.LBB207:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  578              		.loc 3 76 41 view .LVU124
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  579              		.loc 3 76 41 is_stmt 0 view .LVU125
- 580              	.LBE199:
- 581              	.LBE245:
+ 580              	.LBE207:
+ 581              	.LBE253:
  138:PSP/AudioEngine.cpp ****     _lfo1.SetFreq(_lfo1Param.Freq);
  582              		.loc 1 138 5 is_stmt 1 view .LVU126
- 583              	.LBB246:
- 584              	.LBI223:
+ 583              	.LBB254:
+ 584              	.LBI231:
  585              		.loc 3 85 17 view .LVU127
- 586              	.LBB237:
+ 586              	.LBB245:
  587              		.loc 3 85 41 view .LVU128
- 588              	.LBB234:
- 589              	.LBI225:
+ 588              	.LBB242:
+ 589              	.LBI233:
   64:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
  590              		.loc 5 64 14 view .LVU129
- 591              	.LBE234:
- 592              	.LBE237:
- 593              	.LBE246:
+ 591              	.LBE242:
+ 592              	.LBE245:
+ 593              	.LBE254:
  594              		.loc 5 66 5 view .LVU130
- 595              	.LBB247:
- 596              	.LBB238:
- 597              	.LBB235:
- 598              	.LBB229:
- 599              	.LBI226:
+ 595              	.LBB255:
+ 596              	.LBB246:
+ 597              	.LBB243:
+ 598              	.LBB237:
+ 599              	.LBI234:
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
  600              		.loc 5 40 14 view .LVU131
- 601              	.LBB228:
+ 601              	.LBB236:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
  602              		.loc 5 42 5 view .LVU132
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
@@ -1136,37 +1136,37 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  604              		.loc 5 48 5 view .LVU134
   48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
  605              		.loc 5 48 5 is_stmt 0 view .LVU135
- 606              	.LBE228:
- 607              	.LBE229:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 20
+ 606              	.LBE236:
+ 607              	.LBE237:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 20
 
 
- 608              	.LBB230:
- 609              	.LBI230:
+ 608              	.LBB238:
+ 609              	.LBI238:
   51:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
  610              		.loc 5 51 14 is_stmt 1 view .LVU136
- 611              	.LBB231:
+ 611              	.LBB239:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
  612              		.loc 5 53 5 view .LVU137
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
  613              		.loc 5 55 5 view .LVU138
- 614              	.LBE231:
- 615              	.LBE230:
- 616              	.LBE235:
- 617              	.LBE238:
- 618              	.LBE247:
- 619              	.LBB248:
- 620              	.LBB192:
+ 614              	.LBE239:
+ 615              	.LBE238:
+ 616              	.LBE243:
+ 617              	.LBE246:
+ 618              	.LBE255:
+ 619              	.LBB256:
+ 620              	.LBB200:
   69:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
  621              		.loc 3 69 20 is_stmt 0 view .LVU139
  622 0098 84ED180A 		vstr.32	s0, [r4, #96]
- 623              	.LBE192:
- 624              	.LBE248:
- 625              	.LBB249:
- 626              	.LBB239:
- 627              	.LBB236:
- 628              	.LBB233:
- 629              	.LBB232:
+ 623              	.LBE200:
+ 624              	.LBE256:
+ 625              	.LBB257:
+ 626              	.LBB247:
+ 627              	.LBB244:
+ 628              	.LBB241:
+ 629              	.LBB240:
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
  630              		.loc 5 55 5 view .LVU140
  631              		.syntax unified
@@ -1180,25 +1180,25 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  637              		.loc 5 59 5 is_stmt 0 view .LVU142
  638              		.thumb
  639              		.syntax unified
- 640              	.LBE232:
- 641              	.LBE233:
- 642              	.LBE236:
+ 640              	.LBE240:
+ 641              	.LBE241:
+ 642              	.LBE244:
  643              		.loc 3 85 45 view .LVU143
  644 00a0 C4ED197A 		vstr.32	s15, [r4, #100]
  645              	.LVL15:
  646              		.loc 3 85 45 view .LVU144
- 647              	.LBE239:
- 648              	.LBE249:
+ 647              	.LBE247:
+ 648              	.LBE257:
  139:PSP/AudioEngine.cpp ****     
  649              		.loc 1 139 5 is_stmt 1 view .LVU145
- 650              	.LBB250:
- 651              	.LBI190:
+ 650              	.LBB258:
+ 651              	.LBI198:
   67:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
  652              		.loc 3 67 17 view .LVU146
- 653              	.LBB193:
+ 653              	.LBB201:
   69:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
  654              		.loc 3 69 9 view .LVU147
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 21
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 21
 
 
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
@@ -1209,92 +1209,92 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  658              	.LVL16:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  659              		.loc 3 70 34 view .LVU150
- 660              	.LBE193:
- 661              	.LBE250:
+ 660              	.LBE201:
+ 661              	.LBE258:
  141:PSP/AudioEngine.cpp ****     _lfo2.SetAmp(_lfo2Param.Amp);
  662              		.loc 1 141 22 view .LVU151
  663 00a8 94F89C31 		ldrb	r3, [r4, #412]	@ zero_extendqisi2
- 664              	.LBB251:
- 665              	.LBB194:
+ 664              	.LBB259:
+ 665              	.LBB202:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  666              		.loc 3 70 34 view .LVU152
  667 00ac B0EE407A 		vmov.f32	s14, s0
- 668              	.LBE194:
- 669              	.LBE251:
- 670              	.LBB252:
- 671              	.LBB253:
+ 668              	.LBE202:
+ 669              	.LBE259:
+ 670              	.LBB260:
+ 671              	.LBB261:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  672              		.loc 3 76 46 view .LVU153
  673 00b0 D4F8A021 		ldr	r2, [r4, #416]	@ float
- 674              	.LBE253:
- 675              	.LBE252:
- 676              	.LBB256:
- 677              	.LBB257:
+ 674              	.LBE261:
+ 675              	.LBE260:
+ 676              	.LBB264:
+ 677              	.LBB265:
   81:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  678              		.loc 3 81 19 view .LVU154
  679 00b4 082B     		cmp	r3, #8
- 680              	.LBE257:
- 681              	.LBE256:
+ 680              	.LBE265:
+ 681              	.LBE264:
  144:PSP/AudioEngine.cpp **** 
  682              		.loc 1 144 18 view .LVU155
  683 00b6 94ED6A0A 		vldr.32	s0, [r4, #424]
- 684              	.LBB261:
- 685              	.LBB254:
+ 684              	.LBB269:
+ 685              	.LBB262:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  686              		.loc 3 76 46 view .LVU156
  687 00ba C4F88820 		str	r2, [r4, #136]	@ float
- 688              	.LBE254:
- 689              	.LBE261:
- 690              	.LBB262:
- 691              	.LBB263:
+ 688              	.LBE262:
+ 689              	.LBE269:
+ 690              	.LBB270:
+ 691              	.LBB271:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  692              		.loc 3 70 34 view .LVU157
  693 00be 04F18400 		add	r0, r4, #132
- 694              	.LBE263:
- 695              	.LBE262:
- 696              	.LBB267:
- 697              	.LBB258:
+ 694              	.LBE271:
+ 695              	.LBE270:
+ 696              	.LBB275:
+ 697              	.LBB266:
   81:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  698              		.loc 3 81 19 view .LVU158
  699 00c2 28BF     		it	cs
  700 00c4 0023     		movcs	r3, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 22
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 22
 
 
- 701              	.LBE258:
- 702              	.LBE267:
- 703              	.LBB268:
- 704              	.LBB195:
+ 701              	.LBE266:
+ 702              	.LBE275:
+ 703              	.LBB276:
+ 704              	.LBB203:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  705              		.loc 3 70 20 view .LVU159
  706 00c6 84ED1D7A 		vstr.32	s14, [r4, #116]
- 707              	.LBE195:
- 708              	.LBE268:
- 709              	.LBB269:
- 710              	.LBB270:
- 711              	.LBB271:
- 712              	.LBB272:
- 713              	.LBB273:
+ 707              	.LBE203:
+ 708              	.LBE276:
+ 709              	.LBB277:
+ 710              	.LBB278:
+ 711              	.LBB279:
+ 712              	.LBB280:
+ 713              	.LBB281:
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
  714              		.loc 5 44 5 view .LVU160
  715 00ca D4ED697A 		vldr.32	s15, [r4, #420]
- 716              	.LBE273:
- 717              	.LBE272:
- 718              	.LBE271:
- 719              	.LBE270:
- 720              	.LBE269:
- 721              	.LBB290:
- 722              	.LBB259:
+ 716              	.LBE281:
+ 717              	.LBE280:
+ 718              	.LBE279:
+ 719              	.LBE278:
+ 720              	.LBE277:
+ 721              	.LBB298:
+ 722              	.LBB267:
   81:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  723              		.loc 3 81 19 view .LVU161
  724 00ce 84F88430 		strb	r3, [r4, #132]
- 725              	.LBE259:
- 726              	.LBE290:
- 727              	.LBB291:
- 728              	.LBB286:
- 729              	.LBB282:
- 730              	.LBB276:
- 731              	.LBB274:
+ 725              	.LBE267:
+ 726              	.LBE298:
+ 727              	.LBB299:
+ 728              	.LBB294:
+ 729              	.LBB290:
+ 730              	.LBB284:
+ 731              	.LBB282:
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
  732              		.loc 5 44 5 view .LVU162
  733              		.syntax unified
@@ -1306,63 +1306,63 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  738              		.loc 5 44 5 view .LVU163
  739              		.thumb
  740              		.syntax unified
- 741              	.LBE274:
- 742              	.LBE276:
- 743              	.LBE282:
- 744              	.LBE286:
- 745              	.LBE291:
+ 741              	.LBE282:
+ 742              	.LBE284:
+ 743              	.LBE290:
+ 744              	.LBE294:
+ 745              	.LBE299:
  141:PSP/AudioEngine.cpp ****     _lfo2.SetAmp(_lfo2Param.Amp);
  746              		.loc 1 141 5 is_stmt 1 view .LVU164
- 747              	.LBB292:
- 748              	.LBI256:
+ 747              	.LBB300:
+ 748              	.LBI264:
   79:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
  749              		.loc 3 79 17 view .LVU165
- 750              	.LBB260:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 23
+ 750              	.LBB268:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 23
 
 
   81:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  751              		.loc 3 81 9 view .LVU166
   81:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  752              		.loc 3 81 9 is_stmt 0 view .LVU167
- 753              	.LBE260:
- 754              	.LBE292:
+ 753              	.LBE268:
+ 754              	.LBE300:
  142:PSP/AudioEngine.cpp ****     _lfo2.SetPw(_lfo2Param.Shape);
  755              		.loc 1 142 5 is_stmt 1 view .LVU168
- 756              	.LBB293:
- 757              	.LBI252:
+ 756              	.LBB301:
+ 757              	.LBI260:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  758              		.loc 3 76 17 view .LVU169
- 759              	.LBB255:
+ 759              	.LBB263:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  760              		.loc 3 76 41 view .LVU170
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
  761              		.loc 3 76 41 is_stmt 0 view .LVU171
- 762              	.LBE255:
- 763              	.LBE293:
+ 762              	.LBE263:
+ 763              	.LBE301:
  143:PSP/AudioEngine.cpp ****     _lfo2.SetFreq(_lfo2Param.Freq);
  764              		.loc 1 143 5 is_stmt 1 view .LVU172
- 765              	.LBB294:
- 766              	.LBI269:
+ 765              	.LBB302:
+ 766              	.LBI277:
  767              		.loc 3 85 17 view .LVU173
- 768              	.LBB287:
+ 768              	.LBB295:
  769              		.loc 3 85 41 view .LVU174
- 770              	.LBB283:
- 771              	.LBI271:
+ 770              	.LBB291:
+ 771              	.LBI279:
   64:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
  772              		.loc 5 64 14 view .LVU175
- 773              	.LBE283:
- 774              	.LBE287:
- 775              	.LBE294:
+ 773              	.LBE291:
+ 774              	.LBE295:
+ 775              	.LBE302:
  776              		.loc 5 66 5 view .LVU176
- 777              	.LBB295:
- 778              	.LBB288:
- 779              	.LBB284:
- 780              	.LBB277:
- 781              	.LBI272:
+ 777              	.LBB303:
+ 778              	.LBB296:
+ 779              	.LBB292:
+ 780              	.LBB285:
+ 781              	.LBI280:
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
  782              		.loc 5 40 14 view .LVU177
- 783              	.LBB275:
+ 783              	.LBB283:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
  784              		.loc 5 42 5 view .LVU178
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
@@ -1371,37 +1371,37 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  786              		.loc 5 48 5 view .LVU180
   48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
  787              		.loc 5 48 5 is_stmt 0 view .LVU181
- 788              	.LBE275:
- 789              	.LBE277:
- 790              	.LBB278:
- 791              	.LBI278:
+ 788              	.LBE283:
+ 789              	.LBE285:
+ 790              	.LBB286:
+ 791              	.LBI286:
   51:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
  792              		.loc 5 51 14 is_stmt 1 view .LVU182
- 793              	.LBB279:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 24
+ 793              	.LBB287:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 24
 
 
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
  794              		.loc 5 53 5 view .LVU183
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
  795              		.loc 5 55 5 view .LVU184
- 796              	.LBE279:
- 797              	.LBE278:
- 798              	.LBE284:
- 799              	.LBE288:
- 800              	.LBE295:
- 801              	.LBB296:
- 802              	.LBB264:
+ 796              	.LBE287:
+ 797              	.LBE286:
+ 798              	.LBE292:
+ 799              	.LBE296:
+ 800              	.LBE303:
+ 801              	.LBB304:
+ 802              	.LBB272:
   69:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
  803              		.loc 3 69 20 is_stmt 0 view .LVU185
  804 00d6 84ED230A 		vstr.32	s0, [r4, #140]
- 805              	.LBE264:
- 806              	.LBE296:
- 807              	.LBB297:
- 808              	.LBB289:
- 809              	.LBB285:
- 810              	.LBB281:
- 811              	.LBB280:
+ 805              	.LBE272:
+ 806              	.LBE304:
+ 807              	.LBB305:
+ 808              	.LBB297:
+ 809              	.LBB293:
+ 810              	.LBB289:
+ 811              	.LBB288:
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
  812              		.loc 5 55 5 view .LVU186
  813              		.syntax unified
@@ -1415,22 +1415,22 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  819              		.loc 5 59 5 is_stmt 0 view .LVU188
  820              		.thumb
  821              		.syntax unified
- 822              	.LBE280:
- 823              	.LBE281:
- 824              	.LBE285:
+ 822              	.LBE288:
+ 823              	.LBE289:
+ 824              	.LBE293:
  825              		.loc 3 85 45 view .LVU189
  826 00de C4ED247A 		vstr.32	s15, [r4, #144]
  827              	.LVL19:
  828              		.loc 3 85 45 view .LVU190
- 829              	.LBE289:
- 830              	.LBE297:
+ 829              	.LBE297:
+ 830              	.LBE305:
  144:PSP/AudioEngine.cpp **** 
  831              		.loc 1 144 5 is_stmt 1 view .LVU191
- 832              	.LBB298:
- 833              	.LBI262:
+ 832              	.LBB306:
+ 833              	.LBI270:
   67:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
  834              		.loc 3 67 17 view .LVU192
- 835              	.LBB265:
+ 835              	.LBB273:
   69:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
  836              		.loc 3 69 9 view .LVU193
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
@@ -1438,30 +1438,30 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  838              		.loc 3 70 34 is_stmt 0 view .LVU195
  839 00e2 FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 25
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 25
 
 
  840              	.LVL20:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  841              		.loc 3 70 34 view .LVU196
  842 00e6 F0EE407A 		vmov.f32	s15, s0
- 843              	.LBE265:
- 844              	.LBE298:
+ 843              	.LBE273:
+ 844              	.LBE306:
  845              		.loc 1 146 21 view .LVU197
  846 00ea 0121     		movs	r1, #1
  847 00ec 94ED6B0A 		vldr.32	s0, [r4, #428]
  848 00f0 2846     		mov	r0, r5
  849 00f2 0195     		str	r5, [sp, #4]
- 850              	.LBB299:
- 851              	.LBB266:
+ 850              	.LBB307:
+ 851              	.LBB274:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  852              		.loc 3 70 20 view .LVU198
  853 00f4 C4ED287A 		vstr.32	s15, [r4, #160]
  854              	.LVL21:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  855              		.loc 3 70 20 view .LVU199
- 856              	.LBE266:
- 857              	.LBE299:
+ 856              	.LBE274:
+ 857              	.LBE307:
  858              		.loc 1 146 5 is_stmt 1 view .LVU200
  859              		.loc 1 146 21 is_stmt 0 view .LVU201
  860 00f8 FFF7FEFF 		bl	_ZN7daisysp4Adsr7SetTimeEif
@@ -1487,8 +1487,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  877              		.loc 1 149 29 is_stmt 0 view .LVU207
  878 0114 D4ED6D7A 		vldr.32	s15, [r4, #436]
  879              	.LVL25:
- 880              	.LBB300:
- 881              	.LBI300:
+ 880              	.LBB308:
+ 881              	.LBI308:
   46:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     /** Initializes the Adsr module.
   47:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****         \param sample_rate - The sample rate of the audio engine being run. 
   48:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     */
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   52:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****      \param hard  resets the history to zero, results in a click.
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****      */
   54:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     void Retrigger(bool hard);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 26
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 26
 
 
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     /** Processes one sample through the filter and returns one sample.
@@ -1522,7 +1522,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   73:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     */
   74:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     inline void SetSustainLevel(float sus_level)
  882              		.loc 2 74 17 is_stmt 1 view .LVU208
- 883              	.LBB301:
+ 883              	.LBB309:
   75:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     {
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****         sus_level = (sus_level <= 0.f) ? -0.01f // forces envelope into idle
  884              		.loc 2 76 9 view .LVU209
@@ -1539,26 +1539,26 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  894              	.L15:
   78:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****         sus_level_ = sus_level;
  895              		.loc 2 78 9 is_stmt 1 view .LVU212
- 896              	.LBE301:
- 897              	.LBE300:
+ 896              	.LBE309:
+ 897              	.LBE308:
  150:PSP/AudioEngine.cpp **** 
  151:PSP/AudioEngine.cpp ****     _Filt_env.SetTime(daisysp::ADSR_SEG_ATTACK,  _Filt_envParam.Attack);
  898              		.loc 1 151 22 is_stmt 0 view .LVU213
  899 012e 04F1E000 		add	r0, r4, #224
- 900              	.LBB304:
- 901              	.LBB302:
+ 900              	.LBB312:
+ 901              	.LBB310:
  902              		.loc 2 78 20 view .LVU214
  903 0132 C4ED2C7A 		vstr.32	s15, [r4, #176]
  904              	.LVL27:
  905              		.loc 2 78 20 view .LVU215
- 906              	.LBE302:
- 907              	.LBE304:
+ 906              	.LBE310:
+ 907              	.LBE312:
  908              		.loc 1 151 5 is_stmt 1 view .LVU216
  909              		.loc 1 151 22 is_stmt 0 view .LVU217
  910 0136 94ED700A 		vldr.32	s0, [r4, #448]
  911 013a 0121     		movs	r1, #1
  912 013c 0190     		str	r0, [sp, #4]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 27
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 27
 
 
  913 013e FFF7FEFF 		bl	_ZN7daisysp4Adsr7SetTimeEif
@@ -1584,11 +1584,11 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  930              		.loc 1 154 30 is_stmt 0 view .LVU223
  931 015a D4ED727A 		vldr.32	s15, [r4, #456]
  932              	.LVL31:
- 933              	.LBB305:
- 934              	.LBI305:
+ 933              	.LBB313:
+ 934              	.LBI313:
   74:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     {
  935              		.loc 2 74 17 is_stmt 1 view .LVU224
- 936              	.LBB306:
+ 936              	.LBB314:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****                                        : (sus_level > 1.f) ? 1.f : sus_level;
  937              		.loc 2 76 9 view .LVU225
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****                                        : (sus_level > 1.f) ? 1.f : sus_level;
@@ -1605,24 +1605,24 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  947              	.LVL32:
  948              	.L16:
  949              		.loc 2 78 9 is_stmt 1 view .LVU228
- 950              	.LBE306:
- 951              	.LBE305:
+ 950              	.LBE314:
+ 951              	.LBE313:
  155:PSP/AudioEngine.cpp ****     
  156:PSP/AudioEngine.cpp ****     _Filt.SetFreq(_FiltParam.Cutoff);
  952              		.loc 1 156 18 is_stmt 0 view .LVU229
  953 0178 04F58870 		add	r0, r4, #272
  954 017c 94ED750A 		vldr.32	s0, [r4, #468]
- 955              	.LBB309:
- 956              	.LBB307:
+ 955              	.LBB317:
+ 956              	.LBB315:
  957              		.loc 2 78 20 view .LVU230
  958 0180 C4ED387A 		vstr.32	s15, [r4, #224]
  959              	.LVL33:
  960              		.loc 2 78 20 view .LVU231
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 28
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 28
 
 
- 961              	.LBE307:
- 962              	.LBE309:
+ 961              	.LBE315:
+ 962              	.LBE317:
  963              		.loc 1 156 5 is_stmt 1 view .LVU232
  964              		.loc 1 156 18 is_stmt 0 view .LVU233
  965 0184 0190     		str	r0, [sp, #4]
@@ -1656,8 +1656,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  990              	.LVL36:
  991              	.L17:
  992              		.cfi_restore_state
- 993              	.LBB310:
- 994              	.LBB303:
+ 993              	.LBB318:
+ 994              	.LBB311:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****                                        : (sus_level > 1.f) ? 1.f : sus_level;
  995              		.loc 2 76 40 view .LVU238
  996 019e DFED617A 		vldr.32	s15, .L22+4
@@ -1669,24 +1669,24 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1001              	.L19:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****                                        : (sus_level > 1.f) ? 1.f : sus_level;
  1002              		.loc 2 76 40 view .LVU240
- 1003              	.LBE303:
- 1004              	.LBE310:
- 1005              	.LBB311:
- 1006              	.LBB308:
+ 1003              	.LBE311:
+ 1004              	.LBE318:
+ 1005              	.LBB319:
+ 1006              	.LBB316:
  1007 01a4 DFED5F7A 		vldr.32	s15, .L22+4
  1008              	.LVL39:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****                                        : (sus_level > 1.f) ? 1.f : sus_level;
  1009              		.loc 2 76 40 view .LVU241
  1010 01a8 E6E7     		b	.L16
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 29
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 29
 
 
  1011              	.LVL40:
  1012              	.L7:
   76:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****                                        : (sus_level > 1.f) ? 1.f : sus_level;
  1013              		.loc 2 76 40 view .LVU242
- 1014              	.LBE308:
- 1015              	.LBE311:
+ 1014              	.LBE316:
+ 1015              	.LBE319:
   60:PSP/AudioEngine.cpp ****             _osc1Param.Waveform = pluck_waveform1;
  1016              		.loc 1 60 9 is_stmt 1 view .LVU243
   61:PSP/AudioEngine.cpp ****             _osc1Param.Amp      = pluck_amp1;
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1047              		.loc 1 66 33 view .LVU259
  1048 01ce 5D4B     		ldr	r3, .L22+36
   75:PSP/AudioEngine.cpp **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 30
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 30
 
 
  1049              		.loc 1 75 33 view .LVU260
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   80:PSP/AudioEngine.cpp **** 
  1086              		.loc 1 80 35 view .LVU278
  1087 0200 584E     		ldr	r6, .L22+68
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 31
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 31
 
 
   61:PSP/AudioEngine.cpp ****             _osc1Param.Amp      = pluck_amp1;
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1121              		.loc 1 70 33 is_stmt 0 view .LVU299
  1122 022c C4F89051 		str	r5, [r4, #400]	@ float
   71:PSP/AudioEngine.cpp **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 32
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 32
 
 
  1123              		.loc 1 71 13 is_stmt 1 view .LVU300
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   88:PSP/AudioEngine.cpp ****             break;
  1158              		.loc 1 88 34 is_stmt 0 view .LVU320
  1159 025a 484E     		ldr	r6, .L22+92
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 33
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 33
 
 
  1160 025c 3668     		ldr	r6, [r6]	@ float
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   35:PSP/AudioEngine.cpp ****             _osc2Param.Shape    = pad_shape2; 
  1197              		.loc 1 35 33 view .LVU338
  1198 0288 444B     		ldr	r3, .L22+124
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 34
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 34
 
 
   44:PSP/AudioEngine.cpp **** 
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1235 02b6 C4F8B861 		str	r6, [r4, #440]	@ float
   49:PSP/AudioEngine.cpp **** 
  1236              		.loc 1 49 35 view .LVU357
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 35
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 35
 
 
  1237 02ba 404E     		ldr	r6, .L22+156
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   39:PSP/AudioEngine.cpp ****             _lfo1Param.Shape    = lfo_pad_Shape1;
  1271              		.loc 1 39 33 is_stmt 0 view .LVU378
  1272 02e6 C4F89051 		str	r5, [r4, #400]	@ float
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 36
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 36
 
 
   40:PSP/AudioEngine.cpp **** 
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1307              		.loc 1 57 13 is_stmt 1 view .LVU398
   57:PSP/AudioEngine.cpp ****             break;
  1308              		.loc 1 57 34 is_stmt 0 view .LVU399
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 37
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 37
 
 
  1309 0314 2F4E     		ldr	r6, .L22+180
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1362 03d4 00000000 		.word	.LANCHOR21
  1363              	.LVL46:
  1364              	.L8:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 38
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 38
 
 
   91:PSP/AudioEngine.cpp ****             _osc1Param.Waveform = lead_waveform1;
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1400              		.loc 1 93 33 view .LVU419
  1401 0400 D0F800C0 		ldr	ip, [r0]	@ float
  106:PSP/AudioEngine.cpp **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 39
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 39
 
 
  1402              		.loc 1 106 33 view .LVU420
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  111:PSP/AudioEngine.cpp **** 
  1439              		.loc 1 111 35 view .LVU438
  1440 0432 3668     		ldr	r6, [r6]	@ float
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 40
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 40
 
 
  100:PSP/AudioEngine.cpp ****             _lfo1Param.Amp      = lfo_lead_Amp1;
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1474 045e C4ED657A 		vstr.32	s15, [r4, #404]
  104:PSP/AudioEngine.cpp ****             _lfo2Param.Amp      = lfo_lead_Amp2;
  1475              		.loc 1 104 13 is_stmt 1 view .LVU460
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 41
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 41
 
 
  105:PSP/AudioEngine.cpp ****             _lfo2Param.Shape    = lfo_lead_Shape2;
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1511              		.loc 1 120 13 is_stmt 1 view .LVU479
  120:PSP/AudioEngine.cpp ****             break;
  1512              		.loc 1 120 34 is_stmt 0 view .LVU480
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 42
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 42
 
 
  1513 0490 184E     		ldr	r6, .L24+88
@@ -2513,16 +2513,16 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1562              		@ frame_needed = 0, uses_anonymous_args = 0
    9:PSP/AudioEngine.cpp ****     _osc2.Init(sample_rate);
  1563              		.loc 1 9 5 view .LVU483
- 1564              	.LBB320:
- 1565              	.LBB321:
+ 1564              	.LBB328:
+ 1565              	.LBB329:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
  1566              		.loc 3 53 27 is_stmt 0 view .LVU484
  1567 0000 F7EE007A 		vmov.f32	s15, #1.0e+0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 43
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 43
 
 
- 1568              	.LBE321:
- 1569              	.LBE320:
+ 1568              	.LBE329:
+ 1569              	.LBE328:
    7:PSP/AudioEngine.cpp ****     // Inizializzazione moduli
  1570              		.loc 1 7 43 view .LVU485
  1571 0004 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
@@ -2539,8 +2539,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1582              		.cfi_offset 81, -36
  1583              		.cfi_offset 82, -32
  1584              		.cfi_offset 83, -28
- 1585              	.LBB327:
- 1586              	.LBB322:
+ 1585              	.LBB335:
+ 1586              	.LBB330:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
  1587              		.loc 3 53 27 view .LVU486
  1588 000c 87EE809A 		vdiv.f32	s18, s15, s0
@@ -2556,17 +2556,17 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         pw_        = 0.5f;
  1595              		.loc 3 55 20 view .LVU490
  1596 001c 4560     		str	r5, [r0, #4]	@ float
- 1597              	.LBE322:
- 1598              	.LBE327:
+ 1597              	.LBE330:
+ 1598              	.LBE335:
    7:PSP/AudioEngine.cpp ****     // Inizializzazione moduli
  1599              		.loc 1 7 43 view .LVU491
  1600 001e 0446     		mov	r4, r0
  1601              	.LVL50:
- 1602              	.LBB328:
- 1603              	.LBI320:
+ 1602              	.LBB336:
+ 1603              	.LBI328:
   50:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
  1604              		.loc 3 50 10 is_stmt 1 view .LVU492
- 1605              	.LBB323:
+ 1605              	.LBB331:
   52:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
  1606              		.loc 3 52 9 view .LVU493
   54:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
@@ -2578,19 +2578,19 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   56:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_     = 0.0f;
  1611              		.loc 3 56 20 view .LVU496
  1612 0026 C560     		str	r5, [r0, #12]	@ float
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 44
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 44
 
 
   61:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  1613              		.loc 3 61 20 view .LVU497
  1614 0028 40F20117 		movw	r7, #257
- 1615              	.LBE323:
- 1616              	.LBE328:
+ 1615              	.LBE331:
+ 1616              	.LBE336:
    7:PSP/AudioEngine.cpp ****     // Inizializzazione moduli
  1617              		.loc 1 7 43 view .LVU498
  1618 002c B0EE408A 		vmov.f32	s16, s0
- 1619              	.LBB329:
- 1620              	.LBB324:
+ 1619              	.LBB337:
+ 1620              	.LBB332:
   57:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(freq_);
  1621              		.loc 3 57 20 view .LVU499
  1622 0030 C0F81880 		str	r8, [r0, #24]	@ float
@@ -2623,10 +2623,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   58:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
  1639              		.loc 3 58 34 view .LVU510
  1640 0044 F0EE407A 		vmov.f32	s15, s0
- 1641              	.LBE324:
- 1642              	.LBE329:
- 1643              	.LBB330:
- 1644              	.LBB331:
+ 1641              	.LBE332:
+ 1642              	.LBE337:
+ 1643              	.LBB338:
+ 1644              	.LBB339:
  1645 0048 04F12C00 		add	r0, r4, #44
   52:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
  1646              		.loc 3 52 20 view .LVU511
@@ -2637,13 +2637,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   58:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
  1650              		.loc 3 58 34 view .LVU513
  1651 0054 B0EE680A 		vmov.f32	s0, s17
- 1652              	.LBE331:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 45
+ 1652              	.LBE339:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 45
 
 
- 1653              	.LBE330:
- 1654              	.LBB336:
- 1655              	.LBB325:
+ 1653              	.LBE338:
+ 1654              	.LBB344:
+ 1655              	.LBB333:
   58:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
  1656              		.loc 3 58 20 view .LVU514
  1657 0058 C4ED077A 		vstr.32	s15, [r4, #28]
@@ -2653,17 +2653,17 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1659              		.loc 3 60 9 view .LVU516
   61:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  1660              		.loc 3 61 9 view .LVU517
- 1661              	.LBE325:
- 1662              	.LBE336:
- 1663              	.LBB337:
- 1664              	.LBB332:
+ 1661              	.LBE333:
+ 1662              	.LBE344:
+ 1663              	.LBB345:
+ 1664              	.LBB340:
   54:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
  1665              		.loc 3 54 20 is_stmt 0 view .LVU518
  1666 005c C4ED0D8A 		vstr.32	s17, [r4, #52]
- 1667              	.LBE332:
- 1668              	.LBE337:
- 1669              	.LBB338:
- 1670              	.LBB326:
+ 1667              	.LBE340:
+ 1668              	.LBE345:
+ 1669              	.LBB346:
+ 1670              	.LBB334:
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
  1671              		.loc 3 59 20 view .LVU519
  1672 0060 2670     		strb	r6, [r4]
@@ -2673,15 +2673,15 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1675              	.LVL53:
   61:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  1676              		.loc 3 61 20 view .LVU521
- 1677              	.LBE326:
- 1678              	.LBE338:
+ 1677              	.LBE334:
+ 1678              	.LBE346:
   10:PSP/AudioEngine.cpp ****     _lfo1.Init(sample_rate);
  1679              		.loc 1 10 5 is_stmt 1 view .LVU522
- 1680              	.LBB339:
- 1681              	.LBI330:
+ 1680              	.LBB347:
+ 1681              	.LBI338:
   50:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
  1682              		.loc 3 50 10 view .LVU523
- 1683              	.LBB333:
+ 1683              	.LBB341:
   52:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
  1684              		.loc 3 52 9 view .LVU524
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   56:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_     = 0.0f;
  1691              		.loc 3 56 20 is_stmt 0 view .LVU530
  1692 0066 A563     		str	r5, [r4, #56]	@ float
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 46
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 46
 
 
   57:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(freq_);
@@ -2714,24 +2714,24 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1699              	.LVL54:
   58:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
  1700              		.loc 3 58 34 view .LVU535
- 1701              	.LBE333:
- 1702              	.LBE339:
- 1703              	.LBB340:
- 1704              	.LBB341:
+ 1701              	.LBE341:
+ 1702              	.LBE347:
+ 1703              	.LBB348:
+ 1704              	.LBB349:
  1705 0070 04F15800 		add	r0, r4, #88
- 1706              	.LBE341:
- 1707              	.LBE340:
- 1708              	.LBB346:
- 1709              	.LBB334:
+ 1706              	.LBE349:
+ 1707              	.LBE348:
+ 1708              	.LBB354:
+ 1709              	.LBB342:
   58:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
  1710              		.loc 3 58 20 view .LVU536
  1711 0074 84ED120A 		vstr.32	s0, [r4, #72]
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
  1712              		.loc 3 59 9 is_stmt 1 view .LVU537
- 1713              	.LBE334:
- 1714              	.LBE346:
- 1715              	.LBB347:
- 1716              	.LBB342:
+ 1713              	.LBE342:
+ 1714              	.LBE354:
+ 1715              	.LBB355:
+ 1716              	.LBB350:
   58:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
  1717              		.loc 3 58 34 is_stmt 0 view .LVU538
  1718 0078 B0EE680A 		vmov.f32	s0, s17
@@ -2744,10 +2744,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   54:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
  1723              		.loc 3 54 20 view .LVU541
  1724 0084 C4ED188A 		vstr.32	s17, [r4, #96]
- 1725              	.LBE342:
- 1726              	.LBE347:
- 1727              	.LBB348:
- 1728              	.LBB335:
+ 1725              	.LBE350:
+ 1726              	.LBE355:
+ 1727              	.LBB356:
+ 1728              	.LBB343:
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
  1729              		.loc 3 59 20 view .LVU542
  1730 0088 84F82C60 		strb	r6, [r4, #44]
@@ -2758,21 +2758,21 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   61:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  1733              		.loc 3 61 20 is_stmt 0 view .LVU545
  1734 008c A4F85470 		strh	r7, [r4, #84]	@ movhi
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 47
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 47
 
 
  1735              	.LVL55:
   61:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  1736              		.loc 3 61 20 view .LVU546
- 1737              	.LBE335:
- 1738              	.LBE348:
+ 1737              	.LBE343:
+ 1738              	.LBE356:
   11:PSP/AudioEngine.cpp ****     _lfo2.Init(sample_rate);
  1739              		.loc 1 11 5 is_stmt 1 view .LVU547
- 1740              	.LBB349:
- 1741              	.LBI340:
+ 1740              	.LBB357:
+ 1741              	.LBI348:
   50:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
  1742              		.loc 3 50 10 view .LVU548
- 1743              	.LBB343:
+ 1743              	.LBB351:
   52:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
  1744              		.loc 3 52 9 view .LVU549
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
@@ -2802,27 +2802,27 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1759              	.LVL56:
   58:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
  1760              		.loc 3 58 34 view .LVU560
- 1761              	.LBE343:
- 1762              	.LBE349:
- 1763              	.LBB350:
- 1764              	.LBB351:
+ 1761              	.LBE351:
+ 1762              	.LBE357:
+ 1763              	.LBB358:
+ 1764              	.LBB359:
  1765 009c 04F18400 		add	r0, r4, #132
- 1766              	.LBE351:
- 1767              	.LBE350:
- 1768              	.LBB355:
- 1769              	.LBB344:
+ 1766              	.LBE359:
+ 1767              	.LBE358:
+ 1768              	.LBB363:
+ 1769              	.LBB352:
   58:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
  1770              		.loc 3 58 20 view .LVU561
  1771 00a0 84ED1D0A 		vstr.32	s0, [r4, #116]
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
  1772              		.loc 3 59 9 is_stmt 1 view .LVU562
- 1773              	.LBE344:
- 1774              	.LBE355:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 48
+ 1773              	.LBE352:
+ 1774              	.LBE363:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 48
 
 
- 1775              	.LBB356:
- 1776              	.LBB352:
+ 1775              	.LBB364:
+ 1776              	.LBB360:
   58:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
  1777              		.loc 3 58 34 is_stmt 0 view .LVU563
  1778 00a4 B0EE680A 		vmov.f32	s0, s17
@@ -2838,10 +2838,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   57:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(freq_);
  1785              		.loc 3 57 20 view .LVU567
  1786 00b4 C4F89C80 		str	r8, [r4, #156]	@ float
- 1787              	.LBE352:
- 1788              	.LBE356:
- 1789              	.LBB357:
- 1790              	.LBB345:
+ 1787              	.LBE360:
+ 1788              	.LBE364:
+ 1789              	.LBB365:
+ 1790              	.LBB353:
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
  1791              		.loc 3 59 20 view .LVU568
  1792 00b8 84F85860 		strb	r6, [r4, #88]
@@ -2855,15 +2855,15 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1797              	.LVL57:
   61:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  1798              		.loc 3 61 20 view .LVU572
- 1799              	.LBE345:
- 1800              	.LBE357:
+ 1799              	.LBE353:
+ 1800              	.LBE365:
   12:PSP/AudioEngine.cpp ****     _Amp_env.Init(sample_rate);
  1801              		.loc 1 12 5 is_stmt 1 view .LVU573
- 1802              	.LBB358:
- 1803              	.LBI350:
+ 1802              	.LBB366:
+ 1803              	.LBI358:
   50:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
  1804              		.loc 3 50 10 view .LVU574
- 1805              	.LBB353:
+ 1805              	.LBB361:
   52:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
  1806              		.loc 3 52 9 view .LVU575
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   56:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_     = 0.0f;
  1812              		.loc 3 56 9 is_stmt 1 view .LVU580
   56:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_     = 0.0f;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 49
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 49
 
 
  1813              		.loc 3 56 20 is_stmt 0 view .LVU581
@@ -2894,15 +2894,15 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   58:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
  1820              		.loc 3 58 34 view .LVU585
  1821 00cc F0EE407A 		vmov.f32	s15, s0
- 1822              	.LBE353:
- 1823              	.LBE358:
+ 1822              	.LBE361:
+ 1823              	.LBE366:
   13:PSP/AudioEngine.cpp ****     _Filt_env.Init(sample_rate);
  1824              		.loc 1 13 18 view .LVU586
  1825 00d0 04F1B000 		add	r0, r4, #176
  1826 00d4 B0EE480A 		vmov.f32	s0, s16
  1827 00d8 0121     		movs	r1, #1
- 1828              	.LBB359:
- 1829              	.LBB354:
+ 1828              	.LBB367:
+ 1829              	.LBB362:
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
  1830              		.loc 3 59 20 view .LVU587
  1831 00da 84F88460 		strb	r6, [r4, #132]
@@ -2921,8 +2921,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1839              	.LVL59:
   61:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  1840              		.loc 3 61 20 view .LVU593
- 1841              	.LBE354:
- 1842              	.LBE359:
+ 1841              	.LBE362:
+ 1842              	.LBE367:
   13:PSP/AudioEngine.cpp ****     _Filt_env.Init(sample_rate);
  1843              		.loc 1 13 5 is_stmt 1 view .LVU594
   13:PSP/AudioEngine.cpp ****     _Filt_env.Init(sample_rate);
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1851 00f0 04F1E000 		add	r0, r4, #224
  1852 00f4 FFF7FEFF 		bl	_ZN7daisysp4Adsr4InitEfi
  1853              	.LVL61:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 50
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 50
 
 
   15:PSP/AudioEngine.cpp **** 
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
   21:PSP/AudioEngine.cpp **** }
  1895              		.loc 1 21 14 view .LVU611
  1896 011e 00BF     		.align	2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 51
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 51
 
 
  1897              	.L28:
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  166:PSP/AudioEngine.cpp ****     if (Controls.gate && !_lastGate) {
  1945              		.loc 1 166 5 is_stmt 1 view .LVU621
  1946 0020 15B1     		cbz	r5, .L31
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 52
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 52
 
 
  1947              		.loc 1 166 23 is_stmt 0 discriminator 1 view .LVU622
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  1989              	.LFE3583:
  1991 004a 00BF     		.section	.text._ZN11AudioEngine7ProcessEv,"ax",%progbits
  1992              		.align	1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 53
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 53
 
 
  1993              		.p2align 2,,3
@@ -3145,946 +3145,998 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 1
  177:PSP/AudioEngine.cpp ****     float filtered_sig;
  2010              		.loc 1 177 5 view .LVU640
  178:PSP/AudioEngine.cpp **** 
- 179:PSP/AudioEngine.cpp **** 
- 180:PSP/AudioEngine.cpp ****     _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
- 2011              		.loc 1 180 5 view .LVU641
+ 179:PSP/AudioEngine.cpp ****     switch (_currentPreset)
+ 2011              		.loc 1 179 5 view .LVU641
+ 2012              		.loc 1 179 13 is_stmt 0 view .LVU642
+ 2013 0000 90F8DC31 		ldrb	r3, [r0, #476]	@ zero_extendqisi2
+ 2014              		.loc 1 179 5 view .LVU643
+ 2015 0004 012B     		cmp	r3, #1
  173:PSP/AudioEngine.cpp ****     float Amp_env_out;
- 2012              		.loc 1 173 30 is_stmt 0 view .LVU642
- 2013 0000 70B5     		push	{r4, r5, r6, lr}
- 2014              		.cfi_def_cfa_offset 16
- 2015              		.cfi_offset 4, -16
- 2016              		.cfi_offset 5, -12
- 2017              		.cfi_offset 6, -8
- 2018              		.cfi_offset 14, -4
- 2019 0002 2DED028B 		vpush.64	{d8}
- 2020              		.cfi_def_cfa_offset 24
- 2021              		.cfi_offset 80, -24
- 2022              		.cfi_offset 81, -20
- 2023              		.loc 1 180 40 view .LVU643
- 2024 0006 B7EE008A 		vmov.f32	s16, #1.0e+0
- 173:PSP/AudioEngine.cpp ****     float Amp_env_out;
- 2025              		.loc 1 173 30 view .LVU644
- 2026 000a 0446     		mov	r4, r0
- 2027              		.loc 1 180 56 view .LVU645
- 2028 000c 5830     		adds	r0, r0, #88
- 2029              	.LVL75:
- 2030              		.loc 1 180 30 view .LVU646
- 2031 000e D4ED5E8A 		vldr.32	s17, [r4, #376]
- 2032              		.loc 1 180 56 view .LVU647
- 2033 0012 FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
- 2034              	.LVL76:
- 2035              		.loc 1 180 40 view .LVU648
- 2036 0016 30EE080A 		vadd.f32	s0, s0, s16
- 2037              	.LBB360:
- 2038              	.LBB361:
+ 2016              		.loc 1 173 30 view .LVU644
+ 2017 0006 70B5     		push	{r4, r5, r6, lr}
+ 2018              		.cfi_def_cfa_offset 16
+ 2019              		.cfi_offset 4, -16
+ 2020              		.cfi_offset 5, -12
+ 2021              		.cfi_offset 6, -8
+ 2022              		.cfi_offset 14, -4
+ 2023 0008 0446     		mov	r4, r0
+ 2024 000a 2DED028B 		vpush.64	{d8}
+ 2025              		.cfi_def_cfa_offset 24
+ 2026              		.cfi_offset 80, -24
+ 2027              		.cfi_offset 81, -20
+ 2028              		.loc 1 179 5 view .LVU645
+ 2029 000e 1DD0     		beq	.L39
+ 2030 0010 022B     		cmp	r3, #2
+ 2031 0012 1BD0     		beq	.L39
+ 2032 0014 D3B1     		cbz	r3, .L39
+ 180:PSP/AudioEngine.cpp ****     {
+ 181:PSP/AudioEngine.cpp ****     case PRESET_PAD://TODO
+ 182:PSP/AudioEngine.cpp ****         _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
+ 183:PSP/AudioEngine.cpp ****         _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
+ 2033              		.loc 1 183 22 view .LVU646
+ 2034 0016 00F12C06 		add	r6, r0, #44
+ 184:PSP/AudioEngine.cpp ****         Amp_env_out = _Amp_env.Process(_lastGate);
+ 185:PSP/AudioEngine.cpp ****         Fenv_out = _Filt_env.Process(_lastGate);
+ 186:PSP/AudioEngine.cpp ****         _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 54
+
+
+ 2035              		.loc 1 186 22 view .LVU647
+ 2036 001a 00F58875 		add	r5, r0, #272
+ 2037              	.LVL75:
+ 2038              	.L41:
+ 187:PSP/AudioEngine.cpp ****         break;
+ 188:PSP/AudioEngine.cpp ****     case PRESET_PLUCK://TODO
+ 189:PSP/AudioEngine.cpp ****         _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
+ 190:PSP/AudioEngine.cpp ****         _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
+ 191:PSP/AudioEngine.cpp ****         Amp_env_out = _Amp_env.Process(_lastGate);
+ 192:PSP/AudioEngine.cpp ****         Fenv_out = _Filt_env.Process(_lastGate);
+ 193:PSP/AudioEngine.cpp ****         _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
+ 194:PSP/AudioEngine.cpp ****         break;
+ 195:PSP/AudioEngine.cpp ****     case PRESET_LEAD:
+ 196:PSP/AudioEngine.cpp ****         _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
+ 197:PSP/AudioEngine.cpp ****         _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
+ 198:PSP/AudioEngine.cpp ****         Amp_env_out = _Amp_env.Process(_lastGate);
+ 199:PSP/AudioEngine.cpp ****         Fenv_out = _Filt_env.Process(_lastGate);
+ 200:PSP/AudioEngine.cpp ****         _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
+ 201:PSP/AudioEngine.cpp ****         break;
+ 202:PSP/AudioEngine.cpp ****     
+ 203:PSP/AudioEngine.cpp ****     default:
+ 204:PSP/AudioEngine.cpp ****         break;
+ 205:PSP/AudioEngine.cpp ****     }
+ 206:PSP/AudioEngine.cpp **** 
+ 207:PSP/AudioEngine.cpp ****     sig = (_osc1.Process() + _osc2.Process())/2.0f;
+ 2039              		.loc 1 207 5 is_stmt 1 view .LVU648
+ 2040              		.loc 1 207 25 is_stmt 0 view .LVU649
+ 2041 001e 2046     		mov	r0, r4
+ 2042 0020 FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
+ 2043              	.LVL76:
+ 2044 0024 B0EE408A 		vmov.f32	s16, s0
+ 2045              		.loc 1 207 43 view .LVU650
+ 2046 0028 3046     		mov	r0, r6
+ 2047 002a FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
+ 2048              	.LVL77:
+ 2049              		.loc 1 207 9 view .LVU651
+ 2050 002e F6EE007A 		vmov.f32	s15, #5.0e-1
+ 2051              		.loc 1 207 28 view .LVU652
+ 2052 0032 38EE008A 		vadd.f32	s16, s16, s0
+ 208:PSP/AudioEngine.cpp ****     sig *= Amp_env_out;
+ 209:PSP/AudioEngine.cpp ****     filtered_sig = _Filt.Process(sig);
+ 2053              		.loc 1 209 33 view .LVU653
+ 2054 0036 2846     		mov	r0, r5
+ 207:PSP/AudioEngine.cpp ****     sig *= Amp_env_out;
+ 2055              		.loc 1 207 9 view .LVU654
+ 2056 0038 28EE278A 		vmul.f32	s16, s16, s15
+ 2057              	.LVL78:
+ 208:PSP/AudioEngine.cpp ****     sig *= Amp_env_out;
+ 2058              		.loc 1 208 5 is_stmt 1 view .LVU655
+ 2059              		.loc 1 209 5 view .LVU656
+ 2060              		.loc 1 209 33 is_stmt 0 view .LVU657
+ 2061 003c 28EE880A 		vmul.f32	s0, s17, s16
+ 2062              	.LVL79:
+ 210:PSP/AudioEngine.cpp ****     return  filtered_sig;
+ 211:PSP/AudioEngine.cpp **** }...
+ 2063              		.loc 1 211 1 view .LVU658
+ 2064 0040 BDEC028B 		vldm	sp!, {d8}
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 55
+
+
+ 2065              		.cfi_remember_state
+ 2066              		.cfi_restore 80
+ 2067              		.cfi_restore 81
+ 2068              		.cfi_def_cfa_offset 16
+ 2069 0044 BDE87040 		pop	{r4, r5, r6, lr}
+ 2070              		.cfi_restore 14
+ 2071              		.cfi_restore 6
+ 2072              		.cfi_restore 5
+ 2073              		.cfi_restore 4
+ 2074              		.cfi_def_cfa_offset 0
+ 2075              	.LVL80:
+ 209:PSP/AudioEngine.cpp ****     filtered_sig = _Filt.Process(sig);
+ 2076              		.loc 1 209 33 view .LVU659
+ 2077 0048 FFF7FEBF 		b	_ZN7daisysp12LadderFilter7ProcessEf
+ 2078              	.LVL81:
+ 2079              	.L39:
+ 2080              		.cfi_restore_state
+ 195:PSP/AudioEngine.cpp ****     case PRESET_LEAD:
+ 2081              		.loc 1 195 5 is_stmt 1 view .LVU660
+ 196:PSP/AudioEngine.cpp ****         _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
+ 2082              		.loc 1 196 9 view .LVU661
+ 196:PSP/AudioEngine.cpp ****         _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
+ 2083              		.loc 1 196 44 is_stmt 0 view .LVU662
+ 2084 004c B7EE008A 		vmov.f32	s16, #1.0e+0
+ 196:PSP/AudioEngine.cpp ****         _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
+ 2085              		.loc 1 196 60 view .LVU663
+ 2086 0050 04F15800 		add	r0, r4, #88
+ 2087              	.LVL82:
+ 196:PSP/AudioEngine.cpp ****         _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
+ 2088              		.loc 1 196 34 view .LVU664
+ 2089 0054 D4ED5E8A 		vldr.32	s17, [r4, #376]
+ 196:PSP/AudioEngine.cpp ****         _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
+ 2090              		.loc 1 196 60 view .LVU665
+ 2091 0058 FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
+ 2092              	.LVL83:
+ 2093              	.LBB368:
+ 2094              	.LBB369:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 54
+ 2095              		.loc 3 70 34 view .LVU666
+ 2096 005c 2046     		mov	r0, r4
+ 2097              	.LBE369:
+ 2098              	.LBE368:
+ 197:PSP/AudioEngine.cpp ****         _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
+ 2099              		.loc 1 197 22 view .LVU667
+ 2100 005e 04F12C06 		add	r6, r4, #44
+ 196:PSP/AudioEngine.cpp ****         _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
+ 2101              		.loc 1 196 44 view .LVU668
+ 2102 0062 30EE080A 		vadd.f32	s0, s0, s16
+ 200:PSP/AudioEngine.cpp ****         _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
+ 2103              		.loc 1 200 22 view .LVU669
+ 2104 0066 04F58875 		add	r5, r4, #272
+ 196:PSP/AudioEngine.cpp ****         _osc1.SetFreq(_osc1Param.Freq * (1 +  _lfo1.Process()));
+ 2105              		.loc 1 196 22 view .LVU670
+ 2106 006a 20EE280A 		vmul.f32	s0, s0, s17
+ 2107              	.LVL84:
+ 2108              	.LBB372:
+ 2109              	.LBI368:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 56
 
 
- 2039              		.loc 3 70 34 view .LVU649
- 2040 001a 2046     		mov	r0, r4
- 2041              	.LBE361:
- 2042              	.LBE360:
- 181:PSP/AudioEngine.cpp ****     _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
- 2043              		.loc 1 181 18 view .LVU650
- 2044 001c 04F12C06 		add	r6, r4, #44
- 182:PSP/AudioEngine.cpp ****     Amp_env_out = _Amp_env.Process(_lastGate);
- 183:PSP/AudioEngine.cpp ****     Fenv_out = _Filt_env.Process(_lastGate);
- 184:PSP/AudioEngine.cpp ****     _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
- 2045              		.loc 1 184 18 view .LVU651
- 2046 0020 04F58875 		add	r5, r4, #272
- 180:PSP/AudioEngine.cpp ****     _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
- 2047              		.loc 1 180 18 view .LVU652
- 2048 0024 20EE280A 		vmul.f32	s0, s0, s17
- 2049              	.LVL77:
- 2050              	.LBB364:
- 2051              	.LBI360:
   67:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
- 2052              		.loc 3 67 17 is_stmt 1 view .LVU653
- 2053              	.LBB362:
+ 2110              		.loc 3 67 17 is_stmt 1 view .LVU671
+ 2111              	.LBB370:
   69:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
- 2054              		.loc 3 69 9 view .LVU654
+ 2112              		.loc 3 69 9 view .LVU672
   69:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
- 2055              		.loc 3 69 20 is_stmt 0 view .LVU655
- 2056 0028 84ED020A 		vstr.32	s0, [r4, #8]
+ 2113              		.loc 3 69 20 is_stmt 0 view .LVU673
+ 2114 006e 84ED020A 		vstr.32	s0, [r4, #8]
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 2057              		.loc 3 70 9 is_stmt 1 view .LVU656
+ 2115              		.loc 3 70 9 is_stmt 1 view .LVU674
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 2058              		.loc 3 70 34 is_stmt 0 view .LVU657
- 2059 002c FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
- 2060              	.LVL78:
+ 2116              		.loc 3 70 34 is_stmt 0 view .LVU675
+ 2117 0072 FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
+ 2118              	.LVL85:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 2061              		.loc 3 70 34 view .LVU658
- 2062              	.LBE362:
- 2063              	.LBE364:
- 181:PSP/AudioEngine.cpp ****     Amp_env_out = _Amp_env.Process(_lastGate);
- 2064              		.loc 1 181 56 view .LVU659
- 2065 0030 04F18400 		add	r0, r4, #132
- 2066              	.LBB365:
- 2067              	.LBB363:
+ 2119              		.loc 3 70 34 view .LVU676
+ 2120              	.LBE370:
+ 2121              	.LBE372:
+ 197:PSP/AudioEngine.cpp ****         _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
+ 2122              		.loc 1 197 60 view .LVU677
+ 2123 0076 04F18400 		add	r0, r4, #132
+ 2124              	.LBB373:
+ 2125              	.LBB371:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 2068              		.loc 3 70 20 view .LVU660
- 2069 0034 84ED070A 		vstr.32	s0, [r4, #28]
- 2070              	.LVL79:
+ 2126              		.loc 3 70 20 view .LVU678
+ 2127 007a 84ED070A 		vstr.32	s0, [r4, #28]
+ 2128              	.LVL86:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 2071              		.loc 3 70 20 view .LVU661
- 2072              	.LBE363:
- 2073              	.LBE365:
- 181:PSP/AudioEngine.cpp ****     Amp_env_out = _Amp_env.Process(_lastGate);
- 2074              		.loc 1 181 5 is_stmt 1 view .LVU662
- 181:PSP/AudioEngine.cpp ****     Amp_env_out = _Amp_env.Process(_lastGate);
- 2075              		.loc 1 181 30 is_stmt 0 view .LVU663
- 2076 0038 D4ED628A 		vldr.32	s17, [r4, #392]
- 181:PSP/AudioEngine.cpp ****     Amp_env_out = _Amp_env.Process(_lastGate);
- 2077              		.loc 1 181 56 view .LVU664
- 2078 003c FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 55
-
-
- 2079              	.LVL80:
- 181:PSP/AudioEngine.cpp ****     Amp_env_out = _Amp_env.Process(_lastGate);
- 2080              		.loc 1 181 40 view .LVU665
- 2081 0040 30EE080A 		vadd.f32	s0, s0, s16
- 2082              	.LBB366:
- 2083              	.LBB367:
+ 2129              		.loc 3 70 20 view .LVU679
+ 2130              	.LBE371:
+ 2131              	.LBE373:
+ 197:PSP/AudioEngine.cpp ****         _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
+ 2132              		.loc 1 197 9 is_stmt 1 view .LVU680
+ 197:PSP/AudioEngine.cpp ****         _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
+ 2133              		.loc 1 197 34 is_stmt 0 view .LVU681
+ 2134 007e D4ED628A 		vldr.32	s17, [r4, #392]
+ 197:PSP/AudioEngine.cpp ****         _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
+ 2135              		.loc 1 197 60 view .LVU682
+ 2136 0082 FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
+ 2137              	.LVL87:
+ 197:PSP/AudioEngine.cpp ****         _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
+ 2138              		.loc 1 197 44 view .LVU683
+ 2139 0086 30EE080A 		vadd.f32	s0, s0, s16
+ 2140              	.LBB374:
+ 2141              	.LBB375:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 2084              		.loc 3 70 34 view .LVU666
- 2085 0044 3046     		mov	r0, r6
- 2086              	.LBE367:
- 2087              	.LBE366:
- 181:PSP/AudioEngine.cpp ****     Amp_env_out = _Amp_env.Process(_lastGate);
- 2088              		.loc 1 181 18 view .LVU667
- 2089 0046 20EE280A 		vmul.f32	s0, s0, s17
- 2090              	.LVL81:
- 2091              	.LBB370:
- 2092              	.LBI366:
+ 2142              		.loc 3 70 34 view .LVU684
+ 2143 008a 3046     		mov	r0, r6
+ 2144              	.LBE375:
+ 2145              	.LBE374:
+ 197:PSP/AudioEngine.cpp ****         _osc2.SetFreq(_osc2Param.Freq * (1 +  _lfo2.Process()));
+ 2146              		.loc 1 197 22 view .LVU685
+ 2147 008c 20EE280A 		vmul.f32	s0, s0, s17
+ 2148              	.LVL88:
+ 2149              	.LBB378:
+ 2150              	.LBI374:
   67:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
- 2093              		.loc 3 67 17 is_stmt 1 view .LVU668
- 2094              	.LBB368:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 57
+
+
+ 2151              		.loc 3 67 17 is_stmt 1 view .LVU686
+ 2152              	.LBB376:
   69:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
- 2095              		.loc 3 69 9 view .LVU669
+ 2153              		.loc 3 69 9 view .LVU687
   69:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
- 2096              		.loc 3 69 20 is_stmt 0 view .LVU670
- 2097 004a 84ED0D0A 		vstr.32	s0, [r4, #52]
+ 2154              		.loc 3 69 20 is_stmt 0 view .LVU688
+ 2155 0090 84ED0D0A 		vstr.32	s0, [r4, #52]
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 2098              		.loc 3 70 9 is_stmt 1 view .LVU671
+ 2156              		.loc 3 70 9 is_stmt 1 view .LVU689
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 2099              		.loc 3 70 34 is_stmt 0 view .LVU672
- 2100 004e FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
- 2101              	.LVL82:
+ 2157              		.loc 3 70 34 is_stmt 0 view .LVU690
+ 2158 0094 FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
+ 2159              	.LVL89:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 2102              		.loc 3 70 34 view .LVU673
- 2103              	.LBE368:
- 2104              	.LBE370:
- 182:PSP/AudioEngine.cpp ****     Fenv_out = _Filt_env.Process(_lastGate);
- 2105              		.loc 1 182 35 view .LVU674
- 2106 0052 94F8DD11 		ldrb	r1, [r4, #477]	@ zero_extendqisi2
- 2107 0056 04F1B000 		add	r0, r4, #176
- 2108              	.LBB371:
- 2109              	.LBB369:
+ 2160              		.loc 3 70 34 view .LVU691
+ 2161              	.LBE376:
+ 2162              	.LBE378:
+ 198:PSP/AudioEngine.cpp ****         Amp_env_out = _Amp_env.Process(_lastGate);
+ 2163              		.loc 1 198 39 view .LVU692
+ 2164 0098 94F8DD11 		ldrb	r1, [r4, #477]	@ zero_extendqisi2
+ 2165 009c 04F1B000 		add	r0, r4, #176
+ 2166              	.LBB379:
+ 2167              	.LBB377:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 2110              		.loc 3 70 20 view .LVU675
- 2111 005a 84ED120A 		vstr.32	s0, [r4, #72]
- 2112              	.LVL83:
+ 2168              		.loc 3 70 20 view .LVU693
+ 2169 00a0 84ED120A 		vstr.32	s0, [r4, #72]
+ 2170              	.LVL90:
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
- 2113              		.loc 3 70 20 view .LVU676
- 2114              	.LBE369:
- 2115              	.LBE371:
- 182:PSP/AudioEngine.cpp ****     Fenv_out = _Filt_env.Process(_lastGate);
- 2116              		.loc 1 182 5 is_stmt 1 view .LVU677
- 182:PSP/AudioEngine.cpp ****     Fenv_out = _Filt_env.Process(_lastGate);
- 2117              		.loc 1 182 35 is_stmt 0 view .LVU678
- 2118 005e FFF7FEFF 		bl	_ZN7daisysp4Adsr7ProcessEb
- 2119              	.LVL84:
- 183:PSP/AudioEngine.cpp ****     _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
- 2120              		.loc 1 183 33 view .LVU679
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 56
+ 2171              		.loc 3 70 20 view .LVU694
+ 2172              	.LBE377:
+ 2173              	.LBE379:
+ 198:PSP/AudioEngine.cpp ****         Amp_env_out = _Amp_env.Process(_lastGate);
+ 2174              		.loc 1 198 9 is_stmt 1 view .LVU695
+ 198:PSP/AudioEngine.cpp ****         Amp_env_out = _Amp_env.Process(_lastGate);
+ 2175              		.loc 1 198 39 is_stmt 0 view .LVU696
+ 2176 00a4 FFF7FEFF 		bl	_ZN7daisysp4Adsr7ProcessEb
+ 2177              	.LVL91:
+ 199:PSP/AudioEngine.cpp ****         Fenv_out = _Filt_env.Process(_lastGate);
+ 2178              		.loc 1 199 37 view .LVU697
+ 2179 00a8 04F1E000 		add	r0, r4, #224
+ 2180 00ac 94F8DD11 		ldrb	r1, [r4, #477]	@ zero_extendqisi2
+ 198:PSP/AudioEngine.cpp ****         Amp_env_out = _Amp_env.Process(_lastGate);
+ 2181              		.loc 1 198 39 view .LVU698
+ 2182 00b0 F0EE408A 		vmov.f32	s17, s0
+ 2183              	.LVL92:
+ 199:PSP/AudioEngine.cpp ****         Fenv_out = _Filt_env.Process(_lastGate);
+ 2184              		.loc 1 199 9 is_stmt 1 view .LVU699
+ 199:PSP/AudioEngine.cpp ****         Fenv_out = _Filt_env.Process(_lastGate);
+ 2185              		.loc 1 199 37 is_stmt 0 view .LVU700
+ 2186 00b4 FFF7FEFF 		bl	_ZN7daisysp4Adsr7ProcessEb
+ 2187              	.LVL93:
+ 200:PSP/AudioEngine.cpp ****         _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
+ 2188              		.loc 1 200 9 is_stmt 1 view .LVU701
+ 200:PSP/AudioEngine.cpp ****         _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
+ 2189              		.loc 1 200 40 is_stmt 0 view .LVU702
+ 2190 00b8 064B     		ldr	r3, .L43
+ 200:PSP/AudioEngine.cpp ****         _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 58
 
 
- 2121 0062 94F8DD11 		ldrb	r1, [r4, #477]	@ zero_extendqisi2
- 2122 0066 04F1E000 		add	r0, r4, #224
- 182:PSP/AudioEngine.cpp ****     Fenv_out = _Filt_env.Process(_lastGate);
- 2123              		.loc 1 182 35 view .LVU680
- 2124 006a F0EE408A 		vmov.f32	s17, s0
- 2125              	.LVL85:
- 183:PSP/AudioEngine.cpp ****     _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
- 2126              		.loc 1 183 5 is_stmt 1 view .LVU681
- 183:PSP/AudioEngine.cpp ****     _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
- 2127              		.loc 1 183 33 is_stmt 0 view .LVU682
- 2128 006e FFF7FEFF 		bl	_ZN7daisysp4Adsr7ProcessEb
- 2129              	.LVL86:
- 2130              		.loc 1 184 5 is_stmt 1 view .LVU683
- 2131              		.loc 1 184 36 is_stmt 0 view .LVU684
- 2132 0072 114B     		ldr	r3, .L39
- 2133              		.loc 1 184 18 view .LVU685
- 2134 0074 D4ED747A 		vldr.32	s15, [r4, #464]
- 2135 0078 2846     		mov	r0, r5
- 2136              		.loc 1 184 36 view .LVU686
- 2137 007a 93ED007A 		vldr.32	s14, [r3]
- 2138 007e 20EE070A 		vmul.f32	s0, s0, s14
- 2139              	.LVL87:
- 2140              		.loc 1 184 18 view .LVU687
- 2141 0082 20EE270A 		vmul.f32	s0, s0, s15
- 2142 0086 FFF7FEFF 		bl	_ZN7daisysp12LadderFilter7SetFreqEf
- 2143              	.LVL88:
- 185:PSP/AudioEngine.cpp ****     
- 186:PSP/AudioEngine.cpp **** 
- 187:PSP/AudioEngine.cpp ****     
- 188:PSP/AudioEngine.cpp ****     sig = (_osc1.Process() + _osc2.Process())/2.0f;
- 2144              		.loc 1 188 5 is_stmt 1 view .LVU688
- 2145              		.loc 1 188 25 is_stmt 0 view .LVU689
- 2146 008a 2046     		mov	r0, r4
- 2147 008c FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
- 2148              	.LVL89:
- 2149 0090 B0EE408A 		vmov.f32	s16, s0
- 2150              		.loc 1 188 43 view .LVU690
- 2151 0094 3046     		mov	r0, r6
- 2152 0096 FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
- 2153              	.LVL90:
- 2154              		.loc 1 188 9 view .LVU691
- 2155 009a F6EE007A 		vmov.f32	s15, #5.0e-1
- 2156              		.loc 1 188 28 view .LVU692
- 2157 009e 38EE008A 		vadd.f32	s16, s16, s0
- 189:PSP/AudioEngine.cpp ****     sig *= Amp_env_out;
- 190:PSP/AudioEngine.cpp ****     filtered_sig = _Filt.Process(sig);
- 2158              		.loc 1 190 33 view .LVU693
- 2159 00a2 2846     		mov	r0, r5
- 188:PSP/AudioEngine.cpp ****     sig *= Amp_env_out;
- 2160              		.loc 1 188 9 view .LVU694
- 2161 00a4 28EE278A 		vmul.f32	s16, s16, s15
- 2162              	.LVL91:
- 189:PSP/AudioEngine.cpp ****     sig *= Amp_env_out;
- 2163              		.loc 1 189 5 is_stmt 1 view .LVU695
- 2164              		.loc 1 190 5 view .LVU696
- 2165              		.loc 1 190 33 is_stmt 0 view .LVU697
- 2166 00a8 28EE880A 		vmul.f32	s0, s17, s16
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 57
+ 2191              		.loc 1 200 22 view .LVU703
+ 2192 00ba D4ED747A 		vldr.32	s15, [r4, #464]
+ 2193 00be 2846     		mov	r0, r5
+ 200:PSP/AudioEngine.cpp ****         _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
+ 2194              		.loc 1 200 40 view .LVU704
+ 2195 00c0 93ED007A 		vldr.32	s14, [r3]
+ 2196 00c4 20EE070A 		vmul.f32	s0, s0, s14
+ 2197              	.LVL94:
+ 200:PSP/AudioEngine.cpp ****         _Filt.SetFreq(lead_cutoff_freq * Fenv_out * _Filt_envParam.Amp);
+ 2198              		.loc 1 200 22 view .LVU705
+ 2199 00c8 20EE270A 		vmul.f32	s0, s0, s15
+ 2200 00cc FFF7FEFF 		bl	_ZN7daisysp12LadderFilter7SetFreqEf
+ 2201              	.LVL95:
+ 201:PSP/AudioEngine.cpp ****         break;
+ 2202              		.loc 1 201 9 is_stmt 1 view .LVU706
+ 2203 00d0 A5E7     		b	.L41
+ 2204              	.L44:
+ 2205 00d2 00BF     		.align	2
+ 2206              	.L43:
+ 2207 00d4 00000000 		.word	.LANCHOR65
+ 2208              		.cfi_endproc
+ 2209              	.LFE3584:
+ 2211              		.global	lead_res
+ 2212              		.global	lead_cutoff_freq
+ 2213              		.global	lead_fAmp
+ 2214              		.global	lead_fsustain
+ 2215              		.global	lead_frelease
+ 2216              		.global	lead_fdecay
+ 2217              		.global	lead_fattack
+ 2218              		.global	lead_sustain
+ 2219              		.global	lead_release
+ 2220              		.global	lead_decay
+ 2221              		.global	lead_attack
+ 2222              		.global	lfo_lead_Shape2
+ 2223              		.global	lfo_lead_Amp2
+ 2224              		.global	lfo_lead_freq2
+ 2225              		.global	lfo_lead_waveform2
+ 2226              		.global	lfo_lead_Shape1
+ 2227              		.global	lfo_lead_Amp1
+ 2228              		.global	lfo_lead_freq1
+ 2229              		.global	lfo_lead_waveform1
+ 2230              		.global	lead_freq2
+ 2231              		.global	lead_shape2
+ 2232              		.global	lead_amp2
+ 2233              		.global	lead_waveform2
+ 2234              		.global	lead_freq1
+ 2235              		.global	lead_shape1
+ 2236              		.global	lead_amp1
+ 2237              		.global	lead_waveform1
+ 2238              		.global	pluck_res
+ 2239              		.global	pluck_cutoff_freq
+ 2240              		.global	pluck_fsustain
+ 2241              		.global	pluck_frelease
+ 2242              		.global	pluck_fdecay
+ 2243              		.global	pluck_fattack
+ 2244              		.global	pluck_sustain
+ 2245              		.global	pluck_release
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 59
 
 
- 2167              	.LVL92:
- 191:PSP/AudioEngine.cpp ****     return  filtered_sig;
- 192:PSP/AudioEngine.cpp **** }...
- 2168              		.loc 1 192 1 view .LVU698
- 2169 00ac BDEC028B 		vldm	sp!, {d8}
- 2170              		.cfi_restore 80
- 2171              		.cfi_restore 81
- 2172              		.cfi_def_cfa_offset 16
- 2173 00b0 BDE87040 		pop	{r4, r5, r6, lr}
- 2174              		.cfi_restore 14
- 2175              		.cfi_restore 6
- 2176              		.cfi_restore 5
- 2177              		.cfi_restore 4
- 2178              		.cfi_def_cfa_offset 0
- 2179              	.LVL93:
- 190:PSP/AudioEngine.cpp ****     filtered_sig = _Filt.Process(sig);
- 2180              		.loc 1 190 33 view .LVU699
- 2181 00b4 FFF7FEBF 		b	_ZN7daisysp12LadderFilter7ProcessEf
- 2182              	.LVL94:
- 2183              	.L40:
- 190:PSP/AudioEngine.cpp ****     filtered_sig = _Filt.Process(sig);
- 2184              		.loc 1 190 33 view .LVU700
- 2185              		.align	2
- 2186              	.L39:
- 2187 00b8 00000000 		.word	.LANCHOR65
- 2188              		.cfi_endproc
- 2189              	.LFE3584:
- 2191              		.global	lead_res
- 2192              		.global	lead_cutoff_freq
- 2193              		.global	lead_fAmp
- 2194              		.global	lead_fsustain
- 2195              		.global	lead_frelease
- 2196              		.global	lead_fdecay
- 2197              		.global	lead_fattack
- 2198              		.global	lead_sustain
- 2199              		.global	lead_release
- 2200              		.global	lead_decay
- 2201              		.global	lead_attack
- 2202              		.global	lfo_lead_Shape2
- 2203              		.global	lfo_lead_Amp2
- 2204              		.global	lfo_lead_freq2
- 2205              		.global	lfo_lead_waveform2
- 2206              		.global	lfo_lead_Shape1
- 2207              		.global	lfo_lead_Amp1
- 2208              		.global	lfo_lead_freq1
- 2209              		.global	lfo_lead_waveform1
- 2210              		.global	lead_freq2
- 2211              		.global	lead_shape2
- 2212              		.global	lead_amp2
- 2213              		.global	lead_waveform2
- 2214              		.global	lead_freq1
- 2215              		.global	lead_shape1
- 2216              		.global	lead_amp1
- 2217              		.global	lead_waveform1
- 2218              		.global	pluck_res
- 2219              		.global	pluck_cutoff_freq
- 2220              		.global	pluck_fsustain
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 58
+ 2246              		.global	pluck_decay
+ 2247              		.global	pluck_attack
+ 2248              		.global	lfo_pluck_Shape2
+ 2249              		.global	lfo_pluck_Amp2
+ 2250              		.global	lfo_pluck_freq2
+ 2251              		.global	lfo_pluck_waveform2
+ 2252              		.global	lfo_pluck_Shape1
+ 2253              		.global	lfo_pluck_Amp1
+ 2254              		.global	lfo_pluck_freq1
+ 2255              		.global	lfo_pluck_waveform1
+ 2256              		.global	pluck_freq2
+ 2257              		.global	pluck_shape2
+ 2258              		.global	pluck_amp2
+ 2259              		.global	pluck_waveform2
+ 2260              		.global	pluck_freq1
+ 2261              		.global	pluck_shape1
+ 2262              		.global	pluck_amp1
+ 2263              		.global	pluck_waveform1
+ 2264              		.global	pad_res
+ 2265              		.global	pad_cutoff_freq
+ 2266              		.global	pad_fsustain
+ 2267              		.global	pad_frelease
+ 2268              		.global	pad_fdecay
+ 2269              		.global	pad_fattack
+ 2270              		.global	pad_sustain
+ 2271              		.global	pad_release
+ 2272              		.global	pad_decay
+ 2273              		.global	pad_attack
+ 2274              		.global	lfo_pad_Shape2
+ 2275              		.global	lfo_pad_Amp2
+ 2276              		.global	lfo_pad_freq2
+ 2277              		.global	lfo_pad_waveform2
+ 2278              		.global	lfo_pad_Shape1
+ 2279              		.global	lfo_pad_Amp1
+ 2280              		.global	lfo_pad_freq1
+ 2281              		.global	lfo_pad_waveform1
+ 2282              		.global	pad_freq2
+ 2283              		.global	pad_shape2
+ 2284              		.global	pad_amp2
+ 2285              		.global	pad_waveform2
+ 2286              		.global	pad_freq1
+ 2287              		.global	pad_shape1
+ 2288              		.global	pad_amp1
+ 2289              		.global	pad_waveform1
+ 2290              		.section	.bss.lfo_pad_waveform1,"aw",%nobits
+ 2291              		.set	.LANCHOR6,. + 0
+ 2294              	lfo_pad_waveform1:
+ 2295 0000 00       		.space	1
+ 2296              		.section	.bss.pluck_sustain,"aw",%nobits
+ 2297              		.align	2
+ 2298              		.set	.LANCHOR37,. + 0
+ 2301              	pluck_sustain:
+ 2302 0000 00000000 		.space	4
+ 2303              		.section	.data.lead_amp1,"aw"
+ 2304              		.align	2
+ 2305              		.set	.LANCHOR45,. + 0
+ 2308              	lead_amp1:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 60
 
 
- 2221              		.global	pluck_frelease
- 2222              		.global	pluck_fdecay
- 2223              		.global	pluck_fattack
- 2224              		.global	pluck_sustain
- 2225              		.global	pluck_release
- 2226              		.global	pluck_decay
- 2227              		.global	pluck_attack
- 2228              		.global	lfo_pluck_Shape2
- 2229              		.global	lfo_pluck_Amp2
- 2230              		.global	lfo_pluck_freq2
- 2231              		.global	lfo_pluck_waveform2
- 2232              		.global	lfo_pluck_Shape1
- 2233              		.global	lfo_pluck_Amp1
- 2234              		.global	lfo_pluck_freq1
- 2235              		.global	lfo_pluck_waveform1
- 2236              		.global	pluck_freq2
- 2237              		.global	pluck_shape2
- 2238              		.global	pluck_amp2
- 2239              		.global	pluck_waveform2
- 2240              		.global	pluck_freq1
- 2241              		.global	pluck_shape1
- 2242              		.global	pluck_amp1
- 2243              		.global	pluck_waveform1
- 2244              		.global	pad_res
- 2245              		.global	pad_cutoff_freq
- 2246              		.global	pad_fsustain
- 2247              		.global	pad_frelease
- 2248              		.global	pad_fdecay
- 2249              		.global	pad_fattack
- 2250              		.global	pad_sustain
- 2251              		.global	pad_release
- 2252              		.global	pad_decay
- 2253              		.global	pad_attack
- 2254              		.global	lfo_pad_Shape2
- 2255              		.global	lfo_pad_Amp2
- 2256              		.global	lfo_pad_freq2
- 2257              		.global	lfo_pad_waveform2
- 2258              		.global	lfo_pad_Shape1
- 2259              		.global	lfo_pad_Amp1
- 2260              		.global	lfo_pad_freq1
- 2261              		.global	lfo_pad_waveform1
- 2262              		.global	pad_freq2
- 2263              		.global	pad_shape2
- 2264              		.global	pad_amp2
- 2265              		.global	pad_waveform2
- 2266              		.global	pad_freq1
- 2267              		.global	pad_shape1
- 2268              		.global	pad_amp1
- 2269              		.global	pad_waveform1
- 2270              		.section	.bss.pad_waveform1,"aw",%nobits
- 2271              		.set	.LANCHOR0,. + 0
- 2274              	pad_waveform1:
- 2275 0000 00       		.space	1
- 2276              		.section	.bss.pluck_sustain,"aw",%nobits
- 2277              		.align	2
- 2278              		.set	.LANCHOR37,. + 0
- 2281              	pluck_sustain:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 59
-
-
- 2282 0000 00000000 		.space	4
- 2283              		.section	.data.lead_amp1,"aw"
- 2284              		.align	2
- 2285              		.set	.LANCHOR45,. + 0
- 2288              	lead_amp1:
- 2289 0000 0000803F 		.word	1065353216
- 2290              		.section	.data.lead_amp2,"aw"
- 2291              		.align	2
- 2292              		.set	.LANCHOR48,. + 0
- 2295              	lead_amp2:
- 2296 0000 0000803F 		.word	1065353216
- 2297              		.section	.data.lead_attack,"aw"
- 2298              		.align	2
- 2299              		.set	.LANCHOR56,. + 0
- 2302              	lead_attack:
- 2303 0000 CDCC4C3D 		.word	1028443341
- 2304              		.section	.data.lead_cutoff_freq,"aw"
- 2305              		.align	2
- 2306              		.set	.LANCHOR65,. + 0
- 2309              	lead_cutoff_freq:
- 2310 0000 00007A44 		.word	1148846080
- 2311              		.section	.data.lead_decay,"aw"
- 2312              		.align	2
- 2313              		.set	.LANCHOR57,. + 0
- 2316              	lead_decay:
- 2317 0000 33333340 		.word	1077097267
- 2318              		.section	.data.lead_fAmp,"aw"
- 2319              		.align	2
- 2320              		.set	.LANCHOR64,. + 0
- 2323              	lead_fAmp:
- 2324 0000 00000040 		.word	1073741824
- 2325              		.section	.data.lead_fattack,"aw"
- 2326              		.align	2
- 2327              		.set	.LANCHOR60,. + 0
- 2330              	lead_fattack:
- 2331 0000 0000803F 		.word	1065353216
- 2332              		.section	.data.lead_fdecay,"aw"
- 2333              		.align	2
- 2334              		.set	.LANCHOR61,. + 0
- 2337              	lead_fdecay:
- 2338 0000 CDCC4C3F 		.word	1061997773
- 2339              		.section	.data.lead_frelease,"aw"
- 2340              		.align	2
- 2341              		.set	.LANCHOR62,. + 0
- 2344              	lead_frelease:
- 2345 0000 CDCC4C3F 		.word	1061997773
- 2346              		.section	.data.lead_freq1,"aw"
- 2347              		.align	2
- 2350              	lead_freq1:
- 2351 0000 0000DC43 		.word	1138491392
- 2352              		.section	.data.lead_freq2,"aw"
+ 2309 0000 0000803F 		.word	1065353216
+ 2310              		.section	.data.lead_amp2,"aw"
+ 2311              		.align	2
+ 2312              		.set	.LANCHOR48,. + 0
+ 2315              	lead_amp2:
+ 2316 0000 0000803F 		.word	1065353216
+ 2317              		.section	.data.lead_attack,"aw"
+ 2318              		.align	2
+ 2319              		.set	.LANCHOR56,. + 0
+ 2322              	lead_attack:
+ 2323 0000 CDCC4C3D 		.word	1028443341
+ 2324              		.section	.data.lead_cutoff_freq,"aw"
+ 2325              		.align	2
+ 2326              		.set	.LANCHOR65,. + 0
+ 2329              	lead_cutoff_freq:
+ 2330 0000 00007A44 		.word	1148846080
+ 2331              		.section	.data.lead_decay,"aw"
+ 2332              		.align	2
+ 2333              		.set	.LANCHOR57,. + 0
+ 2336              	lead_decay:
+ 2337 0000 33333340 		.word	1077097267
+ 2338              		.section	.data.lead_fAmp,"aw"
+ 2339              		.align	2
+ 2340              		.set	.LANCHOR64,. + 0
+ 2343              	lead_fAmp:
+ 2344 0000 00000040 		.word	1073741824
+ 2345              		.section	.data.lead_fattack,"aw"
+ 2346              		.align	2
+ 2347              		.set	.LANCHOR60,. + 0
+ 2350              	lead_fattack:
+ 2351 0000 0000803F 		.word	1065353216
+ 2352              		.section	.data.lead_fdecay,"aw"
  2353              		.align	2
- 2356              	lead_freq2:
- 2357 0000 0000DC43 		.word	1138491392
- 2358              		.section	.data.lead_fsustain,"aw"
- 2359              		.align	2
- 2360              		.set	.LANCHOR63,. + 0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 60
-
-
- 2363              	lead_fsustain:
- 2364 0000 9A99193F 		.word	1058642330
- 2365              		.section	.data.lead_release,"aw"
- 2366              		.align	2
- 2367              		.set	.LANCHOR58,. + 0
- 2370              	lead_release:
- 2371 0000 6666A63F 		.word	1067869798
- 2372              		.section	.data.lead_res,"aw"
+ 2354              		.set	.LANCHOR61,. + 0
+ 2357              	lead_fdecay:
+ 2358 0000 CDCC4C3F 		.word	1061997773
+ 2359              		.section	.data.lead_frelease,"aw"
+ 2360              		.align	2
+ 2361              		.set	.LANCHOR62,. + 0
+ 2364              	lead_frelease:
+ 2365 0000 CDCC4C3F 		.word	1061997773
+ 2366              		.section	.data.lead_freq1,"aw"
+ 2367              		.align	2
+ 2370              	lead_freq1:
+ 2371 0000 0000DC43 		.word	1138491392
+ 2372              		.section	.data.lead_freq2,"aw"
  2373              		.align	2
- 2374              		.set	.LANCHOR66,. + 0
- 2377              	lead_res:
- 2378 0000 CDCCCC3E 		.word	1053609165
- 2379              		.section	.data.lead_shape1,"aw"
- 2380              		.align	2
- 2381              		.set	.LANCHOR46,. + 0
- 2384              	lead_shape1:
- 2385 0000 CDCCCC3D 		.word	1036831949
- 2386              		.section	.data.lead_shape2,"aw"
- 2387              		.align	2
- 2388              		.set	.LANCHOR49,. + 0
- 2391              	lead_shape2:
- 2392 0000 CDCCCC3D 		.word	1036831949
- 2393              		.section	.data.lead_sustain,"aw"
- 2394              		.align	2
- 2395              		.set	.LANCHOR59,. + 0
- 2398              	lead_sustain:
- 2399 0000 9A99193F 		.word	1058642330
- 2400              		.section	.data.lead_waveform1,"aw"
- 2401              		.set	.LANCHOR44,. + 0
- 2404              	lead_waveform1:
- 2405 0000 07       		.byte	7
- 2406              		.section	.data.lead_waveform2,"aw"
- 2407              		.set	.LANCHOR47,. + 0
- 2410              	lead_waveform2:
- 2411 0000 07       		.byte	7
- 2412              		.section	.data.lfo_lead_Amp1,"aw"
- 2413              		.align	2
- 2414              		.set	.LANCHOR51,. + 0
- 2417              	lfo_lead_Amp1:
- 2418 0000 CDCC4C3D 		.word	1028443341
- 2419              		.section	.data.lfo_lead_Amp2,"aw"
- 2420              		.align	2
- 2421              		.set	.LANCHOR54,. + 0
- 2424              	lfo_lead_Amp2:
- 2425 0000 CDCC4C3D 		.word	1028443341
- 2426              		.section	.data.lfo_lead_Shape1,"aw"
- 2427              		.align	2
- 2428              		.set	.LANCHOR52,. + 0
- 2431              	lfo_lead_Shape1:
- 2432 0000 0000003F 		.word	1056964608
- 2433              		.section	.data.lfo_lead_Shape2,"aw"
- 2434              		.align	2
- 2435              		.set	.LANCHOR55,. + 0
- 2438              	lfo_lead_Shape2:
- 2439 0000 0000003F 		.word	1056964608
- 2440              		.section	.data.lfo_lead_freq1,"aw"
- 2441              		.align	2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 61
+ 2376              	lead_freq2:
+ 2377 0000 0000DC43 		.word	1138491392
+ 2378              		.section	.data.lead_fsustain,"aw"
+ 2379              		.align	2
+ 2380              		.set	.LANCHOR63,. + 0
+ 2383              	lead_fsustain:
+ 2384 0000 9A99193F 		.word	1058642330
+ 2385              		.section	.data.lead_release,"aw"
+ 2386              		.align	2
+ 2387              		.set	.LANCHOR58,. + 0
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 61
 
 
- 2444              	lfo_lead_freq1:
- 2445 0000 3333333F 		.word	1060320051
- 2446              		.section	.data.lfo_lead_freq2,"aw"
+ 2390              	lead_release:
+ 2391 0000 6666A63F 		.word	1067869798
+ 2392              		.section	.data.lead_res,"aw"
+ 2393              		.align	2
+ 2394              		.set	.LANCHOR66,. + 0
+ 2397              	lead_res:
+ 2398 0000 CDCCCC3E 		.word	1053609165
+ 2399              		.section	.data.lead_shape1,"aw"
+ 2400              		.align	2
+ 2401              		.set	.LANCHOR46,. + 0
+ 2404              	lead_shape1:
+ 2405 0000 CDCCCC3D 		.word	1036831949
+ 2406              		.section	.data.lead_shape2,"aw"
+ 2407              		.align	2
+ 2408              		.set	.LANCHOR49,. + 0
+ 2411              	lead_shape2:
+ 2412 0000 CDCCCC3D 		.word	1036831949
+ 2413              		.section	.data.lead_sustain,"aw"
+ 2414              		.align	2
+ 2415              		.set	.LANCHOR59,. + 0
+ 2418              	lead_sustain:
+ 2419 0000 9A99193F 		.word	1058642330
+ 2420              		.section	.data.lead_waveform1,"aw"
+ 2421              		.set	.LANCHOR44,. + 0
+ 2424              	lead_waveform1:
+ 2425 0000 07       		.byte	7
+ 2426              		.section	.data.lead_waveform2,"aw"
+ 2427              		.set	.LANCHOR47,. + 0
+ 2430              	lead_waveform2:
+ 2431 0000 07       		.byte	7
+ 2432              		.section	.data.lfo_lead_Amp1,"aw"
+ 2433              		.align	2
+ 2434              		.set	.LANCHOR51,. + 0
+ 2437              	lfo_lead_Amp1:
+ 2438 0000 CDCC4C3D 		.word	1028443341
+ 2439              		.section	.data.lfo_lead_Amp2,"aw"
+ 2440              		.align	2
+ 2441              		.set	.LANCHOR54,. + 0
+ 2444              	lfo_lead_Amp2:
+ 2445 0000 CDCC4C3D 		.word	1028443341
+ 2446              		.section	.data.lfo_lead_Shape1,"aw"
  2447              		.align	2
- 2450              	lfo_lead_freq2:
- 2451 0000 3333333F 		.word	1060320051
- 2452              		.section	.data.lfo_lead_waveform1,"aw"
- 2453              		.set	.LANCHOR50,. + 0
- 2456              	lfo_lead_waveform1:
- 2457 0000 01       		.byte	1
- 2458              		.section	.data.lfo_lead_waveform2,"aw"
- 2459              		.set	.LANCHOR53,. + 0
- 2462              	lfo_lead_waveform2:
- 2463 0000 01       		.byte	1
- 2464              		.section	.data.lfo_pad_Amp1,"aw"
- 2465              		.align	2
- 2466              		.set	.LANCHOR7,. + 0
- 2469              	lfo_pad_Amp1:
- 2470 0000 0AD7A33B 		.word	1000593162
- 2471              		.section	.data.lfo_pad_Amp2,"aw"
- 2472              		.align	2
- 2473              		.set	.LANCHOR10,. + 0
- 2476              	lfo_pad_Amp2:
- 2477 0000 0AD7A33B 		.word	1000593162
- 2478              		.section	.data.lfo_pad_Shape1,"aw"
- 2479              		.align	2
- 2480              		.set	.LANCHOR8,. + 0
- 2483              	lfo_pad_Shape1:
- 2484 0000 0000003F 		.word	1056964608
- 2485              		.section	.data.lfo_pad_Shape2,"aw"
- 2486              		.align	2
- 2487              		.set	.LANCHOR11,. + 0
- 2490              	lfo_pad_Shape2:
- 2491 0000 0000003F 		.word	1056964608
- 2492              		.section	.data.lfo_pad_freq1,"aw"
- 2493              		.align	2
- 2496              	lfo_pad_freq1:
- 2497 0000 3333333F 		.word	1060320051
- 2498              		.section	.data.lfo_pad_freq2,"aw"
+ 2448              		.set	.LANCHOR52,. + 0
+ 2451              	lfo_lead_Shape1:
+ 2452 0000 0000003F 		.word	1056964608
+ 2453              		.section	.data.lfo_lead_Shape2,"aw"
+ 2454              		.align	2
+ 2455              		.set	.LANCHOR55,. + 0
+ 2458              	lfo_lead_Shape2:
+ 2459 0000 0000003F 		.word	1056964608
+ 2460              		.section	.data.lfo_lead_freq1,"aw"
+ 2461              		.align	2
+ 2464              	lfo_lead_freq1:
+ 2465 0000 3333333F 		.word	1060320051
+ 2466              		.section	.data.lfo_lead_freq2,"aw"
+ 2467              		.align	2
+ 2470              	lfo_lead_freq2:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 62
+
+
+ 2471 0000 3333333F 		.word	1060320051
+ 2472              		.section	.data.lfo_lead_waveform1,"aw"
+ 2473              		.set	.LANCHOR50,. + 0
+ 2476              	lfo_lead_waveform1:
+ 2477 0000 01       		.byte	1
+ 2478              		.section	.data.lfo_lead_waveform2,"aw"
+ 2479              		.set	.LANCHOR53,. + 0
+ 2482              	lfo_lead_waveform2:
+ 2483 0000 01       		.byte	1
+ 2484              		.section	.data.lfo_pad_Amp1,"aw"
+ 2485              		.align	2
+ 2486              		.set	.LANCHOR7,. + 0
+ 2489              	lfo_pad_Amp1:
+ 2490 0000 0AD7A33B 		.word	1000593162
+ 2491              		.section	.data.lfo_pad_Amp2,"aw"
+ 2492              		.align	2
+ 2493              		.set	.LANCHOR10,. + 0
+ 2496              	lfo_pad_Amp2:
+ 2497 0000 0AD7A33B 		.word	1000593162
+ 2498              		.section	.data.lfo_pad_Shape1,"aw"
  2499              		.align	2
- 2502              	lfo_pad_freq2:
- 2503 0000 3333333F 		.word	1060320051
- 2504              		.section	.data.lfo_pad_waveform1,"aw"
- 2505              		.set	.LANCHOR6,. + 0
- 2508              	lfo_pad_waveform1:
- 2509 0000 01       		.byte	1
- 2510              		.section	.data.lfo_pad_waveform2,"aw"
- 2511              		.set	.LANCHOR9,. + 0
- 2514              	lfo_pad_waveform2:
- 2515 0000 01       		.byte	1
- 2516              		.section	.data.lfo_pluck_Amp1,"aw"
- 2517              		.align	2
- 2518              		.set	.LANCHOR29,. + 0
- 2521              	lfo_pluck_Amp1:
- 2522 0000 0AD7A33B 		.word	1000593162
- 2523              		.section	.data.lfo_pluck_Amp2,"aw"
- 2524              		.align	2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 62
-
-
- 2525              		.set	.LANCHOR32,. + 0
- 2528              	lfo_pluck_Amp2:
- 2529 0000 0AD7A33B 		.word	1000593162
- 2530              		.section	.data.lfo_pluck_Shape1,"aw"
+ 2500              		.set	.LANCHOR8,. + 0
+ 2503              	lfo_pad_Shape1:
+ 2504 0000 0000003F 		.word	1056964608
+ 2505              		.section	.data.lfo_pad_Shape2,"aw"
+ 2506              		.align	2
+ 2507              		.set	.LANCHOR11,. + 0
+ 2510              	lfo_pad_Shape2:
+ 2511 0000 0000003F 		.word	1056964608
+ 2512              		.section	.data.lfo_pad_freq1,"aw"
+ 2513              		.align	2
+ 2516              	lfo_pad_freq1:
+ 2517 0000 CDCC4C3E 		.word	1045220557
+ 2518              		.section	.data.lfo_pad_freq2,"aw"
+ 2519              		.align	2
+ 2522              	lfo_pad_freq2:
+ 2523 0000 CDCC4C3F 		.word	1061997773
+ 2524              		.section	.data.lfo_pad_waveform2,"aw"
+ 2525              		.set	.LANCHOR9,. + 0
+ 2528              	lfo_pad_waveform2:
+ 2529 0000 01       		.byte	1
+ 2530              		.section	.data.lfo_pluck_Amp1,"aw"
  2531              		.align	2
- 2532              		.set	.LANCHOR30,. + 0
- 2535              	lfo_pluck_Shape1:
- 2536 0000 0000003F 		.word	1056964608
- 2537              		.section	.data.lfo_pluck_Shape2,"aw"
+ 2532              		.set	.LANCHOR29,. + 0
+ 2535              	lfo_pluck_Amp1:
+ 2536 0000 CDCC4C3D 		.word	1028443341
+ 2537              		.section	.data.lfo_pluck_Amp2,"aw"
  2538              		.align	2
- 2539              		.set	.LANCHOR33,. + 0
- 2542              	lfo_pluck_Shape2:
- 2543 0000 0000003F 		.word	1056964608
- 2544              		.section	.data.lfo_pluck_freq1,"aw"
+ 2539              		.set	.LANCHOR32,. + 0
+ 2542              	lfo_pluck_Amp2:
+ 2543 0000 0AD7A33B 		.word	1000593162
+ 2544              		.section	.data.lfo_pluck_Shape1,"aw"
  2545              		.align	2
- 2548              	lfo_pluck_freq1:
- 2549 0000 3333333F 		.word	1060320051
- 2550              		.section	.data.lfo_pluck_freq2,"aw"
- 2551              		.align	2
- 2554              	lfo_pluck_freq2:
- 2555 0000 3333333F 		.word	1060320051
- 2556              		.section	.data.lfo_pluck_waveform1,"aw"
- 2557              		.set	.LANCHOR28,. + 0
- 2560              	lfo_pluck_waveform1:
- 2561 0000 01       		.byte	1
- 2562              		.section	.data.lfo_pluck_waveform2,"aw"
- 2563              		.set	.LANCHOR31,. + 0
- 2566              	lfo_pluck_waveform2:
- 2567 0000 01       		.byte	1
- 2568              		.section	.data.pad_amp1,"aw"
- 2569              		.align	2
- 2570              		.set	.LANCHOR1,. + 0
- 2573              	pad_amp1:
- 2574 0000 0000803F 		.word	1065353216
- 2575              		.section	.data.pad_amp2,"aw"
- 2576              		.align	2
- 2577              		.set	.LANCHOR4,. + 0
- 2580              	pad_amp2:
- 2581 0000 0000803F 		.word	1065353216
- 2582              		.section	.data.pad_attack,"aw"
+ 2546              		.set	.LANCHOR30,. + 0
+ 2549              	lfo_pluck_Shape1:
+ 2550 0000 0000003F 		.word	1056964608
+ 2551              		.section	.data.lfo_pluck_Shape2,"aw"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 63
+
+
+ 2552              		.align	2
+ 2553              		.set	.LANCHOR33,. + 0
+ 2556              	lfo_pluck_Shape2:
+ 2557 0000 0000003F 		.word	1056964608
+ 2558              		.section	.data.lfo_pluck_freq1,"aw"
+ 2559              		.align	2
+ 2562              	lfo_pluck_freq1:
+ 2563 0000 0000E040 		.word	1088421888
+ 2564              		.section	.data.lfo_pluck_freq2,"aw"
+ 2565              		.align	2
+ 2568              	lfo_pluck_freq2:
+ 2569 0000 3333333F 		.word	1060320051
+ 2570              		.section	.data.lfo_pluck_waveform1,"aw"
+ 2571              		.set	.LANCHOR28,. + 0
+ 2574              	lfo_pluck_waveform1:
+ 2575 0000 01       		.byte	1
+ 2576              		.section	.data.lfo_pluck_waveform2,"aw"
+ 2577              		.set	.LANCHOR31,. + 0
+ 2580              	lfo_pluck_waveform2:
+ 2581 0000 01       		.byte	1
+ 2582              		.section	.data.pad_amp1,"aw"
  2583              		.align	2
- 2584              		.set	.LANCHOR12,. + 0
- 2587              	pad_attack:
- 2588 0000 0000003F 		.word	1056964608
- 2589              		.section	.data.pad_cutoff_freq,"aw"
+ 2584              		.set	.LANCHOR1,. + 0
+ 2587              	pad_amp1:
+ 2588 0000 0000803F 		.word	1065353216
+ 2589              		.section	.data.pad_amp2,"aw"
  2590              		.align	2
- 2591              		.set	.LANCHOR20,. + 0
- 2594              	pad_cutoff_freq:
- 2595 0000 0000FA45 		.word	1174011904
- 2596              		.section	.data.pad_decay,"aw"
+ 2591              		.set	.LANCHOR4,. + 0
+ 2594              	pad_amp2:
+ 2595 0000 0000803F 		.word	1065353216
+ 2596              		.section	.data.pad_attack,"aw"
  2597              		.align	2
- 2598              		.set	.LANCHOR13,. + 0
- 2601              	pad_decay:
- 2602 0000 CDCC4C3E 		.word	1045220557
- 2603              		.section	.data.pad_fattack,"aw"
+ 2598              		.set	.LANCHOR12,. + 0
+ 2601              	pad_attack:
+ 2602 0000 33333340 		.word	1077097267
+ 2603              		.section	.data.pad_cutoff_freq,"aw"
  2604              		.align	2
- 2605              		.set	.LANCHOR16,. + 0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 63
-
-
- 2608              	pad_fattack:
- 2609 0000 CDCCCC3D 		.word	1036831949
- 2610              		.section	.data.pad_fdecay,"aw"
+ 2605              		.set	.LANCHOR20,. + 0
+ 2608              	pad_cutoff_freq:
+ 2609 0000 00007A44 		.word	1148846080
+ 2610              		.section	.data.pad_decay,"aw"
  2611              		.align	2
- 2612              		.set	.LANCHOR17,. + 0
- 2615              	pad_fdecay:
- 2616 0000 6666E63F 		.word	1072064102
- 2617              		.section	.data.pad_frelease,"aw"
+ 2612              		.set	.LANCHOR13,. + 0
+ 2615              	pad_decay:
+ 2616 0000 0000803F 		.word	1065353216
+ 2617              		.section	.data.pad_fattack,"aw"
  2618              		.align	2
- 2619              		.set	.LANCHOR18,. + 0
- 2622              	pad_frelease:
- 2623 0000 00000040 		.word	1073741824
- 2624              		.section	.data.pad_freq1,"aw"
+ 2619              		.set	.LANCHOR16,. + 0
+ 2622              	pad_fattack:
+ 2623 0000 33333340 		.word	1077097267
+ 2624              		.section	.data.pad_fdecay,"aw"
  2625              		.align	2
- 2628              	pad_freq1:
- 2629 0000 0000DC43 		.word	1138491392
- 2630              		.section	.data.pad_freq2,"aw"
- 2631              		.align	2
- 2634              	pad_freq2:
- 2635 0000 0000DC43 		.word	1138491392
- 2636              		.section	.data.pad_fsustain,"aw"
- 2637              		.align	2
- 2638              		.set	.LANCHOR19,. + 0
- 2641              	pad_fsustain:
- 2642 0000 CDCCCC3E 		.word	1053609165
- 2643              		.section	.data.pad_release,"aw"
- 2644              		.align	2
- 2645              		.set	.LANCHOR14,. + 0
- 2648              	pad_release:
- 2649 0000 9A99993F 		.word	1067030938
- 2650              		.section	.data.pad_res,"aw"
+ 2626              		.set	.LANCHOR17,. + 0
+ 2629              	pad_fdecay:
+ 2630 0000 6666E63F 		.word	1072064102
+ 2631              		.section	.data.pad_frelease,"aw"
+ 2632              		.align	2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 64
+
+
+ 2633              		.set	.LANCHOR18,. + 0
+ 2636              	pad_frelease:
+ 2637 0000 00000040 		.word	1073741824
+ 2638              		.section	.data.pad_freq1,"aw"
+ 2639              		.align	2
+ 2642              	pad_freq1:
+ 2643 0000 0000DC43 		.word	1138491392
+ 2644              		.section	.data.pad_freq2,"aw"
+ 2645              		.align	2
+ 2648              	pad_freq2:
+ 2649 0000 0000DC43 		.word	1138491392
+ 2650              		.section	.data.pad_fsustain,"aw"
  2651              		.align	2
- 2652              		.set	.LANCHOR21,. + 0
- 2655              	pad_res:
+ 2652              		.set	.LANCHOR19,. + 0
+ 2655              	pad_fsustain:
  2656 0000 CDCCCC3E 		.word	1053609165
- 2657              		.section	.data.pad_shape1,"aw"
+ 2657              		.section	.data.pad_release,"aw"
  2658              		.align	2
- 2659              		.set	.LANCHOR2,. + 0
- 2662              	pad_shape1:
- 2663 0000 0000003F 		.word	1056964608
- 2664              		.section	.data.pad_shape2,"aw"
+ 2659              		.set	.LANCHOR14,. + 0
+ 2662              	pad_release:
+ 2663 0000 9A99993F 		.word	1067030938
+ 2664              		.section	.data.pad_res,"aw"
  2665              		.align	2
- 2666              		.set	.LANCHOR5,. + 0
- 2669              	pad_shape2:
- 2670 0000 CDCC4C3E 		.word	1045220557
- 2671              		.section	.data.pad_sustain,"aw"
+ 2666              		.set	.LANCHOR21,. + 0
+ 2669              	pad_res:
+ 2670 0000 CDCCCC3E 		.word	1053609165
+ 2671              		.section	.data.pad_shape1,"aw"
  2672              		.align	2
- 2673              		.set	.LANCHOR15,. + 0
- 2676              	pad_sustain:
- 2677 0000 CDCC4C3F 		.word	1061997773
- 2678              		.section	.data.pad_waveform2,"aw"
- 2679              		.set	.LANCHOR3,. + 0
- 2682              	pad_waveform2:
- 2683 0000 07       		.byte	7
- 2684              		.section	.data.pluck_amp1,"aw"
- 2685              		.align	2
- 2686              		.set	.LANCHOR23,. + 0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 64
+ 2673              		.set	.LANCHOR2,. + 0
+ 2676              	pad_shape1:
+ 2677 0000 0000003F 		.word	1056964608
+ 2678              		.section	.data.pad_shape2,"aw"
+ 2679              		.align	2
+ 2680              		.set	.LANCHOR5,. + 0
+ 2683              	pad_shape2:
+ 2684 0000 0000003F 		.word	1056964608
+ 2685              		.section	.data.pad_sustain,"aw"
+ 2686              		.align	2
+ 2687              		.set	.LANCHOR15,. + 0
+ 2690              	pad_sustain:
+ 2691 0000 CDCC4C3F 		.word	1061997773
+ 2692              		.section	.data.pad_waveform1,"aw"
+ 2693              		.set	.LANCHOR0,. + 0
+ 2696              	pad_waveform1:
+ 2697 0000 02       		.byte	2
+ 2698              		.section	.data.pad_waveform2,"aw"
+ 2699              		.set	.LANCHOR3,. + 0
+ 2702              	pad_waveform2:
+ 2703 0000 06       		.byte	6
+ 2704              		.section	.data.pluck_amp1,"aw"
+ 2705              		.align	2
+ 2706              		.set	.LANCHOR23,. + 0
+ 2709              	pluck_amp1:
+ 2710 0000 0000803F 		.word	1065353216
+ 2711              		.section	.data.pluck_amp2,"aw"
+ 2712              		.align	2
+ 2713              		.set	.LANCHOR26,. + 0
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 65
 
 
- 2689              	pluck_amp1:
- 2690 0000 0000803F 		.word	1065353216
- 2691              		.section	.data.pluck_amp2,"aw"
- 2692              		.align	2
- 2693              		.set	.LANCHOR26,. + 0
- 2696              	pluck_amp2:
- 2697 0000 0000803F 		.word	1065353216
- 2698              		.section	.data.pluck_attack,"aw"
- 2699              		.align	2
- 2700              		.set	.LANCHOR34,. + 0
- 2703              	pluck_attack:
- 2704 0000 0AD7233C 		.word	1008981770
- 2705              		.section	.data.pluck_cutoff_freq,"aw"
- 2706              		.align	2
- 2707              		.set	.LANCHOR42,. + 0
- 2710              	pluck_cutoff_freq:
- 2711 0000 0000FA45 		.word	1174011904
- 2712              		.section	.data.pluck_decay,"aw"
- 2713              		.align	2
- 2714              		.set	.LANCHOR35,. + 0
- 2717              	pluck_decay:
- 2718 0000 9A99193E 		.word	1041865114
- 2719              		.section	.data.pluck_fattack,"aw"
- 2720              		.align	2
- 2721              		.set	.LANCHOR38,. + 0
- 2724              	pluck_fattack:
- 2725 0000 CDCCCC3D 		.word	1036831949
- 2726              		.section	.data.pluck_fdecay,"aw"
- 2727              		.align	2
- 2728              		.set	.LANCHOR39,. + 0
- 2731              	pluck_fdecay:
- 2732 0000 6666E63F 		.word	1072064102
- 2733              		.section	.data.pluck_frelease,"aw"
- 2734              		.align	2
- 2735              		.set	.LANCHOR40,. + 0
- 2738              	pluck_frelease:
- 2739 0000 00000040 		.word	1073741824
- 2740              		.section	.data.pluck_freq1,"aw"
- 2741              		.align	2
- 2744              	pluck_freq1:
- 2745 0000 0000DC43 		.word	1138491392
- 2746              		.section	.data.pluck_freq2,"aw"
+ 2716              	pluck_amp2:
+ 2717 0000 0000803F 		.word	1065353216
+ 2718              		.section	.data.pluck_attack,"aw"
+ 2719              		.align	2
+ 2720              		.set	.LANCHOR34,. + 0
+ 2723              	pluck_attack:
+ 2724 0000 0AD7233C 		.word	1008981770
+ 2725              		.section	.data.pluck_cutoff_freq,"aw"
+ 2726              		.align	2
+ 2727              		.set	.LANCHOR42,. + 0
+ 2730              	pluck_cutoff_freq:
+ 2731 0000 0000FA45 		.word	1174011904
+ 2732              		.section	.data.pluck_decay,"aw"
+ 2733              		.align	2
+ 2734              		.set	.LANCHOR35,. + 0
+ 2737              	pluck_decay:
+ 2738 0000 9A99193E 		.word	1041865114
+ 2739              		.section	.data.pluck_fattack,"aw"
+ 2740              		.align	2
+ 2741              		.set	.LANCHOR38,. + 0
+ 2744              	pluck_fattack:
+ 2745 0000 CDCCCC3D 		.word	1036831949
+ 2746              		.section	.data.pluck_fdecay,"aw"
  2747              		.align	2
- 2750              	pluck_freq2:
- 2751 0000 0000DC43 		.word	1138491392
- 2752              		.section	.data.pluck_fsustain,"aw"
- 2753              		.align	2
- 2754              		.set	.LANCHOR41,. + 0
- 2757              	pluck_fsustain:
- 2758 0000 CDCCCC3E 		.word	1053609165
- 2759              		.section	.data.pluck_release,"aw"
- 2760              		.align	2
- 2761              		.set	.LANCHOR36,. + 0
- 2764              	pluck_release:
- 2765 0000 9A99993E 		.word	1050253722
- 2766              		.section	.data.pluck_res,"aw"
+ 2748              		.set	.LANCHOR39,. + 0
+ 2751              	pluck_fdecay:
+ 2752 0000 6666E63F 		.word	1072064102
+ 2753              		.section	.data.pluck_frelease,"aw"
+ 2754              		.align	2
+ 2755              		.set	.LANCHOR40,. + 0
+ 2758              	pluck_frelease:
+ 2759 0000 00000040 		.word	1073741824
+ 2760              		.section	.data.pluck_freq1,"aw"
+ 2761              		.align	2
+ 2764              	pluck_freq1:
+ 2765 0000 0000DC43 		.word	1138491392
+ 2766              		.section	.data.pluck_freq2,"aw"
  2767              		.align	2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 65
+ 2770              	pluck_freq2:
+ 2771 0000 0000DC43 		.word	1138491392
+ 2772              		.section	.data.pluck_fsustain,"aw"
+ 2773              		.align	2
+ 2774              		.set	.LANCHOR41,. + 0
+ 2777              	pluck_fsustain:
+ 2778 0000 CDCCCC3E 		.word	1053609165
+ 2779              		.section	.data.pluck_release,"aw"
+ 2780              		.align	2
+ 2781              		.set	.LANCHOR36,. + 0
+ 2784              	pluck_release:
+ 2785 0000 CDCC4C3F 		.word	1061997773
+ 2786              		.section	.data.pluck_res,"aw"
+ 2787              		.align	2
+ 2788              		.set	.LANCHOR43,. + 0
+ 2791              	pluck_res:
+ 2792 0000 CDCCCC3E 		.word	1053609165
+ 2793              		.section	.data.pluck_shape1,"aw"
+ 2794              		.align	2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 66
 
 
- 2768              		.set	.LANCHOR43,. + 0
- 2771              	pluck_res:
- 2772 0000 CDCCCC3E 		.word	1053609165
- 2773              		.section	.data.pluck_shape1,"aw"
- 2774              		.align	2
- 2775              		.set	.LANCHOR24,. + 0
- 2778              	pluck_shape1:
- 2779 0000 0000003F 		.word	1056964608
- 2780              		.section	.data.pluck_shape2,"aw"
- 2781              		.align	2
- 2782              		.set	.LANCHOR27,. + 0
- 2785              	pluck_shape2:
- 2786 0000 CDCC4C3E 		.word	1045220557
- 2787              		.section	.data.pluck_waveform1,"aw"
- 2788              		.set	.LANCHOR22,. + 0
- 2791              	pluck_waveform1:
- 2792 0000 01       		.byte	1
- 2793              		.section	.data.pluck_waveform2,"aw"
- 2794              		.set	.LANCHOR25,. + 0
- 2797              	pluck_waveform2:
- 2798 0000 07       		.byte	7
- 2799              		.text
- 2800              	.Letext0:
- 2801              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
- 2802              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
- 2803              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
- 2804              		.file 9 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
- 2805              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
- 2806              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
- 2807              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
- 2808              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
- 2809              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
- 2810              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
- 2811              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
- 2812              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
- 2813              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
- 2814              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
- 2815              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
- 2816              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
- 2817              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
- 2818              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\charconv.h
- 2819              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
- 2820              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
- 2821              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
- 2822              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
- 2823              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
- 2824              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
- 2825              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
- 2826              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
- 2827              		.file 32 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
- 2828              		.file 33 "../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adenv.h"
- 2829              		.file 34 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
- 2830              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
- 2831              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
- 2832              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
- 2833              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
- 2834              		.file 39 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 66
-
-
- 2835              		.file 40 "PSP/AudioEngine.h"
- 2836              		.file 41 "PSP/AudioEngineConfig.h"
- 2837              		.file 42 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 67
+ 2795              		.set	.LANCHOR24,. + 0
+ 2798              	pluck_shape1:
+ 2799 0000 0000003F 		.word	1056964608
+ 2800              		.section	.data.pluck_shape2,"aw"
+ 2801              		.align	2
+ 2802              		.set	.LANCHOR27,. + 0
+ 2805              	pluck_shape2:
+ 2806 0000 0000003F 		.word	1056964608
+ 2807              		.section	.data.pluck_waveform1,"aw"
+ 2808              		.set	.LANCHOR22,. + 0
+ 2811              	pluck_waveform1:
+ 2812 0000 01       		.byte	1
+ 2813              		.section	.data.pluck_waveform2,"aw"
+ 2814              		.set	.LANCHOR25,. + 0
+ 2817              	pluck_waveform2:
+ 2818 0000 01       		.byte	1
+ 2819              		.text
+ 2820              	.Letext0:
+ 2821              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 2822              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 2823              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 2824              		.file 9 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 2825              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 2826              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 2827              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 2828              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 2829              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 2830              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 2831              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 2832              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 2833              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 2834              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 2835              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 2836              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 2837              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 2838              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\charconv.h
+ 2839              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 2840              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 2841              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 2842              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 2843              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 2844              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 2845              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 2846              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 2847              		.file 32 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 2848              		.file 33 "../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adenv.h"
+ 2849              		.file 34 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 2850              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 2851              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 2852              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 2853              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 2854              		.file 39 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 2855              		.file 40 "PSP/AudioEngine.h"
+ 2856              		.file 41 "PSP/AudioEngineConfig.h"
+ 2857              		.file 42 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 67
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 AudioEngine.cpp
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:17     .text._ZN11AudioEngineC2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:26     .text._ZN11AudioEngineC2Ev:00000000 _ZN11AudioEngineC2Ev
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:127    .text._ZN11AudioEngineC2Ev:0000007c $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:26     .text._ZN11AudioEngineC2Ev:00000000 _ZN11AudioEngineC1Ev
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:134    .text._ZN11AudioEngineD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:142    .text._ZN11AudioEngineD2Ev:00000000 _ZN11AudioEngineD2Ev
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:142    .text._ZN11AudioEngineD2Ev:00000000 _ZN11AudioEngineD1Ev
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:188    .text._ZN11AudioEngine9SetPresetE11SynthPreset:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:196    .text._ZN11AudioEngine9SetPresetE11SynthPreset:00000000 _ZN11AudioEngine9SetPresetE11SynthPreset
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:1317   .text._ZN11AudioEngine9SetPresetE11SynthPreset:00000320 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:1368   .text._ZN11AudioEngine9SetPresetE11SynthPreset:000003d8 $t
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:1521   .text._ZN11AudioEngine9SetPresetE11SynthPreset:0000049c $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:1548   .text._ZN11AudioEngine4InitEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:1556   .text._ZN11AudioEngine4InitEf:00000000 _ZN11AudioEngine4InitEf
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:1898   .text._ZN11AudioEngine4InitEf:00000120 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:1904   .text._ZN11AudioEngine6UpdateE14ControlsStruct:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:1912   .text._ZN11AudioEngine6UpdateE14ControlsStruct:00000000 _ZN11AudioEngine6UpdateE14ControlsStruct
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:1992   .text._ZN11AudioEngine7ProcessEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2000   .text._ZN11AudioEngine7ProcessEv:00000000 _ZN11AudioEngine7ProcessEv
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2187   .text._ZN11AudioEngine7ProcessEv:000000b8 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2377   .data.lead_res:00000000 lead_res
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2309   .data.lead_cutoff_freq:00000000 lead_cutoff_freq
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2323   .data.lead_fAmp:00000000 lead_fAmp
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2363   .data.lead_fsustain:00000000 lead_fsustain
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2344   .data.lead_frelease:00000000 lead_frelease
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2337   .data.lead_fdecay:00000000 lead_fdecay
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2330   .data.lead_fattack:00000000 lead_fattack
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2398   .data.lead_sustain:00000000 lead_sustain
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2370   .data.lead_release:00000000 lead_release
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2316   .data.lead_decay:00000000 lead_decay
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2302   .data.lead_attack:00000000 lead_attack
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2438   .data.lfo_lead_Shape2:00000000 lfo_lead_Shape2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2424   .data.lfo_lead_Amp2:00000000 lfo_lead_Amp2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2450   .data.lfo_lead_freq2:00000000 lfo_lead_freq2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2462   .data.lfo_lead_waveform2:00000000 lfo_lead_waveform2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2431   .data.lfo_lead_Shape1:00000000 lfo_lead_Shape1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2417   .data.lfo_lead_Amp1:00000000 lfo_lead_Amp1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2444   .data.lfo_lead_freq1:00000000 lfo_lead_freq1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2456   .data.lfo_lead_waveform1:00000000 lfo_lead_waveform1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2356   .data.lead_freq2:00000000 lead_freq2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2391   .data.lead_shape2:00000000 lead_shape2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2295   .data.lead_amp2:00000000 lead_amp2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2410   .data.lead_waveform2:00000000 lead_waveform2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2350   .data.lead_freq1:00000000 lead_freq1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2384   .data.lead_shape1:00000000 lead_shape1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2288   .data.lead_amp1:00000000 lead_amp1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2404   .data.lead_waveform1:00000000 lead_waveform1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2771   .data.pluck_res:00000000 pluck_res
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2710   .data.pluck_cutoff_freq:00000000 pluck_cutoff_freq
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2757   .data.pluck_fsustain:00000000 pluck_fsustain
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2738   .data.pluck_frelease:00000000 pluck_frelease
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2731   .data.pluck_fdecay:00000000 pluck_fdecay
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2724   .data.pluck_fattack:00000000 pluck_fattack
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2281   .bss.pluck_sustain:00000000 pluck_sustain
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2764   .data.pluck_release:00000000 pluck_release
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 68
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:17     .text._ZN11AudioEngineC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:26     .text._ZN11AudioEngineC2Ev:00000000 _ZN11AudioEngineC2Ev
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:127    .text._ZN11AudioEngineC2Ev:0000007c $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:26     .text._ZN11AudioEngineC2Ev:00000000 _ZN11AudioEngineC1Ev
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:134    .text._ZN11AudioEngineD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:142    .text._ZN11AudioEngineD2Ev:00000000 _ZN11AudioEngineD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:142    .text._ZN11AudioEngineD2Ev:00000000 _ZN11AudioEngineD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:188    .text._ZN11AudioEngine9SetPresetE11SynthPreset:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:196    .text._ZN11AudioEngine9SetPresetE11SynthPreset:00000000 _ZN11AudioEngine9SetPresetE11SynthPreset
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:1317   .text._ZN11AudioEngine9SetPresetE11SynthPreset:00000320 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:1368   .text._ZN11AudioEngine9SetPresetE11SynthPreset:000003d8 $t
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:1521   .text._ZN11AudioEngine9SetPresetE11SynthPreset:0000049c $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:1548   .text._ZN11AudioEngine4InitEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:1556   .text._ZN11AudioEngine4InitEf:00000000 _ZN11AudioEngine4InitEf
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:1898   .text._ZN11AudioEngine4InitEf:00000120 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:1904   .text._ZN11AudioEngine6UpdateE14ControlsStruct:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:1912   .text._ZN11AudioEngine6UpdateE14ControlsStruct:00000000 _ZN11AudioEngine6UpdateE14ControlsStruct
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:1992   .text._ZN11AudioEngine7ProcessEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2000   .text._ZN11AudioEngine7ProcessEv:00000000 _ZN11AudioEngine7ProcessEv
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2207   .text._ZN11AudioEngine7ProcessEv:000000d4 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2397   .data.lead_res:00000000 lead_res
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2329   .data.lead_cutoff_freq:00000000 lead_cutoff_freq
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2343   .data.lead_fAmp:00000000 lead_fAmp
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2383   .data.lead_fsustain:00000000 lead_fsustain
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2364   .data.lead_frelease:00000000 lead_frelease
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2357   .data.lead_fdecay:00000000 lead_fdecay
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2350   .data.lead_fattack:00000000 lead_fattack
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2418   .data.lead_sustain:00000000 lead_sustain
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2390   .data.lead_release:00000000 lead_release
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2336   .data.lead_decay:00000000 lead_decay
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2322   .data.lead_attack:00000000 lead_attack
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2458   .data.lfo_lead_Shape2:00000000 lfo_lead_Shape2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2444   .data.lfo_lead_Amp2:00000000 lfo_lead_Amp2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2470   .data.lfo_lead_freq2:00000000 lfo_lead_freq2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2482   .data.lfo_lead_waveform2:00000000 lfo_lead_waveform2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2451   .data.lfo_lead_Shape1:00000000 lfo_lead_Shape1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2437   .data.lfo_lead_Amp1:00000000 lfo_lead_Amp1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2464   .data.lfo_lead_freq1:00000000 lfo_lead_freq1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2476   .data.lfo_lead_waveform1:00000000 lfo_lead_waveform1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2376   .data.lead_freq2:00000000 lead_freq2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2411   .data.lead_shape2:00000000 lead_shape2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2315   .data.lead_amp2:00000000 lead_amp2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2430   .data.lead_waveform2:00000000 lead_waveform2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2370   .data.lead_freq1:00000000 lead_freq1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2404   .data.lead_shape1:00000000 lead_shape1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2308   .data.lead_amp1:00000000 lead_amp1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2424   .data.lead_waveform1:00000000 lead_waveform1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2791   .data.pluck_res:00000000 pluck_res
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2730   .data.pluck_cutoff_freq:00000000 pluck_cutoff_freq
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2777   .data.pluck_fsustain:00000000 pluck_fsustain
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2758   .data.pluck_frelease:00000000 pluck_frelease
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2751   .data.pluck_fdecay:00000000 pluck_fdecay
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2744   .data.pluck_fattack:00000000 pluck_fattack
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2301   .bss.pluck_sustain:00000000 pluck_sustain
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2784   .data.pluck_release:00000000 pluck_release
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 68
 
 
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2717   .data.pluck_decay:00000000 pluck_decay
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2703   .data.pluck_attack:00000000 pluck_attack
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2542   .data.lfo_pluck_Shape2:00000000 lfo_pluck_Shape2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2528   .data.lfo_pluck_Amp2:00000000 lfo_pluck_Amp2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2554   .data.lfo_pluck_freq2:00000000 lfo_pluck_freq2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2566   .data.lfo_pluck_waveform2:00000000 lfo_pluck_waveform2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2535   .data.lfo_pluck_Shape1:00000000 lfo_pluck_Shape1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2521   .data.lfo_pluck_Amp1:00000000 lfo_pluck_Amp1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2548   .data.lfo_pluck_freq1:00000000 lfo_pluck_freq1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2560   .data.lfo_pluck_waveform1:00000000 lfo_pluck_waveform1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2750   .data.pluck_freq2:00000000 pluck_freq2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2785   .data.pluck_shape2:00000000 pluck_shape2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2696   .data.pluck_amp2:00000000 pluck_amp2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2797   .data.pluck_waveform2:00000000 pluck_waveform2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2744   .data.pluck_freq1:00000000 pluck_freq1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2778   .data.pluck_shape1:00000000 pluck_shape1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2689   .data.pluck_amp1:00000000 pluck_amp1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2791   .data.pluck_waveform1:00000000 pluck_waveform1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2655   .data.pad_res:00000000 pad_res
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2594   .data.pad_cutoff_freq:00000000 pad_cutoff_freq
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2641   .data.pad_fsustain:00000000 pad_fsustain
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2622   .data.pad_frelease:00000000 pad_frelease
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2615   .data.pad_fdecay:00000000 pad_fdecay
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2608   .data.pad_fattack:00000000 pad_fattack
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2676   .data.pad_sustain:00000000 pad_sustain
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2648   .data.pad_release:00000000 pad_release
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2601   .data.pad_decay:00000000 pad_decay
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2587   .data.pad_attack:00000000 pad_attack
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2490   .data.lfo_pad_Shape2:00000000 lfo_pad_Shape2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2476   .data.lfo_pad_Amp2:00000000 lfo_pad_Amp2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2502   .data.lfo_pad_freq2:00000000 lfo_pad_freq2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2514   .data.lfo_pad_waveform2:00000000 lfo_pad_waveform2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2483   .data.lfo_pad_Shape1:00000000 lfo_pad_Shape1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2469   .data.lfo_pad_Amp1:00000000 lfo_pad_Amp1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2496   .data.lfo_pad_freq1:00000000 lfo_pad_freq1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2508   .data.lfo_pad_waveform1:00000000 lfo_pad_waveform1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2634   .data.pad_freq2:00000000 pad_freq2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2669   .data.pad_shape2:00000000 pad_shape2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2580   .data.pad_amp2:00000000 pad_amp2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2682   .data.pad_waveform2:00000000 pad_waveform2
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2628   .data.pad_freq1:00000000 pad_freq1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2662   .data.pad_shape1:00000000 pad_shape1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2573   .data.pad_amp1:00000000 pad_amp1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2274   .bss.pad_waveform1:00000000 pad_waveform1
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2275   .bss.pad_waveform1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2277   .bss.pluck_sustain:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2284   .data.lead_amp1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2291   .data.lead_amp2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2298   .data.lead_attack:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2305   .data.lead_cutoff_freq:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2312   .data.lead_decay:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2319   .data.lead_fAmp:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2326   .data.lead_fattack:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2333   .data.lead_fdecay:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2340   .data.lead_frelease:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2347   .data.lead_freq1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2353   .data.lead_freq2:00000000 $d
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 69
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2737   .data.pluck_decay:00000000 pluck_decay
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2723   .data.pluck_attack:00000000 pluck_attack
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2556   .data.lfo_pluck_Shape2:00000000 lfo_pluck_Shape2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2542   .data.lfo_pluck_Amp2:00000000 lfo_pluck_Amp2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2568   .data.lfo_pluck_freq2:00000000 lfo_pluck_freq2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2580   .data.lfo_pluck_waveform2:00000000 lfo_pluck_waveform2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2549   .data.lfo_pluck_Shape1:00000000 lfo_pluck_Shape1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2535   .data.lfo_pluck_Amp1:00000000 lfo_pluck_Amp1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2562   .data.lfo_pluck_freq1:00000000 lfo_pluck_freq1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2574   .data.lfo_pluck_waveform1:00000000 lfo_pluck_waveform1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2770   .data.pluck_freq2:00000000 pluck_freq2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2805   .data.pluck_shape2:00000000 pluck_shape2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2716   .data.pluck_amp2:00000000 pluck_amp2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2817   .data.pluck_waveform2:00000000 pluck_waveform2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2764   .data.pluck_freq1:00000000 pluck_freq1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2798   .data.pluck_shape1:00000000 pluck_shape1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2709   .data.pluck_amp1:00000000 pluck_amp1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2811   .data.pluck_waveform1:00000000 pluck_waveform1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2669   .data.pad_res:00000000 pad_res
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2608   .data.pad_cutoff_freq:00000000 pad_cutoff_freq
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2655   .data.pad_fsustain:00000000 pad_fsustain
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2636   .data.pad_frelease:00000000 pad_frelease
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2629   .data.pad_fdecay:00000000 pad_fdecay
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2622   .data.pad_fattack:00000000 pad_fattack
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2690   .data.pad_sustain:00000000 pad_sustain
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2662   .data.pad_release:00000000 pad_release
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2615   .data.pad_decay:00000000 pad_decay
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2601   .data.pad_attack:00000000 pad_attack
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2510   .data.lfo_pad_Shape2:00000000 lfo_pad_Shape2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2496   .data.lfo_pad_Amp2:00000000 lfo_pad_Amp2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2522   .data.lfo_pad_freq2:00000000 lfo_pad_freq2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2528   .data.lfo_pad_waveform2:00000000 lfo_pad_waveform2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2503   .data.lfo_pad_Shape1:00000000 lfo_pad_Shape1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2489   .data.lfo_pad_Amp1:00000000 lfo_pad_Amp1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2516   .data.lfo_pad_freq1:00000000 lfo_pad_freq1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2294   .bss.lfo_pad_waveform1:00000000 lfo_pad_waveform1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2648   .data.pad_freq2:00000000 pad_freq2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2683   .data.pad_shape2:00000000 pad_shape2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2594   .data.pad_amp2:00000000 pad_amp2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2702   .data.pad_waveform2:00000000 pad_waveform2
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2642   .data.pad_freq1:00000000 pad_freq1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2676   .data.pad_shape1:00000000 pad_shape1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2587   .data.pad_amp1:00000000 pad_amp1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2696   .data.pad_waveform1:00000000 pad_waveform1
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2295   .bss.lfo_pad_waveform1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2297   .bss.pluck_sustain:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2304   .data.lead_amp1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2311   .data.lead_amp2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2318   .data.lead_attack:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2325   .data.lead_cutoff_freq:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2332   .data.lead_decay:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2339   .data.lead_fAmp:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2346   .data.lead_fattack:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2353   .data.lead_fdecay:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2360   .data.lead_frelease:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2367   .data.lead_freq1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2373   .data.lead_freq2:00000000 $d
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 69
 
 
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2359   .data.lead_fsustain:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2366   .data.lead_release:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2373   .data.lead_res:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2380   .data.lead_shape1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2387   .data.lead_shape2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2394   .data.lead_sustain:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2413   .data.lfo_lead_Amp1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2420   .data.lfo_lead_Amp2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2427   .data.lfo_lead_Shape1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2434   .data.lfo_lead_Shape2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2441   .data.lfo_lead_freq1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2447   .data.lfo_lead_freq2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2465   .data.lfo_pad_Amp1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2472   .data.lfo_pad_Amp2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2479   .data.lfo_pad_Shape1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2486   .data.lfo_pad_Shape2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2493   .data.lfo_pad_freq1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2499   .data.lfo_pad_freq2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2517   .data.lfo_pluck_Amp1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2524   .data.lfo_pluck_Amp2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2531   .data.lfo_pluck_Shape1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2538   .data.lfo_pluck_Shape2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2545   .data.lfo_pluck_freq1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2551   .data.lfo_pluck_freq2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2569   .data.pad_amp1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2576   .data.pad_amp2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2583   .data.pad_attack:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2590   .data.pad_cutoff_freq:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2597   .data.pad_decay:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2604   .data.pad_fattack:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2611   .data.pad_fdecay:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2618   .data.pad_frelease:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2625   .data.pad_freq1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2631   .data.pad_freq2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2637   .data.pad_fsustain:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2644   .data.pad_release:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2651   .data.pad_res:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2658   .data.pad_shape1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2665   .data.pad_shape2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2672   .data.pad_sustain:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2685   .data.pluck_amp1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2692   .data.pluck_amp2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2699   .data.pluck_attack:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2706   .data.pluck_cutoff_freq:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2713   .data.pluck_decay:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2720   .data.pluck_fattack:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2727   .data.pluck_fdecay:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2734   .data.pluck_frelease:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2741   .data.pluck_freq1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2747   .data.pluck_freq2:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2753   .data.pluck_fsustain:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2760   .data.pluck_release:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2767   .data.pluck_res:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2774   .data.pluck_shape1:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s:2781   .data.pluck_shape2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2379   .data.lead_fsustain:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2386   .data.lead_release:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2393   .data.lead_res:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2400   .data.lead_shape1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2407   .data.lead_shape2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2414   .data.lead_sustain:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2433   .data.lfo_lead_Amp1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2440   .data.lfo_lead_Amp2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2447   .data.lfo_lead_Shape1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2454   .data.lfo_lead_Shape2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2461   .data.lfo_lead_freq1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2467   .data.lfo_lead_freq2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2485   .data.lfo_pad_Amp1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2492   .data.lfo_pad_Amp2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2499   .data.lfo_pad_Shape1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2506   .data.lfo_pad_Shape2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2513   .data.lfo_pad_freq1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2519   .data.lfo_pad_freq2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2531   .data.lfo_pluck_Amp1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2538   .data.lfo_pluck_Amp2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2545   .data.lfo_pluck_Shape1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2552   .data.lfo_pluck_Shape2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2559   .data.lfo_pluck_freq1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2565   .data.lfo_pluck_freq2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2583   .data.pad_amp1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2590   .data.pad_amp2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2597   .data.pad_attack:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2604   .data.pad_cutoff_freq:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2611   .data.pad_decay:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2618   .data.pad_fattack:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2625   .data.pad_fdecay:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2632   .data.pad_frelease:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2639   .data.pad_freq1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2645   .data.pad_freq2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2651   .data.pad_fsustain:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2658   .data.pad_release:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2665   .data.pad_res:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2672   .data.pad_shape1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2679   .data.pad_shape2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2686   .data.pad_sustain:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2705   .data.pluck_amp1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2712   .data.pluck_amp2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2719   .data.pluck_attack:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2726   .data.pluck_cutoff_freq:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2733   .data.pluck_decay:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2740   .data.pluck_fattack:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2747   .data.pluck_fdecay:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2754   .data.pluck_frelease:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2761   .data.pluck_freq1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2767   .data.pluck_freq2:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2773   .data.pluck_fsustain:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2780   .data.pluck_release:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2787   .data.pluck_res:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2794   .data.pluck_shape1:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s:2801   .data.pluck_shape2:00000000 $d
 
 UNDEFINED SYMBOLS
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccR0ArPI.s 			page 70
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccnbanHd.s 			page 70
 
 
 _ZN7daisysp10Oscillator12CalcPhaseIncEf
@@ -4095,5 +4147,5 @@ _ZN7daisysp4Adsr4InitEfi
 _ZN7daisysp12LadderFilter4InitEf
 _ZN7daisysp4Adsr9RetriggerEb
 _ZN7daisysp10Oscillator7ProcessEv
-_ZN7daisysp4Adsr7ProcessEb
 _ZN7daisysp12LadderFilter7ProcessEf
+_ZN7daisysp4Adsr7ProcessEb
