@@ -66,4 +66,4 @@ float lead_cutoff_freq = 1000.0f; float lead_res = 0.4f;
 
 float revLpFreq = 18000.0f;
 float revFeedback = 0.85f;
-float revDryWet = 0.4f; 
+float revDryWet = 0.3f; 

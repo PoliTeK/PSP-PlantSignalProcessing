@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
   54              	.LC14:
   55 0038 4D696E6F 		.ascii	"MinorN\000"
   55      724E00
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 2
 
 
   56 003f 00       		.align	2
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
    8:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h **** {
    9:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h **** /** 
   10:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****  * This class is for drawing to a monochrome OLED display. 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 3
 
 
   11:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****  * @ingroup device
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
   23:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             // Intialize using defaults
   24:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             Defaults();
   25:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 4
 
 
   26:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         I2CHandle::Config i2c_config;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
   80:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             Pin reset; /**< & */
   81:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         } pin_config;
   82:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         bool useDma;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 5
 
 
   83:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         void Defaults()
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  137:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         pin_dc_.Write(1);
  138:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         spi_.BlockingTransmit(buff, size);
  139:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 6
 
 
  140:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  194:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         clk_delay = config.pin_config.sclk_delay;
  195:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         pin_mosi_.Init(config.pin_config.mosi, GPIO::Mode::OUTPUT);
  196:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         pin_mosi_.Write(0);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 7
 
 
  197:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  251:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****  * A driver implementation for the SSD1306/SSD1309
  252:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****  */
  253:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** template <size_t width, size_t height, typename Transport>
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 8
 
 
  254:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** class SSD130xDriver
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  308:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****                 transport_.SendCommand(0xA8);
  309:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****                 transport_.SendCommand(0x2F);
  310:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****                 // COM Pins
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 9
 
 
  311:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****                 transport_.SendCommand(0xDA);
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  365:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         if(on)
  366:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  367:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 10
 
 
  368:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
   51:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****     void Update() override { driver_.Update(); }
  137              		.loc 1 51 10 is_stmt 1 view -0
  138              		.cfi_startproc
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 11
 
 
  139              		@ args = 0, pretend = 0, frame = 8
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  175              	.LBB33:
   46:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
  176              		.loc 2 46 30 is_stmt 0 view .LVU14
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 12
 
 
  177 000c 00F10807 		add	r7, r0, #8
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
   46:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
  217              		.loc 2 46 30 is_stmt 0 view .LVU29
  218 003c 297B     		ldrb	r1, [r5, #12]	@ zero_extendqisi2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 13
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 13
 
 
  219 003e 0223     		movs	r3, #2
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  259              	.LBI40:
   49:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
  260              		.loc 2 49 10 is_stmt 1 view .LVU44
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 14
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 14
 
 
  261              	.LBB41:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  302 009e 4E45     		cmp	r6, r9
  303 00a0 5FFA88F8 		uxtb	r8, r8
  304 00a4 B8D1     		bne	.L5
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 15
 
 
  305              	.LBE43:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
   33:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
   34:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     size_t CurrentX() { return currentX_; };
   35:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     size_t CurrentY() { return currentY_; };
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 16
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 16
 
 
   36:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
   90:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     {
   91:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         DrawRect(rect.GetX(),
   92:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                  rect.GetY(),
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 17
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 17
 
 
   93:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                  rect.GetRight(),
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  147:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     */
  148:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     virtual char WriteString(const char* str, FontDef font, bool on) = 0;
  149:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 18
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 18
 
 
  150:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     /** 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  204:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****  *  
  205:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****  *  To create a custom OneBitGraphicsDisplay implementation, you can 
  206:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****  *  A) inherit from OneBitGraphicsDisplay directly and provide all the drawing functions yourself
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 19
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 19
 
 
  207:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****  *  B) Inherit from OneBitGraphicsDisplayImpl and only provide DrawPixel(), Fill() and Update()
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  233:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t deltaY = abs((int_fast16_t)y2 - (int_fast16_t)y1);
  355              		.loc 3 233 52 view .LVU69
  356 0010 A6EB0208 		sub	r8, r6, r2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 20
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 20
 
 
  232:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t deltaY = abs((int_fast16_t)y2 - (int_fast16_t)y1);
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  401              	.LBB68:
  363:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
  402              		.loc 2 363 9 discriminator 4 view .LVU81
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 21
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 21
 
 
  403 003e 12D8     		bhi	.L12
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  245:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         {
  246:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             ((ChildType*)(this))->ChildType::DrawPixel(x1, y1, on);
  247:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             error2 = error * 2;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 22
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 22
 
 
  248:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             if(error2 > -deltaY)
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  247:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             if(error2 > -deltaY)
  483              		.loc 3 247 20 view .LVU105
  484 00a4 4FEA4C05 		lsl	r5, ip, #1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 23
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 23
 
 
  485              	.LVL25:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  524              	.LBB87:
  525              	.LBB86:
  526              	.LBB85:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 24
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 24
 
 
  527              	.LBB83:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  571 00e6 C2E7     		b	.L16
  572              	.LVL33:
  573              	.L13:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 25
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 25
 
 
  574              	.LBB64:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  620              		.thumb_func
  621              		.fpu fpv5-d16
  623              	_ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTranspor
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 26
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 26
 
 
  624              	.LVL35:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  669 0020 0830     		adds	r0, r0, #8
  670              	.LVL38:
  671              		.loc 4 7 11 view .LVU146
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 27
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 27
 
 
  672 0022 FFF7FEFF 		bl	memset
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  712              		.thumb_set _ZN14DisplayHandlerC1EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130
  713              		.section	.text._ZN14DisplayHandler8SetStateE12DisplayState,"ax",%progbits
  714              		.align	1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 28
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 28
 
 
  715              		.p2align 2,,3
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
   39:Display/displayHandler.cpp ****     _displayPtr->Fill(false);
  744              		.loc 4 39 54 view .LVU168
  745 0008 0D46     		mov	r5, r1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 29
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 29
 
 
  746              		.loc 4 40 28 view .LVU169
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  793              		.align	1
  794              		.p2align 2,,3
  795              		.global	_ZN14DisplayHandler14SetStandbyTextEPKc
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 30
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 30
 
 
  796              		.syntax unified
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  842              	.LBE107:
   49:Display/displayHandler.cpp ****         }
   50:Display/displayHandler.cpp ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 31
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 31
 
 
   51:Display/displayHandler.cpp **** }
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  890 0012 CAB2     		uxtb	r2, r1
  891 0014 58BF     		it	pl
  892 0016 5342     		rsbpl	r3, r2, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 32
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 32
 
 
  893              		.loc 4 55 16 view .LVU204
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  928 0008 1868     		ldr	r0, [r3]
  929              	.LVL58:
   77:Display/displayHandler.cpp **** }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 33
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 33
 
 
  930              		.loc 4 77 1 view .LVU214
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  974 0034 7345     		cmp	r3, lr
  975 0036 21D0     		beq	.L55
  976              	.LVL62:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 34
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 34
 
 
  977              	.L56:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1016 0070 DBB2     		uxtb	r3, r3
  1017 0072 58BF     		it	pl
  1018 0074 5842     		rsbpl	r0, r3, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 35
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 35
 
 
   71:Display/displayHandler.cpp ****                 return trigIdx; 
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
   79:Display/displayHandler.cpp ****     int zeroOfScreen = 32; 
  1063              		.loc 4 79 37 is_stmt 0 view .LVU252
  1064 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 36
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 36
 
 
  1065              		.cfi_def_cfa_offset 36
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1109 001e 9847     		blx	r3
  1110              	.LVL73:
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 37
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 37
 
 
  1111              		.loc 3 173 19 view .LVU264
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1153              		.loc 4 85 28 is_stmt 0 view .LVU278
  1154 0046 0368     		ldr	r3, [r0]
  1155 0048 594A     		ldr	r2, .L103
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 38
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 38
 
 
  1156 004a 1B69     		ldr	r3, [r3, #16]
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1199              		.loc 4 94 54 view .LVU288
  1200 007c 08F10108 		add	r8, r8, #1
  1201              	.LVL81:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 39
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 39
 
 
   95:Display/displayHandler.cpp ****         
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1236              		.loc 4 93 29 view .LVU304
  1237 00b8 FDEEE77A 		vcvt.s32.f32	s15, s15
   94:Display/displayHandler.cpp ****         y2 = zeroOfScreen - (int)(_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40.0f);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 40
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 40
 
 
  1238              		.loc 4 94 74 view .LVU305
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1279 00f6 B242     		cmp	r2, r6
  236:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t error2;
  1280              		.loc 3 236 22 view .LVU321
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 41
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 41
 
 
  1281 00f8 C9F10105 		rsb	r5, r9, #1
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  361:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
  1325              		.loc 2 361 10 view .LVU332
  1326              	.LBB166:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 42
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 42
 
 
  366:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1367              		.loc 3 254 13 view .LVU346
  1368 013a BBF1000F 		cmp	fp, #0
  250:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 x1 += signX;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 43
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 43
 
 
  1369              		.loc 3 250 23 view .LVU347
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1410              	.LVL95:
  1411              	.L90:
  1412              		.cfi_restore_state
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 44
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 44
 
 
  1413              	.LBB176:
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1455              		.loc 2 366 48 view .LVU371
  1456 0178 4FF0010C 		mov	ip, #1
  366:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 45
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 45
 
 
  1457              		.loc 2 366 54 view .LVU372
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  1502              		.loc 3 173 19 view .LVU382
  1503              	.LBE142:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 46
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 46
 
 
  1504              	.LBE177:
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1554 000e 9342     		cmp	r3, r2
  1555 0010 2ED1     		bne	.L106
  1556              	.LBB184:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 47
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 47
 
 
  1557              	.LBB185:
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1599              		.loc 3 174 33 view .LVU402
  1600 0038 2046     		mov	r0, r4
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 48
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 48
 
 
  1601              		.loc 3 173 19 view .LVU403
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1646              	.LVL115:
  109:Display/displayHandler.cpp **** }
  1647              		.loc 4 109 1 view .LVU418
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 49
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 49
 
 
  1648 0064 03B0     		add	sp, sp, #12
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
   19:Display/displayHandler.cpp ****         case DisplayState::STANDBY:
  1699              		.loc 4 19 5 view .LVU424
   19:Display/displayHandler.cpp ****         case DisplayState::STANDBY:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 50
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 50
 
 
  1700              		.loc 4 19 13 is_stmt 0 view .LVU425
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1745 002e 4FF0B009 		mov	r9, #176
  1746              	.LVL121:
  1747              	.L122:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 51
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 51
 
 
   46:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1785              		.loc 2 46 30 is_stmt 0 view .LVU451
  1786 0056 0223     		movs	r3, #2
  1787 0058 317B     		ldrb	r1, [r6, #12]	@ zero_extendqisi2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 52
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 52
 
 
  1788 005a 03AA     		add	r2, sp, #12
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
   53:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
  1829              		.loc 2 53 21 is_stmt 0 view .LVU465
  1830 0080 4021     		movs	r1, #64
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 53
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 53
 
 
   54:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1874              		.cfi_def_cfa_offset 32
  1875              		@ sp needed
  1876 00b6 BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 54
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 54
 
 
  1877              	.LVL129:
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1921      62726174 
  1921      696F6E00 
  1922              		.align	2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 55
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 55
 
 
  1923              	.LC28:
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  1967              		.cfi_def_cfa_offset 32
  1968              		.loc 4 115 28 view .LVU493
  1969 000a 0368     		ldr	r3, [r0]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 56
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 56
 
 
  114:Display/displayHandler.cpp ****     _displayPtr->Fill(false);
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2012 0034 3046     		mov	r0, r6
  2013 0036 DB68     		ldr	r3, [r3, #12]
  2014 0038 9847     		blx	r3
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 57
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 57
 
 
  2015              	.LVL139:
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2056              		.loc 3 174 19 view .LVU519
  2057              	.LBE241:
  2058              	.LBE243:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 58
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 58
 
 
  2059              		.loc 4 118 5 is_stmt 1 view .LVU520
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2101              		.loc 3 174 33 is_stmt 0 view .LVU533
  2102 008e 3846     		mov	r0, r7
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 59
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 59
 
 
  2103              		.loc 3 174 34 view .LVU534
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2149              	.LVL151:
  2150              	.LBB249:
  2151              	.LBI249:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 60
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 60
 
 
  171:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     {
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2191              		.loc 3 174 45 view .LVU562
  2192 00ea 3846     		mov	r0, r7
  2193 00ec 9B68     		ldr	r3, [r3, #8]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 61
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 61
 
 
  2194 00ee 9847     		blx	r3
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2239              		.loc 3 173 19 view .LVU576
  2240 0112 0A28     		cmp	r0, #10
  2241 0114 72D8     		bhi	.L148
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 62
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 62
 
 
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  2285              		.loc 3 174 19 view .LVU590
  2286 0140 FB80     		strh	r3, [r7, #6]	@ movhi
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 63
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 63
 
 
  2287              	.LVL163:
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  2331              		.loc 3 174 9 is_stmt 1 view .LVU604
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 64
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 64
 
 
  2332              		.loc 3 174 33 is_stmt 0 view .LVU605
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  123:Display/displayHandler.cpp **** 
  2374              		.loc 4 123 61 view .LVU619
  2375 0190 2949     		ldr	r1, .L154+24
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 65
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 65
 
 
  2376              		.loc 4 126 37 view .LVU620
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  2419              		.loc 3 174 9 is_stmt 1 view .LVU635
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 66
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 66
 
 
  2420              		.loc 3 174 33 is_stmt 0 view .LVU636
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2464 01e0 1649     		ldr	r1, .L154+28
  2465 01e2 96E80C00 		ldm	r6, {r2, r3}
  2466 01e6 A047     		blx	r4
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 67
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 67
 
 
  2467              	.LVL180:
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2512              		.loc 3 173 19 view .LVU659
  2513              	.LBE257:
  2514              	.LBE271:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 68
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 68
 
 
  2515              	.LBB272:
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2559              	.LVL188:
  115:Display/displayHandler.cpp ****     
  2560              		.loc 4 115 22 view .LVU670
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 69
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 69
 
 
  2561 021a 9847     		blx	r3
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  131:Display/displayHandler.cpp ****     _displayPtr->Fill(false);
  2608              		.loc 4 131 58 is_stmt 0 view .LVU673
  2609 0000 F0B5     		push	{r4, r5, r6, r7, lr}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 70
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 70
 
 
  2610              		.cfi_def_cfa_offset 20
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  2656              		.loc 3 173 33 is_stmt 0 view .LVU685
  2657 0024 3368     		ldr	r3, [r6]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 71
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 71
 
 
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2698              		.loc 3 174 19 view .LVU699
  2699 0056 0138     		subs	r0, r0, #1
  2700 0058 83B2     		uxth	r3, r0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 72
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 72
 
 
  2701              	.L160:
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  2745              		.loc 3 173 44 view .LVU713
  2746 0080 3B68     		ldr	r3, [r7]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 73
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 73
 
 
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2790              	.LVL206:
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  2791              		.loc 3 174 19 view .LVU727
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 74
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 74
 
 
  2792              	.LBE299:
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2835              		.loc 3 174 33 is_stmt 0 view .LVU741
  2836 00d8 3846     		mov	r0, r7
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 75
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 75
 
 
  2837              		.loc 3 174 34 view .LVU742
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2883              	.LVL215:
  2884              	.LBB307:
  2885              	.LBI307:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 76
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 76
 
 
  171:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     {
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2925              		.loc 3 174 45 view .LVU770
  2926 012e 3846     		mov	r0, r7
  2927 0130 9B68     		ldr	r3, [r3, #8]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 77
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 77
 
 
  2928 0132 9847     		blx	r3
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  2972              	.LVL223:
  2973              	.LBB312:
  2974              	.LBI312:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 78
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 78
 
 
  171:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     {
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3014 017e 3846     		mov	r0, r7
  3015 0180 9B68     		ldr	r3, [r3, #8]
  3016 0182 9847     		blx	r3
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 79
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 79
 
 
  3017              	.LVL227:
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  3064              		.loc 3 173 19 view .LVU813
  3065              	.LBE315:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 80
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 80
 
 
  3066              	.LBE317:
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  3111              		.loc 3 174 19 view .LVU823
  3112 01bc 0023     		movs	r3, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 81
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 81
 
 
  3113 01be 4CE7     		b	.L160
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3157              		.align	1
  3158              		.p2align 2,,3
  3159              		.global	_ZN14DisplayHandler13DrawScalesHubEi
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 82
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 82
 
 
  3160              		.syntax unified
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3207 001e FFF7FEFF 		bl	memset
  3208              	.LVL242:
  3209              	.L183:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 83
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 83
 
 
  3210              	.LBE340:
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3249              		.loc 3 174 33 is_stmt 0 view .LVU852
  3250 0044 9368     		ldr	r3, [r2, #8]
  3251 0046 9847     		blx	r3
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 84
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 84
 
 
  3252              	.LVL246:
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  171:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     {
  3297              		.loc 3 171 10 view .LVU865
  3298              	.LBB347:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 85
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 85
 
 
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3339 00a2 9847     		blx	r3
  3340              	.LVL254:
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 86
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 86
 
 
  3341              		.loc 3 174 19 view .LVU880
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  3387              		.loc 3 173 44 view .LVU894
  3388 00cc 3B68     		ldr	r3, [r7]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 87
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 87
 
 
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3432              	.LVL262:
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  3433              		.loc 3 174 19 view .LVU908
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 88
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 88
 
 
  3434              	.LBE353:
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3477              		.loc 3 174 33 is_stmt 0 view .LVU922
  3478 0124 3846     		mov	r0, r7
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 89
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 89
 
 
  3479              		.loc 3 174 34 view .LVU923
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3525              	.LVL271:
  3526              	.LBB361:
  3527              	.LBI361:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 90
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 90
 
 
  171:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     {
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3567              		.loc 3 174 45 view .LVU951
  3568 017a 3846     		mov	r0, r7
  3569 017c 9B68     		ldr	r3, [r3, #8]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 91
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 91
 
 
  3570 017e 9847     		blx	r3
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3614              	.LVL279:
  3615              	.LBB366:
  3616              	.LBI366:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 92
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 92
 
 
  171:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     {
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3656 01ca 3846     		mov	r0, r7
  3657 01cc 9B68     		ldr	r3, [r3, #8]
  3658 01ce 9847     		blx	r3
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 93
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 93
 
 
  3659              	.LVL283:
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  3706              		.loc 3 173 19 view .LVU994
  3707              	.LBE369:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 94
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 94
 
 
  3708              	.LBE371:
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  3753              		.loc 3 174 19 view .LVU1004
  3754 0208 0F23     		movs	r3, #15
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 95
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 95
 
 
  3755 020a 4DE7     		b	.L187
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3803 0000 45444954 		.ascii	"EDIT:\000"
  3803      3A00
  3804 0006 0000     		.align	2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 96
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 96
 
 
  3805              	.LC41:
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3853              	.LBB388:
  3854              	.LBB389:
  375:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 97
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 97
 
 
  3855              		.loc 2 375 24 view .LVU1020
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3896              	.L213:
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  3897              		.loc 3 174 34 view .LVU1032
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 98
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 98
 
 
  3898 0044 2A68     		ldr	r2, [r5]
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  3941 0068 0091     		str	r1, [sp]
  3942 006a 3D49     		ldr	r1, .L226+8
  3943 006c 956A     		ldr	r5, [r2, #40]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 99
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 99
 
 
  3944 006e 0CCB     		ldm	r3, {r2, r3}
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  3983              		.loc 3 174 33 is_stmt 0 view .LVU1061
  3984 0092 9368     		ldr	r3, [r2, #8]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 100
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 100
 
 
  3985 0094 9847     		blx	r3
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4029              		.loc 4 174 5 is_stmt 1 view .LVU1075
  4030              		.loc 4 174 9 is_stmt 0 view .LVU1076
  4031 00bc FDEEC87A 		vcvt.s32.f32	s15, s16
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 101
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 101
 
 
  4032              	.LVL315:
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4070              		.loc 3 173 9 view .LVU1092
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  4071              		.loc 3 173 33 is_stmt 0 view .LVU1093
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 102
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 102
 
 
  4072 00ec 2B68     		ldr	r3, [r5]
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4113 011a 83B2     		uxth	r3, r0
  4114              	.L218:
  4115              	.LBE402:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 103
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 103
 
 
  4116              	.LBE401:
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4164              	.LBE406:
  4165              	.LBB407:
  4166              	.LBB404:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 104
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 104
 
 
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4210 0154 69E7     		b	.L212
  4211              	.L227:
  4212 0156 00BF     		.align	2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 105
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 105
 
 
  4213              	.L226:
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4259              		.cfi_offset 4, -28
  4260              		.cfi_offset 5, -24
  4261              		.cfi_offset 6, -20
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 106
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 106
 
 
  4262              		.cfi_offset 7, -16
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  4307              		.loc 3 173 9 view .LVU1142
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 107
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 107
 
 
  4308              		.loc 3 173 33 is_stmt 0 view .LVU1143
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4349              		.loc 3 174 19 view .LVU1156
  4350 005a 0138     		subs	r0, r0, #1
  4351 005c 83B2     		uxth	r3, r0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 108
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 108
 
 
  4352              	.L232:
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4395 007e 73D1     		bne	.L243
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  4396              		.loc 3 173 44 view .LVU1170
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 109
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 109
 
 
  4397 0080 2B68     		ldr	r3, [r5]
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4439              		.loc 3 174 19 view .LVU1183
  4440 00aa EB80     		strh	r3, [r5, #6]	@ movhi
  4441              	.LVL353:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 110
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 110
 
 
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  210:Display/displayHandler.cpp ****     }else if (strcmp(paramName, "PRESET") == 0){
  4482              		.loc 4 210 11 is_stmt 1 view .LVU1196
  4483              	.LBB451:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 111
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 111
 
 
  4484              	.LBB446:
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4528              		.loc 4 218 5 is_stmt 1 view .LVU1211
  4529 0112 2568     		ldr	r5, [r4]
  4530              	.LVL359:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 112
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 112
 
 
  4531              	.LBB452:
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4571 013a 2B68     		ldr	r3, [r5]
  174:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  4572              		.loc 3 174 45 view .LVU1226
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 113
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 113
 
 
  4573 013c 2846     		mov	r0, r5
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4620              	.LVL368:
  4621              	.L244:
  173:Display/../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 114
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 114
 
 
  4622              		.loc 3 173 19 view .LVU1237
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4665 0182 FB17     		asrs	r3, r7, #31
  4666 0184 C3EBA203 		rsb	r3, r3, r2, asr #2
  4667 0188 C3EBC303 		rsb	r3, r3, r3, lsl #3
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 115
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 115
 
 
  4668 018c FD1A     		subs	r5, r7, r3
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4711 01ba 1E4E     		ldr	r6, .L250+40
  4712              	.LVL375:
  204:Display/displayHandler.cpp ****         sprintf(valBuffer, "%s", notes[value % 12]);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 116
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 116
 
 
  4713              		.loc 4 204 16 view .LVU1260
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  188:Display/displayHandler.cpp ****     _displayPtr->Fill(false);
  4759              		.loc 4 188 22 view .LVU1269
  4760 0204 0021     		movs	r1, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 117
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 117
 
 
  4761              	.LVL381:
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4815              		.align	2
  4816              		.set	.LANCHOR0,. + 0
  4819              	_ZZN14DisplayHandler11findTriggerEvE7trigIdx:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 118
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 118
 
 
  4820 0000 00000000 		.space	4
@@ -7065,67 +7065,67 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 1
  4861              		.file 43 "../libs/PoliTeKDSP/libs/libDaisy/Middlewares/Third_Party/FatFs/src/ff.h"
  4862              		.file 44 "Display/displayHandler.h"
  4863              		.file 45 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 119
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 119
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 displayHandler.cpp
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:14     .rodata.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:84     .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:93     .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:126    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:134    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:317    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:325    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:611    .rodata._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:615    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:623    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000000 _ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:707    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000044 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:623    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000000 _ZN14DisplayHandlerC1EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:714    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:722    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 _ZN14DisplayHandler8SetStateE12DisplayState
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:788    .text._ZN14DisplayHandler8SetStateE12DisplayState:0000002c $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:793    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:801    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 _ZN14DisplayHandler14SetStandbyTextEPKc
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:855    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000028 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:860    .text._ZN14DisplayHandler15pushAudioSampleEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:868    .text._ZN14DisplayHandler15pushAudioSampleEf:00000000 _ZN14DisplayHandler15pushAudioSampleEf
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:901    .text._ZN14DisplayHandler11findTriggerEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:909    .text._ZN14DisplayHandler11findTriggerEv:00000000 _ZN14DisplayHandler11findTriggerEv
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:1039   .text._ZN14DisplayHandler11findTriggerEv:00000084 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:1044   .text._ZN14DisplayHandler12drawWaveFormEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:1052   .text._ZN14DisplayHandler12drawWaveFormEv:00000000 _ZN14DisplayHandler12drawWaveFormEv
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:1513   .text._ZN14DisplayHandler12drawWaveFormEv:000001b0 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:1520   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:1528   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 _ZN14DisplayHandler17drawStandbyScreenEv
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:1678   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000078 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:1684   .text._ZN14DisplayHandler6UpdateEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:1692   .text._ZN14DisplayHandler6UpdateEv:00000000 _ZN14DisplayHandler6UpdateEv
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:1911   .text._ZN14DisplayHandler6UpdateEv:000000cc $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:1916   .rodata._ZN14DisplayHandler12DrawMainMenuEi.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:1935   .text._ZN14DisplayHandler12DrawMainMenuEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:1943   .text._ZN14DisplayHandler12DrawMainMenuEi:00000000 _ZN14DisplayHandler12DrawMainMenuEi
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:2567   .text._ZN14DisplayHandler12DrawMainMenuEi:00000220 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:2579   .rodata._ZN14DisplayHandler18DrawCalibrationHubEi.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:2592   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:2600   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000000 _ZN14DisplayHandler18DrawCalibrationHubEi
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:3133   .text._ZN14DisplayHandler18DrawCalibrationHubEi:000001cc $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:3144   .rodata._ZN14DisplayHandler13DrawScalesHubEi.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:3157   .text._ZN14DisplayHandler13DrawScalesHubEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:3165   .text._ZN14DisplayHandler13DrawScalesHubEi:00000000 _ZN14DisplayHandler13DrawScalesHubEi
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:3789   .text._ZN14DisplayHandler13DrawScalesHubEi:00000220 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:3801   .rodata._ZN14DisplayHandler18DrawFloatParameterEPKcf.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:3808   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:3816   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000000 _ZN14DisplayHandler18DrawFloatParameterEPKcf
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:4214   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000158 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:4224   .rodata._ZN14DisplayHandler16DrawIntParameterEPKci.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:4240   .text._ZN14DisplayHandler16DrawIntParameterEPKci:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:4248   .text._ZN14DisplayHandler16DrawIntParameterEPKci:00000000 _ZN14DisplayHandler16DrawIntParameterEPKci
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:4769   .text._ZN14DisplayHandler16DrawIntParameterEPKci:0000020c $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:4787   .rodata:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:4815   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s:4819   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 _ZZN14DisplayHandler11findTriggerEvE7trigIdx
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccVJbt2h.s 			page 120
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:14     .rodata.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:84     .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:93     .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:126    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:134    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:317    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:325    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:611    .rodata._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:615    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:623    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000000 _ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:707    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000044 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:623    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000000 _ZN14DisplayHandlerC1EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:714    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:722    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 _ZN14DisplayHandler8SetStateE12DisplayState
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:788    .text._ZN14DisplayHandler8SetStateE12DisplayState:0000002c $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:793    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:801    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 _ZN14DisplayHandler14SetStandbyTextEPKc
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:855    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000028 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:860    .text._ZN14DisplayHandler15pushAudioSampleEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:868    .text._ZN14DisplayHandler15pushAudioSampleEf:00000000 _ZN14DisplayHandler15pushAudioSampleEf
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:901    .text._ZN14DisplayHandler11findTriggerEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:909    .text._ZN14DisplayHandler11findTriggerEv:00000000 _ZN14DisplayHandler11findTriggerEv
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:1039   .text._ZN14DisplayHandler11findTriggerEv:00000084 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:1044   .text._ZN14DisplayHandler12drawWaveFormEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:1052   .text._ZN14DisplayHandler12drawWaveFormEv:00000000 _ZN14DisplayHandler12drawWaveFormEv
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:1513   .text._ZN14DisplayHandler12drawWaveFormEv:000001b0 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:1520   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:1528   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 _ZN14DisplayHandler17drawStandbyScreenEv
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:1678   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000078 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:1684   .text._ZN14DisplayHandler6UpdateEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:1692   .text._ZN14DisplayHandler6UpdateEv:00000000 _ZN14DisplayHandler6UpdateEv
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:1911   .text._ZN14DisplayHandler6UpdateEv:000000cc $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:1916   .rodata._ZN14DisplayHandler12DrawMainMenuEi.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:1935   .text._ZN14DisplayHandler12DrawMainMenuEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:1943   .text._ZN14DisplayHandler12DrawMainMenuEi:00000000 _ZN14DisplayHandler12DrawMainMenuEi
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:2567   .text._ZN14DisplayHandler12DrawMainMenuEi:00000220 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:2579   .rodata._ZN14DisplayHandler18DrawCalibrationHubEi.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:2592   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:2600   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000000 _ZN14DisplayHandler18DrawCalibrationHubEi
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:3133   .text._ZN14DisplayHandler18DrawCalibrationHubEi:000001cc $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:3144   .rodata._ZN14DisplayHandler13DrawScalesHubEi.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:3157   .text._ZN14DisplayHandler13DrawScalesHubEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:3165   .text._ZN14DisplayHandler13DrawScalesHubEi:00000000 _ZN14DisplayHandler13DrawScalesHubEi
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:3789   .text._ZN14DisplayHandler13DrawScalesHubEi:00000220 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:3801   .rodata._ZN14DisplayHandler18DrawFloatParameterEPKcf.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:3808   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:3816   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000000 _ZN14DisplayHandler18DrawFloatParameterEPKcf
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:4214   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000158 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:4224   .rodata._ZN14DisplayHandler16DrawIntParameterEPKci.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:4240   .text._ZN14DisplayHandler16DrawIntParameterEPKci:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:4248   .text._ZN14DisplayHandler16DrawIntParameterEPKci:00000000 _ZN14DisplayHandler16DrawIntParameterEPKci
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:4769   .text._ZN14DisplayHandler16DrawIntParameterEPKci:0000020c $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:4787   .rodata:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:4815   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s:4819   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 _ZZN14DisplayHandler11findTriggerEvE7trigIdx
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cctwVSLj.s 			page 120
 
 
 
