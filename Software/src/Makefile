@@ -5,7 +5,7 @@ TARGET = main
 
 # Sources
 
-CPP_SOURCES = main.cpp Display/displayHandler.cpp PSP/AudioEngine.cpp PSP/PlantConditioner.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/FIIR/CapFir.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.cpp ../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp 
+CPP_SOURCES = main.cpp Display/MenuManager.cpp Display/displayHandler.cpp PSP/AudioEngine.cpp PSP/PlantConditioner.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/FIIR/CapFir.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.cpp ../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp 
 
 
 

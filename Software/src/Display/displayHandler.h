@@ -4,7 +4,6 @@
 #pragma once
 
 /// @todo make buffer size statically asserted as a power of 2
-/// @todo improve drawPotValue screen with parameter name
 #include "../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h"
 #include "../../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h"
 
@@ -14,11 +13,10 @@
 using MyOledDisplay = daisy::OledDisplay<daisy::SSD130xI2c128x64Driver>;
 
 // The display is implemented as an FSM
-
 enum class DisplayState : uint8_t {
     STANDBY,
     WAVEFORM_VIEWER,
-    POT_VALUE
+    MENU_MODE // Sospende il disegno automatico per permettere il controllo manuale dei menu
 };
 
 class DisplayHandler {
@@ -39,21 +37,17 @@ private:
     int _writeHead = 0;
     bool _triggerEnabled;
 
-    // might not be needed      
-    float* _potValuePtr;
     const char* _standbyText = "PoliTeK PSP";
 
     int findTrigger();
+    
     /* internal drawing functions */
     void drawStandbyScreen();
     void drawWaveForm();
-
-    // RIGHT NOW IT ONLY SHOWS THE NUMBER
-    void drawPotValue();
     
 public:
 
-    DisplayHandler (MyOledDisplay* displayPtr, bool triggerEnabled = true) ;
+    DisplayHandler (MyOledDisplay* displayPtr, bool triggerEnabled = true);
 
     // Update fsm
     void Update();
@@ -65,5 +59,17 @@ public:
     void SetStandbyText(const char* text);
 
     void pushAudioSample (float sample);
+
+    // --- METODI PUBBLICI PER LA GRAFICA DEI MENU ---
+    // Queste funzioni disegnano direttamente i menu sullo schermo.
+    // L'argomento cursorIndex (es. 0, 1, 2) decide su quale riga disegnare la freccia '>'.
+    
+    void DrawMainMenu(int cursorIndex);
+    void DrawCalibrationHub(int cursorIndex);
+    void DrawScalesHub(int cursorIndex);
+    
+    // Metodi generici per l'editing dei parametri (Foglie)
+    void DrawFloatParameter(const char* paramName, float value);
+    void DrawIntParameter(const char* paramName, int value);
 
 };

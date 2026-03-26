@@ -5,6 +5,7 @@ TARGET = main
 CPP_SOURCES = \
 	main.cpp \
 	displayHandler.cpp \
+	MenuManager.cpp\
 	
 # Percorsi delle librerie standard di libDaisy e DaisySP
 LIBDAISY_DIR = ../../libs/PoliTeKDSP/libs/libDaisy

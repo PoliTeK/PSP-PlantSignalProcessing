@@ -41,7 +41,7 @@ public:
     
     void StateTransition(bool click, int rotation, bool timeout);
     
-    MenuData GetData() const{return _outData};
+    MenuData GetData(){return _outData;}
 
    
 
