@@ -13,6 +13,7 @@ void AudioEngine::Init(float sample_rate) {
     _Amp_env.Init(sample_rate);
     _Filt_env.Init(sample_rate);
     _Filt.Init(sample_rate);
+    _reverb.Init(sample_rate);
 
     _lastGate = false;
     _currentFreq = 440.0f;
@@ -24,7 +25,6 @@ void AudioEngine::Init(float sample_rate) {
 void AudioEngine::SetPreset(SynthPreset preset) {
     _currentPreset = preset;
 
-    // 1. Popolamento delle struct in base al preset
     switch (preset) {
         case PRESET_PAD:
             _osc1Param.Waveform = pad_waveform1;
@@ -38,10 +38,12 @@ void AudioEngine::SetPreset(SynthPreset preset) {
             _lfo1Param.Waveform = lfo_pad_waveform1;
             _lfo1Param.Amp      = lfo_pad_Amp1;
             _lfo1Param.Shape    = lfo_pad_Shape1;
+            _lfo1Param.Freq     = lfo_pad_freq1; // <--- AGGIUNTO
 
             _lfo2Param.Waveform = lfo_pad_waveform2;
             _lfo2Param.Amp      = lfo_pad_Amp2;
             _lfo2Param.Shape    = lfo_pad_Shape2;
+            _lfo2Param.Freq     = lfo_pad_freq2; // <--- AGGIUNTO
 
             _Amp_envParam.Attack  = pad_attack;
             _Amp_envParam.Decay   = pad_decay;
@@ -69,10 +71,12 @@ void AudioEngine::SetPreset(SynthPreset preset) {
             _lfo1Param.Waveform = lfo_pluck_waveform1;
             _lfo1Param.Amp      = lfo_pluck_Amp1;
             _lfo1Param.Shape    = lfo_pluck_Shape1;
+            _lfo1Param.Freq     = lfo_pluck_freq1; // <--- AGGIUNTO
 
             _lfo2Param.Waveform = lfo_pluck_waveform2;
             _lfo2Param.Amp      = lfo_pluck_Amp2;
             _lfo2Param.Shape    = lfo_pluck_Shape2;
+            _lfo2Param.Freq     = lfo_pluck_freq2; // <--- AGGIUNTO
 
             _Amp_envParam.Attack  = pluck_attack;
             _Amp_envParam.Decay   = pluck_decay;
@@ -100,10 +104,12 @@ void AudioEngine::SetPreset(SynthPreset preset) {
             _lfo1Param.Waveform = lfo_lead_waveform1;
             _lfo1Param.Amp      = lfo_lead_Amp1;
             _lfo1Param.Shape    = lfo_lead_Shape1;
+            _lfo1Param.Freq     = lfo_lead_freq1; // <--- AGGIUNTO
 
             _lfo2Param.Waveform = lfo_lead_waveform2;
             _lfo2Param.Amp      = lfo_lead_Amp2;
             _lfo2Param.Shape    = lfo_lead_Shape2;
+            _lfo2Param.Freq     = lfo_lead_freq2; // <--- AGGIUNTO
 
             _Amp_envParam.Attack  = lead_attack;
             _Amp_envParam.Decay   = lead_decay;
@@ -114,7 +120,7 @@ void AudioEngine::SetPreset(SynthPreset preset) {
             _Filt_envParam.Decay   = lead_fdecay;
             _Filt_envParam.Release = lead_frelease;
             _Filt_envParam.Sustain = lead_fsustain;
-            _Filt_envParam.Amp = lead_fAmp;
+            _Filt_envParam.Amp     = lead_fAmp;
 
             _FiltParam.Cutoff    = lead_cutoff_freq;
             _FiltParam.Resonance = lead_res;
@@ -155,6 +161,10 @@ void AudioEngine::SetPreset(SynthPreset preset) {
     
     _Filt.SetFreq(_FiltParam.Cutoff);
     _Filt.SetRes(_FiltParam.Resonance);
+
+    _reverb.SetLpFreq(revLpFreq);
+    _reverb.SetFeedback(revFeedback);
+    
 }
 
 void AudioEngine::Update(ControlsStruct Controls) {
@@ -175,6 +185,7 @@ float AudioEngine::Process() {
     float Fenv_out;
     float sig;
     float filtered_sig;
+    float outL, outR;
 
     switch (_currentPreset)
     {
@@ -207,5 +218,12 @@ float AudioEngine::Process() {
     sig = (_osc1.Process() + _osc2.Process())/2.0f;
     sig *= Amp_env_out;
     filtered_sig = _Filt.Process(sig);
-    return  filtered_sig;
+    
+    _reverb.Process(filtered_sig, filtered_sig, &outL, &outR);
+
+    float final_out = (filtered_sig * (1.0f - revDryWet)) + (outL * revDryWet);
+    
+    return final_out;
+    
 }
+

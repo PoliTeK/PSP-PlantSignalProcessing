@@ -1,22 +1,25 @@
-# Project Name
+# Nome del progetto (questo sarà il nome del file .bin finale)
+TARGET = PlantSynth
 
-#TARGET = PSP
-TARGET = main
+# I file sorgente C++ del tuo progetto
+# (NESSUN file di libDaisy o DaisySP deve essere inserito qui)
+CPP_SOURCES = \
+main.cpp \
+Display/displayHandler.cpp \
+Display/MenuManager.cpp \
+PSP/PlantConditioner.cpp \
+PSP/AudioEngine.cpp\
+../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.cpp \
+../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp
 
-# Sources
-
-CPP_SOURCES = main.cpp Display/MenuManager.cpp Display/displayHandler.cpp PSP/AudioEngine.cpp PSP/PlantConditioner.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/FIIR/CapFir.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.cpp ../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp 
 
 
-
-# Library Locations
+# Percorsi alle librerie (basati sui tuoi #include)
 LIBDAISY_DIR = ../libs/PoliTeKDSP/libs/libDaisy
 DAISYSP_DIR = ../libs/PoliTeKDSP/libs/DaisySP
 
-LDFLAGS = -u _printf_float
-CFLAGS += -DDEBUG_MODE
-CPPFLAGS += -DDEBUG_MODE
+USE_DAISYSP_LGPL = 1
 
-# Core location, and generic Makefile.
+# Percorso ai file di sistema e inclusione del Makefile core di Daisy
 SYSTEM_FILES_DIR = $(LIBDAISY_DIR)/core
 include $(SYSTEM_FILES_DIR)/Makefile

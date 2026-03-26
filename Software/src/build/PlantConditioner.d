@@ -162,6 +162,26 @@ build/PlantConditioner.o: PSP/PlantConditioner.cpp \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/metro.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/samplehold.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/smooth_random.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/daisysp-lgpl.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Control/line.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Dynamics/balance.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Dynamics/compressor.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Effects/bitcrush.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Effects/fold.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Effects/reverbsc.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/allpass.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/atone.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/biquad.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/comb.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/mode.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/moogladder.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/nlfilt.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/tone.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/PhysicalModeling/pluck.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/PhysicalModeling/PolyPluck.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Synthesis/blosc.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/jitter.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/port.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h \
@@ -423,6 +443,26 @@ PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/metro.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/samplehold.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/smooth_random.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/daisysp-lgpl.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Control/line.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Dynamics/balance.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Dynamics/compressor.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Effects/bitcrush.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Effects/fold.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Effects/reverbsc.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/allpass.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/atone.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/biquad.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/comb.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/mode.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/moogladder.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/nlfilt.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Filters/tone.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/PhysicalModeling/pluck.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/PhysicalModeling/PolyPluck.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Synthesis/blosc.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/jitter.h:
+../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/port.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h:

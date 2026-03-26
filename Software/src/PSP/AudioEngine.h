@@ -1,5 +1,7 @@
 #pragma once
 #include "daisysp.h"
+#include "daisysp-lgpl.h"
+
 
 
 
@@ -71,6 +73,8 @@ private:
     Adsr_str _Filt_envParam;
 
     Filter_str _FiltParam;
+
+    daisysp::ReverbSc _reverb;
 
     // Variabili di stato interne
     SynthPreset _currentPreset;
