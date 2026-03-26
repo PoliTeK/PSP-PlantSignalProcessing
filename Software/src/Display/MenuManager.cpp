@@ -1,163 +1,152 @@
 #include "MenuManager.h"
 
 void MenuManager::Init() {
-    _current_state = PLAYMODE;
-    _next_state = MAIN_MENU; // Destinazione di default al primo click
-
-    _outData.state = _current_state;
+    // Inizializziamo direttamente i campi della struct _outData
+    _outData.state = PLAYMODE;
+    _outData.cursor_state = PLAYMODE;
     _outData.delta = 50.0f;
     _outData.curve = 1.0f;
-    _outData.root_note = 0;
-    _outData.scale_type = 0;
+    _outData.root = 0;
+    _outData.scale = 0;
     _outData.octave = 4;
     _outData.preset = 0;
-    _outData.state_just_changed = true;
+
+    _next_state = MAIN_MENU; // Destinazione di default al primo click
 }
 
-void MenuManager::StateTransition(bool click, int rotation) {
-    _outData.state_just_changed = false;
-
-    // --- 1. AGGIORNAMENTO DELLO STATO ---
-    if (click) {
-        // Gestione speciale per la "risalita" dei menu (BACK non è uno stato persistente)
-        if (_next_state == BACK) {
-            if (_current_state == MAIN_MENU) _current_state = PLAYMODE;
-            else if (_current_state == CALIBRATION_HUB || _current_state == SCALE || _current_state == PRESETS_HUB) _current_state = MAIN_MENU;
-        } else {
-            _current_state = _next_state;
-        }
-        
-        _outData.state_just_changed = true;
-        rotation = 0; // Azzera la rotazione nel ciclo del click per evitare salti accidentali
-    }
+void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
     
-    _outData.state = _current_state;
+    // Creiamo una variabile locale per non alterare il parametro in ingresso
+    int current_rotation = rotation;
+
+    // --- 1. AGGIORNAMENTO DELLO STATO (State Register) ---
+    if (timeout) {
+        _outData.state = PLAYMODE;
+        _next_state = MAIN_MENU; 
+    } 
+    else if (click) {
+        // Logica per risalire l'albero quando il cursore è su BACK
+        if (_next_state == BACK) {
+            if (_outData.state == MAIN_MENU) _outData.state = PLAYMODE;
+            else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.state == PRESETS_HUB) _outData.state = MAIN_MENU;
+        } 
+        else {
+            // Normale ingresso nello stato puntato
+            _outData.state = _next_state; 
+        }
+
+        // --- INIZIALIZZAZIONE DEL CURSORE POST-CLICK ---
+        switch (_outData.state) {
+            case PLAYMODE:        _next_state = MAIN_MENU; break;
+            case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
+            case CALIBRATION_HUB: _next_state = DELTA; break;
+            case SCALES_HUB:      _next_state = ROOT; break;
+            default: break; 
+        }
+
+        // Dopo un click, ignoriamo eventuali rotazioni accidentali nello stesso istante
+        current_rotation = 0; 
+    }
 
     // --- 2. RETE DELLE USCITE (Output Logic) ---
-    // Definisce cosa succede ai parametri mentri sei fermo nello stato corrente
-    if (rotation != 0) {
-        switch (_current_state) {
+    if (current_rotation != 0) {
+        switch (_outData.state) {
             case DELTA:
-                _outData.delta += (rotation * 5.0f);
+                _outData.delta += (current_rotation * 5.0f);
                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
                 if (_outData.delta > 100.0f) _outData.delta = 100.0f;
                 break;
 
             case CURVE:
-                _outData.curve += (rotation * 0.1f);
+                _outData.curve += (current_rotation * 0.1f);
                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
                 if (_outData.curve > 2.0f) _outData.curve = 2.0f;
                 break;
 
             case ROOT:
-                _outData.root_note += rotation;
-                if (_outData.root_note < 0) _outData.root_note = 0;
-                if (_outData.root_note > 11) _outData.root_note = 11;
+                _outData.root += current_rotation;
+                if (_outData.root < 0) _outData.root = 0;
+                if (_outData.root > 11) _outData.root = 11;
                 break;
 
             case SCALE:
-                _outData.scale_type += rotation;
-                if (_outData.scale_type < 0) _outData.scale_type = 0;
-                if (_outData.scale_type > 5) _outData.scale_type = 5;
+                _outData.scale += current_rotation;
+                if (_outData.scale < 0) _outData.scale = 0;
+                if (_outData.scale > 5) _outData.scale = 5;
                 break;
 
             case OCTAVE:
-                _outData.octave += rotation;
+                _outData.octave += current_rotation;
                 if (_outData.octave < 1) _outData.octave = 1;
                 if (_outData.octave > 8) _outData.octave = 8;
                 break;
 
             case PRESETS_HUB:
-                // Se i preset si scorrono direttamente nell'hub senza entrare in un sottomenu
-                _outData.preset += rotation;
+                _outData.preset += current_rotation;
                 if (_outData.preset < 0) _outData.preset = 0;
-                if (_outData.preset > 10) _outData.preset = 10;
+                if (_outData.preset > 3) _outData.preset = 3;
                 break;
 
             default:
-                // Negli HUB di navigazione la rotazione non modifica le variabili di uscita
-                break;
+                break; 
         }
     }
 
     // --- 3. RETE DI STATO FUTURO (Next State Logic) ---
-    // Definisce dove andrai al prossimo click. Se c'è una rotazione negli HUB, aggiorna il target.
-    
-    switch (_current_state) {
-        case PLAYMODE:
-            _next_state = MAIN_MENU; // Dal playmode entri sempre nel menu root
-            break;
+    if (current_rotation != 0) {
+        switch (_outData.state) {
+            case MAIN_MENU:
+                if (current_rotation > 0) {
+                    if (_next_state == CALIBRATION_HUB) _next_state = SCALES_HUB;
+                    else if (_next_state == SCALES_HUB) _next_state = PRESETS_HUB;
+                    else if (_next_state == PRESETS_HUB) _next_state = BACK;
+                    else if (_next_state == BACK) _next_state = CALIBRATION_HUB;
+                } else {
+                    if (_next_state == CALIBRATION_HUB) _next_state = BACK;
+                    else if (_next_state == SCALES_HUB) _next_state = CALIBRATION_HUB;
+                    else if (_next_state == PRESETS_HUB) _next_state = SCALES_HUB;
+                    else if (_next_state == BACK) _next_state = PRESETS_HUB;
+                }
+                break;
 
-        case MAIN_MENU:
-            if (click) _next_state = CALIBRATION_HUB; // Inizializzazione al momento dell'ingresso
-            else if (rotation > 0) {
-                if (_next_state == CALIBRATION_HUB) _next_state = SCALES;
-                else if (_next_state == SCALES) _next_state = PRESETS_HUB;
-                else if (_next_state == PRESETS_HUB) _next_state = BACK;
-                else if (_next_state == BACK) _next_state = CALIBRATION_HUB;
-            } else if (rotation < 0) {
-                if (_next_state == CALIBRATION_HUB) _next_state = BACK;
-                else if (_next_state == SCALES) _next_state = CALIBRATION_HUB;
-                else if (_next_state == PRESETS_HUB) _next_state = SCALES;
-                else if (_next_state == BACK) _next_state = PRESETS_HUB;
-            }
-            break;
+            case CALIBRATION_HUB:
+                if (current_rotation > 0) {
+                    if (_next_state == DELTA) _next_state = CURVE;
+                    else if (_next_state == CURVE) _next_state = BACK;
+                    else if (_next_state == BACK) _next_state = DELTA;
+                } else {
+                    if (_next_state == DELTA) _next_state = BACK;
+                    else if (_next_state == CURVE) _next_state = DELTA;
+                    else if (_next_state == BACK) _next_state = CURVE;
+                }
+                break;
 
-        case CALIBRATION_HUB:
-            if (click) _next_state = DELTA;
-            else if (rotation > 0) {
-                if (_next_state == DELTA) _next_state = CURVE;
-                else if (_next_state == CURVE) _next_state = BACK;
-                else if (_next_state == BACK) _next_state = DELTA;
-            } else if (rotation < 0) {
-                if (_next_state == DELTA) _next_state = BACK;
-                else if (_next_state == CURVE) _next_state = DELTA;
-                else if (_next_state == BACK) _next_state = CURVE;
-            }
-            break;
-
-        case SCALES:
-            if (click) _next_state = ROOT;
-            else if (rotation > 0) {
-                if (_next_state == ROOT) _next_state = SCALE;
-                else if (_next_state == SCALE) _next_state = OCTAVE;
-                else if (_next_state == OCTAVE) _next_state = BACK;
-                else if (_next_state == BACK) _next_state = ROOT;
-            } else if (rotation < 0) {
-                if (_next_state == ROOT) _next_state = BACK;
-                else if (_next_state == SCALE) _next_state = ROOT;
-                else if (_next_state == OCTAVE) _next_state = SCALE;
-                else if (_next_state == BACK) _next_state = OCTAVE;
-            }
-            break;
-
-        case DELTA:
-        case CURVE:
-            _next_state = CALIBRATION_HUB; // Dalle foglie si torna al padre
-            break;
-
-        case ROOT:
-        case SCALE:
-        case OCTAVE:
-            _next_state = SCALES; // Dalle foglie si torna al padre
-            break;
-
-        case PRESETS_HUB:
-            _next_state = MAIN_MENU; // Confermando il preset si torna alla radice
-            break;
-            
-        default:
-            break;
+            case SCALES_HUB:
+                if (current_rotation > 0) {
+                    if (_next_state == ROOT) _next_state = SCALE;
+                    else if (_next_state == SCALE) _next_state = OCTAVE;
+                    else if (_next_state == OCTAVE) _next_state = BACK;
+                    else if (_next_state == BACK) _next_state = ROOT;
+                } else {
+                    if (_next_state == ROOT) _next_state = BACK;
+                    else if (_next_state == SCALE) _next_state = ROOT;
+                    else if (_next_state == OCTAVE) _next_state = SCALE;
+                    else if (_next_state == BACK) _next_state = OCTAVE;
+                }
+                break;
+                
+            default:
+                break;
+        }
     }
+
+    // Preparazione statica delle vie d'uscita per le Foglie
+    if (_outData.state == DELTA || _outData.state == CURVE) _next_state = CALIBRATION_HUB;
+    if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state = SCALES_HUB;
+    if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
+
+    // --- 4. PREPARAZIONE DATI IN USCITA ---
+    // Abbiamo già aggiornato i valori dentro _outData, ci manca solo di agganciare il cursore
+    _outData.cursor_state = _next_state;
 }
 
-MenuManager::MenuData MenuManager::GetData() const {
-    // Espone all'esterno l'intera struttura pre-imballata per la lettura
-    MenuData data_to_return = _outData;
-    
-    // Aggiungiamo _next_state al pacchetto di uscita: servirà al Display 
-    // per disegnare il cursore (la freccia di selezione) nel posto giusto.
-    data_to_return.cursor_target = _next_state; 
-    
-    return data_to_return;
-}
