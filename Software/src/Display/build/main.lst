@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   34              		@ link register save eliminated.
   35              	.LBB463:
   36              	.LBI463:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 2
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 2
 
 
   37              		.file 2 "../../libs/PoliTeKDSP/libs/libDaisy/src/dev/codec_ak4556.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   27:../../libs/libDaisy/src/sys/system.h ****             FREQ_400MHZ,
   28:../../libs/libDaisy/src/sys/system.h ****             FREQ_480MHZ,
   29:../../libs/libDaisy/src/sys/system.h ****         };
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 3
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 3
 
 
   30:../../libs/libDaisy/src/sys/system.h **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   84:../../libs/libDaisy/src/sys/system.h ****         } status;
   85:../../libs/libDaisy/src/sys/system.h ****         uint32_t data;
   86:../../libs/libDaisy/src/sys/system.h ****         enum class Version : uint32_t
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 4
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 4
 
 
   87:../../libs/libDaisy/src/sys/system.h ****         {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   38:../../libs/libDaisy/src/hid/usb.h ****     typedef void (*ReceiveCallback)(uint8_t* buff, uint32_t* len);
   39:../../libs/libDaisy/src/hid/usb.h **** 
   40:../../libs/libDaisy/src/hid/usb.h ****     UsbHandle() {}
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 5
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 5
 
 
   41:../../libs/libDaisy/src/hid/usb.h **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   47:../../libs/PoliTeKDSP/libs/libDaisy/src/per/adc.h ****         SPEED_8CYCLES_5,
   48:../../libs/PoliTeKDSP/libs/libDaisy/src/per/adc.h ****         SPEED_16CYCLES_5,
   49:../../libs/PoliTeKDSP/libs/libDaisy/src/per/adc.h ****         SPEED_32CYCLES_5,
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 6
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 6
 
 
   50:../../libs/PoliTeKDSP/libs/libDaisy/src/per/adc.h ****         SPEED_64CYCLES_5,
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  104:../../libs/PoliTeKDSP/libs/libDaisy/src/per/adc.h ****         OVS_512,  /**< & */
  105:../../libs/PoliTeKDSP/libs/libDaisy/src/per/adc.h ****         OVS_1024, /**< & */
  106:../../libs/PoliTeKDSP/libs/libDaisy/src/per/adc.h ****         OVS_LAST, /**< & */
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 7
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 7
 
 
  107:../../libs/PoliTeKDSP/libs/libDaisy/src/per/adc.h ****     };
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/audio.h ****     enum class Result
   46:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/audio.h ****     {
   47:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/audio.h ****         OK,
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 8
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 8
 
 
   48:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/audio.h ****         ERR,
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   76              		.syntax unified
   77              		.thumb
   78              		.thumb_func
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 9
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 9
 
 
   79              		.fpu fpv5-d16
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
    3:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h **** #define DSY_OLED_DISPLAY_H /**< Macro */
    4:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h **** 
    5:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h **** #include "display.h"
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 10
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 10
 
 
    6:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   34:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     size_t CurrentX() { return currentX_; };
   35:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     size_t CurrentY() { return currentY_; };
   36:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 11
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 11
 
 
   37:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     /** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   91:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         DrawRect(rect.GetX(),
   92:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                  rect.GetY(),
   93:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                  rect.GetRight(),
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 12
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 12
 
 
   94:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                  rect.GetBottom(),
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  148:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     virtual char WriteString(const char* str, FontDef font, bool on) = 0;
  149:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
  150:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     /** 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 13
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 13
 
 
  151:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     Similar to WriteString but justified within a bounding box.
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  205:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****  *      class MyDisplayClass : public OneBitGraphicsDisplayImpl<MyDisplayClass> 
  206:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****  *      {
  207:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****  *      public:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 14
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 14
 
 
  208:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****  *          void Fill() override { ... };
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  151              	.LVL4:
  152              		.loc 8 27 65 view .LVU21
  153 0002 7047     		bx	lr
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 15
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 15
 
 
  154              		.cfi_endproc
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
    4:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** 
    5:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** #include "per/i2c.h"
    6:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** #include "per/spi.h"
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 16
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 16
 
 
    7:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** #include "per/gpio.h"
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   61:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** 
   62:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** /**
   63:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****  * 4 Wire SPI Transport for SSD1306 / SSD1309 OLED display devices
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 17
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 17
 
 
   64:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****  */
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  118:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     void SendCommand(uint8_t cmd)
  119:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
  120:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         pin_dc_.Write(0);
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 18
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 18
 
 
  121:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         spi_.BlockingTransmit(&cmd, 1);
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  175:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         pin_mosi_.Write(0);
  176:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** 
  177:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         pin_dc_.Init(config.pin_config.dc, GPIO::Mode::OUTPUT);
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 19
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 19
 
 
  178:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         pin_reset_.Init(config.pin_config.reset, GPIO::Mode::OUTPUT);
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  232:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** template <size_t width, size_t height, typename Transport>
  233:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** class SSD130xDriver
  234:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** {
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 20
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 20
 
 
  235:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****   public:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  289:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****                 // COM Pins
  290:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****                 transport_.SendCommand(0xDA);
  291:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****                 transport_.SendCommand(0x12);
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 21
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 21
 
 
  292:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****                 break;
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  346:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  348:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     }
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 22
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 22
 
 
  349:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   19:main.cpp      **** 
   20:main.cpp      **** // test oscillator
   21:main.cpp      **** static Oscillator osc;
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 23
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 23
 
 
   22:main.cpp      **** 
@@ -1368,41 +1368,40 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  264 000e FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
  265              	.LVL14:
   35:main.cpp      **** 
-  36:main.cpp      ****         // value x2 (second parameter)
-  37:main.cpp      ****         disp_handle.pushAudioSample (oscOut);
- 266              		.loc 11 37 9 is_stmt 1 discriminator 2 view .LVU41
- 267              		.loc 11 37 37 is_stmt 0 discriminator 2 view .LVU42
+  36:main.cpp      ****         disp_handle.pushAudioSample (oscOut);
+ 266              		.loc 11 36 9 is_stmt 1 discriminator 2 view .LVU41
+ 267              		.loc 11 36 37 is_stmt 0 discriminator 2 view .LVU42
  268 0012 0A48     		ldr	r0, .L19+4
  269 0014 FFF7FEFF 		bl	_ZN14DisplayHandler15pushAudioSampleEf
  270              	.LVL15:
-  38:main.cpp      ****         // uncomment to decimate -> frequency displayed is double the true one 
-  39:main.cpp      ****         //  bool decimate;
-  40:main.cpp      ****         //  if (decimate) {
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 24
+  37:main.cpp      ****         // uncomment to decimate -> frequency displayed is double the true one 
+  38:main.cpp      ****         //  bool decimate;
+  39:main.cpp      ****         //  if (decimate) {
+  40:main.cpp      ****         //  // also applies some scale factor
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 24
 
 
-  41:main.cpp      ****         //  // also applies some scale factor
-  42:main.cpp      ****         //  disp_handle.pushAudioSample (oscOut/1.25);
-  43:main.cpp      ****         //  decimate = !decimate;
-  44:main.cpp      ****         // }
-  45:main.cpp      ****         out[i] = out[i + 1] = osc.Process();               
- 271              		.loc 11 45 9 is_stmt 1 discriminator 2 view .LVU43
- 272              		.loc 11 45 42 is_stmt 0 discriminator 2 view .LVU44
+  41:main.cpp      ****         //  disp_handle.pushAudioSample (oscOut/1.25);
+  42:main.cpp      ****         //  decimate = !decimate;
+  43:main.cpp      ****         // }
+  44:main.cpp      ****         out[i] = out[i + 1] = osc.Process();               
+ 271              		.loc 11 44 9 is_stmt 1 discriminator 2 view .LVU43
+ 272              		.loc 11 44 42 is_stmt 0 discriminator 2 view .LVU44
  273 0018 0748     		ldr	r0, .L19
  274 001a FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
  275              	.LVL16:
- 276              		.loc 11 45 16 discriminator 2 view .LVU45
+ 276              		.loc 11 44 16 discriminator 2 view .LVU45
  277 001e 2246     		mov	r2, r4
   32:main.cpp      ****     {
  278              		.loc 11 32 26 discriminator 2 view .LVU46
  279 0020 AE42     		cmp	r6, r5
- 280              		.loc 11 45 29 discriminator 2 view .LVU47
+ 280              		.loc 11 44 29 discriminator 2 view .LVU47
  281 0022 84ED010A 		vstr.32	s0, [r4, #4]
   32:main.cpp      ****     {
  282              		.loc 11 32 26 discriminator 2 view .LVU48
  283 0026 05F10105 		add	r5, r5, #1
  284              	.LVL17:
- 285              		.loc 11 45 16 discriminator 2 view .LVU49
+ 285              		.loc 11 44 16 discriminator 2 view .LVU49
  286 002a 04F10804 		add	r4, r4, #8
  287 002e 82ED000A 		vstr.32	s0, [r2]
   32:main.cpp      ****     {
@@ -1412,9 +1411,9 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  290              		.loc 11 32 26 discriminator 2 view .LVU51
  291 0032 EBD1     		bne	.L10
  292              	.LBE473:
-  46:main.cpp      ****     }
-  47:main.cpp      **** }
- 293              		.loc 11 47 1 is_stmt 0 view .LVU52
+  45:main.cpp      ****     }
+  46:main.cpp      **** }
+ 293              		.loc 11 46 1 is_stmt 0 view .LVU52
  294 0034 70BD     		pop	{r4, r5, r6, pc}
  295              	.LVL19:
  296              	.L16:
@@ -1423,7 +1422,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  299              		.cfi_restore 5
  300              		.cfi_restore 6
  301              		.cfi_restore 14
- 302              		.loc 11 47 1 view .LVU53
+ 302              		.loc 11 46 1 view .LVU53
  303 0036 7047     		bx	lr
  304              	.L20:
  305              		.align	2
@@ -1438,10 +1437,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  315              		.weak	_ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED0Ev
  316              		.syntax unified
  317              		.thumb
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 25
-
-
  318              		.thumb_func
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 25
+
+
  319              		.fpu fpv5-d16
  321              	_ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED0Ev:
  322              	.LVL20:
@@ -1498,10 +1497,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  365              		.thumb
  366              		.thumb_func
  367              		.fpu fpv5-d16
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 26
-
-
  369              	_ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 26
+
+
  370              	.LVL23:
  371              	.LFB5456:
   35:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h **** 
@@ -1558,10 +1557,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  405              	.LBI489:
  355:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
  356:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 27
-
-
  357:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** 
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 27
+
+
  358:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     /**
  359:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****      * Update the display 
  360:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     */
@@ -1618,10 +1617,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  436              		.loc 10 44 17 view .LVU79
  437 0030 8DF80CA0 		strb	r10, [sp, #12]
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 28
-
-
  438              		.loc 10 44 36 view .LVU80
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 28
+
+
  439 0034 8DF80D80 		strb	r8, [sp, #13]
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
  440              		.loc 10 45 9 is_stmt 1 view .LVU81
@@ -1678,10 +1677,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  477 0058 297B     		ldrb	r1, [r5, #12]	@ zero_extendqisi2
  478 005a 0223     		movs	r3, #2
  479 005c 03AA     		add	r2, sp, #12
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 29
-
-
  480 005e 3846     		mov	r0, r7
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 29
+
+
  481 0060 CDF800B0 		str	fp, [sp]
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
  482              		.loc 10 44 17 view .LVU96
@@ -1738,10 +1737,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   53:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
  519              		.loc 10 53 34 is_stmt 0 view .LVU111
  520 008e FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 30
-
-
  521              	.LVL31:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 30
+
+
  522              	.LBE502:
   50:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         {
  523              		.loc 10 50 9 is_stmt 1 view .LVU112
@@ -1798,10 +1797,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  231:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t error  = deltaX - deltaY;
  232:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t error2;
  233:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 31
-
-
  234:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         // If we write "ChildType::DrawPixel(x2, y2, on);", we end up with
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 31
+
+
  235:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         // all sorts of weird compiler errors when the Child class is a template
  236:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         // class. The only way around this is to use this very verbose syntax:
  237:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         ((ChildType*)(this))->ChildType::DrawPixel(x2, y2, on);
@@ -1858,10 +1857,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  288:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                  bool         on) override
  289:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     {
  290:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         // Values to calculate the circle
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 32
-
-
  291:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t t_x, t_y, err, e2;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 32
+
+
  292:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
  293:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         // Temporary values to speed up comparisons
  294:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         float t_sxy, t_syx, t_sxny, t_synx;
@@ -1918,10 +1917,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 t_eyx  = end_y * t_x;
  346:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 t_exny = end_x * -t_y;
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 t_eynx = end_y * -t_x;
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 33
-
-
  348:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 33
+
+
  349:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 if(sweep > 180)
  350:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 {
  351:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                     d1 = (t_sxy - t_synx < 0 || t_exy - t_eynx > 0);
@@ -1978,10 +1977,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  402:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             return 0;
  403:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
  404:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         // Check remaining space on current line
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 34
-
-
  405:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         if(Width() < (currentX_ + font.FontWidth)
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 34
+
+
  406:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****            || Height() < (currentY_ + font.FontHeight))
  407:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         {
  408:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             // Not enough space on current line
@@ -2038,10 +2037,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  581              		.loc 9 440 10 view .LVU122
  582 0006 08AC     		add	r4, sp, #32
  583 0008 9DF84870 		ldrb	r7, [sp, #72]	@ zero_extendqisi2
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 35
-
-
  584 000c 0191     		str	r1, [sp, #4]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 35
+
+
  585 000e 04E90C00 		stmdb	r4, {r2, r3}
  441:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     {
  442:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         // Write until null-byte
@@ -2098,10 +2097,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  627 0054 3368     		ldr	r3, [r6]
  628 0056 594A     		ldr	r2, .L75+4
  629 0058 9B68     		ldr	r3, [r3, #8]
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 36
-
-
  630 005a 9342     		cmp	r3, r2
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 36
+
+
  631 005c 40F09280 		bne	.L69
  632 0060 4020     		movs	r0, #64
  633              	.L36:
@@ -2158,10 +2157,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  674              	.LBB539:
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     }
  675              		.loc 10 347 55 is_stmt 0 view .LVU142
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 37
-
-
  676 00a0 04F00703 		and	r3, r4, #7
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 37
+
+
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     }
  677              		.loc 10 347 49 view .LVU143
  678 00a4 4FF0010E 		mov	lr, #1
@@ -2218,10 +2217,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  720 00c6 7F29     		cmp	r1, #127
  721 00c8 06D8     		bhi	.L42
  722 00ca 3F2C     		cmp	r4, #63
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 38
-
-
  723 00cc 04D8     		bhi	.L42
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 38
+
+
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
  724              		.loc 10 345 42 view .LVU153
  725 00ce 1078     		ldrb	r0, [r2]	@ zero_extendqisi2
@@ -2278,10 +2277,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  766              		.loc 10 342 9 is_stmt 0 view .LVU163
  767 00ea 7F29     		cmp	r1, #127
  768 00ec F4D8     		bhi	.L42
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 39
-
-
  769 00ee 3F2C     		cmp	r4, #63
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 39
+
+
  770 00f0 F2D8     		bhi	.L42
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
  771              		.loc 10 345 42 view .LVU164
@@ -2338,10 +2337,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  814              	.LBE546:
  815              	.LBE551:
  816              	.LBE556:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 40
-
-
  817              	.LBE564:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 40
+
+
  416:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             {
  818              		.loc 9 416 13 is_stmt 1 view .LVU173
  819              	.LVL45:
@@ -2398,10 +2397,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  860              		.loc 9 173 19 view .LVU184
  861 0128 8442     		cmp	r4, r0
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 41
-
-
  862 012a 04D3     		bcc	.L48
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 41
+
+
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  863              		.loc 9 173 44 view .LVU185
  864 012c D368     		ldr	r3, [r2, #12]
@@ -2458,10 +2457,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  445:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             if(((ChildType*)(this))->ChildType::WriteChar(*str, font, on)
  446:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                != *str)
  906              		.loc 9 446 16 view .LVU194
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 42
-
-
  907 015a 019B     		ldr	r3, [sp, #4]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 42
+
+
  908 015c 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  445:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                != *str)
  909              		.loc 9 445 13 view .LVU195
@@ -2518,10 +2517,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  943              		.loc 9 402 20 view .LVU201
  944 017c EDE7     		b	.L33
  945              	.LVL57:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 43
-
-
  946              	.L68:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 43
+
+
  405:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****            || Height() < (currentY_ + font.FontHeight))
  947              		.loc 9 405 17 view .LVU202
  948 017e 3046     		mov	r0, r6
@@ -2578,10 +2577,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  992              		.loc 9 174 19 view .LVU210
  993 01a2 0138     		subs	r0, r0, #1
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 44
-
-
  994 01a4 83B2     		uxth	r3, r0
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 44
+
+
  995 01a6 0293     		str	r3, [sp, #8]
  996              	.LVL67:
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
@@ -2638,10 +2637,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1042              		.loc 9 396 10 is_stmt 0 view .LVU218
  1043 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
  1044              		.cfi_def_cfa_offset 36
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 45
-
-
  1045              		.cfi_offset 4, -36
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 45
+
+
  1046              		.cfi_offset 5, -32
  1047              		.cfi_offset 6, -28
  1048              		.cfi_offset 7, -24
@@ -2698,10 +2697,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1091 0048 9B68     		ldr	r3, [r3, #8]
  1092 004a 9342     		cmp	r3, r2
  1093 004c 40F08880 		bne	.L109
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 46
-
-
  406:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         {
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 46
+
+
  1094              		.loc 9 406 21 view .LVU227
  1095 0050 4020     		movs	r0, #64
  1096              	.L82:
@@ -2758,10 +2757,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1136 0088 0EF00703 		and	r3, lr, #7
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     }
  1137              		.loc 10 347 49 view .LVU239
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 47
-
-
  1138 008c 4FF0010C 		mov	ip, #1
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 47
+
+
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     }
  1139              		.loc 10 347 28 view .LVU240
  1140 0090 4FEADE02 		lsr	r2, lr, #3
@@ -2818,10 +2817,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1183 00b8 04D8     		bhi	.L88
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
  1184              		.loc 10 345 42 view .LVU249
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 48
-
-
  1185 00ba 1578     		ldrb	r5, [r2]	@ zero_extendqisi2
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 48
+
+
  344:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  1186              		.loc 10 344 9 view .LVU250
  1187 00bc 9FB1     		cbz	r7, .L90
@@ -2878,10 +2877,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1229 00da BEF13F0F 		cmp	lr, #63
  1230 00de F1D8     		bhi	.L88
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 49
-
-
  1231              		.loc 10 345 42 view .LVU260
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 49
+
+
  1232 00e0 1578     		ldrb	r5, [r2]	@ zero_extendqisi2
  344:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  1233              		.loc 10 344 9 view .LVU261
@@ -2938,10 +2937,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1277              	.LBE638:
  416:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             {
  1278              		.loc 9 416 13 is_stmt 1 view .LVU269
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 50
-
-
  1279              	.LVL84:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 50
+
+
  416:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             {
  1280              		.loc 9 416 26 view .LVU270
  1281 00f6 EAD1     		bne	.L92
@@ -2998,10 +2997,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1322              	.LVL88:
  1323              	.L94:
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 51
-
-
  1324              		.loc 9 174 34 view .LVU281
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 51
+
+
  1325 0116 9B68     		ldr	r3, [r3, #8]
  1326 0118 204A     		ldr	r2, .L116+4
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
@@ -3058,10 +3057,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1368 014a 05B0     		add	sp, sp, #20
  1369              		.cfi_remember_state
  1370              		.cfi_def_cfa_offset 36
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 52
-
-
  1371              		@ sp needed
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 52
+
+
  1372 014c BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
  1373              	.LVL92:
  1374              	.L112:
@@ -3118,10 +3117,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1417              	.LVL100:
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  1418              		.loc 9 173 44 view .LVU300
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 53
-
-
  1419 0170 D8F80030 		ldr	r3, [r8]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 53
+
+
  1420 0174 CDE7     		b	.L93
  1421              	.LVL101:
  1422              	.L83:
@@ -3178,10 +3177,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1463              	.LBE645:
  1464              	.LBE650:
  1465              		.cfi_endproc
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 54
-
-
  1466              	.LFE5453:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 54
+
+
  1468              		.section	.text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64
  1469              		.align	1
  1470              		.p2align 2,,3
@@ -3238,10 +3237,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  477:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         while(*string++ != '\0')
  478:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             result++;
  479:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         return result;
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 55
-
-
  480:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 55
+
+
  481:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
  482:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     Rectangle GetTextRect(const char* text, const FontDef& font)
  1504              		.loc 9 482 15 is_stmt 1 view .LVU314
@@ -3298,10 +3297,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  460:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                                  const FontDef& font,
  1546              		.loc 9 460 15 view .LVU324
  1547 0016 9DF85060 		ldrb	r6, [sp, #80]	@ zero_extendqisi2
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 56
-
-
  1548 001a 0092     		str	r2, [sp]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 56
+
+
  1549              	.LBB809:
  1550              	.LBB805:
  1551              	.LBB798:
@@ -3358,10 +3357,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   10:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     centered,
   11:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     topLeft,
   12:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     topCentered,
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 57
-
-
   13:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     topRight,
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 57
+
+
   14:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     bottomLeft,
   15:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     bottomCentered,
   16:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     bottomRight,
@@ -3418,10 +3417,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   64:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h **** 
   65:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     Rectangle WithX(int16_t x) const { return {x, y_, width_, height_}; }
   66:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     Rectangle WithY(int16_t y) const { return {x_, y, width_, height_}; }
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 58
-
-
   67:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     Rectangle WithWidth(int16_t width) const
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 58
+
+
   68:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     {
   69:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****         return {x_, y_, width, height_};
   70:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     }
@@ -3478,10 +3477,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  121:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     Rectangle WithRight(int16_t right) const
  122:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     {
  123:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****         const auto newWidth = int16_t(right - x_);
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 59
-
-
  124:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****         return {x_, y_, newWidth, height_};
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 59
+
+
  125:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     }
  126:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h **** 
  127:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     Rectangle WithTop(int16_t top) const
@@ -3538,10 +3537,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  178:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h **** 
  179:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     Rectangle RemoveFromLeft(int16_t pxToRemove)
  180:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     {
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 60
-
-
  181:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****         const auto result = this->WithWidth(min(pxToRemove, width_));
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 60
+
+
  182:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****         x_ += min(pxToRemove, width_);
  183:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****         width_ = max(int16_t(width_ - pxToRemove), 0);
  184:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****         return result;
@@ -3598,10 +3597,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  235:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****             case Alignment::bottomCentered:
  236:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****                 return {int16_t(x_ + (other.GetCenterX() - GetCenterX())),
  237:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****                         int16_t(other.GetBottom() - height_),
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 61
-
-
  238:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****                         width_,
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 61
+
+
  239:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****                         height_};
  240:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****             case Alignment::centeredLeft:
  241:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****                 return {other.x_,
@@ -3658,10 +3657,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1616 0046 0201     		.2byte	(.L131-.L123)/2
  1617 0048 1401     		.2byte	(.L130-.L123)/2
  1618 004a 2001     		.2byte	(.L129-.L123)/2
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 62
-
-
  1619 004c 3401     		.2byte	(.L128-.L123)/2
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 62
+
+
  1620 004e 4201     		.2byte	(.L127-.L123)/2
  1621 0050 5001     		.2byte	(.L126-.L123)/2
  1622 0052 6701     		.2byte	(.L125-.L123)/2
@@ -3718,10 +3717,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1662              		.loc 12 63 13 is_stmt 1 view .LVU351
  1663              	.LBB818:
   63:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h **** 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 63
-
-
  1664              		.loc 12 63 34 view .LVU352
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 63
+
+
   63:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h **** 
  1665              		.loc 12 63 34 is_stmt 0 view .LVU353
  1666              	.LBE818:
@@ -3778,10 +3777,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1708              	.LBB837:
   32:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     {
  1709              		.loc 12 32 66 view .LVU363
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 64
-
-
  1710 0076 C280     		strh	r2, [r0, #6]	@ movhi
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 64
+
+
  1711              	.LBE837:
  1712              	.LBE841:
  1713              	.LBE846:
@@ -3838,10 +3837,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1759              	.LBE1035:
  1760              		.loc 12 261 41 view .LVU372
  1761              	.L132:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 65
-
-
   56:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     int16_t GetY() const { return y_; }
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 65
+
+
  1762              		.loc 12 56 28 view .LVU373
   57:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     int16_t GetWidth() const { return width_; }
  1763              		.loc 12 57 28 view .LVU374
@@ -3898,10 +3897,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1804 00bc 07D8     		bhi	.L146
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  1805              		.loc 9 174 46 view .LVU385
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 66
-
-
  1806 00be D8F80030 		ldr	r3, [r8]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 66
+
+
  1807 00c2 039A     		ldr	r2, [sp, #12]
  1808 00c4 9B68     		ldr	r3, [r3, #8]
  1809 00c6 9342     		cmp	r3, r2
@@ -3958,10 +3957,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1850              	.LBB1088:
  443:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         {
  1851              		.loc 9 443 9 view .LVU396
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 67
-
-
  1852 00e2 BBF1000F 		cmp	fp, #0
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 67
+
+
  1853 00e6 00F0AC80 		beq	.L118
  1854              	.LVL129:
  1855              	.L148:
@@ -4018,10 +4017,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  406:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         {
  1895              		.loc 9 406 37 view .LVU408
  1896 012a 8B18     		adds	r3, r1, r2
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 68
-
-
  406:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         {
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 68
+
+
  1897              		.loc 9 406 12 view .LVU409
  1898 012c 9842     		cmp	r0, r3
  1899 012e C0F21081 		blt	.L152
@@ -4078,10 +4077,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1940              		.loc 10 347 42 view .LVU419
  1941 0176 4FFA8CFC 		sxtb	ip, ip
  1942 017a 03EBC212 		add	r2, r3, r2, lsl #7
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 69
-
-
  1943              	.LBE1049:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 69
+
+
  1944              	.LBE1048:
  1945              	.LBE1047:
  1946              	.LBE1046:
@@ -4138,10 +4137,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  1988              	.LBB1071:
  1989              	.LBB1063:
  1990              	.LBB1058:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 70
-
-
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 70
+
+
  1991              		.loc 10 345 42 view .LVU429
  1992 0194 4CEA0000 		orr	r0, ip, r0
  1993 0198 1070     		strb	r0, [r2]
@@ -4198,10 +4197,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  340:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
  2035              		.loc 10 340 10 is_stmt 1 view .LVU439
  340:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 71
-
-
  2036              		.loc 10 340 10 is_stmt 0 view .LVU440
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 71
+
+
  2037              	.LBE1054:
  2038              	.LBE1059:
  2039              	.LBE1064:
@@ -4258,10 +4257,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2081 01cc F345     		cmp	fp, lr
  2082 01ce 05F10105 		add	r5, r5, #1
  2083 01d2 C3D1     		bne	.L157
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 72
-
-
  2084 01d4 DDF814B0 		ldr	fp, [sp, #20]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 72
+
+
  2085              	.LVL141:
  2086              	.L156:
  2087              	.LBB1075:
@@ -4318,10 +4317,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2128 0200 039A     		ldr	r2, [sp, #12]
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  2129              		.loc 9 173 19 view .LVU460
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 73
-
-
  2130 0202 A8F80450 		strh	r5, [r8, #4]	@ movhi
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 73
+
+
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  2131              		.loc 9 174 9 is_stmt 1 view .LVU461
  2132 0206 9342     		cmp	r3, r2
@@ -4378,10 +4377,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2175              	.L118:
  443:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         {
  2176              		.loc 9 443 9 view .LVU470
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 74
-
-
  2177              	.LBE1088:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 74
+
+
  2178              	.LBE1091:
  471:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
  2179              		.loc 9 471 5 view .LVU471
@@ -4438,10 +4437,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2219 0254 0131     		addlt	r1, r1, #1
   62:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     int16_t GetCenterY() const { return y_ + height_ / 2; }
  2220              		.loc 12 62 44 view .LVU483
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 75
-
-
  2221 0256 07EB6107 		add	r7, r7, r1, asr #1
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 75
+
+
  2222              	.LBE852:
  2223              	.LBE855:
  2224              	.LBB856:
@@ -4498,10 +4497,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2263 026a 0131     		adds	r1, r1, #1
  2264 026c FEE6     		b	.L138
  2265              	.LVL152:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 76
-
-
  2266              	.L130:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 76
+
+
   63:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h **** 
  2267              		.loc 12 63 54 view .LVU496
  2268              	.LBE831:
@@ -4558,10 +4557,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2309              	.LBE868:
  2310              	.LBE873:
  2311              	.LBE878:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 77
-
-
  2312              	.LBE1015:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 77
+
+
  2313              	.LBE1093:
  468:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         ((ChildType*)(this))->ChildType::WriteString(str, font, on);
  2314              		.loc 9 468 18 view .LVU507
@@ -4618,10 +4617,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   34:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h **** 
  2362              		.loc 12 34 5 view .LVU515
  2363              	.LBE876:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 78
-
-
  2364              	.LBE881:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 78
+
+
  220:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****                 return {int16_t(x_ + (other.GetCenterX() - GetCenterX())),
  2365              		.loc 12 220 13 is_stmt 1 view .LVU516
  221:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****                         other.y_,
@@ -4678,10 +4677,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2404              	.LBE885:
  2405              	.LBE889:
  2406              	.LBB890:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 79
-
-
  2407              	.LBB891:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 79
+
+
  2408              	.LBB892:
   32:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     {
  2409              		.loc 12 32 66 view .LVU530
@@ -4738,10 +4737,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2455              	.LBI894:
  2456              		.loc 12 261 13 view .LVU538
  2457              	.LBE894:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 80
-
-
  2458              	.LBE897:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 80
+
+
  2459              	.LBE901:
  2460              	.LBE905:
  2461              	.LBE1020:
@@ -4798,10 +4797,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2501              	.LBE909:
  2502              	.LBE910:
  2503              	.LBB911:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 81
-
-
  2504              	.LBB912:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 81
+
+
  2505              	.LBB913:
   32:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     {
  2506              		.loc 12 32 66 view .LVU551
@@ -4858,10 +4857,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2552              	.LBI915:
  2553              		.loc 12 261 13 view .LVU559
  2554              	.LBE915:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 82
-
-
  2555              	.LBE918:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 82
+
+
  2556              	.LBE922:
  2557              	.LBE926:
  2558              	.LBE1023:
@@ -4918,10 +4917,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2598              		.loc 12 61 33 view .LVU571
   61:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     int16_t GetCenterX() const { return x_ + width_ / 2; }
  2599              		.loc 12 61 33 is_stmt 0 view .LVU572
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 83
-
-
  2600              	.LBE930:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 83
+
+
  2601              	.LBE931:
  2602              	.LBB932:
  2603              	.LBB933:
@@ -4978,10 +4977,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2647              	.LBE1025:
  2648              	.LBE1103:
  2649              		.loc 12 261 41 view .LVU581
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 84
-
-
  2650              	.LBB1104:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 84
+
+
  2651              	.LBB1026:
  2652              	.LBB946:
  2653              	.LBB942:
@@ -5038,10 +5037,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2694              	.LBB953:
  2695              	.LBB950:
   62:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     int16_t GetCenterY() const { return y_ + height_ / 2; }
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 85
-
-
  2696              		.loc 12 62 53 view .LVU594
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 85
+
+
  2697 02e6 B4F90410 		ldrsh	r1, [r4, #4]
  2698              	.LVL174:
   62:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     int16_t GetCenterY() const { return y_ + height_ / 2; }
@@ -5098,10 +5097,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2739              	.LBE959:
  2740              	.LBB973:
  2741              	.LBB957:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 86
-
-
   61:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****     int16_t GetCenterX() const { return x_ + width_ / 2; }
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 86
+
+
  2742              		.loc 12 61 43 view .LVU606
  2743 0304 6444     		add	r4, r4, ip
  2744              	.LBE957:
@@ -5158,10 +5157,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2789              	.LBB971:
  2790              	.LBB967:
  2791              	.LBB963:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 87
-
-
  2792              	.LBI963:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 87
+
+
  2793              		.loc 12 261 13 view .LVU615
  2794              	.LBE963:
  2795              	.LBE967:
@@ -5218,10 +5217,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  240:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****                 return {other.x_,
  2837              		.loc 12 240 13 is_stmt 1 view .LVU626
  241:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h ****                         int16_t(y_ + (other.GetCenterY() - GetCenterY())),
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 88
-
-
  2838              		.loc 12 241 17 view .LVU627
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 88
+
+
  2839              	.LBB981:
  2840              	.LBB982:
   63:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h **** 
@@ -5278,10 +5277,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2880 0338 B8BF     		it	lt
  2881 033a 0131     		addlt	r1, r1, #1
  2882              	.LBE984:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 89
-
-
  2883              	.LBE1003:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 89
+
+
  2884              	.LBB1004:
  2885              	.LBB998:
  2886              	.LBB994:
@@ -5338,10 +5337,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2929              		.loc 12 261 13 is_stmt 1 view .LVU648
  2930              	.LBE992:
  2931              	.LBE996:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 90
-
-
  2932              	.LBE1000:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 90
+
+
  2933              	.LBE1007:
  2934              	.LBE1030:
  2935              	.LBE1108:
@@ -5398,10 +5397,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  2981              	.L198:
  406:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         {
  2982              		.loc 9 406 21 view .LVU657
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 91
-
-
  2983 035e 4046     		mov	r0, r8
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 91
+
+
  2984 0360 9847     		blx	r3
  2985              	.LVL191:
  2986 0362 DEE6     		b	.L153
@@ -5458,10 +5457,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3029              	.L201:
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  3030              		.loc 9 173 43 view .LVU666
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 92
-
-
  3031 0386 4046     		mov	r0, r8
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 92
+
+
  3032 0388 9847     		blx	r3
  3033              	.LVL201:
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
@@ -5518,10 +5517,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   24:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h **** 
  3075              		.loc 12 24 53 view .LVU677
  3076 039a 069A     		ldr	r2, [sp, #24]
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 93
-
-
  3077 039c 1249     		ldr	r1, .L206
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 93
+
+
  3078              	.LVL205:
   24:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h **** 
  3079              		.loc 12 24 53 view .LVU678
@@ -5578,10 +5577,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3119 03c2 9342     		cmp	r3, r2
  3120 03c4 0392     		str	r2, [sp, #12]
  3121 03c6 3FF482AE 		beq	.L146
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 94
-
-
  3122              	.LVL210:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 94
+
+
  3123              	.L172:
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  3124              		.loc 9 174 33 is_stmt 0 view .LVU690
@@ -5638,10 +5637,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3171              	.LFB5449:
   42:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****     {
  3172              		.loc 8 42 10 is_stmt 1 view -0
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 95
-
-
  3173              		.cfi_startproc
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 95
+
+
  3174              		@ args = 0, pretend = 0, frame = 0
  3175              		@ frame_needed = 0, uses_anonymous_args = 0
  3176              		@ link register save eliminated.
@@ -5698,10 +5697,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3215 0026 D308     		lsrs	r3, r2, #3
  3216              	.LVL219:
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     }
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 96
-
-
  3217              		.loc 10 347 49 view .LVU710
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 96
+
+
  3218 0028 4FF0010C 		mov	ip, #1
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     }
  3219              		.loc 10 347 55 view .LVU711
@@ -5758,10 +5757,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3264              		.cfi_offset 4, -36
  3265              		.cfi_offset 5, -32
  3266              		.cfi_offset 6, -28
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 97
-
-
  3267              		.cfi_offset 7, -24
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 97
+
+
  3268              		.cfi_offset 8, -20
  3269              		.cfi_offset 9, -16
  3270              		.cfi_offset 10, -12
@@ -5818,10 +5817,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3309              		.loc 8 42 10 is_stmt 1 discriminator 4 view .LVU731
  3310              	.LBB1141:
  3311              	.LBI1141:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 98
-
-
  340:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 98
+
+
  3312              		.loc 10 340 10 discriminator 4 view .LVU732
  3313              	.LBE1141:
  3314              	.LBE1140:
@@ -5878,10 +5877,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3354              	.LVL229:
  3355              	.L214:
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 99
-
-
  3356              		.loc 10 345 42 view .LVU744
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 99
+
+
  3357              	.LBE1147:
  3358              	.LBE1152:
  3359              	.LBE1158:
@@ -5938,10 +5937,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3398 0090 0EFA0BFE 		lsl	lr, lr, fp
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
  3399              		.loc 10 345 42 view .LVU757
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 100
-
-
  3400 0094 95F810B0 		ldrb	fp, [r5, #16]	@ zero_extendqisi2
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 100
+
+
  3401 0098 4EEA0B0E 		orr	lr, lr, fp
  3402 009c 85F810E0 		strb	lr, [r5, #16]
  3403              	.L221:
@@ -5998,10 +5997,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3442              	.L211:
  255:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
  3443              		.loc 9 255 5 view .LVU770
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 101
-
-
  3444 00c2 03B0     		add	sp, sp, #12
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 101
+
+
  3445              		.cfi_remember_state
  3446              		.cfi_def_cfa_offset 36
  3447              		@ sp needed
@@ -6058,10 +6057,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  230:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t error  = deltaX - deltaY;
  3490              		.loc 9 230 42 view .LVU779
  3491 00de 0195     		str	r5, [sp, #4]
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 102
-
-
  3492              	.LBB1169:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 102
+
+
  3493              	.LBB1155:
  3494              	.LBB1149:
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
@@ -6118,10 +6117,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3539              		.align	1
  3540              		.p2align 2,,3
  3541              		.weak	_ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 103
-
-
  3542              		.syntax unified
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 103
+
+
  3543              		.thumb
  3544              		.thumb_func
  3545              		.fpu fpv5-d16
@@ -6178,10 +6177,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3591              	.LVL245:
  313:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
  3592              		.loc 9 313 27 view .LVU794
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 104
-
-
  3593 0022 1344     		add	r3, r3, r2
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 104
+
+
  3594 0024 06EE103A 		vmov	s12, r3	@ int
  3595              	.LVL246:
  3596              	.L240:
@@ -6238,10 +6237,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   23:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** // <http://www.gnu.org/licenses/>.
   24:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
   25:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** /** @file include/cmath
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 105
-
-
   26:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****  *  This is a Standard C++ Library file.  You should @c \#include this file
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 105
+
+
   27:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****  *  in your programs, rather than any of the @a *.h implementation files.
   28:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****  *
   29:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****  *  This is the C++ version of the Standard C Library header @c math.h,
@@ -6298,10 +6297,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   80:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** {
   81:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
   82:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 106
-
-
   83:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::acos;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 106
+
+
   84:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
   85:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
   86:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
@@ -6358,10 +6357,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  137:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     atan(_Tp __x)
  138:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_atan(__x); }
  139:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 107
-
-
  140:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::atan2;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 107
+
+
  141:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
  142:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
  143:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
@@ -6418,10 +6417,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3625              		.loc 9 315 17 view .LVU804
  3626 0058 07EE907A 		vmov	s15, r7	@ int
  313:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 108
-
-
  3627              		.loc 9 313 25 view .LVU805
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 108
+
+
  3628 005c B7EECAAB 		vcvt.f32.f64	s20, d10
  3629              	.LVL249:
  3630              	.LBB1207:
@@ -6478,10 +6477,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  217:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
  218:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::exp;
  219:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 109
-
-
  220:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 109
+
+
  221:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
  222:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   exp(float __x)
  223:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_expf(__x); }
@@ -6538,10 +6537,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  274:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
  275:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::fmod;
  276:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 110
-
-
  277:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 110
+
+
  278:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
  279:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   fmod(float __x, float __y)
  280:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_fmodf(__x, __y); }
@@ -6598,10 +6597,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  331:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     ldexp(_Tp __x, int __exp)
  332:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****     { return __builtin_ldexp(__x, __exp); }
  333:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 111
-
-
  334:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   using ::log;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 111
+
+
  335:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
  336:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
  337:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR float
@@ -6658,10 +6657,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  388:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   pow(float __x, float __y)
  389:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_powf(__x, __y); }
  390:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 112
-
-
  391:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   inline _GLIBCXX_CONSTEXPR long double
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 112
+
+
  392:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   pow(long double __x, long double __y)
  393:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath ****   { return __builtin_powl(__x, __y); }
  394:c:\program files\daisytoolchain\arm-none-eabi\include\c++\10.2.1\cmath **** 
@@ -6718,10 +6717,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3664              	.LBE1213:
  3665              	.LBE1212:
  3666              	.LBB1215:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 113
-
-
  3667              	.LBB1216:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 113
+
+
  3668              		.loc 13 426 26 view .LVU814
  3669 0080 B0EE4A0A 		vmov.f32	s0, s20
  3670 0084 FFF7FEFF 		bl	sinf
@@ -6778,10 +6777,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3710              		.loc 9 321 19 view .LVU829
  3711 009c 39EE487A 		vsub.f32	s14, s18, s16
  322:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****            < 2.0f)
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 114
-
-
  3712              		.loc 9 322 36 view .LVU830
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 114
+
+
  3713 00a0 67EEA77A 		vmul.f32	s15, s15, s15
  322:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****            < 2.0f)
  3714              		.loc 9 322 16 view .LVU831
@@ -6838,10 +6837,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  338:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             {
  3753              		.loc 9 338 13 view .LVU844
  3754 00d8 B9F1000F 		cmp	r9, #0
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 115
-
-
  3755 00dc 6AD1     		bne	.L243
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 115
+
+
  343:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 t_exy  = end_x * t_y;
  3756              		.loc 9 343 34 view .LVU845
  3757 00de 4242     		rsbs	r2, r0, #0
@@ -6898,10 +6897,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3792 0118 26EEA85A 		vmul.f32	s10, s13, s17
  3793              	.LVL263:
  344:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 t_eyx  = end_y * t_x;
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 116
-
-
  3794              		.loc 9 344 24 view .LVU862
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 116
+
+
  3795 011c 26EE096A 		vmul.f32	s12, s12, s18
  3796              	.LVL264:
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 t_exny = end_x * -t_y;
@@ -6958,10 +6957,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  353:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                     d4 = (t_sxny - t_synx < 0 || t_exny - t_eynx > 0);
  3835              		.loc 9 353 34 discriminator 2 view .LVU876
  3836 0162 35EEC55A 		vsub.f32	s10, s11, s10
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 117
-
-
  3837              	.LVL271:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 117
+
+
  352:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                     d3 = (t_sxny - t_syx < 0 || t_exny - t_eyx > 0);
  3838              		.loc 9 352 45 discriminator 2 view .LVU877
  3839 0166 B5EEC06A 		vcmpe.f32	s12, #0
@@ -7018,10 +7017,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3880 01b0 0124     		movgt	r4, #1
  3881              	.LVL278:
  361:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 }
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 118
-
-
  3882              		.loc 9 361 47 discriminator 1 view .LVU888
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 118
+
+
  3883 01b2 0024     		movle	r4, #0
  3884              	.LVL279:
  3885              	.L243:
@@ -7078,10 +7077,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  3924 01de 7346     		mov	r3, lr
  3925              	.LVL284:
  3926              	.L265:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 119
-
-
  393:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 119
+
+
  3927              		.loc 9 393 21 is_stmt 1 view .LVU901
  3928 01e0 0028     		cmp	r0, #0
  3929 01e2 7FF779AF 		ble	.L267
@@ -7138,10 +7137,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
  3972              		.loc 10 345 42 view .LVU910
  3973 020c 0AEBCB1A 		add	r10, r10, fp, lsl #7
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 120
-
-
  3974              	.LVL289:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 120
+
+
  344:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  3975              		.loc 10 344 9 view .LVU911
  3976 0210 002D     		cmp	r5, #0
@@ -7198,10 +7197,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4016 0248 BBD8     		bhi	.L261
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
  4017              		.loc 10 345 28 view .LVU923
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 121
-
-
  4018 024a 4FEADE0B 		lsr	fp, lr, #3
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 121
+
+
  344:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  4019              		.loc 10 344 9 view .LVU924
  4020 024e 019D     		ldr	r5, [sp, #4]
@@ -7258,10 +7257,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4059 027a 9E46     		mov	lr, r3
  4060              	.LVL296:
  388:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             {
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 122
-
-
  4061              		.loc 9 388 13 view .LVU937
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 122
+
+
  4062 027c AFDA     		bge	.L279
  4063              	.LVL297:
  4064              	.L264:
@@ -7318,10 +7317,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
  4103              		.loc 10 345 54 view .LVU950
  4104 02ac 0EF0070B 		and	fp, lr, #7
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 123
-
-
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 123
+
+
  4105              		.loc 10 345 42 view .LVU951
  4106 02b0 C244     		add	r10, r10, r8
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
@@ -7378,10 +7377,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
  4147              		.loc 10 345 42 view .LVU963
  4148 02ee 0AEBCB1A 		add	r10, r10, fp, lsl #7
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 124
-
-
  4149              	.LVL305:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 124
+
+
  344:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  4150              		.loc 10 344 9 view .LVU964
  4151 02f2 002D     		cmp	r5, #0
@@ -7438,10 +7437,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4191 032e 0021     		movs	r1, #0
  4192              	.LVL311:
  4193              	.L250:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 125
-
-
  360:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                     d4 = (t_sxny - t_synx < 0 && t_exny - t_eynx > 0);
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 125
+
+
  4194              		.loc 9 360 34 discriminator 6 view .LVU976
  4195 0330 35EEC55A 		vsub.f32	s10, s11, s10
  4196              	.LVL312:
@@ -7498,10 +7497,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4237              	.L260:
  4238              	.LBB1252:
  4239              	.LBB1227:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 126
-
-
  4240              	.LBB1226:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 126
+
+
  4241              	.LBB1224:
  4242              	.LBI1224:
  340:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
@@ -7558,10 +7557,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4283              	.LVL325:
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     }
  4284              		.loc 10 347 55 view .LVU997
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 127
-
-
  4285 039a 0EF0070E 		and	lr, lr, #7
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 127
+
+
  4286              	.LVL326:
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     }
  4287              		.loc 10 347 49 view .LVU998
@@ -7618,10 +7617,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     }
  4329              		.loc 10 347 42 view .LVU1008
  4330 03d0 F7E6     		b	.L261
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 128
-
-
  4331              	.LVL333:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 128
+
+
  4332              	.L256:
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     }
  4333              		.loc 10 347 42 view .LVU1009
@@ -7678,10 +7677,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4375 03f4 77EEE66A 		vsub.f32	s13, s15, s13
  4376              	.LVL339:
  360:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                     d4 = (t_sxny - t_synx < 0 && t_exny - t_eynx > 0);
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 129
-
-
  4377              		.loc 9 360 46 discriminator 1 view .LVU1019
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 129
+
+
  4378 03f8 F5EEC06A 		vcmpe.f32	s13, #0
  4379 03fc F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  4380 0400 CCBF     		ite	gt
@@ -7738,10 +7737,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4422 043a 74EEC54A 		vsub.f32	s9, s9, s10
  4423              	.LVL347:
  351:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                     d2 = (t_sxy - t_syx < 0 || t_exy - t_eyx > 0);
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 130
-
-
  4424              		.loc 9 351 46 view .LVU1029
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 130
+
+
  4425 043e 0122     		movs	r2, #1
  4426              	.LVL348:
  352:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                     d3 = (t_sxny - t_syx < 0 || t_exny - t_eyx > 0);
@@ -7798,10 +7797,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4467 0474 D8E5     		b	.L240
  4468              		.cfi_endproc
  4469              	.LFE5452:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 131
-
-
  4471 0476 00BF     		.section	.text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 131
+
+
  4472              		.align	1
  4473              		.p2align 2,,3
  4474              		.weak	_ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD
@@ -7858,10 +7857,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4520              	.L321:
  4521              	.LBB1449:
  268:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 {
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 132
-
-
  4522              		.loc 9 268 44 view .LVU1047
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 132
+
+
  4523 001c A242     		cmp	r2, r4
  4524 001e 28D8     		bhi	.L324
  4525              	.LBB1450:
@@ -7918,10 +7917,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4567 0044 F8D1     		bne	.L322
  4568              	.LVL365:
  4569              	.LBB1453:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 133
-
-
  4570              	.LBI1453:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 133
+
+
  340:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
  4571              		.loc 10 340 10 is_stmt 1 view .LVU1057
  340:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
@@ -7978,10 +7977,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4612              	.LBE1467:
  268:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 {
  4613              		.loc 9 268 44 view .LVU1069
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 134
-
-
  4614 006a B442     		cmp	r4, r6
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 134
+
+
  4615              	.LBB1468:
  4616              	.LBB1465:
  4617              	.LBB1462:
@@ -8038,10 +8037,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  221:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                   uint_fast8_t y1,
  4659              		.loc 9 221 10 is_stmt 1 view .LVU1079
  4660              	.LBB1327:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 135
-
-
  227:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t deltaY = abs((int_fast16_t)y2 - (int_fast16_t)y1);
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 135
+
+
  4661              		.loc 9 227 52 is_stmt 0 view .LVU1080
  4662 007e A3EB0108 		sub	r8, r3, r1
  227:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t deltaY = abs((int_fast16_t)y2 - (int_fast16_t)y1);
@@ -8098,10 +8097,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4703 00aa A6B9     		cbnz	r6, .L327
  4704 00ac 9FB9     		cbnz	r7, .L327
  4705              	.LVL374:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 136
-
-
  4706              	.L368:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 136
+
+
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
  4707              		.loc 10 345 28 view .LVU1092
  4708 00ae D608     		lsrs	r6, r2, #3
@@ -8158,10 +8157,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4749              	.LBI1343:
  340:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
  4750              		.loc 10 340 10 view .LVU1103
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 137
-
-
  4751              	.LBB1344:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 137
+
+
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
  4752              		.loc 10 342 9 is_stmt 0 view .LVU1104
  4753 00e2 BEF17F0F 		cmp	lr, #127
@@ -8218,10 +8217,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4792 0120 4644     		add	r6, r6, r8
  4793              	.LVL381:
  252:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             }
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 138
-
-
  4794              		.loc 9 252 20 view .LVU1117
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 138
+
+
  4795 0122 0CF1FF3C 		add	ip, ip, #-1
  4796              	.LVL382:
  4797              	.L336:
@@ -8278,10 +8277,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4839 0148 0126     		movhi	r6, #1
  4840              	.LBE1364:
  4841              	.LBE1370:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 139
-
-
  4842              	.LBE1376:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 139
+
+
  230:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t error  = deltaX - deltaY;
  4843              		.loc 9 230 42 view .LVU1127
  4844 014a A242     		cmp	r2, r4
@@ -8338,10 +8337,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4885              		.loc 10 344 9 view .LVU1137
  4886 0170 002D     		cmp	r5, #0
  4887 0172 00F01E81 		beq	.L339
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 140
-
-
  4888              	.LVL388:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 140
+
+
  4889              	.L411:
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
  4890              		.loc 10 345 48 view .LVU1138
@@ -8398,10 +8397,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
  4932              		.loc 10 345 28 view .LVU1148
  4933 01a6 4FEAD60E 		lsr	lr, r6, #3
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 141
-
-
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 141
+
+
  4934              		.loc 10 345 54 view .LVU1149
  4935 01aa 06F0070B 		and	fp, r6, #7
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
@@ -8458,10 +8457,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  4974 01e4 009A     		ldr	r2, [sp]
  4975 01e6 1644     		add	r6, r6, r2
  4976              	.LVL396:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 142
-
-
  4977              	.L347:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 142
+
+
  239:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         {
  4978              		.loc 9 239 26 is_stmt 1 view .LVU1163
  4979 01e8 BB42     		cmp	r3, r7
@@ -8518,10 +8517,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5022              	.LBI1396:
  340:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
  5023              		.loc 10 340 10 view .LVU1172
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 143
-
-
  5024              	.LBB1400:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 143
+
+
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
  5025              		.loc 10 342 9 is_stmt 0 view .LVU1173
  5026 0218 BAF1000F 		cmp	r10, #0
@@ -8578,10 +8577,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5065              		.loc 8 42 10 is_stmt 1 view .LVU1185
  5066              	.LBB1406:
  5067              	.LBI1406:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 144
-
-
  340:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 144
+
+
  5068              		.loc 10 340 10 view .LVU1186
  5069              	.LBB1407:
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
@@ -8638,10 +8637,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5108 0284 E645     		cmp	lr, ip
  5109 0286 01DD     		ble	.L357
  251:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 y1 += signY;
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 145
-
-
  5110              		.loc 9 251 23 view .LVU1200
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 145
+
+
  5111 0288 7744     		add	r7, r7, lr
  5112              	.LVL405:
  252:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             }
@@ -8698,10 +8697,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5153              		.loc 10 340 10 view .LVU1211
  5154              	.LBB1420:
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 146
-
-
  5155              		.loc 10 342 9 is_stmt 0 view .LVU1212
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 146
+
+
  5156 02b2 BAF1000F 		cmp	r10, #0
  5157 02b6 0ED1     		bne	.L359
  5158 02b8 029B     		ldr	r3, [sp, #8]
@@ -8758,10 +8757,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5198              	.LBB1427:
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
  5199              		.loc 10 342 9 is_stmt 0 view .LVU1224
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 147
-
-
  5200 02e2 7F2B     		cmp	r3, #127
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 147
+
+
  5201 02e4 12D8     		bhi	.L363
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
  5202              		.loc 10 342 9 view .LVU1225
@@ -8818,10 +8817,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5240              	.LVL416:
  5241              	.L365:
  249:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             {
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 148
-
-
  5242              		.loc 9 249 13 view .LVU1239
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 148
+
+
  5243 031c 07B1     		cbz	r7, .L366
  252:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             }
  5244              		.loc 9 252 20 view .LVU1240
@@ -8878,10 +8877,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5287 0338 0126     		movhi	r6, #1
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
  5288              		.loc 10 342 14 view .LVU1249
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 149
-
-
  5289 033a 7F2B     		cmp	r3, #127
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 149
+
+
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
  5290              		.loc 10 342 28 view .LVU1250
  5291 033c 0296     		str	r6, [sp, #8]
@@ -8938,10 +8937,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5335              	.LBE1414:
  5336              	.LBE1437:
  5337              	.LBB1438:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 150
-
-
  5338              	.LBB1434:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 150
+
+
  5339              	.LBB1432:
  5340              	.LBB1431:
  5341              	.LBB1430:
@@ -8998,10 +8997,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5384              	.LBE1347:
  5385              	.LBE1348:
  5386              	.LBE1351:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 151
-
-
  5387              	.LBE1354:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 151
+
+
  5388              	.LBE1439:
  5389              	.LBB1440:
  5390              	.LBB1390:
@@ -9058,10 +9057,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  344:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  5433              		.loc 10 344 9 view .LVU1274
  5434 03ac 002D     		cmp	r5, #0
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 152
-
-
  5435 03ae 7FF4E2AE 		bne	.L411
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 152
+
+
  5436              	.LVL424:
  5437              	.L339:
  5438              	.LBB1362:
@@ -9118,10 +9117,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5479 03d2 1E74     		strb	r6, [r3, #16]
  5480 03d4 7FE7     		b	.L359
  5481              	.LVL426:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 153
-
-
  5482              	.L350:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 153
+
+
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     }
  5483              		.loc 10 347 42 view .LVU1285
  5484              	.LBE1422:
@@ -9178,10 +9177,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5528              		.loc 10 340 10 is_stmt 1 view .LVU1292
  5529              	.LBB1332:
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     }
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 154
-
-
  5530              		.loc 10 347 49 is_stmt 0 view .LVU1293
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 154
+
+
  5531 03ea 07FA0CFC 		lsl	ip, r7, ip
  347:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     }
  5532              		.loc 10 347 42 view .LVU1294
@@ -9238,10 +9237,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5577              	.LBB1446:
  5578              	.LBB1392:
  239:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         {
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 155
-
-
  5579              		.loc 9 239 33 view .LVU1301
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 155
+
+
  5580 0410 0126     		movs	r6, #1
  5581 0412 0196     		str	r6, [sp, #4]
  5582 0414 EDE6     		b	.L340
@@ -9298,10 +9297,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5629 0008 4FF47A76 		mov	r6, #1000
  5630              	.LBE1524:
  5631              	.LBE1523:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 156
-
-
  241:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 156
+
+
  5632              		.loc 10 241 10 view .LVU1308
  5633 000c 09AD     		add	r5, sp, #36
  5634 000e 85E80E00 		stm	r5, {r1, r2, r3}
@@ -9358,10 +9357,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5672              		.loc 10 45 9 is_stmt 1 view .LVU1321
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
  5673              		.loc 10 45 30 is_stmt 0 view .LVU1322
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 157
-
-
  5674 002a 2046     		mov	r0, r4
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 157
+
+
  5675 002c 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
  5676 002e 0223     		movs	r3, #2
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
@@ -9418,10 +9417,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
  5714              		.loc 10 44 9 view .LVU1337
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 158
-
-
  5715              		.loc 10 44 36 is_stmt 0 view .LVU1338
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 158
+
+
  5716 0050 8023     		movs	r3, #128
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
  5717              		.loc 10 45 30 view .LVU1339
@@ -9478,10 +9477,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
  5754              		.loc 10 45 30 view .LVU1354
  5755 007c FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 159
-
-
  5756              	.LVL438:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 159
+
+
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
  5757              		.loc 10 45 30 view .LVU1355
  5758              	.LBE1536:
@@ -9538,10 +9537,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5795 009e 2046     		mov	r0, r4
  5796 00a0 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 160
-
-
  5797              		.loc 10 44 36 view .LVU1370
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 160
+
+
  5798 00a2 8DF80D30 		strb	r3, [sp, #13]
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
  5799              		.loc 10 45 9 is_stmt 1 view .LVU1371
@@ -9598,10 +9597,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5836              	.LBI1543:
   42:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
  5837              		.loc 10 42 10 is_stmt 1 view .LVU1386
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 161
-
-
  5838              	.LBB1544:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 161
+
+
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
  5839              		.loc 10 44 9 view .LVU1387
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
@@ -9658,10 +9657,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5876              		.loc 10 45 30 is_stmt 0 view .LVU1402
  5877 00f2 FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
  5878              	.LVL443:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 162
-
-
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 162
+
+
  5879              		.loc 10 45 30 view .LVU1403
  5880              	.LBE1546:
  5881              	.LBE1545:
@@ -9718,10 +9717,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  5918 0116 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
  5919              		.loc 10 44 36 view .LVU1418
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 163
-
-
  5920 0118 8DF80D30 		strb	r3, [sp, #13]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 163
+
+
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
  5921              		.loc 10 45 9 is_stmt 1 view .LVU1419
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
@@ -9778,10 +9777,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   42:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
  5959              		.loc 10 42 10 is_stmt 1 view .LVU1434
  5960              	.LBB1554:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 164
-
-
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 164
+
+
  5961              		.loc 10 44 9 view .LVU1435
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
  5962              		.loc 10 44 36 is_stmt 0 view .LVU1436
@@ -9838,10 +9837,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
  5999              		.loc 10 44 17 view .LVU1451
  6000 0166 8DF80C50 		strb	r5, [sp, #12]
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 165
-
-
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 165
+
+
  6001              		.loc 10 45 30 view .LVU1452
  6002 016a FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
  6003              	.LVL448:
@@ -9898,10 +9897,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6039              		.loc 10 45 30 view .LVU1467
  6040 0188 03AA     		add	r2, sp, #12
  6041 018a 0096     		str	r6, [sp]
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 166
-
-
  6042 018c 2046     		mov	r0, r4
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 166
+
+
  6043 018e 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
  6044              		.loc 10 44 36 view .LVU1468
@@ -9958,10 +9957,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6080              	.LBE1562:
  6081              	.LBE1561:
  6082              	.LBB1563:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 167
-
-
  6083              	.LBI1563:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 167
+
+
   42:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
  6084              		.loc 10 42 10 is_stmt 1 view .LVU1484
  6085              	.LBB1564:
@@ -10018,10 +10017,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6121              		.loc 10 45 9 is_stmt 1 view .LVU1499
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
  6122              		.loc 10 45 30 is_stmt 0 view .LVU1500
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 168
-
-
  6123 01dc 0223     		movs	r3, #2
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 168
+
+
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
  6124              		.loc 10 44 17 view .LVU1501
  6125 01de 8DF80C50 		strb	r5, [sp, #12]
@@ -10078,10 +10077,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
  6162              		.loc 10 44 36 is_stmt 0 view .LVU1516
  6163 01fe DB23     		movs	r3, #219
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 169
-
-
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 169
+
+
  6164              		.loc 10 45 30 view .LVU1517
  6165 0200 03AA     		add	r2, sp, #12
  6166 0202 0096     		str	r6, [sp]
@@ -10138,10 +10137,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6202 022a FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
  6203              	.LVL456:
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 170
-
-
  6204              		.loc 10 45 30 view .LVU1533
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 170
+
+
  6205              	.LBE1572:
  6206              	.LBE1571:
  6207              	.LBB1573:
@@ -10198,10 +10197,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6246 024e 7047     		bx	lr
  6247              		.cfi_endproc
  6248              	.LFE5301:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 171
-
-
  6250              		.section	.text.startup.main,"ax",%progbits
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 171
+
+
  6251              		.align	1
  6252              		.p2align 2,,3
  6253              		.global	main
@@ -10211,29 +10210,29 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6257              		.fpu fpv5-d16
  6259              	main:
  6260              	.LFB4855:
-  48:main.cpp      **** 
-  49:main.cpp      **** int main (){
- 6261              		.loc 11 49 12 is_stmt 1 view -0
+  47:main.cpp      **** 
+  48:main.cpp      **** int main (){
+ 6261              		.loc 11 48 12 is_stmt 1 view -0
  6262              		.cfi_startproc
  6263              		@ args = 0, pretend = 0, frame = 24
  6264              		@ frame_needed = 0, uses_anonymous_args = 0
-  50:main.cpp      **** 
-  51:main.cpp      ****     hw.Init();    
- 6265              		.loc 11 51 5 view .LVU1547
   49:main.cpp      **** 
- 6266              		.loc 11 49 12 is_stmt 0 view .LVU1548
+  50:main.cpp      ****     hw.Init();    
+ 6265              		.loc 11 50 5 view .LVU1547
+  48:main.cpp      **** 
+ 6266              		.loc 11 48 12 is_stmt 0 view .LVU1548
  6267 0000 30B5     		push	{r4, r5, lr}
  6268              		.cfi_def_cfa_offset 12
  6269              		.cfi_offset 4, -12
  6270              		.cfi_offset 5, -8
  6271              		.cfi_offset 14, -4
- 6272              		.loc 11 51 12 view .LVU1549
+ 6272              		.loc 11 50 12 view .LVU1549
  6273 0002 0021     		movs	r1, #0
-  49:main.cpp      **** 
- 6274              		.loc 11 49 12 view .LVU1550
+  48:main.cpp      **** 
+ 6274              		.loc 11 48 12 view .LVU1550
  6275 0004 8BB0     		sub	sp, sp, #44
  6276              		.cfi_def_cfa_offset 56
- 6277              		.loc 11 51 12 view .LVU1551
+ 6277              		.loc 11 50 12 view .LVU1551
  6278 0006 3648     		ldr	r0, .L417
  6279              	.LBB1595:
  6280              	.LBB1596:
@@ -10258,10 +10257,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   43:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         \param sample_rate - sample rate of the audio engine being run, and the frequency that the 
   44:../../libs/DaisySP/Source/Synthesis/oscillator.h **** 
   45:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         Defaults:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 172
-
-
   46:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         - freq_ = 100 Hz
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 172
+
+
   47:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         - amp_ = 0.5
   48:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         - waveform_ = sine wave.
   49:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     */
@@ -10279,12 +10278,12 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6282 0008 0024     		movs	r4, #0
  6283              	.LBE1596:
  6284              	.LBE1595:
- 6285              		.loc 11 51 12 view .LVU1553
+ 6285              		.loc 11 50 12 view .LVU1553
  6286 000a FFF7FEFF 		bl	_ZN5daisy9DaisySeed4InitEb
  6287              	.LVL459:
-  52:main.cpp      ****     hw.SetAudioBlockSize(16);
- 6288              		.loc 11 52 5 is_stmt 1 view .LVU1554
- 6289              		.loc 11 52 25 is_stmt 0 view .LVU1555
+  51:main.cpp      ****     hw.SetAudioBlockSize(16);
+ 6288              		.loc 11 51 5 is_stmt 1 view .LVU1554
+ 6289              		.loc 11 51 25 is_stmt 0 view .LVU1555
  6290 000e 1021     		movs	r1, #16
  6291 0010 3348     		ldr	r0, .L417
  6292              	.LBB1600:
@@ -10294,11 +10293,11 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6295 0012 344D     		ldr	r5, .L417+4
  6296              	.LBE1597:
  6297              	.LBE1600:
- 6298              		.loc 11 52 25 view .LVU1557
+ 6298              		.loc 11 51 25 view .LVU1557
  6299 0014 FFF7FEFF 		bl	_ZN5daisy9DaisySeed17SetAudioBlockSizeEj
  6300              	.LVL460:
-  53:main.cpp      ****     osc.Init(48000);
- 6301              		.loc 11 53 5 is_stmt 1 view .LVU1558
+  52:main.cpp      ****     osc.Init(48000);
+ 6301              		.loc 11 52 5 is_stmt 1 view .LVU1558
  6302              	.LBB1601:
  6303              	.LBI1595:
   50:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     {
@@ -10318,10 +10317,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   57:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(freq_);
  6313              		.loc 7 57 20 view .LVU1564
  6314 0020 0022     		movs	r2, #0
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 173
-
-
   54:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 173
+
+
  6315              		.loc 7 54 20 view .LVU1565
  6316 0022 9FED330A 		vldr.32	s0, .L417+16
   52:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
@@ -10378,10 +10377,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   67:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     inline void SetFreq(const float f)
   68:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     {
   69:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = f;
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 174
-
-
  6347              		.loc 7 69 20 view .LVU1581
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 174
+
+
  6348 0042 9FED2C0A 		vldr.32	s0, .L417+20
   70:../../libs/DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
  6349              		.loc 7 70 34 view .LVU1582
@@ -10410,10 +10409,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6365              		.loc 7 61 20 view .LVU1589
  6366              	.LBE1599:
  6367              	.LBE1606:
-  54:main.cpp      ****     int oscFreq = 440;
- 6368              		.loc 11 54 5 is_stmt 1 view .LVU1590
-  55:main.cpp      ****     osc.SetFreq(oscFreq);
- 6369              		.loc 11 55 5 view .LVU1591
+  53:main.cpp      ****     int oscFreq = 440;
+ 6368              		.loc 11 53 5 is_stmt 1 view .LVU1590
+  54:main.cpp      ****     osc.SetFreq(oscFreq);
+ 6369              		.loc 11 54 5 view .LVU1591
  6370              	.LBB1607:
  6371              	.LBI1602:
   67:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     {
@@ -10438,10 +10437,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6388              	.LBB1609:
   71:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     }
   72:../../libs/DaisySP/Source/Synthesis/oscillator.h **** 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 175
-
-
   73:../../libs/DaisySP/Source/Synthesis/oscillator.h **** 
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 175
+
+
   74:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the amplitude of the waveform.
   75:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     */
   76:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     inline void SetAmp(const float a) { amp_ = a; }
@@ -10463,8 +10462,8 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6403 0074 0494     		str	r4, [sp, #16]
  6404              	.LBE1612:
  6405              	.LBE1611:
-  54:main.cpp      ****     osc.SetFreq(oscFreq);
- 6406              		.loc 11 54 9 view .LVU1599
+  53:main.cpp      ****     osc.SetFreq(oscFreq);
+ 6406              		.loc 11 53 9 view .LVU1599
  6407 0076 4FF4DC74 		mov	r4, #440
  6408              	.LBB1614:
  6409              	.LBB1605:
@@ -10476,8 +10475,8 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6413              		.loc 7 70 20 view .LVU1601
  6414              	.LBE1605:
  6415              	.LBE1614:
-  56:main.cpp      ****     osc.SetAmp(0.05f);
- 6416              		.loc 11 56 5 is_stmt 1 view .LVU1602
+  55:main.cpp      ****     osc.SetAmp(0.05f);
+ 6416              		.loc 11 55 5 is_stmt 1 view .LVU1602
  6417              	.LBB1615:
  6418              	.LBI1608:
  6419              		.loc 7 76 17 view .LVU1603
@@ -10486,8 +10485,8 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6422              		.loc 7 76 41 is_stmt 0 view .LVU1605
  6423              	.LBE1610:
  6424              	.LBE1615:
-  57:main.cpp      ****     MyOledDisplay::Config disp_cfg;
- 6425              		.loc 11 57 5 is_stmt 1 view .LVU1606
+  56:main.cpp      ****     MyOledDisplay::Config disp_cfg;
+ 6425              		.loc 11 56 5 is_stmt 1 view .LVU1606
  6426              	.LBB1616:
  6427              	.LBI1616:
   20:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****     {
@@ -10498,10 +10497,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6431              		.loc 10 236 12 view .LVU1608
  6432              	.LBB1618:
  6433              	.LBI1618:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 176
-
-
   20:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         {
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 176
+
+
  6434              		.loc 10 20 9 view .LVU1609
  6435              	.LBB1619:
  6436              	.LBI1619:
@@ -10558,10 +10557,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   47:../../libs/libDaisy/src/per/i2c.h ****         /** Rate at which the clock/data will be sent/received. The device being used will have max
   48:../../libs/libDaisy/src/per/i2c.h ****          *  1MHZ Mode is currently 886kHz
   49:../../libs/libDaisy/src/per/i2c.h ****          */
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 177
-
-
   50:../../libs/libDaisy/src/per/i2c.h ****         enum class Speed
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 177
+
+
   51:../../libs/libDaisy/src/per/i2c.h ****         {
   52:../../libs/libDaisy/src/per/i2c.h ****             I2C_100KHZ, /**< & */
   53:../../libs/libDaisy/src/per/i2c.h ****             I2C_400KHZ, /**< & */
@@ -10618,10 +10617,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   41:../../libs/libDaisy/src/daisy_core.h **** #define F2S24_SCALE 8388608.0f        /**< 2 ** 23 */
   42:../../libs/libDaisy/src/daisy_core.h **** #define S242F_SCALE 1.192092896e-07f  /**< 1 / (2 ** 23) */
   43:../../libs/libDaisy/src/daisy_core.h **** #define S24SIGN 0x800000              /**< 2 ** 23 */
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 178
-
-
   44:../../libs/libDaisy/src/daisy_core.h **** #define S322F_SCALE 4.6566129e-10f    /**< 1 / (2** 31) */
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 178
+
+
   45:../../libs/libDaisy/src/daisy_core.h **** #define F2S32_SCALE 2147483647.f      /**< (2 ** 31) - 1 */
   46:../../libs/libDaisy/src/daisy_core.h **** 
   47:../../libs/libDaisy/src/daisy_core.h **** 
@@ -10678,10 +10677,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   98:../../libs/libDaisy/src/daisy_core.h ****     \return Scaled number.
   99:../../libs/libDaisy/src/daisy_core.h **** */
  100:../../libs/libDaisy/src/daisy_core.h **** FORCE_INLINE float s82f(int8_t x)
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 179
-
-
  101:../../libs/libDaisy/src/daisy_core.h **** {
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 179
+
+
  102:../../libs/libDaisy/src/daisy_core.h ****     return (float)x * S82F_SCALE;
  103:../../libs/libDaisy/src/daisy_core.h **** }
  104:../../libs/libDaisy/src/daisy_core.h **** 
@@ -10738,10 +10737,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  155:../../libs/libDaisy/src/daisy_core.h ****  */
  156:../../libs/libDaisy/src/daisy_core.h **** FORCE_INLINE float s322f(int32_t x)
  157:../../libs/libDaisy/src/daisy_core.h **** {
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 180
-
-
  158:../../libs/libDaisy/src/daisy_core.h ****     return (float)x * S322F_SCALE;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 180
+
+
  159:../../libs/libDaisy/src/daisy_core.h **** }
  160:../../libs/libDaisy/src/daisy_core.h **** /**
  161:../../libs/libDaisy/src/daisy_core.h ****     Converts float to Signed 24-bit
@@ -10798,10 +10797,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6452              	.LBE1622:
  6453              	.LBE1620:
  6454              	.LBE1619:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 181
-
-
  6455              	.LBE1618:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 181
+
+
  6456              	.LBE1617:
  6457              	.LBE1616:
   23:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
@@ -10858,12 +10857,12 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6498              	.LBE1633:
  6499              	.LBE1636:
   34:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 182
-
-
  6500              		.loc 10 34 13 is_stmt 1 view .LVU1627
-  58:main.cpp      ****     disp.Init(disp_cfg);
- 6501              		.loc 11 58 5 view .LVU1628
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 182
+
+
+  57:main.cpp      ****     disp.Init(disp_cfg);
+ 6501              		.loc 11 57 5 view .LVU1628
  6502              	.LBB1637:
  6503              	.LBI1611:
   25:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h **** 
@@ -10882,67 +10881,67 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6514              		.loc 8 25 44 view .LVU1631
  6515              	.LBE1613:
  6516              	.LBE1637:
-  59:main.cpp      ****     int yscale = 300;
- 6517              		.loc 11 59 5 is_stmt 1 view .LVU1632
-  60:main.cpp      ****     disp_handle.SetYscale(yscale);
- 6518              		.loc 11 60 5 view .LVU1633
- 6519              		.loc 11 60 26 is_stmt 0 view .LVU1634
+  58:main.cpp      ****     int yscale = 300;
+ 6517              		.loc 11 58 5 is_stmt 1 view .LVU1632
+  59:main.cpp      ****     disp_handle.SetYscale(yscale);
+ 6518              		.loc 11 59 5 view .LVU1633
+ 6519              		.loc 11 59 26 is_stmt 0 view .LVU1634
  6520 0090 4FF49671 		mov	r1, #300
  6521 0094 1B48     		ldr	r0, .L417+36
  6522 0096 FFF7FEFF 		bl	_ZN14DisplayHandler9SetYscaleEi
  6523              	.LVL466:
-  61:main.cpp      ****     disp_handle.SetState(DisplayState::WAVEFORM_VIEWER); 
- 6524              		.loc 11 61 5 is_stmt 1 view .LVU1635
- 6525              		.loc 11 61 25 is_stmt 0 view .LVU1636
+  60:main.cpp      ****     disp_handle.SetState(DisplayState::WAVEFORM_VIEWER); 
+ 6524              		.loc 11 60 5 is_stmt 1 view .LVU1635
+ 6525              		.loc 11 60 25 is_stmt 0 view .LVU1636
  6526 009a 0121     		movs	r1, #1
  6527 009c 1948     		ldr	r0, .L417+36
  6528 009e FFF7FEFF 		bl	_ZN14DisplayHandler8SetStateE12DisplayState
  6529              	.LVL467:
-  62:main.cpp      ****     hw.StartAudio(AudioCallback);
- 6530              		.loc 11 62 5 is_stmt 1 view .LVU1637
- 6531              		.loc 11 62 18 is_stmt 0 view .LVU1638
+  61:main.cpp      ****     hw.StartAudio(AudioCallback);
+ 6530              		.loc 11 61 5 is_stmt 1 view .LVU1637
+ 6531              		.loc 11 61 18 is_stmt 0 view .LVU1638
  6532 00a2 1949     		ldr	r1, .L417+40
  6533 00a4 0E48     		ldr	r0, .L417
  6534 00a6 FFF7FEFF 		bl	_ZN5daisy9DaisySeed10StartAudioEPFvPKfPfjE
  6535              	.LVL468:
-  63:main.cpp      ****     int i = 440;
- 6536              		.loc 11 63 5 is_stmt 1 view .LVU1639
+  62:main.cpp      ****     int i = 440;
+ 6536              		.loc 11 62 5 is_stmt 1 view .LVU1639
  6537              	.L415:
-  64:main.cpp      ****     while (1){
- 6538              		.loc 11 64 5 discriminator 1 view .LVU1640
-  65:main.cpp      ****         i = (i + 1) % 440;
- 6539              		.loc 11 65 9 discriminator 1 view .LVU1641
- 6540              		.loc 11 65 16 is_stmt 0 discriminator 1 view .LVU1642
+  63:main.cpp      ****     while (1){
+ 6538              		.loc 11 63 5 discriminator 1 view .LVU1640
+  64:main.cpp      ****         i = (i + 1) % 440;
+ 6539              		.loc 11 64 9 discriminator 1 view .LVU1641
+ 6540              		.loc 11 64 16 is_stmt 0 discriminator 1 view .LVU1642
  6541 00aa 631C     		adds	r3, r4, #1
- 6542              		.loc 11 65 11 discriminator 1 view .LVU1643
+ 6542              		.loc 11 64 11 discriminator 1 view .LVU1643
  6543 00ac 174A     		ldr	r2, .L417+44
  6544 00ae 4FF4DC71 		mov	r1, #440
  6545              	.LBB1638:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 183
-
-
  6546              	.LBB1639:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 183
+
+
   70:../../libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  6547              		.loc 7 70 34 discriminator 1 view .LVU1644
  6548 00b2 0C48     		ldr	r0, .L417+4
  6549              	.LBE1639:
  6550              	.LBE1638:
- 6551              		.loc 11 65 11 discriminator 1 view .LVU1645
+ 6551              		.loc 11 64 11 discriminator 1 view .LVU1645
  6552 00b4 82FB0342 		smull	r4, r2, r2, r3
  6553              	.LVL469:
- 6554              		.loc 11 65 11 discriminator 1 view .LVU1646
+ 6554              		.loc 11 64 11 discriminator 1 view .LVU1646
  6555 00b8 DC17     		asrs	r4, r3, #31
  6556 00ba C4EB2214 		rsb	r4, r4, r2, asr #4
  6557 00be 01FB1434 		mls	r4, r1, r4, r3
  6558              	.LVL470:
-  66:main.cpp      ****         oscFreq = (oscFreq +  1) % 440;
- 6559              		.loc 11 66 9 is_stmt 1 discriminator 1 view .LVU1647
-  67:main.cpp      ****         osc.SetFreq(oscFreq + 440);
- 6560              		.loc 11 67 9 discriminator 1 view .LVU1648
- 6561              		.loc 11 67 29 is_stmt 0 discriminator 1 view .LVU1649
+  65:main.cpp      ****         oscFreq = (oscFreq +  1) % 440;
+ 6559              		.loc 11 65 9 is_stmt 1 discriminator 1 view .LVU1647
+  66:main.cpp      ****         osc.SetFreq(oscFreq + 440);
+ 6560              		.loc 11 66 9 discriminator 1 view .LVU1648
+ 6561              		.loc 11 66 29 is_stmt 0 discriminator 1 view .LVU1649
  6562 00c2 6318     		adds	r3, r4, r1
  6563 00c4 00EE103A 		vmov	s0, r3	@ int
- 6564              		.loc 11 67 20 discriminator 1 view .LVU1650
+ 6564              		.loc 11 66 20 discriminator 1 view .LVU1650
  6565 00c8 B8EEC00A 		vcvt.f32.s32	s0, s0
  6566              	.LVL471:
  6567              	.LBB1642:
@@ -10965,8 +10964,8 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6578              		.loc 7 70 34 discriminator 1 view .LVU1656
  6579              	.LBE1640:
  6580              	.LBE1642:
-  68:main.cpp      ****         disp_handle.Update();
- 6581              		.loc 11 68 27 discriminator 1 view .LVU1657
+  67:main.cpp      ****         disp_handle.Update();
+ 6581              		.loc 11 67 27 discriminator 1 view .LVU1657
  6582 00d4 0B48     		ldr	r0, .L417+36
  6583              	.LBB1643:
  6584              	.LBB1641:
@@ -10978,15 +10977,15 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6588              		.loc 7 70 20 discriminator 1 view .LVU1659
  6589              	.LBE1641:
  6590              	.LBE1643:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 184
+ 6591              		.loc 11 67 9 is_stmt 1 discriminator 1 view .LVU1660
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 184
 
 
- 6591              		.loc 11 68 9 is_stmt 1 discriminator 1 view .LVU1660
- 6592              		.loc 11 68 27 is_stmt 0 discriminator 1 view .LVU1661
+ 6592              		.loc 11 67 27 is_stmt 0 discriminator 1 view .LVU1661
  6593 00da FFF7FEFF 		bl	_ZN14DisplayHandler6UpdateEv
  6594              	.LVL474:
-  64:main.cpp      ****         i = (i + 1) % 440;
- 6595              		.loc 11 64 5 is_stmt 1 discriminator 1 view .LVU1662
+  63:main.cpp      ****         i = (i + 1) % 440;
+ 6595              		.loc 11 63 5 is_stmt 1 discriminator 1 view .LVU1662
  6596 00de E4E7     		b	.L415
  6597              	.L418:
  6598              		.align	2
@@ -11014,19 +11013,19 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6621              		.fpu fpv5-d16
  6623              	_GLOBAL__sub_I_hw:
  6624              	.LFB5464:
-  69:main.cpp      ****         // hw.DelayMs(10); --> NO! this function creates noise
-  70:main.cpp      ****     }
-  71:main.cpp      ****     
-  72:main.cpp      ****     return 0;
-  73:main.cpp      **** 
-  74:main.cpp      ****  }...
- 6625              		.loc 11 74 2 view -0
+  68:main.cpp      ****         // hw.DelayMs(10); --> NO! this function creates noise
+  69:main.cpp      ****     }
+  70:main.cpp      ****     
+  71:main.cpp      ****     return 0;
+  72:main.cpp      **** 
+  73:main.cpp      ****  }...
+ 6625              		.loc 11 73 2 view -0
  6626              		.cfi_startproc
  6627              		@ args = 0, pretend = 0, frame = 0
  6628              		@ frame_needed = 0, uses_anonymous_args = 0
  6629              	.LBB1723:
  6630              	.LBI1723:
- 6631              		.loc 11 74 2 view .LVU1664
+ 6631              		.loc 11 73 2 view .LVU1664
  6632              	.LVL475:
  6633              	.LBB1724:
  6634              	.LBB1725:
@@ -11038,10 +11037,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6639              	.LBI1727:
  6640              		.file 16 "../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h"
    1:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h **** #ifndef DSY_QSPI
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 185
-
-
    2:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h **** #define DSY_QSPI /**< Macro */
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 185
+
+
    3:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h **** 
    4:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h **** #ifndef UNIT_TEST // for unit tests, a dummy implementation
    5:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h **** 
@@ -11098,10 +11097,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   56:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h **** 
   57:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h ****     /** Configuration structure for interfacing with QSPI Driver */
   58:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h ****     struct Config
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 186
-
-
   59:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h ****     {
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 186
+
+
   60:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h ****         /** Flash Devices supported. (Both of these are more-or-less the same, just different sizes
   61:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h ****         enum Device
   62:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h ****         {
@@ -11158,10 +11157,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  113:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h ****         */
  114:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h ****     Result DeInit();
  115:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h **** 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 187
-
-
  116:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h ****     /** 
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 187
+
+
  117:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h ****         Writes a single page to to the specified address on the QSPI chip.
  118:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h ****         For IS25LP*, page size is 256 bytes.
  119:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h ****         \param address Address to write to
@@ -11218,10 +11217,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6643              	.LBE1727:
  6644              	.LBB1730:
  6645              	.LBI1730:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 188
-
-
   58:../../libs/PoliTeKDSP/libs/libDaisy/src/per/qspi.h ****     {
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 188
+
+
  6646              		.loc 16 58 12 is_stmt 1 view .LVU1668
  6647              	.LBB1731:
  6648              	.LBI1731:
@@ -11278,10 +11277,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6694              		.file 17 "../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h"
    1:../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h **** #pragma once
    2:../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h **** #ifndef DSY_DAC_H
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 189
-
-
    3:../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h **** #define DSY_DAC_H
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 189
+
+
    4:../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h **** #include "stm32h7xx_hal.h"
    5:../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h **** #include "daisy_core.h"
    6:../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h **** 
@@ -11338,10 +11337,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   57:../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h ****     {
   58:../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h ****         BITS_8,
   59:../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h ****         BITS_12
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 190
-
-
   60:../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h ****     };
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 190
+
+
   61:../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h **** 
   62:../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h ****     /** Sets whether the DAC output is buffered for higher drive ability. */
   63:../../libs/PoliTeKDSP/libs/libDaisy/src/per/dac.h ****     enum class BufferState
@@ -11398,10 +11397,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   17:../../libs/libDaisy/src/per/gpio.h ****  *  Output Example (perfect for blinking an LED)
   18:../../libs/libDaisy/src/per/gpio.h ****  *  @include GPIO_Output.cpp
   19:../../libs/libDaisy/src/per/gpio.h ****  * 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 191
-
-
   20:../../libs/libDaisy/src/per/gpio.h **** */
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 191
+
+
   21:../../libs/libDaisy/src/per/gpio.h **** class GPIO
   22:../../libs/libDaisy/src/per/gpio.h **** {
   23:../../libs/libDaisy/src/per/gpio.h ****   public:
@@ -11458,10 +11457,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   74:../../libs/libDaisy/src/per/gpio.h ****     GPIO() {}
  6706              		.loc 18 74 5 is_stmt 1 view .LVU1690
  6707              	.LBB1747:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 192
-
-
  6708              	.LBB1748:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 192
+
+
  6709              	.LBI1748:
   68:../../libs/libDaisy/src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
  6710              		.loc 18 68 9 view .LVU1691
@@ -11518,10 +11517,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6756              		.loc 18 68 9 view .LVU1702
  6757              	.LBB1779:
  6758              	.LBB1780:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 193
-
-
  6759              	.LBB1781:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 193
+
+
  6760              	.LBI1781:
  6761              		.loc 15 204 15 view .LVU1703
  6762              		.loc 15 204 15 is_stmt 0 view .LVU1704
@@ -11578,10 +11577,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   41:../../libs/libDaisy/src/per/sai.h ****  *  sai.StartDma(. . .);
   42:../../libs/libDaisy/src/per/sai.h ****  */
   43:../../libs/libDaisy/src/per/sai.h **** class SaiHandle
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 194
-
-
   44:../../libs/libDaisy/src/per/sai.h **** {
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 194
+
+
   45:../../libs/libDaisy/src/per/sai.h ****   public:
   46:../../libs/libDaisy/src/per/sai.h ****     /** Contains settings for initialising an SAI Interface */
   47:../../libs/libDaisy/src/per/sai.h ****     struct Config
@@ -11638,10 +11637,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
   98:../../libs/libDaisy/src/per/sai.h ****         Sync       a_sync, b_sync;
   99:../../libs/libDaisy/src/per/sai.h ****         Direction  a_dir, b_dir;
  100:../../libs/libDaisy/src/per/sai.h ****     };
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 195
-
-
  101:../../libs/libDaisy/src/per/sai.h **** 
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 195
+
+
  102:../../libs/libDaisy/src/per/sai.h ****     /** Return values for SAI functions */
  103:../../libs/libDaisy/src/per/sai.h ****     enum class Result
  104:../../libs/libDaisy/src/per/sai.h ****     {
@@ -11656,7 +11655,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6776              	.LBE1725:
  6777              	.LBE1724:
  6778              	.LBE1723:
- 6779              		.loc 11 74 2 is_stmt 0 view .LVU1706
+ 6779              		.loc 11 73 2 is_stmt 0 view .LVU1706
  6780 0000 38B5     		push	{r3, r4, r5, lr}
  6781              		.cfi_def_cfa_offset 16
  6782              		.cfi_offset 3, -16
@@ -11698,10 +11697,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6814 0012 4461     		str	r4, [r0, #20]
  6815              	.LBE1740:
  6816              	.LBE1739:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 196
-
-
  6817              	.LBE1796:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 196
+
+
  6818              	.LBB1797:
  6819              	.LBB1743:
  6820              	.LBB1744:
@@ -11758,10 +11757,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6868 001c C0E90A34 		strd	r3, r4, [r0, #40]
  6869              	.LBE1752:
  6870              	.LBE1754:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 197
-
-
  6871              	.LBE1756:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 197
+
+
  6872              	.LBE1758:
  6873              	.LBE1800:
  6874              	.LBB1801:
@@ -11818,10 +11817,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6921              	.LBB1787:
  6922              	.LBB1785:
  6923              	.LBB1783:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 198
-
-
  6924 0036 C0E91744 		strd	r4, r4, [r0, #92]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 198
+
+
  6925              	.LBE1783:
  6926              	.LBE1785:
  6927              	.LBE1787:
@@ -11878,10 +11877,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6968 004c 2846     		mov	r0, r5
  6969 004e 0D49     		ldr	r1, .L421+28
  6970              	.LBB1832:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 199
-
-
  6971              	.LBB1827:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 199
+
+
  6972              	.LBB1825:
  6973              	.LBB1816:
  6974              	.LBB1817:
@@ -11938,10 +11937,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  6998              	.LBE1821:
  6999              	.LBE1822:
  7000              	.LBE1823:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 200
-
-
  7001              	.LBE1825:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 200
+
+
  7002              	.LBE1827:
  7003              	.LBE1832:
   24:main.cpp      **** MyOledDisplay disp;
@@ -11955,7 +11954,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  7010 005c 0A48     		ldr	r0, .L421+32
  7011              	.LBE1833:
  7012              	.LBE1835:
- 7013              		.loc 11 74 2 view .LVU1740
+ 7013              		.loc 11 73 2 view .LVU1740
  7014 005e BDE83840 		pop	{r3, r4, r5, lr}
  7015              		.cfi_restore 14
  7016              		.cfi_restore 5
@@ -11998,10 +11997,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  7055 0010 00000000 		.word	_ZNK5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6HeightEv
  7056 0014 00000000 		.word	_ZNK5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE5WidthEv
  7057 0018 00000000 		.word	_ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 201
-
-
  7058 001c 00000000 		.word	_ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE9DrawPixelE
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 201
+
+
  7059 0020 00000000 		.word	_ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD
  7060 0024 00000000 		.word	_ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD
  7061 0028 00000000 		.word	_ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD
@@ -12034,7 +12033,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  7084              		.align	2
  7085              		.set	.LANCHOR1,. + 0
  7088              	disp_handle:
- 7089 0000 00000000 		.space	2084
+ 7089 0000 00000000 		.space	2080
  7089      00000000 
  7089      00000000 
  7089      00000000 
@@ -12058,10 +12057,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  7104              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
  7105              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
  7106              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 202
-
-
  7107              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 202
+
+
  7108              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
  7109              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
  7110              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
@@ -12097,78 +12096,78 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 1
  7140              		.file 61 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
  7141              		.file 62 "<built-in>"
  7142              		.file 63 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\new"
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 203
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 203
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.cpp
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:73     .text._ZN7daisysp10OscillatorD2Ev:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:81     .text._ZN7daisysp10OscillatorD2Ev:00000000 _ZN7daisysp10OscillatorD2Ev
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:81     .text._ZN7daisysp10OscillatorD2Ev:00000000 _ZN7daisysp10OscillatorD1Ev
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:98     .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED2Ev:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:106    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED2Ev:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED2Ev
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:106    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED2Ev:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED1Ev
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:133    .text._ZNK5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6HeightEv:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:141    .text._ZNK5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6HeightEv:00000000 _ZNK5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6HeightEv
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:158    .text._ZNK5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE5WidthEv:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:166    .text._ZNK5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE5WidthEv:00000000 _ZNK5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE5WidthEv
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:183    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:191    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:223    .text._ZL13AudioCallbackPKfPfj:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:230    .text._ZL13AudioCallbackPKfPfj:00000000 _ZL13AudioCallbackPKfPfj
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:307    .text._ZL13AudioCallbackPKfPfj:00000038 $d
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:313    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED0Ev:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:321    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED0Ev:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED0Ev
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:361    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:369    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:552    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE11WriteStringEPKc7FontDefb:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:560    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE11WriteStringEPKc7FontDefb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE11WriteStringEPKc7FontDefb
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:1017   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE11WriteStringEPKc7FontDefb:000001b8 $d
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:1027   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE9WriteCharEc7FontDefb:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:1035   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE9WriteCharEc7FontDefb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE9WriteCharEc7FontDefb
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:1461   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE9WriteCharEc7FontDefb:00000198 $d
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:1469   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:1477   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:1616   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb:00000046 $d
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:1625   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb:00000058 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:2833   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb:00000320 $d
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:2842   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb:00000328 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:3153   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb:000003e8 $d
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:3161   .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE9DrawPixelEjjb:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:3169   .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE9DrawPixelEjjb:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE9DrawPixelEjjb
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:3246   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:3254   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:3539   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE7DrawArcEjjjiib:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:3547   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE7DrawArcEjjjiib:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE7DrawArcEjjjiib
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:4232   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE7DrawArcEjjjiib:00000368 $d
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:4246   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE7DrawArcEjjjiib:00000378 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:4472   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawRectEjjjjbb:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:4480   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawRectEjjjjbb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawRectEjjjjbb
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:5590   .text._ZN5daisy13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEE4InitENS2_6ConfigE:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:5598   .text._ZN5daisy13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEE4InitENS2_6ConfigE:00000000 _ZN5daisy13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEE4InitENS2_6ConfigE
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:6251   .text.startup.main:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:6259   .text.startup.main:00000000 main
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:6600   .text.startup.main:000000e0 $d
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:6616   .text.startup._GLOBAL__sub_I_hw:00000000 $t
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:6623   .text.startup._GLOBAL__sub_I_hw:00000000 _GLOBAL__sub_I_hw
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:7028   .text.startup._GLOBAL__sub_I_hw:00000068 $d
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:7050   .rodata._ZTVN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEE:00000000 _ZTVN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEE
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:7043   .init_array:00000000 $d
-ARM GAS  C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s 			page 204
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:73     .text._ZN7daisysp10OscillatorD2Ev:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:81     .text._ZN7daisysp10OscillatorD2Ev:00000000 _ZN7daisysp10OscillatorD2Ev
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:81     .text._ZN7daisysp10OscillatorD2Ev:00000000 _ZN7daisysp10OscillatorD1Ev
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:98     .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED2Ev:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:106    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED2Ev:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED2Ev
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:106    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED2Ev:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED1Ev
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:133    .text._ZNK5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6HeightEv:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:141    .text._ZNK5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6HeightEv:00000000 _ZNK5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6HeightEv
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:158    .text._ZNK5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE5WidthEv:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:166    .text._ZNK5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE5WidthEv:00000000 _ZNK5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE5WidthEv
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:183    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:191    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:223    .text._ZL13AudioCallbackPKfPfj:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:230    .text._ZL13AudioCallbackPKfPfj:00000000 _ZL13AudioCallbackPKfPfj
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:307    .text._ZL13AudioCallbackPKfPfj:00000038 $d
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:313    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED0Ev:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:321    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED0Ev:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED0Ev
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:361    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:369    .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:552    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE11WriteStringEPKc7FontDefb:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:560    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE11WriteStringEPKc7FontDefb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE11WriteStringEPKc7FontDefb
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:1017   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE11WriteStringEPKc7FontDefb:000001b8 $d
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:1027   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE9WriteCharEc7FontDefb:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:1035   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE9WriteCharEc7FontDefb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE9WriteCharEc7FontDefb
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:1461   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE9WriteCharEc7FontDefb:00000198 $d
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:1469   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:1477   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:1616   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb:00000046 $d
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:1625   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb:00000058 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:2833   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb:00000320 $d
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:2842   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb:00000328 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:3153   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE18WriteStringAlignedEPKcRK7FontDefNS_9RectangleENS_9AlignmentEb:000003e8 $d
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:3161   .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE9DrawPixelEjjb:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:3169   .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE9DrawPixelEjjb:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE9DrawPixelEjjb
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:3246   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:3254   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:3539   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE7DrawArcEjjjiib:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:3547   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE7DrawArcEjjjiib:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE7DrawArcEjjjiib
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:4232   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE7DrawArcEjjjiib:00000368 $d
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:4246   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE7DrawArcEjjjiib:00000378 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:4472   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawRectEjjjjbb:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:4480   .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawRectEjjjjbb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawRectEjjjjbb
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:5590   .text._ZN5daisy13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEE4InitENS2_6ConfigE:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:5598   .text._ZN5daisy13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEE4InitENS2_6ConfigE:00000000 _ZN5daisy13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEE4InitENS2_6ConfigE
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:6251   .text.startup.main:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:6259   .text.startup.main:00000000 main
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:6600   .text.startup.main:000000e0 $d
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:6616   .text.startup._GLOBAL__sub_I_hw:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:6623   .text.startup._GLOBAL__sub_I_hw:00000000 _GLOBAL__sub_I_hw
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:7028   .text.startup._GLOBAL__sub_I_hw:00000068 $d
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:7050   .rodata._ZTVN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEE:00000000 _ZTVN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEE
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:7043   .init_array:00000000 $d
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s 			page 204
 
 
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:7047   .rodata._ZTVN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEE:00000000 $d
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:7088   .bss.disp_handle:00000000 disp_handle
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:7081   .bss.disp:00000000 disp
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:7095   .bss.hw:00000000 hw
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:7070   .bss._ZL3osc:00000000 $d
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:7074   .bss._ZL3osc:00000000 _ZL3osc
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:7077   .bss.disp:00000000 $d
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:7084   .bss.disp_handle:00000000 $d
-C:\Users\matte\AppData\Local\Temp\cc7Xgl0g.s:7091   .bss.hw:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:7047   .rodata._ZTVN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEE:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:7088   .bss.disp_handle:00000000 disp_handle
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:7081   .bss.disp:00000000 disp
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:7095   .bss.hw:00000000 hw
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:7070   .bss._ZL3osc:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:7074   .bss._ZL3osc:00000000 _ZL3osc
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:7077   .bss.disp:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:7084   .bss.disp_handle:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cc9bAxyQ.s:7091   .bss.hw:00000000 $d
                            .group:00000000 _ZN5daisy9DaisySeedD5Ev
                            .group:00000000 _ZN7daisysp10OscillatorD5Ev
                            .group:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEED5Ev

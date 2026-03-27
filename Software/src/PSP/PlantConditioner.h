@@ -7,7 +7,10 @@
 #ifndef _BV
 #define _BV(bit) (1 << (bit))
 #endif
-
+struct TuningStruct{
+    float _deltaMax;
+    float _curve;
+};
 class PlantConditioner {
 public:
     // --- Constructor and Destructor ---
@@ -19,6 +22,9 @@ public:
         float _freq;
         bool  _gate;
     };
+
+    
+
     // --- Enums for Scale Types and Notes ---
     enum ScaleType {
         Major = 0,

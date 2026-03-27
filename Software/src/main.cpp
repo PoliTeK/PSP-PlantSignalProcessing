@@ -1,182 +1,162 @@
 #include "../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h"
 #include "../libs/PoliTeKDSP/libs/DaisySP/Source/daisysp.h"
 #include "../libs/PoliTeKDSP/libs/libDaisy/src/hid/encoder.h"
-#include "../libs/PoliTeKDSP/libs/libDaisy/src/util/scopedirqblocker.h"
 #include "Display/displayHandler.h"
 #include "PSP/PlantConditioner.h"
 #include "PSP/AudioEngine.h"
+#include "Display/MenuManager.h"
 
 using namespace daisy;
 
-// Istanze hardware e software
-DaisySeed hw;
+DaisySeed      hw;
+Encoder        enc;
+MenuManager    menu;
+MyOledDisplay  disp;
+DisplayHandler disp_handle(&disp);
+
 PlantConditioner pc;
-AudioEngine synth;
-MyOledDisplay display;
-DisplayHandler display_handle(&display);
-TimerHandle display_timer;
-TimerHandle encoder_timer;
-Encoder menu_encoder;
+AudioEngine      synth;
 
-// Variabile globale condivisa tra il main loop e la callback audio
 ControlsStruct audio_controls = {440.0f, false};
-volatile bool display_refresh_due = false;
-volatile int encoder_increment_isr = 0;
-volatile int encoder_click_count_isr = 0;
-volatile bool encoder_pressed_isr = false;
-constexpr auto DISPLAY_REFRESH_HZ = 30u;
-constexpr auto ENCODER_POLL_HZ = 2000u;
 
-const char* kMenuLabels[] = {
-    "PoliTeK PSP",
-    "PSP",
-    "Signal Processing",
-    "PoliTeK 23",
-};
-
-constexpr int kMenuLabelCount = sizeof(kMenuLabels) / sizeof(kMenuLabels[0]);
-int current_menu_label = 0;
-
-void DisplayRefreshTimerCallback(void* data) {
-    (void)data;
-    display_refresh_due = true;
-}
-
-void EncoderPollTimerCallback(void* data) {
-    (void)data;
-    menu_encoder.Debounce();
-
-    const int inc = menu_encoder.Increment();
-    if(inc != 0)
-    {
-        int sum = encoder_increment_isr + inc;
-        if(sum > 1024)
-            sum = 1024;
-        else if(sum < -1024)
-            sum = -1024;
-        encoder_increment_isr = sum;
-    }
-
-    if(menu_encoder.RisingEdge())
-        encoder_click_count_isr++;
-
-    encoder_pressed_isr = menu_encoder.Pressed();
-}
-
-// Callback Audio: eseguita dal processore ogni volta che serve riempire il buffer audio
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size) {
-    // 1. Aggiorna il sintetizzatore con gli ultimi dati disponibili letti dalla pianta
+    // 1. Aggiorna il synth con i parametri calcolati nel main
     synth.Update(audio_controls);
 
-    // 2. Genera l'audio per la dimensione del buffer corrente
     for (size_t i = 0; i < size; i++) {
-        // Calcola il singolo campione
-        float sample = synth.Process();
+        float sig = synth.Process();
         
-        // Invia lo stesso campione su entrambi i canali di uscita (Dual Mono)
-        out[0][i] = sample; // Left
-        out[1][i] = sample; // Right
+        // Passa il campione per la visualizzazione dell'onda
+        disp_handle.pushAudioSample(sig);
+
+        out[0][i] = out[1][i] = sig;
     }
 }
 
 int main() {
-    // Inizializzazione Hardware
     hw.Init();
 
-    // Inizializzazione Display OLED
-    MyOledDisplay::Config display_cfg;
-    display.Init(display_cfg);
-    display_handle.SetState(DisplayState::STANDBY);
-    display_handle.SetStandbyText(kMenuLabels[current_menu_label]);
-    display_handle.Update();
+    // Inizializzazione fisica encoder (Pin 13, 14, 10)
+    enc.Init(hw.GetPin(13), hw.GetPin(14), hw.GetPin(10));
+    menu.Init();
 
-    // Timer hardware per refresh periodico del display
-    TimerHandle::Config display_timer_cfg;
-    display_timer_cfg.periph     = TimerHandle::Config::Peripheral::TIM_5;
-    display_timer_cfg.enable_irq = true;
-    display_timer.Init(display_timer_cfg);
-    display_timer.SetCallback(DisplayRefreshTimerCallback);
+    // Inizializzazione Display
+    MyOledDisplay::Config disp_cfg;
+    disp.Init(disp_cfg);
+    disp_handle.SetYscale(100);
+    disp_handle.SetState(DisplayState::WAVEFORM_VIEWER);
 
-    auto display_period_ticks = display_timer.GetFreq() / DISPLAY_REFRESH_HZ;
-    if(display_period_ticks == 0)
-        display_period_ticks = 1;
-    display_timer.SetPeriod(display_period_ticks);
-    display_timer.Start();
-
-    // Inizializzazione Encoder con pulsante
-    menu_encoder.Init(seed::D14, seed::D15, seed::D10, ENCODER_POLL_HZ);
-
-    // Timer dedicato per polling/debounce encoder (separato dal timer display)
-    TimerHandle::Config encoder_timer_cfg;
-    encoder_timer_cfg.periph     = TimerHandle::Config::Peripheral::TIM_4;
-    encoder_timer_cfg.enable_irq = true;
-    encoder_timer.Init(encoder_timer_cfg);
-    encoder_timer.SetCallback(EncoderPollTimerCallback);
-
-    auto encoder_period_ticks = encoder_timer.GetFreq() / ENCODER_POLL_HZ;
-    if(encoder_period_ticks == 0)
-        encoder_period_ticks = 1;
-    encoder_timer.SetPeriod(encoder_period_ticks);
-    encoder_timer.Start();
-    
-    // Configurazione blocco audio per bassa latenza (opzionale ma consigliato per i synth)
-    hw.SetAudioBlockSize(16);
-
-    // Inizializzazione PlantConditioner
-    pc.Init(IIR::Butterworth, &hw);
-    pc.setDelta(50.0f);
-    pc.setCurve(1.0f);
-    pc.setScale(PlantConditioner::G, PlantConditioner::Major);
-    pc.setOctave(4);
-
-    // Inizializzazione AudioEngine
+    // Inizializzazione Moduli DSP
+    pc.Init(IIR::FilterType::Butterworth, &hw);
     synth.Init(hw.AudioSampleRate());
     synth.SetPreset(PRESET_LEAD);
 
-    // Avvia la callback audio in background
     hw.StartAudio(AudioCallback);
 
+    uint32_t last_enc_poll = System::GetNow();
+    uint32_t disp_cnt = 0;
+
     while(1) {
+        uint32_t now = System::GetNow();
 
+        // --- 1. CAMPIONAMENTO ENCODER ---
+        if(now >= last_enc_poll + 1) {
+            last_enc_poll = now; 
+            
+            enc.Debounce();
+            int32_t inc = enc.Increment();
+            bool clicked = enc.RisingEdge();
+
+            if(inc != 0 || clicked) {
+                menu.StateTransition(clicked, inc, false);
+            }
+            
+            disp_cnt++;
+        }
+
+        // --- 2. AGGIORNAMENTO LOGICA E PARAMETRI ---
+        MenuManager::MenuData ui_data = menu.GetData();
+
+        // Sincronizza i parametri dal Menu alle classi DSP
+        pc.setDelta(ui_data.delta);
+        pc.setCurve(ui_data.curve);
+        pc.setOctave(ui_data.octave);
+        synth.SetPreset((SynthPreset) ui_data.preset);
+        pc.setScale((PlantConditioner::Notes)ui_data.root, (PlantConditioner::ScaleType)ui_data.scale);
+
+        // Calcolo della frequenza dalla pianta
         PlantConditioner::PlantState plant_data = pc.Process();
-
         audio_controls.freq = plant_data._freq;
         audio_controls.gate = plant_data._gate;
 
-        int encoder_increment = 0;
-        int encoder_click_count = 0;
-        {
-            ScopedIrqBlocker irq_blocker;
-            encoder_increment = encoder_increment_isr;
-            encoder_increment_isr = 0;
-            encoder_click_count = encoder_click_count_isr;
-            encoder_click_count_isr = 0;
-            (void)encoder_pressed_isr;
+        // --- 3. AGGIORNAMENTO DISPLAY (Ogni 50 cicli = 50ms) ---
+        if (disp_cnt >= 60) {
+            disp_cnt = 0;
+
+            if (ui_data.state == MenuManager::PLAYMODE) {
+                disp_handle.SetState(DisplayState::WAVEFORM_VIEWER);
+            } 
+            else {
+                disp_handle.SetState(DisplayState::MENU_MODE);
+                int cursor_idx = 0;
+                
+                switch (ui_data.state) {
+                    case MenuManager::MAIN_MENU:
+                        if (ui_data.cursor_state == MenuManager::CALIBRATION_HUB) cursor_idx = 0;
+                        else if (ui_data.cursor_state == MenuManager::SCALES_HUB) cursor_idx = 1;
+                        else if (ui_data.cursor_state == MenuManager::PRESETS_HUB) cursor_idx = 2;
+                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 3;
+                        disp_handle.DrawMainMenu(cursor_idx);
+                        break;
+
+                    case MenuManager::CALIBRATION_HUB:
+                        if (ui_data.cursor_state == MenuManager::DELTA) cursor_idx = 0;
+                        else if (ui_data.cursor_state == MenuManager::CURVE) cursor_idx = 1;
+                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 2;
+                        disp_handle.DrawCalibrationHub(cursor_idx);
+                        break;
+
+                    case MenuManager::SCALES_HUB:
+                        if (ui_data.cursor_state == MenuManager::ROOT) cursor_idx = 0;
+                        else if (ui_data.cursor_state == MenuManager::SCALE) cursor_idx = 1;
+                        else if (ui_data.cursor_state == MenuManager::OCTAVE) cursor_idx = 2;
+                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 3;
+                        disp_handle.DrawScalesHub(cursor_idx);
+                        break;
+
+                    case MenuManager::DELTA:
+                        disp_handle.DrawFloatParameter("DELTA", ui_data.delta);
+                        break;
+                    
+                    case MenuManager::CURVE:
+                        disp_handle.DrawFloatParameter("CURVE", ui_data.curve);
+                        break;
+
+                    case MenuManager::ROOT:
+                        disp_handle.DrawIntParameter("ROOT", ui_data.root);
+                        break;
+
+                    case MenuManager::SCALE:
+                        disp_handle.DrawIntParameter("SCALE", ui_data.scale);
+                        break;
+
+                    case MenuManager::OCTAVE:
+                        disp_handle.DrawIntParameter("OCTAVE", ui_data.octave);
+                        break;
+                    case MenuManager::PRESETS_HUB:
+                    disp_handle.DrawIntParameter("PRESET", ui_data.preset);
+                        break;
+
+                    default:
+                        break;
+                }
+            } 
+            
+            // Operazione bloccante I2C
+            disp_handle.Update(); 
+            
+            // Reset fondamentale del tempo per evitare "salti" dell'encoder dopo l'update
+            last_enc_poll = System::GetNow();
         }
-
-        if(encoder_increment != 0)
-        {
-            current_menu_label += encoder_increment;
-            while(current_menu_label < 0)
-                current_menu_label += kMenuLabelCount;
-            while(current_menu_label >= kMenuLabelCount)
-                current_menu_label -= kMenuLabelCount;
-
-            display_handle.SetStandbyText(kMenuLabels[current_menu_label]);
-        }
-
-        if(encoder_click_count > 0)
-        {
-            current_menu_label = 0;
-            display_handle.SetStandbyText(kMenuLabels[current_menu_label]);
-        }
-
-        if(display_refresh_due) {
-            display_refresh_due = false;
-            display_handle.Update();
-        }
-
-        // 3. Pausa di 1 ms per stabilizzare il bus I2C e non saturare la CPU
-        System::Delay(1);
     }
 }
