@@ -62,8 +62,8 @@ void DisplayHandler::SetStandbyText(const char* text){
 
 
 // fills buffer for waveform viewer: to be called in audio callback
-void DisplayHandler::pushAudioSample(float sample){
-    _circBuffer_ptr[_writeHead] = sample;
+void DisplayHandler::pushAudioSample(float sample, float multiplier){
+    _circBuffer_ptr[_writeHead] = sample*multiplier;
 
     // Implements circular buffer logic
     _writeHead = (_writeHead + 1) % BUFFER_SIZE;

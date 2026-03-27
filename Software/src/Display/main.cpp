@@ -8,7 +8,7 @@
  * @return int Exit status code (0 for success, non-zero for failure)
  */
  
-#include "displayHandler.hpp"
+#include "displayHandler.h"
 #include "../../libs/libDaisy/src/daisy_seed.h"
 #include "../../libs/DaisySP/Source/daisysp.h"
 
@@ -29,10 +29,13 @@ DisplayHandler disp_handle (&disp);
 static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::InterleavingOutputBuffer out, size_t size)
 {
     float oscOut = 0;
+    float yscaleMult = 8;
     for (size_t i = 0; i < size; i += 2)
     {
         oscOut = osc.Process();
-        disp_handle.pushAudioSample (oscOut);
+
+        // value x2 (second parameter)
+        disp_handle.pushAudioSample (oscOut, yscaleMult);
         // uncomment to decimate -> frequency displayed is double the true one 
         //  bool decimate;
         //  if (decimate) {
@@ -51,7 +54,7 @@ int main (){
     osc.Init(48000);
     int oscFreq = 440;
     osc.SetFreq(oscFreq);
-    osc.SetAmp(0.5f);
+    osc.SetAmp(0.05f);
     MyOledDisplay::Config disp_cfg;
     disp.Init(disp_cfg);
     disp_handle.SetState(DisplayState::WAVEFORM_VIEWER); 

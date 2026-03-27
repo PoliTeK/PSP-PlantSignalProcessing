@@ -64,6 +64,7 @@ public:
     // Set text displayed in STANDBY state
     void SetStandbyText(const char* text);
 
-    void pushAudioSample (float sample);
+    // push audio sample to buffer, multiplied by multiplier value to fit yscale
+    void pushAudioSample (float sample, float multiplier = 1);
 
 };
