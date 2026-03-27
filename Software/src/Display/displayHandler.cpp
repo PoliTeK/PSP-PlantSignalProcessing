@@ -62,8 +62,8 @@ void DisplayHandler::SetStandbyText(const char* text){
 
 
 // fills buffer for waveform viewer: to be called in audio callback
-void DisplayHandler::pushAudioSample(float sample, float multiplier){
-    _circBuffer_ptr[_writeHead] = sample*multiplier;
+void DisplayHandler::pushAudioSample(float sample){
+    _circBuffer_ptr[_writeHead] = sample;
 
     // Implements circular buffer logic
     _writeHead = (_writeHead + 1) % BUFFER_SIZE;
@@ -115,16 +115,19 @@ void DisplayHandler::drawWaveForm (){
     idx = findTrigger();
     // plot whole buffer -> TAKES CIRCULARITY INTO ACCOUNT
     for (int i = idx; i < idx + _windowSize; i++){
-        // *100 is for rescaling -> NEEDS TUNING
         // NEEDS CLAMPING LOGIC to avoid segfault
-        y1 = zeroOfScreen - (_circBuffer_ptr[i % BUFFER_SIZE]* 40);
-        y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
+        y1 = zeroOfScreen - (_circBuffer_ptr[i % BUFFER_SIZE] * _yscale);
+        y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
         _displayPtr->DrawLine(i-idx, y1, (i+1)-idx, y2, true);
     }   
 
 
 }
 
+/// @todo guard logic
+void DisplayHandler::SetYscale (int yscale){
+    _yscale = yscale;
+}
 
 
 // LONG FUNCTION AHEAD -> prints test logo atm

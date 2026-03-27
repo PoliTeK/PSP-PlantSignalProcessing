@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -27,7 +27,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   24              		.fpu fpv5-d16
   26              	_ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb:
   27              	.LVL0:
-  28              	.LFB2713:
+  28              	.LFB2714:
   29              		.file 1 "../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h"
    1:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h **** #pragma once
    2:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h **** #ifndef DSY_OLED_DISPLAY_H
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   27:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****     uint16_t Height() const override { return driver_.Height(); }
   28:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****     uint16_t Width() const override { return driver_.Width(); }
   29:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h **** 
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 2
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 2
 
 
   30:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****     /** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   42:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     void SendCommand(uint8_t cmd)
   43:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         uint8_t buf[2] = {0X00, cmd};
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 3
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 3
 
 
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   99:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             pin_config.dc    = Pin(PORTB, 4);
  100:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             pin_config.reset = Pin(PORTB, 15);
  101:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 4
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 4
 
 
  102:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  156:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         } pin_config;
  157:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         void Defaults()
  158:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         {
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 5
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 5
 
 
  159:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             pin_config.sclk_delay = 0; // fast as possible?!
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  213:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             pin_sclk_.Toggle();
  214:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** 
  215:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             System::DelayTicks(clk_delay);
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 6
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 6
 
 
  216:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  270:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****                 // COM Pins
  271:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****                 transport_.SendCommand(0xDA);
  272:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****                 if(width == 64)
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 7
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 7
 
 
  273:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****                 {
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  327:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         transport_.SendCommand(0x25);
  328:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         // VCOM Detect
  329:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         transport_.SendCommand(0xDB);
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 8
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 8
 
 
  330:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         transport_.SendCommand(0x34);
@@ -464,7 +464,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   53              	.LBE16:
   54              	.LBE15:
   55              		.cfi_endproc
-  56              	.LFE2713:
+  56              	.LFE2714:
   58 000e 00BF     		.section	.text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6U
   59              		.align	1
   60              		.p2align 2,,3
@@ -475,10 +475,10 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   65              		.fpu fpv5-d16
   67              	_ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv:
   68              	.LVL4:
-  69              	.LFB2711:
+  69              	.LFB2712:
   35:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h **** 
   36:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****     /**
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 9
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 9
 
 
   37:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****     Sets the pixel at the specified coordinate to be on/off.
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  359:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****      * Update the display 
  360:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     */
  361:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     void Update()
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 10
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 10
 
 
  104              		.loc 2 361 10 is_stmt 1 view .LVU12
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
  138              		.loc 2 45 9 is_stmt 1 view .LVU24
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 11
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 11
 
 
  139              		.loc 2 45 30 is_stmt 0 view .LVU25
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
  180              		.loc 2 44 17 view .LVU39
  181 0064 8DF80CA0 		strb	r10, [sp, #12]
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 12
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 12
 
 
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   50:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         {
  221              		.loc 2 50 9 is_stmt 1 view .LVU55
   50:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         {
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 13
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 13
 
 
  222              		.loc 2 50 29 view .LVU56
@@ -747,7 +747,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  244 00a8 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
  245              		.loc 1 51 48 view .LVU62
  246              		.cfi_endproc
- 247              	.LFE2711:
+ 247              	.LFE2712:
  249              		.section	.text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64
  250              		.align	1
  251              		.p2align 2,,3
@@ -758,7 +758,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  256              		.fpu fpv5-d16
  258              	_ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2C
  259              	.LVL15:
- 260              	.LFB2714:
+ 260              	.LFB2715:
  261              		.file 3 "../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h"
    1:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** #pragma once
    2:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** #ifndef DSY_DISPLAY_H
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   16:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****  * This interface is used as a base class for all types of 1bit-per-pixel
   17:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****  * graphics displays.
   18:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** */
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 14
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 14
 
 
   19:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** class OneBitGraphicsDisplay
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   73:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     \param fill fill the rectangle or draw only the outline
   74:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     */
   75:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     virtual void DrawRect(uint_fast8_t x1,
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 15
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 15
 
 
   76:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                           uint_fast8_t y1,
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  130:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     Writes the character with the specific FontDef
  131:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     to the display buffer at the current Cursor position.
  132:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     \param ch character to be written
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 16
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 16
 
 
  133:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     \param font font to be written in
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  187:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
  188:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** /** This class is intended as a intermediary class for your actual implementation of the OneBitGrap
  189:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****  *  interface. It uses the CRTP design pattern where the template argument is the child class. It p
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 17
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 17
 
 
  190:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****  *  implementations for most of the functions, except DrawPixel(), Update() and Fill(), which you'l
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  226:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     {
  227:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t deltaX = abs((int_fast16_t)x2 - (int_fast16_t)x1);
  280              		.loc 3 227 52 view .LVU65
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 18
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 18
 
 
  281 0006 5C1A     		subs	r4, r3, r1
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  324              	.LBB63:
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
  325              		.loc 2 342 9 discriminator 4 view .LVU79
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 19
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 19
 
 
  326 003a 7F2B     		cmp	r3, #127
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  237:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         ((ChildType*)(this))->ChildType::DrawPixel(x2, y2, on);
  238:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
  239:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         while((x1 != x2) || (y1 != y2))
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 20
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 20
 
 
  365              		.loc 3 239 26 is_stmt 1 view .LVU90
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  405 0094 95F810B0 		ldrb	fp, [r5, #16]	@ zero_extendqisi2
  406 0098 4EEA0B0E 		orr	lr, lr, fp
  407 009c 85F810E0 		strb	lr, [r5, #16]
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 21
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 21
 
 
  408              	.L19:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  253:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             }
  254:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         }
  255:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 22
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 22
 
 
  448              		.loc 3 255 5 view .LVU115
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  494              	.LBE89:
  230:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t error  = deltaX - deltaY;
  495              		.loc 3 230 42 view .LVU124
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 23
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 23
 
 
  496 00de 0195     		str	r5, [sp, #4]
@@ -1374,11 +1374,11 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  538 00f6 B8D0     		beq	.L35
  539 00f8 B9E7     		b	.L16
  540              		.cfi_endproc
- 541              	.LFE2714:
+ 541              	.LFE2715:
  543 00fa 00BF     		.section	.rodata._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19
  544              		.align	2
  545              	.LC0:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 24
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 24
 
 
  546 0000 506F6C69 		.ascii	"PoliTeK PSP\000"
@@ -1417,71 +1417,74 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  574              	.LBE92:
  575              		.loc 4 4 1 view .LVU136
  576 0004 0446     		mov	r4, r0
- 577 0006 1546     		mov	r5, r2
- 578              	.LBB93:
- 579              		.loc 4 4 79 view .LVU137
- 580 0008 8020     		movs	r0, #128
- 581              	.LVL36:
- 582              		.loc 4 4 79 view .LVU138
- 583 000a 0A4A     		ldr	r2, .L38
- 584              	.LVL37:
- 585              		.loc 4 4 79 view .LVU139
- 586              	.LBE93:
- 587              		.loc 4 4 1 view .LVU140
- 588 000c 0E46     		mov	r6, r1
- 589              	.LBB94:
- 590              		.loc 4 4 79 view .LVU141
- 591 000e C4F80808 		str	r0, [r4, #2056]
+ 577 0006 0E46     		mov	r6, r1
+ 578 0008 1546     		mov	r5, r2
+ 579              	.LBB93:
    5:displayHandler.cpp ****     // should clean circular buffer
    6:displayHandler.cpp ****     memset((void*) _circBuffer_ptr, 0, sizeof(_circBuffer_ptr));
- 592              		.loc 4 6 11 view .LVU142
- 593 0012 1946     		mov	r1, r3
- 594              	.LVL38:
+ 580              		.loc 4 6 11 view .LVU137
+ 581 000a 1946     		mov	r1, r3
+ 582              	.LVL36:
    4:displayHandler.cpp ****     // should clean circular buffer
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 25
+ 583              		.loc 4 4 79 view .LVU138
+ 584 000c 2371     		strb	r3, [r4, #4]
+ 585 000e C4F80C38 		str	r3, [r4, #2060]
+ 586 0012 8020     		movs	r0, #128
+ 587              	.LVL37:
+   4:displayHandler.cpp ****     // should clean circular buffer
+ 588              		.loc 4 4 79 view .LVU139
+ 589 0014 0123     		movs	r3, #1
+ 590 0016 0A4A     		ldr	r2, .L38
+ 591              	.LVL38:
+   4:displayHandler.cpp ****     // should clean circular buffer
+ 592              		.loc 4 4 79 view .LVU140
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 25
 
 
- 595              		.loc 4 4 79 view .LVU143
- 596 0014 C4F81828 		str	r2, [r4, #2072]
- 597              		.loc 4 6 5 is_stmt 1 view .LVU144
- 598              		.loc 4 6 11 is_stmt 0 view .LVU145
- 599 0018 04F10800 		add	r0, r4, #8
- 600 001c 4FF48062 		mov	r2, #1024
+ 593 0018 C4F80808 		str	r0, [r4, #2056]
+ 594              		.loc 4 6 11 view .LVU141
+ 595 001c 04F10800 		add	r0, r4, #8
    4:displayHandler.cpp ****     // should clean circular buffer
- 601              		.loc 4 4 79 view .LVU146
- 602 0020 2371     		strb	r3, [r4, #4]
- 603 0022 C4F80C38 		str	r3, [r4, #2060]
- 604              		.loc 4 6 11 view .LVU147
- 605 0026 FFF7FEFF 		bl	memset
+ 596              		.loc 4 4 79 view .LVU142
+ 597 0020 C4F81828 		str	r2, [r4, #2072]
+ 598              		.loc 4 6 11 view .LVU143
+ 599 0024 4FF48062 		mov	r2, #1024
+   4:displayHandler.cpp ****     // should clean circular buffer
+ 600              		.loc 4 4 79 view .LVU144
+ 601 0028 C4F81C38 		str	r3, [r4, #2076]
+ 602 002c C4F82038 		str	r3, [r4, #2080]
+ 603              		.loc 4 6 5 is_stmt 1 view .LVU145
+ 604              		.loc 4 6 11 is_stmt 0 view .LVU146
+ 605 0030 FFF7FEFF 		bl	memset
  606              	.LVL39:
    7:displayHandler.cpp ****     
    8:displayHandler.cpp ****     // sets pointer of display
    9:displayHandler.cpp ****     _displayPtr = displayPtr;
- 607              		.loc 4 9 5 is_stmt 1 view .LVU148
- 608              	.LBE94:
+ 607              		.loc 4 9 5 is_stmt 1 view .LVU147
+ 608              	.LBE93:
   10:displayHandler.cpp ****     _triggerEnabled = triggerEnabled;
   11:displayHandler.cpp **** 
   12:displayHandler.cpp **** }
- 609              		.loc 4 12 1 is_stmt 0 view .LVU149
- 610 002a 2046     		mov	r0, r4
- 611              	.LBB95:
+ 609              		.loc 4 12 1 is_stmt 0 view .LVU148
+ 610 0034 2046     		mov	r0, r4
+ 611              	.LBB94:
    9:displayHandler.cpp ****     _triggerEnabled = triggerEnabled;
- 612              		.loc 4 9 17 view .LVU150
- 613 002c 2660     		str	r6, [r4]
+ 612              		.loc 4 9 17 view .LVU149
+ 613 0036 2660     		str	r6, [r4]
   10:displayHandler.cpp ****     _triggerEnabled = triggerEnabled;
- 614              		.loc 4 10 5 is_stmt 1 view .LVU151
+ 614              		.loc 4 10 5 is_stmt 1 view .LVU150
   10:displayHandler.cpp ****     _triggerEnabled = triggerEnabled;
- 615              		.loc 4 10 21 is_stmt 0 view .LVU152
- 616 002e 84F81058 		strb	r5, [r4, #2064]
- 617              	.LBE95:
- 618              		.loc 4 12 1 view .LVU153
- 619 0032 70BD     		pop	{r4, r5, r6, pc}
+ 615              		.loc 4 10 21 is_stmt 0 view .LVU151
+ 616 0038 84F81058 		strb	r5, [r4, #2064]
+ 617              	.LBE94:
+ 618              		.loc 4 12 1 view .LVU152
+ 619 003c 70BD     		pop	{r4, r5, r6, pc}
  620              	.LVL40:
  621              	.L39:
- 622              		.loc 4 12 1 view .LVU154
- 623              		.align	2
+ 622              		.loc 4 12 1 view .LVU153
+ 623 003e 00BF     		.align	2
  624              	.L38:
- 625 0034 00000000 		.word	.LC0
+ 625 0040 00000000 		.word	.LC0
  626              		.cfi_endproc
  627              	.LFE2691:
  629              		.global	_ZN14DisplayHandlerC1EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2
@@ -1495,12 +1498,12 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  637              		.p2align 2,,3
  638              		.global	_ZN14DisplayHandler12drawPotValueEv
  639              		.syntax unified
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 26
+
+
  640              		.thumb
  641              		.thumb_func
  642              		.fpu fpv5-d16
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 26
-
-
  644              	_ZN14DisplayHandler12drawPotValueEv:
  645              	.LVL41:
  646              	.LFB2694:
@@ -1532,9 +1535,9 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   34:displayHandler.cpp **** 
   35:displayHandler.cpp ****     // rescaling float val -> NEEDS DEBUGGING ON BOARD TO TRIM THIS VAL
   36:displayHandler.cpp ****     int rescaledVal = (int) *_potValuePtr * 10.f;
- 651              		.loc 4 36 5 view .LVU156
+ 651              		.loc 4 36 5 view .LVU155
   33:displayHandler.cpp **** 
- 652              		.loc 4 33 36 is_stmt 0 view .LVU157
+ 652              		.loc 4 33 36 is_stmt 0 view .LVU156
  653 0000 10B5     		push	{r4, lr}
  654              		.cfi_def_cfa_offset 8
  655              		.cfi_offset 4, -8
@@ -1544,36 +1547,36 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   37:displayHandler.cpp ****     
   38:displayHandler.cpp ****     // chosen to be four
   39:displayHandler.cpp ****     char intToString_rescaledValue [4];
- 659              		.loc 4 39 5 is_stmt 1 view .LVU158
+ 659              		.loc 4 39 5 is_stmt 1 view .LVU157
   40:displayHandler.cpp ****     sprintf(intToString_rescaledValue, "%d",rescaledVal);
- 660              		.loc 4 40 5 view .LVU159
+ 660              		.loc 4 40 5 view .LVU158
   36:displayHandler.cpp ****     
- 661              		.loc 4 36 43 is_stmt 0 view .LVU160
+ 661              		.loc 4 36 43 is_stmt 0 view .LVU159
  662 0004 B2EE047A 		vmov.f32	s14, #1.0e+1
   33:displayHandler.cpp **** 
- 663              		.loc 4 33 36 view .LVU161
+ 663              		.loc 4 33 36 view .LVU160
  664 0008 84B0     		sub	sp, sp, #16
  665              		.cfi_def_cfa_offset 24
- 666              		.loc 4 40 12 view .LVU162
+ 666              		.loc 4 40 12 view .LVU161
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 27
+
+
  667 000a 0E49     		ldr	r1, .L42
   36:displayHandler.cpp ****     
- 668              		.loc 4 36 29 view .LVU163
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 27
-
-
+ 668              		.loc 4 36 29 view .LVU162
  669 000c D4F81438 		ldr	r3, [r4, #2068]
- 670              		.loc 4 40 12 view .LVU164
+ 670              		.loc 4 40 12 view .LVU163
  671 0010 03A8     		add	r0, sp, #12
  672              	.LVL43:
   36:displayHandler.cpp ****     
- 673              		.loc 4 36 23 view .LVU165
+ 673              		.loc 4 36 23 view .LVU164
  674 0012 D3ED007A 		vldr.32	s15, [r3]
  675 0016 FDEEE77A 		vcvt.s32.f32	s15, s15
   36:displayHandler.cpp ****     
- 676              		.loc 4 36 43 view .LVU166
+ 676              		.loc 4 36 43 view .LVU165
  677 001a F8EEE77A 		vcvt.f32.s32	s15, s15
  678 001e 67EE877A 		vmul.f32	s15, s15, s14
- 679              		.loc 4 40 12 view .LVU167
+ 679              		.loc 4 40 12 view .LVU166
  680 0022 FDEEE77A 		vcvt.s32.f32	s15, s15
  681 0026 17EE902A 		vmov	r2, s15	@ int
  682 002a FFF7FEFF 		bl	sprintf
@@ -1581,15 +1584,15 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   41:displayHandler.cpp ****     
   42:displayHandler.cpp ****     // write to display the string containig the resacled val
   43:displayHandler.cpp ****     _displayPtr->WriteString((const char*)intToString_rescaledValue,Font_16x26, true);
- 684              		.loc 4 43 5 is_stmt 1 view .LVU168
+ 684              		.loc 4 43 5 is_stmt 1 view .LVU167
  685 002e 2068     		ldr	r0, [r4]
- 686              		.loc 4 43 29 is_stmt 0 view .LVU169
+ 686              		.loc 4 43 29 is_stmt 0 view .LVU168
  687 0030 0122     		movs	r2, #1
  688 0032 054B     		ldr	r3, .L42+4
- 689              		.loc 4 43 85 view .LVU170
+ 689              		.loc 4 43 85 view .LVU169
  690 0034 0468     		ldr	r4, [r0]
  691              	.LVL45:
- 692              		.loc 4 43 29 view .LVU171
+ 692              		.loc 4 43 29 view .LVU170
  693 0036 03A9     		add	r1, sp, #12
  694 0038 0092     		str	r2, [sp]
  695 003a A46A     		ldr	r4, [r4, #40]
@@ -1598,7 +1601,7 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  698              	.LVL46:
   44:displayHandler.cpp ****   
   45:displayHandler.cpp **** }
- 699              		.loc 4 45 1 view .LVU172
+ 699              		.loc 4 45 1 view .LVU171
  700 0040 04B0     		add	sp, sp, #16
  701              		.cfi_def_cfa_offset 8
  702              		@ sp needed
@@ -1615,12 +1618,12 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  714              		.p2align 2,,3
  715              		.global	_ZN14DisplayHandler8SetStateE12DisplayState
  716              		.syntax unified
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 28
+
+
  717              		.thumb
  718              		.thumb_func
  719              		.fpu fpv5-d16
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 28
-
-
  721              	_ZN14DisplayHandler8SetStateE12DisplayState:
  722              	.LVL47:
  723              	.LFB2695:
@@ -1634,9 +1637,9 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   49:displayHandler.cpp **** 
   50:displayHandler.cpp ****     // clears display at each new state
   51:displayHandler.cpp ****     _displayPtr->Fill(false);
- 728              		.loc 4 51 5 view .LVU174
+ 728              		.loc 4 51 5 view .LVU173
   48:displayHandler.cpp **** 
- 729              		.loc 4 48 53 is_stmt 0 view .LVU175
+ 729              		.loc 4 48 53 is_stmt 0 view .LVU174
  730 0000 38B5     		push	{r3, r4, r5, lr}
  731              		.cfi_def_cfa_offset 16
  732              		.cfi_offset 3, -16
@@ -1644,67 +1647,67 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  734              		.cfi_offset 5, -8
  735              		.cfi_offset 14, -4
   48:displayHandler.cpp **** 
- 736              		.loc 4 48 53 view .LVU176
+ 736              		.loc 4 48 53 view .LVU175
  737 0002 0446     		mov	r4, r0
- 738              		.loc 4 51 5 view .LVU177
+ 738              		.loc 4 51 5 view .LVU176
  739 0004 0068     		ldr	r0, [r0]
  740              	.LVL48:
- 741              		.loc 4 51 5 view .LVU178
+ 741              		.loc 4 51 5 view .LVU177
  742 0006 094A     		ldr	r2, .L48
   48:displayHandler.cpp **** 
- 743              		.loc 4 48 53 view .LVU179
+ 743              		.loc 4 48 53 view .LVU178
  744 0008 0D46     		mov	r5, r1
- 745              		.loc 4 51 28 view .LVU180
+ 745              		.loc 4 51 28 view .LVU179
  746 000a 0368     		ldr	r3, [r0]
  747 000c 1B69     		ldr	r3, [r3, #16]
  748 000e 9342     		cmp	r3, r2
  749 0010 07D1     		bne	.L45
- 750              	.LBB100:
- 751              	.LBB101:
- 752              	.LBB102:
+ 750              	.LBB99:
+ 751              	.LBB100:
+ 752              	.LBB101:
  354:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
- 753              		.loc 2 354 24 view .LVU181
+ 753              		.loc 2 354 24 view .LVU180
  754 0012 4FF48062 		mov	r2, #1024
  755 0016 0021     		movs	r1, #0
  756              	.LVL49:
  354:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
- 757              		.loc 2 354 24 view .LVU182
+ 757              		.loc 2 354 24 view .LVU181
  758 0018 1030     		adds	r0, r0, #16
  759 001a FFF7FEFF 		bl	memset
  760              	.LVL50:
- 761              	.LBE102:
- 762              	.LBE101:
- 763              	.LBE100:
+ 761              	.LBE101:
+ 762              	.LBE100:
+ 763              	.LBE99:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 29
+
+
   52:displayHandler.cpp ****     _currentState = newState;
- 764              		.loc 4 52 5 is_stmt 1 view .LVU183
- 765              		.loc 4 52 19 is_stmt 0 view .LVU184
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 29
-
-
+ 764              		.loc 4 52 5 is_stmt 1 view .LVU182
+ 765              		.loc 4 52 19 is_stmt 0 view .LVU183
  766 001e 2571     		strb	r5, [r4, #4]
   53:displayHandler.cpp **** }
- 767              		.loc 4 53 1 view .LVU185
+ 767              		.loc 4 53 1 view .LVU184
  768 0020 38BD     		pop	{r3, r4, r5, pc}
  769              	.LVL51:
  770              	.L45:
   51:displayHandler.cpp ****     _currentState = newState;
- 771              		.loc 4 51 22 view .LVU186
+ 771              		.loc 4 51 22 view .LVU185
  772 0022 0021     		movs	r1, #0
  773              	.LVL52:
   51:displayHandler.cpp ****     _currentState = newState;
- 774              		.loc 4 51 22 view .LVU187
+ 774              		.loc 4 51 22 view .LVU186
  775 0024 9847     		blx	r3
  776              	.LVL53:
   52:displayHandler.cpp ****     _currentState = newState;
- 777              		.loc 4 52 5 is_stmt 1 view .LVU188
+ 777              		.loc 4 52 5 is_stmt 1 view .LVU187
   52:displayHandler.cpp ****     _currentState = newState;
- 778              		.loc 4 52 19 is_stmt 0 view .LVU189
+ 778              		.loc 4 52 19 is_stmt 0 view .LVU188
  779 0026 2571     		strb	r5, [r4, #4]
- 780              		.loc 4 53 1 view .LVU190
+ 780              		.loc 4 53 1 view .LVU189
  781 0028 38BD     		pop	{r3, r4, r5, pc}
  782              	.LVL54:
  783              	.L49:
- 784              		.loc 4 53 1 view .LVU191
+ 784              		.loc 4 53 1 view .LVU190
  785 002a 00BF     		.align	2
  786              	.L48:
  787 002c 00000000 		.word	_ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb
@@ -1729,199 +1732,196 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
  806              		@ frame_needed = 0, uses_anonymous_args = 0
  807              		@ link register save eliminated.
   56:displayHandler.cpp ****     if(text != nullptr)
- 808              		.loc 4 56 5 view .LVU193
+ 808              		.loc 4 56 5 view .LVU192
  809 0000 89B1     		cbz	r1, .L54
   57:displayHandler.cpp ****     {
   58:displayHandler.cpp ****         _standbyText = text;
- 810              		.loc 4 58 9 view .LVU194
+ 810              		.loc 4 58 9 view .LVU193
   59:displayHandler.cpp ****         _displayPtr->Fill(false);
- 811              		.loc 4 59 9 is_stmt 0 view .LVU195
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 30
+
+
+ 811              		.loc 4 59 9 is_stmt 0 view .LVU194
  812 0002 0368     		ldr	r3, [r0]
- 813              		.loc 4 59 32 view .LVU196
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 30
-
-
+ 813              		.loc 4 59 32 view .LVU195
  814 0004 1A68     		ldr	r2, [r3]
   55:displayHandler.cpp ****     if(text != nullptr)
- 815              		.loc 4 55 54 view .LVU197
+ 815              		.loc 4 55 54 view .LVU196
  816 0006 10B4     		push	{r4}
  817              		.cfi_def_cfa_offset 4
  818              		.cfi_offset 4, -4
- 819              		.loc 4 59 32 view .LVU198
+ 819              		.loc 4 59 32 view .LVU197
  820 0008 1269     		ldr	r2, [r2, #16]
  821 000a 0A4C     		ldr	r4, .L58
   58:displayHandler.cpp ****         _displayPtr->Fill(false);
- 822              		.loc 4 58 22 view .LVU199
+ 822              		.loc 4 58 22 view .LVU198
  823 000c C0F81818 		str	r1, [r0, #2072]
- 824              		.loc 4 59 9 is_stmt 1 view .LVU200
+ 824              		.loc 4 59 9 is_stmt 1 view .LVU199
  825 0010 A242     		cmp	r2, r4
  826 0012 09D1     		bne	.L53
- 827              	.LBB107:
- 828              	.LBB108:
- 829              	.LBB109:
+ 827              	.LBB106:
+ 828              	.LBB107:
+ 829              	.LBB108:
  354:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
- 830              		.loc 2 354 24 is_stmt 0 view .LVU201
+ 830              		.loc 2 354 24 is_stmt 0 view .LVU200
  831 0014 4FF48062 		mov	r2, #1024
  832 0018 0021     		movs	r1, #0
  833              	.LVL56:
  354:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
- 834              		.loc 2 354 24 view .LVU202
+ 834              		.loc 2 354 24 view .LVU201
  835 001a 03F11000 		add	r0, r3, #16
  836              	.LVL57:
  354:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
- 837              		.loc 2 354 24 view .LVU203
- 838              	.LBE109:
- 839              	.LBE108:
- 840              	.LBE107:
+ 837              		.loc 2 354 24 view .LVU202
+ 838              	.LBE108:
+ 839              	.LBE107:
+ 840              	.LBE106:
   60:displayHandler.cpp ****     }
   61:displayHandler.cpp **** }
- 841              		.loc 4 61 1 view .LVU204
+ 841              		.loc 4 61 1 view .LVU203
  842 001e 5DF8044B 		ldr	r4, [sp], #4
  843              		.cfi_restore 4
  844              		.cfi_def_cfa_offset 0
- 845              	.LBB112:
- 846              	.LBB111:
- 847              	.LBB110:
+ 845              	.LBB111:
+ 846              	.LBB110:
+ 847              	.LBB109:
  354:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
- 848              		.loc 2 354 24 view .LVU205
+ 848              		.loc 2 354 24 view .LVU204
  849 0022 FFF7FEBF 		b	memset
  850              	.LVL58:
  851              	.L54:
  354:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
- 852              		.loc 2 354 24 view .LVU206
+ 852              		.loc 2 354 24 view .LVU205
  853 0026 7047     		bx	lr
  854              	.L53:
  855              		.cfi_def_cfa_offset 4
  856              		.cfi_offset 4, -4
  354:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
- 857              		.loc 2 354 24 view .LVU207
- 858              	.LBE110:
- 859              	.LBE111:
- 860              	.LBE112:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 31
+ 857              		.loc 2 354 24 view .LVU206
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 31
 
 
+ 858              	.LBE109:
+ 859              	.LBE110:
+ 860              	.LBE111:
   59:displayHandler.cpp ****     }
- 861              		.loc 4 59 26 view .LVU208
+ 861              		.loc 4 59 26 view .LVU207
  862 0028 0021     		movs	r1, #0
  863              	.LVL59:
   59:displayHandler.cpp ****     }
- 864              		.loc 4 59 26 view .LVU209
+ 864              		.loc 4 59 26 view .LVU208
  865 002a 1846     		mov	r0, r3
  866              	.LVL60:
- 867              		.loc 4 61 1 view .LVU210
+ 867              		.loc 4 61 1 view .LVU209
  868 002c 5DF8044B 		ldr	r4, [sp], #4
  869              		.cfi_restore 4
  870              		.cfi_def_cfa_offset 0
   59:displayHandler.cpp ****     }
- 871              		.loc 4 59 26 view .LVU211
+ 871              		.loc 4 59 26 view .LVU210
  872 0030 1047     		bx	r2	@ indirect register sibling call
  873              	.LVL61:
  874              	.L59:
   59:displayHandler.cpp ****     }
- 875              		.loc 4 59 26 view .LVU212
+ 875              		.loc 4 59 26 view .LVU211
  876 0032 00BF     		.align	2
  877              	.L58:
  878 0034 00000000 		.word	_ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb
  879              		.cfi_endproc
  880              	.LFE2696:
- 882              		.section	.text._ZN14DisplayHandler15pushAudioSampleEff,"ax",%progbits
+ 882              		.section	.text._ZN14DisplayHandler15pushAudioSampleEf,"ax",%progbits
  883              		.align	1
  884              		.p2align 2,,3
- 885              		.global	_ZN14DisplayHandler15pushAudioSampleEff
+ 885              		.global	_ZN14DisplayHandler15pushAudioSampleEf
  886              		.syntax unified
  887              		.thumb
  888              		.thumb_func
  889              		.fpu fpv5-d16
- 891              	_ZN14DisplayHandler15pushAudioSampleEff:
+ 891              	_ZN14DisplayHandler15pushAudioSampleEf:
  892              	.LVL62:
  893              	.LFB2697:
   62:displayHandler.cpp **** 
   63:displayHandler.cpp **** 
   64:displayHandler.cpp **** // fills buffer for waveform viewer: to be called in audio callback
-  65:displayHandler.cpp **** void DisplayHandler::pushAudioSample(float sample, float multiplier){
- 894              		.loc 4 65 69 is_stmt 1 view -0
+  65:displayHandler.cpp **** void DisplayHandler::pushAudioSample(float sample){
+ 894              		.loc 4 65 51 is_stmt 1 view -0
  895              		.cfi_startproc
  896              		@ args = 0, pretend = 0, frame = 0
  897              		@ frame_needed = 0, uses_anonymous_args = 0
  898              		@ link register save eliminated.
-  66:displayHandler.cpp ****     _circBuffer_ptr[_writeHead] = sample*multiplier;
- 899              		.loc 4 66 5 view .LVU214
- 900              		.loc 4 66 21 is_stmt 0 view .LVU215
+  66:displayHandler.cpp ****     _circBuffer_ptr[_writeHead] = sample;
+ 899              		.loc 4 66 5 view .LVU213
+ 900              		.loc 4 66 21 is_stmt 0 view .LVU214
  901 0000 D0F80C28 		ldr	r2, [r0, #2060]
- 902              		.loc 4 66 41 view .LVU216
- 903 0004 60EE200A 		vmul.f32	s1, s0, s1
- 904              	.LVL63:
   67:displayHandler.cpp **** 
   68:displayHandler.cpp ****     // Implements circular buffer logic
   69:displayHandler.cpp ****     _writeHead = (_writeHead + 1) % BUFFER_SIZE;
- 905              		.loc 4 69 30 view .LVU217
- 906 0008 531C     		adds	r3, r2, #1
-  66:displayHandler.cpp ****     _circBuffer_ptr[_writeHead] = sample*multiplier;
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 32
+ 902              		.loc 4 69 30 view .LVU215
+ 903 0004 531C     		adds	r3, r2, #1
+  66:displayHandler.cpp ****     _circBuffer_ptr[_writeHead] = sample;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 32
 
 
- 907              		.loc 4 66 33 view .LVU218
- 908 000a 00EB8202 		add	r2, r0, r2, lsl #2
- 909              		.loc 4 69 35 view .LVU219
- 910 000e 5942     		rsbs	r1, r3, #0
-  66:displayHandler.cpp ****     _circBuffer_ptr[_writeHead] = sample*multiplier;
- 911              		.loc 4 66 33 view .LVU220
- 912 0010 C2ED020A 		vstr.32	s1, [r2, #8]
- 913              		.loc 4 69 5 is_stmt 1 view .LVU221
- 914              		.loc 4 69 35 is_stmt 0 view .LVU222
- 915 0014 DBB2     		uxtb	r3, r3
- 916 0016 CAB2     		uxtb	r2, r1
- 917 0018 58BF     		it	pl
- 918 001a 5342     		rsbpl	r3, r2, #0
- 919              		.loc 4 69 16 view .LVU223
- 920 001c C0F80C38 		str	r3, [r0, #2060]
+ 904              		.loc 4 66 33 view .LVU216
+ 905 0006 00EB8202 		add	r2, r0, r2, lsl #2
+ 906              		.loc 4 69 35 view .LVU217
+ 907 000a 5942     		rsbs	r1, r3, #0
+  66:displayHandler.cpp ****     _circBuffer_ptr[_writeHead] = sample;
+ 908              		.loc 4 66 33 view .LVU218
+ 909 000c 82ED020A 		vstr.32	s0, [r2, #8]
+ 910              		.loc 4 69 5 is_stmt 1 view .LVU219
+ 911              		.loc 4 69 35 is_stmt 0 view .LVU220
+ 912 0010 DBB2     		uxtb	r3, r3
+ 913 0012 CAB2     		uxtb	r2, r1
+ 914 0014 58BF     		it	pl
+ 915 0016 5342     		rsbpl	r3, r2, #0
+ 916              		.loc 4 69 16 view .LVU221
+ 917 0018 C0F80C38 		str	r3, [r0, #2060]
   70:displayHandler.cpp **** }
- 921              		.loc 4 70 1 view .LVU224
- 922 0020 7047     		bx	lr
- 923              		.cfi_endproc
- 924              	.LFE2697:
- 926 0022 00BF     		.section	.text._ZN14DisplayHandler11findTriggerEv,"ax",%progbits
- 927              		.align	1
- 928              		.p2align 2,,3
- 929              		.global	_ZN14DisplayHandler11findTriggerEv
- 930              		.syntax unified
- 931              		.thumb
- 932              		.thumb_func
- 933              		.fpu fpv5-d16
- 935              	_ZN14DisplayHandler11findTriggerEv:
- 936              	.LVL64:
- 937              	.LFB2698:
+ 918              		.loc 4 70 1 view .LVU222
+ 919 001c 7047     		bx	lr
+ 920              		.cfi_endproc
+ 921              	.LFE2697:
+ 923 001e 00BF     		.section	.text._ZN14DisplayHandler11findTriggerEv,"ax",%progbits
+ 924              		.align	1
+ 925              		.p2align 2,,3
+ 926              		.global	_ZN14DisplayHandler11findTriggerEv
+ 927              		.syntax unified
+ 928              		.thumb
+ 929              		.thumb_func
+ 930              		.fpu fpv5-d16
+ 932              	_ZN14DisplayHandler11findTriggerEv:
+ 933              	.LVL63:
+ 934              	.LFB2698:
   71:displayHandler.cpp **** 
   72:displayHandler.cpp **** // Trigger logic
   73:displayHandler.cpp **** int DisplayHandler::findTrigger(){
- 938              		.loc 4 73 34 is_stmt 1 view -0
- 939              		.cfi_startproc
- 940              		@ args = 0, pretend = 0, frame = 0
- 941              		@ frame_needed = 0, uses_anonymous_args = 0
+ 935              		.loc 4 73 34 is_stmt 1 view -0
+ 936              		.cfi_startproc
+ 937              		@ args = 0, pretend = 0, frame = 0
+ 938              		@ frame_needed = 0, uses_anonymous_args = 0
   74:displayHandler.cpp ****     float currVal = 0;
- 942              		.loc 4 74 5 view .LVU226
+ 939              		.loc 4 74 5 view .LVU224
   75:displayHandler.cpp ****     float nextVal= 0;
- 943              		.loc 4 75 5 view .LVU227
+ 940              		.loc 4 75 5 view .LVU225
   76:displayHandler.cpp ****     static int trigIdx = 0;
- 944              		.loc 4 76 5 view .LVU228
+ 941              		.loc 4 76 5 view .LVU226
   77:displayHandler.cpp **** 
   78:displayHandler.cpp ****     // _writeHead is the most recent
   79:displayHandler.cpp ****     int oldestSampleIdx = _writeHead + 1;
- 945              		.loc 4 79 5 view .LVU229
+ 942              		.loc 4 79 5 view .LVU227
   80:displayHandler.cpp **** 
   81:displayHandler.cpp ****     // what?
   82:displayHandler.cpp ****     // if (trigIdx < 0) trigIdx = BUFFER_SIZE - trigIdx;
   83:displayHandler.cpp ****     
   84:displayHandler.cpp ****     if (_triggerEnabled==true){
- 946              		.loc 4 84 5 view .LVU230
- 947              	.LBB113:
- 948 0000 90F81038 		ldrb	r3, [r0, #2064]	@ zero_extendqisi2
- 949 0004 13B9     		cbnz	r3, .L62
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 33
+ 943              		.loc 4 84 5 view .LVU228
+ 944              	.LBB112:
+ 945 0000 90F81038 		ldrb	r3, [r0, #2064]	@ zero_extendqisi2
+ 946 0004 13B9     		cbnz	r3, .L62
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 33
 
 
- 950              	.LBE113:
+ 947              	.LBE112:
   85:displayHandler.cpp ****         
   86:displayHandler.cpp **** 
   87:displayHandler.cpp ****         // finds the offset from oldest sample from where to get the trigger
@@ -1937,1396 +1937,1429 @@ ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 1
   97:displayHandler.cpp ****         }
   98:displayHandler.cpp ****     }           
   99:displayHandler.cpp ****     return trigIdx;
- 951              		.loc 4 99 12 is_stmt 0 view .LVU231
- 952 0006 1F4B     		ldr	r3, .L75
- 953 0008 1868     		ldr	r0, [r3]
- 954              	.LVL65:
+ 948              		.loc 4 99 12 is_stmt 0 view .LVU229
+ 949 0006 1F4B     		ldr	r3, .L75
+ 950 0008 1868     		ldr	r0, [r3]
+ 951              	.LVL64:
  100:displayHandler.cpp **** }
- 955              		.loc 4 100 1 view .LVU232
- 956 000a 7047     		bx	lr
- 957              	.LVL66:
- 958              	.L62:
+ 952              		.loc 4 100 1 view .LVU230
+ 953 000a 7047     		bx	lr
+ 954              	.LVL65:
+ 955              	.L62:
   79:displayHandler.cpp **** 
- 959              		.loc 4 79 9 view .LVU233
- 960 000c D0F80C38 		ldr	r3, [r0, #2060]
- 961              	.LBB117:
- 962              	.LBB114:
+ 956              		.loc 4 79 9 view .LVU231
+ 957 000c D0F80C38 		ldr	r3, [r0, #2060]
+ 958              	.LBB116:
+ 959              	.LBB113:
   88:displayHandler.cpp ****             currVal = _circBuffer_ptr[i  % BUFFER_SIZE];
- 963              		.loc 4 88 59 view .LVU234
- 964 0010 D0F80828 		ldr	r2, [r0, #2056]
- 965              	.LBE114:
- 966              	.LBE117:
+ 960              		.loc 4 88 59 view .LVU232
+ 961 0010 D0F80828 		ldr	r2, [r0, #2056]
+ 962              	.LBE113:
+ 963              	.LBE116:
   79:displayHandler.cpp **** 
- 967              		.loc 4 79 9 view .LVU235
- 968 0014 0133     		adds	r3, r3, #1
- 969              	.LVL67:
- 970              	.LBB118:
- 971              	.LBB115:
+ 964              		.loc 4 79 9 view .LVU233
+ 965 0014 0133     		adds	r3, r3, #1
+ 966              	.LVL66:
+ 967              	.LBB117:
+ 968              	.LBB114:
   88:displayHandler.cpp ****             currVal = _circBuffer_ptr[i  % BUFFER_SIZE];
- 972              		.loc 4 88 41 is_stmt 1 view .LVU236
- 973              	.LBE115:
- 974              	.LBE118:
+ 969              		.loc 4 88 41 is_stmt 1 view .LVU234
+ 970              	.LBE114:
+ 971              	.LBE117:
   73:displayHandler.cpp ****     float currVal = 0;
- 975              		.loc 4 73 34 is_stmt 0 view .LVU237
- 976 0016 00B5     		push	{lr}
- 977              		.cfi_def_cfa_offset 4
- 978              		.cfi_offset 14, -4
- 979              	.LBB119:
- 980              	.LBB116:
+ 972              		.loc 4 73 34 is_stmt 0 view .LVU235
+ 973 0016 00B5     		push	{lr}
+ 974              		.cfi_def_cfa_offset 4
+ 975              		.cfi_offset 14, -4
+ 976              	.LBB118:
+ 977              	.LBB115:
   88:displayHandler.cpp ****             currVal = _circBuffer_ptr[i  % BUFFER_SIZE];
- 981              		.loc 4 88 59 view .LVU238
- 982 0018 03EB020E 		add	lr, r3, r2
+ 978              		.loc 4 88 59 view .LVU236
+ 979 0018 03EB020E 		add	lr, r3, r2
   88:displayHandler.cpp ****             currVal = _circBuffer_ptr[i  % BUFFER_SIZE];
- 983              		.loc 4 88 41 view .LVU239
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 34
+ 980              		.loc 4 88 41 view .LVU237
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 34
 
 
- 984 001c 7345     		cmp	r3, lr
- 985 001e 2DDA     		bge	.L64
+ 981 001c 7345     		cmp	r3, lr
+ 982 001e 2DDA     		bge	.L64
   89:displayHandler.cpp ****             nextVal = _circBuffer_ptr[ (i+1)  % BUFFER_SIZE];
- 986              		.loc 4 89 42 view .LVU240
- 987 0020 5942     		rsbs	r1, r3, #0
- 988 0022 DAB2     		uxtb	r2, r3
- 989 0024 C9B2     		uxtb	r1, r1
- 990 0026 58BF     		it	pl
- 991 0028 4A42     		rsbpl	r2, r1, #0
+ 983              		.loc 4 89 42 view .LVU238
+ 984 0020 5942     		rsbs	r1, r3, #0
+ 985 0022 DAB2     		uxtb	r2, r3
+ 986 0024 C9B2     		uxtb	r1, r1
+ 987 0026 58BF     		it	pl
+ 988 0028 4A42     		rsbpl	r2, r1, #0
   89:displayHandler.cpp ****             nextVal = _circBuffer_ptr[ (i+1)  % BUFFER_SIZE];
- 992              		.loc 4 89 21 view .LVU241
- 993 002a 00EB8202 		add	r2, r0, r2, lsl #2
- 994 002e D2ED027A 		vldr.32	s15, [r2, #8]
- 995 0032 01E0     		b	.L65
- 996              	.LVL68:
- 997              	.L66:
+ 989              		.loc 4 89 21 view .LVU239
+ 990 002a 00EB8202 		add	r2, r0, r2, lsl #2
+ 991 002e D2ED027A 		vldr.32	s15, [r2, #8]
+ 992 0032 01E0     		b	.L65
+ 993              	.LVL67:
+ 994              	.L66:
   88:displayHandler.cpp ****             currVal = _circBuffer_ptr[i  % BUFFER_SIZE];
- 998              		.loc 4 88 41 discriminator 1 view .LVU242
- 999 0034 7345     		cmp	r3, lr
- 1000 0036 21D0     		beq	.L64
- 1001              	.LVL69:
- 1002              	.L65:
+ 995              		.loc 4 88 41 discriminator 1 view .LVU240
+ 996 0034 7345     		cmp	r3, lr
+ 997 0036 21D0     		beq	.L64
+ 998              	.LVL68:
+ 999              	.L65:
   89:displayHandler.cpp ****             nextVal = _circBuffer_ptr[ (i+1)  % BUFFER_SIZE];
- 1003              		.loc 4 89 13 is_stmt 1 view .LVU243
+ 1000              		.loc 4 89 13 is_stmt 1 view .LVU241
   90:displayHandler.cpp ****              
- 1004              		.loc 4 90 13 view .LVU244
- 1005 0038 9C46     		mov	ip, r3
+ 1001              		.loc 4 90 13 view .LVU242
+ 1002 0038 9C46     		mov	ip, r3
   90:displayHandler.cpp ****              
- 1006              		.loc 4 90 42 is_stmt 0 view .LVU245
- 1007 003a 0133     		adds	r3, r3, #1
- 1008              	.LVL70:
+ 1003              		.loc 4 90 42 is_stmt 0 view .LVU243
+ 1004 003a 0133     		adds	r3, r3, #1
+ 1005              	.LVL69:
   88:displayHandler.cpp ****             currVal = _circBuffer_ptr[i  % BUFFER_SIZE];
- 1009              		.loc 4 88 41 is_stmt 1 view .LVU246
- 1010 003c B0EE677A 		vmov.f32	s14, s15
+ 1006              		.loc 4 88 41 is_stmt 1 view .LVU244
+ 1007 003c B0EE677A 		vmov.f32	s14, s15
   90:displayHandler.cpp ****              
- 1011              		.loc 4 90 47 is_stmt 0 view .LVU247
- 1012 0040 5942     		rsbs	r1, r3, #0
- 1013 0042 DAB2     		uxtb	r2, r3
+ 1008              		.loc 4 90 47 is_stmt 0 view .LVU245
+ 1009 0040 5942     		rsbs	r1, r3, #0
+ 1010 0042 DAB2     		uxtb	r2, r3
   93:displayHandler.cpp ****                 trigIdx = i  % BUFFER_SIZE;
- 1014              		.loc 4 93 13 view .LVU248
- 1015 0044 B5EEC07A 		vcmpe.f32	s14, #0
+ 1011              		.loc 4 93 13 view .LVU246
+ 1012 0044 B5EEC07A 		vcmpe.f32	s14, #0
   90:displayHandler.cpp ****              
- 1016              		.loc 4 90 47 view .LVU249
- 1017 0048 C9B2     		uxtb	r1, r1
- 1018 004a 58BF     		it	pl
- 1019 004c 4A42     		rsbpl	r2, r1, #0
+ 1013              		.loc 4 90 47 view .LVU247
+ 1014 0048 C9B2     		uxtb	r1, r1
+ 1015 004a 58BF     		it	pl
+ 1016 004c 4A42     		rsbpl	r2, r1, #0
   93:displayHandler.cpp ****                 trigIdx = i  % BUFFER_SIZE;
- 1020              		.loc 4 93 13 view .LVU250
- 1021 004e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1017              		.loc 4 93 13 view .LVU248
+ 1018 004e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
   90:displayHandler.cpp ****              
- 1022              		.loc 4 90 21 view .LVU251
- 1023 0052 00EB8202 		add	r2, r0, r2, lsl #2
- 1024 0056 D2ED027A 		vldr.32	s15, [r2, #8]
- 1025              	.LVL71:
+ 1019              		.loc 4 90 21 view .LVU249
+ 1020 0052 00EB8202 		add	r2, r0, r2, lsl #2
+ 1021 0056 D2ED027A 		vldr.32	s15, [r2, #8]
+ 1022              	.LVL70:
   93:displayHandler.cpp ****                 trigIdx = i  % BUFFER_SIZE;
- 1026              		.loc 4 93 13 is_stmt 1 view .LVU252
- 1027 005a EBD5     		bpl	.L66
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 35
+ 1023              		.loc 4 93 13 is_stmt 1 view .LVU250
+ 1024 005a EBD5     		bpl	.L66
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 35
 
 
   93:displayHandler.cpp ****                 trigIdx = i  % BUFFER_SIZE;
- 1028              		.loc 4 93 31 is_stmt 0 discriminator 1 view .LVU253
- 1029 005c F5EEC07A 		vcmpe.f32	s15, #0
- 1030 0060 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 1031 0064 E6DB     		blt	.L66
+ 1025              		.loc 4 93 31 is_stmt 0 discriminator 1 view .LVU251
+ 1026 005c F5EEC07A 		vcmpe.f32	s15, #0
+ 1027 0060 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1028 0064 E6DB     		blt	.L66
   89:displayHandler.cpp ****             nextVal = _circBuffer_ptr[ (i+1)  % BUFFER_SIZE];
- 1032              		.loc 4 89 42 view .LVU254
- 1033 0066 DCF10003 		rsbs	r3, ip, #0
+ 1029              		.loc 4 89 42 view .LVU252
+ 1030 0066 DCF10003 		rsbs	r3, ip, #0
+ 1031              	.LVL71:
+  89:displayHandler.cpp ****             nextVal = _circBuffer_ptr[ (i+1)  % BUFFER_SIZE];
+ 1032              		.loc 4 89 42 view .LVU253
+ 1033 006a 5FFA8CF0 		uxtb	r0, ip
  1034              	.LVL72:
+  94:displayHandler.cpp ****                 break; // CHANGE THIS BECAUSE BREAK IS UGLY
+ 1035              		.loc 4 94 25 view .LVU254
+ 1036 006e 054A     		ldr	r2, .L75
   89:displayHandler.cpp ****             nextVal = _circBuffer_ptr[ (i+1)  % BUFFER_SIZE];
- 1035              		.loc 4 89 42 view .LVU255
- 1036 006a 5FFA8CF0 		uxtb	r0, ip
- 1037              	.LVL73:
+ 1037              		.loc 4 89 42 view .LVU255
+ 1038 0070 DBB2     		uxtb	r3, r3
+ 1039 0072 58BF     		it	pl
+ 1040 0074 5842     		rsbpl	r0, r3, #0
   94:displayHandler.cpp ****                 break; // CHANGE THIS BECAUSE BREAK IS UGLY
- 1038              		.loc 4 94 25 view .LVU256
- 1039 006e 054A     		ldr	r2, .L75
-  89:displayHandler.cpp ****             nextVal = _circBuffer_ptr[ (i+1)  % BUFFER_SIZE];
- 1040              		.loc 4 89 42 view .LVU257
- 1041 0070 DBB2     		uxtb	r3, r3
- 1042 0072 58BF     		it	pl
- 1043 0074 5842     		rsbpl	r0, r3, #0
+ 1041              		.loc 4 94 17 is_stmt 1 view .LVU256
   94:displayHandler.cpp ****                 break; // CHANGE THIS BECAUSE BREAK IS UGLY
- 1044              		.loc 4 94 17 is_stmt 1 view .LVU258
-  94:displayHandler.cpp ****                 break; // CHANGE THIS BECAUSE BREAK IS UGLY
- 1045              		.loc 4 94 25 is_stmt 0 view .LVU259
- 1046 0076 1060     		str	r0, [r2]
+ 1042              		.loc 4 94 25 is_stmt 0 view .LVU257
+ 1043 0076 1060     		str	r0, [r2]
   95:displayHandler.cpp ****             }
- 1047              		.loc 4 95 17 is_stmt 1 view .LVU260
- 1048              	.LBE116:
- 1049              	.LBE119:
+ 1044              		.loc 4 95 17 is_stmt 1 view .LVU258
+ 1045              	.LBE115:
+ 1046              	.LBE118:
   99:displayHandler.cpp **** }
- 1050              		.loc 4 99 5 view .LVU261
- 1051              		.loc 4 100 1 is_stmt 0 view .LVU262
- 1052 0078 5DF804FB 		ldr	pc, [sp], #4
- 1053              	.LVL74:
- 1054              	.L64:
+ 1047              		.loc 4 99 5 view .LVU259
+ 1048              		.loc 4 100 1 is_stmt 0 view .LVU260
+ 1049 0078 5DF804FB 		ldr	pc, [sp], #4
+ 1050              	.LVL73:
+ 1051              	.L64:
   99:displayHandler.cpp **** }
- 1055              		.loc 4 99 12 view .LVU263
- 1056 007c 014B     		ldr	r3, .L75
- 1057 007e 1868     		ldr	r0, [r3]
- 1058              	.LVL75:
- 1059              		.loc 4 100 1 view .LVU264
- 1060 0080 5DF804FB 		ldr	pc, [sp], #4
- 1061              	.L76:
- 1062              		.align	2
- 1063              	.L75:
- 1064 0084 00000000 		.word	.LANCHOR0
- 1065              		.cfi_endproc
- 1066              	.LFE2698:
- 1068              		.section	.text._ZN14DisplayHandler12drawWaveFormEv,"ax",%progbits
- 1069              		.align	1
- 1070              		.p2align 2,,3
- 1071              		.global	_ZN14DisplayHandler12drawWaveFormEv
- 1072              		.syntax unified
- 1073              		.thumb
- 1074              		.thumb_func
- 1075              		.fpu fpv5-d16
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 36
+ 1052              		.loc 4 99 12 view .LVU261
+ 1053 007c 014B     		ldr	r3, .L75
+ 1054 007e 1868     		ldr	r0, [r3]
+ 1055              	.LVL74:
+ 1056              		.loc 4 100 1 view .LVU262
+ 1057 0080 5DF804FB 		ldr	pc, [sp], #4
+ 1058              	.L76:
+ 1059              		.align	2
+ 1060              	.L75:
+ 1061 0084 00000000 		.word	.LANCHOR0
+ 1062              		.cfi_endproc
+ 1063              	.LFE2698:
+ 1065              		.section	.text._ZN14DisplayHandler12drawWaveFormEv,"ax",%progbits
+ 1066              		.align	1
+ 1067              		.p2align 2,,3
+ 1068              		.global	_ZN14DisplayHandler12drawWaveFormEv
+ 1069              		.syntax unified
+ 1070              		.thumb
+ 1071              		.thumb_func
+ 1072              		.fpu fpv5-d16
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 36
 
 
- 1077              	_ZN14DisplayHandler12drawWaveFormEv:
- 1078              	.LVL76:
- 1079              	.LFB2699:
+ 1074              	_ZN14DisplayHandler12drawWaveFormEv:
+ 1075              	.LVL75:
+ 1076              	.LFB2699:
  101:displayHandler.cpp **** 
  102:displayHandler.cpp **** /* DISPLAY FUNCTONS */
  103:displayHandler.cpp **** 
  104:displayHandler.cpp **** // the idea is to plot it with drawLine and decimation to avoid lagging
  105:displayHandler.cpp **** // STILL IN DEVELOPMENT
  106:displayHandler.cpp **** void DisplayHandler::drawWaveForm (){
- 1080              		.loc 4 106 37 is_stmt 1 view -0
- 1081              		.cfi_startproc
- 1082              		@ args = 0, pretend = 0, frame = 16
- 1083              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1077              		.loc 4 106 37 is_stmt 1 view -0
+ 1078              		.cfi_startproc
+ 1079              		@ args = 0, pretend = 0, frame = 16
+ 1080              		@ frame_needed = 0, uses_anonymous_args = 0
  107:displayHandler.cpp ****     
  108:displayHandler.cpp ****     int zeroOfScreen = 32; // because is 64 pixel in heigth
- 1084              		.loc 4 108 5 view .LVU266
+ 1081              		.loc 4 108 5 view .LVU264
  109:displayHandler.cpp ****     int y1, y2;
- 1085              		.loc 4 109 5 view .LVU267
+ 1082              		.loc 4 109 5 view .LVU265
  110:displayHandler.cpp ****     int idx = 0;
- 1086              		.loc 4 110 5 view .LVU268
+ 1083              		.loc 4 110 5 view .LVU266
  111:displayHandler.cpp **** 
  112:displayHandler.cpp ****     _displayPtr->SetCursor(0, zeroOfScreen);
- 1087              		.loc 4 112 5 view .LVU269
+ 1084              		.loc 4 112 5 view .LVU267
  106:displayHandler.cpp ****     
- 1088              		.loc 4 106 37 is_stmt 0 view .LVU270
- 1089 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
- 1090              		.cfi_def_cfa_offset 36
- 1091              		.cfi_offset 4, -36
- 1092              		.cfi_offset 5, -32
- 1093              		.cfi_offset 6, -28
- 1094              		.cfi_offset 7, -24
- 1095              		.cfi_offset 8, -20
- 1096              		.cfi_offset 9, -16
- 1097              		.cfi_offset 10, -12
- 1098              		.cfi_offset 11, -8
- 1099              		.cfi_offset 14, -4
- 1100              		.loc 4 112 5 view .LVU271
- 1101 0004 0468     		ldr	r4, [r0]
- 1102              	.LVL77:
- 1103              	.LBB141:
- 1104              	.LBI141:
+ 1085              		.loc 4 106 37 is_stmt 0 view .LVU268
+ 1086 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 1087              		.cfi_def_cfa_offset 36
+ 1088              		.cfi_offset 4, -36
+ 1089              		.cfi_offset 5, -32
+ 1090              		.cfi_offset 6, -28
+ 1091              		.cfi_offset 7, -24
+ 1092              		.cfi_offset 8, -20
+ 1093              		.cfi_offset 9, -16
+ 1094              		.cfi_offset 10, -12
+ 1095              		.cfi_offset 11, -8
+ 1096              		.cfi_offset 14, -4
+ 1097              		.loc 4 112 5 view .LVU269
+ 1098 0004 0468     		ldr	r4, [r0]
+ 1099              	.LVL76:
+ 1100              	.LBB140:
+ 1101              	.LBI140:
  171:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     {
- 1105              		.loc 3 171 10 is_stmt 1 view .LVU272
- 1106              	.LBB142:
+ 1102              		.loc 3 171 10 is_stmt 1 view .LVU270
+ 1103              	.LBB141:
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1107              		.loc 3 173 9 view .LVU273
- 1108              	.LBE142:
- 1109              	.LBE141:
+ 1104              		.loc 3 173 9 view .LVU271
+ 1105              	.LBE141:
+ 1106              	.LBE140:
  106:displayHandler.cpp ****     
- 1110              		.loc 4 106 37 is_stmt 0 view .LVU274
- 1111 0006 87B0     		sub	sp, sp, #28
- 1112              		.cfi_def_cfa_offset 64
+ 1107              		.loc 4 106 37 is_stmt 0 view .LVU272
+ 1108 0006 87B0     		sub	sp, sp, #28
+ 1109              		.cfi_def_cfa_offset 64
  106:displayHandler.cpp ****     
- 1113              		.loc 4 106 37 view .LVU275
- 1114 0008 8246     		mov	r10, r0
- 1115              	.LBB146:
- 1116              	.LBB143:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 37
+ 1110              		.loc 4 106 37 view .LVU273
+ 1111 0008 0646     		mov	r6, r0
+ 1112              	.LBB145:
+ 1113              	.LBB142:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 37
 
 
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1117              		.loc 3 173 33 view .LVU276
- 1118 000a 2368     		ldr	r3, [r4]
+ 1114              		.loc 3 173 33 view .LVU274
+ 1115 000a 2368     		ldr	r3, [r4]
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1119              		.loc 3 173 32 view .LVU277
- 1120 000c 2046     		mov	r0, r4
- 1121              	.LVL78:
+ 1116              		.loc 3 173 32 view .LVU275
+ 1117 000c 2046     		mov	r0, r4
+ 1118              	.LVL77:
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1122              		.loc 3 173 32 view .LVU278
- 1123 000e DB68     		ldr	r3, [r3, #12]
- 1124 0010 9847     		blx	r3
- 1125              	.LVL79:
+ 1119              		.loc 3 173 32 view .LVU276
+ 1120 000e DB68     		ldr	r3, [r3, #12]
+ 1121 0010 9847     		blx	r3
+ 1122              	.LVL78:
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1126              		.loc 3 173 19 view .LVU279
- 1127 0012 0028     		cmp	r0, #0
- 1128 0014 40F0C880 		bne	.L95
+ 1123              		.loc 3 173 19 view .LVU277
+ 1124 0012 0028     		cmp	r0, #0
+ 1125 0014 40F0CD80 		bne	.L95
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1129              		.loc 3 173 44 view .LVU280
- 1130 0018 2368     		ldr	r3, [r4]
+ 1126              		.loc 3 173 44 view .LVU278
+ 1127 0018 2368     		ldr	r3, [r4]
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1131              		.loc 3 173 43 view .LVU281
- 1132 001a 2046     		mov	r0, r4
- 1133 001c DB68     		ldr	r3, [r3, #12]
- 1134 001e 9847     		blx	r3
- 1135              	.LVL80:
+ 1128              		.loc 3 173 43 view .LVU279
+ 1129 001a 2046     		mov	r0, r4
+ 1130 001c DB68     		ldr	r3, [r3, #12]
+ 1131 001e 9847     		blx	r3
+ 1132              	.LVL79:
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1136              		.loc 3 173 19 view .LVU282
- 1137 0020 0138     		subs	r0, r0, #1
- 1138 0022 83B2     		uxth	r3, r0
- 1139              	.L78:
+ 1133              		.loc 3 173 19 view .LVU280
+ 1134 0020 0138     		subs	r0, r0, #1
+ 1135 0022 83B2     		uxth	r3, r0
+ 1136              	.L78:
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1140              		.loc 3 174 34 view .LVU283
- 1141 0024 2268     		ldr	r2, [r4]
+ 1137              		.loc 3 174 34 view .LVU281
+ 1138 0024 2268     		ldr	r2, [r4]
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1142              		.loc 3 174 33 view .LVU284
- 1143 0026 2046     		mov	r0, r4
+ 1139              		.loc 3 174 33 view .LVU282
+ 1140 0026 2046     		mov	r0, r4
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1144              		.loc 3 173 19 view .LVU285
- 1145 0028 A380     		strh	r3, [r4, #4]	@ movhi
+ 1141              		.loc 3 173 19 view .LVU283
+ 1142 0028 A380     		strh	r3, [r4, #4]	@ movhi
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1146              		.loc 3 174 9 is_stmt 1 view .LVU286
+ 1143              		.loc 3 174 9 is_stmt 1 view .LVU284
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1147              		.loc 3 174 33 is_stmt 0 view .LVU287
- 1148 002a 9368     		ldr	r3, [r2, #8]
- 1149 002c 9847     		blx	r3
- 1150              	.LVL81:
+ 1144              		.loc 3 174 33 is_stmt 0 view .LVU285
+ 1145 002a 9368     		ldr	r3, [r2, #8]
+ 1146 002c 9847     		blx	r3
+ 1147              	.LVL80:
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1151              		.loc 3 174 19 view .LVU288
- 1152 002e 2028     		cmp	r0, #32
- 1153 0030 00F2B880 		bhi	.L96
+ 1148              		.loc 3 174 19 view .LVU286
+ 1149 002e 2028     		cmp	r0, #32
+ 1150 0030 00F2BD80 		bhi	.L96
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1154              		.loc 3 174 46 view .LVU289
- 1155 0034 2368     		ldr	r3, [r4]
+ 1151              		.loc 3 174 46 view .LVU287
+ 1152 0034 2368     		ldr	r3, [r4]
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1156              		.loc 3 174 45 view .LVU290
- 1157 0036 2046     		mov	r0, r4
- 1158 0038 9B68     		ldr	r3, [r3, #8]
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 38
+ 1153              		.loc 3 174 45 view .LVU288
+ 1154 0036 2046     		mov	r0, r4
+ 1155 0038 9B68     		ldr	r3, [r3, #8]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 38
 
 
- 1159 003a 9847     		blx	r3
- 1160              	.LVL82:
+ 1156 003a 9847     		blx	r3
+ 1157              	.LVL81:
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1161              		.loc 3 174 19 view .LVU291
- 1162 003c 0138     		subs	r0, r0, #1
- 1163 003e 83B2     		uxth	r3, r0
- 1164              	.L79:
- 1165              	.LBE143:
- 1166              	.LBE146:
+ 1158              		.loc 3 174 19 view .LVU289
+ 1159 003c 0138     		subs	r0, r0, #1
+ 1160 003e 83B2     		uxth	r3, r0
+ 1161              	.L79:
+ 1162              	.LBE142:
+ 1163              	.LBE145:
  113:displayHandler.cpp ****     _displayPtr->Fill(false);
- 1167              		.loc 4 113 5 view .LVU292
- 1168 0040 DAF80000 		ldr	r0, [r10]
- 1169              	.LBB147:
- 1170              	.LBB144:
+ 1164              		.loc 4 113 5 view .LVU290
+ 1165 0040 3068     		ldr	r0, [r6]
+ 1166              	.LBB146:
+ 1167              	.LBB143:
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1171              		.loc 3 174 19 view .LVU293
- 1172 0044 E380     		strh	r3, [r4, #6]	@ movhi
- 1173              	.LVL83:
+ 1168              		.loc 3 174 19 view .LVU291
+ 1169 0042 E380     		strh	r3, [r4, #6]	@ movhi
+ 1170              	.LVL82:
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1174              		.loc 3 174 19 view .LVU294
- 1175              	.LBE144:
- 1176              	.LBE147:
- 1177              		.loc 4 113 5 is_stmt 1 view .LVU295
- 1178              		.loc 4 113 28 is_stmt 0 view .LVU296
- 1179 0046 0368     		ldr	r3, [r0]
- 1180 0048 5A4A     		ldr	r2, .L106
- 1181 004a 1B69     		ldr	r3, [r3, #16]
- 1182 004c 9342     		cmp	r3, r2
- 1183 004e 40F0AD80 		bne	.L80
- 1184              	.LBB148:
- 1185              	.LBB149:
- 1186              	.LBB150:
+ 1171              		.loc 3 174 19 view .LVU292
+ 1172              	.LBE143:
+ 1173              	.LBE146:
+ 1174              		.loc 4 113 5 is_stmt 1 view .LVU293
+ 1175              		.loc 4 113 28 is_stmt 0 view .LVU294
+ 1176 0044 0368     		ldr	r3, [r0]
+ 1177 0046 5D4A     		ldr	r2, .L106
+ 1178 0048 1B69     		ldr	r3, [r3, #16]
+ 1179 004a 9342     		cmp	r3, r2
+ 1180 004c 40F0B380 		bne	.L80
+ 1181              	.LBB147:
+ 1182              	.LBB148:
+ 1183              	.LBB149:
  354:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
- 1187              		.loc 2 354 24 view .LVU297
- 1188 0052 4FF48062 		mov	r2, #1024
- 1189 0056 0021     		movs	r1, #0
- 1190 0058 1030     		adds	r0, r0, #16
- 1191 005a FFF7FEFF 		bl	memset
- 1192              	.LVL84:
- 1193              	.L81:
- 1194              	.LBE150:
- 1195              	.LBE149:
- 1196              	.LBE148:
+ 1184              		.loc 2 354 24 view .LVU295
+ 1185 0050 4FF48062 		mov	r2, #1024
+ 1186 0054 0021     		movs	r1, #0
+ 1187 0056 1030     		adds	r0, r0, #16
+ 1188 0058 FFF7FEFF 		bl	memset
+ 1189              	.LVL83:
+ 1190              	.L81:
+ 1191              	.LBE149:
+ 1192              	.LBE148:
+ 1193              	.LBE147:
  114:displayHandler.cpp **** 
  115:displayHandler.cpp ****     idx = findTrigger();
- 1197              		.loc 4 115 5 is_stmt 1 view .LVU298
- 1198              		.loc 4 115 22 is_stmt 0 view .LVU299
- 1199 005e 5046     		mov	r0, r10
- 1200 0060 FFF7FEFF 		bl	_ZN14DisplayHandler11findTriggerEv
- 1201              	.LVL85:
- 1202              	.LBB151:
+ 1194              		.loc 4 115 5 is_stmt 1 view .LVU296
+ 1195              		.loc 4 115 22 is_stmt 0 view .LVU297
+ 1196 005c 3046     		mov	r0, r6
+ 1197 005e FFF7FEFF 		bl	_ZN14DisplayHandler11findTriggerEv
+ 1198              	.LVL84:
+ 1199              	.LBB150:
  116:displayHandler.cpp ****     // plot whole buffer -> TAKES CIRCULARITY INTO ACCOUNT
  117:displayHandler.cpp ****     for (int i = idx; i < idx + _windowSize; i++){
- 1203              		.loc 4 117 25 view .LVU300
- 1204 0064 DAF80838 		ldr	r3, [r10, #2056]
- 1205              	.LBE151:
+ 1200              		.loc 4 117 25 view .LVU298
+ 1201 0062 D6F80838 		ldr	r3, [r6, #2056]
+ 1202              	.LBE150:
  115:displayHandler.cpp ****     // plot whole buffer -> TAKES CIRCULARITY INTO ACCOUNT
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 39
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 39
 
 
- 1206              		.loc 4 115 22 view .LVU301
- 1207 0068 0590     		str	r0, [sp, #20]
- 1208              	.LVL86:
- 1209              		.loc 4 117 5 is_stmt 1 view .LVU302
- 1210              	.LBB178:
- 1211              		.loc 4 117 25 view .LVU303
- 1212 006a 002B     		cmp	r3, #0
- 1213 006c 40F38580 		ble	.L77
- 1214 0070 C3B2     		uxtb	r3, r0
- 1215              		.loc 4 117 14 is_stmt 0 view .LVU304
- 1216 0072 0646     		mov	r6, r0
- 1217              		.loc 4 117 25 view .LVU305
- 1218 0074 0127     		movs	r7, #1
- 1219 0076 0493     		str	r3, [sp, #16]
- 1220              	.LVL87:
- 1221              	.L83:
- 118:displayHandler.cpp ****         // *100 is for rescaling -> NEEDS TUNING
- 119:displayHandler.cpp ****         // NEEDS CLAMPING LOGIC to avoid segfault
- 120:displayHandler.cpp ****         y1 = zeroOfScreen - (_circBuffer_ptr[i % BUFFER_SIZE]* 40);
- 1222              		.loc 4 120 9 is_stmt 1 discriminator 2 view .LVU306
- 1223              		.loc 4 120 48 is_stmt 0 discriminator 2 view .LVU307
- 1224 0078 7342     		rsbs	r3, r6, #0
- 121:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1225              		.loc 4 121 49 discriminator 2 view .LVU308
- 1226 007a 06F10106 		add	r6, r6, #1
- 1227              	.LVL88:
- 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1228              		.loc 4 120 48 discriminator 2 view .LVU309
- 1229 007e 049A     		ldr	r2, [sp, #16]
- 1230 0080 07F1FF31 		add	r1, r7, #-1
- 1231 0084 DBB2     		uxtb	r3, r3
- 122:displayHandler.cpp ****         _displayPtr->DrawLine(i-idx, y1, (i+1)-idx, y2, true);
- 1232              		.loc 4 122 9 discriminator 2 view .LVU310
- 1233 0086 DAF80000 		ldr	r0, [r10]
- 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1234              		.loc 4 120 27 discriminator 2 view .LVU311
- 1235 008a DFED4B7A 		vldr.32	s15, .L106+4
- 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1236              		.loc 4 120 48 discriminator 2 view .LVU312
- 1237 008e 58BF     		it	pl
- 1238 0090 5A42     		rsbpl	r2, r3, #0
- 121:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1239              		.loc 4 121 54 discriminator 2 view .LVU313
- 1240 0092 7442     		rsbs	r4, r6, #0
- 1241 0094 F3B2     		uxtb	r3, r6
- 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1242              		.loc 4 120 27 discriminator 2 view .LVU314
- 1243 0096 B0EE677A 		vmov.f32	s14, s15
- 121:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1244              		.loc 4 121 54 discriminator 2 view .LVU315
- 1245 009a E4B2     		uxtb	r4, r4
- 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1246              		.loc 4 120 27 discriminator 2 view .LVU316
- 1247 009c DFED476A 		vldr.32	s13, .L106+8
- 121:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1248              		.loc 4 121 54 discriminator 2 view .LVU317
- 1249 00a0 0493     		str	r3, [sp, #16]
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 40
+ 1203              		.loc 4 115 22 view .LVU299
+ 1204 0066 0590     		str	r0, [sp, #20]
+ 1205              	.LVL85:
+ 1206              		.loc 4 117 5 is_stmt 1 view .LVU300
+ 1207              	.LBB177:
+ 1208              		.loc 4 117 25 view .LVU301
+ 1209 0068 002B     		cmp	r3, #0
+ 1210 006a 40F38B80 		ble	.L77
+ 1211 006e C3B2     		uxtb	r3, r0
+ 1212              		.loc 4 117 14 is_stmt 0 view .LVU302
+ 1213 0070 8246     		mov	r10, r0
+ 1214              		.loc 4 117 25 view .LVU303
+ 1215 0072 0127     		movs	r7, #1
+ 1216 0074 0493     		str	r3, [sp, #16]
+ 1217              	.LVL86:
+ 1218              	.L83:
+ 118:displayHandler.cpp ****         // NEEDS CLAMPING LOGIC to avoid segfault
+ 119:displayHandler.cpp ****         y1 = zeroOfScreen - (_circBuffer_ptr[i % BUFFER_SIZE] * _yscale);
+ 1219              		.loc 4 119 9 is_stmt 1 discriminator 2 view .LVU304
+ 1220              		.loc 4 119 48 is_stmt 0 discriminator 2 view .LVU305
+ 1221 0076 DAF10003 		rsbs	r3, r10, #0
+ 1222              		.loc 4 119 63 discriminator 2 view .LVU306
+ 1223 007a D6F81C28 		ldr	r2, [r6, #2076]
+ 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1224              		.loc 4 120 49 discriminator 2 view .LVU307
+ 1225 007e 0AF1010A 		add	r10, r10, #1
+ 1226              	.LVL87:
+ 121:displayHandler.cpp ****         _displayPtr->DrawLine(i-idx, y1, (i+1)-idx, y2, true);
+ 1227              		.loc 4 121 9 discriminator 2 view .LVU308
+ 1228 0082 3068     		ldr	r0, [r6]
+ 119:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1229              		.loc 4 119 48 discriminator 2 view .LVU309
+ 1230 0084 DBB2     		uxtb	r3, r3
+ 119:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1231              		.loc 4 119 63 discriminator 2 view .LVU310
+ 1232 0086 07EE102A 		vmov	s14, r2	@ int
+ 119:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1233              		.loc 4 119 48 discriminator 2 view .LVU311
+ 1234 008a 049A     		ldr	r2, [sp, #16]
+ 1235 008c 07F1FF31 		add	r1, r7, #-1
+ 1236 0090 58BF     		it	pl
+ 1237 0092 5A42     		rsbpl	r2, r3, #0
+ 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1238              		.loc 4 120 54 discriminator 2 view .LVU312
+ 1239 0094 DAF10004 		rsbs	r4, r10, #0
+ 1240 0098 5FFA8AF3 		uxtb	r3, r10
+ 119:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1241              		.loc 4 119 27 discriminator 2 view .LVU313
+ 1242 009c DFED487A 		vldr.32	s15, .L106+4
+ 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1243              		.loc 4 120 54 discriminator 2 view .LVU314
+ 1244 00a0 E4B2     		uxtb	r4, r4
+ 119:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1245              		.loc 4 119 63 discriminator 2 view .LVU315
+ 1246 00a2 B8EEC77A 		vcvt.f32.s32	s14, s14
+ 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1247              		.loc 4 120 54 discriminator 2 view .LVU316
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 40
 
 
- 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1250              		.loc 4 120 61 discriminator 2 view .LVU318
- 1251 00a2 0AEB8202 		add	r2, r10, r2, lsl #2
- 1252              		.loc 4 122 61 discriminator 2 view .LVU319
- 1253 00a6 0368     		ldr	r3, [r0]
- 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1254              		.loc 4 120 27 discriminator 2 view .LVU320
- 1255 00a8 92ED026A 		vldr.32	s12, [r2, #8]
- 1256              		.loc 4 122 61 discriminator 2 view .LVU321
- 1257 00ac 9D69     		ldr	r5, [r3, #24]
- 121:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1258              		.loc 4 121 54 discriminator 2 view .LVU322
- 1259 00ae 049B     		ldr	r3, [sp, #16]
- 1260 00b0 58BF     		it	pl
- 1261 00b2 6342     		rsbpl	r3, r4, #0
- 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1262              		.loc 4 120 27 discriminator 2 view .LVU323
- 1263 00b4 A6EE667A 		vfms.f32	s14, s12, s13
- 1264 00b8 414A     		ldr	r2, .L106+12
- 121:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1265              		.loc 4 121 67 discriminator 2 view .LVU324
- 1266 00ba 0AEB8303 		add	r3, r10, r3, lsl #2
- 1267 00be 9542     		cmp	r5, r2
- 121:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1268              		.loc 4 121 27 discriminator 2 view .LVU325
- 1269 00c0 93ED026A 		vldr.32	s12, [r3, #8]
- 1270 00c4 E6EE667A 		vfms.f32	s15, s12, s13
- 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1271              		.loc 4 120 12 discriminator 2 view .LVU326
- 1272 00c8 BDEEC77A 		vcvt.s32.f32	s14, s14
- 1273              	.LVL89:
- 121:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1274              		.loc 4 121 9 is_stmt 1 discriminator 2 view .LVU327
- 1275              		.loc 4 122 30 is_stmt 0 discriminator 2 view .LVU328
- 1276 00cc 17EE104A 		vmov	r4, s14	@ int
- 121:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * 40);
- 1277              		.loc 4 121 12 discriminator 2 view .LVU329
- 1278 00d0 FDEEE77A 		vcvt.s32.f32	s15, s15
- 1279 00d4 17EE903A 		vmov	r3, s15	@ int
- 1280              	.LVL90:
- 1281              		.loc 4 122 9 is_stmt 1 discriminator 2 view .LVU330
- 1282 00d8 5BD1     		bne	.L84
- 1283              	.LVL91:
- 1284              	.LBB152:
- 1285              	.LBI152:
+ 1248 00a6 0493     		str	r3, [sp, #16]
+ 119:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1249              		.loc 4 119 61 discriminator 2 view .LVU317
+ 1250 00a8 06EB8202 		add	r2, r6, r2, lsl #2
+ 1251              		.loc 4 121 61 discriminator 2 view .LVU318
+ 1252 00ac 0368     		ldr	r3, [r0]
+ 119:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1253              		.loc 4 119 27 discriminator 2 view .LVU319
+ 1254 00ae F0EE676A 		vmov.f32	s13, s15
+ 1255 00b2 92ED026A 		vldr.32	s12, [r2, #8]
+ 1256              		.loc 4 121 61 discriminator 2 view .LVU320
+ 1257 00b6 9D69     		ldr	r5, [r3, #24]
+ 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1258              		.loc 4 120 54 discriminator 2 view .LVU321
+ 1259 00b8 049B     		ldr	r3, [sp, #16]
+ 1260 00ba 58BF     		it	pl
+ 1261 00bc 6342     		rsbpl	r3, r4, #0
+ 119:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1262              		.loc 4 119 27 discriminator 2 view .LVU322
+ 1263 00be E6EE476A 		vfms.f32	s13, s12, s14
+ 1264 00c2 404A     		ldr	r2, .L106+8
+ 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1265              		.loc 4 120 67 discriminator 2 view .LVU323
+ 1266 00c4 06EB8303 		add	r3, r6, r3, lsl #2
+ 1267 00c8 9542     		cmp	r5, r2
+ 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1268              		.loc 4 120 27 discriminator 2 view .LVU324
+ 1269 00ca 93ED026A 		vldr.32	s12, [r3, #8]
+ 1270 00ce E7EE467A 		vfms.f32	s15, s14, s12
+ 119:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1271              		.loc 4 119 12 discriminator 2 view .LVU325
+ 1272 00d2 BDEEE67A 		vcvt.s32.f32	s14, s13
+ 1273              	.LVL88:
+ 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1274              		.loc 4 120 9 is_stmt 1 discriminator 2 view .LVU326
+ 1275              		.loc 4 121 30 is_stmt 0 discriminator 2 view .LVU327
+ 1276 00d6 17EE104A 		vmov	r4, s14	@ int
+ 120:displayHandler.cpp ****         y2 = zeroOfScreen - (_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
+ 1277              		.loc 4 120 12 discriminator 2 view .LVU328
+ 1278 00da FDEEE77A 		vcvt.s32.f32	s15, s15
+ 1279 00de 17EE903A 		vmov	r3, s15	@ int
+ 1280              	.LVL89:
+ 1281              		.loc 4 121 9 is_stmt 1 discriminator 2 view .LVU329
+ 1282 00e2 5BD1     		bne	.L84
+ 1283              	.LVL90:
+ 1284              	.LBB151:
+ 1285              	.LBI151:
  221:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                   uint_fast8_t y1,
- 1286              		.loc 3 221 10 view .LVU331
- 1287              	.LBB153:
+ 1286              		.loc 3 221 10 view .LVU330
+ 1287              	.LBB152:
  228:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t signX  = ((x1 < x2) ? 1 : -1);
- 1288              		.loc 3 228 52 is_stmt 0 view .LVU332
- 1289 00da A3EB0409 		sub	r9, r3, r4
+ 1288              		.loc 3 228 52 is_stmt 0 view .LVU331
+ 1289 00e4 A3EB0409 		sub	r9, r3, r4
  228:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t signX  = ((x1 < x2) ? 1 : -1);
- 1290              		.loc 3 228 22 view .LVU333
- 1291 00de B9F1000F 		cmp	r9, #0
- 1292 00e2 B8BF     		it	lt
- 1293 00e4 C9F10009 		rsblt	r9, r9, #0
- 1294              	.LVL92:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 41
+ 1290              		.loc 3 228 22 view .LVU332
+ 1291 00e8 B9F1000F 		cmp	r9, #0
+ 1292 00ec B8BF     		it	lt
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 41
 
 
+ 1293 00ee C9F10009 		rsblt	r9, r9, #0
+ 1294              	.LVL91:
  230:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t error  = deltaX - deltaY;
- 1295              		.loc 3 230 42 view .LVU334
- 1296 00e8 9C42     		cmp	r4, r3
+ 1295              		.loc 3 230 42 view .LVU333
+ 1296 00f2 9C42     		cmp	r4, r3
  231:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t error2;
- 1297              		.loc 3 231 22 view .LVU335
- 1298 00ea C9F10105 		rsb	r5, r9, #1
+ 1297              		.loc 3 231 22 view .LVU334
+ 1298 00f4 C9F10105 		rsb	r5, r9, #1
  230:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t error  = deltaX - deltaY;
- 1299              		.loc 3 230 42 view .LVU336
- 1300 00ee 4BD3     		bcc	.L85
- 1301              	.LVL93:
- 1302              	.LBB154:
- 1303              	.LBI154:
+ 1299              		.loc 3 230 42 view .LVU335
+ 1300 00f8 4BD3     		bcc	.L85
+ 1301              	.LVL92:
+ 1302              	.LBB153:
+ 1303              	.LBI153:
   42:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****     {
- 1304              		.loc 1 42 10 is_stmt 1 view .LVU337
- 1305              	.LBB155:
- 1306              	.LBI155:
+ 1304              		.loc 1 42 10 is_stmt 1 view .LVU336
+ 1305              	.LBB154:
+ 1306              	.LBI154:
  340:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
- 1307              		.loc 2 340 10 view .LVU338
- 1308              	.LBE155:
- 1309              	.LBE154:
+ 1307              		.loc 2 340 10 view .LVU337
+ 1308              	.LBE154:
+ 1309              	.LBE153:
  230:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t error  = deltaX - deltaY;
- 1310              		.loc 3 230 42 is_stmt 0 view .LVU339
- 1311 00f0 4FF0FF32 		mov	r2, #-1
- 1312              	.LBB165:
- 1313              	.LBB160:
- 1314              	.LBB156:
+ 1310              		.loc 3 230 42 is_stmt 0 view .LVU338
+ 1311 00fa 4FF0FF32 		mov	r2, #-1
+ 1312              	.LBB164:
+ 1313              	.LBB159:
+ 1314              	.LBB155:
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
- 1315              		.loc 2 342 9 view .LVU340
- 1316 00f4 7F2F     		cmp	r7, #127
- 1317              	.LBE156:
- 1318              	.LBE160:
- 1319              	.LBE165:
+ 1315              		.loc 2 342 9 view .LVU339
+ 1316 00fe 7F2F     		cmp	r7, #127
+ 1317              	.LBE155:
+ 1318              	.LBE159:
+ 1319              	.LBE164:
  230:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t error  = deltaX - deltaY;
- 1320              		.loc 3 230 42 view .LVU341
- 1321 00f6 0392     		str	r2, [sp, #12]
- 1322              	.LBB166:
- 1323              	.LBB161:
- 1324              	.LBB157:
+ 1320              		.loc 3 230 42 view .LVU340
+ 1321 0100 0392     		str	r2, [sp, #12]
+ 1322              	.LBB165:
+ 1323              	.LBB160:
+ 1324              	.LBB156:
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
- 1325              		.loc 2 342 9 view .LVU342
- 1326 00f8 11D8     		bhi	.L87
- 1327              	.LVL94:
+ 1325              		.loc 2 342 9 view .LVU341
+ 1326 0102 11D8     		bhi	.L87
+ 1327              	.LVL93:
  1328              	.L105:
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
- 1329              		.loc 2 342 9 view .LVU343
- 1330 00fa 3F2B     		cmp	r3, #63
- 1331 00fc 0FD8     		bhi	.L87
+ 1329              		.loc 2 342 9 view .LVU342
+ 1330 0104 3F2B     		cmp	r3, #63
+ 1331 0106 0FD8     		bhi	.L87
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
- 1332              		.loc 2 345 28 view .LVU344
- 1333 00fe DA08     		lsrs	r2, r3, #3
+ 1332              		.loc 2 345 28 view .LVU343
+ 1333 0108 DA08     		lsrs	r2, r3, #3
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
- 1334              		.loc 2 345 48 view .LVU345
- 1335 0100 4FF0010E 		mov	lr, #1
+ 1334              		.loc 2 345 48 view .LVU344
+ 1335 010a 4FF0010E 		mov	lr, #1
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
- 1336              		.loc 2 345 54 view .LVU346
- 1337 0104 03F0070C 		and	ip, r3, #7
- 345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 42
+ 1336              		.loc 2 345 54 view .LVU345
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 42
 
 
- 1338              		.loc 2 345 42 view .LVU347
- 1339 0108 07EBC212 		add	r2, r7, r2, lsl #7
+ 1337 010e 03F0070C 		and	ip, r3, #7
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
- 1340              		.loc 2 345 48 view .LVU348
- 1341 010c 0EFA0CFC 		lsl	ip, lr, ip
+ 1338              		.loc 2 345 42 view .LVU346
+ 1339 0112 07EBC212 		add	r2, r7, r2, lsl #7
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
- 1342              		.loc 2 345 42 view .LVU349
- 1343 0110 0244     		add	r2, r2, r0
- 1344 0112 92F810E0 		ldrb	lr, [r2, #16]	@ zero_extendqisi2
- 1345 0116 4CEA0E0C 		orr	ip, ip, lr
- 1346 011a 82F810C0 		strb	ip, [r2, #16]
+ 1340              		.loc 2 345 48 view .LVU347
+ 1341 0116 0EFA0CFC 		lsl	ip, lr, ip
+ 345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
+ 1342              		.loc 2 345 42 view .LVU348
+ 1343 011a 0244     		add	r2, r2, r0
+ 1344 011c 92F810E0 		ldrb	lr, [r2, #16]	@ zero_extendqisi2
+ 1345 0120 4CEA0E0C 		orr	ip, ip, lr
+ 1346 0124 82F810C0 		strb	ip, [r2, #16]
  1347              	.L87:
- 1348              	.LVL95:
+ 1348              	.LVL94:
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
- 1349              		.loc 2 345 42 view .LVU350
- 1350              	.LBE157:
- 1351              	.LBE161:
- 1352              	.LBE166:
+ 1349              		.loc 2 345 42 view .LVU349
+ 1350              	.LBE156:
+ 1351              	.LBE160:
+ 1352              	.LBE165:
  243:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             {
- 1353              		.loc 3 243 23 view .LVU351
- 1354 011e C9F10008 		rsb	r8, r9, #0
+ 1353              		.loc 3 243 23 view .LVU350
+ 1354 0128 C9F10008 		rsb	r8, r9, #0
  1355              	.L90:
- 1356              	.LVL96:
- 1357              	.LBB167:
- 1358              	.LBI167:
+ 1356              	.LVL95:
+ 1357              	.LBB166:
+ 1358              	.LBI166:
   42:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****     {
- 1359              		.loc 1 42 10 is_stmt 1 view .LVU352
- 1360              	.LBB168:
- 1361              	.LBI168:
+ 1359              		.loc 1 42 10 is_stmt 1 view .LVU351
+ 1360              	.LBB167:
+ 1361              	.LBI167:
  340:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
- 1362              		.loc 2 340 10 view .LVU353
- 1363              	.LBB169:
+ 1362              		.loc 2 340 10 view .LVU352
+ 1363              	.LBB168:
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
- 1364              		.loc 2 345 48 is_stmt 0 view .LVU354
- 1365 0122 4FF0010E 		mov	lr, #1
+ 1364              		.loc 2 345 48 is_stmt 0 view .LVU353
+ 1365 012c 4FF0010E 		mov	lr, #1
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
- 1366              		.loc 2 345 28 view .LVU355
- 1367 0126 E208     		lsrs	r2, r4, #3
+ 1366              		.loc 2 345 28 view .LVU354
+ 1367 0130 E208     		lsrs	r2, r4, #3
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
- 1368              		.loc 2 345 54 view .LVU356
- 1369 0128 04F0070C 		and	ip, r4, #7
+ 1368              		.loc 2 345 54 view .LVU355
+ 1369 0132 04F0070C 		and	ip, r4, #7
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
- 1370              		.loc 2 342 9 view .LVU357
- 1371 012c 7F29     		cmp	r1, #127
+ 1370              		.loc 2 342 9 view .LVU356
+ 1371 0136 7F29     		cmp	r1, #127
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
- 1372              		.loc 2 345 42 view .LVU358
- 1373 012e 01EBC212 		add	r2, r1, r2, lsl #7
- 1374              	.LBE169:
- 1375              	.LBE168:
- 1376              	.LBE167:
+ 1372              		.loc 2 345 42 view .LVU357
+ 1373 0138 01EBC212 		add	r2, r1, r2, lsl #7
+ 1374              	.LBE168:
+ 1375              	.LBE167:
+ 1376              	.LBE166:
  242:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             if(error2 > -deltaY)
- 1377              		.loc 3 242 20 view .LVU359
- 1378 0132 05FA0EFB 		lsl	fp, r5, lr
- 1379              	.LVL97:
- 1380              	.LBB172:
- 1381              	.LBB171:
- 1382              	.LBB170:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 43
+ 1377              		.loc 3 242 20 view .LVU358
+ 1378 013c 05FA0EFB 		lsl	fp, r5, lr
+ 1379              	.LVL96:
+ 1380              	.LBB171:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 43
 
 
+ 1381              	.LBB170:
+ 1382              	.LBB169:
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
- 1383              		.loc 2 345 48 view .LVU360
- 1384 0136 0EFA0CFC 		lsl	ip, lr, ip
+ 1383              		.loc 2 345 48 view .LVU359
+ 1384 0140 0EFA0CFC 		lsl	ip, lr, ip
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
- 1385              		.loc 2 342 9 view .LVU361
- 1386 013a 08D8     		bhi	.L91
- 1387 013c 3F2C     		cmp	r4, #63
+ 1385              		.loc 2 342 9 view .LVU360
+ 1386 0144 08D8     		bhi	.L91
+ 1387 0146 3F2C     		cmp	r4, #63
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
- 1388              		.loc 2 345 42 view .LVU362
- 1389 013e 0244     		add	r2, r2, r0
+ 1388              		.loc 2 345 42 view .LVU361
+ 1389 0148 0244     		add	r2, r2, r0
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
- 1390              		.loc 2 342 9 view .LVU363
- 1391 0140 05D8     		bhi	.L91
+ 1390              		.loc 2 342 9 view .LVU362
+ 1391 014a 05D8     		bhi	.L91
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
- 1392              		.loc 2 345 42 view .LVU364
- 1393 0142 92F810E0 		ldrb	lr, [r2, #16]	@ zero_extendqisi2
- 1394 0146 4CEA0E0C 		orr	ip, ip, lr
- 1395 014a 82F810C0 		strb	ip, [r2, #16]
+ 1392              		.loc 2 345 42 view .LVU363
+ 1393 014c 92F810E0 		ldrb	lr, [r2, #16]	@ zero_extendqisi2
+ 1394 0150 4CEA0E0C 		orr	ip, ip, lr
+ 1395 0154 82F810C0 		strb	ip, [r2, #16]
  1396              	.L91:
  345:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         else
- 1397              		.loc 2 345 42 view .LVU365
- 1398              	.LBE170:
- 1399              	.LBE171:
- 1400              	.LBE172:
+ 1397              		.loc 2 345 42 view .LVU364
+ 1398              	.LBE169:
+ 1399              	.LBE170:
+ 1400              	.LBE171:
  243:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             {
- 1401              		.loc 3 243 13 view .LVU366
- 1402 014e B8EB450F 		cmp	r8, r5, lsl #1
- 1403 0152 15DA     		bge	.L92
+ 1401              		.loc 3 243 13 view .LVU365
+ 1402 0158 B8EB450F 		cmp	r8, r5, lsl #1
+ 1403 015c 15DA     		bge	.L92
  249:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             {
- 1404              		.loc 3 249 13 view .LVU367
- 1405 0154 BBF1000F 		cmp	fp, #0
+ 1404              		.loc 3 249 13 view .LVU366
+ 1405 015e BBF1000F 		cmp	fp, #0
  245:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 x1 += signX;
- 1406              		.loc 3 245 23 view .LVU368
- 1407 0158 A5EB0905 		sub	r5, r5, r9
- 1408              	.LVL98:
+ 1406              		.loc 3 245 23 view .LVU367
+ 1407 0162 A5EB0905 		sub	r5, r5, r9
+ 1408              	.LVL97:
  246:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             }
- 1409              		.loc 3 246 20 view .LVU369
- 1410 015c 01F10101 		add	r1, r1, #1
- 1411              	.LVL99:
+ 1409              		.loc 3 246 20 view .LVU368
+ 1410 0166 01F10101 		add	r1, r1, #1
+ 1411              	.LVL98:
  249:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             {
- 1412              		.loc 3 249 13 view .LVU370
- 1413 0160 0EDD     		ble	.L92
+ 1412              		.loc 3 249 13 view .LVU369
+ 1413 016a 0EDD     		ble	.L92
  1414              	.L93:
  239:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         {
- 1415              		.loc 3 239 26 is_stmt 1 view .LVU371
- 1416 0162 B942     		cmp	r1, r7
- 1417 0164 DDD1     		bne	.L90
+ 1415              		.loc 3 239 26 is_stmt 1 view .LVU370
+ 1416 016c B942     		cmp	r1, r7
+ 1417 016e DDD1     		bne	.L90
  239:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         {
- 1418              		.loc 3 239 26 is_stmt 0 view .LVU372
- 1419 0166 A342     		cmp	r3, r4
- 1420 0168 DBD1     		bne	.L90
- 1421              	.LVL100:
+ 1418              		.loc 3 239 26 is_stmt 0 view .LVU371
+ 1419 0170 A342     		cmp	r3, r4
+ 1420 0172 DBD1     		bne	.L90
+ 1421              	.LVL99:
  1422              	.L88:
  239:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         {
- 1423              		.loc 3 239 26 view .LVU373
- 1424              	.LBE153:
- 1425              	.LBE152:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 44
+ 1423              		.loc 3 239 26 view .LVU372
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 44
 
 
- 117:displayHandler.cpp ****         // *100 is for rescaling -> NEEDS TUNING
- 1426              		.loc 4 117 25 is_stmt 1 discriminator 3 view .LVU374
- 117:displayHandler.cpp ****         // *100 is for rescaling -> NEEDS TUNING
- 1427              		.loc 4 117 31 is_stmt 0 discriminator 3 view .LVU375
- 1428 016a DAF80838 		ldr	r3, [r10, #2056]
- 117:displayHandler.cpp ****         // *100 is for rescaling -> NEEDS TUNING
- 1429              		.loc 4 117 25 discriminator 3 view .LVU376
- 1430 016e 0137     		adds	r7, r7, #1
- 117:displayHandler.cpp ****         // *100 is for rescaling -> NEEDS TUNING
- 1431              		.loc 4 117 31 discriminator 3 view .LVU377
- 1432 0170 059A     		ldr	r2, [sp, #20]
- 1433 0172 1344     		add	r3, r3, r2
- 117:displayHandler.cpp ****         // *100 is for rescaling -> NEEDS TUNING
- 1434              		.loc 4 117 25 discriminator 3 view .LVU378
- 1435 0174 B342     		cmp	r3, r6
- 1436 0176 3FF77FAF 		bgt	.L83
- 1437              	.LVL101:
+ 1424              	.LBE152:
+ 1425              	.LBE151:
+ 117:displayHandler.cpp ****         // NEEDS CLAMPING LOGIC to avoid segfault
+ 1426              		.loc 4 117 25 is_stmt 1 discriminator 3 view .LVU373
+ 117:displayHandler.cpp ****         // NEEDS CLAMPING LOGIC to avoid segfault
+ 1427              		.loc 4 117 31 is_stmt 0 discriminator 3 view .LVU374
+ 1428 0174 D6F80838 		ldr	r3, [r6, #2056]
+ 117:displayHandler.cpp ****         // NEEDS CLAMPING LOGIC to avoid segfault
+ 1429              		.loc 4 117 25 discriminator 3 view .LVU375
+ 1430 0178 0137     		adds	r7, r7, #1
+ 117:displayHandler.cpp ****         // NEEDS CLAMPING LOGIC to avoid segfault
+ 1431              		.loc 4 117 31 discriminator 3 view .LVU376
+ 1432 017a 059A     		ldr	r2, [sp, #20]
+ 1433 017c 1344     		add	r3, r3, r2
+ 117:displayHandler.cpp ****         // NEEDS CLAMPING LOGIC to avoid segfault
+ 1434              		.loc 4 117 25 discriminator 3 view .LVU377
+ 1435 017e 5345     		cmp	r3, r10
+ 1436 0180 3FF779AF 		bgt	.L83
+ 1437              	.LVL100:
  1438              	.L77:
- 117:displayHandler.cpp ****         // *100 is for rescaling -> NEEDS TUNING
- 1439              		.loc 4 117 25 discriminator 3 view .LVU379
- 1440              	.LBE178:
- 123:displayHandler.cpp ****     }   
+ 117:displayHandler.cpp ****         // NEEDS CLAMPING LOGIC to avoid segfault
+ 1439              		.loc 4 117 25 discriminator 3 view .LVU378
+ 1440              	.LBE177:
+ 122:displayHandler.cpp ****     }   
+ 123:displayHandler.cpp **** 
  124:displayHandler.cpp **** 
- 125:displayHandler.cpp **** 
- 126:displayHandler.cpp **** }
- 1441              		.loc 4 126 1 view .LVU380
- 1442 017a 07B0     		add	sp, sp, #28
+ 125:displayHandler.cpp **** }
+ 1441              		.loc 4 125 1 view .LVU379
+ 1442 0184 07B0     		add	sp, sp, #28
  1443              		.cfi_remember_state
  1444              		.cfi_def_cfa_offset 36
  1445              		@ sp needed
- 1446 017c BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
- 1447              	.LVL102:
+ 1446 0186 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 1447              	.LVL101:
  1448              	.L92:
  1449              		.cfi_restore_state
- 1450              	.LBB179:
- 1451              	.LBB177:
- 1452              	.LBB176:
+ 1450              	.LBB178:
+ 1451              	.LBB176:
+ 1452              	.LBB175:
  252:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             }
- 1453              		.loc 3 252 20 view .LVU381
- 1454 0180 039A     		ldr	r2, [sp, #12]
+ 1453              		.loc 3 252 20 view .LVU380
+ 1454 018a 039A     		ldr	r2, [sp, #12]
  251:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 y1 += signY;
- 1455              		.loc 3 251 23 view .LVU382
- 1456 0182 0135     		adds	r5, r5, #1
- 1457              	.LVL103:
+ 1455              		.loc 3 251 23 view .LVU381
+ 1456 018c 0135     		adds	r5, r5, #1
+ 1457              	.LVL102:
  252:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             }
- 1458              		.loc 3 252 20 view .LVU383
- 1459 0184 1444     		add	r4, r4, r2
- 1460              	.LVL104:
+ 1458              		.loc 3 252 20 view .LVU382
+ 1459 018e 1444     		add	r4, r4, r2
+ 1460              	.LVL103:
  252:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****             }
- 1461              		.loc 3 252 20 view .LVU384
- 1462 0186 ECE7     		b	.L93
- 1463              	.LVL105:
+ 1461              		.loc 3 252 20 view .LVU383
+ 1462 0190 ECE7     		b	.L93
+ 1463              	.LVL104:
  1464              	.L85:
- 1465              	.LBB173:
+ 1465              	.LBB172:
   42:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****     {
- 1466              		.loc 1 42 10 is_stmt 1 view .LVU385
- 1467              	.LBB162:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 45
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 45
 
 
+ 1466              		.loc 1 42 10 is_stmt 1 view .LVU384
+ 1467              	.LBB161:
  340:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
- 1468              		.loc 2 340 10 view .LVU386
- 1469              	.LBE162:
- 1470              	.LBE173:
+ 1468              		.loc 2 340 10 view .LVU385
+ 1469              	.LBE161:
+ 1470              	.LBE172:
  230:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t error  = deltaX - deltaY;
- 1471              		.loc 3 230 42 is_stmt 0 view .LVU387
- 1472 0188 0122     		movs	r2, #1
- 1473              	.LBB174:
- 1474              	.LBB163:
- 1475              	.LBB158:
+ 1471              		.loc 3 230 42 is_stmt 0 view .LVU386
+ 1472 0192 0122     		movs	r2, #1
+ 1473              	.LBB173:
+ 1474              	.LBB162:
+ 1475              	.LBB157:
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
- 1476              		.loc 2 342 9 view .LVU388
- 1477 018a 7F2F     		cmp	r7, #127
- 1478              	.LBE158:
- 1479              	.LBE163:
- 1480              	.LBE174:
+ 1476              		.loc 2 342 9 view .LVU387
+ 1477 0194 7F2F     		cmp	r7, #127
+ 1478              	.LBE157:
+ 1479              	.LBE162:
+ 1480              	.LBE173:
  230:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         int_fast16_t error  = deltaX - deltaY;
- 1481              		.loc 3 230 42 view .LVU389
- 1482 018c 0392     		str	r2, [sp, #12]
- 1483              	.LBB175:
- 1484              	.LBB164:
- 1485              	.LBB159:
+ 1481              		.loc 3 230 42 view .LVU388
+ 1482 0196 0392     		str	r2, [sp, #12]
+ 1483              	.LBB174:
+ 1484              	.LBB163:
+ 1485              	.LBB158:
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
- 1486              		.loc 2 342 9 view .LVU390
- 1487 018e B4D9     		bls	.L105
- 1488 0190 C5E7     		b	.L87
- 1489              	.LVL106:
+ 1486              		.loc 2 342 9 view .LVU389
+ 1487 0198 B4D9     		bls	.L105
+ 1488 019a C5E7     		b	.L87
+ 1489              	.LVL105:
  1490              	.L84:
  342:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             return;
- 1491              		.loc 2 342 9 view .LVU391
- 1492              	.LBE159:
- 1493              	.LBE164:
- 1494              	.LBE175:
- 1495              	.LBE176:
- 1496              	.LBE177:
- 122:displayHandler.cpp ****     }   
- 1497              		.loc 4 122 30 discriminator 2 view .LVU392
- 1498 0192 0123     		movs	r3, #1
- 1499              	.LVL107:
- 122:displayHandler.cpp ****     }   
- 1500              		.loc 4 122 30 discriminator 2 view .LVU393
- 1501 0194 17EE102A 		vmov	r2, s14	@ int
- 1502 0198 CDED007A 		vstr.32	s15, [sp]	@ int
- 1503 019c 0193     		str	r3, [sp, #4]
- 1504 019e 3B46     		mov	r3, r7
- 1505 01a0 A847     		blx	r5
- 1506              	.LVL108:
- 122:displayHandler.cpp ****     }   
- 1507              		.loc 4 122 30 discriminator 2 view .LVU394
- 1508 01a2 E2E7     		b	.L88
- 1509              	.LVL109:
+ 1491              		.loc 2 342 9 view .LVU390
+ 1492              	.LBE158:
+ 1493              	.LBE163:
+ 1494              	.LBE174:
+ 1495              	.LBE175:
+ 1496              	.LBE176:
+ 121:displayHandler.cpp ****     }   
+ 1497              		.loc 4 121 30 discriminator 2 view .LVU391
+ 1498 019c 0123     		movs	r3, #1
+ 1499              	.LVL106:
+ 121:displayHandler.cpp ****     }   
+ 1500              		.loc 4 121 30 discriminator 2 view .LVU392
+ 1501 019e 17EE102A 		vmov	r2, s14	@ int
+ 1502 01a2 CDED007A 		vstr.32	s15, [sp]	@ int
+ 1503 01a6 0193     		str	r3, [sp, #4]
+ 1504 01a8 3B46     		mov	r3, r7
+ 1505 01aa A847     		blx	r5
+ 1506              	.LVL107:
+ 121:displayHandler.cpp ****     }   
+ 1507              		.loc 4 121 30 discriminator 2 view .LVU393
+ 1508 01ac E2E7     		b	.L88
+ 1509              	.LVL108:
  1510              	.L96:
- 122:displayHandler.cpp ****     }   
- 1511              		.loc 4 122 30 discriminator 2 view .LVU395
- 1512              	.LBE179:
- 1513              	.LBB180:
- 1514              	.LBB145:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 46
+ 121:displayHandler.cpp ****     }   
+ 1511              		.loc 4 121 30 discriminator 2 view .LVU394
+ 1512              	.LBE178:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 46
 
 
+ 1513              	.LBB179:
+ 1514              	.LBB144:
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1515              		.loc 3 174 19 view .LVU396
- 1516 01a4 2023     		movs	r3, #32
- 1517 01a6 4BE7     		b	.L79
+ 1515              		.loc 3 174 19 view .LVU395
+ 1516 01ae 2023     		movs	r3, #32
+ 1517 01b0 46E7     		b	.L79
  1518              	.L95:
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1519              		.loc 3 173 19 view .LVU397
- 1520 01a8 0023     		movs	r3, #0
- 1521 01aa 3BE7     		b	.L78
- 1522              	.LVL110:
+ 1519              		.loc 3 173 19 view .LVU396
+ 1520 01b2 0023     		movs	r3, #0
+ 1521 01b4 36E7     		b	.L78
+ 1522              	.LVL109:
  1523              	.L80:
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1524              		.loc 3 173 19 view .LVU398
- 1525              	.LBE145:
- 1526              	.LBE180:
+ 1524              		.loc 3 173 19 view .LVU397
+ 1525              	.LBE144:
+ 1526              	.LBE179:
  113:displayHandler.cpp **** 
- 1527              		.loc 4 113 22 view .LVU399
- 1528 01ac 0021     		movs	r1, #0
- 1529 01ae 9847     		blx	r3
- 1530              	.LVL111:
- 1531 01b0 55E7     		b	.L81
+ 1527              		.loc 4 113 22 view .LVU398
+ 1528 01b6 0021     		movs	r1, #0
+ 1529 01b8 9847     		blx	r3
+ 1530              	.LVL110:
+ 1531 01ba 4FE7     		b	.L81
  1532              	.L107:
- 1533 01b2 00BF     		.align	2
+ 1533              		.align	2
  1534              	.L106:
- 1535 01b4 00000000 		.word	_ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb
- 1536 01b8 00000042 		.word	1107296256
- 1537 01bc 00002042 		.word	1109393408
- 1538 01c0 00000000 		.word	_ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD
- 1539              		.cfi_endproc
- 1540              	.LFE2699:
- 1542              		.section	.text._ZN14DisplayHandler17drawStandbyScreenEv,"ax",%progbits
- 1543              		.align	1
- 1544              		.p2align 2,,3
- 1545              		.global	_ZN14DisplayHandler17drawStandbyScreenEv
- 1546              		.syntax unified
- 1547              		.thumb
- 1548              		.thumb_func
- 1549              		.fpu fpv5-d16
- 1551              	_ZN14DisplayHandler17drawStandbyScreenEv:
- 1552              	.LVL112:
- 1553              	.LFB2700:
- 127:displayHandler.cpp **** 
- 128:displayHandler.cpp **** 
- 129:displayHandler.cpp **** 
- 130:displayHandler.cpp **** // LONG FUNCTION AHEAD -> prints test logo atm
- 131:displayHandler.cpp **** void DisplayHandler::drawStandbyScreen(){
- 1554              		.loc 4 131 41 is_stmt 1 view -0
- 1555              		.cfi_startproc
- 1556              		@ args = 0, pretend = 0, frame = 0
- 1557              		@ frame_needed = 0, uses_anonymous_args = 0
- 132:displayHandler.cpp ****   _displayPtr->SetCursor(0,0);
- 1558              		.loc 4 132 3 view .LVU401
- 131:displayHandler.cpp ****   _displayPtr->SetCursor(0,0);
- 1559              		.loc 4 131 41 is_stmt 0 view .LVU402
- 1560 0000 30B5     		push	{r4, r5, lr}
- 1561              		.cfi_def_cfa_offset 12
- 1562              		.cfi_offset 4, -12
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 47
+ 1535 01bc 00000000 		.word	_ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb
+ 1536 01c0 00000042 		.word	1107296256
+ 1537 01c4 00000000 		.word	_ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD
+ 1538              		.cfi_endproc
+ 1539              	.LFE2699:
+ 1541              		.section	.text._ZN14DisplayHandler9SetYscaleEi,"ax",%progbits
+ 1542              		.align	1
+ 1543              		.p2align 2,,3
+ 1544              		.global	_ZN14DisplayHandler9SetYscaleEi
+ 1545              		.syntax unified
+ 1546              		.thumb
+ 1547              		.thumb_func
+ 1548              		.fpu fpv5-d16
+ 1550              	_ZN14DisplayHandler9SetYscaleEi:
+ 1551              	.LVL111:
+ 1552              	.LFB2700:
+ 126:displayHandler.cpp **** 
+ 127:displayHandler.cpp **** /// @todo guard logic
+ 128:displayHandler.cpp **** void DisplayHandler::SetYscale (int yscale){
+ 1553              		.loc 4 128 44 is_stmt 1 view -0
+ 1554              		.cfi_startproc
+ 1555              		@ args = 0, pretend = 0, frame = 0
+ 1556              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1557              		@ link register save eliminated.
+ 129:displayHandler.cpp ****     _yscale = yscale;
+ 1558              		.loc 4 129 5 view .LVU400
+ 1559              		.loc 4 129 13 is_stmt 0 view .LVU401
+ 1560 0000 C0F81C18 		str	r1, [r0, #2076]
+ 130:displayHandler.cpp **** }
+ 1561              		.loc 4 130 1 view .LVU402
+ 1562 0004 7047     		bx	lr
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 47
 
 
- 1563              		.cfi_offset 5, -8
- 1564              		.cfi_offset 14, -4
- 1565              		.loc 4 132 3 view .LVU403
- 1566 0002 0468     		ldr	r4, [r0]
- 1567              	.LVL113:
- 1568              	.LBB183:
- 1569              	.LBI183:
+ 1563              		.cfi_endproc
+ 1564              	.LFE2700:
+ 1566 0006 00BF     		.section	.text._ZN14DisplayHandler17drawStandbyScreenEv,"ax",%progbits
+ 1567              		.align	1
+ 1568              		.p2align 2,,3
+ 1569              		.global	_ZN14DisplayHandler17drawStandbyScreenEv
+ 1570              		.syntax unified
+ 1571              		.thumb
+ 1572              		.thumb_func
+ 1573              		.fpu fpv5-d16
+ 1575              	_ZN14DisplayHandler17drawStandbyScreenEv:
+ 1576              	.LVL112:
+ 1577              	.LFB2701:
+ 131:displayHandler.cpp **** 
+ 132:displayHandler.cpp **** 
+ 133:displayHandler.cpp **** // LONG FUNCTION AHEAD -> prints test logo atm
+ 134:displayHandler.cpp **** void DisplayHandler::drawStandbyScreen(){
+ 1578              		.loc 4 134 41 is_stmt 1 view -0
+ 1579              		.cfi_startproc
+ 1580              		@ args = 0, pretend = 0, frame = 0
+ 1581              		@ frame_needed = 0, uses_anonymous_args = 0
+ 135:displayHandler.cpp ****   _displayPtr->SetCursor(0,0);
+ 1582              		.loc 4 135 3 view .LVU404
+ 134:displayHandler.cpp ****   _displayPtr->SetCursor(0,0);
+ 1583              		.loc 4 134 41 is_stmt 0 view .LVU405
+ 1584 0000 30B5     		push	{r4, r5, lr}
+ 1585              		.cfi_def_cfa_offset 12
+ 1586              		.cfi_offset 4, -12
+ 1587              		.cfi_offset 5, -8
+ 1588              		.cfi_offset 14, -4
+ 1589              		.loc 4 135 3 view .LVU406
+ 1590 0002 0468     		ldr	r4, [r0]
+ 1591              	.LVL113:
+ 1592              	.LBB182:
+ 1593              	.LBI182:
  171:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     {
- 1570              		.loc 3 171 10 is_stmt 1 view .LVU404
- 1571              	.LBB184:
+ 1594              		.loc 3 171 10 is_stmt 1 view .LVU407
+ 1595              	.LBB183:
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1572              		.loc 3 173 9 view .LVU405
- 1573              	.LBE184:
- 1574              	.LBE183:
- 131:displayHandler.cpp ****   _displayPtr->SetCursor(0,0);
- 1575              		.loc 4 131 41 is_stmt 0 view .LVU406
- 1576 0004 83B0     		sub	sp, sp, #12
- 1577              		.cfi_def_cfa_offset 24
- 131:displayHandler.cpp ****   _displayPtr->SetCursor(0,0);
- 1578              		.loc 4 131 41 view .LVU407
- 1579 0006 0546     		mov	r5, r0
- 1580              	.LBB188:
- 1581              	.LBB185:
+ 1596              		.loc 3 173 9 view .LVU408
+ 1597              	.LBE183:
+ 1598              	.LBE182:
+ 134:displayHandler.cpp ****   _displayPtr->SetCursor(0,0);
+ 1599              		.loc 4 134 41 is_stmt 0 view .LVU409
+ 1600 0004 83B0     		sub	sp, sp, #12
+ 1601              		.cfi_def_cfa_offset 24
+ 134:displayHandler.cpp ****   _displayPtr->SetCursor(0,0);
+ 1602              		.loc 4 134 41 view .LVU410
+ 1603 0006 0546     		mov	r5, r0
+ 1604              	.LBB187:
+ 1605              	.LBB184:
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1582              		.loc 3 173 33 view .LVU408
- 1583 0008 2368     		ldr	r3, [r4]
+ 1606              		.loc 3 173 33 view .LVU411
+ 1607 0008 2368     		ldr	r3, [r4]
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1584              		.loc 3 173 32 view .LVU409
- 1585 000a 2046     		mov	r0, r4
- 1586              	.LVL114:
- 173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1587              		.loc 3 173 32 view .LVU410
- 1588 000c DB68     		ldr	r3, [r3, #12]
- 1589 000e 9847     		blx	r3
- 1590              	.LVL115:
- 173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1591              		.loc 3 173 19 view .LVU411
- 1592 0010 F0B9     		cbnz	r0, .L111
- 173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1593              		.loc 3 173 44 view .LVU412
- 1594 0012 2368     		ldr	r3, [r4]
- 173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1595              		.loc 3 173 43 view .LVU413
- 1596 0014 2046     		mov	r0, r4
- 1597 0016 DB68     		ldr	r3, [r3, #12]
- 1598 0018 9847     		blx	r3
- 1599              	.LVL116:
- 173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1600              		.loc 3 173 19 view .LVU414
- 1601 001a 0138     		subs	r0, r0, #1
- 1602 001c 83B2     		uxth	r3, r0
- 1603              	.L109:
- 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1604              		.loc 3 174 34 view .LVU415
- 1605 001e 2268     		ldr	r2, [r4]
- 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1606              		.loc 3 174 33 view .LVU416
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 48
+ 1608              		.loc 3 173 32 view .LVU412
+ 1609 000a 2046     		mov	r0, r4
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 48
 
 
- 1607 0020 2046     		mov	r0, r4
+ 1610              	.LVL114:
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1608              		.loc 3 173 19 view .LVU417
- 1609 0022 A380     		strh	r3, [r4, #4]	@ movhi
- 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1610              		.loc 3 174 9 is_stmt 1 view .LVU418
- 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1611              		.loc 3 174 33 is_stmt 0 view .LVU419
- 1612 0024 9368     		ldr	r3, [r2, #8]
- 1613 0026 9847     		blx	r3
- 1614              	.LVL117:
- 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1615              		.loc 3 174 19 view .LVU420
- 1616 0028 A0B9     		cbnz	r0, .L112
- 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1617              		.loc 3 174 46 view .LVU421
- 1618 002a 2368     		ldr	r3, [r4]
- 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1619              		.loc 3 174 45 view .LVU422
- 1620 002c 2046     		mov	r0, r4
- 1621 002e 9B68     		ldr	r3, [r3, #8]
- 1622 0030 9847     		blx	r3
- 1623              	.LVL118:
- 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1624              		.loc 3 174 19 view .LVU423
- 1625 0032 0138     		subs	r0, r0, #1
- 1626 0034 83B2     		uxth	r3, r0
+ 1611              		.loc 3 173 32 view .LVU413
+ 1612 000c DB68     		ldr	r3, [r3, #12]
+ 1613 000e 9847     		blx	r3
+ 1614              	.LVL115:
+ 173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
+ 1615              		.loc 3 173 19 view .LVU414
+ 1616 0010 F0B9     		cbnz	r0, .L112
+ 173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
+ 1617              		.loc 3 173 44 view .LVU415
+ 1618 0012 2368     		ldr	r3, [r4]
+ 173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
+ 1619              		.loc 3 173 43 view .LVU416
+ 1620 0014 2046     		mov	r0, r4
+ 1621 0016 DB68     		ldr	r3, [r3, #12]
+ 1622 0018 9847     		blx	r3
+ 1623              	.LVL116:
+ 173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
+ 1624              		.loc 3 173 19 view .LVU417
+ 1625 001a 0138     		subs	r0, r0, #1
+ 1626 001c 83B2     		uxth	r3, r0
  1627              	.L110:
- 1628              	.LBE185:
- 1629              	.LBE188:
- 133:displayHandler.cpp ****         _displayPtr->WriteString(_standbyText, Font_11x18, true);
- 1630              		.loc 4 133 9 view .LVU424
- 1631 0036 2868     		ldr	r0, [r5]
- 1632              		.loc 4 133 33 view .LVU425
- 1633 0038 074A     		ldr	r2, .L114
- 1634              	.LBB189:
- 1635              	.LBB186:
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1636              		.loc 3 174 19 view .LVU426
- 1637 003a E380     		strh	r3, [r4, #6]	@ movhi
- 1638              	.LVL119:
+ 1628              		.loc 3 174 34 view .LVU418
+ 1629 001e 2268     		ldr	r2, [r4]
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1639              		.loc 3 174 19 view .LVU427
- 1640              	.LBE186:
- 1641              	.LBE189:
- 1642              		.loc 4 133 9 is_stmt 1 view .LVU428
- 1643              		.loc 4 133 33 is_stmt 0 view .LVU429
- 1644 003c 0123     		movs	r3, #1
- 1645              		.loc 4 133 64 view .LVU430
- 1646 003e 0468     		ldr	r4, [r0]
- 1647              		.loc 4 133 33 view .LVU431
- 1648 0040 D5F81818 		ldr	r1, [r5, #2072]
- 1649 0044 0093     		str	r3, [sp]
- 1650 0046 A46A     		ldr	r4, [r4, #40]
- 1651 0048 0CCA     		ldm	r2, {r2, r3}
- 1652 004a A047     		blx	r4
- 1653              	.LVL120:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 49
-
-
- 134:displayHandler.cpp **** }...
- 1654              		.loc 4 134 1 view .LVU432
- 1655 004c 03B0     		add	sp, sp, #12
- 1656              		.cfi_remember_state
- 1657              		.cfi_def_cfa_offset 12
- 1658              		@ sp needed
- 1659 004e 30BD     		pop	{r4, r5, pc}
- 1660              	.LVL121:
- 1661              	.L111:
- 1662              		.cfi_restore_state
- 1663              	.LBB190:
- 1664              	.LBB187:
+ 1630              		.loc 3 174 33 view .LVU419
+ 1631 0020 2046     		mov	r0, r4
  173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
- 1665              		.loc 3 173 19 view .LVU433
- 1666 0050 0023     		movs	r3, #0
- 1667 0052 E4E7     		b	.L109
- 1668              	.L112:
+ 1632              		.loc 3 173 19 view .LVU420
+ 1633 0022 A380     		strh	r3, [r4, #4]	@ movhi
  174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
- 1669              		.loc 3 174 19 view .LVU434
- 1670 0054 0023     		movs	r3, #0
- 1671 0056 EEE7     		b	.L110
- 1672              	.L115:
- 1673              		.align	2
- 1674              	.L114:
- 1675 0058 00000000 		.word	Font_11x18
- 1676              	.LBE187:
- 1677              	.LBE190:
- 1678              		.cfi_endproc
- 1679              	.LFE2700:
- 1681              		.section	.text._ZN14DisplayHandler6UpdateEv,"ax",%progbits
- 1682              		.align	1
- 1683              		.p2align 2,,3
- 1684              		.global	_ZN14DisplayHandler6UpdateEv
- 1685              		.syntax unified
- 1686              		.thumb
- 1687              		.thumb_func
- 1688              		.fpu fpv5-d16
- 1690              	_ZN14DisplayHandler6UpdateEv:
- 1691              	.LVL122:
- 1692              	.LFB2693:
+ 1634              		.loc 3 174 9 is_stmt 1 view .LVU421
+ 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
+ 1635              		.loc 3 174 33 is_stmt 0 view .LVU422
+ 1636 0024 9368     		ldr	r3, [r2, #8]
+ 1637 0026 9847     		blx	r3
+ 1638              	.LVL117:
+ 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
+ 1639              		.loc 3 174 19 view .LVU423
+ 1640 0028 A0B9     		cbnz	r0, .L113
+ 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
+ 1641              		.loc 3 174 46 view .LVU424
+ 1642 002a 2368     		ldr	r3, [r4]
+ 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
+ 1643              		.loc 3 174 45 view .LVU425
+ 1644 002c 2046     		mov	r0, r4
+ 1645 002e 9B68     		ldr	r3, [r3, #8]
+ 1646 0030 9847     		blx	r3
+ 1647              	.LVL118:
+ 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
+ 1648              		.loc 3 174 19 view .LVU426
+ 1649 0032 0138     		subs	r0, r0, #1
+ 1650 0034 83B2     		uxth	r3, r0
+ 1651              	.L111:
+ 1652              	.LBE184:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 49
+
+
+ 1653              	.LBE187:
+ 136:displayHandler.cpp ****         _displayPtr->WriteString(_standbyText, Font_11x18, true);
+ 1654              		.loc 4 136 9 view .LVU427
+ 1655 0036 2868     		ldr	r0, [r5]
+ 1656              		.loc 4 136 33 view .LVU428
+ 1657 0038 074A     		ldr	r2, .L115
+ 1658              	.LBB188:
+ 1659              	.LBB185:
+ 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
+ 1660              		.loc 3 174 19 view .LVU429
+ 1661 003a E380     		strh	r3, [r4, #6]	@ movhi
+ 1662              	.LVL119:
+ 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
+ 1663              		.loc 3 174 19 view .LVU430
+ 1664              	.LBE185:
+ 1665              	.LBE188:
+ 1666              		.loc 4 136 9 is_stmt 1 view .LVU431
+ 1667              		.loc 4 136 33 is_stmt 0 view .LVU432
+ 1668 003c 0123     		movs	r3, #1
+ 1669              		.loc 4 136 64 view .LVU433
+ 1670 003e 0468     		ldr	r4, [r0]
+ 1671              		.loc 4 136 33 view .LVU434
+ 1672 0040 D5F81818 		ldr	r1, [r5, #2072]
+ 1673 0044 0093     		str	r3, [sp]
+ 1674 0046 A46A     		ldr	r4, [r4, #40]
+ 1675 0048 0CCA     		ldm	r2, {r2, r3}
+ 1676 004a A047     		blx	r4
+ 1677              	.LVL120:
+ 137:displayHandler.cpp **** }...
+ 1678              		.loc 4 137 1 view .LVU435
+ 1679 004c 03B0     		add	sp, sp, #12
+ 1680              		.cfi_remember_state
+ 1681              		.cfi_def_cfa_offset 12
+ 1682              		@ sp needed
+ 1683 004e 30BD     		pop	{r4, r5, pc}
+ 1684              	.LVL121:
+ 1685              	.L112:
+ 1686              		.cfi_restore_state
+ 1687              	.LBB189:
+ 1688              	.LBB186:
+ 173:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
+ 1689              		.loc 3 173 19 view .LVU436
+ 1690 0050 0023     		movs	r3, #0
+ 1691 0052 E4E7     		b	.L110
+ 1692              	.L113:
+ 174:../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
+ 1693              		.loc 3 174 19 view .LVU437
+ 1694 0054 0023     		movs	r3, #0
+ 1695 0056 EEE7     		b	.L111
+ 1696              	.L116:
+ 1697              		.align	2
+ 1698              	.L115:
+ 1699 0058 00000000 		.word	Font_11x18
+ 1700              	.LBE186:
+ 1701              	.LBE189:
+ 1702              		.cfi_endproc
+ 1703              	.LFE2701:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 50
+
+
+ 1705              		.section	.text._ZN14DisplayHandler6UpdateEv,"ax",%progbits
+ 1706              		.align	1
+ 1707              		.p2align 2,,3
+ 1708              		.global	_ZN14DisplayHandler6UpdateEv
+ 1709              		.syntax unified
+ 1710              		.thumb
+ 1711              		.thumb_func
+ 1712              		.fpu fpv5-d16
+ 1714              	_ZN14DisplayHandler6UpdateEv:
+ 1715              	.LVL122:
+ 1716              	.LFB2693:
   14:displayHandler.cpp **** void DisplayHandler::Update(){
- 1693              		.loc 4 14 30 is_stmt 1 view -0
- 1694              		.cfi_startproc
- 1695              		@ args = 0, pretend = 0, frame = 8
- 1696              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1717              		.loc 4 14 30 is_stmt 1 view -0
+ 1718              		.cfi_startproc
+ 1719              		@ args = 0, pretend = 0, frame = 8
+ 1720              		@ frame_needed = 0, uses_anonymous_args = 0
   15:displayHandler.cpp ****     switch (_currentState){
- 1697              		.loc 4 15 5 view .LVU436
+ 1721              		.loc 4 15 5 view .LVU439
   15:displayHandler.cpp ****     switch (_currentState){
- 1698              		.loc 4 15 13 is_stmt 0 view .LVU437
- 1699 0000 0379     		ldrb	r3, [r0, #4]	@ zero_extendqisi2
+ 1722              		.loc 4 15 13 is_stmt 0 view .LVU440
+ 1723 0000 0379     		ldrb	r3, [r0, #4]	@ zero_extendqisi2
   15:displayHandler.cpp ****     switch (_currentState){
- 1700              		.loc 4 15 5 view .LVU438
- 1701 0002 012B     		cmp	r3, #1
+ 1724              		.loc 4 15 5 view .LVU441
+ 1725 0002 012B     		cmp	r3, #1
   14:displayHandler.cpp **** void DisplayHandler::Update(){
- 1702              		.loc 4 14 30 view .LVU439
- 1703 0004 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
- 1704              		.cfi_def_cfa_offset 32
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 50
-
-
- 1705              		.cfi_offset 4, -32
- 1706              		.cfi_offset 5, -28
- 1707              		.cfi_offset 6, -24
- 1708              		.cfi_offset 7, -20
- 1709              		.cfi_offset 8, -16
- 1710              		.cfi_offset 9, -12
- 1711              		.cfi_offset 10, -8
- 1712              		.cfi_offset 14, -4
- 1713 0008 0446     		mov	r4, r0
- 1714 000a 84B0     		sub	sp, sp, #16
- 1715              		.cfi_def_cfa_offset 48
+ 1726              		.loc 4 14 30 view .LVU442
+ 1727 0004 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+ 1728              		.cfi_def_cfa_offset 32
+ 1729              		.cfi_offset 4, -32
+ 1730              		.cfi_offset 5, -28
+ 1731              		.cfi_offset 6, -24
+ 1732              		.cfi_offset 7, -20
+ 1733              		.cfi_offset 8, -16
+ 1734              		.cfi_offset 9, -12
+ 1735              		.cfi_offset 10, -8
+ 1736              		.cfi_offset 14, -4
+ 1737 0008 0446     		mov	r4, r0
+ 1738 000a 84B0     		sub	sp, sp, #16
+ 1739              		.cfi_def_cfa_offset 48
   15:displayHandler.cpp ****     switch (_currentState){
- 1716              		.loc 4 15 5 view .LVU440
- 1717 000c 54D0     		beq	.L117
- 1718 000e 022B     		cmp	r3, #2
- 1719 0010 58D0     		beq	.L118
- 1720 0012 002B     		cmp	r3, #0
- 1721 0014 53D0     		beq	.L126
- 1722              	.LVL123:
- 1723              	.L119:
+ 1740              		.loc 4 15 5 view .LVU443
+ 1741 000c 54D0     		beq	.L118
+ 1742 000e 022B     		cmp	r3, #2
+ 1743 0010 58D0     		beq	.L119
+ 1744 0012 002B     		cmp	r3, #0
+ 1745 0014 53D0     		beq	.L127
+ 1746              	.LVL123:
+ 1747              	.L120:
   28:displayHandler.cpp ****     _displayPtr->Update();
- 1724              		.loc 4 28 5 is_stmt 1 view .LVU441
- 1725 0016 2768     		ldr	r7, [r4]
- 1726 0018 2E4A     		ldr	r2, .L127
+ 1748              		.loc 4 28 5 is_stmt 1 view .LVU444
+ 1749 0016 2768     		ldr	r7, [r4]
+ 1750 0018 2E4A     		ldr	r2, .L128
   28:displayHandler.cpp ****     _displayPtr->Update();
- 1727              		.loc 4 28 25 is_stmt 0 view .LVU442
- 1728 001a 3B68     		ldr	r3, [r7]
- 1729 001c 1B6B     		ldr	r3, [r3, #48]
- 1730 001e 9342     		cmp	r3, r2
- 1731 0020 53D1     		bne	.L120
- 1732              	.LBB205:
- 1733              	.LBB206:
- 1734              	.LBB207:
- 1735              	.LBB208:
- 1736              	.LBB209:
+ 1751              		.loc 4 28 25 is_stmt 0 view .LVU445
+ 1752 001a 3B68     		ldr	r3, [r7]
+ 1753 001c 1B6B     		ldr	r3, [r3, #48]
+ 1754 001e 9342     		cmp	r3, r2
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 51
+
+
+ 1755 0020 53D1     		bne	.L121
+ 1756              	.LBB204:
+ 1757              	.LBB205:
+ 1758              	.LBB206:
+ 1759              	.LBB207:
+ 1760              	.LBB208:
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
- 1737              		.loc 2 45 30 view .LVU443
- 1738 0022 07F10808 		add	r8, r7, #8
- 1739 0026 07F18F06 		add	r6, r7, #143
- 1740 002a 07F28F4A 		addw	r10, r7, #1167
- 1741 002e 4FF0B009 		mov	r9, #176
- 1742              	.LVL124:
- 1743              	.L123:
+ 1761              		.loc 2 45 30 view .LVU446
+ 1762 0022 07F10808 		add	r8, r7, #8
+ 1763 0026 07F18F06 		add	r6, r7, #143
+ 1764 002a 07F28F4A 		addw	r10, r7, #1167
+ 1765 002e 4FF0B009 		mov	r9, #176
+ 1766              	.LVL124:
+ 1767              	.L124:
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
- 1744              		.loc 2 45 30 view .LVU444
- 1745              	.LBE209:
- 1746              	.LBI208:
+ 1768              		.loc 2 45 30 view .LVU447
+ 1769              	.LBE208:
+ 1770              	.LBI207:
   42:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
- 1747              		.loc 2 42 10 is_stmt 1 view .LVU445
- 1748              	.LBB210:
+ 1771              		.loc 2 42 10 is_stmt 1 view .LVU448
+ 1772              	.LBB209:
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1749              		.loc 2 44 9 view .LVU446
+ 1773              		.loc 2 44 9 view .LVU449
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1750              		.loc 2 44 17 is_stmt 0 view .LVU447
- 1751 0032 0024     		movs	r4, #0
+ 1774              		.loc 2 44 17 is_stmt 0 view .LVU450
+ 1775 0032 0024     		movs	r4, #0
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
- 1752              		.loc 2 45 30 view .LVU448
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 51
-
-
- 1753 0034 4FF47A75 		mov	r5, #1000
- 1754 0038 0223     		movs	r3, #2
- 1755 003a 03AA     		add	r2, sp, #12
+ 1776              		.loc 2 45 30 view .LVU451
+ 1777 0034 4FF47A75 		mov	r5, #1000
+ 1778 0038 0223     		movs	r3, #2
+ 1779 003a 03AA     		add	r2, sp, #12
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1756              		.loc 2 44 17 view .LVU449
- 1757 003c 8DF80C40 		strb	r4, [sp, #12]
+ 1780              		.loc 2 44 17 view .LVU452
+ 1781 003c 8DF80C40 		strb	r4, [sp, #12]
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
- 1758              		.loc 2 45 30 view .LVU450
- 1759 0040 4046     		mov	r0, r8
+ 1782              		.loc 2 45 30 view .LVU453
+ 1783 0040 4046     		mov	r0, r8
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1760              		.loc 2 44 36 view .LVU451
- 1761 0042 8DF80D90 		strb	r9, [sp, #13]
+ 1784              		.loc 2 44 36 view .LVU454
+ 1785 0042 8DF80D90 		strb	r9, [sp, #13]
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
- 1762              		.loc 2 45 9 is_stmt 1 view .LVU452
+ 1786              		.loc 2 45 9 is_stmt 1 view .LVU455
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
- 1763              		.loc 2 45 30 is_stmt 0 view .LVU453
- 1764 0046 397B     		ldrb	r1, [r7, #12]	@ zero_extendqisi2
- 1765 0048 0095     		str	r5, [sp]
- 1766 004a FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
- 1767              	.LVL125:
+ 1787              		.loc 2 45 30 is_stmt 0 view .LVU456
+ 1788 0046 397B     		ldrb	r1, [r7, #12]	@ zero_extendqisi2
+ 1789 0048 0095     		str	r5, [sp]
+ 1790 004a FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
+ 1791              	.LVL125:
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
- 1768              		.loc 2 45 30 view .LVU454
- 1769              	.LBE210:
- 1770              	.LBE208:
- 1771              	.LBB211:
- 1772              	.LBI211:
+ 1792              		.loc 2 45 30 view .LVU457
+ 1793              	.LBE209:
+ 1794              	.LBE207:
+ 1795              	.LBB210:
+ 1796              	.LBI210:
   42:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
- 1773              		.loc 2 42 10 is_stmt 1 view .LVU455
- 1774              	.LBB212:
+ 1797              		.loc 2 42 10 is_stmt 1 view .LVU458
+ 1798              	.LBB211:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 52
+
+
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1775              		.loc 2 44 9 view .LVU456
+ 1799              		.loc 2 44 9 view .LVU459
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1776              		.loc 2 44 17 is_stmt 0 view .LVU457
- 1777 004e 8DF80C40 		strb	r4, [sp, #12]
+ 1800              		.loc 2 44 17 is_stmt 0 view .LVU460
+ 1801 004e 8DF80C40 		strb	r4, [sp, #12]
   44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1778              		.loc 2 44 36 view .LVU458
- 1779 0052 8DF80D40 		strb	r4, [sp, #13]
+ 1802              		.loc 2 44 36 view .LVU461
+ 1803 0052 8DF80D40 		strb	r4, [sp, #13]
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
- 1780              		.loc 2 45 9 is_stmt 1 view .LVU459
+ 1804              		.loc 2 45 9 is_stmt 1 view .LVU462
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
- 1781              		.loc 2 45 30 is_stmt 0 view .LVU460
- 1782 0056 0223     		movs	r3, #2
- 1783 0058 397B     		ldrb	r1, [r7, #12]	@ zero_extendqisi2
- 1784 005a 03AA     		add	r2, sp, #12
- 1785 005c 4046     		mov	r0, r8
- 1786 005e 0095     		str	r5, [sp]
- 1787 0060 FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
- 1788              	.LVL126:
+ 1805              		.loc 2 45 30 is_stmt 0 view .LVU463
+ 1806 0056 0223     		movs	r3, #2
+ 1807 0058 397B     		ldrb	r1, [r7, #12]	@ zero_extendqisi2
+ 1808 005a 03AA     		add	r2, sp, #12
+ 1809 005c 4046     		mov	r0, r8
+ 1810 005e 0095     		str	r5, [sp]
+ 1811 0060 FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
+ 1812              	.LVL126:
   45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
- 1789              		.loc 2 45 30 view .LVU461
- 1790              	.LBE212:
- 1791              	.LBE211:
- 1792              	.LBB213:
- 1793              	.LBI213:
+ 1813              		.loc 2 45 30 view .LVU464
+ 1814              	.LBE211:
+ 1815              	.LBE210:
+ 1816              	.LBB212:
+ 1817              	.LBI212:
   42:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
- 1794              		.loc 2 42 10 is_stmt 1 view .LVU462
- 1795              	.LBB214:
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 52
+ 1818              		.loc 2 42 10 is_stmt 1 view .LVU465
+ 1819              	.LBB213:
+  44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
+ 1820              		.loc 2 44 9 view .LVU466
+  44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
+ 1821              		.loc 2 44 36 is_stmt 0 view .LVU467
+ 1822 0064 1023     		movs	r3, #16
+  44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
+ 1823              		.loc 2 44 17 view .LVU468
+ 1824 0066 8DF80C40 		strb	r4, [sp, #12]
+  45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
+ 1825              		.loc 2 45 30 view .LVU469
+ 1826 006a 03AA     		add	r2, sp, #12
+  44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
+ 1827              		.loc 2 44 36 view .LVU470
+ 1828 006c 8DF80D30 		strb	r3, [sp, #13]
+  45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
+ 1829              		.loc 2 45 9 is_stmt 1 view .LVU471
+  45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
+ 1830              		.loc 2 45 30 is_stmt 0 view .LVU472
+ 1831 0070 4046     		mov	r0, r8
+ 1832 0072 397B     		ldrb	r1, [r7, #12]	@ zero_extendqisi2
+ 1833 0074 0223     		movs	r3, #2
+ 1834 0076 0095     		str	r5, [sp]
+ 1835 0078 A6F18004 		sub	r4, r6, #128
+ 1836 007c FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
+ 1837              	.LVL127:
+  45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
+ 1838              		.loc 2 45 30 view .LVU473
+ 1839              	.LBE213:
+ 1840              	.LBE212:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 53
 
 
-  44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1796              		.loc 2 44 9 view .LVU463
-  44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1797              		.loc 2 44 36 is_stmt 0 view .LVU464
- 1798 0064 1023     		movs	r3, #16
-  44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1799              		.loc 2 44 17 view .LVU465
- 1800 0066 8DF80C40 		strb	r4, [sp, #12]
-  45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
- 1801              		.loc 2 45 30 view .LVU466
- 1802 006a 03AA     		add	r2, sp, #12
-  44:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1803              		.loc 2 44 36 view .LVU467
- 1804 006c 8DF80D30 		strb	r3, [sp, #13]
-  45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
- 1805              		.loc 2 45 9 is_stmt 1 view .LVU468
-  45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
- 1806              		.loc 2 45 30 is_stmt 0 view .LVU469
- 1807 0070 4046     		mov	r0, r8
- 1808 0072 397B     		ldrb	r1, [r7, #12]	@ zero_extendqisi2
- 1809 0074 0223     		movs	r3, #2
- 1810 0076 0095     		str	r5, [sp]
- 1811 0078 A6F18004 		sub	r4, r6, #128
- 1812 007c FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
- 1813              	.LVL127:
-  45:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     };
- 1814              		.loc 2 45 30 view .LVU470
- 1815              	.LBE214:
- 1816              	.LBE213:
- 1817              	.LBB215:
- 1818              	.LBI215:
+ 1841              	.LBB214:
+ 1842              	.LBI214:
   48:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****     {
- 1819              		.loc 2 48 10 is_stmt 1 view .LVU471
- 1820              	.LBB216:
+ 1843              		.loc 2 48 10 is_stmt 1 view .LVU474
+ 1844              	.LBB215:
   50:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         {
- 1821              		.loc 2 50 29 view .LVU472
- 1822              	.L121:
- 1823              	.LBB217:
+ 1845              		.loc 2 50 29 view .LVU475
+ 1846              	.L122:
+ 1847              	.LBB216:
   52:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1824              		.loc 2 52 13 view .LVU473
+ 1848              		.loc 2 52 13 view .LVU476
   52:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1825              		.loc 2 52 21 is_stmt 0 view .LVU474
- 1826 0080 4021     		movs	r1, #64
+ 1849              		.loc 2 52 21 is_stmt 0 view .LVU477
+ 1850 0080 4021     		movs	r1, #64
   53:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
- 1827              		.loc 2 53 34 view .LVU475
- 1828 0082 4FF47A75 		mov	r5, #1000
- 1829 0086 0223     		movs	r3, #2
- 1830 0088 03AA     		add	r2, sp, #12
+ 1851              		.loc 2 53 34 view .LVU478
+ 1852 0082 4FF47A75 		mov	r5, #1000
+ 1853 0086 0223     		movs	r3, #2
+ 1854 0088 03AA     		add	r2, sp, #12
   52:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1831              		.loc 2 52 21 view .LVU476
- 1832 008a 8DF80C10 		strb	r1, [sp, #12]
+ 1855              		.loc 2 52 21 view .LVU479
+ 1856 008a 8DF80C10 		strb	r1, [sp, #12]
   53:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
- 1833              		.loc 2 53 34 view .LVU477
- 1834 008e 4046     		mov	r0, r8
+ 1857              		.loc 2 53 34 view .LVU480
+ 1858 008e 4046     		mov	r0, r8
   52:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1835              		.loc 2 52 43 view .LVU478
- 1836 0090 14F8011F 		ldrb	r1, [r4, #1]!	@ zero_extendqisi2
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 53
+ 1859              		.loc 2 52 43 view .LVU481
+ 1860 0090 14F8011F 		ldrb	r1, [r4, #1]!	@ zero_extendqisi2
+ 1861              	.LVL128:
+  52:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
+ 1862              		.loc 2 52 44 view .LVU482
+ 1863 0094 8DF80D10 		strb	r1, [sp, #13]
+  53:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
+ 1864              		.loc 2 53 13 is_stmt 1 view .LVU483
+  53:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
+ 1865              		.loc 2 53 34 is_stmt 0 view .LVU484
+ 1866 0098 397B     		ldrb	r1, [r7, #12]	@ zero_extendqisi2
+ 1867 009a 0095     		str	r5, [sp]
+ 1868 009c FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
+ 1869              	.LVL129:
+ 1870              	.LBE216:
+  50:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         {
+ 1871              		.loc 2 50 9 is_stmt 1 view .LVU485
+  50:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         {
+ 1872              		.loc 2 50 29 view .LVU486
+ 1873 00a0 A642     		cmp	r6, r4
+ 1874 00a2 EDD1     		bne	.L122
+ 1875              	.LVL130:
+  50:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         {
+ 1876              		.loc 2 50 29 is_stmt 0 view .LVU487
+ 1877              	.LBE215:
+ 1878              	.LBE214:
+ 1879              		.loc 2 371 9 is_stmt 1 view .LVU488
+ 1880              		.loc 2 371 22 view .LVU489
+ 1881 00a4 8036     		adds	r6, r6, #128
+ 1882 00a6 09F10109 		add	r9, r9, #1
+ 1883              	.LVL131:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 54
 
 
- 1837              	.LVL128:
-  52:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****             i2c_.TransmitBlocking(i2c_address_, buf, 2, 1000);
- 1838              		.loc 2 52 44 view .LVU479
- 1839 0094 8DF80D10 		strb	r1, [sp, #13]
-  53:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
- 1840              		.loc 2 53 13 is_stmt 1 view .LVU480
-  53:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         }
- 1841              		.loc 2 53 34 is_stmt 0 view .LVU481
- 1842 0098 397B     		ldrb	r1, [r7, #12]	@ zero_extendqisi2
- 1843 009a 0095     		str	r5, [sp]
- 1844 009c FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
- 1845              	.LVL129:
- 1846              	.LBE217:
-  50:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         {
- 1847              		.loc 2 50 9 is_stmt 1 view .LVU482
-  50:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         {
- 1848              		.loc 2 50 29 view .LVU483
- 1849 00a0 A642     		cmp	r6, r4
- 1850 00a2 EDD1     		bne	.L121
- 1851              	.LVL130:
-  50:../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h ****         {
- 1852              		.loc 2 50 29 is_stmt 0 view .LVU484
- 1853              	.LBE216:
- 1854              	.LBE215:
- 1855              		.loc 2 371 9 is_stmt 1 view .LVU485
- 1856              		.loc 2 371 22 view .LVU486
- 1857 00a4 8036     		adds	r6, r6, #128
- 1858 00a6 09F10109 		add	r9, r9, #1
- 1859              	.LVL131:
- 1860              		.loc 2 371 22 is_stmt 0 view .LVU487
- 1861 00aa B245     		cmp	r10, r6
- 1862 00ac 5FFA89F9 		uxtb	r9, r9
- 1863 00b0 BFD1     		bne	.L123
- 1864              	.LBE207:
- 1865              	.LBE206:
- 1866              	.LBE205:
+ 1884              		.loc 2 371 22 is_stmt 0 view .LVU490
+ 1885 00aa B245     		cmp	r10, r6
+ 1886 00ac 5FFA89F9 		uxtb	r9, r9
+ 1887 00b0 BFD1     		bne	.L124
+ 1888              	.LBE206:
+ 1889              	.LBE205:
+ 1890              	.LBE204:
   29:displayHandler.cpp **** }
- 1867              		.loc 4 29 1 view .LVU488
- 1868 00b2 04B0     		add	sp, sp, #16
- 1869              		.cfi_remember_state
- 1870              		.cfi_def_cfa_offset 32
- 1871              		@ sp needed
- 1872 00b4 BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
- 1873              	.LVL132:
- 1874              	.L117:
- 1875              		.cfi_restore_state
+ 1891              		.loc 4 29 1 view .LVU491
+ 1892 00b2 04B0     		add	sp, sp, #16
+ 1893              		.cfi_remember_state
+ 1894              		.cfi_def_cfa_offset 32
+ 1895              		@ sp needed
+ 1896 00b4 BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 1897              	.LVL132:
+ 1898              	.L118:
+ 1899              		.cfi_restore_state
   20:displayHandler.cpp ****         case DisplayState::WAVEFORM_VIEWER:
- 1876              		.loc 4 20 9 is_stmt 1 view .LVU489
+ 1900              		.loc 4 20 9 is_stmt 1 view .LVU492
   21:displayHandler.cpp ****             drawWaveForm();
- 1877              		.loc 4 21 13 view .LVU490
+ 1901              		.loc 4 21 13 view .LVU493
   21:displayHandler.cpp ****             drawWaveForm();
- 1878              		.loc 4 21 25 is_stmt 0 view .LVU491
- 1879 00b8 FFF7FEFF 		bl	_ZN14DisplayHandler12drawWaveFormEv
- 1880              	.LVL133:
+ 1902              		.loc 4 21 25 is_stmt 0 view .LVU494
+ 1903 00b8 FFF7FEFF 		bl	_ZN14DisplayHandler12drawWaveFormEv
+ 1904              	.LVL133:
   22:displayHandler.cpp ****             break;
- 1881              		.loc 4 22 13 is_stmt 1 view .LVU492
- 1882 00bc ABE7     		b	.L119
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 54
-
-
- 1883              	.LVL134:
- 1884              	.L126:
+ 1905              		.loc 4 22 13 is_stmt 1 view .LVU495
+ 1906 00bc ABE7     		b	.L120
+ 1907              	.LVL134:
+ 1908              	.L127:
   16:displayHandler.cpp ****         case DisplayState::STANDBY:
- 1885              		.loc 4 16 9 view .LVU493
+ 1909              		.loc 4 16 9 view .LVU496
   17:displayHandler.cpp ****             drawStandbyScreen();
- 1886              		.loc 4 17 13 view .LVU494
+ 1910              		.loc 4 17 13 view .LVU497
   17:displayHandler.cpp ****             drawStandbyScreen();
- 1887              		.loc 4 17 30 is_stmt 0 view .LVU495
- 1888 00be FFF7FEFF 		bl	_ZN14DisplayHandler17drawStandbyScreenEv
- 1889              	.LVL135:
+ 1911              		.loc 4 17 30 is_stmt 0 view .LVU498
+ 1912 00be FFF7FEFF 		bl	_ZN14DisplayHandler17drawStandbyScreenEv
+ 1913              	.LVL135:
   18:displayHandler.cpp ****             break;
- 1890              		.loc 4 18 13 is_stmt 1 view .LVU496
- 1891 00c2 A8E7     		b	.L119
- 1892              	.LVL136:
- 1893              	.L118:
+ 1914              		.loc 4 18 13 is_stmt 1 view .LVU499
+ 1915 00c2 A8E7     		b	.L120
+ 1916              	.LVL136:
+ 1917              	.L119:
   24:displayHandler.cpp ****         case DisplayState::POT_VALUE:
- 1894              		.loc 4 24 9 view .LVU497
+ 1918              		.loc 4 24 9 view .LVU500
   25:displayHandler.cpp ****             drawPotValue();
- 1895              		.loc 4 25 13 view .LVU498
+ 1919              		.loc 4 25 13 view .LVU501
   25:displayHandler.cpp ****             drawPotValue();
- 1896              		.loc 4 25 25 is_stmt 0 view .LVU499
- 1897 00c4 FFF7FEFF 		bl	_ZN14DisplayHandler12drawPotValueEv
- 1898              	.LVL137:
+ 1920              		.loc 4 25 25 is_stmt 0 view .LVU502
+ 1921 00c4 FFF7FEFF 		bl	_ZN14DisplayHandler12drawPotValueEv
+ 1922              	.LVL137:
   26:displayHandler.cpp ****             break;
- 1899              		.loc 4 26 13 is_stmt 1 view .LVU500
- 1900 00c8 A5E7     		b	.L119
- 1901              	.L120:
+ 1923              		.loc 4 26 13 is_stmt 1 view .LVU503
+ 1924 00c8 A5E7     		b	.L120
+ 1925              	.L121:
   28:displayHandler.cpp ****     _displayPtr->Update();
- 1902              		.loc 4 28 24 is_stmt 0 view .LVU501
- 1903 00ca 3846     		mov	r0, r7
+ 1926              		.loc 4 28 24 is_stmt 0 view .LVU504
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 55
+
+
+ 1927 00ca 3846     		mov	r0, r7
   29:displayHandler.cpp **** }
- 1904              		.loc 4 29 1 view .LVU502
- 1905 00cc 04B0     		add	sp, sp, #16
- 1906              		.cfi_def_cfa_offset 32
- 1907              		@ sp needed
- 1908 00ce BDE8F047 		pop	{r4, r5, r6, r7, r8, r9, r10, lr}
- 1909              		.cfi_restore 14
- 1910              		.cfi_restore 10
- 1911              		.cfi_restore 9
- 1912              		.cfi_restore 8
- 1913              		.cfi_restore 7
- 1914              		.cfi_restore 6
- 1915              		.cfi_restore 5
- 1916              		.cfi_restore 4
- 1917              		.cfi_def_cfa_offset 0
- 1918              	.LVL138:
+ 1928              		.loc 4 29 1 view .LVU505
+ 1929 00cc 04B0     		add	sp, sp, #16
+ 1930              		.cfi_def_cfa_offset 32
+ 1931              		@ sp needed
+ 1932 00ce BDE8F047 		pop	{r4, r5, r6, r7, r8, r9, r10, lr}
+ 1933              		.cfi_restore 14
+ 1934              		.cfi_restore 10
+ 1935              		.cfi_restore 9
+ 1936              		.cfi_restore 8
+ 1937              		.cfi_restore 7
+ 1938              		.cfi_restore 6
+ 1939              		.cfi_restore 5
+ 1940              		.cfi_restore 4
+ 1941              		.cfi_def_cfa_offset 0
+ 1942              	.LVL138:
   28:displayHandler.cpp ****     _displayPtr->Update();
- 1919              		.loc 4 28 24 view .LVU503
- 1920 00d2 1847     		bx	r3	@ indirect register sibling call
- 1921              	.LVL139:
- 1922              	.L128:
- 1923              		.align	2
- 1924              	.L127:
- 1925 00d4 00000000 		.word	_ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv
- 1926              		.cfi_endproc
- 1927              	.LFE2693:
- 1929              		.section	.bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx,"aw",%nobits
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 55
+ 1943              		.loc 4 28 24 view .LVU506
+ 1944 00d2 1847     		bx	r3	@ indirect register sibling call
+ 1945              	.LVL139:
+ 1946              	.L129:
+ 1947              		.align	2
+ 1948              	.L128:
+ 1949 00d4 00000000 		.word	_ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv
+ 1950              		.cfi_endproc
+ 1951              	.LFE2693:
+ 1953              		.section	.bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx,"aw",%nobits
+ 1954              		.align	2
+ 1955              		.set	.LANCHOR0,. + 0
+ 1958              	_ZZN14DisplayHandler11findTriggerEvE7trigIdx:
+ 1959 0000 00000000 		.space	4
+ 1960              		.text
+ 1961              	.Letext0:
+ 1962              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 1963              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 1964              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 1965              		.file 8 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 1966              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 1967              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 1968              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 1969              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 1970              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 1971              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 1972              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 1973              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 1974              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 1975              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 1976              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 1977              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 1978              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 1979              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 1980              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 1981              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 1982              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 1983              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 1984              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 56
 
 
- 1930              		.align	2
- 1931              		.set	.LANCHOR0,. + 0
- 1934              	_ZZN14DisplayHandler11findTriggerEvE7trigIdx:
- 1935 0000 00000000 		.space	4
- 1936              		.text
- 1937              	.Letext0:
- 1938              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
- 1939              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
- 1940              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
- 1941              		.file 8 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
- 1942              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
- 1943              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
- 1944              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
- 1945              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
- 1946              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
- 1947              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
- 1948              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
- 1949              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
- 1950              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
- 1951              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
- 1952              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
- 1953              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
- 1954              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
- 1955              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
- 1956              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
- 1957              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
- 1958              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
- 1959              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
- 1960              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
- 1961              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
- 1962              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
- 1963              		.file 30 "../../libs/libDaisy/src/daisy_core.h"
- 1964              		.file 31 "../../libs/libDaisy/src/per/i2c.h"
- 1965              		.file 32 "../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h"
- 1966              		.file 33 "../../libs/libDaisy/src/util/wav_format.h"
- 1967              		.file 34 "../../libs/PoliTeKDSP/libs/libDaisy/src/dev/sr_595.h"
- 1968              		.file 35 "../../libs/PoliTeKDSP/libs/libDaisy/src/dev/max11300.h"
- 1969              		.file 36 "../../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h"
- 1970              		.file 37 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
- 1971              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
- 1972              		.file 39 "../../libs/libDaisy/src/util/oled_fonts.h"
- 1973              		.file 40 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
- 1974              		.file 41 "displayHandler.h"
- 1975              		.file 42 "<built-in>"
-ARM GAS  C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s 			page 56
+ 1985              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 1986              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 1987              		.file 30 "../../libs/libDaisy/src/daisy_core.h"
+ 1988              		.file 31 "../../libs/libDaisy/src/per/i2c.h"
+ 1989              		.file 32 "../../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/graphics_common.h"
+ 1990              		.file 33 "../../libs/libDaisy/src/util/wav_format.h"
+ 1991              		.file 34 "../../libs/PoliTeKDSP/libs/libDaisy/src/dev/sr_595.h"
+ 1992              		.file 35 "../../libs/PoliTeKDSP/libs/libDaisy/src/dev/max11300.h"
+ 1993              		.file 36 "../../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h"
+ 1994              		.file 37 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 1995              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 1996              		.file 39 "../../libs/libDaisy/src/util/oled_fonts.h"
+ 1997              		.file 40 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 1998              		.file 41 "displayHandler.h"
+ 1999              		.file 42 "<built-in>"
+ARM GAS  C:\Users\matte\AppData\Local\Temp\cciBEdh6.s 			page 57
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 displayHandler.cpp
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:17     .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:26     .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:59     .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:67     .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:250    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:258    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:544    .rodata._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb.str1.4:00000000 $d
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:548    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:556    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000000 _ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:625    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000034 $d
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:556    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000000 _ZN14DisplayHandlerC1EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:632    .rodata._ZN14DisplayHandler12drawPotValueEv.str1.4:00000000 $d
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:636    .text._ZN14DisplayHandler12drawPotValueEv:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:644    .text._ZN14DisplayHandler12drawPotValueEv:00000000 _ZN14DisplayHandler12drawPotValueEv
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:707    .text._ZN14DisplayHandler12drawPotValueEv:00000044 $d
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:713    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:721    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 _ZN14DisplayHandler8SetStateE12DisplayState
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:787    .text._ZN14DisplayHandler8SetStateE12DisplayState:0000002c $d
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:792    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:800    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 _ZN14DisplayHandler14SetStandbyTextEPKc
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:878    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000034 $d
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:883    .text._ZN14DisplayHandler15pushAudioSampleEff:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:891    .text._ZN14DisplayHandler15pushAudioSampleEff:00000000 _ZN14DisplayHandler15pushAudioSampleEff
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:927    .text._ZN14DisplayHandler11findTriggerEv:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:935    .text._ZN14DisplayHandler11findTriggerEv:00000000 _ZN14DisplayHandler11findTriggerEv
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:1064   .text._ZN14DisplayHandler11findTriggerEv:00000084 $d
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:1069   .text._ZN14DisplayHandler12drawWaveFormEv:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:1077   .text._ZN14DisplayHandler12drawWaveFormEv:00000000 _ZN14DisplayHandler12drawWaveFormEv
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:1535   .text._ZN14DisplayHandler12drawWaveFormEv:000001b4 $d
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:1543   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:1551   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 _ZN14DisplayHandler17drawStandbyScreenEv
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:1675   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000058 $d
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:1682   .text._ZN14DisplayHandler6UpdateEv:00000000 $t
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:1690   .text._ZN14DisplayHandler6UpdateEv:00000000 _ZN14DisplayHandler6UpdateEv
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:1925   .text._ZN14DisplayHandler6UpdateEv:000000d4 $d
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:1930   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 $d
-C:\Users\matte\AppData\Local\Temp\ccRBEhe2.s:1934   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 _ZZN14DisplayHandler11findTriggerEvE7trigIdx
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:17     .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:26     .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE4FillEb
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:59     .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:67     .text._ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv:00000000 _ZN5daisy11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEE6UpdateEv
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:250    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:258    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_13SSD130xDriverILj128ELj64ENS_19SSD130xI2CTransportEEEEEE8DrawLineEjjjjb
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:544    .rodata._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb.str1.4:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:548    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:556    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000000 _ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:625    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000040 $d
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:556    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb:00000000 _ZN14DisplayHandlerC1EPN5daisy11OledDisplayINS0_13SSD130xDriverILj128ELj64ENS0_19SSD130xI2CTransportEEEEEb
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:632    .rodata._ZN14DisplayHandler12drawPotValueEv.str1.4:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:636    .text._ZN14DisplayHandler12drawPotValueEv:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:644    .text._ZN14DisplayHandler12drawPotValueEv:00000000 _ZN14DisplayHandler12drawPotValueEv
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:707    .text._ZN14DisplayHandler12drawPotValueEv:00000044 $d
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:713    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:721    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 _ZN14DisplayHandler8SetStateE12DisplayState
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:787    .text._ZN14DisplayHandler8SetStateE12DisplayState:0000002c $d
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:792    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:800    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 _ZN14DisplayHandler14SetStandbyTextEPKc
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:878    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000034 $d
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:883    .text._ZN14DisplayHandler15pushAudioSampleEf:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:891    .text._ZN14DisplayHandler15pushAudioSampleEf:00000000 _ZN14DisplayHandler15pushAudioSampleEf
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:924    .text._ZN14DisplayHandler11findTriggerEv:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:932    .text._ZN14DisplayHandler11findTriggerEv:00000000 _ZN14DisplayHandler11findTriggerEv
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:1061   .text._ZN14DisplayHandler11findTriggerEv:00000084 $d
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:1066   .text._ZN14DisplayHandler12drawWaveFormEv:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:1074   .text._ZN14DisplayHandler12drawWaveFormEv:00000000 _ZN14DisplayHandler12drawWaveFormEv
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:1535   .text._ZN14DisplayHandler12drawWaveFormEv:000001bc $d
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:1542   .text._ZN14DisplayHandler9SetYscaleEi:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:1550   .text._ZN14DisplayHandler9SetYscaleEi:00000000 _ZN14DisplayHandler9SetYscaleEi
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:1567   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:1575   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 _ZN14DisplayHandler17drawStandbyScreenEv
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:1699   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000058 $d
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:1706   .text._ZN14DisplayHandler6UpdateEv:00000000 $t
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:1714   .text._ZN14DisplayHandler6UpdateEv:00000000 _ZN14DisplayHandler6UpdateEv
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:1949   .text._ZN14DisplayHandler6UpdateEv:000000d4 $d
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:1954   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 $d
+C:\Users\matte\AppData\Local\Temp\cciBEdh6.s:1958   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 _ZZN14DisplayHandler11findTriggerEvE7trigIdx
 
 UNDEFINED SYMBOLS
 memset

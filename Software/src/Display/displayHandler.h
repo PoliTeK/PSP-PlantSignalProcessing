@@ -46,6 +46,8 @@ private:
     int findTrigger();
     /* internal drawing functions */
     void drawStandbyScreen();
+    int _yscale = 1;
+    int _xscale = 1;
     void drawWaveForm();
 
     // RIGHT NOW IT ONLY SHOWS THE NUMBER
@@ -61,10 +63,13 @@ public:
     // Set new fsm state
     void SetState (DisplayState newState);
 
+    // Sets yscale 
+    void SetYscale (int yscale);
+
     // Set text displayed in STANDBY state
     void SetStandbyText(const char* text);
 
-    // push audio sample to buffer, multiplied by multiplier value to fit yscale
-    void pushAudioSample (float sample, float multiplier = 1);
+    // push audio sample to buffer
+    void pushAudioSample (float sample);
 
 };

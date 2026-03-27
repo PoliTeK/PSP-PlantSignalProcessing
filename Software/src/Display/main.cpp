@@ -29,13 +29,11 @@ DisplayHandler disp_handle (&disp);
 static void AudioCallback(AudioHandle::InterleavingInputBuffer in, AudioHandle::InterleavingOutputBuffer out, size_t size)
 {
     float oscOut = 0;
-    float yscaleMult = 8;
     for (size_t i = 0; i < size; i += 2)
     {
         oscOut = osc.Process();
 
-        // value x2 (second parameter)
-        disp_handle.pushAudioSample (oscOut, yscaleMult);
+        disp_handle.pushAudioSample (oscOut);
         // uncomment to decimate -> frequency displayed is double the true one 
         //  bool decimate;
         //  if (decimate) {
@@ -57,6 +55,8 @@ int main (){
     osc.SetAmp(0.05f);
     MyOledDisplay::Config disp_cfg;
     disp.Init(disp_cfg);
+    int yscale = 300;
+    disp_handle.SetYscale(yscale);
     disp_handle.SetState(DisplayState::WAVEFORM_VIEWER); 
     hw.StartAudio(AudioCallback);
     int i = 440;
