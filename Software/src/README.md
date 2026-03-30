@@ -1,51 +1,23 @@
 ## DOCUMENTAZIONE CODICE
 
+### Documentazione Tecnica (Prima Iterazione)
+- [AudioEngine](docs/AudioEngine.md): struttura classe, API pubblica, pipeline DSP e template per le prossime classi.
+- [AudioEngineConfig](docs/AudioEngineConfig.md): parametri principali dei preset PAD/PLUCK/LEAD e riverbero.
+
+### Documentazione Tecnica (Estensione)
+- [PlantConditioner](docs/PlantConditioner.md): mapping sensore capacitivo -> frequenza/gate con scale musicali e isteresi.
+- [Main Runtime Flow](docs/Main.md): orchestrazione di startup, integrazione tra moduli, control-rate loop e callback audio-rate.
+
+### Documentazione Tecnica (Display/UI)
+- [DisplayHandler](docs/DisplayHandler.md): gestione OLED, waveform viewer e schermate menu.
+- [MenuManager](docs/MenuManager.md): macchina a stati UI e parametri controllati da encoder.
 
 
 
-## Linee Guida per lo Sviluppo
 
-### Aggiunta di Nuove Classi
-1. Iniziare copiando la cartella template:
-   ```bash
-   cp -r Software/Test/Template Software/[cartella_destinazione]/[nome_nuova_classe]
-   ```
-2. Rinominare i file nella nuova cartella:
-   - `template.cpp` → `[nome_nuova_classe].cpp`
-   - `template.h` → `[nome_nuova_classe].h`
 
-3. Aggiornare il nome della classe in entrambi i file
 
-4. Utilizzare main.cpp per testare la classe sulla scheda DaisySeed creando un esempio di utilizzo
 
-5. Per compilare l'esempio, assicurarsi di aggiornare correttamente il Makefile e seguire le stesse istruzioni di build del progetto principale
-
-6. CREARE UN FILE README PER SPIEGARE COME UTILIZZARE LA CLASSE E I SUOI METODI PUBBLICI
-
-7. Se funziona correttamente, aggiungere l'implementazione nelle seguenti posizioni:
-   - Gli effetti vanno nella cartella `Software/Effects`
-   - I componenti del sintetizzatore vanno in `Software/Synth`
-   - Le utilità vanno in `Software/Utility`
-
-8. Includere i nuovi file nel progetto principale se necessario
-
-### Stile del Codice
-- **camelCase** per i nomi dei metodi
-  - La prima lettera è minuscola
-  - Ogni parola successiva inizia con la maiuscola
-  - Esempi: 
-    - `setFrequency()`
-    - `setVolume()`
-    - `readSensorValue()`
-
-- **PascalCase** per i nomi delle classi
-  - Ogni parola, inclusa la prima, inizia con la maiuscola
-  - Esempi:
-    - `class CapacitiveSensor`
-    - `class ReverbEffect`
-
-- Prefissare i membri privati con underscore (es. `_variabilePrivata`, `_metodoPrivato`)
-- Includere documentazione per i metodi pubblici
 
 ### Linee Guida per l'Uso di Git
 - Prima di iniziare a lavorare, aggiornare sempre con gli ultimi cambiamenti:

@@ -72,7 +72,7 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
             case SCALE:
                 _outData.scale += current_rotation;
                 if (_outData.scale < 0) _outData.scale = 0;
-                if (_outData.scale > 5) _outData.scale = 5;
+                if (_outData.scale > 6) _outData.scale = 6;
                 break;
 
             case OCTAVE:
@@ -84,7 +84,7 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
             case PRESETS_HUB:
                 _outData.preset += current_rotation;
                 if (_outData.preset < 0) _outData.preset = 0;
-                if (_outData.preset > 3) _outData.preset = 3;
+                if (_outData.preset > 2) _outData.preset = 2;
                 break;
 
             default:
