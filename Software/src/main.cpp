@@ -7,28 +7,24 @@
 #include "Display/MenuManager.h"
 
 using namespace daisy;
-
+// --- Hardware and Peripherals ---
 DaisySeed      hw;
 Encoder        enc;
 MenuManager    menu;
 MyOledDisplay  disp;
 DisplayHandler disp_handle(&disp);
-
+// --- DSP Modules ---
 PlantConditioner pc;
 AudioEngine      synth;
-
+// --- Control Struct for communication between PlantConditioner and AudioEngine ---
 ControlsStruct audio_controls = {440.0f, false};
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size) {
-    // 1. Aggiorna il synth con i parametri calcolati nel main
     synth.Update(audio_controls);
 
     for (size_t i = 0; i < size; i++) {
         float sig = synth.Process();
-        
-        // Passa il campione per la visualizzazione dell'onda
         disp_handle.pushAudioSample(sig);
-
         out[0][i] = out[1][i] = sig;
     }
 }

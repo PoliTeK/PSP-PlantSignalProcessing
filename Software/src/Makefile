@@ -15,8 +15,8 @@ PSP/AudioEngine.cpp\
 
 
 # Percorsi alle librerie (basati sui tuoi #include)
-LIBDAISY_DIR = ../libs/libDaisy
-DAISYSP_DIR = ../libs/DaisySP
+LIBDAISY_DIR = ../libs/PoliTeKDSP/libs/libDaisy
+DAISYSP_DIR = ../libs/PoliTeKDSP/libs/DaisySP
 
 USE_DAISYSP_LGPL = 1
 
