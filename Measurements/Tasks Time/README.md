@@ -1,4 +1,3 @@
-# DSP Profiling Report - PlantSynth
 
 ## 1. System Architecture & Limits
 * **Hardware:** STM32 (Daisy Seed) running at 450 MHz.
