@@ -31,7 +31,8 @@ ControlsStruct audio_controls = {440.0f, false};
 TimerHandle enc_timer;
 TimerHandle plant_timer;
 
-volatile bool plant_update_param = false;
+// Riattivato il flag per eseguire la lettura fuori dall'interrupt
+volatile bool plant_update_param = false; 
 
 // Global accumulation variables to safely handle encoder data across interrupts
 volatile int32_t global_inc = 0;
@@ -51,6 +52,7 @@ void EncoderTimerCallback(void* data) {
 }
 
 void PlantTimerCallback(void* data) {
+    // Alza solo la bandierina! Nessuna operazione I2C nell'interrupt per evitare l'Hard Fault
     plant_update_param = true;
 }
 
@@ -112,7 +114,7 @@ int main() {
     // --- PLANT SENSOR TIMER INTERRUPT CONFIGURATION (200 Hz) ---
     TimerHandle::Config tim3_cfg;
     tim3_cfg.periph        = TimerHandle::Config::Peripheral::TIM_3;
-    auto tim3_target_freq  = 200;
+    auto tim3_target_freq  = 200; 
     auto tim3_period       = timer_base_freq / tim3_target_freq;
     tim3_cfg.period        = tim3_period - 1; // -1 because hardware registers are 0-indexed
     tim3_cfg.enable_irq    = true;
@@ -123,6 +125,16 @@ int main() {
     HAL_NVIC_SetPriority(TIM3_IRQn, 4, 0); // Lower priority to avoid interrupting audio
     plant_timer.Start();
     
+    // Inizializzazione DSP parametri UI
+    MenuManager::MenuData init_data = menu.GetData(); 
+    pc.setDelta(init_data.delta);
+    pc.setCurve(init_data.curve);
+    pc.setHisteresis(init_data.hysteresis);
+    pc.setOctave(init_data.octave);
+    pc.setScale((PlantConditioner::Notes)init_data.root, (PlantConditioner::ScaleType)init_data.scale);
+    pc.SetFilter((IIR::FilterType)init_data.filter_type);
+    synth.SetPreset((SynthPreset) init_data.preset);
+
     // --- 4. START AUDIO ENGINE ---
     hw.StartAudio(AudioCallback);
     uint32_t last = System::GetNow();
@@ -130,26 +142,49 @@ int main() {
     // ========================================================================
     // MAIN LOOP
     // ========================================================================
+    static uint32_t max_held_time = 0;
     while(1) {
         uint32_t now = System::GetNow();
-        // --- DFU ---
-        if (enc.TimeHeldMs() >= 4000) {
-            // Opzionale: Pulisce il display per dare un feedback visivo prima del riavvio
-            disp_handle.SetStandbyText("ENTERING DFU...");
-            disp_handle.SetState(DisplayState::STANDBY);
-            disp_handle.Update();
-            System::Delay(200); // Breve pausa per far refreshare lo schermo
+        
+        // --- CONTROLLO PRESSIONE LUNGA (REBOOT vs DFU) ---
+        if (enc.Pressed()) {
+            max_held_time = enc.TimeHeldMs();
             
-            // Riavvia il microcontrollore ed entra nel bootloader di sistema
-            daisy::System::ResetToBootloader();
+            if (max_held_time >= 4000) {
+                disp_handle.SetStandbyText("ENTERING DFU...");
+                disp_handle.SetState(DisplayState::STANDBY);
+                disp_handle.Update();
+                System::Delay(200);
+                daisy::System::ResetToBootloader();
+            } 
+            else if (max_held_time >= 2000) {
+                disp_handle.SetStandbyText("RELEASE=REBOOT");
+                disp_handle.SetState(DisplayState::STANDBY);
+                disp_handle.Update();
+                
+                __disable_irq();
+                global_clicked = false; 
+                __enable_irq();
+            }
+        } 
+        else {
+            if (max_held_time >= 2000 && max_held_time < 4000) {
+                disp_handle.SetStandbyText("REBOOTING...");
+                disp_handle.SetState(DisplayState::STANDBY);
+                disp_handle.Update();
+                System::Delay(200);
+                
+                NVIC_SystemReset(); 
+            }
+            max_held_time = 0; 
         }
+
         MenuManager::MenuData ui_data;
 
         // --- TASK 1: ATOMIC ENCODER READ ---
         int32_t local_inc = 0;
         bool local_clicked = false;
 
-        // Safe transfer of accumulated data from the background interrupt to the main loop
         __disable_irq();
         local_inc = global_inc;
         global_inc = 0;
@@ -157,7 +192,6 @@ int main() {
         global_clicked = false;
         __enable_irq();
 
-        // Process all accumulated encoder steps sequentially
         if (local_inc != 0 || local_clicked) {
             while (local_inc > 0) {
                 menu.StateTransition(false, 1, false);
@@ -170,33 +204,36 @@ int main() {
             if (local_clicked) {
                 menu.StateTransition(true, 0, false);
             }
-        }
 
-        // --- TASK 2: PLANT SENSING (200Hz) ---
-        if (plant_update_param) {
-            plant_update_param = false;
+            // EVENT-DRIVEN: Aggiorna DSP solo se cambi menu
             ui_data = menu.GetData(); 
             
-            // AGGIORNAMENTO PARAMETRI
+            __disable_irq(); 
             pc.setDelta(ui_data.delta);
             pc.setCurve(ui_data.curve);
             pc.setHisteresis(ui_data.hysteresis);
             pc.setOctave(ui_data.octave);
             synth.SetPreset((SynthPreset) ui_data.preset);
             pc.setScale((PlantConditioner::Notes)ui_data.root, (PlantConditioner::ScaleType)ui_data.scale);
-            
-            // CRUCIALE: Passiamo la selezione del filtro dall'interfaccia utente al DSP
             pc.SetFilter((IIR::FilterType)ui_data.filter_type);
+            __enable_irq();  
+        }
 
+        // --- TASK 2: PLANT SENSING (200Hz) ---
+        // Il calcolo avviene qui, al riparo dalle collisioni I2C!
+        if (plant_update_param) {
+            plant_update_param = false;
+            
             PlantConditioner::PlantState plant_data = pc.Process();
             audio_controls.freq = plant_data._freq;
             audio_controls.gate = plant_data._gate;
         }
 
-        // --- TASK 3: DISPLAY UPDATE (True 20Hz) ---
-        if (now - last >= 50) {
-            last = now; // Store time before the blocking operation to maintain precise framerate
-            ui_data = menu.GetData(); // Fetch UI data again right before drawing
+        // --- TASK 3: DISPLAY UPDATE (10Hz) ---
+        // Portato da 50 a 100 ms per liberare risorse all'I2C dell'MPR121
+        if (now - last >= 200) {
+            last = now; 
+            ui_data = menu.GetData(); 
 
             if (ui_data.state == MenuManager::PLAYMODE) {
                 disp_handle.SetState(DisplayState::WAVEFORM_VIEWER);
@@ -218,7 +255,7 @@ int main() {
                         if (ui_data.cursor_state == MenuManager::DELTA) cursor_idx = 0;
                         else if (ui_data.cursor_state == MenuManager::CURVE) cursor_idx = 1;
                         else if (ui_data.cursor_state == MenuManager::HYSTERESIS) cursor_idx = 2;
-                        else if (ui_data.cursor_state == MenuManager::FILTER_TYPE) cursor_idx = 3; // Aggiornato
+                        else if (ui_data.cursor_state == MenuManager::FILTER_TYPE) cursor_idx = 3; 
                         else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 4;
                         disp_handle.DrawCalibrationHub(cursor_idx);
                         break;
