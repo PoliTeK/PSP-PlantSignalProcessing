@@ -230,7 +230,7 @@ int main() {
                     case MenuManager::HYSTERESIS:
                         disp_handle.DrawIntParameter("HYSTERESIS", ui_data.hysteresis);
                         break;
-                    case MenuManager::FILTER_TYPE: // Aggiornato
+                    case MenuManager::FILTER_TYPE: 
                         disp_handle.DrawIntParameter("FILTER TYPE", ui_data.filter_type);
                         break;
                     case MenuManager::ROOT:
