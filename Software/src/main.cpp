@@ -1,3 +1,6 @@
+// ============================================================================
+// INCLUDES & NAMESPACES
+// ============================================================================
 #include "../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h"
 #include "../libs/PoliTeKDSP/libs/DaisySP/Source/daisysp.h"
 #include "../libs/PoliTeKDSP/libs/libDaisy/src/hid/encoder.h"
@@ -8,6 +11,9 @@
 
 using namespace daisy;
 
+// ============================================================================
+// GLOBAL OBJECTS
+// ============================================================================
 DaisySeed      hw;
 Encoder        enc;
 MenuManager    menu;
@@ -17,81 +23,163 @@ DisplayHandler disp_handle(&disp);
 PlantConditioner pc;
 AudioEngine      synth;
 
+// ============================================================================
+// GLOBAL VARIABLES & FLAGS
+// ============================================================================
 ControlsStruct audio_controls = {440.0f, false};
 
+TimerHandle enc_timer;
+TimerHandle plant_timer;
+
+volatile bool update_param = false;
+
+// Global accumulation variables to safely handle encoder data across interrupts
+volatile int32_t global_inc = 0;
+volatile bool global_clicked = false;
+
+// ============================================================================
+// INTERRUPT SERVICE ROUTINES AND AUDIO CALLBACK
+// ============================================================================
+
+void EncoderTimerCallback(void* data) {
+    enc.Debounce(); 
+    // Safely accumulate encoder increments inside the hardware interrupt
+    global_inc += enc.Increment(); 
+    if (enc.RisingEdge()) {
+        global_clicked = true;
+    }
+}
+
+void PlantTimerCallback(void* data) {
+    update_param = true;
+}
+
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size) {
-    // 1. Aggiorna il synth con i parametri calcolati nel main
     synth.Update(audio_controls);
 
     for (size_t i = 0; i < size; i++) {
         float sig = synth.Process();
-        
-        // Passa il campione per la visualizzazione dell'onda
         disp_handle.pushAudioSample(sig);
-
         out[0][i] = out[1][i] = sig;
     }
 }
 
+// ============================================================================
+// MAIN FUNCTION
+// ============================================================================
 int main() {
+    
+    // --- 0. HARDWARE & PERIPHERAL INITIALIZATION ---
     hw.Init();
 
-    // Inizializzazione fisica encoder (Pin 13, 14, 10)
-    enc.Init(hw.GetPin(13), hw.GetPin(14), hw.GetPin(10));
+    enc.Init(hw.GetPin(14), hw.GetPin(13), hw.GetPin(10));
     menu.Init();
 
-    // Inizializzazione Display
     MyOledDisplay::Config disp_cfg;
     disp.Init(disp_cfg);
+
     disp_handle.SetYscale(100);
     disp_handle.SetState(DisplayState::WAVEFORM_VIEWER);
 
-    // Inizializzazione Moduli DSP
+    // --- 1. PLANT ACQUISITON SYSTEM INITIALIZATION ---
     pc.Init(IIR::FilterType::Butterworth, &hw);
+
+    // --- 2. DSP INITIALIZATION ---
     synth.Init(hw.AudioSampleRate());
     synth.SetPreset(PRESET_LEAD);
 
+    // --- 3. TIMERS CONFIGURATION ---
+    // Timer Prescaler Calculation: scale core clock down to 1 MHz (1 tick = 1 us)
+    auto pclk_freq = daisy::System::GetPClk2Freq();
+    uint32_t prescaler_val = (pclk_freq / 1000000) - 1;
+    auto timer_base_freq = 1000000;
+
+    // --- ENCODER TIMER INTERRUPT CONFIGURATION (1000 Hz) ---
+    TimerHandle::Config tim5_cfg;
+    tim5_cfg.periph        = TimerHandle::Config::Peripheral::TIM_5;
+    auto tim5_target_freq  = 1000;
+    auto tim5_period       = timer_base_freq / tim5_target_freq;
+    tim5_cfg.period        = tim5_period - 1; // -1 because hardware registers are 0-indexed
+    tim5_cfg.enable_irq    = true;
+    
+    enc_timer.Init(tim5_cfg);
+    enc_timer.SetPrescaler(prescaler_val); // Apply the prescaler
+    enc_timer.SetCallback(EncoderTimerCallback);
+    HAL_NVIC_SetPriority(TIM5_IRQn, 4, 0); // Lower priority to avoid interrupting audio
+    enc_timer.Start();
+
+    // --- PLANT SENSOR TIMER INTERRUPT CONFIGURATION (200 Hz) ---
+    TimerHandle::Config tim3_cfg;
+    tim3_cfg.periph        = TimerHandle::Config::Peripheral::TIM_3;
+    auto tim3_target_freq  = 200;
+    auto tim3_period       = timer_base_freq / tim3_target_freq;
+    tim3_cfg.period        = tim3_period - 1; // -1 because hardware registers are 0-indexed
+    tim3_cfg.enable_irq    = true;
+    
+    plant_timer.Init(tim3_cfg);
+    plant_timer.SetPrescaler(prescaler_val); // Apply the prescaler
+    plant_timer.SetCallback(PlantTimerCallback);
+    HAL_NVIC_SetPriority(TIM3_IRQn, 4, 0); // Lower priority to avoid interrupting audio
+    plant_timer.Start();
+    
+    // --- 4. START AUDIO ENGINE ---
     hw.StartAudio(AudioCallback);
+    uint32_t last = System::GetNow();
 
-    uint32_t last_enc_poll = System::GetNow();
-    uint32_t disp_cnt = 0;
-
+    // ========================================================================
+    // MAIN LOOP
+    // ========================================================================
     while(1) {
         uint32_t now = System::GetNow();
+        MenuManager::MenuData ui_data;
 
-        // --- 1. CAMPIONAMENTO ENCODER ---
-        if(now >= last_enc_poll + 1) {
-            last_enc_poll = now; 
-            
-            enc.Debounce();
-            int32_t inc = enc.Increment();
-            bool clicked = enc.RisingEdge();
+        // --- TASK 1: ATOMIC ENCODER READ ---
+        int32_t local_inc = 0;
+        bool local_clicked = false;
 
-            if(inc != 0 || clicked) {
-                menu.StateTransition(clicked, inc, false);
+        // Safe transfer of accumulated data from the background interrupt to the main loop
+        __disable_irq();
+        local_inc = global_inc;
+        global_inc = 0;
+        local_clicked = global_clicked;
+        global_clicked = false;
+        __enable_irq();
+
+        // Process all accumulated encoder steps sequentially
+        if (local_inc != 0 || local_clicked) {
+            while (local_inc > 0) {
+                menu.StateTransition(false, 1, false);
+                local_inc--;
             }
-            
-            disp_cnt++;
+            while (local_inc < 0) {
+                menu.StateTransition(false, -1, false);
+                local_inc++;
+            }
+            if (local_clicked) {
+                menu.StateTransition(true, 0, false);
+            }
         }
 
-        // --- 2. AGGIORNAMENTO LOGICA E PARAMETRI ---
-        MenuManager::MenuData ui_data = menu.GetData();
+        // --- TASK 2: LOGIC AND PARAMETERS UPDATE (200Hz) ---
+        if (update_param) {
+            update_param = false;
+            ui_data = menu.GetData(); 
+            
+            pc.setDelta(ui_data.delta);
+            pc.setCurve(ui_data.curve);
+            pc.setOctave(ui_data.octave);
+            synth.SetPreset((SynthPreset) ui_data.preset);
+            pc.setScale((PlantConditioner::Notes)ui_data.root, (PlantConditioner::ScaleType)ui_data.scale);
+            
+            PlantConditioner::PlantState plant_data = pc.Process();
+            audio_controls.freq = plant_data._freq;
+            audio_controls.gate = plant_data._gate;
+        }
 
-        // Sincronizza i parametri dal Menu alle classi DSP
-        pc.setDelta(ui_data.delta);
-        pc.setCurve(ui_data.curve);
-        pc.setOctave(ui_data.octave);
-        synth.SetPreset((SynthPreset) ui_data.preset);
-        pc.setScale((PlantConditioner::Notes)ui_data.root, (PlantConditioner::ScaleType)ui_data.scale);
-
-        // Calcolo della frequenza dalla pianta
-        PlantConditioner::PlantState plant_data = pc.Process();
-        audio_controls.freq = plant_data._freq;
-        audio_controls.gate = plant_data._gate;
-
-        // --- 3. AGGIORNAMENTO DISPLAY (Ogni 50 cicli = 50ms) ---
-        if (disp_cnt >= 60) {
-            disp_cnt = 0;
+        // --- TASK 3: DISPLAY UPDATE (True 20Hz) ---
+        if (now - last >= 50) {
+            last = now; // Store time before the blocking operation to maintain precise framerate
+            ui_data = menu.GetData(); // Fetch UI data again right before drawing
 
             if (ui_data.state == MenuManager::PLAYMODE) {
                 disp_handle.SetState(DisplayState::WAVEFORM_VIEWER);
@@ -143,8 +231,9 @@ int main() {
                     case MenuManager::OCTAVE:
                         disp_handle.DrawIntParameter("OCTAVE", ui_data.octave);
                         break;
+                        
                     case MenuManager::PRESETS_HUB:
-                    disp_handle.DrawIntParameter("PRESET", ui_data.preset);
+                        disp_handle.DrawIntParameter("PRESET", ui_data.preset);
                         break;
 
                     default:
@@ -152,11 +241,8 @@ int main() {
                 }
             } 
             
-            // Operazione bloccante I2C
+            // Blocking I2C operation
             disp_handle.Update(); 
-            
-            // Reset fondamentale del tempo per evitare "salti" dell'encoder dopo l'update
-            last_enc_poll = System::GetNow();
         }
     }
 }
