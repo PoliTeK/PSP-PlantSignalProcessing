@@ -1,9 +1,8 @@
-#include "displayHandler.h" // Usa .hpp per coerenza con il tuo header
+#include "displayHandler.h"
 #include <string.h>
 #include <stdio.h>
 
 DisplayHandler::DisplayHandler(MyOledDisplay* displayPtr, bool triggerEnabled) {
-    // Pulizia sicura di entrambi i buffer
     memset((void*) _circBuffer_ptr, 0, BUFFER_SIZE * sizeof(float));
     memset((void*) _dispBuffer_ptr, 0, BUFFER_SIZE * sizeof(float));
     
@@ -13,6 +12,7 @@ DisplayHandler::DisplayHandler(MyOledDisplay* displayPtr, bool triggerEnabled) {
     _displayPtr = displayPtr;
     _currentState = DisplayState::WAVEFORM_VIEWER;
     _standbyText = "PoliTeK PSP";
+    _yscale = 20; // Default di sicurezza
 }
 
 void DisplayHandler::Update() {
@@ -26,13 +26,9 @@ void DisplayHandler::Update() {
             break;
 
         case DisplayState::MENU_MODE:
-            // In MENU_MODE il disegno effettivo viene fatto chiamando
-            // esplicitamente DrawMainMenu(), DrawFloatParameter(), ecc.
-            // Qui non facciamo nulla prima dell'aggiornamento hardware.
             break;
     }
     
-    // Spinge fisicamente i pixel sullo schermo I2C/SPI
     _displayPtr->Update();
 }
 
@@ -86,9 +82,6 @@ void DisplayHandler::drawWaveForm() {
 
     idx = findTrigger();
     
-    // Copia opzionale nel buffer stabile se vuoi evitare glitch durante il disegno
-    // memcpy(_dispBuffer_ptr, _circBuffer_ptr, BUFFER_SIZE * sizeof(float));
-    
     for (int i = idx; i < idx + _windowSize; i++) {
         y1 = zeroOfScreen - (int)(_circBuffer_ptr[i % BUFFER_SIZE] * _yscale);
         y2 = zeroOfScreen - (int)(_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
@@ -100,21 +93,20 @@ void DisplayHandler::drawWaveForm() {
 
         _displayPtr->DrawLine(i - idx, y1, (i + 1) - idx, y2, true);
     }   
-
-
 }
 
 void DisplayHandler::SetYscale(int yscale){
     _yscale=yscale;
 }
 
-// LONG FUNCTION AHEAD -> prints test logo atm
 void DisplayHandler::drawStandbyScreen(){
-  _displayPtr->SetCursor(0,0);
-        _displayPtr->WriteString(_standbyText, Font_11x18, true);
+    _displayPtr->SetCursor(0,0);
+    _displayPtr->WriteString(_standbyText, Font_11x18, true);
 }
 
-// --- METODI PUBBLICI PER IL MENU ---
+// ============================================================================
+// METODI PUBBLICI PER IL MENU (SPAZIATURA OTTIMIZZATA PER 64PX)
+// ============================================================================
 
 void DisplayHandler::DrawMainMenu(int cursorIndex) {
     _displayPtr->Fill(false);
@@ -122,13 +114,12 @@ void DisplayHandler::DrawMainMenu(int cursorIndex) {
     _displayPtr->SetCursor(0, 0);
     _displayPtr->WriteString("- MAIN MENU -", Font_7x10, true);
 
-    _displayPtr->SetCursor(10, 15); _displayPtr->WriteString("Calibration", Font_7x10, true);
-    _displayPtr->SetCursor(10, 27); _displayPtr->WriteString("Scales", Font_7x10, true);
-    _displayPtr->SetCursor(10, 39); _displayPtr->WriteString("Presets", Font_7x10, true);
-    _displayPtr->SetCursor(10, 51); _displayPtr->WriteString("Exit", Font_7x10, true);
+    _displayPtr->SetCursor(10, 13); _displayPtr->WriteString("Calibration", Font_7x10, true);
+    _displayPtr->SetCursor(10, 23); _displayPtr->WriteString("Scales", Font_7x10, true);
+    _displayPtr->SetCursor(10, 33); _displayPtr->WriteString("Presets", Font_7x10, true);
+    _displayPtr->SetCursor(10, 43); _displayPtr->WriteString("Exit", Font_7x10, true);
 
-    // Disegna il cursore (spaziatura di 12 pixel sull'asse Y)
-    int cursorY = 15 + (cursorIndex * 12);
+    int cursorY = 13 + (cursorIndex * 10);
     _displayPtr->SetCursor(0, cursorY);
     _displayPtr->WriteString(">", Font_7x10, true);
 }
@@ -139,14 +130,13 @@ void DisplayHandler::DrawCalibrationHub(int cursorIndex) {
     _displayPtr->SetCursor(0, 0);
     _displayPtr->WriteString("- CALIBRATION -", Font_7x10, true);
 
-    _displayPtr->SetCursor(10, 15); _displayPtr->WriteString("Delta", Font_7x10, true);
-    _displayPtr->SetCursor(10, 27); _displayPtr->WriteString("Curve", Font_7x10, true);
-    _displayPtr->SetCursor(10, 39); _displayPtr->WriteString("Hysteresis", Font_7x10, true);
-    _displayPtr->SetCursor(10, 51); _displayPtr->WriteString("Filter order", Font_7x10, true); // Coordinata corretta
-    _displayPtr->SetCursor(10, 51); _displayPtr->WriteString("Back", Font_7x10, true); // Coordinata corretta
+    _displayPtr->SetCursor(10, 13); _displayPtr->WriteString("Delta", Font_7x10, true);
+    _displayPtr->SetCursor(10, 23); _displayPtr->WriteString("Curve", Font_7x10, true);
+    _displayPtr->SetCursor(10, 33); _displayPtr->WriteString("Hysteresis", Font_7x10, true);
+    _displayPtr->SetCursor(10, 43); _displayPtr->WriteString("Filter Type", Font_7x10, true); 
+    _displayPtr->SetCursor(10, 53); _displayPtr->WriteString("Back", Font_7x10, true); 
 
-    // Il moltiplicatore 12 va bene, ora copre fino a 51
-    int cursorY = 15 + (cursorIndex * 12);
+    int cursorY = 13 + (cursorIndex * 10);
     _displayPtr->SetCursor(0, cursorY);
     _displayPtr->WriteString(">", Font_7x10, true);
 }
@@ -157,12 +147,12 @@ void DisplayHandler::DrawScalesHub(int cursorIndex) {
     _displayPtr->SetCursor(0, 0);
     _displayPtr->WriteString("- SCALES -", Font_7x10, true);
 
-    _displayPtr->SetCursor(10, 15); _displayPtr->WriteString("Root Note", Font_7x10, true);
-    _displayPtr->SetCursor(10, 27); _displayPtr->WriteString("Scale Type", Font_7x10, true);
-    _displayPtr->SetCursor(10, 39); _displayPtr->WriteString("Octave", Font_7x10, true);
-    _displayPtr->SetCursor(10, 51); _displayPtr->WriteString("Back", Font_7x10, true);
+    _displayPtr->SetCursor(10, 13); _displayPtr->WriteString("Root Note", Font_7x10, true);
+    _displayPtr->SetCursor(10, 23); _displayPtr->WriteString("Scale Type", Font_7x10, true);
+    _displayPtr->SetCursor(10, 33); _displayPtr->WriteString("Octave", Font_7x10, true);
+    _displayPtr->SetCursor(10, 43); _displayPtr->WriteString("Back", Font_7x10, true);
 
-    int cursorY = 15 + (cursorIndex * 12);
+    int cursorY = 13 + (cursorIndex * 10);
     _displayPtr->SetCursor(0, cursorY);
     _displayPtr->WriteString(">", Font_7x10, true);
 }
@@ -170,23 +160,19 @@ void DisplayHandler::DrawScalesHub(int cursorIndex) {
 void DisplayHandler::DrawFloatParameter(const char* paramName, float value) {
     _displayPtr->Fill(false);
     
-    // Titolo piccolo
     _displayPtr->SetCursor(0, 0);
     _displayPtr->WriteString("EDIT:", Font_7x10, true);
     
-    // Nome parametro medio
     _displayPtr->SetCursor(0, 12);
     _displayPtr->WriteString(paramName, Font_11x18, true);
 
-    // Estrazione manuale (già corretta la tua, la rendiamo solo più robusta)
     int intPart = (int)value;
-    int decPart = (int)((value - (float)intPart) * 100.0f); // Due decimali
+    int decPart = (int)((value - (float)intPart) * 100.0f);
     if (decPart < 0) decPart = -decPart;
 
     char valBuffer[16];
-    sprintf(valBuffer, "%d.%02d", intPart, decPart); // %02d aggiunge lo zero (es: 5.05 invece di 5.5)
+    sprintf(valBuffer, "%d.%02d", intPart, decPart);
     
-    // Valore centrale - alzato un po' per sicurezza
     _displayPtr->SetCursor(0, 35); 
     _displayPtr->WriteString(valBuffer, Font_11x18, true); 
 }
@@ -202,7 +188,6 @@ void DisplayHandler::DrawIntParameter(const char* paramName, int value) {
 
     char valBuffer[16];
 
-    // Utilizziamo array statici per non sovraccaricare lo stack ad ogni chiamata
     if (strcmp(paramName, "ROOT") == 0) {
         static const char* notes[] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
         sprintf(valBuffer, "%s", notes[value % 12]);
@@ -216,13 +201,13 @@ void DisplayHandler::DrawIntParameter(const char* paramName, int value) {
         sprintf(valBuffer, "%s", presets[value % 3]);
     }
     else if (strcmp(paramName, "HYSTERESIS") == 0) {
-        // Se nel menu l'isteresi parte da 0, visualizzare +1 la rende più "umana" (1-21)
         sprintf(valBuffer, "%d %%", value); 
-    } else if (strcmp(paramName, "FILTER ORDER") == 0) { 
-        // Traduzione estetica: "2" -> "2nd", "4" -> "4th"
-        sprintf(valBuffer, "%dnd order", value); 
-        if(value == 4) sprintf(valBuffer, "%dth order", value);
-    }else {
+    }
+    else if (strcmp(paramName, "FILTER TYPE") == 0) { 
+        static const char* filters[] = {"Btrwth 2nd", "Btrwth 4th", "Bessel 2nd", "Bessel 4th"};
+        sprintf(valBuffer, "%s", filters[value % 4]);
+    }
+    else {
         sprintf(valBuffer, "%d", value);
     }
     

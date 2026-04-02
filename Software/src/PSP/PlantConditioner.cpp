@@ -6,6 +6,8 @@ using namespace daisysp;
 PlantConditioner::PlantConditioner() {}
 PlantConditioner::~PlantConditioner() {}
 
+
+
 void PlantConditioner::Init(IIR::FilterType filter_type, daisy::DaisySeed* hw) {
     
     _hw = hw;
@@ -21,9 +23,10 @@ void PlantConditioner::Init(IIR::FilterType filter_type, daisy::DaisySeed* hw) {
     _hw->SetLed(true);
 
 
-    _filterOrder2.Init(IIR::FilterType::Butterworth, 2); 
-    _filterOrder4.Init(IIR::FilterType::Butterworth, 4); 
-    _currentOrder = 2;
+    _Butterworth2.Init(IIR::FilterType::BUTTERWORTH2); 
+    _Butterworth4.Init(IIR::FilterType::BUTTERWORTH4); 
+    _Bessel2.Init(IIR::FilterType::BESSEL2);
+    _Bessel4.Init(IIR::FilterType::BESSEL4);
     _deltaFilterMF.Init();
     _delta = 0;
     _deltaFilt = 0;
@@ -32,12 +35,8 @@ void PlantConditioner::Init(IIR::FilterType filter_type, daisy::DaisySeed* hw) {
     _lastNoteIndex = -1; // Reset indice nota
 }
 
-void PlantConditioner::SetFilterOrder(uint8_t order) {
-    if (order == 2 || order == 4) {
-        _currentOrder = order;
-    } else {
-        _currentOrder = order > 2 ? 4 : 2; 
-    }
+void PlantConditioner::SetFilter(IIR::FilterType filter_type) {
+    _currentFilter = filter_type;
 }
 
 void PlantConditioner::setScale(enum Notes root_note, enum ScaleType scale_type) {
@@ -98,15 +97,32 @@ PlantConditioner::PlantState PlantConditioner::Process() {
     if (_cap.Touched() & _BV(0))
     {
         if (!_isTouched) _isTouched = true; // New touch detected
-        
-        // Computation of filtered and clamped delta
-        _delta = _cap.BaselineData(0) - _cap.FilteredData(0) - (float)_touchThreshold;
-        if(_currentOrder == 4){
-            _deltaFilt = _filterOrder4.Process(_deltaFilterMF.Process(_delta));
-        } else {
-            _deltaFilt = _filterOrder2.Process(_deltaFilterMF.Process(_delta));
+        // 1. Calcolo Delta grezzo (Baseline - Filtered - Offset)
+        _delta = (float)_cap.BaselineData(0) - (float)_cap.FilteredData(0) - (float)_touchThreshold;
+        // 2. Pre-filtraggio Mediano (rimozione spike elettromagnetici)
+        float mf_out = _deltaFilterMF.Process(_delta);
+        // 3. Selezione dinamica del filtro IIR in base all'ordine/tipo scelto
+        // Nota: Uso i nomi delle istanze definiti nel tuo ultimo header
+        switch (_currentFilter) {
+            case IIR::BUTTERWORTH2:
+                _deltaFilt = _Butterworth2.Process(mf_out);
+                break;
+            case IIR::BUTTERWORTH4:
+                _deltaFilt = _Butterworth4.Process(mf_out);
+                break;
+            case IIR::BESSEL2:
+                _deltaFilt = _Bessel2.Process(mf_out);
+                break;
+            case IIR::BESSEL4:
+                _deltaFilt = _Bessel4.Process(mf_out);
+                break;
+            default:
+                _deltaFilt = _Butterworth2.Process(mf_out);
+                break;
         }
-        _deltaFilt = fclamp(_deltaFilt, _deltaMin, _deltaMax - 0.001f);
+
+// 4. Clamping finale per evitare che il valore esca dai limiti delle soglie note
+_deltaFilt = fclamp(_deltaFilt, _deltaMin, _deltaMax - 0.001f);
         
         // ---------------------------------------------------------
         // STICKY CHECK (Current Note has the priority)

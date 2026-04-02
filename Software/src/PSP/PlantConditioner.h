@@ -50,7 +50,7 @@ public:
         * Sets the order of the IIR filter used for processing the plant signal. Higher orders provide more aggressive filtering but may introduce more latency.
             * @param order The desired filter order (e.g., 2 or 4). Must be supported by the implementation.
     */
-    void SetFilterOrder(uint8_t order);
+    void SetFilter(IIR::FilterType filter_type);
 
     /*
         * Sets the curve type for mapping the plant signal to musical notes.
@@ -111,10 +111,13 @@ private:
     const uint8_t            _touchThreshold = MPR121_TOUCH_THRESHOLD_DEFAULT;
     
     // --- DSP Filters ---
-    IIR _filterOrder2;
-    IIR _filterOrder4;
-    int _currentOrder; // 2 o 4
+    IIR _Butterworth2;
+    IIR _Butterworth4;
+    IIR _Bessel2;
+    IIR _Bessel4;
     MF  _deltaFilterMF;
+
+    IIR::FilterType _currentFilter;
 
     // --- State Variables and Logic ---
     bool  _isTouched     = false; // Previous touch state

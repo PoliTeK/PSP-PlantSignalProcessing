@@ -36,10 +36,10 @@ int main() {
     hw.SetAudioBlockSize(16);
 
     // Inizializzazione PlantConditioner
-    pc.Init(IIR::Butterworth, &hw);
+    pc.Init(IIR::BUTTERWORTH2, &hw);
     pc.setDelta(50.0f);
     pc.setCurve(1.0f);
-    pc.setScale(PlantConditioner::G, PlantConditioner::Major);
+    pc.setScale(PlantConditioner::, PlantConditioner::Major);
     pc.setOctave(4);
 
     // Inizializzazione AudioEngine

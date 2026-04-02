@@ -82,7 +82,8 @@ int main() {
     disp_handle.SetState(DisplayState::WAVEFORM_VIEWER);
 
     // --- 1. PLANT ACQUISITON SYSTEM INITIALIZATION ---
-    pc.Init(IIR::FilterType::Butterworth, &hw);
+    // Inizializza con il primo filtro dell'enum come default
+    pc.Init(IIR::BUTTERWORTH2, &hw);
 
     // --- 2. DSP INITIALIZATION ---
     synth.Init(hw.AudioSampleRate());
@@ -164,12 +165,17 @@ int main() {
         if (plant_update_param) {
             plant_update_param = false;
             ui_data = menu.GetData(); 
+            
+            // AGGIORNAMENTO PARAMETRI
             pc.setDelta(ui_data.delta);
             pc.setCurve(ui_data.curve);
             pc.setHisteresis(ui_data.hysteresis);
             pc.setOctave(ui_data.octave);
             synth.SetPreset((SynthPreset) ui_data.preset);
             pc.setScale((PlantConditioner::Notes)ui_data.root, (PlantConditioner::ScaleType)ui_data.scale);
+            
+            // CRUCIALE: Passiamo la selezione del filtro dall'interfaccia utente al DSP
+            pc.SetFilter((IIR::FilterType)ui_data.filter_type);
 
             PlantConditioner::PlantState plant_data = pc.Process();
             audio_controls.freq = plant_data._freq;
@@ -201,7 +207,7 @@ int main() {
                         if (ui_data.cursor_state == MenuManager::DELTA) cursor_idx = 0;
                         else if (ui_data.cursor_state == MenuManager::CURVE) cursor_idx = 1;
                         else if (ui_data.cursor_state == MenuManager::HYSTERESIS) cursor_idx = 2;
-                        else if (ui_data.cursor_state == MenuManager::FILTER_ORDER) cursor_idx = 3; 
+                        else if (ui_data.cursor_state == MenuManager::FILTER_TYPE) cursor_idx = 3; // Aggiornato
                         else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 4;
                         disp_handle.DrawCalibrationHub(cursor_idx);
                         break;
@@ -224,8 +230,8 @@ int main() {
                     case MenuManager::HYSTERESIS:
                         disp_handle.DrawIntParameter("HYSTERESIS", ui_data.hysteresis);
                         break;
-                    case MenuManager::FILTER_ORDER:
-                        disp_handle.DrawIntParameter("FILTER ORDER", ui_data.filter_order);
+                    case MenuManager::FILTER_TYPE: // Aggiornato
+                        disp_handle.DrawIntParameter("FILTER TYPE", ui_data.filter_type);
                         break;
                     case MenuManager::ROOT:
                         disp_handle.DrawIntParameter("ROOT", ui_data.root);

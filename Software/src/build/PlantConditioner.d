@@ -106,6 +106,7 @@ build/PlantConditioner.o: PSP/PlantConditioner.cpp \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
  PSP/PlantConditioner.h \
  PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h \
+ PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/daisysp.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adenv.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h \
@@ -278,8 +279,7 @@ build/PlantConditioner.o: PSP/PlantConditioner.cpp \
  ../libs/PoliTeKDSP/libs/libDaisy/src/util/WavParser.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/util/WavPlayer.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h \
- ../libs/PoliTeKDSP/libs/libDaisy/src/util/WavWriter.h \
- PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h
+ ../libs/PoliTeKDSP/libs/libDaisy/src/util/WavWriter.h
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -387,6 +387,7 @@ build/PlantConditioner.o: PSP/PlantConditioner.cpp \
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
 PSP/PlantConditioner.h:
 PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h:
+PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/daisysp.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adenv.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h:
@@ -560,4 +561,3 @@ PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/util/WavPlayer.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/util/WavWriter.h:
-PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h:
