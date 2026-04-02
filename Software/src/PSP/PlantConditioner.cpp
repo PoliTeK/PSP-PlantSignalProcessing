@@ -21,8 +21,8 @@ void PlantConditioner::Init(IIR::FilterType filter_type, daisy::DaisySeed* hw) {
     _hw->SetLed(true);
 
 
-    _filterOrder2.Init(IIR::FilterType::Butterworth, 200.0f, 2); 
-    _filterOrder4.Init(IIR::FilterType::Butterworth, 200.0f, 4); 
+    _filterOrder2.Init(IIR::FilterType::Butterworth, 2); 
+    _filterOrder4.Init(IIR::FilterType::Butterworth, 4); 
     _currentOrder = 2;
     _deltaFilterMF.Init();
     _delta = 0;
