@@ -132,6 +132,17 @@ int main() {
     // ========================================================================
     while(1) {
         uint32_t now = System::GetNow();
+        // --- DFU ---
+        if (enc.TimeHeldMs() >= 4000) {
+            // Opzionale: Pulisce il display per dare un feedback visivo prima del riavvio
+            disp_handle.SetStandbyText("ENTERING DFU...");
+            disp_handle.SetState(DisplayState::STANDBY);
+            disp_handle.Update();
+            System::Delay(200); // Breve pausa per far refreshare lo schermo
+            
+            // Riavvia il microcontrollore ed entra nel bootloader di sistema
+            daisy::System::ResetToBootloader();
+        }
         MenuManager::MenuData ui_data;
 
         // --- TASK 1: ATOMIC ENCODER READ ---
