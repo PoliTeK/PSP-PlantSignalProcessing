@@ -75,11 +75,13 @@ void PlantConditioner::setScale(enum Notes root_note, enum ScaleType scale_type)
     for (int i = 0; i < _scaleLength; i++) {
         _scale[i] = _scale[i] * transposition; 
     }
+    _lastNoteIndex = -1;
     updateThresholds();
 }
 
 void PlantConditioner::setOctave(uint8_t octave) {
     _octave = octave;
+    _lastNoteIndex = -1;
 }
 
 PlantConditioner::PlantState PlantConditioner::Process() {

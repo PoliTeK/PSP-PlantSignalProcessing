@@ -31,7 +31,7 @@ ControlsStruct audio_controls = {440.0f, false};
 TimerHandle enc_timer;
 TimerHandle plant_timer;
 
-volatile bool update_param = false;
+volatile bool plant_update_param = false;
 
 // Global accumulation variables to safely handle encoder data across interrupts
 volatile int32_t global_inc = 0;
@@ -51,7 +51,7 @@ void EncoderTimerCallback(void* data) {
 }
 
 void PlantTimerCallback(void* data) {
-    update_param = true;
+    plant_update_param = true;
 }
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size) {
@@ -160,11 +160,10 @@ int main() {
             }
         }
 
-        // --- TASK 2: LOGIC AND PARAMETERS UPDATE (200Hz) ---
-        if (update_param) {
-            update_param = false;
+        // --- TASK 2: PLANT SENSING (200Hz) ---
+        if (plant_update_param) {
+            plant_update_param = false;
             ui_data = menu.GetData(); 
-            
             pc.setDelta(ui_data.delta);
             pc.setCurve(ui_data.curve);
             pc.setOctave(ui_data.octave);
