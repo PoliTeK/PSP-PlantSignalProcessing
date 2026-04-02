@@ -15,6 +15,7 @@ public:
         // Foglie: Parametri Calibrazione
         CURVE,
         DELTA,
+        HYSTERESIS,
 
         // Foglie: Parametri Scale
         ROOT,
@@ -31,6 +32,7 @@ public:
         float delta;
         float curve;
         int root;       // Es: 0 = C, 1 = C#...
+        int hysteresis; // Nuovo parametro per l'isteresi, in percentuale del range totale
         int scale;      // Es: 0 = Major, 1 = Minor...
         int octave;          // Es: 1, 2, 3, 4
         int preset;    // Indice per il synth

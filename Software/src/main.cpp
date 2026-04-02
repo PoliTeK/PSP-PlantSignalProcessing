@@ -166,10 +166,11 @@ int main() {
             ui_data = menu.GetData(); 
             pc.setDelta(ui_data.delta);
             pc.setCurve(ui_data.curve);
+            pc.setHisteresis(ui_data.hysteresis);
             pc.setOctave(ui_data.octave);
             synth.SetPreset((SynthPreset) ui_data.preset);
             pc.setScale((PlantConditioner::Notes)ui_data.root, (PlantConditioner::ScaleType)ui_data.scale);
-            
+
             PlantConditioner::PlantState plant_data = pc.Process();
             audio_controls.freq = plant_data._freq;
             audio_controls.gate = plant_data._gate;
@@ -199,7 +200,8 @@ int main() {
                     case MenuManager::CALIBRATION_HUB:
                         if (ui_data.cursor_state == MenuManager::DELTA) cursor_idx = 0;
                         else if (ui_data.cursor_state == MenuManager::CURVE) cursor_idx = 1;
-                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 2;
+                        else if (ui_data.cursor_state == MenuManager::HYSTERESIS) cursor_idx = 2;
+                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 3;
                         disp_handle.DrawCalibrationHub(cursor_idx);
                         break;
 
@@ -217,6 +219,9 @@ int main() {
                     
                     case MenuManager::CURVE:
                         disp_handle.DrawFloatParameter("CURVE", ui_data.curve);
+                        break;
+                    case MenuManager::HYSTERESIS:
+                        disp_handle.DrawIntParameter("HYSTERESIS", ui_data.hysteresis);
                         break;
 
                     case MenuManager::ROOT:

@@ -8,6 +8,7 @@ void MenuManager::Init() {
     _outData.curve = 1.0f;
     _outData.root = 0;
     _outData.scale = 0;
+    _outData.hysteresis = 0.0f;
     _outData.octave = 4;
     _outData.preset = 0;
 
@@ -62,6 +63,11 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
                 if (_outData.curve > 2.0f) _outData.curve = 2.0f;
                 break;
+            case HYSTERESIS:
+                _outData.hysteresis += (current_rotation * 1.0f);
+                if (_outData.hysteresis < 0.0f) _outData.hysteresis = 0.0f;
+                if (_outData.hysteresis > 20.0f) _outData.hysteresis = 20.0f;
+                break;
 
             case ROOT:
                 _outData.root += current_rotation;
@@ -111,13 +117,17 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
 
             case CALIBRATION_HUB:
                 if (current_rotation > 0) {
-                    if (_next_state == DELTA) _next_state = CURVE;
-                    else if (_next_state == CURVE) _next_state = BACK;
-                    else if (_next_state == BACK) _next_state = DELTA;
+                    // Rotazione Oraria (Avanti)
+                    if (_next_state == DELTA)           _next_state = CURVE;
+                    else if (_next_state == CURVE)      _next_state = HYSTERESIS;
+                    else if (_next_state == HYSTERESIS) _next_state = BACK;
+                    else if (_next_state == BACK)       _next_state = DELTA;
                 } else {
-                    if (_next_state == DELTA) _next_state = BACK;
-                    else if (_next_state == CURVE) _next_state = DELTA;
-                    else if (_next_state == BACK) _next_state = CURVE;
+                    // Rotazione Antioraria (Indietro)
+                    if (_next_state == DELTA)           _next_state = BACK;
+                    else if (_next_state == CURVE)      _next_state = DELTA;
+                    else if (_next_state == HYSTERESIS) _next_state = CURVE;
+                    else if (_next_state == BACK)       _next_state = HYSTERESIS;
                 }
                 break;
 
@@ -141,7 +151,7 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
     }
 
     // Preparazione statica delle vie d'uscita per le Foglie
-    if (_outData.state == DELTA || _outData.state == CURVE) _next_state = CALIBRATION_HUB;
+    if (_outData.state == DELTA || _outData.state == CURVE || _outData.state == HYSTERESIS) _next_state = CALIBRATION_HUB;
     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state = SCALES_HUB;
     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
 

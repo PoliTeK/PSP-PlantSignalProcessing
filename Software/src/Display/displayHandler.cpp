@@ -141,8 +141,10 @@ void DisplayHandler::DrawCalibrationHub(int cursorIndex) {
 
     _displayPtr->SetCursor(10, 15); _displayPtr->WriteString("Delta", Font_7x10, true);
     _displayPtr->SetCursor(10, 27); _displayPtr->WriteString("Curve", Font_7x10, true);
-    _displayPtr->SetCursor(10, 39); _displayPtr->WriteString("Back", Font_7x10, true);
+    _displayPtr->SetCursor(10, 39); _displayPtr->WriteString("Hysteresis", Font_7x10, true);
+    _displayPtr->SetCursor(10, 51); _displayPtr->WriteString("Back", Font_7x10, true); // Coordinata corretta
 
+    // Il moltiplicatore 12 va bene, ora copre fino a 51
     int cursorY = 15 + (cursorIndex * 12);
     _displayPtr->SetCursor(0, cursorY);
     _displayPtr->WriteString(">", Font_7x10, true);
@@ -189,38 +191,37 @@ void DisplayHandler::DrawFloatParameter(const char* paramName, float value) {
 }
 
 void DisplayHandler::DrawIntParameter(const char* paramName, int value) {
-
     _displayPtr->Fill(false);
     
-    // 1. Intestazione fissa
     _displayPtr->SetCursor(0, 0);
     _displayPtr->WriteString("EDITING:", Font_7x10, true);
     
-    // 2. Nome del parametro (es. ROOT, SCALE, OCTAVE)
     _displayPtr->SetCursor(0, 15);
     _displayPtr->WriteString(paramName, Font_11x18, true);
 
-    // 3. Logica di "Traduzione" dei valori
     char valBuffer[16];
 
-    // Se stiamo modificando la ROOT (0-11)
+    // Utilizziamo array statici per non sovraccaricare lo stack ad ogni chiamata
     if (strcmp(paramName, "ROOT") == 0) {
-        const char* notes[] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
+        static const char* notes[] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
         sprintf(valBuffer, "%s", notes[value % 12]);
     }
-    // Se stiamo modificando la SCALE (0-6)
     else if (strcmp(paramName, "SCALE") == 0) {
-        const char* scales[] = {"Major", "MinorN", "MinorA", "MinorM", "Penta", "Chrom", "Esat"};
+        static const char* scales[] = {"Major", "MinorN", "MinorA", "MinorM", "Penta", "Chrom", "Esat"};
         sprintf(valBuffer, "%s", scales[value % 7]);
-    }else if (strcmp(paramName, "PRESET") == 0){
-        const char* presets[] = {"Pad","Pluck","Roygbib"};
+    }
+    else if (strcmp(paramName, "PRESET") == 0) {
+        static const char* presets[] = {"Pad", "Pluck", "Roygbib"};
         sprintf(valBuffer, "%s", presets[value % 3]);
-    } else {
+    }
+    else if (strcmp(paramName, "HYSTERESIS") == 0) {
+        // Se nel menu l'isteresi parte da 0, visualizzare +1 la rende più "umana" (1-21)
+        sprintf(valBuffer, "%d %%", value); 
+    }
+    else {
         sprintf(valBuffer, "%d", value);
     }
     
-    // 4. Disegno del valore (abbassato a Y=38 per non uscire dallo schermo)
     _displayPtr->SetCursor(0, 38);
     _displayPtr->WriteString(valBuffer, Font_11x18, true); 
-
 }
