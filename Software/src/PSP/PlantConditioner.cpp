@@ -21,14 +21,23 @@ void PlantConditioner::Init(IIR::FilterType filter_type, daisy::DaisySeed* hw) {
     _hw->SetLed(true);
 
 
-
-    _deltaFilter.Init(filter_type);
+    _filterOrder2.Init(IIR::FilterType::Butterworth, 200.0f, 2); 
+    _filterOrder4.Init(IIR::FilterType::Butterworth, 200.0f, 4); 
+    _currentOrder = 2;
     _deltaFilterMF.Init();
     _delta = 0;
     _deltaFilt = 0;
     _octave = 4;
     _lastFreq = 440.0f;
     _lastNoteIndex = -1; // Reset indice nota
+}
+
+void PlantConditioner::SetFilterOrder(uint8_t order) {
+    if (order == 2 || order == 4) {
+        _currentOrder = order;
+    } else {
+        _currentOrder = order > 2 ? 4 : 2; 
+    }
 }
 
 void PlantConditioner::setScale(enum Notes root_note, enum ScaleType scale_type) {
@@ -92,7 +101,11 @@ PlantConditioner::PlantState PlantConditioner::Process() {
         
         // Computation of filtered and clamped delta
         _delta = _cap.BaselineData(0) - _cap.FilteredData(0) - (float)_touchThreshold;
-        _deltaFilt = _deltaFilter.Process(_deltaFilterMF.Process(_delta));
+        if(_currentOrder == 4){
+            _deltaFilt = _filterOrder4.Process(_deltaFilterMF.Process(_delta));
+        } else {
+            _deltaFilt = _filterOrder2.Process(_deltaFilterMF.Process(_delta));
+        }
         _deltaFilt = fclamp(_deltaFilt, _deltaMin, _deltaMax - 0.001f);
         
         // ---------------------------------------------------------

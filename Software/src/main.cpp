@@ -201,7 +201,8 @@ int main() {
                         if (ui_data.cursor_state == MenuManager::DELTA) cursor_idx = 0;
                         else if (ui_data.cursor_state == MenuManager::CURVE) cursor_idx = 1;
                         else if (ui_data.cursor_state == MenuManager::HYSTERESIS) cursor_idx = 2;
-                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 3;
+                        else if (ui_data.cursor_state == MenuManager::FILTER_ORDER) cursor_idx = 3; 
+                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 4;
                         disp_handle.DrawCalibrationHub(cursor_idx);
                         break;
 
@@ -223,7 +224,9 @@ int main() {
                     case MenuManager::HYSTERESIS:
                         disp_handle.DrawIntParameter("HYSTERESIS", ui_data.hysteresis);
                         break;
-
+                    case MenuManager::FILTER_ORDER:
+                        disp_handle.DrawIntParameter("FILTER ORDER", ui_data.filter_order);
+                        break;
                     case MenuManager::ROOT:
                         disp_handle.DrawIntParameter("ROOT", ui_data.root);
                         break;

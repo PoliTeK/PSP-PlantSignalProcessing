@@ -47,6 +47,12 @@ public:
     void Init(IIR::FilterType filter_type, daisy::DaisySeed* hw);
 
     /*
+        * Sets the order of the IIR filter used for processing the plant signal. Higher orders provide more aggressive filtering but may introduce more latency.
+            * @param order The desired filter order (e.g., 2 or 4). Must be supported by the implementation.
+    */
+    void SetFilterOrder(uint8_t order);
+
+    /*
         * Sets the curve type for mapping the plant signal to musical notes.
             * @param curve_type A float value where 1.0 is linear, >1 is exponential, and <1 is logarithmic.
     */
@@ -105,7 +111,9 @@ private:
     const uint8_t            _touchThreshold = MPR121_TOUCH_THRESHOLD_DEFAULT;
     
     // --- DSP Filters ---
-    IIR _deltaFilter;
+    IIR _filterOrder2;
+    IIR _filterOrder4;
+    int _currentOrder; // 2 o 4
     MF  _deltaFilterMF;
 
     // --- State Variables and Logic ---

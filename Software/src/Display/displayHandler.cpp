@@ -142,6 +142,7 @@ void DisplayHandler::DrawCalibrationHub(int cursorIndex) {
     _displayPtr->SetCursor(10, 15); _displayPtr->WriteString("Delta", Font_7x10, true);
     _displayPtr->SetCursor(10, 27); _displayPtr->WriteString("Curve", Font_7x10, true);
     _displayPtr->SetCursor(10, 39); _displayPtr->WriteString("Hysteresis", Font_7x10, true);
+    _displayPtr->SetCursor(10, 51); _displayPtr->WriteString("Filter order", Font_7x10, true); // Coordinata corretta
     _displayPtr->SetCursor(10, 51); _displayPtr->WriteString("Back", Font_7x10, true); // Coordinata corretta
 
     // Il moltiplicatore 12 va bene, ora copre fino a 51
@@ -217,8 +218,11 @@ void DisplayHandler::DrawIntParameter(const char* paramName, int value) {
     else if (strcmp(paramName, "HYSTERESIS") == 0) {
         // Se nel menu l'isteresi parte da 0, visualizzare +1 la rende più "umana" (1-21)
         sprintf(valBuffer, "%d %%", value); 
-    }
-    else {
+    } else if (strcmp(paramName, "FILTER ORDER") == 0) { 
+        // Traduzione estetica: "2" -> "2nd", "4" -> "4th"
+        sprintf(valBuffer, "%dnd order", value); 
+        if(value == 4) sprintf(valBuffer, "%dth order", value);
+    }else {
         sprintf(valBuffer, "%d", value);
     }
     
