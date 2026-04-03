@@ -208,7 +208,6 @@ int main() {
                 menu.StateTransition(true, 0, false);
             }
 
-            // EVENT-DRIVEN: Aggiorna DSP solo se cambi menu
             ui_data = menu.GetData(); 
             
             __disable_irq(); 
@@ -221,11 +220,11 @@ int main() {
             pc.SetFilter((IIR::FilterType)ui_data.filter_type);
             __enable_irq();  
         }
-        // --- GESTIONE TIMEOUT MENU ---
+
+        // --- MENU TIMEOUT ---
         menu.Update(now);
 
         // --- TASK 2: PLANT SENSING (200Hz) ---
-        // Il calcolo avviene qui, al riparo dalle collisioni I2C!
         if (plant_update_param) {
             plant_update_param = false;
             
