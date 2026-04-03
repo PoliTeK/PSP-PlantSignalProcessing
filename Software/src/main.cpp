@@ -230,8 +230,8 @@ int main() {
         }
 
         // --- TASK 3: DISPLAY UPDATE (10Hz) ---
-        // Portato da 50 a 100 ms per liberare risorse all'I2C dell'MPR121
-        if (now - last >= 200) {
+        
+        if (now - last >= 400) {
             last = now; 
             ui_data = menu.GetData(); 
 
