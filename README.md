@@ -1,4 +1,5 @@
-# PSP-PlantSignalProcessing
+# PSP-Plant Signal Processor
+![PSP-Plant Signal Processor's Board](Hardware/board.jpg)
 
 Bare-metal C++ firmware for audio generation based on biorhythms and capacitive variations of plants. The project uses the **Daisy Seed** (STM32H7) development board to acquire data from a capacitive sensor, process it through custom DSP filters, and drive an internal audio synthesis engine, while simultaneously providing visual feedback via an OLED display.
 
