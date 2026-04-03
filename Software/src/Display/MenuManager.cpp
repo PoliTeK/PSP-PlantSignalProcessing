@@ -13,11 +13,14 @@ void MenuManager::Init() {
     _outData.octave = 4;
     _outData.preset = 0;
 
+    _lastInteractionTime = daisy::System::GetNow(); // <-- CORREZIONE
     _next_state = MAIN_MENU; // Destinazione di default al primo click
 }
 
 void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
-    
+
+    _lastInteractionTime = daisy::System::GetNow();
+
     // Creiamo una variabile locale per non alterare il parametro in ingresso
     int current_rotation = rotation;
 
@@ -164,4 +167,17 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
 
     // --- 4. PREPARAZIONE DATI IN USCITA ---
     _outData.cursor_state = _next_state;
+}
+
+void MenuManager::Update(uint32_t currentTime) {
+    if (_outData.state != PLAYMODE && (currentTime - _lastInteractionTime >= 5000)) {
+        
+        _outData.state = PLAYMODE;
+        
+        // <-- CORREZIONE: Resetta il cursore al punto di partenza
+        _next_state = MAIN_MENU;
+        _outData.cursor_state = MAIN_MENU;
+        
+        _lastInteractionTime = currentTime; 
+    }
 }

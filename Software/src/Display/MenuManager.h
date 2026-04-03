@@ -1,5 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <daisy.h>
 
 class MenuManager {
 public:
@@ -41,6 +42,7 @@ public:
 
     void Init();
     void StateTransition(bool click, int rotation, bool timeout);
+    void Update(uint32_t currentTime);
     MenuData GetData() { return _outData; }
 
 private:
@@ -53,4 +55,5 @@ private:
     float _delta, _curve;
     int _root, _scale, _octave, _preset, _hysteresis, _filter_type;
 
+    uint32_t _lastInteractionTime;
 };

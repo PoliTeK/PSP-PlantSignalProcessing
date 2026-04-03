@@ -80,8 +80,8 @@ int main() {
     menu.Init();
 
     MyOledDisplay::Config disp_cfg;
+    disp_cfg.driver_config.transport_config.i2c_config.speed = I2CHandle::Config::Speed::I2C_400KHZ;
     disp.Init(disp_cfg);
-
     disp_handle.SetYscale(100);
     disp_handle.SetState(DisplayState::WAVEFORM_VIEWER);
 
@@ -221,6 +221,8 @@ int main() {
             pc.SetFilter((IIR::FilterType)ui_data.filter_type);
             __enable_irq();  
         }
+        // --- GESTIONE TIMEOUT MENU ---
+        menu.Update(now);
 
         // --- TASK 2: PLANT SENSING (200Hz) ---
         // Il calcolo avviene qui, al riparo dalle collisioni I2C!
@@ -248,7 +250,7 @@ int main() {
                 
                 switch (ui_data.state) {
                     case MenuManager::MAIN_MENU:
-                        display_period = 250;
+                        display_period = 100;
                         if (ui_data.cursor_state == MenuManager::CALIBRATION_HUB) cursor_idx = 0;
                         else if (ui_data.cursor_state == MenuManager::SCALES_HUB) cursor_idx = 1;
                         else if (ui_data.cursor_state == MenuManager::PRESETS_HUB) cursor_idx = 2;
