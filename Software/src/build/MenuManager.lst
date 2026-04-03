@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
    9:Display/MenuManager.cpp ****     _outData.root = 0;
   10:Display/MenuManager.cpp ****     _outData.scale = 0;
   11:Display/MenuManager.cpp ****     _outData.hysteresis = 2;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 2
 
 
   12:Display/MenuManager.cpp ****     _outData.filter_type = 0;  // 0 = BUTTERWORTH_2 di default
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
   79              		.cfi_def_cfa_offset 0
   80 0028 7047     		bx	lr
   81              	.L5:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 3
 
 
   82 002a 00BF     		.align	2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
   35:Display/MenuManager.cpp ****         else {
   36:Display/MenuManager.cpp ****             // Normale ingresso nello stato puntato
   37:Display/MenuManager.cpp ****             _outData.state = _next_state; 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 4
 
 
   38:Display/MenuManager.cpp ****         }
@@ -221,7 +221,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
   70:Display/MenuManager.cpp ****                 if (_outData.hysteresis > 20) _outData.hysteresis = 20;
   71:Display/MenuManager.cpp ****                 break;
   72:Display/MenuManager.cpp ****             case FILTER_TYPE: 
-  73:Display/MenuManager.cpp ****                 // Scorrimento lineare tra le 4 modalità del filtro (0, 1, 2, 3)
+  73:Display/MenuManager.cpp ****                 
   74:Display/MenuManager.cpp ****                 _outData.filter_type += current_rotation;
   75:Display/MenuManager.cpp ****                 if (_outData.filter_type < 0) _outData.filter_type = 0;
   76:Display/MenuManager.cpp ****                 if (_outData.filter_type > 3) _outData.filter_type = 3;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
   87:Display/MenuManager.cpp ****                 if (_outData.scale < 0) _outData.scale = 0;
   88:Display/MenuManager.cpp ****                 if (_outData.scale > 6) _outData.scale = 6;
   89:Display/MenuManager.cpp ****                 break;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 5
 
 
   90:Display/MenuManager.cpp **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  143:Display/MenuManager.cpp ****                     if (_next_state == ROOT) _next_state = SCALE;
  144:Display/MenuManager.cpp ****                     else if (_next_state == SCALE) _next_state = OCTAVE;
  145:Display/MenuManager.cpp ****                     else if (_next_state == OCTAVE) _next_state = BACK;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 6
 
 
  146:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = ROOT;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  154 0026 12D0     		beq	.L106
   37:Display/MenuManager.cpp ****             _outData.state = _next_state; 
  155              		.loc 1 37 13 is_stmt 1 view .LVU49
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 7
 
 
   37:Display/MenuManager.cpp ****             _outData.state = _next_state; 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
   32:Display/MenuManager.cpp ****             if (_outData.state == MAIN_MENU) _outData.state = PLAYMODE;
  201              		.loc 1 32 13 view .LVU59
  202 0050 0129     		cmp	r1, #1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 8
 
 
  203 0052 00F0A380 		beq	.L107
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  142:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
  239              		.loc 1 142 17 view .LVU78
  240 006e 002A     		cmp	r2, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 9
 
 
  143:Display/MenuManager.cpp ****                     if (_next_state == ROOT) _next_state = SCALE;
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  279              	.L93:
  134:Display/MenuManager.cpp ****                     else if (_next_state == CURVE)           _next_state = DELTA;
  280              		.loc 1 134 62 discriminator 1 view .LVU95
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 10
 
 
  134:Display/MenuManager.cpp ****                     else if (_next_state == CURVE)           _next_state = DELTA;
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  119:Display/MenuManager.cpp ****                     else if (_next_state == SCALES_HUB) _next_state = CALIBRATION_HUB;
  321              		.loc 1 119 57 discriminator 1 view .LVU111
  119:Display/MenuManager.cpp ****                     else if (_next_state == SCALES_HUB) _next_state = CALIBRATION_HUB;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 11
 
 
  322              		.loc 1 119 69 is_stmt 0 discriminator 1 view .LVU112
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  100:Display/MenuManager.cpp ****                 if (_outData.preset > 2) _outData.preset = 2;
  358              		.loc 1 100 42 discriminator 1 view .LVU131
  100:Display/MenuManager.cpp ****                 if (_outData.preset > 2) _outData.preset = 2;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 12
 
 
  359              		.loc 1 100 58 is_stmt 0 discriminator 1 view .LVU132
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  396              		.loc 1 57 32 view .LVU149
  397 0122 D0ED027A 		vldr.32	s15, [r0, #8]
  398 0126 E6EE267A 		vfma.f32	s15, s12, s13
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 13
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 13
 
 
   58:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
   75:Display/MenuManager.cpp ****                 if (_outData.filter_type < 0) _outData.filter_type = 0;
  437              		.loc 1 75 17 view .LVU166
  438 015c D218     		adds	r2, r2, r3
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 14
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 14
 
 
  439              	.LVL27:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  476 017a C369     		ldr	r3, [r0, #28]
   87:Display/MenuManager.cpp ****                 if (_outData.scale < 0) _outData.scale = 0;
  477              		.loc 1 87 17 view .LVU184
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 15
 
 
  478 017c D218     		adds	r2, r2, r3
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  516              		.loc 1 42 35 discriminator 1 view .LVU200
   42:Display/MenuManager.cpp ****             case PLAYMODE:        _next_state = MAIN_MENU; break;
  517              		.loc 1 42 47 is_stmt 0 discriminator 1 view .LVU201
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 16
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 16
 
 
  518 019e 4170     		strb	r1, [r0, #1]
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
   75:Display/MenuManager.cpp ****                 if (_outData.filter_type < 0) _outData.filter_type = 0;
  557              		.loc 1 75 47 discriminator 1 view .LVU217
   75:Display/MenuManager.cpp ****                 if (_outData.filter_type < 0) _outData.filter_type = 0;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 17
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 17
 
 
  558              		.loc 1 75 68 is_stmt 0 discriminator 1 view .LVU218
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  598 01ee C261     		str	r2, [r0, #28]
  599 01f0 0DE7     		b	.L34
  600              	.L118:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 18
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 18
 
 
   74:Display/MenuManager.cpp ****                 _outData.filter_type += current_rotation;
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  642              		.loc 1 135 26 view .LVU246
  643 0222 072B     		cmp	r3, #7
  644 0224 02D1     		bne	.L71
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 19
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 19
 
 
  645              	.L95:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  686              		.loc 1 150 26 view .LVU259
  687 0256 0B2B     		cmp	r3, #11
  688 0258 02D1     		bne	.L79
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 20
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 20
 
 
  689              	.L103:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  726              		.loc 1 161 5 is_stmt 1 discriminator 1 view .LVU276
  162:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
  727              		.loc 1 162 5 discriminator 1 view .LVU277
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 21
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 21
 
 
  163:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  769              		.text
  770              	.Letext0:
  771              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 22
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 22
 
 
  772              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
@@ -1267,20 +1267,20 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 1
  775              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
  776              		.file 7 "Display/MenuManager.h"
  777              		.file 8 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s 			page 23
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s 			page 23
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 MenuManager.cpp
-C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s:17     .text._ZN11MenuManager4InitEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s:26     .text._ZN11MenuManager4InitEv:00000000 _ZN11MenuManager4InitEv
-C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s:84     .text._ZN11MenuManager4InitEv:0000002c $d
-C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s:89     .text._ZN11MenuManager15StateTransitionEbib:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s:97     .text._ZN11MenuManager15StateTransitionEbib:00000000 _ZN11MenuManager15StateTransitionEbib
-C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s:165    .text._ZN11MenuManager15StateTransitionEbib:00000032 $d
-C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s:170    .text._ZN11MenuManager15StateTransitionEbib:00000036 $t
-C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s:187    .text._ZN11MenuManager15StateTransitionEbib:00000046 $d
-C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s:196    .text._ZN11MenuManager15StateTransitionEbib:0000004e $t
-C:\Users\skipi\AppData\Local\Temp\ccJs9KCd.s:764    .text._ZN11MenuManager15StateTransitionEbib:0000029c $d
+C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s:17     .text._ZN11MenuManager4InitEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s:26     .text._ZN11MenuManager4InitEv:00000000 _ZN11MenuManager4InitEv
+C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s:84     .text._ZN11MenuManager4InitEv:0000002c $d
+C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s:89     .text._ZN11MenuManager15StateTransitionEbib:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s:97     .text._ZN11MenuManager15StateTransitionEbib:00000000 _ZN11MenuManager15StateTransitionEbib
+C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s:165    .text._ZN11MenuManager15StateTransitionEbib:00000032 $d
+C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s:170    .text._ZN11MenuManager15StateTransitionEbib:00000036 $t
+C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s:187    .text._ZN11MenuManager15StateTransitionEbib:00000046 $d
+C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s:196    .text._ZN11MenuManager15StateTransitionEbib:0000004e $t
+C:\Users\skipi\AppData\Local\Temp\ccWwSffk.s:764    .text._ZN11MenuManager15StateTransitionEbib:0000029c $d
 
 NO UNDEFINED SYMBOLS

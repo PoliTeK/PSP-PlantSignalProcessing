@@ -38,6 +38,8 @@ volatile bool plant_update_param = false;
 volatile int32_t global_inc = 0;
 volatile bool global_clicked = false;
 
+volatile int32_t display_period = 500;
+
 // ============================================================================
 // INTERRUPT SERVICE ROUTINES AND AUDIO CALLBACK
 // ============================================================================
@@ -138,6 +140,7 @@ int main() {
     // --- 4. START AUDIO ENGINE ---
     hw.StartAudio(AudioCallback);
     uint32_t last = System::GetNow();
+    
 
     // ========================================================================
     // MAIN LOOP
@@ -231,11 +234,12 @@ int main() {
 
         // --- TASK 3: DISPLAY UPDATE (10Hz) ---
         
-        if (now - last >= 400) {
+        if (now - last >= display_period) {
             last = now; 
             ui_data = menu.GetData(); 
 
             if (ui_data.state == MenuManager::PLAYMODE) {
+                display_period = 500;
                 disp_handle.SetState(DisplayState::WAVEFORM_VIEWER);
             } 
             else {
@@ -244,6 +248,7 @@ int main() {
                 
                 switch (ui_data.state) {
                     case MenuManager::MAIN_MENU:
+                        display_period = 250;
                         if (ui_data.cursor_state == MenuManager::CALIBRATION_HUB) cursor_idx = 0;
                         else if (ui_data.cursor_state == MenuManager::SCALES_HUB) cursor_idx = 1;
                         else if (ui_data.cursor_state == MenuManager::PRESETS_HUB) cursor_idx = 2;

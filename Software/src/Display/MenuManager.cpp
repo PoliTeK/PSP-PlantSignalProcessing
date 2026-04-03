@@ -70,7 +70,7 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
                 if (_outData.hysteresis > 20) _outData.hysteresis = 20;
                 break;
             case FILTER_TYPE: 
-                // Scorrimento lineare tra le 4 modalità del filtro (0, 1, 2, 3)
+                
                 _outData.filter_type += current_rotation;
                 if (_outData.filter_type < 0) _outData.filter_type = 0;
                 if (_outData.filter_type > 3) _outData.filter_type = 3;
