@@ -75,6 +75,7 @@ int main() {
     
     // --- 0. HARDWARE & PERIPHERAL INITIALIZATION ---
     hw.Init();
+    hw.StartLog(false);
 
     enc.Init(hw.GetPin(14), hw.GetPin(13), hw.GetPin(10));
     menu.Init();
@@ -224,13 +225,22 @@ int main() {
         // --- MENU TIMEOUT ---
         menu.Update(now);
 
-        // --- TASK 2: PLANT SENSING (200Hz) ---
+        // --- TASK 2: PLANT SENSING  + Serial Print(200Hz) ---
+        static uint32_t last_serial_time = 0;
         if (plant_update_param) {
             plant_update_param = false;
             
             PlantConditioner::PlantState plant_data = pc.Process();
             audio_controls.freq = plant_data._freq;
             audio_controls.gate = plant_data._gate;
+            
+            
+            if (audio_controls.gate) {
+                if (now - last_serial_time >= 33) {
+                    hw.PrintLine("%d", (int)plant_data._freq);
+                    last_serial_time = now;
+                }
+            }
         }
 
         // --- TASK 3: DISPLAY UPDATE (10Hz) ---
