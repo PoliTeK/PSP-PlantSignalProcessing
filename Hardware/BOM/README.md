@@ -20,7 +20,7 @@ This document lists all the necessary components to assemble the **PSP** hardwar
 ## 3. Visualization & Output
 | Component | Description | Quantity | Link |
 | :--- | :--- | :---: | :--- |
-| **OLED Display** | 128x64 I2C Display (SSD1306 or SH1106) | 1 | [Adafruit](https://www.amazon.com/UCTRONICS-SSD1306-Self-Luminous-Display-Raspberry/dp/B072Q2X2LL/ref=sr_1_4?dib=eyJ2IjoiMSJ9.IJoxWF1pbbgjuFzVxunatn7JCczOu5ofMc__4Jqm73W75u7ByvPtkE58QeL05WuARik1eSz9AF9HWZWLfmOZAtgTpvNMI6-KiS-KY7Tyb4ubJwjiBcI57JND8FcWICoqp362CxXLvoX48CgG-XVvV9QskaN_sv9b6eM01rLfN6MPswHD4HRh7pFS8QI6yAuw8iP4hYEXCZRZ9PpPhVVuimwEVWNWTi5OQguqkpZSVEs.qwOIDMJkxyEZ69XAv2VrIImZ9yyNK8qAs1XRnhSwb7U&dib_tag=se&keywords=oled+128x64&qid=1777300837&sr=8-4) |
+| **OLED Display** | 128x64 I2C Display (SSD1306 or SH1106) | 1 | [Amazon](https://www.amazon.com/UCTRONICS-SSD1306-Self-Luminous-Display-Raspberry/dp/B072Q2X2LL/ref=sr_1_4?dib=eyJ2IjoiMSJ9.IJoxWF1pbbgjuFzVxunatn7JCczOu5ofMc__4Jqm73W75u7ByvPtkE58QeL05WuARik1eSz9AF9HWZWLfmOZAtgTpvNMI6-KiS-KY7Tyb4ubJwjiBcI57JND8FcWICoqp362CxXLvoX48CgG-XVvV9QskaN_sv9b6eM01rLfN6MPswHD4HRh7pFS8QI6yAuw8iP4hYEXCZRZ9PpPhVVuimwEVWNWTi5OQguqkpZSVEs.qwOIDMJkxyEZ69XAv2VrIImZ9yyNK8qAs1XRnhSwb7U&dib_tag=se&keywords=oled+128x64&qid=1777300837&sr=8-4) |
 | **3.5mm Audio Jack** | TRS connectors for audio output (L/R) | 2 | [DigiKey](https://www.digikey.it/it/products/detail/kycon-inc/STX-3000/9975995?s=N4IgTCBcDa4AwE4wFoDKAVAGsgzHfyAcgCIgC6AvkA)
 
 ## 4. Passive Components & Miscellaneous
@@ -29,6 +29,6 @@ This document lists all the necessary components to assemble the **PSP** hardwar
 | **10 kΩ Resistors** | Hardware debounce for encoder| 2 | - |
 | **10 nf Capacitors** | Hardware debounce for encoder| 2 | - |
 | **Red LED** | Low nattery indicator | 1 | - |
-| **330 Ω Resistor ** | To use with the LED | 1 | - |
+| **330 Ω Resistor** | To use with the LED | 1 | - |
 | **Electrodes / Clips** | Alligator-Banana clips for plant connection | As needed | - |
 | **On/off switch** | Switch tu turn off(on the system | 1 | [Mouser](https://www.mouser.it/ProductDetail/Same-Sky/SLW-1411565-9A-RA-S-D?qs=IKkN%2F947nfBIWjWV6WesVw%3D%3D&srsltid=AfmBOoq23Me8njhMRF-y-1wJ2FztqANlgy0GX4Rwlt2JTs-EZvvkz7Lh)
