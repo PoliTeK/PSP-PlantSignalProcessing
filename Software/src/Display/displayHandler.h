@@ -4,7 +4,7 @@
 #pragma once
 
 /// @todo make buffer size statically asserted as a power of 2
-#include "../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h"
+#include "oled_ssd130x_DMA.h"
 #include "../../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h"
 
 #define BUFFER_SIZE 256

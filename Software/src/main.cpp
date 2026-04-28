@@ -54,7 +54,6 @@ void EncoderTimerCallback(void* data) {
 }
 
 void PlantTimerCallback(void* data) {
-    // Alza solo la bandierina! Nessuna operazione I2C nell'interrupt per evitare l'Hard Fault
     plant_update_param = true;
 }
 

@@ -94,11 +94,11 @@ void PlantConditioner::setOctave(uint8_t octave) {
 
 PlantConditioner::PlantState PlantConditioner::Process() {
     float out = _lastFreq;
-    if (_cap.Touched() & _BV(0))
+    if (_cap.Touched() & _BV(11))
     {
         if (!_isTouched) _isTouched = true; // New touch detected
         // 1. Calcolo Delta grezzo (Baseline - Filtered - Offset)
-        _delta = (float)_cap.BaselineData(0) - (float)_cap.FilteredData(0) - (float)_touchThreshold;
+        _delta = (float)_cap.BaselineData(11) - (float)_cap.FilteredData(11) - (float)_touchThreshold;
         // 2. Pre-filtraggio Mediano (rimozione spike elettromagnetici)
         float mf_out = _deltaFilterMF.Process(_delta);
         // 3. Selezione dinamica del filtro IIR in base all'ordine/tipo scelto
