@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 1
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -42,1319 +42,1643 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 1
    6:Display/MenuManager.cpp ****     _outData.cursor_state = PLAYMODE;
   35              		.loc 1 6 5 view .LVU2
    7:Display/MenuManager.cpp ****     _outData.delta = 50.0f;
+  36              		.loc 1 7 20 is_stmt 0 view .LVU3
+  37 0000 0C4A     		ldr	r2, .L4
    8:Display/MenuManager.cpp ****     _outData.curve = 1.0f;
-  36              		.loc 1 8 20 is_stmt 0 view .LVU3
-  37 0000 4FF07E52 		mov	r2, #1065353216
-   5:Display/MenuManager.cpp ****     _outData.cursor_state = PLAYMODE;
-  38              		.loc 1 5 20 view .LVU4
-  39 0004 0023     		movs	r3, #0
+  38              		.loc 1 8 20 view .LVU4
+  39 0002 4FF07E51 		mov	r1, #1065353216
+   3:Display/MenuManager.cpp ****     // Inizializziamo direttamente i campi della struct _outData
+  40              		.loc 1 3 26 view .LVU5
+  41 0006 38B5     		push	{r3, r4, r5, lr}
+  42              		.cfi_def_cfa_offset 16
+  43              		.cfi_offset 3, -16
+  44              		.cfi_offset 4, -12
+  45              		.cfi_offset 5, -8
+  46              		.cfi_offset 14, -4
    7:Display/MenuManager.cpp ****     _outData.delta = 50.0f;
-  40              		.loc 1 7 20 view .LVU5
-  41 0006 DFF82CC0 		ldr	ip, .L4
+  47              		.loc 1 7 20 view .LVU6
+  48 0008 8260     		str	r2, [r0, #8]	@ float
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 2
+
+
    9:Display/MenuManager.cpp ****     _outData.root = 0;
   10:Display/MenuManager.cpp ****     _outData.scale = 0;
   11:Display/MenuManager.cpp ****     _outData.hysteresis = 2;
-  42              		.loc 1 11 25 view .LVU6
-  43 000a 0221     		movs	r1, #2
-   3:Display/MenuManager.cpp ****     // Inizializziamo direttamente i campi della struct _outData
-  44              		.loc 1 3 26 view .LVU7
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 2
-
-
-  45 000c 10B5     		push	{r4, lr}
-  46              		.cfi_def_cfa_offset 8
-  47              		.cfi_offset 4, -8
-  48              		.cfi_offset 14, -4
-   8:Display/MenuManager.cpp ****     _outData.root = 0;
-  49              		.loc 1 8 20 view .LVU8
-  50 000e C260     		str	r2, [r0, #12]	@ float
+  49              		.loc 1 11 25 view .LVU7
+  50 000a 0222     		movs	r2, #2
+   5:Display/MenuManager.cpp ****     _outData.cursor_state = PLAYMODE;
+  51              		.loc 1 5 20 view .LVU8
+  52 000c 0023     		movs	r3, #0
   12:Display/MenuManager.cpp ****     _outData.filter_type = 0;  // 0 = BUTTERWORTH_2 di default
   13:Display/MenuManager.cpp ****     _outData.octave = 4;
-  51              		.loc 1 13 21 view .LVU9
-  52 0010 0422     		movs	r2, #4
-   5:Display/MenuManager.cpp ****     _outData.cursor_state = PLAYMODE;
-  53              		.loc 1 5 20 view .LVU10
-  54 0012 8380     		strh	r3, [r0, #4]	@ movhi
-   7:Display/MenuManager.cpp ****     _outData.curve = 1.0f;
-  55              		.loc 1 7 5 is_stmt 1 view .LVU11
-   3:Display/MenuManager.cpp ****     // Inizializziamo direttamente i campi della struct _outData
-  56              		.loc 1 3 26 is_stmt 0 view .LVU12
-  57 0014 0446     		mov	r4, r0
-   9:Display/MenuManager.cpp ****     _outData.scale = 0;
-  58              		.loc 1 9 19 view .LVU13
-  59 0016 0361     		str	r3, [r0, #16]
-  10:Display/MenuManager.cpp ****     _outData.hysteresis = 2;
-  60              		.loc 1 10 20 view .LVU14
-  61 0018 C361     		str	r3, [r0, #28]
-   7:Display/MenuManager.cpp ****     _outData.curve = 1.0f;
-  62              		.loc 1 7 20 view .LVU15
-  63 001a C0F808C0 		str	ip, [r0, #8]	@ float
-   8:Display/MenuManager.cpp ****     _outData.root = 0;
-  64              		.loc 1 8 5 is_stmt 1 view .LVU16
-   9:Display/MenuManager.cpp ****     _outData.scale = 0;
-  65              		.loc 1 9 5 view .LVU17
-  10:Display/MenuManager.cpp ****     _outData.hysteresis = 2;
-  66              		.loc 1 10 5 view .LVU18
-  11:Display/MenuManager.cpp ****     _outData.filter_type = 0;  // 0 = BUTTERWORTH_2 di default
-  67              		.loc 1 11 5 view .LVU19
-  12:Display/MenuManager.cpp ****     _outData.octave = 4;
-  68              		.loc 1 12 26 is_stmt 0 view .LVU20
-  69 001e C0E90513 		strd	r1, r3, [r0, #20]
-  70              		.loc 1 13 5 is_stmt 1 view .LVU21
   14:Display/MenuManager.cpp ****     _outData.preset = 0;
-  71              		.loc 1 14 21 is_stmt 0 view .LVU22
-  72 0022 C0E90823 		strd	r2, r3, [r0, #32]
-  15:Display/MenuManager.cpp **** 
-  16:Display/MenuManager.cpp ****     _lastInteractionTime = daisy::System::GetNow(); // <-- CORREZIONE
-  73              		.loc 1 16 5 is_stmt 1 view .LVU23
-  74              		.loc 1 16 49 is_stmt 0 view .LVU24
-  75 0026 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
-  76              	.LVL1:
-  17:Display/MenuManager.cpp ****     _next_state = MAIN_MENU; // Destinazione di default al primo click
-  77              		.loc 1 17 17 view .LVU25
-  78 002a 0123     		movs	r3, #1
-  16:Display/MenuManager.cpp ****     _next_state = MAIN_MENU; // Destinazione di default al primo click
-  79              		.loc 1 16 26 view .LVU26
-  80 002c A064     		str	r0, [r4, #72]
-  81              		.loc 1 17 5 is_stmt 1 view .LVU27
-  82              		.loc 1 17 17 is_stmt 0 view .LVU28
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 3
+  15:Display/MenuManager.cpp ****     _outData.touchths_value = 1;
+  53              		.loc 1 15 29 view .LVU9
+  54 000e 0125     		movs	r5, #1
+  11:Display/MenuManager.cpp ****     _outData.filter_type = 0;  // 0 = BUTTERWORTH_2 di default
+  55              		.loc 1 11 25 view .LVU10
+  56 0010 4261     		str	r2, [r0, #20]
+  13:Display/MenuManager.cpp ****     _outData.preset = 0;
+  57              		.loc 1 13 21 view .LVU11
+  58 0012 0422     		movs	r2, #4
+   3:Display/MenuManager.cpp ****     // Inizializziamo direttamente i campi della struct _outData
+  59              		.loc 1 3 26 view .LVU12
+  60 0014 0446     		mov	r4, r0
+   5:Display/MenuManager.cpp ****     _outData.cursor_state = PLAYMODE;
+  61              		.loc 1 5 20 view .LVU13
+  62 0016 8380     		strh	r3, [r0, #4]	@ movhi
+   7:Display/MenuManager.cpp ****     _outData.curve = 1.0f;
+  63              		.loc 1 7 5 is_stmt 1 view .LVU14
+   8:Display/MenuManager.cpp ****     _outData.root = 0;
+  64              		.loc 1 8 5 view .LVU15
+   8:Display/MenuManager.cpp ****     _outData.root = 0;
+  65              		.loc 1 8 20 is_stmt 0 view .LVU16
+  66 0018 C160     		str	r1, [r0, #12]	@ float
+   9:Display/MenuManager.cpp ****     _outData.scale = 0;
+  67              		.loc 1 9 5 is_stmt 1 view .LVU17
+   9:Display/MenuManager.cpp ****     _outData.scale = 0;
+  68              		.loc 1 9 19 is_stmt 0 view .LVU18
+  69 001a 0361     		str	r3, [r0, #16]
+  10:Display/MenuManager.cpp ****     _outData.hysteresis = 2;
+  70              		.loc 1 10 5 is_stmt 1 view .LVU19
+  10:Display/MenuManager.cpp ****     _outData.hysteresis = 2;
+  71              		.loc 1 10 20 is_stmt 0 view .LVU20
+  72 001c C361     		str	r3, [r0, #28]
+  11:Display/MenuManager.cpp ****     _outData.filter_type = 0;  // 0 = BUTTERWORTH_2 di default
+  73              		.loc 1 11 5 is_stmt 1 view .LVU21
+  12:Display/MenuManager.cpp ****     _outData.octave = 4;
+  74              		.loc 1 12 5 view .LVU22
+  12:Display/MenuManager.cpp ****     _outData.octave = 4;
+  75              		.loc 1 12 26 is_stmt 0 view .LVU23
+  76 001e 8361     		str	r3, [r0, #24]
+  13:Display/MenuManager.cpp ****     _outData.preset = 0;
+  77              		.loc 1 13 5 is_stmt 1 view .LVU24
+  14:Display/MenuManager.cpp ****     _outData.touchths_value = 1;
+  78              		.loc 1 14 21 is_stmt 0 view .LVU25
+  79 0020 C362     		str	r3, [r0, #44]
+  16:Display/MenuManager.cpp ****     _outData.relths_value = 1;
+  80              		.loc 1 16 27 view .LVU26
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 3
 
 
-  83 002e 6370     		strb	r3, [r4, #1]
-  18:Display/MenuManager.cpp **** }
-  84              		.loc 1 18 1 view .LVU29
-  85 0030 10BD     		pop	{r4, pc}
-  86              	.LVL2:
-  87              	.L5:
-  88              		.loc 1 18 1 view .LVU30
-  89 0032 00BF     		.align	2
-  90              	.L4:
-  91 0034 00004842 		.word	1112014848
-  92              		.cfi_endproc
-  93              	.LFE2720:
-  95              		.section	.text._ZN11MenuManager15StateTransitionEbib,"ax",%progbits
-  96              		.align	1
-  97              		.p2align 2,,3
-  98              		.global	_ZN11MenuManager15StateTransitionEbib
-  99              		.syntax unified
- 100              		.thumb
- 101              		.thumb_func
- 102              		.fpu fpv5-d16
- 104              	_ZN11MenuManager15StateTransitionEbib:
- 105              	.LVL3:
- 106              	.LFB2721:
-  19:Display/MenuManager.cpp **** 
-  20:Display/MenuManager.cpp **** void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
- 107              		.loc 1 20 75 is_stmt 1 view -0
- 108              		.cfi_startproc
- 109              		@ args = 0, pretend = 0, frame = 0
- 110              		@ frame_needed = 0, uses_anonymous_args = 0
+  81 0022 8562     		str	r5, [r0, #40]
+  15:Display/MenuManager.cpp ****     _outData.relths_value = 1;
+  82              		.loc 1 15 29 view .LVU27
+  83 0024 C0E90825 		strd	r2, r5, [r0, #32]
+  84              		.loc 1 16 5 is_stmt 1 view .LVU28
+  17:Display/MenuManager.cpp **** 
+  18:Display/MenuManager.cpp ****     _lastInteractionTime = daisy::System::GetNow(); // <-- CORREZIONE
+  85              		.loc 1 18 5 view .LVU29
+  86              		.loc 1 18 49 is_stmt 0 view .LVU30
+  87 0028 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
+  88              	.LVL1:
+  19:Display/MenuManager.cpp ****     _next_state = MAIN_MENU; // Destinazione di default al primo click
+  89              		.loc 1 19 17 view .LVU31
+  90 002c 6570     		strb	r5, [r4, #1]
+  18:Display/MenuManager.cpp ****     _next_state = MAIN_MENU; // Destinazione di default al primo click
+  91              		.loc 1 18 26 view .LVU32
+  92 002e A065     		str	r0, [r4, #88]
+  93              		.loc 1 19 5 is_stmt 1 view .LVU33
+  20:Display/MenuManager.cpp **** }
+  94              		.loc 1 20 1 is_stmt 0 view .LVU34
+  95 0030 38BD     		pop	{r3, r4, r5, pc}
+  96              	.LVL2:
+  97              	.L5:
+  98              		.loc 1 20 1 view .LVU35
+  99 0032 00BF     		.align	2
+ 100              	.L4:
+ 101 0034 00004842 		.word	1112014848
+ 102              		.cfi_endproc
+ 103              	.LFE2720:
+ 105              		.section	.text._ZN11MenuManager15StateTransitionEbib,"ax",%progbits
+ 106              		.align	1
+ 107              		.p2align 2,,3
+ 108              		.global	_ZN11MenuManager15StateTransitionEbib
+ 109              		.syntax unified
+ 110              		.thumb
+ 111              		.thumb_func
+ 112              		.fpu fpv5-d16
+ 114              	_ZN11MenuManager15StateTransitionEbib:
+ 115              	.LVL3:
+ 116              	.LFB2721:
   21:Display/MenuManager.cpp **** 
-  22:Display/MenuManager.cpp ****     _lastInteractionTime = daisy::System::GetNow();
- 111              		.loc 1 22 5 view .LVU32
-  20:Display/MenuManager.cpp **** 
- 112              		.loc 1 20 75 is_stmt 0 view .LVU33
- 113 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
- 114              		.cfi_def_cfa_offset 24
- 115              		.cfi_offset 3, -24
- 116              		.cfi_offset 4, -20
- 117              		.cfi_offset 5, -16
- 118              		.cfi_offset 6, -12
- 119              		.cfi_offset 7, -8
- 120              		.cfi_offset 14, -4
-  20:Display/MenuManager.cpp **** 
- 121              		.loc 1 20 75 view .LVU34
- 122 0002 0446     		mov	r4, r0
- 123 0004 1E46     		mov	r6, r3
- 124 0006 0F46     		mov	r7, r1
- 125 0008 1546     		mov	r5, r2
- 126              		.loc 1 22 49 view .LVU35
- 127 000a FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
- 128              	.LVL4:
- 129              		.loc 1 22 26 view .LVU36
- 130 000e A064     		str	r0, [r4, #72]
+  22:Display/MenuManager.cpp **** void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
+ 117              		.loc 1 22 75 is_stmt 1 view -0
+ 118              		.cfi_startproc
+ 119              		@ args = 0, pretend = 0, frame = 0
+ 120              		@ frame_needed = 0, uses_anonymous_args = 0
   23:Display/MenuManager.cpp **** 
-  24:Display/MenuManager.cpp ****     // Creiamo una variabile locale per non alterare il parametro in ingresso
-  25:Display/MenuManager.cpp ****     int current_rotation = rotation;
- 131              		.loc 1 25 5 is_stmt 1 view .LVU37
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 4
+  24:Display/MenuManager.cpp ****     _lastInteractionTime = daisy::System::GetNow();
+ 121              		.loc 1 24 5 view .LVU37
+  22:Display/MenuManager.cpp **** 
+ 122              		.loc 1 22 75 is_stmt 0 view .LVU38
+ 123 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 124              		.cfi_def_cfa_offset 24
+ 125              		.cfi_offset 3, -24
+ 126              		.cfi_offset 4, -20
+ 127              		.cfi_offset 5, -16
+ 128              		.cfi_offset 6, -12
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 4
 
 
- 132              	.LVL5:
-  26:Display/MenuManager.cpp **** 
-  27:Display/MenuManager.cpp ****     // --- 1. AGGIORNAMENTO DELLO STATO (State Register) ---
-  28:Display/MenuManager.cpp ****     if (timeout) {
- 133              		.loc 1 28 5 view .LVU38
- 134 0010 76B1     		cbz	r6, .L7
-  29:Display/MenuManager.cpp ****         _outData.state = PLAYMODE;
- 135              		.loc 1 29 9 view .LVU39
- 136              		.loc 1 29 24 is_stmt 0 view .LVU40
- 137 0012 0023     		movs	r3, #0
-  30:Display/MenuManager.cpp ****         _next_state = MAIN_MENU; 
- 138              		.loc 1 30 21 view .LVU41
- 139 0014 0122     		movs	r2, #1
-  29:Display/MenuManager.cpp ****         _outData.state = PLAYMODE;
- 140              		.loc 1 29 24 view .LVU42
- 141 0016 2371     		strb	r3, [r4, #4]
- 142              		.loc 1 30 9 is_stmt 1 view .LVU43
- 143              		.loc 1 30 21 is_stmt 0 view .LVU44
- 144 0018 6270     		strb	r2, [r4, #1]
-  31:Display/MenuManager.cpp ****     } 
-  32:Display/MenuManager.cpp ****     else if (click) {
-  33:Display/MenuManager.cpp ****         // Logica per risalire l'albero quando il cursore è su BACK
-  34:Display/MenuManager.cpp ****         if (_next_state == BACK) {
-  35:Display/MenuManager.cpp ****             if (_outData.state == MAIN_MENU) _outData.state = PLAYMODE;
-  36:Display/MenuManager.cpp ****             else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.
-  37:Display/MenuManager.cpp ****         } 
-  38:Display/MenuManager.cpp ****         else {
-  39:Display/MenuManager.cpp ****             // Normale ingresso nello stato puntato
-  40:Display/MenuManager.cpp ****             _outData.state = _next_state; 
-  41:Display/MenuManager.cpp ****         }
-  42:Display/MenuManager.cpp **** 
-  43:Display/MenuManager.cpp ****         // --- INIZIALIZZAZIONE DEL CURSORE POST-CLICK ---
-  44:Display/MenuManager.cpp ****         switch (_outData.state) {
-  45:Display/MenuManager.cpp ****             case PLAYMODE:        _next_state = MAIN_MENU; break;
-  46:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
-  47:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
-  48:Display/MenuManager.cpp ****             case SCALES_HUB:      _next_state = ROOT; break;
-  49:Display/MenuManager.cpp ****             default: break; 
-  50:Display/MenuManager.cpp ****         }
-  51:Display/MenuManager.cpp **** 
-  52:Display/MenuManager.cpp ****         // Dopo un click, ignoriamo eventuali rotazioni accidentali nello stesso istante
-  53:Display/MenuManager.cpp ****         current_rotation = 0; 
-  54:Display/MenuManager.cpp ****     }
-  55:Display/MenuManager.cpp **** 
-  56:Display/MenuManager.cpp ****     // --- 2. RETE DELLE USCITE (Output Logic) ---
-  57:Display/MenuManager.cpp ****     if (current_rotation != 0) {
- 145              		.loc 1 57 5 is_stmt 1 view .LVU45
- 146 001a 002D     		cmp	r5, #0
- 147 001c 3BD0     		beq	.L9
- 148              	.LVL6:
- 149              	.L34:
-  58:Display/MenuManager.cpp ****         switch (_outData.state) {
-  59:Display/MenuManager.cpp ****             case DELTA:
-  60:Display/MenuManager.cpp ****                 _outData.delta += (current_rotation * 5.0f);
-  61:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
-  62:Display/MenuManager.cpp ****                 if (_outData.delta > 100.0f) _outData.delta = 100.0f;
-  63:Display/MenuManager.cpp ****                 break;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 5
+ 129              		.cfi_offset 7, -8
+ 130              		.cfi_offset 14, -4
+  22:Display/MenuManager.cpp **** 
+ 131              		.loc 1 22 75 view .LVU39
+ 132 0002 0446     		mov	r4, r0
+ 133 0004 1E46     		mov	r6, r3
+ 134 0006 0F46     		mov	r7, r1
+ 135 0008 1546     		mov	r5, r2
+ 136              		.loc 1 24 49 view .LVU40
+ 137 000a FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
+ 138              	.LVL4:
+ 139              		.loc 1 24 26 view .LVU41
+ 140 000e A065     		str	r0, [r4, #88]
+  25:Display/MenuManager.cpp **** 
+  26:Display/MenuManager.cpp ****     // Creiamo una variabile locale per non alterare il parametro in ingresso
+  27:Display/MenuManager.cpp ****     int current_rotation = rotation;
+ 141              		.loc 1 27 5 is_stmt 1 view .LVU42
+ 142              	.LVL5:
+  28:Display/MenuManager.cpp **** 
+  29:Display/MenuManager.cpp ****     // --- 1. AGGIORNAMENTO DELLO STATO (State Register) ---
+  30:Display/MenuManager.cpp ****     if (timeout) {
+ 143              		.loc 1 30 5 view .LVU43
+ 144 0010 2EB3     		cbz	r6, .L7
+  31:Display/MenuManager.cpp ****         _outData.state = PLAYMODE;
+ 145              		.loc 1 31 9 view .LVU44
+ 146              		.loc 1 31 24 is_stmt 0 view .LVU45
+ 147 0012 0023     		movs	r3, #0
+  32:Display/MenuManager.cpp ****         _next_state = MAIN_MENU; 
+ 148              		.loc 1 32 21 view .LVU46
+ 149 0014 0122     		movs	r2, #1
+  31:Display/MenuManager.cpp ****         _outData.state = PLAYMODE;
+ 150              		.loc 1 31 24 view .LVU47
+ 151 0016 2371     		strb	r3, [r4, #4]
+ 152              		.loc 1 32 9 is_stmt 1 view .LVU48
+ 153              		.loc 1 32 21 is_stmt 0 view .LVU49
+ 154 0018 6270     		strb	r2, [r4, #1]
+  33:Display/MenuManager.cpp ****     } 
+  34:Display/MenuManager.cpp **** 
+  35:Display/MenuManager.cpp ****     else if (click) {
+  36:Display/MenuManager.cpp ****         // Logica per risalire l'albero quando il cursore è su BACK
+  37:Display/MenuManager.cpp ****         if (_next_state == BACK) {
+  38:Display/MenuManager.cpp ****             if (_outData.state == MAIN_MENU) _outData.state = PLAYMODE;
+  39:Display/MenuManager.cpp ****             else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.
+  40:Display/MenuManager.cpp ****         } 
+  41:Display/MenuManager.cpp **** 
+  42:Display/MenuManager.cpp ****         else if (_outData.state == TOUCHTHS_VALUE || _outData.state == RELTHS_VALUE) _outData.state
+  43:Display/MenuManager.cpp **** 
+  44:Display/MenuManager.cpp ****         else {
+  45:Display/MenuManager.cpp ****             // Normale ingresso nello stato puntato
+  46:Display/MenuManager.cpp ****             _outData.state = _next_state; 
+  47:Display/MenuManager.cpp ****         }
+  48:Display/MenuManager.cpp ****         
+  49:Display/MenuManager.cpp ****         // --- INIZIALIZZAZIONE DEL CURSORE POST-CLICK ---
+  50:Display/MenuManager.cpp ****         switch (_outData.state) {
+  51:Display/MenuManager.cpp ****             case PLAYMODE:        _next_state = MAIN_MENU; break;
+  52:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
+  53:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 5
 
 
-  64:Display/MenuManager.cpp **** 
-  65:Display/MenuManager.cpp ****             case CURVE:
-  66:Display/MenuManager.cpp ****                 _outData.curve += (current_rotation * 0.1f);
-  67:Display/MenuManager.cpp ****                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
-  68:Display/MenuManager.cpp ****                 if (_outData.curve > 2.0f) _outData.curve = 2.0f;
-  69:Display/MenuManager.cpp ****                 break;
-  70:Display/MenuManager.cpp ****             case HYSTERESIS:
-  71:Display/MenuManager.cpp ****                 _outData.hysteresis += (current_rotation * 1);
-  72:Display/MenuManager.cpp ****                 if (_outData.hysteresis < 0) _outData.hysteresis = 0;
-  73:Display/MenuManager.cpp ****                 if (_outData.hysteresis > 20) _outData.hysteresis = 20;
-  74:Display/MenuManager.cpp ****                 break;
-  75:Display/MenuManager.cpp ****             case FILTER_TYPE: 
-  76:Display/MenuManager.cpp ****                 
-  77:Display/MenuManager.cpp ****                 _outData.filter_type += current_rotation;
-  78:Display/MenuManager.cpp ****                 if (_outData.filter_type < 0) _outData.filter_type = 0;
-  79:Display/MenuManager.cpp ****                 if (_outData.filter_type > 3) _outData.filter_type = 3;
-  80:Display/MenuManager.cpp ****                 break;
-  81:Display/MenuManager.cpp **** 
-  82:Display/MenuManager.cpp ****             case ROOT:
-  83:Display/MenuManager.cpp ****                 _outData.root += current_rotation;
-  84:Display/MenuManager.cpp ****                 if (_outData.root < 0) _outData.root = 0;
-  85:Display/MenuManager.cpp ****                 if (_outData.root > 11) _outData.root = 11;
-  86:Display/MenuManager.cpp ****                 break;
-  87:Display/MenuManager.cpp **** 
-  88:Display/MenuManager.cpp ****             case SCALE:
-  89:Display/MenuManager.cpp ****                 _outData.scale += current_rotation;
-  90:Display/MenuManager.cpp ****                 if (_outData.scale < 0) _outData.scale = 0;
-  91:Display/MenuManager.cpp ****                 if (_outData.scale > 6) _outData.scale = 6;
-  92:Display/MenuManager.cpp ****                 break;
-  93:Display/MenuManager.cpp **** 
-  94:Display/MenuManager.cpp ****             case OCTAVE:
-  95:Display/MenuManager.cpp ****                 _outData.octave += current_rotation;
-  96:Display/MenuManager.cpp ****                 if (_outData.octave < 1) _outData.octave = 1;
-  97:Display/MenuManager.cpp ****                 if (_outData.octave > 8) _outData.octave = 8;
-  98:Display/MenuManager.cpp ****                 break;
-  99:Display/MenuManager.cpp **** 
- 100:Display/MenuManager.cpp ****             case PRESETS_HUB:
- 101:Display/MenuManager.cpp ****                 _outData.preset += current_rotation;
- 102:Display/MenuManager.cpp ****                 if (_outData.preset < 0) _outData.preset = 0;
- 103:Display/MenuManager.cpp ****                 if (_outData.preset > 2) _outData.preset = 2;
- 104:Display/MenuManager.cpp ****                 break;
- 105:Display/MenuManager.cpp **** 
- 106:Display/MenuManager.cpp ****             default:
- 107:Display/MenuManager.cpp ****                 break; 
- 108:Display/MenuManager.cpp ****         }
- 109:Display/MenuManager.cpp ****     }
- 110:Display/MenuManager.cpp **** 
- 111:Display/MenuManager.cpp ****     // --- 3. RETE DI STATO FUTURO (Next State Logic) ---
- 112:Display/MenuManager.cpp ****     if (current_rotation != 0) {
- 113:Display/MenuManager.cpp ****         switch (_outData.state) {
- 150              		.loc 1 113 9 view .LVU46
- 114:Display/MenuManager.cpp ****             case MAIN_MENU:
- 115:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
- 116:Display/MenuManager.cpp ****                     if (_next_state == CALIBRATION_HUB) _next_state = SCALES_HUB;
- 117:Display/MenuManager.cpp ****                     else if (_next_state == SCALES_HUB) _next_state = PRESETS_HUB;
- 118:Display/MenuManager.cpp ****                     else if (_next_state == PRESETS_HUB) _next_state = BACK;
- 119:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = CALIBRATION_HUB;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 6
+  54:Display/MenuManager.cpp ****             case SCALES_HUB:      _next_state = ROOT; break;
+  55:Display/MenuManager.cpp ****             case THRESHOLDS_HUB:  _next_state = TOUCHTHS_VALUE; break;
+  56:Display/MenuManager.cpp ****             default: break; 
+  57:Display/MenuManager.cpp ****         }
+  58:Display/MenuManager.cpp **** 
+  59:Display/MenuManager.cpp ****         // Dopo un click, ignoriamo eventuali rotazioni accidentali nello stesso istante
+  60:Display/MenuManager.cpp ****         current_rotation = 0; 
+  61:Display/MenuManager.cpp ****     }
+  62:Display/MenuManager.cpp **** 
+  63:Display/MenuManager.cpp ****     // --- 2. RETE DELLE USCITE (Output Logic) ---
+  64:Display/MenuManager.cpp ****     if (current_rotation != 0) {
+ 155              		.loc 1 64 5 is_stmt 1 view .LVU50
+ 156 001a 8DB9     		cbnz	r5, .L41
+ 157 001c 2B46     		mov	r3, r5
+ 158              	.LVL6:
+ 159              	.L9:
+  65:Display/MenuManager.cpp ****         switch (_outData.state) {
+  66:Display/MenuManager.cpp ****             case DELTA:
+  67:Display/MenuManager.cpp ****                 _outData.delta += (current_rotation * 5.0f);
+  68:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
+  69:Display/MenuManager.cpp ****                 if (_outData.delta > 100.0f) _outData.delta = 100.0f;
+  70:Display/MenuManager.cpp ****                 break;
+  71:Display/MenuManager.cpp **** 
+  72:Display/MenuManager.cpp ****             case CURVE:
+  73:Display/MenuManager.cpp ****                 _outData.curve += (current_rotation * 0.1f);
+  74:Display/MenuManager.cpp ****                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
+  75:Display/MenuManager.cpp ****                 if (_outData.curve > 2.0f) _outData.curve = 2.0f;    
+  76:Display/MenuManager.cpp ****                 break;
+  77:Display/MenuManager.cpp ****             
+  78:Display/MenuManager.cpp ****             case HYSTERESIS:
+  79:Display/MenuManager.cpp ****                 _outData.hysteresis += (current_rotation * 1);
+  80:Display/MenuManager.cpp ****                 if (_outData.hysteresis < 0) _outData.hysteresis = 0;
+  81:Display/MenuManager.cpp ****                 if (_outData.hysteresis > 20) _outData.hysteresis = 20;
+  82:Display/MenuManager.cpp ****                 break;
+  83:Display/MenuManager.cpp ****             
+  84:Display/MenuManager.cpp ****             case FILTER_TYPE:                 
+  85:Display/MenuManager.cpp ****                 _outData.filter_type += current_rotation;
+  86:Display/MenuManager.cpp ****                 if (_outData.filter_type < 0) _outData.filter_type = 0;
+  87:Display/MenuManager.cpp ****                 if (_outData.filter_type > 3) _outData.filter_type = 3;
+  88:Display/MenuManager.cpp ****                 break;
+  89:Display/MenuManager.cpp **** 
+  90:Display/MenuManager.cpp ****             case ROOT:
+  91:Display/MenuManager.cpp ****                 _outData.root += current_rotation;
+  92:Display/MenuManager.cpp ****                 if (_outData.root < 0) _outData.root = 0;
+  93:Display/MenuManager.cpp ****                 if (_outData.root > 11) _outData.root = 11;
+  94:Display/MenuManager.cpp ****                 break;
+  95:Display/MenuManager.cpp **** 
+  96:Display/MenuManager.cpp ****             case SCALE:
+  97:Display/MenuManager.cpp ****                 _outData.scale += current_rotation;
+  98:Display/MenuManager.cpp ****                 if (_outData.scale < 0) _outData.scale = 0;
+  99:Display/MenuManager.cpp ****                 if (_outData.scale > 6) _outData.scale = 6;
+ 100:Display/MenuManager.cpp ****                 break;
+ 101:Display/MenuManager.cpp **** 
+ 102:Display/MenuManager.cpp ****             case OCTAVE:
+ 103:Display/MenuManager.cpp ****                 _outData.octave += current_rotation;
+ 104:Display/MenuManager.cpp ****                 if (_outData.octave < 1) _outData.octave = 1;
+ 105:Display/MenuManager.cpp ****                 if (_outData.octave > 8) _outData.octave = 8;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 6
 
 
- 120:Display/MenuManager.cpp ****                 } else {
- 121:Display/MenuManager.cpp ****                     if (_next_state == CALIBRATION_HUB) _next_state = BACK;
- 122:Display/MenuManager.cpp ****                     else if (_next_state == SCALES_HUB) _next_state = CALIBRATION_HUB;
- 123:Display/MenuManager.cpp ****                     else if (_next_state == PRESETS_HUB) _next_state = SCALES_HUB;
- 124:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = PRESETS_HUB;
- 125:Display/MenuManager.cpp ****                 }
+ 106:Display/MenuManager.cpp ****                 break;
+ 107:Display/MenuManager.cpp **** 
+ 108:Display/MenuManager.cpp ****             case TOUCHTHS_VALUE:
+ 109:Display/MenuManager.cpp ****                 _outData.touchths_value += current_rotation;
+ 110:Display/MenuManager.cpp ****                 // check that value fits in an 8 bit register 
+ 111:Display/MenuManager.cpp ****                 if (_outData.touchths_value < 0) _outData.touchths_value = 0;
+ 112:Display/MenuManager.cpp ****                 if (_outData.touchths_value > 255) _outData.touchths_value = 255;
+ 113:Display/MenuManager.cpp ****                 break;
+ 114:Display/MenuManager.cpp **** 
+ 115:Display/MenuManager.cpp ****             case RELTHS_VALUE:
+ 116:Display/MenuManager.cpp ****                 _outData.relths_value += current_rotation;
+ 117:Display/MenuManager.cpp ****                 // check that value fits in an 8 bit register 
+ 118:Display/MenuManager.cpp ****                 if (_outData.relths_value < 0) _outData.relths_value = 0;
+ 119:Display/MenuManager.cpp ****                 if (_outData.relths_value > 255) _outData.relths_value = 255;
+ 120:Display/MenuManager.cpp ****                 break;    
+ 121:Display/MenuManager.cpp **** 
+ 122:Display/MenuManager.cpp ****             case PRESETS_HUB:
+ 123:Display/MenuManager.cpp ****                 _outData.preset += current_rotation;
+ 124:Display/MenuManager.cpp ****                 if (_outData.preset < 0) _outData.preset = 0;
+ 125:Display/MenuManager.cpp ****                 if (_outData.preset > 2) _outData.preset = 2;
  126:Display/MenuManager.cpp ****                 break;
  127:Display/MenuManager.cpp **** 
- 128:Display/MenuManager.cpp ****             case CALIBRATION_HUB:
- 129:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
- 130:Display/MenuManager.cpp ****                     if (_next_state == DELTA)                _next_state = CURVE;
- 131:Display/MenuManager.cpp ****                     else if (_next_state == CURVE)           _next_state = HYSTERESIS;
- 132:Display/MenuManager.cpp ****                     else if (_next_state == HYSTERESIS)      _next_state = FILTER_TYPE; 
- 133:Display/MenuManager.cpp ****                     else if (_next_state == FILTER_TYPE)     _next_state = BACK;        
- 134:Display/MenuManager.cpp ****                     else if (_next_state == BACK)            _next_state = DELTA;
- 135:Display/MenuManager.cpp ****                 } else {
- 136:Display/MenuManager.cpp ****                     if (_next_state == DELTA)                _next_state = BACK;
- 137:Display/MenuManager.cpp ****                     else if (_next_state == CURVE)           _next_state = DELTA;
- 138:Display/MenuManager.cpp ****                     else if (_next_state == HYSTERESIS)      _next_state = CURVE;
- 139:Display/MenuManager.cpp ****                     else if (_next_state == FILTER_TYPE)     _next_state = HYSTERESIS; 
- 140:Display/MenuManager.cpp ****                     else if (_next_state == BACK)            _next_state = FILTER_TYPE; 
- 141:Display/MenuManager.cpp ****                 }
- 142:Display/MenuManager.cpp ****                 break;
- 143:Display/MenuManager.cpp **** 
- 144:Display/MenuManager.cpp ****             case SCALES_HUB:
- 145:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
- 146:Display/MenuManager.cpp ****                     if (_next_state == ROOT) _next_state = SCALE;
- 147:Display/MenuManager.cpp ****                     else if (_next_state == SCALE) _next_state = OCTAVE;
- 148:Display/MenuManager.cpp ****                     else if (_next_state == OCTAVE) _next_state = BACK;
- 149:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = ROOT;
- 150:Display/MenuManager.cpp ****                 } else {
- 151:Display/MenuManager.cpp ****                     if (_next_state == ROOT) _next_state = BACK;
- 152:Display/MenuManager.cpp ****                     else if (_next_state == SCALE) _next_state = ROOT;
- 153:Display/MenuManager.cpp ****                     else if (_next_state == OCTAVE) _next_state = SCALE;
- 154:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = OCTAVE;
- 155:Display/MenuManager.cpp ****                 }
- 156:Display/MenuManager.cpp ****                 break;
- 157:Display/MenuManager.cpp ****                 
- 158:Display/MenuManager.cpp ****             default:
- 159:Display/MenuManager.cpp ****                 break;
- 160:Display/MenuManager.cpp ****         }
- 161:Display/MenuManager.cpp ****     }
- 162:Display/MenuManager.cpp **** 
- 163:Display/MenuManager.cpp ****     // Preparazione statica delle vie d'uscita per le Foglie
- 164:Display/MenuManager.cpp ****     if (_outData.state == DELTA || _outData.state == CURVE || _outData.state == HYSTERESIS || _outD
- 151              		.loc 1 164 92 is_stmt 0 view .LVU47
- 152 001e 5A1F     		subs	r2, r3, #5
- 153 0020 D2B2     		uxtb	r2, r2
- 154              		.loc 1 164 5 is_stmt 1 view .LVU48
- 155 0022 032A     		cmp	r2, #3
- 156 0024 46D8     		bhi	.L80
- 157              		.loc 1 164 126 discriminator 1 view .LVU49
- 158              		.loc 1 164 138 is_stmt 0 discriminator 1 view .LVU50
- 159 0026 0222     		movs	r2, #2
- 160 0028 1346     		mov	r3, r2
- 161 002a 6270     		strb	r2, [r4, #1]
- 165:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 7
+ 128:Display/MenuManager.cpp ****             default:
+ 129:Display/MenuManager.cpp ****                 break; 
+ 130:Display/MenuManager.cpp ****         }
+ 131:Display/MenuManager.cpp ****     }
+ 132:Display/MenuManager.cpp **** 
+ 133:Display/MenuManager.cpp ****     // --- 3. RETE DI STATO FUTURO (Next State Logic) ---
+ 134:Display/MenuManager.cpp ****     if (current_rotation != 0) {
+ 135:Display/MenuManager.cpp ****         switch (_outData.state) {
+ 136:Display/MenuManager.cpp ****             case MAIN_MENU:
+ 137:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
+ 138:Display/MenuManager.cpp ****                     if (_next_state == CALIBRATION_HUB) _next_state = SCALES_HUB;
+ 139:Display/MenuManager.cpp ****                     else if (_next_state == SCALES_HUB) _next_state = PRESETS_HUB;
+ 140:Display/MenuManager.cpp ****                     else if (_next_state == PRESETS_HUB) _next_state = THRESHOLDS_HUB;
+ 141:Display/MenuManager.cpp ****                     else if (_next_state == THRESHOLDS_HUB) _next_state = BACK;
+ 142:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = CALIBRATION_HUB;
+ 143:Display/MenuManager.cpp ****                 } else {
+ 144:Display/MenuManager.cpp ****                     if (_next_state == CALIBRATION_HUB) _next_state = BACK;
+ 145:Display/MenuManager.cpp ****                     else if (_next_state == SCALES_HUB) _next_state = CALIBRATION_HUB;
+ 146:Display/MenuManager.cpp ****                     else if (_next_state == PRESETS_HUB) _next_state = SCALES_HUB;
+ 147:Display/MenuManager.cpp ****                     else if (_next_state == THRESHOLDS_HUB) _next_state = PRESETS_HUB;
+ 148:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = THRESHOLDS_HUB;
+ 149:Display/MenuManager.cpp ****                 }
+ 150:Display/MenuManager.cpp ****                 break;
+ 151:Display/MenuManager.cpp **** 
+ 152:Display/MenuManager.cpp ****             case CALIBRATION_HUB:
+ 153:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
+ 154:Display/MenuManager.cpp ****                     if (_next_state == DELTA)                _next_state = CURVE;
+ 155:Display/MenuManager.cpp ****                     else if (_next_state == CURVE)           _next_state = HYSTERESIS;
+ 156:Display/MenuManager.cpp ****                     else if (_next_state == HYSTERESIS)      _next_state = FILTER_TYPE; 
+ 157:Display/MenuManager.cpp ****                     else if (_next_state == FILTER_TYPE)     _next_state = BACK;        
+ 158:Display/MenuManager.cpp ****                     else if (_next_state == BACK)            _next_state = DELTA;
+ 159:Display/MenuManager.cpp ****                 } else {
+ 160:Display/MenuManager.cpp ****                     if (_next_state == DELTA)                _next_state = BACK;
+ 161:Display/MenuManager.cpp ****                     else if (_next_state == CURVE)           _next_state = DELTA;
+ 162:Display/MenuManager.cpp ****                     else if (_next_state == HYSTERESIS)      _next_state = CURVE;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 7
 
 
- 162              		.loc 1 165 5 is_stmt 1 discriminator 1 view .LVU51
- 163              	.L81:
- 166:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
+ 163:Display/MenuManager.cpp ****                     else if (_next_state == FILTER_TYPE)     _next_state = HYSTERESIS; 
+ 164:Display/MenuManager.cpp ****                     else if (_next_state == BACK)            _next_state = FILTER_TYPE; 
+ 165:Display/MenuManager.cpp ****                 }
+ 166:Display/MenuManager.cpp ****                 break;
  167:Display/MenuManager.cpp **** 
- 168:Display/MenuManager.cpp ****     // --- 4. PREPARAZIONE DATI IN USCITA ---
- 169:Display/MenuManager.cpp ****     _outData.cursor_state = _next_state;
- 164              		.loc 1 169 5 view .LVU52
- 165              		.loc 1 169 27 is_stmt 0 view .LVU53
- 166 002c 6371     		strb	r3, [r4, #5]
- 170:Display/MenuManager.cpp **** }
- 167              		.loc 1 170 1 view .LVU54
- 168 002e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
- 169              	.LVL7:
- 170              	.L7:
-  32:Display/MenuManager.cpp ****         // Logica per risalire l'albero quando il cursore è su BACK
- 171              		.loc 1 32 10 is_stmt 1 view .LVU55
- 172 0030 4FB1     		cbz	r7, .L10
-  34:Display/MenuManager.cpp ****             if (_outData.state == MAIN_MENU) _outData.state = PLAYMODE;
- 173              		.loc 1 34 9 view .LVU56
-  34:Display/MenuManager.cpp ****             if (_outData.state == MAIN_MENU) _outData.state = PLAYMODE;
- 174              		.loc 1 34 13 is_stmt 0 view .LVU57
- 175 0032 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
-  34:Display/MenuManager.cpp ****             if (_outData.state == MAIN_MENU) _outData.state = PLAYMODE;
- 176              		.loc 1 34 9 view .LVU58
- 177 0034 0C2B     		cmp	r3, #12
- 178 0036 12D0     		beq	.L112
-  40:Display/MenuManager.cpp ****         }
- 179              		.loc 1 40 13 is_stmt 1 view .LVU59
-  40:Display/MenuManager.cpp ****         }
- 180              		.loc 1 40 28 is_stmt 0 view .LVU60
- 181 0038 2371     		strb	r3, [r4, #4]
- 182              	.L13:
-  44:Display/MenuManager.cpp ****             case PLAYMODE:        _next_state = MAIN_MENU; break;
- 183              		.loc 1 44 9 is_stmt 1 view .LVU61
- 184 003a 032B     		cmp	r3, #3
- 185 003c EFD8     		bhi	.L34
- 186 003e DFE803F0 		tbb	[pc, r3]
- 187              	.L16:
- 188 0042 52       		.byte	(.L19-.L16)/2
- 189 0043 4F       		.byte	(.L95-.L16)/2
- 190 0044 36       		.byte	(.L94-.L16)/2
- 191 0045 28       		.byte	(.L99-.L16)/2
- 192              		.p2align 1
- 193              	.L10:
-  57:Display/MenuManager.cpp ****         switch (_outData.state) {
- 194              		.loc 1 57 5 view .LVU62
-  58:Display/MenuManager.cpp ****             case DELTA:
- 195              		.loc 1 58 26 is_stmt 0 view .LVU63
- 196 0046 2379     		ldrb	r3, [r4, #4]	@ zero_extendqisi2
-  57:Display/MenuManager.cpp ****         switch (_outData.state) {
- 197              		.loc 1 57 5 view .LVU64
- 198 0048 002D     		cmp	r5, #0
- 199 004a E8D0     		beq	.L34
-  58:Display/MenuManager.cpp ****             case DELTA:
- 200              		.loc 1 58 9 is_stmt 1 view .LVU65
- 201 004c 1A1F     		subs	r2, r3, #4
- 202 004e 072A     		cmp	r2, #7
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 8
+ 168:Display/MenuManager.cpp ****             case SCALES_HUB:
+ 169:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
+ 170:Display/MenuManager.cpp ****                     if (_next_state == ROOT) _next_state = SCALE;
+ 171:Display/MenuManager.cpp ****                     else if (_next_state == SCALE) _next_state = OCTAVE;
+ 172:Display/MenuManager.cpp ****                     else if (_next_state == OCTAVE) _next_state = BACK;
+ 173:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = ROOT;
+ 174:Display/MenuManager.cpp ****                 } else {
+ 175:Display/MenuManager.cpp ****                     if (_next_state == ROOT) _next_state = BACK;
+ 176:Display/MenuManager.cpp ****                     else if (_next_state == SCALE) _next_state = ROOT;
+ 177:Display/MenuManager.cpp ****                     else if (_next_state == OCTAVE) _next_state = SCALE;
+ 178:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = OCTAVE;
+ 179:Display/MenuManager.cpp ****                 }
+ 180:Display/MenuManager.cpp ****                 break;
+ 181:Display/MenuManager.cpp ****                 
+ 182:Display/MenuManager.cpp ****             case THRESHOLDS_HUB:
+ 183:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
+ 184:Display/MenuManager.cpp ****                     if (_next_state == TOUCHTHS_VALUE) _next_state = RELTHS_VALUE;
+ 185:Display/MenuManager.cpp ****                     else if (_next_state == RELTHS_VALUE) _next_state = BACK;
+ 186:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = TOUCHTHS_VALUE;
+ 187:Display/MenuManager.cpp ****                 } else {
+ 188:Display/MenuManager.cpp ****                     if (_next_state == TOUCHTHS_VALUE) _next_state = BACK;
+ 189:Display/MenuManager.cpp ****                     else if (_next_state == RELTHS_VALUE) _next_state = TOUCHTHS_VALUE;
+ 190:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = RELTHS_VALUE;
+ 191:Display/MenuManager.cpp ****                 }
+ 192:Display/MenuManager.cpp **** 
+ 193:Display/MenuManager.cpp ****             default:
+ 194:Display/MenuManager.cpp ****                 break;
+ 195:Display/MenuManager.cpp ****         }
+ 196:Display/MenuManager.cpp ****     }
+ 197:Display/MenuManager.cpp **** 
+ 198:Display/MenuManager.cpp ****     // Preparazione statica delle vie d'uscita per le Foglie
+ 199:Display/MenuManager.cpp ****     if (_outData.state == DELTA || _outData.state == CURVE || _outData.state == HYSTERESIS || _outD
+ 200:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
+ 160              		.loc 1 200 5 view .LVU51
+ 161 001e A3F10A02 		sub	r2, r3, #10
+ 162 0022 022A     		cmp	r2, #2
+ 163 0024 12D8     		bhi	.L100
+ 164              		.loc 1 200 88 discriminator 1 view .LVU52
+ 165              		.loc 1 200 100 is_stmt 0 discriminator 1 view .LVU53
+ 166 0026 0322     		movs	r2, #3
+ 167 0028 1346     		mov	r3, r2
+ 168 002a 6270     		strb	r2, [r4, #1]
+ 201:Display/MenuManager.cpp ****     if (_outData.state == TOUCHTHS_VALUE || _outData.state == RELTHS_VALUE) _next_state = THRESHOLD
+ 169              		.loc 1 201 5 is_stmt 1 discriminator 1 view .LVU54
+ 170              	.L101:
+ 202:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
+ 203:Display/MenuManager.cpp **** 
+ 204:Display/MenuManager.cpp ****     // --- 4. PREPARAZIONE DATI IN USCITA ---
+ 205:Display/MenuManager.cpp ****     _outData.cursor_state = _next_state;
+ 171              		.loc 1 205 5 view .LVU55
+ 172              		.loc 1 205 27 is_stmt 0 view .LVU56
+ 173 002c 6371     		strb	r3, [r4, #5]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 8
 
 
- 203 0050 11D8     		bhi	.L22
- 204 0052 DFE802F0 		tbb	[pc, r2]
- 205              	.L24:
- 206 0056 4B       		.byte	(.L31-.L24)/2
- 207 0057 53       		.byte	(.L30-.L24)/2
- 208 0058 65       		.byte	(.L29-.L24)/2
- 209 0059 81       		.byte	(.L28-.L24)/2
- 210 005a 89       		.byte	(.L27-.L24)/2
- 211 005b 99       		.byte	(.L26-.L24)/2
- 212 005c 91       		.byte	(.L25-.L24)/2
- 213 005d A1       		.byte	(.L23-.L24)/2
- 214              		.p2align 1
- 215              	.L112:
-  35:Display/MenuManager.cpp ****             else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.
- 216              		.loc 1 35 13 view .LVU66
-  35:Display/MenuManager.cpp ****             else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.
- 217              		.loc 1 35 26 is_stmt 0 view .LVU67
- 218 005e 2379     		ldrb	r3, [r4, #4]	@ zero_extendqisi2
-  35:Display/MenuManager.cpp ****             else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.
- 219              		.loc 1 35 13 view .LVU68
- 220 0060 012B     		cmp	r3, #1
- 221 0062 00F0A280 		beq	.L113
-  36:Display/MenuManager.cpp ****         } 
- 222              		.loc 1 36 18 is_stmt 1 view .LVU69
- 223 0066 9A1E     		subs	r2, r3, #2
- 224 0068 022A     		cmp	r2, #2
- 225 006a E6D8     		bhi	.L13
-  36:Display/MenuManager.cpp ****         } 
- 226              		.loc 1 36 122 discriminator 1 view .LVU70
-  36:Display/MenuManager.cpp ****         } 
- 227              		.loc 1 36 137 is_stmt 0 discriminator 1 view .LVU71
- 228 006c 0122     		movs	r2, #1
-  46:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
- 229              		.loc 1 46 47 discriminator 1 view .LVU72
- 230 006e 0223     		movs	r3, #2
-  36:Display/MenuManager.cpp ****         } 
- 231              		.loc 1 36 137 discriminator 1 view .LVU73
- 232 0070 2271     		strb	r2, [r4, #4]
-  44:Display/MenuManager.cpp ****             case PLAYMODE:        _next_state = MAIN_MENU; break;
- 233              		.loc 1 44 9 is_stmt 1 discriminator 1 view .LVU74
-  46:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
- 234              		.loc 1 46 13 discriminator 1 view .LVU75
-  46:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
- 235              		.loc 1 46 35 discriminator 1 view .LVU76
-  46:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
- 236              		.loc 1 46 47 is_stmt 0 discriminator 1 view .LVU77
- 237 0072 6370     		strb	r3, [r4, #1]
-  46:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
- 238              		.loc 1 46 66 is_stmt 1 discriminator 1 view .LVU78
- 239              	.LVL8:
- 112:Display/MenuManager.cpp ****         switch (_outData.state) {
- 240              		.loc 1 112 5 discriminator 1 view .LVU79
- 164:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
- 241              		.loc 1 164 5 discriminator 1 view .LVU80
- 165:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
- 242              		.loc 1 165 5 discriminator 1 view .LVU81
- 166:Display/MenuManager.cpp **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 9
+ 206:Display/MenuManager.cpp **** }
+ 174              		.loc 1 206 1 view .LVU57
+ 175 002e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 176              	.LVL7:
+ 177              	.L38:
+ 122:Display/MenuManager.cpp ****                 _outData.preset += current_rotation;
+ 178              		.loc 1 122 13 is_stmt 1 view .LVU58
+ 123:Display/MenuManager.cpp ****                 if (_outData.preset < 0) _outData.preset = 0;
+ 179              		.loc 1 123 17 view .LVU59
+ 124:Display/MenuManager.cpp ****                 if (_outData.preset > 2) _outData.preset = 2;
+ 180              		.loc 1 124 17 view .LVU60
+ 123:Display/MenuManager.cpp ****                 if (_outData.preset < 0) _outData.preset = 0;
+ 181              		.loc 1 123 33 is_stmt 0 view .LVU61
+ 182 0030 E26A     		ldr	r2, [r4, #44]
+ 124:Display/MenuManager.cpp ****                 if (_outData.preset > 2) _outData.preset = 2;
+ 183              		.loc 1 124 17 view .LVU62
+ 184 0032 AA18     		adds	r2, r5, r2
+ 185 0034 00F1B981 		bmi	.L135
+ 125:Display/MenuManager.cpp ****                 break;
+ 186              		.loc 1 125 17 is_stmt 1 view .LVU63
+ 187 0038 022A     		cmp	r2, #2
+ 125:Display/MenuManager.cpp ****                 break;
+ 188              		.loc 1 125 42 view .LVU64
+ 125:Display/MenuManager.cpp ****                 break;
+ 189              		.loc 1 125 58 is_stmt 0 view .LVU65
+ 190 003a C8BF     		it	gt
+ 191 003c 0222     		movgt	r2, #2
+ 192 003e E262     		str	r2, [r4, #44]
+ 193              	.LVL8:
+ 194              	.L41:
+ 135:Display/MenuManager.cpp ****             case MAIN_MENU:
+ 195              		.loc 1 135 9 is_stmt 1 view .LVU66
+ 199:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
+ 196              		.loc 1 199 92 is_stmt 0 view .LVU67
+ 197 0040 9A1F     		subs	r2, r3, #6
+ 198 0042 D2B2     		uxtb	r2, r2
+ 199:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
+ 199              		.loc 1 199 5 is_stmt 1 view .LVU68
+ 200 0044 032A     		cmp	r2, #3
+ 201 0046 EAD8     		bhi	.L9
+ 202              	.L120:
+ 199:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
+ 203              		.loc 1 199 126 discriminator 1 view .LVU69
+ 199:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
+ 204              		.loc 1 199 138 is_stmt 0 discriminator 1 view .LVU70
+ 205 0048 0222     		movs	r2, #2
+ 206 004a 6270     		strb	r2, [r4, #1]
+ 200:Display/MenuManager.cpp ****     if (_outData.state == TOUCHTHS_VALUE || _outData.state == RELTHS_VALUE) _next_state = THRESHOLD
+ 207              		.loc 1 200 5 is_stmt 1 discriminator 1 view .LVU71
+ 208              	.L100:
+ 201:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
+ 209              		.loc 1 201 5 view .LVU72
+ 210 004c A3F10D02 		sub	r2, r3, #13
+ 211 0050 012A     		cmp	r2, #1
+ 212 0052 21D8     		bhi	.L102
+ 201:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
+ 213              		.loc 1 201 77 discriminator 1 view .LVU73
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 9
 
 
- 243              		.loc 1 166 5 discriminator 1 view .LVU82
- 244 0074 0FE0     		b	.L9
- 245              	.LVL9:
- 246              	.L22:
- 112:Display/MenuManager.cpp ****         switch (_outData.state) {
- 247              		.loc 1 112 5 view .LVU83
- 113:Display/MenuManager.cpp ****             case MAIN_MENU:
- 248              		.loc 1 113 9 view .LVU84
- 249 0076 022B     		cmp	r3, #2
- 250 0078 0FD0     		beq	.L53
- 251 007a 032B     		cmp	r3, #3
- 252 007c 24D1     		bne	.L114
- 144:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
- 253              		.loc 1 144 13 view .LVU85
- 145:Display/MenuManager.cpp ****                     if (_next_state == ROOT) _next_state = SCALE;
- 254              		.loc 1 145 17 view .LVU86
- 255 007e 002D     		cmp	r5, #0
- 146:Display/MenuManager.cpp ****                     else if (_next_state == SCALE) _next_state = OCTAVE;
- 256              		.loc 1 146 25 is_stmt 0 view .LVU87
- 257 0080 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
- 145:Display/MenuManager.cpp ****                     if (_next_state == ROOT) _next_state = SCALE;
- 258              		.loc 1 145 17 view .LVU88
- 259 0082 00F3DB80 		bgt	.L115
- 151:Display/MenuManager.cpp ****                     else if (_next_state == SCALE) _next_state = ROOT;
- 260              		.loc 1 151 21 is_stmt 1 view .LVU89
- 261 0086 092B     		cmp	r3, #9
- 262 0088 00F0F380 		beq	.L106
- 152:Display/MenuManager.cpp ****                     else if (_next_state == OCTAVE) _next_state = SCALE;
- 263              		.loc 1 152 26 view .LVU90
- 264 008c 0A2B     		cmp	r3, #10
- 265 008e 40F0DF80 		bne	.L78
- 266              	.L99:
- 152:Display/MenuManager.cpp ****                     else if (_next_state == OCTAVE) _next_state = SCALE;
- 267              		.loc 1 152 52 discriminator 1 view .LVU91
- 152:Display/MenuManager.cpp ****                     else if (_next_state == OCTAVE) _next_state = SCALE;
- 268              		.loc 1 152 64 is_stmt 0 discriminator 1 view .LVU92
- 269 0092 0923     		movs	r3, #9
- 270 0094 6370     		strb	r3, [r4, #1]
- 164:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
- 271              		.loc 1 164 5 is_stmt 1 discriminator 1 view .LVU93
- 165:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
- 272              		.loc 1 165 5 discriminator 1 view .LVU94
- 166:Display/MenuManager.cpp **** 
- 273              		.loc 1 166 5 discriminator 1 view .LVU95
- 274              	.LVL10:
- 275              	.L9:
- 169:Display/MenuManager.cpp **** }
- 276              		.loc 1 169 29 is_stmt 0 view .LVU96
- 277 0096 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
- 278 0098 C8E7     		b	.L81
- 279              	.LVL11:
- 280              	.L53:
- 128:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
- 281              		.loc 1 128 13 is_stmt 1 view .LVU97
- 129:Display/MenuManager.cpp ****                     if (_next_state == DELTA)                _next_state = CURVE;
- 282              		.loc 1 129 17 view .LVU98
- 283 009a 002D     		cmp	r5, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 10
+ 201:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
+ 214              		.loc 1 201 89 is_stmt 0 discriminator 1 view .LVU74
+ 215 0054 0522     		movs	r2, #5
+ 216 0056 1346     		mov	r3, r2
+ 217 0058 6270     		strb	r2, [r4, #1]
+ 202:Display/MenuManager.cpp **** 
+ 218              		.loc 1 202 5 is_stmt 1 discriminator 1 view .LVU75
+ 205:Display/MenuManager.cpp **** }
+ 219              		.loc 1 205 5 discriminator 1 view .LVU76
+ 205:Display/MenuManager.cpp **** }
+ 220              		.loc 1 205 27 is_stmt 0 discriminator 1 view .LVU77
+ 221 005a 6371     		strb	r3, [r4, #5]
+ 222              		.loc 1 206 1 discriminator 1 view .LVU78
+ 223 005c F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 224              	.LVL9:
+ 225              	.L7:
+  35:Display/MenuManager.cpp ****         // Logica per risalire l'albero quando il cursore è su BACK
+ 226              		.loc 1 35 10 is_stmt 1 view .LVU79
+ 227 005e 1FB3     		cbz	r7, .L10
+  37:Display/MenuManager.cpp ****             if (_outData.state == MAIN_MENU) _outData.state = PLAYMODE;
+ 228              		.loc 1 37 9 view .LVU80
+  37:Display/MenuManager.cpp ****             if (_outData.state == MAIN_MENU) _outData.state = PLAYMODE;
+ 229              		.loc 1 37 13 is_stmt 0 view .LVU81
+ 230 0060 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
+  37:Display/MenuManager.cpp ****             if (_outData.state == MAIN_MENU) _outData.state = PLAYMODE;
+ 231              		.loc 1 37 9 view .LVU82
+ 232 0062 0F2B     		cmp	r3, #15
+ 233 0064 00F09B80 		beq	.L136
+  42:Display/MenuManager.cpp **** 
+ 234              		.loc 1 42 14 is_stmt 1 view .LVU83
+  42:Display/MenuManager.cpp **** 
+ 235              		.loc 1 42 51 is_stmt 0 view .LVU84
+ 236 0068 2279     		ldrb	r2, [r4, #4]	@ zero_extendqisi2
+  42:Display/MenuManager.cpp **** 
+ 237              		.loc 1 42 14 view .LVU85
+ 238 006a 0D3A     		subs	r2, r2, #13
+ 239 006c 012A     		cmp	r2, #1
+ 240 006e 40F2A280 		bls	.L137
+  46:Display/MenuManager.cpp ****         }
+ 241              		.loc 1 46 13 is_stmt 1 view .LVU86
+  46:Display/MenuManager.cpp ****         }
+ 242              		.loc 1 46 28 is_stmt 0 view .LVU87
+ 243 0072 2371     		strb	r3, [r4, #4]
+  50:Display/MenuManager.cpp ****             case PLAYMODE:        _next_state = MAIN_MENU; break;
+ 244              		.loc 1 50 9 is_stmt 1 view .LVU88
+ 245 0074 052B     		cmp	r3, #5
+ 246 0076 E3D8     		bhi	.L41
+ 247 0078 01A2     		adr	r2, .L18
+ 248 007a 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 249 007e 00BF     		.p2align 2
+ 250              	.L18:
+ 251 0080 09030000 		.word	.L22+1
+ 252 0084 FD020000 		.word	.L21+1
+ 253 0088 C9020000 		.word	.L104+1
+ 254 008c CF020000 		.word	.L19+1
+ 255 0090 41000000 		.word	.L41+1
+ 256 0094 03030000 		.word	.L17+1
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 10
 
 
- 130:Display/MenuManager.cpp ****                     else if (_next_state == CURVE)           _next_state = HYSTERESIS;
- 284              		.loc 1 130 25 is_stmt 0 view .LVU99
- 285 009c 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
- 129:Display/MenuManager.cpp ****                     if (_next_state == DELTA)                _next_state = CURVE;
- 286              		.loc 1 129 17 view .LVU100
- 287 009e 00F3B180 		bgt	.L116
- 136:Display/MenuManager.cpp ****                     else if (_next_state == CURVE)           _next_state = DELTA;
- 288              		.loc 1 136 21 is_stmt 1 view .LVU101
- 289 00a2 062B     		cmp	r3, #6
- 290 00a4 00F0E580 		beq	.L106
- 137:Display/MenuManager.cpp ****                     else if (_next_state == HYSTERESIS)      _next_state = CURVE;
- 291              		.loc 1 137 26 view .LVU102
- 292 00a8 052B     		cmp	r3, #5
- 293 00aa 40F0B780 		bne	.L70
- 294              	.L94:
- 137:Display/MenuManager.cpp ****                     else if (_next_state == HYSTERESIS)      _next_state = CURVE;
- 295              		.loc 1 137 62 discriminator 1 view .LVU103
- 137:Display/MenuManager.cpp ****                     else if (_next_state == HYSTERESIS)      _next_state = CURVE;
- 296              		.loc 1 137 74 is_stmt 0 discriminator 1 view .LVU104
- 297 00ae 0623     		movs	r3, #6
- 298 00b0 6370     		strb	r3, [r4, #1]
- 299 00b2 F0E7     		b	.L9
- 300              	.LVL12:
- 301              	.L80:
- 165:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
- 302              		.loc 1 165 5 is_stmt 1 view .LVU105
- 303 00b4 A3F10902 		sub	r2, r3, #9
- 304 00b8 022A     		cmp	r2, #2
- 305 00ba 00F29B80 		bhi	.L82
- 165:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
- 306              		.loc 1 165 88 discriminator 1 view .LVU106
- 165:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
- 307              		.loc 1 165 100 is_stmt 0 discriminator 1 view .LVU107
- 308 00be 0322     		movs	r2, #3
- 309 00c0 1346     		mov	r3, r2
- 310 00c2 6270     		strb	r2, [r4, #1]
- 166:Display/MenuManager.cpp **** 
- 311              		.loc 1 166 5 is_stmt 1 discriminator 1 view .LVU108
- 169:Display/MenuManager.cpp **** }
- 312              		.loc 1 169 5 discriminator 1 view .LVU109
- 169:Display/MenuManager.cpp **** }
- 313              		.loc 1 169 27 is_stmt 0 discriminator 1 view .LVU110
- 314 00c4 6371     		strb	r3, [r4, #5]
- 315              		.loc 1 170 1 discriminator 1 view .LVU111
- 316 00c6 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
- 317              	.LVL13:
- 318              	.L114:
- 113:Display/MenuManager.cpp ****             case MAIN_MENU:
- 319              		.loc 1 113 9 view .LVU112
- 320 00c8 012B     		cmp	r3, #1
- 321 00ca A8D1     		bne	.L34
- 114:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
- 322              		.loc 1 114 13 is_stmt 1 view .LVU113
- 115:Display/MenuManager.cpp ****                     if (_next_state == CALIBRATION_HUB) _next_state = SCALES_HUB;
- 323              		.loc 1 115 17 view .LVU114
- 324 00cc 002D     		cmp	r5, #0
- 116:Display/MenuManager.cpp ****                     else if (_next_state == SCALES_HUB) _next_state = PRESETS_HUB;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 11
+ 257              	.LVL10:
+ 258              		.p2align 1
+ 259              	.L102:
+ 202:Display/MenuManager.cpp **** 
+ 260              		.loc 1 202 5 view .LVU89
+ 261 0098 042B     		cmp	r3, #4
+ 262 009a 40F09080 		bne	.L25
+ 202:Display/MenuManager.cpp **** 
+ 263              		.loc 1 202 40 discriminator 1 view .LVU90
+ 202:Display/MenuManager.cpp **** 
+ 264              		.loc 1 202 52 is_stmt 0 discriminator 1 view .LVU91
+ 265 009e 0122     		movs	r2, #1
+ 266 00a0 1346     		mov	r3, r2
+ 267 00a2 6270     		strb	r2, [r4, #1]
+ 205:Display/MenuManager.cpp **** }
+ 268              		.loc 1 205 5 is_stmt 1 discriminator 1 view .LVU92
+ 205:Display/MenuManager.cpp **** }
+ 269              		.loc 1 205 27 is_stmt 0 discriminator 1 view .LVU93
+ 270 00a4 6371     		strb	r3, [r4, #5]
+ 271              		.loc 1 206 1 discriminator 1 view .LVU94
+ 272 00a6 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 273              	.LVL11:
+ 274              	.L10:
+  64:Display/MenuManager.cpp ****         switch (_outData.state) {
+ 275              		.loc 1 64 5 is_stmt 1 view .LVU95
+  65:Display/MenuManager.cpp ****             case DELTA:
+ 276              		.loc 1 65 26 is_stmt 0 view .LVU96
+ 277 00a8 2379     		ldrb	r3, [r4, #4]	@ zero_extendqisi2
+  64:Display/MenuManager.cpp ****         switch (_outData.state) {
+ 278              		.loc 1 64 5 view .LVU97
+ 279 00aa 002D     		cmp	r5, #0
+ 280 00ac C8D0     		beq	.L41
+  65:Display/MenuManager.cpp ****             case DELTA:
+ 281              		.loc 1 65 9 is_stmt 1 view .LVU98
+ 282 00ae 1A1F     		subs	r2, r3, #4
+ 283 00b0 0A2A     		cmp	r2, #10
+ 284 00b2 19D8     		bhi	.L27
+ 285 00b4 01A1     		adr	r1, .L29
+ 286 00b6 51F822F0 		ldr	pc, [r1, r2, lsl #2]
+ 287 00ba 00BF     		.p2align 2
+ 288              	.L29:
+ 289 00bc 31000000 		.word	.L38+1
+ 290 00c0 E9000000 		.word	.L27+1
+ 291 00c4 C3010000 		.word	.L37+1
+ 292 00c8 FB010000 		.word	.L36+1
+ 293 00cc E9010000 		.word	.L35+1
+ 294 00d0 35020000 		.word	.L34+1
+ 295 00d4 47020000 		.word	.L33+1
+ 296 00d8 81020000 		.word	.L32+1
+ 297 00dc 6B020000 		.word	.L31+1
+ 298 00e0 93020000 		.word	.L30+1
+ 299 00e4 59020000 		.word	.L28+1
+ 300              		.p2align 1
+ 301              	.L27:
+ 302              	.LVL12:
+ 134:Display/MenuManager.cpp ****         switch (_outData.state) {
+ 303              		.loc 1 134 5 view .LVU99
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 11
 
 
- 325              		.loc 1 116 25 is_stmt 0 view .LVU115
- 326 00ce 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
- 115:Display/MenuManager.cpp ****                     if (_next_state == CALIBRATION_HUB) _next_state = SCALES_HUB;
- 327              		.loc 1 115 17 view .LVU116
- 328 00d0 00F3C980 		bgt	.L117
- 121:Display/MenuManager.cpp ****                     else if (_next_state == SCALES_HUB) _next_state = CALIBRATION_HUB;
- 329              		.loc 1 121 21 is_stmt 1 view .LVU117
- 330 00d4 022B     		cmp	r3, #2
- 331 00d6 00F0CC80 		beq	.L106
- 122:Display/MenuManager.cpp ****                     else if (_next_state == PRESETS_HUB) _next_state = SCALES_HUB;
- 332              		.loc 1 122 26 view .LVU118
- 333 00da 032B     		cmp	r3, #3
- 334 00dc 40F0CC80 		bne	.L61
- 335              	.L95:
- 122:Display/MenuManager.cpp ****                     else if (_next_state == PRESETS_HUB) _next_state = SCALES_HUB;
- 336              		.loc 1 122 57 discriminator 1 view .LVU119
- 122:Display/MenuManager.cpp ****                     else if (_next_state == PRESETS_HUB) _next_state = SCALES_HUB;
- 337              		.loc 1 122 69 is_stmt 0 discriminator 1 view .LVU120
- 338 00e0 0223     		movs	r3, #2
- 339 00e2 6370     		strb	r3, [r4, #1]
- 164:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
- 340              		.loc 1 164 5 is_stmt 1 discriminator 1 view .LVU121
- 165:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
- 341              		.loc 1 165 5 discriminator 1 view .LVU122
- 166:Display/MenuManager.cpp **** 
- 342              		.loc 1 166 5 discriminator 1 view .LVU123
- 343 00e4 D7E7     		b	.L9
- 344              	.LVL14:
- 345              	.L19:
-  45:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
- 346              		.loc 1 45 13 view .LVU124
-  45:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
- 347              		.loc 1 45 35 view .LVU125
-  45:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
- 348              		.loc 1 45 47 is_stmt 0 view .LVU126
- 349 00e6 0123     		movs	r3, #1
- 350 00e8 6370     		strb	r3, [r4, #1]
-  45:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
- 351              		.loc 1 45 60 is_stmt 1 view .LVU127
- 352              	.LVL15:
- 112:Display/MenuManager.cpp ****         switch (_outData.state) {
- 353              		.loc 1 112 5 view .LVU128
- 164:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
- 354              		.loc 1 164 5 view .LVU129
- 165:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
- 355              		.loc 1 165 5 view .LVU130
- 166:Display/MenuManager.cpp **** 
- 356              		.loc 1 166 5 view .LVU131
- 357 00ea D4E7     		b	.L9
- 358              	.LVL16:
- 359              	.L31:
- 100:Display/MenuManager.cpp ****                 _outData.preset += current_rotation;
- 360              		.loc 1 100 13 view .LVU132
- 101:Display/MenuManager.cpp ****                 if (_outData.preset < 0) _outData.preset = 0;
- 361              		.loc 1 101 17 view .LVU133
- 102:Display/MenuManager.cpp ****                 if (_outData.preset > 2) _outData.preset = 2;
- 362              		.loc 1 102 17 view .LVU134
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 12
+ 135:Display/MenuManager.cpp ****             case MAIN_MENU:
+ 304              		.loc 1 135 9 view .LVU100
+ 305 00e8 5A1E     		subs	r2, r3, #1
+ 306 00ea 042A     		cmp	r2, #4
+ 307 00ec A8D8     		bhi	.L41
+ 308 00ee 01A1     		adr	r1, .L65
+ 309 00f0 51F822F0 		ldr	pc, [r1, r2, lsl #2]
+ 310              		.p2align 2
+ 311              	.L65:
+ 312 00f4 27010000 		.word	.L68+1
+ 313 00f8 73010000 		.word	.L67+1
+ 314 00fc 4D010000 		.word	.L66+1
+ 315 0100 41000000 		.word	.L41+1
+ 316 0104 09010000 		.word	.L64+1
+ 317              		.p2align 1
+ 318              	.L64:
+ 182:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
+ 319              		.loc 1 182 13 view .LVU101
+ 183:Display/MenuManager.cpp ****                     if (_next_state == TOUCHTHS_VALUE) _next_state = RELTHS_VALUE;
+ 320              		.loc 1 183 17 view .LVU102
+ 321 0108 002D     		cmp	r5, #0
+ 184:Display/MenuManager.cpp ****                     else if (_next_state == RELTHS_VALUE) _next_state = BACK;
+ 322              		.loc 1 184 25 is_stmt 0 view .LVU103
+ 323 010a 6278     		ldrb	r2, [r4, #1]	@ zero_extendqisi2
+ 183:Display/MenuManager.cpp ****                     if (_next_state == TOUCHTHS_VALUE) _next_state = RELTHS_VALUE;
+ 324              		.loc 1 183 17 view .LVU104
+ 325 010c 40F3E280 		ble	.L95
+ 184:Display/MenuManager.cpp ****                     else if (_next_state == RELTHS_VALUE) _next_state = BACK;
+ 326              		.loc 1 184 21 is_stmt 1 view .LVU105
+ 327 0110 0D2A     		cmp	r2, #13
+ 328 0112 00F0E780 		beq	.L119
+ 185:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = TOUCHTHS_VALUE;
+ 329              		.loc 1 185 26 view .LVU106
+ 330 0116 0E2A     		cmp	r2, #14
+ 331 0118 00F0F980 		beq	.L118
+ 186:Display/MenuManager.cpp ****                 } else {
+ 332              		.loc 1 186 26 view .LVU107
+ 333 011c 0F2A     		cmp	r2, #15
+ 334 011e 95D1     		bne	.L100
+ 335              	.L117:
+ 189:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = RELTHS_VALUE;
+ 336              		.loc 1 189 59 discriminator 1 view .LVU108
+ 189:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = RELTHS_VALUE;
+ 337              		.loc 1 189 71 is_stmt 0 discriminator 1 view .LVU109
+ 338 0120 0D22     		movs	r2, #13
+ 339 0122 6270     		strb	r2, [r4, #1]
+ 340 0124 92E7     		b	.L100
+ 341              	.L68:
+ 136:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
+ 342              		.loc 1 136 13 is_stmt 1 view .LVU110
+ 137:Display/MenuManager.cpp ****                     if (_next_state == CALIBRATION_HUB) _next_state = SCALES_HUB;
+ 343              		.loc 1 137 17 view .LVU111
+ 344 0126 002D     		cmp	r5, #0
+ 138:Display/MenuManager.cpp ****                     else if (_next_state == SCALES_HUB) _next_state = PRESETS_HUB;
+ 345              		.loc 1 138 25 is_stmt 0 view .LVU112
+ 346 0128 6278     		ldrb	r2, [r4, #1]	@ zero_extendqisi2
+ 137:Display/MenuManager.cpp ****                     if (_next_state == CALIBRATION_HUB) _next_state = SCALES_HUB;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 12
 
 
- 101:Display/MenuManager.cpp ****                 if (_outData.preset < 0) _outData.preset = 0;
- 363              		.loc 1 101 33 is_stmt 0 view .LVU135
- 364 00ec 626A     		ldr	r2, [r4, #36]
- 102:Display/MenuManager.cpp ****                 if (_outData.preset > 2) _outData.preset = 2;
- 365              		.loc 1 102 17 view .LVU136
- 366 00ee AA18     		adds	r2, r5, r2
- 367 00f0 69D4     		bmi	.L118
- 103:Display/MenuManager.cpp ****                 break;
- 368              		.loc 1 103 17 is_stmt 1 view .LVU137
- 369 00f2 022A     		cmp	r2, #2
- 103:Display/MenuManager.cpp ****                 break;
- 370              		.loc 1 103 42 view .LVU138
- 103:Display/MenuManager.cpp ****                 break;
- 371              		.loc 1 103 58 is_stmt 0 view .LVU139
- 372 00f4 C8BF     		it	gt
- 373 00f6 0222     		movgt	r2, #2
- 374 00f8 6262     		str	r2, [r4, #36]
- 375 00fa 90E7     		b	.L34
- 376              	.L30:
-  65:Display/MenuManager.cpp ****                 _outData.curve += (current_rotation * 0.1f);
- 377              		.loc 1 65 13 is_stmt 1 view .LVU140
-  66:Display/MenuManager.cpp ****                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
- 378              		.loc 1 66 17 view .LVU141
-  66:Display/MenuManager.cpp ****                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
- 379              		.loc 1 66 53 is_stmt 0 view .LVU142
- 380 00fc 07EE905A 		vmov	s15, r5	@ int
-  66:Display/MenuManager.cpp ****                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
- 381              		.loc 1 66 32 view .LVU143
- 382 0100 9FED657A 		vldr.32	s14, .L126
-  66:Display/MenuManager.cpp ****                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
- 383              		.loc 1 66 53 view .LVU144
- 384 0104 F8EEE76A 		vcvt.f32.s32	s13, s15
-  66:Display/MenuManager.cpp ****                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
- 385              		.loc 1 66 32 view .LVU145
- 386 0108 D4ED037A 		vldr.32	s15, [r4, #12]
- 387 010c E6EE877A 		vfma.f32	s15, s13, s14
-  67:Display/MenuManager.cpp ****                 if (_outData.curve > 2.0f) _outData.curve = 2.0f;
- 388              		.loc 1 67 17 is_stmt 1 view .LVU146
- 389 0110 F4EEC77A 		vcmpe.f32	s15, s14
- 390 0114 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 391 0118 4AD5     		bpl	.L91
-  67:Display/MenuManager.cpp ****                 if (_outData.curve > 2.0f) _outData.curve = 2.0f;
- 392              		.loc 1 67 44 discriminator 1 view .LVU147
-  67:Display/MenuManager.cpp ****                 if (_outData.curve > 2.0f) _outData.curve = 2.0f;
- 393              		.loc 1 67 59 is_stmt 0 discriminator 1 view .LVU148
- 394 011a 84ED037A 		vstr.32	s14, [r4, #12]
-  68:Display/MenuManager.cpp ****                 break;
- 395              		.loc 1 68 17 is_stmt 1 discriminator 1 view .LVU149
- 396 011e 7EE7     		b	.L34
- 397              	.L29:
-  59:Display/MenuManager.cpp ****                 _outData.delta += (current_rotation * 5.0f);
- 398              		.loc 1 59 13 view .LVU150
-  60:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
- 399              		.loc 1 60 17 view .LVU151
-  60:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
- 400              		.loc 1 60 53 is_stmt 0 view .LVU152
- 401 0120 07EE905A 		vmov	s15, r5	@ int
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 13
+ 347              		.loc 1 137 17 view .LVU113
+ 348 012a 40F30F81 		ble	.L69
+ 138:Display/MenuManager.cpp ****                     else if (_next_state == SCALES_HUB) _next_state = PRESETS_HUB;
+ 349              		.loc 1 138 21 is_stmt 1 view .LVU114
+ 350 012e 022A     		cmp	r2, #2
+ 351 0130 00F0DB80 		beq	.L114
+ 139:Display/MenuManager.cpp ****                     else if (_next_state == PRESETS_HUB) _next_state = THRESHOLDS_HUB;
+ 352              		.loc 1 139 26 view .LVU115
+ 353 0134 032A     		cmp	r2, #3
+ 354 0136 00F01E81 		beq	.L115
+ 140:Display/MenuManager.cpp ****                     else if (_next_state == THRESHOLDS_HUB) _next_state = BACK;
+ 355              		.loc 1 140 26 view .LVU116
+ 356 013a 042A     		cmp	r2, #4
+ 357 013c 00F01281 		beq	.L116
+ 141:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = CALIBRATION_HUB;
+ 358              		.loc 1 141 26 view .LVU117
+ 359 0140 052A     		cmp	r2, #5
+ 360 0142 00F0E480 		beq	.L118
+ 142:Display/MenuManager.cpp ****                 } else {
+ 361              		.loc 1 142 26 view .LVU118
+ 362 0146 0F2A     		cmp	r2, #15
+ 363 0148 80D1     		bne	.L100
+ 364 014a 7DE7     		b	.L120
+ 365              	.L66:
+ 168:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
+ 366              		.loc 1 168 13 view .LVU119
+ 169:Display/MenuManager.cpp ****                     if (_next_state == ROOT) _next_state = SCALE;
+ 367              		.loc 1 169 17 view .LVU120
+ 368 014c 002D     		cmp	r5, #0
+ 170:Display/MenuManager.cpp ****                     else if (_next_state == SCALE) _next_state = OCTAVE;
+ 369              		.loc 1 170 25 is_stmt 0 view .LVU121
+ 370 014e 6278     		ldrb	r2, [r4, #1]	@ zero_extendqisi2
+ 169:Display/MenuManager.cpp ****                     if (_next_state == ROOT) _next_state = SCALE;
+ 371              		.loc 1 169 17 view .LVU122
+ 372 0150 40F3EF80 		ble	.L88
+ 170:Display/MenuManager.cpp ****                     else if (_next_state == SCALE) _next_state = OCTAVE;
+ 373              		.loc 1 170 21 is_stmt 1 view .LVU123
+ 374 0154 0A2A     		cmp	r2, #10
+ 375 0156 00F0CB80 		beq	.L125
+ 171:Display/MenuManager.cpp ****                     else if (_next_state == OCTAVE) _next_state = BACK;
+ 376              		.loc 1 171 26 view .LVU124
+ 377 015a 0B2A     		cmp	r2, #11
+ 378 015c 00F0F380 		beq	.L124
+ 172:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = ROOT;
+ 379              		.loc 1 172 26 view .LVU125
+ 380 0160 0C2A     		cmp	r2, #12
+ 381 0162 00F0D480 		beq	.L118
+ 173:Display/MenuManager.cpp ****                 } else {
+ 382              		.loc 1 173 26 view .LVU126
+ 383 0166 0F2A     		cmp	r2, #15
+ 384 0168 7FF470AF 		bne	.L100
+ 385              	.L122:
+ 176:Display/MenuManager.cpp ****                     else if (_next_state == OCTAVE) _next_state = SCALE;
+ 386              		.loc 1 176 52 discriminator 1 view .LVU127
+ 176:Display/MenuManager.cpp ****                     else if (_next_state == OCTAVE) _next_state = SCALE;
+ 387              		.loc 1 176 64 is_stmt 0 discriminator 1 view .LVU128
+ 388 016c 0A22     		movs	r2, #10
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 13
 
 
-  60:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
- 402              		.loc 1 60 32 view .LVU153
- 403 0124 F1EE046A 		vmov.f32	s13, #5.0e+0
-  61:Display/MenuManager.cpp ****                 if (_outData.delta > 100.0f) _outData.delta = 100.0f;
- 404              		.loc 1 61 17 view .LVU154
- 405 0128 B7EE007A 		vmov.f32	s14, #1.0e+0
-  60:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
- 406              		.loc 1 60 53 view .LVU155
- 407 012c B8EEE76A 		vcvt.f32.s32	s12, s15
-  60:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
- 408              		.loc 1 60 32 view .LVU156
- 409 0130 D4ED027A 		vldr.32	s15, [r4, #8]
- 410 0134 E6EE267A 		vfma.f32	s15, s12, s13
-  61:Display/MenuManager.cpp ****                 if (_outData.delta > 100.0f) _outData.delta = 100.0f;
- 411              		.loc 1 61 17 is_stmt 1 view .LVU157
- 412 0138 F4EEC77A 		vcmpe.f32	s15, s14
- 413 013c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 414 0140 44D4     		bmi	.L119
-  62:Display/MenuManager.cpp ****                 break;
- 415              		.loc 1 62 17 view .LVU158
- 416 0142 9FED567A 		vldr.32	s14, .L126+4
-  60:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
- 417              		.loc 1 60 32 is_stmt 0 view .LVU159
- 418 0146 F4EEC77A 		vcmpe.f32	s15, s14
- 419 014a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 420 014e 77FE277A 		vselgt.f32	s15, s14, s15
- 421 0152 C4ED027A 		vstr.32	s15, [r4, #8]
- 422 0156 62E7     		b	.L34
- 423              	.L28:
-  70:Display/MenuManager.cpp ****                 _outData.hysteresis += (current_rotation * 1);
- 424              		.loc 1 70 13 is_stmt 1 view .LVU160
-  71:Display/MenuManager.cpp ****                 if (_outData.hysteresis < 0) _outData.hysteresis = 0;
- 425              		.loc 1 71 17 view .LVU161
-  72:Display/MenuManager.cpp ****                 if (_outData.hysteresis > 20) _outData.hysteresis = 20;
- 426              		.loc 1 72 17 view .LVU162
-  71:Display/MenuManager.cpp ****                 if (_outData.hysteresis < 0) _outData.hysteresis = 0;
- 427              		.loc 1 71 37 is_stmt 0 view .LVU163
- 428 0158 6269     		ldr	r2, [r4, #20]
-  72:Display/MenuManager.cpp ****                 if (_outData.hysteresis > 20) _outData.hysteresis = 20;
- 429              		.loc 1 72 17 view .LVU164
- 430 015a AA18     		adds	r2, r5, r2
- 431 015c 39D4     		bmi	.L120
-  73:Display/MenuManager.cpp ****                 break;
- 432              		.loc 1 73 17 is_stmt 1 view .LVU165
- 433 015e 142A     		cmp	r2, #20
-  73:Display/MenuManager.cpp ****                 break;
- 434              		.loc 1 73 47 view .LVU166
-  73:Display/MenuManager.cpp ****                 break;
- 435              		.loc 1 73 67 is_stmt 0 view .LVU167
- 436 0160 C8BF     		it	gt
- 437 0162 1422     		movgt	r2, #20
- 438 0164 6261     		str	r2, [r4, #20]
- 439 0166 5AE7     		b	.L34
- 440              	.L27:
-  75:Display/MenuManager.cpp ****                 
- 441              		.loc 1 75 13 is_stmt 1 view .LVU168
-  77:Display/MenuManager.cpp ****                 if (_outData.filter_type < 0) _outData.filter_type = 0;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 14
+ 389 016e 6270     		strb	r2, [r4, #1]
+ 390 0170 6CE7     		b	.L100
+ 391              	.L67:
+ 152:Display/MenuManager.cpp ****                 if (current_rotation > 0) {
+ 392              		.loc 1 152 13 is_stmt 1 view .LVU129
+ 153:Display/MenuManager.cpp ****                     if (_next_state == DELTA)                _next_state = CURVE;
+ 393              		.loc 1 153 17 view .LVU130
+ 394 0172 002D     		cmp	r5, #0
+ 154:Display/MenuManager.cpp ****                     else if (_next_state == CURVE)           _next_state = HYSTERESIS;
+ 395              		.loc 1 154 25 is_stmt 0 view .LVU131
+ 396 0174 6278     		ldrb	r2, [r4, #1]	@ zero_extendqisi2
+ 153:Display/MenuManager.cpp ****                     if (_next_state == DELTA)                _next_state = CURVE;
+ 397              		.loc 1 153 17 view .LVU132
+ 398 0176 40F3CD80 		ble	.L79
+ 154:Display/MenuManager.cpp ****                     else if (_next_state == CURVE)           _next_state = HYSTERESIS;
+ 399              		.loc 1 154 21 is_stmt 1 view .LVU133
+ 400 017a 072A     		cmp	r2, #7
+ 401 017c 00F0BB80 		beq	.L121
+ 155:Display/MenuManager.cpp ****                     else if (_next_state == HYSTERESIS)      _next_state = FILTER_TYPE; 
+ 402              		.loc 1 155 26 view .LVU134
+ 403 0180 062A     		cmp	r2, #6
+ 404 0182 00F0F580 		beq	.L123
+ 156:Display/MenuManager.cpp ****                     else if (_next_state == FILTER_TYPE)     _next_state = BACK;        
+ 405              		.loc 1 156 26 view .LVU135
+ 406 0186 082A     		cmp	r2, #8
+ 407 0188 00F0D080 		beq	.L126
+ 157:Display/MenuManager.cpp ****                     else if (_next_state == BACK)            _next_state = DELTA;
+ 408              		.loc 1 157 26 view .LVU136
+ 409 018c 092A     		cmp	r2, #9
+ 410 018e 00F0BE80 		beq	.L118
+ 158:Display/MenuManager.cpp ****                 } else {
+ 411              		.loc 1 158 26 view .LVU137
+ 412 0192 0F2A     		cmp	r2, #15
+ 413 0194 7FF45AAF 		bne	.L100
+ 414              	.L127:
+ 161:Display/MenuManager.cpp ****                     else if (_next_state == HYSTERESIS)      _next_state = CURVE;
+ 415              		.loc 1 161 62 discriminator 1 view .LVU138
+ 161:Display/MenuManager.cpp ****                     else if (_next_state == HYSTERESIS)      _next_state = CURVE;
+ 416              		.loc 1 161 74 is_stmt 0 discriminator 1 view .LVU139
+ 417 0198 0722     		movs	r2, #7
+ 418 019a 6270     		strb	r2, [r4, #1]
+ 419 019c 56E7     		b	.L100
+ 420              	.LVL13:
+ 421              	.L136:
+  38:Display/MenuManager.cpp ****             else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.
+ 422              		.loc 1 38 13 is_stmt 1 view .LVU140
+  38:Display/MenuManager.cpp ****             else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.
+ 423              		.loc 1 38 26 is_stmt 0 view .LVU141
+ 424 019e 2379     		ldrb	r3, [r4, #4]	@ zero_extendqisi2
+  38:Display/MenuManager.cpp ****             else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.
+ 425              		.loc 1 38 13 view .LVU142
+ 426 01a0 012B     		cmp	r3, #1
+ 427 01a2 00F0E280 		beq	.L138
+  39:Display/MenuManager.cpp ****         } 
+ 428              		.loc 1 39 18 is_stmt 1 view .LVU143
+ 429 01a6 9A1E     		subs	r2, r3, #2
+ 430 01a8 032A     		cmp	r2, #3
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 14
 
 
- 442              		.loc 1 77 17 view .LVU169
-  78:Display/MenuManager.cpp ****                 if (_outData.filter_type > 3) _outData.filter_type = 3;
- 443              		.loc 1 78 17 view .LVU170
-  77:Display/MenuManager.cpp ****                 if (_outData.filter_type < 0) _outData.filter_type = 0;
- 444              		.loc 1 77 38 is_stmt 0 view .LVU171
- 445 0168 A269     		ldr	r2, [r4, #24]
-  78:Display/MenuManager.cpp ****                 if (_outData.filter_type > 3) _outData.filter_type = 3;
- 446              		.loc 1 78 17 view .LVU172
- 447 016a AA18     		adds	r2, r5, r2
- 448 016c 37D4     		bmi	.L121
-  79:Display/MenuManager.cpp ****                 break;
- 449              		.loc 1 79 17 is_stmt 1 view .LVU173
- 450 016e 032A     		cmp	r2, #3
-  79:Display/MenuManager.cpp ****                 break;
- 451              		.loc 1 79 47 view .LVU174
-  79:Display/MenuManager.cpp ****                 break;
- 452              		.loc 1 79 68 is_stmt 0 view .LVU175
- 453 0170 C8BF     		it	gt
- 454 0172 0322     		movgt	r2, #3
- 455 0174 A261     		str	r2, [r4, #24]
- 456 0176 52E7     		b	.L34
- 457              	.L25:
-  88:Display/MenuManager.cpp ****                 _outData.scale += current_rotation;
- 458              		.loc 1 88 13 is_stmt 1 view .LVU176
-  89:Display/MenuManager.cpp ****                 if (_outData.scale < 0) _outData.scale = 0;
- 459              		.loc 1 89 17 view .LVU177
-  90:Display/MenuManager.cpp ****                 if (_outData.scale > 6) _outData.scale = 6;
- 460              		.loc 1 90 17 view .LVU178
-  89:Display/MenuManager.cpp ****                 if (_outData.scale < 0) _outData.scale = 0;
- 461              		.loc 1 89 32 is_stmt 0 view .LVU179
- 462 0178 E269     		ldr	r2, [r4, #28]
-  90:Display/MenuManager.cpp ****                 if (_outData.scale > 6) _outData.scale = 6;
- 463              		.loc 1 90 17 view .LVU180
- 464 017a AA18     		adds	r2, r5, r2
- 465 017c 2CD4     		bmi	.L122
-  91:Display/MenuManager.cpp ****                 break;
- 466              		.loc 1 91 17 is_stmt 1 view .LVU181
- 467 017e 062A     		cmp	r2, #6
-  91:Display/MenuManager.cpp ****                 break;
- 468              		.loc 1 91 41 view .LVU182
-  91:Display/MenuManager.cpp ****                 break;
- 469              		.loc 1 91 56 is_stmt 0 view .LVU183
- 470 0180 C8BF     		it	gt
- 471 0182 0622     		movgt	r2, #6
- 472 0184 E261     		str	r2, [r4, #28]
- 473 0186 4AE7     		b	.L34
- 474              	.L26:
-  82:Display/MenuManager.cpp ****                 _outData.root += current_rotation;
- 475              		.loc 1 82 13 is_stmt 1 view .LVU184
-  83:Display/MenuManager.cpp ****                 if (_outData.root < 0) _outData.root = 0;
- 476              		.loc 1 83 17 view .LVU185
-  84:Display/MenuManager.cpp ****                 if (_outData.root > 11) _outData.root = 11;
- 477              		.loc 1 84 17 view .LVU186
-  83:Display/MenuManager.cpp ****                 if (_outData.root < 0) _outData.root = 0;
- 478              		.loc 1 83 31 is_stmt 0 view .LVU187
- 479 0188 2269     		ldr	r2, [r4, #16]
-  84:Display/MenuManager.cpp ****                 if (_outData.root > 11) _outData.root = 11;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 15
+ 431 01aa 7BD8     		bhi	.L14
+  39:Display/MenuManager.cpp ****         } 
+ 432              		.loc 1 39 158 discriminator 1 view .LVU144
+  39:Display/MenuManager.cpp ****         } 
+ 433              		.loc 1 39 173 is_stmt 0 discriminator 1 view .LVU145
+ 434 01ac 0122     		movs	r2, #1
+  52:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
+ 435              		.loc 1 52 47 discriminator 1 view .LVU146
+ 436 01ae 0223     		movs	r3, #2
+  39:Display/MenuManager.cpp ****         } 
+ 437              		.loc 1 39 173 discriminator 1 view .LVU147
+ 438 01b0 2271     		strb	r2, [r4, #4]
+  50:Display/MenuManager.cpp ****             case PLAYMODE:        _next_state = MAIN_MENU; break;
+ 439              		.loc 1 50 9 is_stmt 1 discriminator 1 view .LVU148
+  52:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
+ 440              		.loc 1 52 13 discriminator 1 view .LVU149
+  52:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
+ 441              		.loc 1 52 35 discriminator 1 view .LVU150
+  52:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
+ 442              		.loc 1 52 47 is_stmt 0 discriminator 1 view .LVU151
+ 443 01b2 6370     		strb	r3, [r4, #1]
+  52:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
+ 444              		.loc 1 52 66 is_stmt 1 discriminator 1 view .LVU152
+ 445              	.LVL14:
+ 134:Display/MenuManager.cpp ****         switch (_outData.state) {
+ 446              		.loc 1 134 5 discriminator 1 view .LVU153
+ 199:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
+ 447              		.loc 1 199 5 discriminator 1 view .LVU154
+ 200:Display/MenuManager.cpp ****     if (_outData.state == TOUCHTHS_VALUE || _outData.state == RELTHS_VALUE) _next_state = THRESHOLD
+ 448              		.loc 1 200 5 discriminator 1 view .LVU155
+ 449 01b4 03E0     		b	.L25
+ 450              	.LVL15:
+ 451              	.L137:
+  42:Display/MenuManager.cpp **** 
+ 452              		.loc 1 42 86 discriminator 1 view .LVU156
+  42:Display/MenuManager.cpp **** 
+ 453              		.loc 1 42 101 is_stmt 0 discriminator 1 view .LVU157
+ 454 01b6 0522     		movs	r2, #5
+  55:Display/MenuManager.cpp ****             default: break; 
+ 455              		.loc 1 55 47 discriminator 1 view .LVU158
+ 456 01b8 0D23     		movs	r3, #13
+  42:Display/MenuManager.cpp **** 
+ 457              		.loc 1 42 101 discriminator 1 view .LVU159
+ 458 01ba 2271     		strb	r2, [r4, #4]
+  50:Display/MenuManager.cpp ****             case PLAYMODE:        _next_state = MAIN_MENU; break;
+ 459              		.loc 1 50 9 is_stmt 1 discriminator 1 view .LVU160
+  55:Display/MenuManager.cpp ****             default: break; 
+ 460              		.loc 1 55 13 discriminator 1 view .LVU161
+  55:Display/MenuManager.cpp ****             default: break; 
+ 461              		.loc 1 55 35 discriminator 1 view .LVU162
+  55:Display/MenuManager.cpp ****             default: break; 
+ 462              		.loc 1 55 47 is_stmt 0 discriminator 1 view .LVU163
+ 463 01bc 6370     		strb	r3, [r4, #1]
+  55:Display/MenuManager.cpp ****             default: break; 
+ 464              		.loc 1 55 65 is_stmt 1 discriminator 1 view .LVU164
+ 465              	.LVL16:
+ 134:Display/MenuManager.cpp ****         switch (_outData.state) {
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 15
 
 
- 480              		.loc 1 84 17 view .LVU188
- 481 018a AA18     		adds	r2, r5, r2
- 482 018c 2AD4     		bmi	.L123
-  85:Display/MenuManager.cpp ****                 break;
- 483              		.loc 1 85 17 is_stmt 1 view .LVU189
- 484 018e 0B2A     		cmp	r2, #11
-  85:Display/MenuManager.cpp ****                 break;
- 485              		.loc 1 85 41 view .LVU190
-  85:Display/MenuManager.cpp ****                 break;
- 486              		.loc 1 85 55 is_stmt 0 view .LVU191
- 487 0190 C8BF     		it	gt
- 488 0192 0B22     		movgt	r2, #11
- 489 0194 2261     		str	r2, [r4, #16]
- 490 0196 42E7     		b	.L34
- 491              	.L23:
-  94:Display/MenuManager.cpp ****                 _outData.octave += current_rotation;
- 492              		.loc 1 94 13 is_stmt 1 view .LVU192
-  95:Display/MenuManager.cpp ****                 if (_outData.octave < 1) _outData.octave = 1;
- 493              		.loc 1 95 17 view .LVU193
-  95:Display/MenuManager.cpp ****                 if (_outData.octave < 1) _outData.octave = 1;
- 494              		.loc 1 95 33 is_stmt 0 view .LVU194
- 495 0198 226A     		ldr	r2, [r4, #32]
- 496 019a 1544     		add	r5, r5, r2
- 497              	.LVL17:
-  96:Display/MenuManager.cpp ****                 if (_outData.octave > 8) _outData.octave = 8;
- 498              		.loc 1 96 17 is_stmt 1 view .LVU195
- 499 019c 002D     		cmp	r5, #0
- 500 019e 24DD     		ble	.L124
-  97:Display/MenuManager.cpp ****                 break;
- 501              		.loc 1 97 17 view .LVU196
- 502 01a0 082D     		cmp	r5, #8
- 503 01a2 25DD     		ble	.L125
-  97:Display/MenuManager.cpp ****                 break;
- 504              		.loc 1 97 42 discriminator 1 view .LVU197
-  97:Display/MenuManager.cpp ****                 break;
- 505              		.loc 1 97 58 is_stmt 0 discriminator 1 view .LVU198
- 506 01a4 0822     		movs	r2, #8
- 507 01a6 2262     		str	r2, [r4, #32]
- 508 01a8 39E7     		b	.L34
- 509              	.LVL18:
- 510              	.L113:
-  35:Display/MenuManager.cpp ****             else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.
- 511              		.loc 1 35 46 is_stmt 1 discriminator 1 view .LVU199
-  35:Display/MenuManager.cpp ****             else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.
- 512              		.loc 1 35 61 is_stmt 0 discriminator 1 view .LVU200
- 513 01aa 2671     		strb	r6, [r4, #4]
-  44:Display/MenuManager.cpp ****             case PLAYMODE:        _next_state = MAIN_MENU; break;
- 514              		.loc 1 44 9 is_stmt 1 discriminator 1 view .LVU201
-  45:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
- 515              		.loc 1 45 13 discriminator 1 view .LVU202
-  45:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
- 516              		.loc 1 45 35 discriminator 1 view .LVU203
-  45:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
- 517              		.loc 1 45 47 is_stmt 0 discriminator 1 view .LVU204
- 518 01ac 6370     		strb	r3, [r4, #1]
-  45:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
- 519              		.loc 1 45 60 is_stmt 1 discriminator 1 view .LVU205
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 16
+ 466              		.loc 1 134 5 discriminator 1 view .LVU165
+ 199:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
+ 467              		.loc 1 199 5 discriminator 1 view .LVU166
+ 200:Display/MenuManager.cpp ****     if (_outData.state == TOUCHTHS_VALUE || _outData.state == RELTHS_VALUE) _next_state = THRESHOLD
+ 468              		.loc 1 200 5 discriminator 1 view .LVU167
+ 469              	.L25:
+ 205:Display/MenuManager.cpp **** }
+ 470              		.loc 1 205 29 is_stmt 0 view .LVU168
+ 471 01be 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
+ 472 01c0 34E7     		b	.L101
+ 473              	.LVL17:
+ 474              	.L37:
+  72:Display/MenuManager.cpp ****                 _outData.curve += (current_rotation * 0.1f);
+ 475              		.loc 1 72 13 is_stmt 1 view .LVU169
+  73:Display/MenuManager.cpp ****                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
+ 476              		.loc 1 73 17 view .LVU170
+  73:Display/MenuManager.cpp ****                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
+ 477              		.loc 1 73 53 is_stmt 0 view .LVU171
+ 478 01c2 07EE905A 		vmov	s15, r5	@ int
+  73:Display/MenuManager.cpp ****                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
+ 479              		.loc 1 73 32 view .LVU172
+ 480 01c6 9FED817A 		vldr.32	s14, .L148
+  73:Display/MenuManager.cpp ****                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
+ 481              		.loc 1 73 53 view .LVU173
+ 482 01ca F8EEE76A 		vcvt.f32.s32	s13, s15
+  73:Display/MenuManager.cpp ****                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
+ 483              		.loc 1 73 32 view .LVU174
+ 484 01ce D4ED037A 		vldr.32	s15, [r4, #12]
+ 485 01d2 E6EE877A 		vfma.f32	s15, s13, s14
+  74:Display/MenuManager.cpp ****                 if (_outData.curve > 2.0f) _outData.curve = 2.0f;    
+ 486              		.loc 1 74 17 is_stmt 1 view .LVU175
+ 487 01d6 F4EEC77A 		vcmpe.f32	s15, s14
+ 488 01da F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 489 01de 40F1CD80 		bpl	.L111
+  74:Display/MenuManager.cpp ****                 if (_outData.curve > 2.0f) _outData.curve = 2.0f;    
+ 490              		.loc 1 74 44 discriminator 1 view .LVU176
+  74:Display/MenuManager.cpp ****                 if (_outData.curve > 2.0f) _outData.curve = 2.0f;    
+ 491              		.loc 1 74 59 is_stmt 0 discriminator 1 view .LVU177
+ 492 01e2 84ED037A 		vstr.32	s14, [r4, #12]
+  75:Display/MenuManager.cpp ****                 break;
+ 493              		.loc 1 75 17 is_stmt 1 discriminator 1 view .LVU178
+ 494 01e6 2BE7     		b	.L41
+ 495              	.L35:
+  78:Display/MenuManager.cpp ****                 _outData.hysteresis += (current_rotation * 1);
+ 496              		.loc 1 78 13 view .LVU179
+  79:Display/MenuManager.cpp ****                 if (_outData.hysteresis < 0) _outData.hysteresis = 0;
+ 497              		.loc 1 79 17 view .LVU180
+  80:Display/MenuManager.cpp ****                 if (_outData.hysteresis > 20) _outData.hysteresis = 20;
+ 498              		.loc 1 80 17 view .LVU181
+  79:Display/MenuManager.cpp ****                 if (_outData.hysteresis < 0) _outData.hysteresis = 0;
+ 499              		.loc 1 79 37 is_stmt 0 view .LVU182
+ 500 01e8 6269     		ldr	r2, [r4, #20]
+  80:Display/MenuManager.cpp ****                 if (_outData.hysteresis > 20) _outData.hysteresis = 20;
+ 501              		.loc 1 80 17 view .LVU183
+ 502 01ea AA18     		adds	r2, r5, r2
+ 503 01ec 00F1E080 		bmi	.L139
+  81:Display/MenuManager.cpp ****                 break;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 16
 
 
- 520              	.LVL19:
- 112:Display/MenuManager.cpp ****         switch (_outData.state) {
- 521              		.loc 1 112 5 discriminator 1 view .LVU206
- 164:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
- 522              		.loc 1 164 5 discriminator 1 view .LVU207
- 165:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
- 523              		.loc 1 165 5 discriminator 1 view .LVU208
- 524 01ae 72E7     		b	.L9
- 525              	.LVL20:
- 526              	.L91:
-  68:Display/MenuManager.cpp ****                 break;
- 527              		.loc 1 68 17 view .LVU209
- 528 01b0 B0EE007A 		vmov.f32	s14, #2.0e+0
-  66:Display/MenuManager.cpp ****                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
- 529              		.loc 1 66 32 is_stmt 0 view .LVU210
- 530 01b4 F4EEC77A 		vcmpe.f32	s15, s14
- 531 01b8 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 532 01bc 77FE277A 		vselgt.f32	s15, s14, s15
- 533 01c0 C4ED037A 		vstr.32	s15, [r4, #12]
- 534 01c4 2BE7     		b	.L34
- 535              	.L118:
- 102:Display/MenuManager.cpp ****                 if (_outData.preset > 2) _outData.preset = 2;
- 536              		.loc 1 102 42 is_stmt 1 discriminator 1 view .LVU211
- 102:Display/MenuManager.cpp ****                 if (_outData.preset > 2) _outData.preset = 2;
- 537              		.loc 1 102 58 is_stmt 0 discriminator 1 view .LVU212
- 538 01c6 0022     		movs	r2, #0
- 539 01c8 6262     		str	r2, [r4, #36]
- 103:Display/MenuManager.cpp ****                 break;
- 540              		.loc 1 103 17 is_stmt 1 discriminator 1 view .LVU213
- 541 01ca 28E7     		b	.L34
- 542              	.L119:
-  61:Display/MenuManager.cpp ****                 if (_outData.delta > 100.0f) _outData.delta = 100.0f;
- 543              		.loc 1 61 44 discriminator 1 view .LVU214
-  61:Display/MenuManager.cpp ****                 if (_outData.delta > 100.0f) _outData.delta = 100.0f;
- 544              		.loc 1 61 59 is_stmt 0 discriminator 1 view .LVU215
- 545 01cc 84ED027A 		vstr.32	s14, [r4, #8]
-  62:Display/MenuManager.cpp ****                 break;
- 546              		.loc 1 62 17 is_stmt 1 discriminator 1 view .LVU216
- 547 01d0 25E7     		b	.L34
- 548              	.L120:
-  72:Display/MenuManager.cpp ****                 if (_outData.hysteresis > 20) _outData.hysteresis = 20;
- 549              		.loc 1 72 46 discriminator 1 view .LVU217
-  72:Display/MenuManager.cpp ****                 if (_outData.hysteresis > 20) _outData.hysteresis = 20;
- 550              		.loc 1 72 66 is_stmt 0 discriminator 1 view .LVU218
- 551 01d2 0022     		movs	r2, #0
- 552 01d4 6261     		str	r2, [r4, #20]
-  73:Display/MenuManager.cpp ****                 break;
- 553              		.loc 1 73 17 is_stmt 1 discriminator 1 view .LVU219
- 554 01d6 22E7     		b	.L34
- 555              	.L122:
-  90:Display/MenuManager.cpp ****                 if (_outData.scale > 6) _outData.scale = 6;
- 556              		.loc 1 90 41 discriminator 1 view .LVU220
-  90:Display/MenuManager.cpp ****                 if (_outData.scale > 6) _outData.scale = 6;
- 557              		.loc 1 90 56 is_stmt 0 discriminator 1 view .LVU221
- 558 01d8 0022     		movs	r2, #0
- 559 01da E261     		str	r2, [r4, #28]
-  91:Display/MenuManager.cpp ****                 break;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 17
+ 504              		.loc 1 81 17 is_stmt 1 view .LVU184
+ 505 01f0 142A     		cmp	r2, #20
+  81:Display/MenuManager.cpp ****                 break;
+ 506              		.loc 1 81 47 view .LVU185
+  81:Display/MenuManager.cpp ****                 break;
+ 507              		.loc 1 81 67 is_stmt 0 view .LVU186
+ 508 01f2 C8BF     		it	gt
+ 509 01f4 1422     		movgt	r2, #20
+ 510 01f6 6261     		str	r2, [r4, #20]
+ 511 01f8 22E7     		b	.L41
+ 512              	.L36:
+  66:Display/MenuManager.cpp ****                 _outData.delta += (current_rotation * 5.0f);
+ 513              		.loc 1 66 13 is_stmt 1 view .LVU187
+  67:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
+ 514              		.loc 1 67 17 view .LVU188
+  67:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
+ 515              		.loc 1 67 53 is_stmt 0 view .LVU189
+ 516 01fa 07EE905A 		vmov	s15, r5	@ int
+  67:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
+ 517              		.loc 1 67 32 view .LVU190
+ 518 01fe F1EE046A 		vmov.f32	s13, #5.0e+0
+  68:Display/MenuManager.cpp ****                 if (_outData.delta > 100.0f) _outData.delta = 100.0f;
+ 519              		.loc 1 68 17 view .LVU191
+ 520 0202 B7EE007A 		vmov.f32	s14, #1.0e+0
+  67:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
+ 521              		.loc 1 67 53 view .LVU192
+ 522 0206 B8EEE76A 		vcvt.f32.s32	s12, s15
+  67:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
+ 523              		.loc 1 67 32 view .LVU193
+ 524 020a D4ED027A 		vldr.32	s15, [r4, #8]
+ 525 020e E6EE267A 		vfma.f32	s15, s12, s13
+  68:Display/MenuManager.cpp ****                 if (_outData.delta > 100.0f) _outData.delta = 100.0f;
+ 526              		.loc 1 68 17 is_stmt 1 view .LVU194
+ 527 0212 F4EEC77A 		vcmpe.f32	s15, s14
+ 528 0216 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 529 021a 00F1C380 		bmi	.L140
+  69:Display/MenuManager.cpp ****                 break;
+ 530              		.loc 1 69 17 view .LVU195
+ 531 021e 9FED6C7A 		vldr.32	s14, .L148+4
+  67:Display/MenuManager.cpp ****                 if (_outData.delta < 1.0f) _outData.delta = 1.0f;
+ 532              		.loc 1 67 32 is_stmt 0 view .LVU196
+ 533 0222 F4EEC77A 		vcmpe.f32	s15, s14
+ 534 0226 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 535 022a 77FE277A 		vselgt.f32	s15, s14, s15
+ 536 022e C4ED027A 		vstr.32	s15, [r4, #8]
+ 537 0232 05E7     		b	.L41
+ 538              	.L34:
+  84:Display/MenuManager.cpp ****                 _outData.filter_type += current_rotation;
+ 539              		.loc 1 84 13 is_stmt 1 view .LVU197
+  85:Display/MenuManager.cpp ****                 if (_outData.filter_type < 0) _outData.filter_type = 0;
+ 540              		.loc 1 85 17 view .LVU198
+  86:Display/MenuManager.cpp ****                 if (_outData.filter_type > 3) _outData.filter_type = 3;
+ 541              		.loc 1 86 17 view .LVU199
+  85:Display/MenuManager.cpp ****                 if (_outData.filter_type < 0) _outData.filter_type = 0;
+ 542              		.loc 1 85 38 is_stmt 0 view .LVU200
+ 543 0234 A269     		ldr	r2, [r4, #24]
+  86:Display/MenuManager.cpp ****                 if (_outData.filter_type > 3) _outData.filter_type = 3;
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 17
 
 
- 560              		.loc 1 91 17 is_stmt 1 discriminator 1 view .LVU222
- 561 01dc 1FE7     		b	.L34
- 562              	.L121:
-  78:Display/MenuManager.cpp ****                 if (_outData.filter_type > 3) _outData.filter_type = 3;
- 563              		.loc 1 78 47 discriminator 1 view .LVU223
-  78:Display/MenuManager.cpp ****                 if (_outData.filter_type > 3) _outData.filter_type = 3;
- 564              		.loc 1 78 68 is_stmt 0 discriminator 1 view .LVU224
- 565 01de 0022     		movs	r2, #0
- 566 01e0 A261     		str	r2, [r4, #24]
-  79:Display/MenuManager.cpp ****                 break;
- 567              		.loc 1 79 17 is_stmt 1 discriminator 1 view .LVU225
- 568 01e2 1CE7     		b	.L34
- 569              	.L123:
-  84:Display/MenuManager.cpp ****                 if (_outData.root > 11) _outData.root = 11;
- 570              		.loc 1 84 40 discriminator 1 view .LVU226
-  84:Display/MenuManager.cpp ****                 if (_outData.root > 11) _outData.root = 11;
- 571              		.loc 1 84 54 is_stmt 0 discriminator 1 view .LVU227
- 572 01e4 0022     		movs	r2, #0
- 573 01e6 2261     		str	r2, [r4, #16]
-  85:Display/MenuManager.cpp ****                 break;
- 574              		.loc 1 85 17 is_stmt 1 discriminator 1 view .LVU228
- 575 01e8 19E7     		b	.L34
- 576              	.LVL21:
- 577              	.L124:
-  96:Display/MenuManager.cpp ****                 if (_outData.octave > 8) _outData.octave = 8;
- 578              		.loc 1 96 42 discriminator 1 view .LVU229
-  96:Display/MenuManager.cpp ****                 if (_outData.octave > 8) _outData.octave = 8;
- 579              		.loc 1 96 58 is_stmt 0 discriminator 1 view .LVU230
- 580 01ea 0122     		movs	r2, #1
- 581 01ec 2262     		str	r2, [r4, #32]
-  97:Display/MenuManager.cpp ****                 break;
- 582              		.loc 1 97 17 is_stmt 1 discriminator 1 view .LVU231
- 583 01ee 16E7     		b	.L34
- 584              	.L125:
-  95:Display/MenuManager.cpp ****                 if (_outData.octave < 1) _outData.octave = 1;
- 585              		.loc 1 95 33 is_stmt 0 view .LVU232
- 586 01f0 2562     		str	r5, [r4, #32]
- 587 01f2 14E7     		b	.L34
- 588              	.LVL22:
- 589              	.L82:
- 166:Display/MenuManager.cpp **** 
- 590              		.loc 1 166 5 is_stmt 1 view .LVU233
- 591 01f4 042B     		cmp	r3, #4
- 592 01f6 7FF44EAF 		bne	.L9
- 166:Display/MenuManager.cpp **** 
- 593              		.loc 1 166 40 discriminator 1 view .LVU234
- 166:Display/MenuManager.cpp **** 
- 594              		.loc 1 166 52 is_stmt 0 discriminator 1 view .LVU235
- 595 01fa 0122     		movs	r2, #1
- 596 01fc 1346     		mov	r3, r2
- 597 01fe 6270     		strb	r2, [r4, #1]
- 169:Display/MenuManager.cpp **** }
- 598              		.loc 1 169 5 is_stmt 1 discriminator 1 view .LVU236
- 169:Display/MenuManager.cpp **** }
- 599              		.loc 1 169 27 is_stmt 0 discriminator 1 view .LVU237
- 600 0200 6371     		strb	r3, [r4, #5]
- 601              		.loc 1 170 1 discriminator 1 view .LVU238
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 18
+ 544              		.loc 1 86 17 view .LVU201
+ 545 0236 AA18     		adds	r2, r5, r2
+ 546 0238 00F1AB80 		bmi	.L141
+  87:Display/MenuManager.cpp ****                 break;
+ 547              		.loc 1 87 17 is_stmt 1 view .LVU202
+ 548 023c 032A     		cmp	r2, #3
+  87:Display/MenuManager.cpp ****                 break;
+ 549              		.loc 1 87 47 view .LVU203
+  87:Display/MenuManager.cpp ****                 break;
+ 550              		.loc 1 87 68 is_stmt 0 view .LVU204
+ 551 023e C8BF     		it	gt
+ 552 0240 0322     		movgt	r2, #3
+ 553 0242 A261     		str	r2, [r4, #24]
+ 554 0244 FCE6     		b	.L41
+ 555              	.L33:
+  90:Display/MenuManager.cpp ****                 _outData.root += current_rotation;
+ 556              		.loc 1 90 13 is_stmt 1 view .LVU205
+  91:Display/MenuManager.cpp ****                 if (_outData.root < 0) _outData.root = 0;
+ 557              		.loc 1 91 17 view .LVU206
+  92:Display/MenuManager.cpp ****                 if (_outData.root > 11) _outData.root = 11;
+ 558              		.loc 1 92 17 view .LVU207
+  91:Display/MenuManager.cpp ****                 if (_outData.root < 0) _outData.root = 0;
+ 559              		.loc 1 91 31 is_stmt 0 view .LVU208
+ 560 0246 2269     		ldr	r2, [r4, #16]
+  92:Display/MenuManager.cpp ****                 if (_outData.root > 11) _outData.root = 11;
+ 561              		.loc 1 92 17 view .LVU209
+ 562 0248 AA18     		adds	r2, r5, r2
+ 563 024a 00F1A580 		bmi	.L142
+  93:Display/MenuManager.cpp ****                 break;
+ 564              		.loc 1 93 17 is_stmt 1 view .LVU210
+ 565 024e 0B2A     		cmp	r2, #11
+  93:Display/MenuManager.cpp ****                 break;
+ 566              		.loc 1 93 41 view .LVU211
+  93:Display/MenuManager.cpp ****                 break;
+ 567              		.loc 1 93 55 is_stmt 0 view .LVU212
+ 568 0250 C8BF     		it	gt
+ 569 0252 0B22     		movgt	r2, #11
+ 570 0254 2261     		str	r2, [r4, #16]
+ 571 0256 F3E6     		b	.L41
+ 572              	.L28:
+ 115:Display/MenuManager.cpp ****                 _outData.relths_value += current_rotation;
+ 573              		.loc 1 115 13 is_stmt 1 view .LVU213
+ 116:Display/MenuManager.cpp ****                 // check that value fits in an 8 bit register 
+ 574              		.loc 1 116 17 view .LVU214
+ 118:Display/MenuManager.cpp ****                 if (_outData.relths_value > 255) _outData.relths_value = 255;
+ 575              		.loc 1 118 17 view .LVU215
+ 116:Display/MenuManager.cpp ****                 // check that value fits in an 8 bit register 
+ 576              		.loc 1 116 39 is_stmt 0 view .LVU216
+ 577 0258 A26A     		ldr	r2, [r4, #40]
+ 118:Display/MenuManager.cpp ****                 if (_outData.relths_value > 255) _outData.relths_value = 255;
+ 578              		.loc 1 118 17 view .LVU217
+ 579 025a AA18     		adds	r2, r5, r2
+ 580 025c 00F1AE80 		bmi	.L143
+ 119:Display/MenuManager.cpp ****                 break;    
+ 581              		.loc 1 119 17 is_stmt 1 view .LVU218
+ 582 0260 FF2A     		cmp	r2, #255
+ 119:Display/MenuManager.cpp ****                 break;    
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 18
 
 
- 602 0202 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
- 603              	.LVL23:
- 604              	.L116:
- 130:Display/MenuManager.cpp ****                     else if (_next_state == CURVE)           _next_state = HYSTERESIS;
- 605              		.loc 1 130 21 is_stmt 1 view .LVU239
- 606 0204 062B     		cmp	r3, #6
- 607 0206 0BD0     		beq	.L96
- 131:Display/MenuManager.cpp ****                     else if (_next_state == HYSTERESIS)      _next_state = FILTER_TYPE; 
- 608              		.loc 1 131 26 view .LVU240
- 609 0208 052B     		cmp	r3, #5
- 610 020a 0ED0     		beq	.L97
- 132:Display/MenuManager.cpp ****                     else if (_next_state == FILTER_TYPE)     _next_state = BACK;        
- 611              		.loc 1 132 26 view .LVU241
- 612 020c 072B     		cmp	r3, #7
- 613 020e 12D0     		beq	.L98
- 133:Display/MenuManager.cpp ****                     else if (_next_state == BACK)            _next_state = DELTA;
- 614              		.loc 1 133 26 view .LVU242
- 615 0210 082B     		cmp	r3, #8
- 616 0212 2ED0     		beq	.L106
- 134:Display/MenuManager.cpp ****                 } else {
- 617              		.loc 1 134 26 view .LVU243
- 618 0214 0C2B     		cmp	r3, #12
- 619 0216 7FF43EAF 		bne	.L9
- 620 021a 48E7     		b	.L94
- 621              	.L70:
- 138:Display/MenuManager.cpp ****                     else if (_next_state == FILTER_TYPE)     _next_state = HYSTERESIS; 
- 622              		.loc 1 138 26 view .LVU244
- 623 021c 072B     		cmp	r3, #7
- 624 021e 02D1     		bne	.L71
- 625              	.L96:
- 138:Display/MenuManager.cpp ****                     else if (_next_state == FILTER_TYPE)     _next_state = HYSTERESIS; 
- 626              		.loc 1 138 62 discriminator 1 view .LVU245
- 138:Display/MenuManager.cpp ****                     else if (_next_state == FILTER_TYPE)     _next_state = HYSTERESIS; 
- 627              		.loc 1 138 74 is_stmt 0 discriminator 1 view .LVU246
- 628 0220 0523     		movs	r3, #5
- 629 0222 6370     		strb	r3, [r4, #1]
- 630 0224 37E7     		b	.L9
- 631              	.L71:
- 139:Display/MenuManager.cpp ****                     else if (_next_state == BACK)            _next_state = FILTER_TYPE; 
- 632              		.loc 1 139 26 is_stmt 1 view .LVU247
- 633 0226 082B     		cmp	r3, #8
- 634 0228 02D1     		bne	.L72
- 635              	.L97:
- 139:Display/MenuManager.cpp ****                     else if (_next_state == BACK)            _next_state = FILTER_TYPE; 
- 636              		.loc 1 139 62 discriminator 1 view .LVU248
- 139:Display/MenuManager.cpp ****                     else if (_next_state == BACK)            _next_state = FILTER_TYPE; 
- 637              		.loc 1 139 74 is_stmt 0 discriminator 1 view .LVU249
- 638 022a 0723     		movs	r3, #7
- 639 022c 6370     		strb	r3, [r4, #1]
- 640 022e 32E7     		b	.L9
- 641              	.L72:
- 140:Display/MenuManager.cpp ****                 }
- 642              		.loc 1 140 26 is_stmt 1 view .LVU250
- 643 0230 0C2B     		cmp	r3, #12
- 644 0232 7FF430AF 		bne	.L9
- 645              	.L98:
- 140:Display/MenuManager.cpp ****                 }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 19
+ 583              		.loc 1 119 50 view .LVU219
+ 119:Display/MenuManager.cpp ****                 break;    
+ 584              		.loc 1 119 72 is_stmt 0 view .LVU220
+ 585 0262 C8BF     		it	gt
+ 586 0264 FF22     		movgt	r2, #255
+ 587 0266 A262     		str	r2, [r4, #40]
+ 588 0268 EAE6     		b	.L41
+ 589              	.L31:
+ 102:Display/MenuManager.cpp ****                 _outData.octave += current_rotation;
+ 590              		.loc 1 102 13 is_stmt 1 view .LVU221
+ 103:Display/MenuManager.cpp ****                 if (_outData.octave < 1) _outData.octave = 1;
+ 591              		.loc 1 103 17 view .LVU222
+ 103:Display/MenuManager.cpp ****                 if (_outData.octave < 1) _outData.octave = 1;
+ 592              		.loc 1 103 33 is_stmt 0 view .LVU223
+ 593 026a 226A     		ldr	r2, [r4, #32]
+ 594 026c 1544     		add	r5, r5, r2
+ 595              	.LVL18:
+ 104:Display/MenuManager.cpp ****                 if (_outData.octave > 8) _outData.octave = 8;
+ 596              		.loc 1 104 17 is_stmt 1 view .LVU224
+ 597 026e 002D     		cmp	r5, #0
+ 598 0270 40F3A180 		ble	.L144
+ 105:Display/MenuManager.cpp ****                 break;
+ 599              		.loc 1 105 17 view .LVU225
+ 600 0274 082D     		cmp	r5, #8
+ 601 0276 40F3A780 		ble	.L145
+ 105:Display/MenuManager.cpp ****                 break;
+ 602              		.loc 1 105 42 discriminator 1 view .LVU226
+ 105:Display/MenuManager.cpp ****                 break;
+ 603              		.loc 1 105 58 is_stmt 0 discriminator 1 view .LVU227
+ 604 027a 0822     		movs	r2, #8
+ 605 027c 2262     		str	r2, [r4, #32]
+ 606 027e DFE6     		b	.L41
+ 607              	.LVL19:
+ 608              	.L32:
+  96:Display/MenuManager.cpp ****                 _outData.scale += current_rotation;
+ 609              		.loc 1 96 13 is_stmt 1 view .LVU228
+  97:Display/MenuManager.cpp ****                 if (_outData.scale < 0) _outData.scale = 0;
+ 610              		.loc 1 97 17 view .LVU229
+  98:Display/MenuManager.cpp ****                 if (_outData.scale > 6) _outData.scale = 6;
+ 611              		.loc 1 98 17 view .LVU230
+  97:Display/MenuManager.cpp ****                 if (_outData.scale < 0) _outData.scale = 0;
+ 612              		.loc 1 97 32 is_stmt 0 view .LVU231
+ 613 0280 E269     		ldr	r2, [r4, #28]
+  98:Display/MenuManager.cpp ****                 if (_outData.scale > 6) _outData.scale = 6;
+ 614              		.loc 1 98 17 view .LVU232
+ 615 0282 AA18     		adds	r2, r5, r2
+ 616 0284 00F19D80 		bmi	.L146
+  99:Display/MenuManager.cpp ****                 break;
+ 617              		.loc 1 99 17 is_stmt 1 view .LVU233
+ 618 0288 062A     		cmp	r2, #6
+  99:Display/MenuManager.cpp ****                 break;
+ 619              		.loc 1 99 41 view .LVU234
+  99:Display/MenuManager.cpp ****                 break;
+ 620              		.loc 1 99 56 is_stmt 0 view .LVU235
+ 621 028a C8BF     		it	gt
+ 622 028c 0622     		movgt	r2, #6
+ 623 028e E261     		str	r2, [r4, #28]
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 19
 
 
- 646              		.loc 1 140 62 discriminator 1 view .LVU251
- 140:Display/MenuManager.cpp ****                 }
- 647              		.loc 1 140 74 is_stmt 0 discriminator 1 view .LVU252
- 648 0236 0823     		movs	r3, #8
- 649 0238 6370     		strb	r3, [r4, #1]
- 650 023a 2CE7     		b	.L9
- 651              	.L115:
- 146:Display/MenuManager.cpp ****                     else if (_next_state == SCALE) _next_state = OCTAVE;
- 652              		.loc 1 146 21 is_stmt 1 view .LVU253
- 653 023c 092B     		cmp	r3, #9
- 654 023e 09D0     		beq	.L104
- 147:Display/MenuManager.cpp ****                     else if (_next_state == OCTAVE) _next_state = BACK;
- 655              		.loc 1 147 26 view .LVU254
- 656 0240 0A2B     		cmp	r3, #10
- 657 0242 0DD0     		beq	.L105
- 148:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = ROOT;
- 658              		.loc 1 148 26 view .LVU255
- 659 0244 0B2B     		cmp	r3, #11
- 660 0246 14D0     		beq	.L106
- 149:Display/MenuManager.cpp ****                 } else {
- 661              		.loc 1 149 26 view .LVU256
- 662 0248 0C2B     		cmp	r3, #12
- 663 024a 7FF424AF 		bne	.L9
- 664 024e 20E7     		b	.L99
- 665              	.L78:
- 153:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = OCTAVE;
- 666              		.loc 1 153 26 view .LVU257
- 667 0250 0B2B     		cmp	r3, #11
- 668 0252 02D1     		bne	.L79
- 669              	.L104:
- 153:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = OCTAVE;
- 670              		.loc 1 153 53 discriminator 1 view .LVU258
- 153:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = OCTAVE;
- 671              		.loc 1 153 65 is_stmt 0 discriminator 1 view .LVU259
- 672 0254 0A23     		movs	r3, #10
- 673 0256 6370     		strb	r3, [r4, #1]
- 164:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
- 674              		.loc 1 164 5 is_stmt 1 discriminator 1 view .LVU260
- 165:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
- 675              		.loc 1 165 5 discriminator 1 view .LVU261
- 166:Display/MenuManager.cpp **** 
- 676              		.loc 1 166 5 discriminator 1 view .LVU262
- 677 0258 1DE7     		b	.L9
- 678              	.L79:
- 154:Display/MenuManager.cpp ****                 }
- 679              		.loc 1 154 26 view .LVU263
- 680 025a 0C2B     		cmp	r3, #12
- 681 025c 7FF41BAF 		bne	.L9
- 682              	.L105:
- 154:Display/MenuManager.cpp ****                 }
- 683              		.loc 1 154 51 discriminator 1 view .LVU264
- 154:Display/MenuManager.cpp ****                 }
- 684              		.loc 1 154 63 is_stmt 0 discriminator 1 view .LVU265
- 685 0260 0B23     		movs	r3, #11
- 686 0262 6370     		strb	r3, [r4, #1]
- 164:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
- 687              		.loc 1 164 5 is_stmt 1 discriminator 1 view .LVU266
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 20
+ 624 0290 D6E6     		b	.L41
+ 625              	.L30:
+ 108:Display/MenuManager.cpp ****                 _outData.touchths_value += current_rotation;
+ 626              		.loc 1 108 13 is_stmt 1 view .LVU236
+ 109:Display/MenuManager.cpp ****                 // check that value fits in an 8 bit register 
+ 627              		.loc 1 109 17 view .LVU237
+ 111:Display/MenuManager.cpp ****                 if (_outData.touchths_value > 255) _outData.touchths_value = 255;
+ 628              		.loc 1 111 17 view .LVU238
+ 109:Display/MenuManager.cpp ****                 // check that value fits in an 8 bit register 
+ 629              		.loc 1 109 41 is_stmt 0 view .LVU239
+ 630 0292 626A     		ldr	r2, [r4, #36]
+ 111:Display/MenuManager.cpp ****                 if (_outData.touchths_value > 255) _outData.touchths_value = 255;
+ 631              		.loc 1 111 17 view .LVU240
+ 632 0294 AA18     		adds	r2, r5, r2
+ 633 0296 00F18280 		bmi	.L147
+ 112:Display/MenuManager.cpp ****                 break;
+ 634              		.loc 1 112 17 is_stmt 1 view .LVU241
+ 635 029a FF2A     		cmp	r2, #255
+ 112:Display/MenuManager.cpp ****                 break;
+ 636              		.loc 1 112 52 view .LVU242
+ 112:Display/MenuManager.cpp ****                 break;
+ 637              		.loc 1 112 76 is_stmt 0 view .LVU243
+ 638 029c C8BF     		it	gt
+ 639 029e FF22     		movgt	r2, #255
+ 640 02a0 6262     		str	r2, [r4, #36]
+ 641 02a2 CDE6     		b	.L41
+ 642              	.L14:
+  50:Display/MenuManager.cpp ****             case PLAYMODE:        _next_state = MAIN_MENU; break;
+ 643              		.loc 1 50 9 is_stmt 1 view .LVU244
+ 644 02a4 052B     		cmp	r3, #5
+ 645 02a6 3FF6CBAE 		bhi	.L41
+ 646 02aa 01A2     		adr	r2, .L105
+ 647 02ac 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 648              		.p2align 2
+ 649              	.L105:
+ 650 02b0 09030000 		.word	.L22+1
+ 651 02b4 FD020000 		.word	.L21+1
+ 652 02b8 C9020000 		.word	.L104+1
+ 653 02bc CF020000 		.word	.L19+1
+ 654 02c0 41000000 		.word	.L41+1
+ 655 02c4 03030000 		.word	.L17+1
+ 656              		.p2align 1
+ 657              	.L104:
+  53:Display/MenuManager.cpp ****             case SCALES_HUB:      _next_state = ROOT; break;
+ 658              		.loc 1 53 13 view .LVU245
+  53:Display/MenuManager.cpp ****             case SCALES_HUB:      _next_state = ROOT; break;
+ 659              		.loc 1 53 35 view .LVU246
+  53:Display/MenuManager.cpp ****             case SCALES_HUB:      _next_state = ROOT; break;
+ 660              		.loc 1 53 47 is_stmt 0 view .LVU247
+ 661 02c8 0723     		movs	r3, #7
+ 662 02ca 6370     		strb	r3, [r4, #1]
+  53:Display/MenuManager.cpp ****             case SCALES_HUB:      _next_state = ROOT; break;
+ 663              		.loc 1 53 56 is_stmt 1 view .LVU248
+ 664              	.LVL20:
+ 134:Display/MenuManager.cpp ****         switch (_outData.state) {
+ 665              		.loc 1 134 5 view .LVU249
+ 199:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 20
 
 
- 165:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
- 688              		.loc 1 165 5 discriminator 1 view .LVU267
- 166:Display/MenuManager.cpp **** 
- 689              		.loc 1 166 5 discriminator 1 view .LVU268
- 690 0264 17E7     		b	.L9
- 691              	.L117:
- 116:Display/MenuManager.cpp ****                     else if (_next_state == SCALES_HUB) _next_state = PRESETS_HUB;
- 692              		.loc 1 116 21 view .LVU269
- 693 0266 022B     		cmp	r3, #2
- 694 0268 08D0     		beq	.L101
- 117:Display/MenuManager.cpp ****                     else if (_next_state == PRESETS_HUB) _next_state = BACK;
- 695              		.loc 1 117 26 view .LVU270
- 696 026a 032B     		cmp	r3, #3
- 697 026c 0CD0     		beq	.L102
- 118:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = CALIBRATION_HUB;
- 698              		.loc 1 118 26 view .LVU271
- 699 026e 042B     		cmp	r3, #4
- 700 0270 0DD1     		bne	.L59
- 701              	.L106:
- 151:Display/MenuManager.cpp ****                     else if (_next_state == SCALE) _next_state = ROOT;
- 702              		.loc 1 151 46 discriminator 1 view .LVU272
- 151:Display/MenuManager.cpp ****                     else if (_next_state == SCALE) _next_state = ROOT;
- 703              		.loc 1 151 58 is_stmt 0 discriminator 1 view .LVU273
- 704 0272 0C23     		movs	r3, #12
- 705 0274 6370     		strb	r3, [r4, #1]
- 164:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
- 706              		.loc 1 164 5 is_stmt 1 discriminator 1 view .LVU274
- 165:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
- 707              		.loc 1 165 5 discriminator 1 view .LVU275
- 166:Display/MenuManager.cpp **** 
- 708              		.loc 1 166 5 discriminator 1 view .LVU276
- 709 0276 0EE7     		b	.L9
- 710              	.L61:
- 123:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = PRESETS_HUB;
- 711              		.loc 1 123 26 view .LVU277
- 712 0278 042B     		cmp	r3, #4
- 713 027a 02D1     		bne	.L62
- 714              	.L101:
- 123:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = PRESETS_HUB;
- 715              		.loc 1 123 58 discriminator 1 view .LVU278
- 123:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = PRESETS_HUB;
- 716              		.loc 1 123 70 is_stmt 0 discriminator 1 view .LVU279
- 717 027c 0323     		movs	r3, #3
- 718 027e 6370     		strb	r3, [r4, #1]
- 164:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
- 719              		.loc 1 164 5 is_stmt 1 discriminator 1 view .LVU280
- 165:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
- 720              		.loc 1 165 5 discriminator 1 view .LVU281
- 166:Display/MenuManager.cpp **** 
- 721              		.loc 1 166 5 discriminator 1 view .LVU282
- 722 0280 09E7     		b	.L9
- 723              	.L62:
- 124:Display/MenuManager.cpp ****                 }
- 724              		.loc 1 124 26 view .LVU283
- 725 0282 0C2B     		cmp	r3, #12
- 726 0284 7FF407AF 		bne	.L9
- 727              	.L102:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 21
+ 666              		.loc 1 199 5 view .LVU250
+ 200:Display/MenuManager.cpp ****     if (_outData.state == TOUCHTHS_VALUE || _outData.state == RELTHS_VALUE) _next_state = THRESHOLD
+ 667              		.loc 1 200 5 view .LVU251
+ 201:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
+ 668              		.loc 1 201 5 view .LVU252
+ 669 02cc 77E7     		b	.L25
+ 670              	.LVL21:
+ 671              	.L19:
+  54:Display/MenuManager.cpp ****             case THRESHOLDS_HUB:  _next_state = TOUCHTHS_VALUE; break;
+ 672              		.loc 1 54 13 view .LVU253
+  54:Display/MenuManager.cpp ****             case THRESHOLDS_HUB:  _next_state = TOUCHTHS_VALUE; break;
+ 673              		.loc 1 54 35 view .LVU254
+  54:Display/MenuManager.cpp ****             case THRESHOLDS_HUB:  _next_state = TOUCHTHS_VALUE; break;
+ 674              		.loc 1 54 47 is_stmt 0 view .LVU255
+ 675 02ce 0A23     		movs	r3, #10
+ 676 02d0 6370     		strb	r3, [r4, #1]
+  54:Display/MenuManager.cpp ****             case THRESHOLDS_HUB:  _next_state = TOUCHTHS_VALUE; break;
+ 677              		.loc 1 54 55 is_stmt 1 view .LVU256
+ 678              	.LVL22:
+ 134:Display/MenuManager.cpp ****         switch (_outData.state) {
+ 679              		.loc 1 134 5 view .LVU257
+ 199:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
+ 680              		.loc 1 199 5 view .LVU258
+ 200:Display/MenuManager.cpp ****     if (_outData.state == TOUCHTHS_VALUE || _outData.state == RELTHS_VALUE) _next_state = THRESHOLD
+ 681              		.loc 1 200 5 view .LVU259
+ 201:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
+ 682              		.loc 1 201 5 view .LVU260
+ 683 02d2 74E7     		b	.L25
+ 684              	.L95:
+ 188:Display/MenuManager.cpp ****                     else if (_next_state == RELTHS_VALUE) _next_state = TOUCHTHS_VALUE;
+ 685              		.loc 1 188 21 view .LVU261
+ 686 02d4 0D2A     		cmp	r2, #13
+ 687 02d6 1AD0     		beq	.L118
+ 189:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = RELTHS_VALUE;
+ 688              		.loc 1 189 26 view .LVU262
+ 689 02d8 0E2A     		cmp	r2, #14
+ 690 02da 3FF421AF 		beq	.L117
+ 190:Display/MenuManager.cpp ****                 }
+ 691              		.loc 1 190 26 view .LVU263
+ 692 02de 0F2A     		cmp	r2, #15
+ 693 02e0 7FF4B4AE 		bne	.L100
+ 694              	.L119:
+ 190:Display/MenuManager.cpp ****                 }
+ 695              		.loc 1 190 51 discriminator 1 view .LVU264
+ 190:Display/MenuManager.cpp ****                 }
+ 696              		.loc 1 190 63 is_stmt 0 discriminator 1 view .LVU265
+ 697 02e4 0E22     		movs	r2, #14
+ 698 02e6 6270     		strb	r2, [r4, #1]
+ 699 02e8 B0E6     		b	.L100
+ 700              	.L114:
+ 146:Display/MenuManager.cpp ****                     else if (_next_state == THRESHOLDS_HUB) _next_state = PRESETS_HUB;
+ 701              		.loc 1 146 58 is_stmt 1 discriminator 1 view .LVU266
+ 146:Display/MenuManager.cpp ****                     else if (_next_state == THRESHOLDS_HUB) _next_state = PRESETS_HUB;
+ 702              		.loc 1 146 70 is_stmt 0 discriminator 1 view .LVU267
+ 703 02ea 0322     		movs	r2, #3
+ 704 02ec 6270     		strb	r2, [r4, #1]
+ 705 02ee ADE6     		b	.L100
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 21
 
 
- 124:Display/MenuManager.cpp ****                 }
- 728              		.loc 1 124 51 discriminator 1 view .LVU284
- 124:Display/MenuManager.cpp ****                 }
- 729              		.loc 1 124 63 is_stmt 0 discriminator 1 view .LVU285
- 730 0288 0423     		movs	r3, #4
- 731 028a 6370     		strb	r3, [r4, #1]
- 164:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
- 732              		.loc 1 164 5 is_stmt 1 discriminator 1 view .LVU286
- 165:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
- 733              		.loc 1 165 5 discriminator 1 view .LVU287
- 166:Display/MenuManager.cpp **** 
- 734              		.loc 1 166 5 discriminator 1 view .LVU288
- 735 028c 03E7     		b	.L9
- 736              	.L59:
- 119:Display/MenuManager.cpp ****                 } else {
- 737              		.loc 1 119 26 view .LVU289
- 738 028e 0C2B     		cmp	r3, #12
- 739 0290 7FF401AF 		bne	.L9
- 740 0294 24E7     		b	.L95
- 741              	.L127:
- 742 0296 00BF     		.align	2
- 743              	.L126:
- 744 0298 CDCCCC3D 		.word	1036831949
- 745 029c 0000C842 		.word	1120403456
- 746              		.cfi_endproc
- 747              	.LFE2721:
- 749              		.section	.text._ZN11MenuManager6UpdateEm,"ax",%progbits
- 750              		.align	1
- 751              		.p2align 2,,3
- 752              		.global	_ZN11MenuManager6UpdateEm
- 753              		.syntax unified
- 754              		.thumb
- 755              		.thumb_func
- 756              		.fpu fpv5-d16
- 758              	_ZN11MenuManager6UpdateEm:
- 759              	.LVL24:
- 760              	.LFB2722:
- 171:Display/MenuManager.cpp **** 
- 172:Display/MenuManager.cpp **** void MenuManager::Update(uint32_t currentTime) {
- 761              		.loc 1 172 48 view -0
- 762              		.cfi_startproc
- 763              		@ args = 0, pretend = 0, frame = 0
- 764              		@ frame_needed = 0, uses_anonymous_args = 0
- 765              		@ link register save eliminated.
- 173:Display/MenuManager.cpp ****     if (_outData.state != PLAYMODE && (currentTime - _lastInteractionTime >= 5000)) {
- 766              		.loc 1 173 5 view .LVU291
- 767 0000 0379     		ldrb	r3, [r0, #4]	@ zero_extendqisi2
- 768 0002 5BB1     		cbz	r3, .L128
- 769              		.loc 1 173 52 is_stmt 0 discriminator 1 view .LVU292
- 770 0004 836C     		ldr	r3, [r0, #72]
- 771              		.loc 1 173 36 discriminator 1 view .LVU293
- 772 0006 41F28732 		movw	r2, #4999
- 773              		.loc 1 173 52 discriminator 1 view .LVU294
- 774 000a CB1A     		subs	r3, r1, r3
- 775              		.loc 1 173 36 discriminator 1 view .LVU295
- 776 000c 9342     		cmp	r3, r2
- 777 000e 05D9     		bls	.L128
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 22
+ 706              	.L125:
+ 177:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = OCTAVE;
+ 707              		.loc 1 177 53 is_stmt 1 discriminator 1 view .LVU268
+ 177:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = OCTAVE;
+ 708              		.loc 1 177 65 is_stmt 0 discriminator 1 view .LVU269
+ 709 02f0 0B22     		movs	r2, #11
+ 710 02f2 6270     		strb	r2, [r4, #1]
+ 711 02f4 AAE6     		b	.L100
+ 712              	.L121:
+ 162:Display/MenuManager.cpp ****                     else if (_next_state == FILTER_TYPE)     _next_state = HYSTERESIS; 
+ 713              		.loc 1 162 62 is_stmt 1 discriminator 1 view .LVU270
+ 162:Display/MenuManager.cpp ****                     else if (_next_state == FILTER_TYPE)     _next_state = HYSTERESIS; 
+ 714              		.loc 1 162 74 is_stmt 0 discriminator 1 view .LVU271
+ 715 02f6 0622     		movs	r2, #6
+ 716 02f8 6270     		strb	r2, [r4, #1]
+ 717 02fa A7E6     		b	.L100
+ 718              	.LVL23:
+ 719              	.L21:
+  52:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
+ 720              		.loc 1 52 13 is_stmt 1 view .LVU272
+  52:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
+ 721              		.loc 1 52 35 view .LVU273
+  52:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
+ 722              		.loc 1 52 47 is_stmt 0 view .LVU274
+ 723 02fc 0223     		movs	r3, #2
+ 724 02fe 6370     		strb	r3, [r4, #1]
+  52:Display/MenuManager.cpp ****             case CALIBRATION_HUB: _next_state = DELTA; break;
+ 725              		.loc 1 52 66 is_stmt 1 view .LVU275
+ 726              	.LVL24:
+ 134:Display/MenuManager.cpp ****         switch (_outData.state) {
+ 727              		.loc 1 134 5 view .LVU276
+ 199:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
+ 728              		.loc 1 199 5 view .LVU277
+ 200:Display/MenuManager.cpp ****     if (_outData.state == TOUCHTHS_VALUE || _outData.state == RELTHS_VALUE) _next_state = THRESHOLD
+ 729              		.loc 1 200 5 view .LVU278
+ 201:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
+ 730              		.loc 1 201 5 view .LVU279
+ 731 0300 5DE7     		b	.L25
+ 732              	.LVL25:
+ 733              	.L17:
+  55:Display/MenuManager.cpp ****             default: break; 
+ 734              		.loc 1 55 13 view .LVU280
+  55:Display/MenuManager.cpp ****             default: break; 
+ 735              		.loc 1 55 35 view .LVU281
+  55:Display/MenuManager.cpp ****             default: break; 
+ 736              		.loc 1 55 47 is_stmt 0 view .LVU282
+ 737 0302 0D23     		movs	r3, #13
+ 738 0304 6370     		strb	r3, [r4, #1]
+  55:Display/MenuManager.cpp ****             default: break; 
+ 739              		.loc 1 55 65 is_stmt 1 view .LVU283
+ 740              	.LVL26:
+ 134:Display/MenuManager.cpp ****         switch (_outData.state) {
+ 741              		.loc 1 134 5 view .LVU284
+ 199:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
+ 742              		.loc 1 199 5 view .LVU285
+ 200:Display/MenuManager.cpp ****     if (_outData.state == TOUCHTHS_VALUE || _outData.state == RELTHS_VALUE) _next_state = THRESHOLD
+ 743              		.loc 1 200 5 view .LVU286
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 22
 
 
- 174:Display/MenuManager.cpp ****         
- 175:Display/MenuManager.cpp ****         _outData.state = PLAYMODE;
- 778              		.loc 1 175 9 is_stmt 1 view .LVU296
- 176:Display/MenuManager.cpp ****         
- 177:Display/MenuManager.cpp ****         // <-- CORREZIONE: Resetta il cursore al punto di partenza
- 178:Display/MenuManager.cpp ****         _next_state = MAIN_MENU;
- 779              		.loc 1 178 9 view .LVU297
- 780              		.loc 1 178 21 is_stmt 0 view .LVU298
- 781 0010 0122     		movs	r2, #1
- 175:Display/MenuManager.cpp ****         
- 782              		.loc 1 175 24 view .LVU299
- 783 0012 4FF48073 		mov	r3, #256
- 179:Display/MenuManager.cpp ****         _outData.cursor_state = MAIN_MENU;
- 180:Display/MenuManager.cpp ****         
- 181:Display/MenuManager.cpp ****         _lastInteractionTime = currentTime; 
- 784              		.loc 1 181 30 view .LVU300
- 785 0016 8164     		str	r1, [r0, #72]
- 178:Display/MenuManager.cpp ****         _outData.cursor_state = MAIN_MENU;
- 786              		.loc 1 178 21 view .LVU301
- 787 0018 4270     		strb	r2, [r0, #1]
- 179:Display/MenuManager.cpp ****         _outData.cursor_state = MAIN_MENU;
- 788              		.loc 1 179 9 is_stmt 1 view .LVU302
- 175:Display/MenuManager.cpp ****         
- 789              		.loc 1 175 24 is_stmt 0 view .LVU303
- 790 001a 8380     		strh	r3, [r0, #4]	@ movhi
- 791              		.loc 1 181 9 is_stmt 1 view .LVU304
- 792              	.L128:
- 182:Display/MenuManager.cpp ****     }
- 183:Display/MenuManager.cpp **** }...
- 793              		.loc 1 183 1 is_stmt 0 view .LVU305
- 794 001c 7047     		bx	lr
- 795              		.cfi_endproc
- 796              	.LFE2722:
- 798 001e 00BF     		.text
- 799              	.Letext0:
- 800              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
- 801              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
- 802              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
- 803              		.file 5 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
- 804              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
- 805              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
- 806              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
- 807              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
- 808              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
- 809              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
- 810              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
- 811              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
- 812              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
- 813              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
- 814              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
- 815              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
- 816              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
- 817              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstddef"
- 818              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
- 819              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
- 820              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
- 821              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 23
+ 201:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
+ 744              		.loc 1 201 5 view .LVU287
+ 745 0306 5AE7     		b	.L25
+ 746              	.LVL27:
+ 747              	.L22:
+  51:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
+ 748              		.loc 1 51 13 view .LVU288
+  51:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
+ 749              		.loc 1 51 35 view .LVU289
+  51:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
+ 750              		.loc 1 51 47 is_stmt 0 view .LVU290
+ 751 0308 0123     		movs	r3, #1
+ 752 030a 6370     		strb	r3, [r4, #1]
+  51:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
+ 753              		.loc 1 51 60 is_stmt 1 view .LVU291
+ 754              	.LVL28:
+ 134:Display/MenuManager.cpp ****         switch (_outData.state) {
+ 755              		.loc 1 134 5 view .LVU292
+ 199:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
+ 756              		.loc 1 199 5 view .LVU293
+ 200:Display/MenuManager.cpp ****     if (_outData.state == TOUCHTHS_VALUE || _outData.state == RELTHS_VALUE) _next_state = THRESHOLD
+ 757              		.loc 1 200 5 view .LVU294
+ 201:Display/MenuManager.cpp ****     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
+ 758              		.loc 1 201 5 view .LVU295
+ 759 030c 57E7     		b	.L25
+ 760              	.L118:
+ 188:Display/MenuManager.cpp ****                     else if (_next_state == RELTHS_VALUE) _next_state = TOUCHTHS_VALUE;
+ 761              		.loc 1 188 56 discriminator 1 view .LVU296
+ 188:Display/MenuManager.cpp ****                     else if (_next_state == RELTHS_VALUE) _next_state = TOUCHTHS_VALUE;
+ 762              		.loc 1 188 68 is_stmt 0 discriminator 1 view .LVU297
+ 763 030e 0F22     		movs	r2, #15
+ 764 0310 6270     		strb	r2, [r4, #1]
+ 765 0312 9BE6     		b	.L100
+ 766              	.L79:
+ 160:Display/MenuManager.cpp ****                     else if (_next_state == CURVE)           _next_state = DELTA;
+ 767              		.loc 1 160 21 is_stmt 1 view .LVU298
+ 768 0314 072A     		cmp	r2, #7
+ 769 0316 FAD0     		beq	.L118
+ 161:Display/MenuManager.cpp ****                     else if (_next_state == HYSTERESIS)      _next_state = CURVE;
+ 770              		.loc 1 161 26 view .LVU299
+ 771 0318 062A     		cmp	r2, #6
+ 772 031a 3FF43DAF 		beq	.L127
+ 162:Display/MenuManager.cpp ****                     else if (_next_state == FILTER_TYPE)     _next_state = HYSTERESIS; 
+ 773              		.loc 1 162 26 view .LVU300
+ 774 031e 082A     		cmp	r2, #8
+ 775 0320 E9D0     		beq	.L121
+ 163:Display/MenuManager.cpp ****                     else if (_next_state == BACK)            _next_state = FILTER_TYPE; 
+ 776              		.loc 1 163 26 view .LVU301
+ 777 0322 092A     		cmp	r2, #9
+ 778 0324 24D0     		beq	.L123
+ 164:Display/MenuManager.cpp ****                 }
+ 779              		.loc 1 164 26 view .LVU302
+ 780 0326 0F2A     		cmp	r2, #15
+ 781 0328 7FF490AE 		bne	.L100
+ 782              	.L126:
+ 164:Display/MenuManager.cpp ****                 }
+ 783              		.loc 1 164 62 discriminator 1 view .LVU303
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 23
 
 
- 822              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
- 823              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
- 824              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
- 825              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
- 826              		.file 28 "../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h"
- 827              		.file 29 "../libs/PoliTeKDSP/libs/libDaisy/src/per/tim.h"
- 828              		.file 30 "../libs/PoliTeKDSP/libs/libDaisy/src/sys/system.h"
- 829              		.file 31 "../libs/PoliTeKDSP/libs/libDaisy/src/dev/max11300.h"
- 830              		.file 32 "../libs/PoliTeKDSP/libs/libDaisy/src/dev/sr_595.h"
- 831              		.file 33 "../libs/PoliTeKDSP/libs/libDaisy/src/util/wav_format.h"
- 832              		.file 34 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
- 833              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
- 834              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
- 835              		.file 37 "../libs/PoliTeKDSP/libs/libDaisy/Middlewares/Third_Party/FatFs/src/integer.h"
- 836              		.file 38 "../libs/PoliTeKDSP/libs/libDaisy/Middlewares/Third_Party/FatFs/src/ff.h"
- 837              		.file 39 "Display/MenuManager.h"
- 838              		.file 40 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s 			page 24
+ 164:Display/MenuManager.cpp ****                 }
+ 784              		.loc 1 164 74 is_stmt 0 discriminator 1 view .LVU304
+ 785 032c 0922     		movs	r2, #9
+ 786 032e 6270     		strb	r2, [r4, #1]
+ 787 0330 8CE6     		b	.L100
+ 788              	.L88:
+ 175:Display/MenuManager.cpp ****                     else if (_next_state == SCALE) _next_state = ROOT;
+ 789              		.loc 1 175 21 is_stmt 1 view .LVU305
+ 790 0332 0A2A     		cmp	r2, #10
+ 791 0334 EBD0     		beq	.L118
+ 176:Display/MenuManager.cpp ****                     else if (_next_state == OCTAVE) _next_state = SCALE;
+ 792              		.loc 1 176 26 view .LVU306
+ 793 0336 0B2A     		cmp	r2, #11
+ 794 0338 3FF418AF 		beq	.L122
+ 177:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = OCTAVE;
+ 795              		.loc 1 177 26 view .LVU307
+ 796 033c 0C2A     		cmp	r2, #12
+ 797 033e D7D0     		beq	.L125
+ 178:Display/MenuManager.cpp ****                 }
+ 798              		.loc 1 178 26 view .LVU308
+ 799 0340 0F2A     		cmp	r2, #15
+ 800 0342 7FF483AE 		bne	.L100
+ 801              	.L124:
+ 178:Display/MenuManager.cpp ****                 }
+ 802              		.loc 1 178 51 discriminator 1 view .LVU309
+ 178:Display/MenuManager.cpp ****                 }
+ 803              		.loc 1 178 63 is_stmt 0 discriminator 1 view .LVU310
+ 804 0346 0C22     		movs	r2, #12
+ 805 0348 6270     		strb	r2, [r4, #1]
+ 806 034a 7FE6     		b	.L100
+ 807              	.L69:
+ 144:Display/MenuManager.cpp ****                     else if (_next_state == SCALES_HUB) _next_state = CALIBRATION_HUB;
+ 808              		.loc 1 144 21 is_stmt 1 view .LVU311
+ 809 034c 022A     		cmp	r2, #2
+ 810 034e DED0     		beq	.L118
+ 145:Display/MenuManager.cpp ****                     else if (_next_state == PRESETS_HUB) _next_state = SCALES_HUB;
+ 811              		.loc 1 145 26 view .LVU312
+ 812 0350 032A     		cmp	r2, #3
+ 813 0352 3FF479AE 		beq	.L120
+ 146:Display/MenuManager.cpp ****                     else if (_next_state == THRESHOLDS_HUB) _next_state = PRESETS_HUB;
+ 814              		.loc 1 146 26 view .LVU313
+ 815 0356 042A     		cmp	r2, #4
+ 816 0358 C7D0     		beq	.L114
+ 147:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = THRESHOLDS_HUB;
+ 817              		.loc 1 147 26 view .LVU314
+ 818 035a 052A     		cmp	r2, #5
+ 819 035c 0BD0     		beq	.L115
+ 148:Display/MenuManager.cpp ****                 }
+ 820              		.loc 1 148 26 view .LVU315
+ 821 035e 0F2A     		cmp	r2, #15
+ 822 0360 7FF474AE 		bne	.L100
+ 823              	.L116:
+ 148:Display/MenuManager.cpp ****                 }
+ 824              		.loc 1 148 51 discriminator 1 view .LVU316
+ 148:Display/MenuManager.cpp ****                 }
+ 825              		.loc 1 148 63 is_stmt 0 discriminator 1 view .LVU317
+ 826 0364 0522     		movs	r2, #5
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 24
+
+
+ 827 0366 6270     		strb	r2, [r4, #1]
+ 828 0368 70E6     		b	.L100
+ 829              	.LVL29:
+ 830              	.L138:
+  38:Display/MenuManager.cpp ****             else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.
+ 831              		.loc 1 38 46 is_stmt 1 discriminator 1 view .LVU318
+  38:Display/MenuManager.cpp ****             else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.
+ 832              		.loc 1 38 61 is_stmt 0 discriminator 1 view .LVU319
+ 833 036a 2671     		strb	r6, [r4, #4]
+  50:Display/MenuManager.cpp ****             case PLAYMODE:        _next_state = MAIN_MENU; break;
+ 834              		.loc 1 50 9 is_stmt 1 discriminator 1 view .LVU320
+  51:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
+ 835              		.loc 1 51 13 discriminator 1 view .LVU321
+  51:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
+ 836              		.loc 1 51 35 discriminator 1 view .LVU322
+  51:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
+ 837              		.loc 1 51 47 is_stmt 0 discriminator 1 view .LVU323
+ 838 036c 6370     		strb	r3, [r4, #1]
+  51:Display/MenuManager.cpp ****             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
+ 839              		.loc 1 51 60 is_stmt 1 discriminator 1 view .LVU324
+ 840              	.LVL30:
+ 134:Display/MenuManager.cpp ****         switch (_outData.state) {
+ 841              		.loc 1 134 5 discriminator 1 view .LVU325
+ 199:Display/MenuManager.cpp ****     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state 
+ 842              		.loc 1 199 5 discriminator 1 view .LVU326
+ 200:Display/MenuManager.cpp ****     if (_outData.state == TOUCHTHS_VALUE || _outData.state == RELTHS_VALUE) _next_state = THRESHOLD
+ 843              		.loc 1 200 5 discriminator 1 view .LVU327
+ 844 036e 26E7     		b	.L25
+ 845              	.L123:
+ 163:Display/MenuManager.cpp ****                     else if (_next_state == BACK)            _next_state = FILTER_TYPE; 
+ 846              		.loc 1 163 62 discriminator 1 view .LVU328
+ 163:Display/MenuManager.cpp ****                     else if (_next_state == BACK)            _next_state = FILTER_TYPE; 
+ 847              		.loc 1 163 74 is_stmt 0 discriminator 1 view .LVU329
+ 848 0370 0822     		movs	r2, #8
+ 849 0372 6270     		strb	r2, [r4, #1]
+ 850 0374 6AE6     		b	.L100
+ 851              	.L115:
+ 147:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = THRESHOLDS_HUB;
+ 852              		.loc 1 147 61 is_stmt 1 discriminator 1 view .LVU330
+ 147:Display/MenuManager.cpp ****                     else if (_next_state == BACK) _next_state = THRESHOLDS_HUB;
+ 853              		.loc 1 147 73 is_stmt 0 discriminator 1 view .LVU331
+ 854 0376 0422     		movs	r2, #4
+ 855 0378 6270     		strb	r2, [r4, #1]
+ 856 037a 67E6     		b	.L100
+ 857              	.LVL31:
+ 858              	.L111:
+  75:Display/MenuManager.cpp ****                 break;
+ 859              		.loc 1 75 17 is_stmt 1 view .LVU332
+ 860 037c B0EE007A 		vmov.f32	s14, #2.0e+0
+  73:Display/MenuManager.cpp ****                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
+ 861              		.loc 1 73 32 is_stmt 0 view .LVU333
+ 862 0380 F4EEC77A 		vcmpe.f32	s15, s14
+ 863 0384 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 864 0388 77FE277A 		vselgt.f32	s15, s14, s15
+ 865 038c C4ED037A 		vstr.32	s15, [r4, #12]
+ 866 0390 56E6     		b	.L41
+ 867              	.L141:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 25
+
+
+  86:Display/MenuManager.cpp ****                 if (_outData.filter_type > 3) _outData.filter_type = 3;
+ 868              		.loc 1 86 47 is_stmt 1 discriminator 1 view .LVU334
+  86:Display/MenuManager.cpp ****                 if (_outData.filter_type > 3) _outData.filter_type = 3;
+ 869              		.loc 1 86 68 is_stmt 0 discriminator 1 view .LVU335
+ 870 0392 0022     		movs	r2, #0
+ 871 0394 A261     		str	r2, [r4, #24]
+  87:Display/MenuManager.cpp ****                 break;
+ 872              		.loc 1 87 17 is_stmt 1 discriminator 1 view .LVU336
+ 873 0396 53E6     		b	.L41
+ 874              	.L142:
+  92:Display/MenuManager.cpp ****                 if (_outData.root > 11) _outData.root = 11;
+ 875              		.loc 1 92 40 discriminator 1 view .LVU337
+  92:Display/MenuManager.cpp ****                 if (_outData.root > 11) _outData.root = 11;
+ 876              		.loc 1 92 54 is_stmt 0 discriminator 1 view .LVU338
+ 877 0398 0022     		movs	r2, #0
+ 878 039a 2261     		str	r2, [r4, #16]
+  93:Display/MenuManager.cpp ****                 break;
+ 879              		.loc 1 93 17 is_stmt 1 discriminator 1 view .LVU339
+ 880 039c 50E6     		b	.L41
+ 881              	.L147:
+ 111:Display/MenuManager.cpp ****                 if (_outData.touchths_value > 255) _outData.touchths_value = 255;
+ 882              		.loc 1 111 50 discriminator 1 view .LVU340
+ 111:Display/MenuManager.cpp ****                 if (_outData.touchths_value > 255) _outData.touchths_value = 255;
+ 883              		.loc 1 111 74 is_stmt 0 discriminator 1 view .LVU341
+ 884 039e 0022     		movs	r2, #0
+ 885 03a0 6262     		str	r2, [r4, #36]
+ 112:Display/MenuManager.cpp ****                 break;
+ 886              		.loc 1 112 17 is_stmt 1 discriminator 1 view .LVU342
+ 887 03a2 4DE6     		b	.L41
+ 888              	.L140:
+  68:Display/MenuManager.cpp ****                 if (_outData.delta > 100.0f) _outData.delta = 100.0f;
+ 889              		.loc 1 68 44 discriminator 1 view .LVU343
+  68:Display/MenuManager.cpp ****                 if (_outData.delta > 100.0f) _outData.delta = 100.0f;
+ 890              		.loc 1 68 59 is_stmt 0 discriminator 1 view .LVU344
+ 891 03a4 84ED027A 		vstr.32	s14, [r4, #8]
+  69:Display/MenuManager.cpp ****                 break;
+ 892              		.loc 1 69 17 is_stmt 1 discriminator 1 view .LVU345
+ 893 03a8 4AE6     		b	.L41
+ 894              	.L135:
+ 124:Display/MenuManager.cpp ****                 if (_outData.preset > 2) _outData.preset = 2;
+ 895              		.loc 1 124 42 discriminator 1 view .LVU346
+ 124:Display/MenuManager.cpp ****                 if (_outData.preset > 2) _outData.preset = 2;
+ 896              		.loc 1 124 58 is_stmt 0 discriminator 1 view .LVU347
+ 897 03aa 0022     		movs	r2, #0
+ 898 03ac E262     		str	r2, [r4, #44]
+ 125:Display/MenuManager.cpp ****                 break;
+ 899              		.loc 1 125 17 is_stmt 1 discriminator 1 view .LVU348
+ 900 03ae 47E6     		b	.L41
+ 901              	.L139:
+  80:Display/MenuManager.cpp ****                 if (_outData.hysteresis > 20) _outData.hysteresis = 20;
+ 902              		.loc 1 80 46 discriminator 1 view .LVU349
+  80:Display/MenuManager.cpp ****                 if (_outData.hysteresis > 20) _outData.hysteresis = 20;
+ 903              		.loc 1 80 66 is_stmt 0 discriminator 1 view .LVU350
+ 904 03b0 0022     		movs	r2, #0
+ 905 03b2 6261     		str	r2, [r4, #20]
+  81:Display/MenuManager.cpp ****                 break;
+ 906              		.loc 1 81 17 is_stmt 1 discriminator 1 view .LVU351
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 26
+
+
+ 907 03b4 44E6     		b	.L41
+ 908              	.LVL32:
+ 909              	.L144:
+ 104:Display/MenuManager.cpp ****                 if (_outData.octave > 8) _outData.octave = 8;
+ 910              		.loc 1 104 42 discriminator 1 view .LVU352
+ 104:Display/MenuManager.cpp ****                 if (_outData.octave > 8) _outData.octave = 8;
+ 911              		.loc 1 104 58 is_stmt 0 discriminator 1 view .LVU353
+ 912 03b6 0122     		movs	r2, #1
+ 913 03b8 2262     		str	r2, [r4, #32]
+ 105:Display/MenuManager.cpp ****                 break;
+ 914              		.loc 1 105 17 is_stmt 1 discriminator 1 view .LVU354
+ 915 03ba 41E6     		b	.L41
+ 916              	.LVL33:
+ 917              	.L143:
+ 118:Display/MenuManager.cpp ****                 if (_outData.relths_value > 255) _outData.relths_value = 255;
+ 918              		.loc 1 118 48 discriminator 1 view .LVU355
+ 118:Display/MenuManager.cpp ****                 if (_outData.relths_value > 255) _outData.relths_value = 255;
+ 919              		.loc 1 118 70 is_stmt 0 discriminator 1 view .LVU356
+ 920 03bc 0022     		movs	r2, #0
+ 921 03be A262     		str	r2, [r4, #40]
+ 119:Display/MenuManager.cpp ****                 break;    
+ 922              		.loc 1 119 17 is_stmt 1 discriminator 1 view .LVU357
+ 923 03c0 3EE6     		b	.L41
+ 924              	.L146:
+  98:Display/MenuManager.cpp ****                 if (_outData.scale > 6) _outData.scale = 6;
+ 925              		.loc 1 98 41 discriminator 1 view .LVU358
+  98:Display/MenuManager.cpp ****                 if (_outData.scale > 6) _outData.scale = 6;
+ 926              		.loc 1 98 56 is_stmt 0 discriminator 1 view .LVU359
+ 927 03c2 0022     		movs	r2, #0
+ 928 03c4 E261     		str	r2, [r4, #28]
+  99:Display/MenuManager.cpp ****                 break;
+ 929              		.loc 1 99 17 is_stmt 1 discriminator 1 view .LVU360
+ 930 03c6 3BE6     		b	.L41
+ 931              	.LVL34:
+ 932              	.L145:
+ 103:Display/MenuManager.cpp ****                 if (_outData.octave < 1) _outData.octave = 1;
+ 933              		.loc 1 103 33 is_stmt 0 view .LVU361
+ 934 03c8 2562     		str	r5, [r4, #32]
+ 935 03ca 39E6     		b	.L41
+ 936              	.L149:
+ 937              		.align	2
+ 938              	.L148:
+ 939 03cc CDCCCC3D 		.word	1036831949
+ 940 03d0 0000C842 		.word	1120403456
+ 941              		.cfi_endproc
+ 942              	.LFE2721:
+ 944              		.section	.text._ZN11MenuManager6UpdateEm,"ax",%progbits
+ 945              		.align	1
+ 946              		.p2align 2,,3
+ 947              		.global	_ZN11MenuManager6UpdateEm
+ 948              		.syntax unified
+ 949              		.thumb
+ 950              		.thumb_func
+ 951              		.fpu fpv5-d16
+ 953              	_ZN11MenuManager6UpdateEm:
+ 954              	.LVL35:
+ 955              	.LFB2722:
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 27
+
+
+ 207:Display/MenuManager.cpp **** 
+ 208:Display/MenuManager.cpp **** void MenuManager::Update(uint32_t currentTime) {
+ 956              		.loc 1 208 48 is_stmt 1 view -0
+ 957              		.cfi_startproc
+ 958              		@ args = 0, pretend = 0, frame = 0
+ 959              		@ frame_needed = 0, uses_anonymous_args = 0
+ 960              		@ link register save eliminated.
+ 209:Display/MenuManager.cpp ****     if (_outData.state != PLAYMODE && (currentTime - _lastInteractionTime >= 5000)) {
+ 961              		.loc 1 209 5 view .LVU363
+ 962 0000 0379     		ldrb	r3, [r0, #4]	@ zero_extendqisi2
+ 963 0002 5BB1     		cbz	r3, .L150
+ 964              		.loc 1 209 52 is_stmt 0 discriminator 1 view .LVU364
+ 965 0004 836D     		ldr	r3, [r0, #88]
+ 966              		.loc 1 209 36 discriminator 1 view .LVU365
+ 967 0006 41F28732 		movw	r2, #4999
+ 968              		.loc 1 209 52 discriminator 1 view .LVU366
+ 969 000a CB1A     		subs	r3, r1, r3
+ 970              		.loc 1 209 36 discriminator 1 view .LVU367
+ 971 000c 9342     		cmp	r3, r2
+ 972 000e 05D9     		bls	.L150
+ 210:Display/MenuManager.cpp ****         
+ 211:Display/MenuManager.cpp ****         _outData.state = PLAYMODE;
+ 973              		.loc 1 211 9 is_stmt 1 view .LVU368
+ 212:Display/MenuManager.cpp ****         
+ 213:Display/MenuManager.cpp ****         // <-- CORREZIONE: Resetta il cursore al punto di partenza
+ 214:Display/MenuManager.cpp ****         _next_state = MAIN_MENU;
+ 974              		.loc 1 214 9 view .LVU369
+ 975              		.loc 1 214 21 is_stmt 0 view .LVU370
+ 976 0010 0122     		movs	r2, #1
+ 211:Display/MenuManager.cpp ****         
+ 977              		.loc 1 211 24 view .LVU371
+ 978 0012 4FF48073 		mov	r3, #256
+ 215:Display/MenuManager.cpp ****         _outData.cursor_state = MAIN_MENU;
+ 216:Display/MenuManager.cpp ****         
+ 217:Display/MenuManager.cpp ****         _lastInteractionTime = currentTime; 
+ 979              		.loc 1 217 30 view .LVU372
+ 980 0016 8165     		str	r1, [r0, #88]
+ 214:Display/MenuManager.cpp ****         _outData.cursor_state = MAIN_MENU;
+ 981              		.loc 1 214 21 view .LVU373
+ 982 0018 4270     		strb	r2, [r0, #1]
+ 215:Display/MenuManager.cpp ****         _outData.cursor_state = MAIN_MENU;
+ 983              		.loc 1 215 9 is_stmt 1 view .LVU374
+ 211:Display/MenuManager.cpp ****         
+ 984              		.loc 1 211 24 is_stmt 0 view .LVU375
+ 985 001a 8380     		strh	r3, [r0, #4]	@ movhi
+ 986              		.loc 1 217 9 is_stmt 1 view .LVU376
+ 987              	.L150:
+ 218:Display/MenuManager.cpp ****     }
+ 219:Display/MenuManager.cpp **** }...
+ 988              		.loc 1 219 1 is_stmt 0 view .LVU377
+ 989 001c 7047     		bx	lr
+ 990              		.cfi_endproc
+ 991              	.LFE2722:
+ 993 001e 00BF     		.text
+ 994              	.Letext0:
+ 995              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 996              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 28
+
+
+ 997              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 998              		.file 5 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 999              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 1000              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 1001              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 1002              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 1003              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 1004              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 1005              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 1006              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 1007              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 1008              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 1009              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 1010              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 1011              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 1012              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstddef"
+ 1013              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 1014              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 1015              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 1016              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 1017              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 1018              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 1019              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 1020              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 1021              		.file 28 "../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h"
+ 1022              		.file 29 "../libs/PoliTeKDSP/libs/libDaisy/src/per/tim.h"
+ 1023              		.file 30 "../libs/PoliTeKDSP/libs/libDaisy/src/sys/system.h"
+ 1024              		.file 31 "../libs/PoliTeKDSP/libs/libDaisy/src/dev/max11300.h"
+ 1025              		.file 32 "../libs/PoliTeKDSP/libs/libDaisy/src/dev/sr_595.h"
+ 1026              		.file 33 "../libs/PoliTeKDSP/libs/libDaisy/src/util/wav_format.h"
+ 1027              		.file 34 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 1028              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 1029              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 1030              		.file 37 "../libs/PoliTeKDSP/libs/libDaisy/Middlewares/Third_Party/FatFs/src/integer.h"
+ 1031              		.file 38 "../libs/PoliTeKDSP/libs/libDaisy/Middlewares/Third_Party/FatFs/src/ff.h"
+ 1032              		.file 39 "Display/MenuManager.h"
+ 1033              		.file 40 "<built-in>"
+ARM GAS  C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s 			page 29
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 MenuManager.cpp
-C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s:17     .text._ZN11MenuManager4InitEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s:26     .text._ZN11MenuManager4InitEv:00000000 _ZN11MenuManager4InitEv
-C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s:91     .text._ZN11MenuManager4InitEv:00000034 $d
-C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s:96     .text._ZN11MenuManager15StateTransitionEbib:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s:104    .text._ZN11MenuManager15StateTransitionEbib:00000000 _ZN11MenuManager15StateTransitionEbib
-C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s:188    .text._ZN11MenuManager15StateTransitionEbib:00000042 $d
-C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s:192    .text._ZN11MenuManager15StateTransitionEbib:00000046 $t
-C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s:206    .text._ZN11MenuManager15StateTransitionEbib:00000056 $d
-C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s:214    .text._ZN11MenuManager15StateTransitionEbib:0000005e $t
-C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s:744    .text._ZN11MenuManager15StateTransitionEbib:00000298 $d
-C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s:750    .text._ZN11MenuManager6UpdateEm:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccW09pJe.s:758    .text._ZN11MenuManager6UpdateEm:00000000 _ZN11MenuManager6UpdateEm
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:17     .text._ZN11MenuManager4InitEv:00000000 $t
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:26     .text._ZN11MenuManager4InitEv:00000000 _ZN11MenuManager4InitEv
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:101    .text._ZN11MenuManager4InitEv:00000034 $d
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:106    .text._ZN11MenuManager15StateTransitionEbib:00000000 $t
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:114    .text._ZN11MenuManager15StateTransitionEbib:00000000 _ZN11MenuManager15StateTransitionEbib
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:251    .text._ZN11MenuManager15StateTransitionEbib:00000080 $d
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:258    .text._ZN11MenuManager15StateTransitionEbib:00000098 $t
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:289    .text._ZN11MenuManager15StateTransitionEbib:000000bc $d
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:300    .text._ZN11MenuManager15StateTransitionEbib:000000e8 $t
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:312    .text._ZN11MenuManager15StateTransitionEbib:000000f4 $d
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:317    .text._ZN11MenuManager15StateTransitionEbib:00000108 $t
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:650    .text._ZN11MenuManager15StateTransitionEbib:000002b0 $d
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:656    .text._ZN11MenuManager15StateTransitionEbib:000002c8 $t
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:939    .text._ZN11MenuManager15StateTransitionEbib:000003cc $d
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:945    .text._ZN11MenuManager6UpdateEm:00000000 $t
+C:\Users\matte\AppData\Local\Temp\ccaFBHaB.s:953    .text._ZN11MenuManager6UpdateEm:00000000 _ZN11MenuManager6UpdateEm
 
 UNDEFINED SYMBOLS
 _ZN5daisy6System6GetNowEv

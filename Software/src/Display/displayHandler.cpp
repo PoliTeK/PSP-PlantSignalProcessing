@@ -117,7 +117,8 @@ void DisplayHandler::DrawMainMenu(int cursorIndex) {
     _displayPtr->SetCursor(10, 13); _displayPtr->WriteString("Calibration", Font_7x10, true);
     _displayPtr->SetCursor(10, 23); _displayPtr->WriteString("Scales", Font_7x10, true);
     _displayPtr->SetCursor(10, 33); _displayPtr->WriteString("Presets", Font_7x10, true);
-    _displayPtr->SetCursor(10, 43); _displayPtr->WriteString("Exit", Font_7x10, true);
+    _displayPtr->SetCursor(10, 43); _displayPtr->WriteString("Thresholds (all chs)", Font_7x10, true);
+    _displayPtr->SetCursor(10, 53); _displayPtr->WriteString("Exit", Font_7x10, true);
 
     int cursorY = 13 + (cursorIndex * 10);
     _displayPtr->SetCursor(0, cursorY);
@@ -151,6 +152,21 @@ void DisplayHandler::DrawScalesHub(int cursorIndex) {
     _displayPtr->SetCursor(10, 23); _displayPtr->WriteString("Scale Type", Font_7x10, true);
     _displayPtr->SetCursor(10, 33); _displayPtr->WriteString("Octave", Font_7x10, true);
     _displayPtr->SetCursor(10, 43); _displayPtr->WriteString("Back", Font_7x10, true);
+
+    int cursorY = 13 + (cursorIndex * 10);
+    _displayPtr->SetCursor(0, cursorY);
+    _displayPtr->WriteString(">", Font_7x10, true);
+}
+
+void DisplayHandler::DrawThresholdsHub (int cursorIndex) {
+    _displayPtr->Fill(false);
+    
+    _displayPtr->SetCursor(0, 0);
+    _displayPtr->WriteString("- THRESHOLDS -", Font_7x10, true);
+
+    _displayPtr->SetCursor(10, 13); _displayPtr->WriteString("Touch Thresholds", Font_7x10, true);
+    _displayPtr->SetCursor(10, 23); _displayPtr->WriteString("Release Thresholds", Font_7x10, true);
+    _displayPtr->SetCursor(10, 33); _displayPtr->WriteString("Back", Font_7x10, true);
 
     int cursorY = 13 + (cursorIndex * 10);
     _displayPtr->SetCursor(0, cursorY);
@@ -207,6 +223,7 @@ void DisplayHandler::DrawIntParameter(const char* paramName, int value) {
         static const char* filters[] = {"Btrwth 2nd", "Btrwth 4th", "Bessel 2nd", "Bessel 4th"};
         sprintf(valBuffer, "%s", filters[value % 4]);
     }
+
     else {
         sprintf(valBuffer, "%d", value);
     }

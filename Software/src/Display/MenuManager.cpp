@@ -12,6 +12,8 @@ void MenuManager::Init() {
     _outData.filter_type = 0;  // 0 = BUTTERWORTH_2 di default
     _outData.octave = 4;
     _outData.preset = 0;
+    _outData.touchths_value = 1;
+    _outData.relths_value = 1;
 
     _lastInteractionTime = daisy::System::GetNow(); // <-- CORREZIONE
     _next_state = MAIN_MENU; // Destinazione di default al primo click
@@ -29,23 +31,28 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
         _outData.state = PLAYMODE;
         _next_state = MAIN_MENU; 
     } 
+
     else if (click) {
         // Logica per risalire l'albero quando il cursore è su BACK
         if (_next_state == BACK) {
             if (_outData.state == MAIN_MENU) _outData.state = PLAYMODE;
-            else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.state == PRESETS_HUB) _outData.state = MAIN_MENU;
+            else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.state == PRESETS_HUB || _outData.state == THRESHOLDS_HUB) _outData.state = MAIN_MENU;
         } 
+
+        else if (_outData.state == TOUCHTHS_VALUE || _outData.state == RELTHS_VALUE) _outData.state = THRESHOLDS_HUB;
+
         else {
             // Normale ingresso nello stato puntato
             _outData.state = _next_state; 
         }
-
+        
         // --- INIZIALIZZAZIONE DEL CURSORE POST-CLICK ---
         switch (_outData.state) {
             case PLAYMODE:        _next_state = MAIN_MENU; break;
             case MAIN_MENU:       _next_state = CALIBRATION_HUB; break;
             case CALIBRATION_HUB: _next_state = DELTA; break;
             case SCALES_HUB:      _next_state = ROOT; break;
+            case THRESHOLDS_HUB:  _next_state = TOUCHTHS_VALUE; break;
             default: break; 
         }
 
@@ -65,15 +72,16 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
             case CURVE:
                 _outData.curve += (current_rotation * 0.1f);
                 if (_outData.curve < 0.1f) _outData.curve = 0.1f;
-                if (_outData.curve > 2.0f) _outData.curve = 2.0f;
+                if (_outData.curve > 2.0f) _outData.curve = 2.0f;    
                 break;
+            
             case HYSTERESIS:
                 _outData.hysteresis += (current_rotation * 1);
                 if (_outData.hysteresis < 0) _outData.hysteresis = 0;
                 if (_outData.hysteresis > 20) _outData.hysteresis = 20;
                 break;
-            case FILTER_TYPE: 
-                
+            
+            case FILTER_TYPE:                 
                 _outData.filter_type += current_rotation;
                 if (_outData.filter_type < 0) _outData.filter_type = 0;
                 if (_outData.filter_type > 3) _outData.filter_type = 3;
@@ -97,6 +105,20 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
                 if (_outData.octave > 8) _outData.octave = 8;
                 break;
 
+            case TOUCHTHS_VALUE:
+                _outData.touchths_value += current_rotation;
+                // check that value fits in an 8 bit register 
+                if (_outData.touchths_value < 0) _outData.touchths_value = 0;
+                if (_outData.touchths_value > 255) _outData.touchths_value = 255;
+                break;
+
+            case RELTHS_VALUE:
+                _outData.relths_value += current_rotation;
+                // check that value fits in an 8 bit register 
+                if (_outData.relths_value < 0) _outData.relths_value = 0;
+                if (_outData.relths_value > 255) _outData.relths_value = 255;
+                break;    
+
             case PRESETS_HUB:
                 _outData.preset += current_rotation;
                 if (_outData.preset < 0) _outData.preset = 0;
@@ -115,13 +137,15 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
                 if (current_rotation > 0) {
                     if (_next_state == CALIBRATION_HUB) _next_state = SCALES_HUB;
                     else if (_next_state == SCALES_HUB) _next_state = PRESETS_HUB;
-                    else if (_next_state == PRESETS_HUB) _next_state = BACK;
+                    else if (_next_state == PRESETS_HUB) _next_state = THRESHOLDS_HUB;
+                    else if (_next_state == THRESHOLDS_HUB) _next_state = BACK;
                     else if (_next_state == BACK) _next_state = CALIBRATION_HUB;
                 } else {
                     if (_next_state == CALIBRATION_HUB) _next_state = BACK;
                     else if (_next_state == SCALES_HUB) _next_state = CALIBRATION_HUB;
                     else if (_next_state == PRESETS_HUB) _next_state = SCALES_HUB;
-                    else if (_next_state == BACK) _next_state = PRESETS_HUB;
+                    else if (_next_state == THRESHOLDS_HUB) _next_state = PRESETS_HUB;
+                    else if (_next_state == BACK) _next_state = THRESHOLDS_HUB;
                 }
                 break;
 
@@ -155,6 +179,17 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
                 }
                 break;
                 
+            case THRESHOLDS_HUB:
+                if (current_rotation > 0) {
+                    if (_next_state == TOUCHTHS_VALUE) _next_state = RELTHS_VALUE;
+                    else if (_next_state == RELTHS_VALUE) _next_state = BACK;
+                    else if (_next_state == BACK) _next_state = TOUCHTHS_VALUE;
+                } else {
+                    if (_next_state == TOUCHTHS_VALUE) _next_state = BACK;
+                    else if (_next_state == RELTHS_VALUE) _next_state = TOUCHTHS_VALUE;
+                    else if (_next_state == BACK) _next_state = RELTHS_VALUE;
+                }
+
             default:
                 break;
         }
@@ -163,6 +198,7 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
     // Preparazione statica delle vie d'uscita per le Foglie
     if (_outData.state == DELTA || _outData.state == CURVE || _outData.state == HYSTERESIS || _outData.state == FILTER_TYPE) _next_state = CALIBRATION_HUB;
     if (_outData.state == ROOT || _outData.state == SCALE || _outData.state == OCTAVE) _next_state = SCALES_HUB;
+    if (_outData.state == TOUCHTHS_VALUE || _outData.state == RELTHS_VALUE) _next_state = THRESHOLDS_HUB;
     if (_outData.state == PRESETS_HUB) _next_state = MAIN_MENU; 
 
     // --- 4. PREPARAZIONE DATI IN USCITA ---
