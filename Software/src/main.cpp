@@ -146,6 +146,8 @@ int main() {
     // MAIN LOOP
     // ========================================================================
     static uint32_t max_held_time = 0;
+    bool update_touch_thresholds = false;
+    bool update_release_thresholds = false;
     while(1) {
         uint32_t now = System::GetNow();
         
@@ -232,8 +234,14 @@ int main() {
             audio_controls.freq = plant_data._freq;
             audio_controls.gate = plant_data._gate;
         }
+        // --- TASK 4: THRESHOLDS UPDATE ---
+        if (update_touch_thresholds == true || update_release_thresholds == true){
+            update_touch_thresholds = false;
+            update_release_thresholds = false;
+            pc.setThresholds(ui_data.touchths_value, ui_data.touchths_value);
+        }
 
-        // --- TASK 3: DISPLAY UPDATE (10Hz) ---
+        // --- TASK 4: DISPLAY UPDATE (10Hz) ---
         
         if (now - last >= display_period) {
             last = now; 
@@ -253,7 +261,8 @@ int main() {
                         if (ui_data.cursor_state == MenuManager::CALIBRATION_HUB) cursor_idx = 0;
                         else if (ui_data.cursor_state == MenuManager::SCALES_HUB) cursor_idx = 1;
                         else if (ui_data.cursor_state == MenuManager::PRESETS_HUB) cursor_idx = 2;
-                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 3;
+                        else if (ui_data.cursor_state == MenuManager::THRESHOLDS_HUB) cursor_idx = 3;
+                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 4;
                         disp_handle.DrawMainMenu(cursor_idx);
                         break;
 
@@ -272,6 +281,23 @@ int main() {
                         else if (ui_data.cursor_state == MenuManager::OCTAVE) cursor_idx = 2;
                         else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 3;
                         disp_handle.DrawScalesHub(cursor_idx);
+                        break;
+
+                    case MenuManager::THRESHOLDS_HUB:
+                        if (ui_data.cursor_state == MenuManager::TOUCHTHS_VALUE) cursor_idx = 0;
+                        else if (ui_data.cursor_state == MenuManager::RELTHS_VALUE) cursor_idx = 1;
+                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 2;
+                        disp_handle.DrawThresholdsHub(cursor_idx);
+                        break;
+
+                    case MenuManager::TOUCHTHS_VALUE:
+                        disp_handle.DrawIntParameter("TOUCHTHS_VALUE", ui_data.touchths_value);
+                        update_touch_thresholds = true;
+                        break;
+
+                    case MenuManager::RELTHS_VALUE:
+                        disp_handle.DrawIntParameter("RELTHS_VALUE", ui_data.relths_value);
+                        update_release_thresholds = true;
                         break;
 
                     case MenuManager::DELTA:

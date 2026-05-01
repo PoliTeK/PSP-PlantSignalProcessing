@@ -90,6 +90,14 @@ public:
     */
     void setOctave(uint8_t octave);
 
+    
+    /*
+        * Changes the touch and release thresholds values FOR ALL CHANNELS.
+            * @param touch The new value of touch thresholds.
+            * @param release The new value of release thresholds.
+    */
+    void setThresholds(uint8_t touch, uint8_t release) {_cap.SetThresholds(touch, release);}
+
     /*
         * Processes the current plant signal and returns the corresponding frequency and gate state based on the defined thresholds and scale.
             * @return A PlantState struct containing the float frequency (in Hz) and a bool gate state (true for on, false for off).
