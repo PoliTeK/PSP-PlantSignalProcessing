@@ -79,7 +79,7 @@ git submodule update --init --recursive
    ```
 4. Once compilation is complete, move to the src folder:
    ```bash
-   cd ../../src
+   cd ../../../../src
    ```
    connect the Daisy Seed to the PC via USB and put it in DFU mode (using the physical BOOT and RESET buttons). Then execute the upload:
    ```bash
