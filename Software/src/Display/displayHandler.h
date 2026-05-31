@@ -74,7 +74,8 @@ public:
     void DrawCalibrationHub(int cursorIndex);
     void DrawScalesHub(int cursorIndex);
     void DrawThresholdsHub (int cursorIndex);
-    
+    void DrawFlashHub (int cursorIndex);
+
     // Metodi generici per l'editing dei parametri (Foglie)
     void DrawFloatParameter(const char* paramName, float value);
     void DrawIntParameter(const char* paramName, int value);

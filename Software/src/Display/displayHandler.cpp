@@ -117,7 +117,7 @@ void DisplayHandler::DrawMainMenu(int cursorIndex) {
     _displayPtr->SetCursor(10, 13); _displayPtr->WriteString("Calibration", Font_7x10, true);
     _displayPtr->SetCursor(10, 23); _displayPtr->WriteString("Scales", Font_7x10, true);
     _displayPtr->SetCursor(10, 33); _displayPtr->WriteString("Presets", Font_7x10, true);
-    _displayPtr->SetCursor(10, 43); _displayPtr->WriteString("Thresholds (all chs)", Font_7x10, true);
+    _displayPtr->SetCursor(10, 43); _displayPtr->WriteString("Save/load configs", Font_7x10, true);
     _displayPtr->SetCursor(10, 53); _displayPtr->WriteString("Exit", Font_7x10, true);
 
     int cursorY = 13 + (cursorIndex * 10);
@@ -128,16 +128,23 @@ void DisplayHandler::DrawMainMenu(int cursorIndex) {
 void DisplayHandler::DrawCalibrationHub(int cursorIndex) {
     _displayPtr->Fill(false);
     
+    
     _displayPtr->SetCursor(0, 0);
     _displayPtr->WriteString("- CALIBRATION -", Font_7x10, true);
 
-    _displayPtr->SetCursor(10, 13); _displayPtr->WriteString("Delta", Font_7x10, true);
-    _displayPtr->SetCursor(10, 23); _displayPtr->WriteString("Curve", Font_7x10, true);
-    _displayPtr->SetCursor(10, 33); _displayPtr->WriteString("Hysteresis", Font_7x10, true);
-    _displayPtr->SetCursor(10, 43); _displayPtr->WriteString("Filter Type", Font_7x10, true); 
-    _displayPtr->SetCursor(10, 53); _displayPtr->WriteString("Back", Font_7x10, true); 
-
-    int cursorY = 13 + (cursorIndex * 10);
+    // check which page to load based on where cursor is
+    if (cursorIndex <= 4){
+        _displayPtr->SetCursor(10, 13); _displayPtr->WriteString("Delta", Font_7x10, true);
+        _displayPtr->SetCursor(10, 23); _displayPtr->WriteString("Curve", Font_7x10, true);
+        _displayPtr->SetCursor(10, 33); _displayPtr->WriteString("Hysteresis", Font_7x10, true);
+        _displayPtr->SetCursor(10, 43); _displayPtr->WriteString("Filter Type", Font_7x10, true); 
+        _displayPtr->SetCursor(10, 53); _displayPtr->WriteString("Thresholds", Font_7x10, true); 
+    }
+    else 
+    {
+        _displayPtr->SetCursor(10, 13); _displayPtr->WriteString("Back", Font_7x10, true); 
+    }
+    int cursorY = 13 + ( (cursorIndex % 5) * 10);
     _displayPtr->SetCursor(0, cursorY);
     _displayPtr->WriteString(">", Font_7x10, true);
 }
@@ -172,6 +179,23 @@ void DisplayHandler::DrawThresholdsHub (int cursorIndex) {
     _displayPtr->SetCursor(0, cursorY);
     _displayPtr->WriteString(">", Font_7x10, true);
 }
+
+void DisplayHandler::DrawFlashHub (int cursorIndex) {
+    _displayPtr->Fill(false);
+    
+    _displayPtr->SetCursor(0, 0);
+    _displayPtr->WriteString("- SAVE/LOAD CONFIGS -", Font_7x10, true);
+
+    _displayPtr->SetCursor(10, 13); _displayPtr->WriteString("Save Configs", Font_7x10, true);
+    _displayPtr->SetCursor(10, 23); _displayPtr->WriteString("Load Configs", Font_7x10, true);
+    _displayPtr->SetCursor(10, 33); _displayPtr->WriteString("Back", Font_7x10, true);
+
+    int cursorY = 13 + (cursorIndex * 10);
+    _displayPtr->SetCursor(0, cursorY);
+    _displayPtr->WriteString(">", Font_7x10, true);
+
+}
+
 
 void DisplayHandler::DrawFloatParameter(const char* paramName, float value) {
     _displayPtr->Fill(false);
