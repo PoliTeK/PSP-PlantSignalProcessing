@@ -36,7 +36,14 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
         // Logica per risalire l'albero quando il cursore è su BACK
         if (_next_state == BACK) {
             if (_outData.state == MAIN_MENU) _outData.state = PLAYMODE;
-            else if (_outData.state == CALIBRATION_HUB || _outData.state == SCALES_HUB || _outData.state == PRESETS_HUB || _outData.state == THRESHOLDS_HUB) _outData.state = MAIN_MENU;
+            else if (   _outData.state == CALIBRATION_HUB ||
+                        _outData.state == SCALES_HUB || 
+                        _outData.state == PRESETS_HUB || 
+                        _outData.state == THRESHOLDS_HUB || 
+                        _outData.state == FLASH_HUB) 
+            {
+             _outData.state = MAIN_MENU;
+            }
         } 
 
         else if (_outData.state == TOUCHTHS_VALUE || _outData.state == RELTHS_VALUE) _outData.state = THRESHOLDS_HUB;
@@ -151,7 +158,6 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
                     if (_next_state == CALIBRATION_HUB) _next_state = SCALES_HUB;
                     else if (_next_state == SCALES_HUB) _next_state = PRESETS_HUB;
                     else if (_next_state == PRESETS_HUB) _next_state = FLASH_HUB;
-                   // else if (_next_state == THRESHOLDS_HUB) _next_state = FLASH_HUB;
                     else if (_next_state == FLASH_HUB) _next_state = BACK;
                     else if (_next_state == BACK) _next_state = CALIBRATION_HUB;
                 
@@ -236,7 +242,8 @@ void MenuManager::StateTransition(bool click, int rotation, bool timeout) {
 
     // --- 4. PREPARAZIONE DATI IN USCITA ---
     _outData.cursor_state = _next_state;
-}
+    }
+
 
 void MenuManager::Update(uint32_t currentTime) {
     if (_outData.state != PLAYMODE && (currentTime - _lastInteractionTime >= 5000)) {
