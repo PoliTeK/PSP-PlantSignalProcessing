@@ -71,7 +71,8 @@ int main() {
                         if (ui_data.cursor_state == MenuManager::CALIBRATION_HUB) cursor_idx = 0;
                         else if (ui_data.cursor_state == MenuManager::SCALES_HUB) cursor_idx = 1;
                         else if (ui_data.cursor_state == MenuManager::PRESETS_HUB) cursor_idx = 2;
-                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 3;
+                        else if (ui_data.cursos_state == MenuManager::FLASH_HUB) cursor_ids = 3
+                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 4;
                         disp_handle.DrawMainMenu(cursor_idx);
                         break;
 

@@ -261,7 +261,7 @@ int main() {
                         if (ui_data.cursor_state == MenuManager::CALIBRATION_HUB) cursor_idx = 0;
                         else if (ui_data.cursor_state == MenuManager::SCALES_HUB) cursor_idx = 1;
                         else if (ui_data.cursor_state == MenuManager::PRESETS_HUB) cursor_idx = 2;
-                        else if (ui_data.cursor_state == MenuManager::THRESHOLDS_HUB) cursor_idx = 3;
+                        else if (ui_data.cursor_state == MenuManager::FLASH_HUB) cursor_idx = 3;
                         else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 4;
                         disp_handle.DrawMainMenu(cursor_idx);
                         break;
@@ -271,7 +271,8 @@ int main() {
                         else if (ui_data.cursor_state == MenuManager::CURVE) cursor_idx = 1;
                         else if (ui_data.cursor_state == MenuManager::HYSTERESIS) cursor_idx = 2;
                         else if (ui_data.cursor_state == MenuManager::FILTER_TYPE) cursor_idx = 3; 
-                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 4;
+                        else if (ui_data.cursor_state == MenuManager::THRESHOLDS_HUB) cursor_idx = 4;
+                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 5;
                         disp_handle.DrawCalibrationHub(cursor_idx);
                         break;
 
@@ -288,6 +289,13 @@ int main() {
                         else if (ui_data.cursor_state == MenuManager::RELTHS_VALUE) cursor_idx = 1;
                         else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 2;
                         disp_handle.DrawThresholdsHub(cursor_idx);
+                        break;
+
+                    case MenuManager::FLASH_HUB:
+                        if (ui_data.cursor_state == MenuManager::SAVE_CONFIG) cursor_idx = 0;
+                        else if (ui_data.cursor_state == MenuManager::LOAD_CONFIG) cursor_idx = 1;
+                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 2;
+                        disp_handle.DrawFlashHub(cursor_idx);
                         break;
 
                     case MenuManager::TOUCHTHS_VALUE:
@@ -328,6 +336,17 @@ int main() {
                     case MenuManager::PRESETS_HUB:
                         disp_handle.DrawIntParameter("PRESET", ui_data.preset);
                         break;
+                    
+                    // ---------------------------------------------------
+                    // STILL IN TESTING: will be configs scrolling
+                    case MenuManager::SAVE_CONFIG:
+                        disp_handle.DrawIntParameter("PLACEHOLDER", 10);
+                        break;
+
+                    case MenuManager::LOAD_CONFIG:
+                        disp_handle.DrawIntParameter("PLACEHOLDER", 10);
+                        break;
+                    //--------------------------------------------------- 
 
                     default:
                         break;

@@ -13,6 +13,7 @@ public:
         SCALES_HUB,         
         PRESETS_HUB,
         THRESHOLDS_HUB,
+        FLASH_HUB,
 
         // Foglie: Parametri Calibrazione
         CURVE,
@@ -27,7 +28,10 @@ public:
         TOUCHTHS_VALUE,  // of thresholds
         RELTHS_VALUE,
 
-        BACK,
+        LOAD_CONFIG,
+        SAVE_CONFIG,
+
+        BACK
     };
 
     struct MenuData {
@@ -43,6 +47,7 @@ public:
         int touchths_value; // Value of touch hresholds
         int relths_value;   // Value of release hresholds
         int preset;         // Indice per il synth
+        int configs_idx;    // indexes of flash configs
     };
 
     void Init();
