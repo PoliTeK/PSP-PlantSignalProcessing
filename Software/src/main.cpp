@@ -8,6 +8,7 @@
 #include "PSP/PlantConditioner.h"
 #include "PSP/AudioEngine.h"
 #include "Display/MenuManager.h"
+#include <atomic>
 
 using namespace daisy;
 
@@ -31,14 +32,14 @@ ControlsStruct audio_controls = {440.0f, false};
 TimerHandle enc_timer;
 TimerHandle plant_timer;
 
-// Riattivato il flag per eseguire la lettura fuori dall'interrupt
+// Flag to trigger sensor reading outside the ISR
 volatile bool plant_update_param = false; 
 
 // Global accumulation variables to safely handle encoder data across interrupts
-volatile int32_t global_inc = 0;
-volatile bool global_clicked = false;
+std::atomic<int32_t> global_inc(0);
+std::atomic<bool> global_clicked(false);
 
-volatile int32_t display_period = 500;
+volatile uint32_t display_period = 100; //(ms) => 10 fps
 
 // ============================================================================
 // INTERRUPT SERVICE ROUTINES AND AUDIO CALLBACK
@@ -54,7 +55,7 @@ void EncoderTimerCallback(void* data) {
 }
 
 void PlantTimerCallback(void* data) {
-    // Alza solo la bandierina! Nessuna operazione I2C nell'interrupt per evitare l'Hard Fault
+    // Set flag only. Avoid I2C operations in ISR to prevent Hard Faults.
     plant_update_param = true;
 }
 
@@ -75,6 +76,7 @@ int main() {
     
     // --- 0. HARDWARE & PERIPHERAL INITIALIZATION ---
     hw.Init();
+    
 
     enc.Init(hw.GetPin(14), hw.GetPin(13), hw.GetPin(10));
     menu.Init();
@@ -85,8 +87,7 @@ int main() {
     disp_handle.SetYscale(100);
     disp_handle.SetState(DisplayState::WAVEFORM_VIEWER);
 
-    // --- 1. PLANT ACQUISITON SYSTEM INITIALIZATION ---
-    // Inizializza con il primo filtro dell'enum come default
+    // --- 1. PLANT ACQUISITION SYSTEM INITIALIZATION ---
     pc.Init(IIR::BUTTERWORTH2, &hw);
 
     // --- 2. DSP INITIALIZATION ---
@@ -104,11 +105,11 @@ int main() {
     tim5_cfg.periph        = TimerHandle::Config::Peripheral::TIM_5;
     auto tim5_target_freq  = 1000;
     auto tim5_period       = timer_base_freq / tim5_target_freq;
-    tim5_cfg.period        = tim5_period - 1; // -1 because hardware registers are 0-indexed
+    tim5_cfg.period        = tim5_period - 1; // 0-indexed hardware register
     tim5_cfg.enable_irq    = true;
     
     enc_timer.Init(tim5_cfg);
-    enc_timer.SetPrescaler(prescaler_val); // Apply the prescaler
+    enc_timer.SetPrescaler(prescaler_val);
     enc_timer.SetCallback(EncoderTimerCallback);
     HAL_NVIC_SetPriority(TIM5_IRQn, 4, 0); // Lower priority to avoid interrupting audio
     enc_timer.Start();
@@ -118,16 +119,16 @@ int main() {
     tim3_cfg.periph        = TimerHandle::Config::Peripheral::TIM_3;
     auto tim3_target_freq  = 200; 
     auto tim3_period       = timer_base_freq / tim3_target_freq;
-    tim3_cfg.period        = tim3_period - 1; // -1 because hardware registers are 0-indexed
+    tim3_cfg.period        = tim3_period - 1; 
     tim3_cfg.enable_irq    = true;
     
     plant_timer.Init(tim3_cfg);
-    plant_timer.SetPrescaler(prescaler_val); // Apply the prescaler
+    plant_timer.SetPrescaler(prescaler_val);
     plant_timer.SetCallback(PlantTimerCallback);
-    HAL_NVIC_SetPriority(TIM3_IRQn, 4, 0); // Lower priority to avoid interrupting audio
+    HAL_NVIC_SetPriority(TIM3_IRQn, 4, 0); 
     plant_timer.Start();
     
-    // Inizializzazione DSP parametri UI
+    // Initialize DSP parameters from UI default data
     MenuManager::MenuData init_data = menu.GetData(); 
     pc.setDelta(init_data.delta);
     pc.setCurve(init_data.curve);
@@ -141,21 +142,19 @@ int main() {
     hw.StartAudio(AudioCallback);
     uint32_t last = System::GetNow();
     
-
     // ========================================================================
     // MAIN LOOP
     // ========================================================================
     static uint32_t max_held_time = 0;
-    bool update_touch_thresholds = false;
-    bool update_release_thresholds = false;
+    
     while(1) {
         uint32_t now = System::GetNow();
         
-        // --- CONTROLLO PRESSIONE LUNGA (REBOOT vs DFU) ---
+        // --- LONG PRESS DETECTION (REBOOT / BOOTLOADER) ---
         if (enc.Pressed()) {
             max_held_time = enc.TimeHeldMs();
             
-            if (max_held_time >= 4000) {
+            if (max_held_time >= 6000) {
                 disp_handle.SetStandbyText("ENTERING DFU...");
                 disp_handle.SetState(DisplayState::STANDBY);
                 disp_handle.Update();
@@ -173,7 +172,7 @@ int main() {
             }
         } 
         else {
-            if (max_held_time >= 2000 && max_held_time < 4000) {
+            if (max_held_time >= 2000 && max_held_time < 6000) {
                 disp_handle.SetStandbyText("REBOOTING...");
                 disp_handle.SetState(DisplayState::STANDBY);
                 disp_handle.Update();
@@ -184,174 +183,94 @@ int main() {
             max_held_time = 0; 
         }
 
-        MenuManager::MenuData ui_data;
-
+        // ====================================================================
         // --- TASK 1: ATOMIC ENCODER READ ---
+        // ====================================================================
         int32_t local_inc = 0;
         bool local_clicked = false;
 
-        __disable_irq();
+        // Safely fetch ISR variables
         local_inc = global_inc;
         global_inc = 0;
         local_clicked = global_clicked;
         global_clicked = false;
-        __enable_irq();
+       
 
-        if (local_inc != 0 || local_clicked) {
-            while (local_inc > 0) {
-                menu.StateTransition(false, 1, false);
-                local_inc--;
-            }
-            while (local_inc < 0) {
-                menu.StateTransition(false, -1, false);
-                local_inc++;
-            }
-            if (local_clicked) {
-                menu.StateTransition(true, 0, false);
-            }
+        // 1. Read state before evaluating interactions
+        MenuManager::MenuData ui_data = menu.GetData(); 
 
-            ui_data = menu.GetData(); 
-            
-            __disable_irq(); 
-            pc.setDelta(ui_data.delta);
-            pc.setCurve(ui_data.curve);
-            pc.setHisteresis(ui_data.hysteresis);
-            pc.setOctave(ui_data.octave);
-            synth.SetPreset((SynthPreset) ui_data.preset);
-            pc.setScale((PlantConditioner::Notes)ui_data.root, (PlantConditioner::ScaleType)ui_data.scale);
-            pc.SetFilter((IIR::FilterType)ui_data.filter_type);
-            __enable_irq();  
+        // Update menu state based on encoder rotation
+        if (local_inc != 0) {
+            if (menu.IsLeafState()) {
+                menu.ValueUpdate(local_inc);
+            } else {
+                while (local_inc > 0) {
+                    menu.CursorUpdate(1);
+                    local_inc--;
+                }
+                while (local_inc < 0) {
+                    menu.CursorUpdate(-1);
+                    local_inc++;
+                }
+            }
         }
 
-        // --- MENU TIMEOUT ---
-        menu.Update(now);
+        // update menu state based on encoder click
+        if (local_clicked) {
+            menu.StateUpdate(); 
+        }
 
-        // --- TASK 2: PLANT SENSING (200Hz) ---
+        // 2. Update DSP parameters if there are changes
+        if (local_inc != 0 || local_clicked) {
+            ui_data = menu.GetData(); 
+            // Prepare a struct to update all parameters at once for thread safety
+            PlantConditioner::PlantParams new_params;
+            new_params.delta      = ui_data.delta;
+            new_params.curve      = ui_data.curve;
+            new_params.hysteresis = ui_data.hysteresis;
+            new_params.octave     = ui_data.octave;
+            new_params.root       = (PlantConditioner::Notes)ui_data.root;
+            new_params.scale      = (PlantConditioner::ScaleType)ui_data.scale;
+            new_params.filter     = (IIR::FilterType)ui_data.filter_type;
+
+            // Spegne gli interrupt solo per il tempo di copiare le variabili
+            __disable_irq(); 
+            pc.SetAllParameters(new_params);
+            synth.SetPreset((SynthPreset) ui_data.preset);
+            __enable_irq();   
+            // Update thresholds only when clicking in (leaving) the the THRESHOLDS_HUB state
+            if (local_clicked && ui_data.current_state == MenuManager::THRESHOLDS_HUB) {
+                pc.setThresholds(ui_data.touchths_value, ui_data.relths_value);
+            }
+        }
+
+        menu.MenuTimeout(now);
+        // ====================================================================
+        // --- 3: PLANT SENSING ---
+        // ====================================================================
+        
+        
         if (plant_update_param) {
             plant_update_param = false;
-            
             PlantConditioner::PlantState plant_data = pc.Process();
             audio_controls.freq = plant_data._freq;
             audio_controls.gate = plant_data._gate;
         }
-        // --- TASK 4: THRESHOLDS UPDATE ---
-        if (update_touch_thresholds == true || update_release_thresholds == true){
-            update_touch_thresholds = false;
-            update_release_thresholds = false;
-            pc.setThresholds(ui_data.touchths_value, ui_data.touchths_value);
-        }
 
-        // --- TASK 4: DISPLAY UPDATE (10Hz) ---
-        
+        // ====================================================================
+        // --- TASK 4: DISPLAY UPDATE ---
+        // ====================================================================
         if (now - last >= display_period) {
             last = now; 
             ui_data = menu.GetData(); 
-
-            if (ui_data.state == MenuManager::PLAYMODE) {
-                display_period = 500;
+            
+            if (ui_data.current_state == MenuManager::PLAYMODE) {
                 disp_handle.SetState(DisplayState::WAVEFORM_VIEWER);
             } 
             else {
                 disp_handle.SetState(DisplayState::MENU_MODE);
-                int cursor_idx = 0;
-                
-                switch (ui_data.state) {
-                    case MenuManager::MAIN_MENU:
-                        display_period = 100;
-                        if (ui_data.cursor_state == MenuManager::CALIBRATION_HUB) cursor_idx = 0;
-                        else if (ui_data.cursor_state == MenuManager::SCALES_HUB) cursor_idx = 1;
-                        else if (ui_data.cursor_state == MenuManager::PRESETS_HUB) cursor_idx = 2;
-                        else if (ui_data.cursor_state == MenuManager::FLASH_HUB) cursor_idx = 3;
-                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 4;
-                        disp_handle.DrawMainMenu(cursor_idx);
-                        break;
-
-                    case MenuManager::CALIBRATION_HUB:
-                        if (ui_data.cursor_state == MenuManager::DELTA) cursor_idx = 0;
-                        else if (ui_data.cursor_state == MenuManager::CURVE) cursor_idx = 1;
-                        else if (ui_data.cursor_state == MenuManager::HYSTERESIS) cursor_idx = 2;
-                        else if (ui_data.cursor_state == MenuManager::FILTER_TYPE) cursor_idx = 3; 
-                        else if (ui_data.cursor_state == MenuManager::THRESHOLDS_HUB) cursor_idx = 4;
-                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 5;
-                        disp_handle.DrawCalibrationHub(cursor_idx);
-                        break;
-
-                    case MenuManager::SCALES_HUB:
-                        if (ui_data.cursor_state == MenuManager::ROOT) cursor_idx = 0;
-                        else if (ui_data.cursor_state == MenuManager::SCALE) cursor_idx = 1;
-                        else if (ui_data.cursor_state == MenuManager::OCTAVE) cursor_idx = 2;
-                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 3;
-                        disp_handle.DrawScalesHub(cursor_idx);
-                        break;
-
-                    case MenuManager::THRESHOLDS_HUB:
-                        if (ui_data.cursor_state == MenuManager::TOUCHTHS_VALUE) cursor_idx = 0;
-                        else if (ui_data.cursor_state == MenuManager::RELTHS_VALUE) cursor_idx = 1;
-                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 2;
-                        disp_handle.DrawThresholdsHub(cursor_idx);
-                        break;
-
-                    case MenuManager::FLASH_HUB:
-                        if (ui_data.cursor_state == MenuManager::SAVE_CONFIG) cursor_idx = 0;
-                        else if (ui_data.cursor_state == MenuManager::LOAD_CONFIG) cursor_idx = 1;
-                        else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 2;
-                        disp_handle.DrawFlashHub(cursor_idx);
-                        break;
-
-                    case MenuManager::TOUCHTHS_VALUE:
-                        disp_handle.DrawIntParameter("TOUCHTHS_VALUE", ui_data.touchths_value);
-                        update_touch_thresholds = true;
-                        break;
-
-                    case MenuManager::RELTHS_VALUE:
-                        disp_handle.DrawIntParameter("RELTHS_VALUE", ui_data.relths_value);
-                        update_release_thresholds = true;
-                        break;
-
-                    case MenuManager::DELTA:
-                        disp_handle.DrawFloatParameter("DELTA", ui_data.delta);
-                        break;
-                    
-                    case MenuManager::CURVE:
-                        disp_handle.DrawFloatParameter("CURVE", ui_data.curve);
-                        break;
-                    case MenuManager::HYSTERESIS:
-                        disp_handle.DrawIntParameter("HYSTERESIS", ui_data.hysteresis);
-                        break;
-                    case MenuManager::FILTER_TYPE: 
-                        disp_handle.DrawIntParameter("FILTER TYPE", ui_data.filter_type);
-                        break;
-                    case MenuManager::ROOT:
-                        disp_handle.DrawIntParameter("ROOT", ui_data.root);
-                        break;
-
-                    case MenuManager::SCALE:
-                        disp_handle.DrawIntParameter("SCALE", ui_data.scale);
-                        break;
-
-                    case MenuManager::OCTAVE:
-                        disp_handle.DrawIntParameter("OCTAVE", ui_data.octave);
-                        break;
-                        
-                    case MenuManager::PRESETS_HUB:
-                        disp_handle.DrawIntParameter("PRESET", ui_data.preset);
-                        break;
-                    
-                    // ---------------------------------------------------
-                    // STILL IN TESTING: will be configs scrolling
-                    case MenuManager::SAVE_CONFIG:
-                        disp_handle.DrawIntParameter("PLACEHOLDER", 10);
-                        break;
-
-                    case MenuManager::LOAD_CONFIG:
-                        disp_handle.DrawIntParameter("PLACEHOLDER", 10);
-                        break;
-                    //--------------------------------------------------- 
-
-                    default:
-                        break;
-                }
-            } 
+                disp_handle.DrawStateW(ui_data);
+            }
             
             // Blocking I2C operation
             disp_handle.Update(); 

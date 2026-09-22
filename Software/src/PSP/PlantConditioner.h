@@ -22,9 +22,6 @@ public:
         float _freq;
         bool  _gate;
     };
-
-    
-
     // --- Enums for Scale Types and Notes ---
     enum ScaleType {
         Major = 0,
@@ -37,6 +34,16 @@ public:
     };
     enum Notes {
         C = 0, Cs, D, Ds, E, F, Fs, G, Gs, A, As, B,
+    };
+
+    struct PlantParams {
+        float delta;
+        float curve;
+        float hysteresis;
+        uint8_t octave;
+        Notes root;
+        ScaleType scale;
+        IIR::FilterType filter;
     };
 
     /*
@@ -97,6 +104,11 @@ public:
             * @param release The new value of release thresholds.
     */
     void setThresholds(uint8_t touch, uint8_t release) {_cap.SetThresholds(touch, release);}
+
+    /*
+     * Updates all DSP parameters at once. Ideal for thread-safe updates.
+     */
+    void SetAllParameters(const PlantParams& params);
 
     /*
         * Processes the current plant signal and returns the corresponding frequency and gate state based on the defined thresholds and scale.

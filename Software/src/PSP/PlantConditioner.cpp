@@ -92,6 +92,15 @@ void PlantConditioner::setOctave(uint8_t octave) {
     _lastNoteIndex = -1;
 }
 
+void PlantConditioner::SetAllParameters(const PlantParams& params) {
+    setDelta(params.delta);
+    setCurve(params.curve);
+    setHisteresis(params.hysteresis);
+    setOctave(params.octave);
+    setScale(params.root, params.scale);
+    SetFilter(params.filter);
+}
+
 PlantConditioner::PlantState PlantConditioner::Process() {
     float out = _lastFreq;
     if (_cap.Touched() & _BV(0))

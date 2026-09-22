@@ -255,3 +255,90 @@ void DisplayHandler::DrawIntParameter(const char* paramName, int value) {
     _displayPtr->SetCursor(0, 38);
     _displayPtr->WriteString(valBuffer, Font_11x18, true); 
 }
+
+void DisplayHandler::DrawStateW (MenuManager::MenuData ui_data) {
+    int cursor_idx = 0;
+    switch (ui_data.current_state) {
+        case MenuManager::MAIN_MENU:
+            if (ui_data.cursor_state == MenuManager::CALIBRATION_HUB) cursor_idx = 0;
+            else if (ui_data.cursor_state == MenuManager::SCALES_HUB) cursor_idx = 1;
+            else if (ui_data.cursor_state == MenuManager::PRESETS_HUB) cursor_idx = 2;
+            else if (ui_data.cursor_state == MenuManager::FLASH_HUB) cursor_idx = 3;
+            else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 4;
+            DrawMainMenu(cursor_idx);
+            break;
+
+        case MenuManager::CALIBRATION_HUB:
+            if (ui_data.cursor_state == MenuManager::DELTA) cursor_idx = 0;
+            else if (ui_data.cursor_state == MenuManager::CURVE) cursor_idx = 1;
+            else if (ui_data.cursor_state == MenuManager::HYSTERESIS) cursor_idx = 2;
+            else if (ui_data.cursor_state == MenuManager::FILTER_TYPE) cursor_idx = 3; 
+            else if (ui_data.cursor_state == MenuManager::THRESHOLDS_HUB) cursor_idx = 4;
+            else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 5;
+            DrawCalibrationHub(cursor_idx);
+            break;
+
+        case MenuManager::SCALES_HUB:
+            if (ui_data.cursor_state == MenuManager::ROOT) cursor_idx = 0;
+            else if (ui_data.cursor_state == MenuManager::SCALE) cursor_idx = 1;
+            else if (ui_data.cursor_state == MenuManager::OCTAVE) cursor_idx = 2;
+            else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 3;
+            DrawScalesHub(cursor_idx);
+            break;
+
+        case MenuManager::THRESHOLDS_HUB:
+            if (ui_data.cursor_state == MenuManager::TOUCHTHS_VALUE) cursor_idx = 0;
+            else if (ui_data.cursor_state == MenuManager::RELTHS_VALUE) cursor_idx = 1;
+            else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 2;
+            DrawThresholdsHub(cursor_idx);
+            break;
+
+        case MenuManager::FLASH_HUB:
+            if (ui_data.cursor_state == MenuManager::SAVE_CONFIG) cursor_idx = 0;
+            else if (ui_data.cursor_state == MenuManager::LOAD_CONFIG) cursor_idx = 1;
+            else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 2;
+            DrawFlashHub(cursor_idx);
+            break;
+
+        // --- LEAFS ---
+        case MenuManager::TOUCHTHS_VALUE:
+            DrawIntParameter("TOUCHTHS_VALUE", ui_data.touchths_value);
+            break;
+        case MenuManager::RELTHS_VALUE:
+            DrawIntParameter("RELTHS_VALUE", ui_data.relths_value);
+            break;
+        case MenuManager::DELTA:
+            DrawFloatParameter("DELTA", ui_data.delta);
+            break;
+        case MenuManager::CURVE:
+            DrawFloatParameter("CURVE", ui_data.curve);
+            break;
+        case MenuManager::HYSTERESIS:
+            DrawIntParameter("HYSTERESIS", ui_data.hysteresis);
+            break;
+        case MenuManager::FILTER_TYPE: 
+            DrawIntParameter("FILTER TYPE", ui_data.filter_type);
+            break;
+        case MenuManager::ROOT:
+            DrawIntParameter("ROOT", ui_data.root);
+            break;
+        case MenuManager::SCALE:
+            DrawIntParameter("SCALE", ui_data.scale);
+            break;
+        case MenuManager::OCTAVE:
+            DrawIntParameter("OCTAVE", ui_data.octave);
+            break;
+        case MenuManager::PRESETS_HUB:
+            DrawIntParameter("PRESET", ui_data.preset);
+            break;
+        case MenuManager::SAVE_CONFIG:
+            DrawIntParameter("SAVE CFG", ui_data.configs_idx);
+            break;
+        case MenuManager::LOAD_CONFIG:
+            DrawIntParameter("LOAD CFG", ui_data.configs_idx);
+            break;
+        
+        default:
+            break;
+    }
+} 

@@ -6,6 +6,7 @@
 /// @todo make buffer size statically asserted as a power of 2
 #include "../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h"
 #include "../../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h"
+#include "MenuManager.h"
 
 #define BUFFER_SIZE 256
 #define WINDOW_SIZE 128
@@ -79,5 +80,7 @@ public:
     // Metodi generici per l'editing dei parametri (Foglie)
     void DrawFloatParameter(const char* paramName, float value);
     void DrawIntParameter(const char* paramName, int value);
+
+    void DrawStateW (MenuManager::MenuData ui_data);
 
 };

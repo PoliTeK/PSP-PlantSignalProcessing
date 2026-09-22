@@ -202,7 +202,8 @@ build/displayHandler.o: Display/displayHandler.cpp \
  Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WavParser.h \
  Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WavPlayer.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h \
- Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WavWriter.h
+ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WavWriter.h \
+ Display/MenuManager.h
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -407,3 +408,4 @@ Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WavParser.h:
 Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WavPlayer.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h:
 Display/../../libs/PoliTeKDSP/libs/libDaisy/src/util/WavWriter.h:
+Display/MenuManager.h:
