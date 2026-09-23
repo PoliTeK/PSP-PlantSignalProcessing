@@ -85,6 +85,8 @@ int main() {
 
     Sensing_testPin.Init(hw.GetPin(15), GPIO::Mode::OUTPUT);
     Display_testPin.Init(hw.GetPin(16), GPIO::Mode::OUTPUT);
+    Sensing_testPin.Write(false);
+    Display_testPin.Write(false);
     
 
     enc.Init(hw.GetPin(14), hw.GetPin(13), hw.GetPin(10));
