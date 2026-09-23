@@ -252,10 +252,12 @@ int main() {
         
         
         if (plant_update_param) {
+            Sensing_test_pin.Write(true);
             plant_update_param = false;
             PlantConditioner::PlantState plant_data = pc.Process();
             audio_controls.freq = plant_data._freq;
             audio_controls.gate = plant_data._gate;
+            Sensing_test_pin.Write(false);
         }
 
         // ====================================================================
@@ -274,7 +276,9 @@ int main() {
             }
             
             // Blocking I2C operation
+            Display_test_pin.Write(true);
             disp_handle.Update(); 
+            Display_test_pin.Write(false);
         }
     }
 }
