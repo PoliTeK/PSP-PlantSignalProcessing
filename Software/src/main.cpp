@@ -10,7 +10,13 @@
 #include "Display/MenuManager.h"
 #include <atomic>
 
+
 using namespace daisy;
+
+
+GPIO Sensing_testPin;
+GPIO Display_testPin;
+
 
 // ============================================================================
 // GLOBAL OBJECTS
@@ -76,6 +82,9 @@ int main() {
     
     // --- 0. HARDWARE & PERIPHERAL INITIALIZATION ---
     hw.Init();
+
+    Sensing_testPin.Init(hw.GetPin(15), GPIO::Mode::OUTPUT);
+    Display_testPin.Init(hw.GetPin(16), GPIO::Mode::OUTPUT);
     
 
     enc.Init(hw.GetPin(14), hw.GetPin(13), hw.GetPin(10));
@@ -251,10 +260,12 @@ int main() {
         
         
         if (plant_update_param) {
+            Sensing_testPin.Write(true);
             plant_update_param = false;
             PlantConditioner::PlantState plant_data = pc.Process();
             audio_controls.freq = plant_data._freq;
             audio_controls.gate = plant_data._gate;
+            Sensing_testPin.Write(false);
         }
 
         // ====================================================================
@@ -273,7 +284,9 @@ int main() {
             }
             
             // Blocking I2C operation
+            Display_testPin.Write(true);
             disp_handle.Update(); 
+            Display_testPin.Write(false);
         }
     }
 }
