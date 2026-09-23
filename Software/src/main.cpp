@@ -12,10 +12,10 @@
 #define DEUG
 
 using namespace daisy;
-#ifdef DEBUG
-    GPIO Sensing_test_pin;
-    GPIO Display_test_pin;
-#endif
+
+GPIO Sensing_test_pin;
+GPIO Display_test_pin;
+
 // ============================================================================
 // GLOBAL OBJECTS
 // ============================================================================
@@ -80,12 +80,12 @@ int main() {
     
     // --- 0. HARDWARE & PERIPHERAL INITIALIZATION ---
     hw.Init();
-    #ifdef DEBUG
-        Sensing_test_pin.Init(hw.GetPin(15), GPIO::Mode::OUTPUT);
-        Display_test_pin.Init(hw.GetPin(12), GPIO::Mode::OUTPUT);
-        Sensing_test_pin.Write(false);
-        Display_test_pin.Write(false);
-    #endif
+    
+    Sensing_test_pin.Init(hw.GetPin(15), GPIO::Mode::OUTPUT);
+    Display_test_pin.Init(hw.GetPin(16), GPIO::Mode::OUTPUT);
+    Sensing_test_pin.Write(false);
+    Display_test_pin.Write(false);
+    
     
 
     enc.Init(hw.GetPin(14), hw.GetPin(13), hw.GetPin(10));
