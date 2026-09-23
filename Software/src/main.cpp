@@ -9,9 +9,13 @@
 #include "PSP/AudioEngine.h"
 #include "Display/MenuManager.h"
 #include <atomic>
+#define DEUG
 
 using namespace daisy;
-
+#ifdef DEBUG
+    GPIO Sensing_test_pin;
+    GPIO Display_test_pin;
+#endif
 // ============================================================================
 // GLOBAL OBJECTS
 // ============================================================================
@@ -76,14 +80,20 @@ int main() {
     
     // --- 0. HARDWARE & PERIPHERAL INITIALIZATION ---
     hw.Init();
+    #ifdef DEBUG
+        Sensing_test_pin.Init(hw.GetPin(15), GPIO::Mode::OUTPUT);
+        Display_test_pin.Init(hw.GetPin(12), GPIO::Mode::OUTPUT);
+        Sensing_test_pin.Write(false);
+        Display_test_pin.Write(false);
+    #endif
     
 
     enc.Init(hw.GetPin(14), hw.GetPin(13), hw.GetPin(10));
     menu.Init();
 
-    MyOledDisplay::Config disp_cfg;
-    disp_cfg.driver_config.transport_config.i2c_config.speed = I2CHandle::Config::Speed::I2C_400KHZ;
-    disp.Init(disp_cfg);
+    // 1. Crea la configurazione per la nuova classe
+    MyOledDisplay::Config display_config;
+    disp.Init(display_config);
     disp_handle.SetYscale(100);
     disp_handle.SetState(DisplayState::WAVEFORM_VIEWER);
 
@@ -165,10 +175,7 @@ int main() {
                 disp_handle.SetStandbyText("RELEASE=REBOOT");
                 disp_handle.SetState(DisplayState::STANDBY);
                 disp_handle.Update();
-                
-                __disable_irq();
                 global_clicked = false; 
-                __enable_irq();
             }
         } 
         else {
@@ -184,12 +191,10 @@ int main() {
         }
 
         // ====================================================================
-        // --- TASK 1: ATOMIC ENCODER READ ---
+        // --- TASK 1:ENCODER READ ---
         // ====================================================================
         int32_t local_inc = 0;
         bool local_clicked = false;
-
-        // Safely fetch ISR variables
         local_inc = global_inc;
         global_inc = 0;
         local_clicked = global_clicked;
@@ -222,8 +227,7 @@ int main() {
 
         // 2. Update DSP parameters if there are changes
         if (local_inc != 0 || local_clicked) {
-            ui_data = menu.GetData(); 
-            // Prepare a struct to update all parameters at once for thread safety
+            ui_data = menu.GetData();
             PlantConditioner::PlantParams new_params;
             new_params.delta      = ui_data.delta;
             new_params.curve      = ui_data.curve;
@@ -232,13 +236,10 @@ int main() {
             new_params.root       = (PlantConditioner::Notes)ui_data.root;
             new_params.scale      = (PlantConditioner::ScaleType)ui_data.scale;
             new_params.filter     = (IIR::FilterType)ui_data.filter_type;
-
-            // Spegne gli interrupt solo per il tempo di copiare le variabili
             __disable_irq(); 
             pc.SetAllParameters(new_params);
             synth.SetPreset((SynthPreset) ui_data.preset);
             __enable_irq();   
-            // Update thresholds only when clicking in (leaving) the the THRESHOLDS_HUB state
             if (local_clicked && ui_data.current_state == MenuManager::THRESHOLDS_HUB) {
                 pc.setThresholds(ui_data.touchths_value, ui_data.relths_value);
             }

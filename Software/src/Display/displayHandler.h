@@ -4,14 +4,15 @@
 #pragma once
 
 /// @todo make buffer size statically asserted as a power of 2
-#include "../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h"
+#include "oled_ssd130xDMA.h" 
 #include "../../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h"
 #include "MenuManager.h"
 
 #define BUFFER_SIZE 256
 #define WINDOW_SIZE 128
-// Setting the display type (should be changed based on display) 
-using MyOledDisplay = daisy::OledDisplay<daisy::SSD130xI2c128x64Driver>;
+
+// Alias aggiornato per puntare alla nostra classe DMA
+using MyOledDisplay = daisy::MyDmaOledDisplay;
 
 // The display is implemented as an FSM
 enum class DisplayState : uint8_t {

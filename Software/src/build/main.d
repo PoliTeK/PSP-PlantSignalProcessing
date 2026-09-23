@@ -277,8 +277,8 @@ build/main.o: main.cpp \
  ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Synthesis/blosc.h \
  ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/jitter.h \
  ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/port.h \
- Display/displayHandler.h \
- Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h \
+ Display/displayHandler.h Display/oled_ssd130xDMA.h \
+ ../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h \
  Display/MenuManager.h PSP/PlantConditioner.h \
  PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h \
  PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h PSP/AudioEngine.h
@@ -561,7 +561,8 @@ build/main.o: main.cpp \
 ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/jitter.h:
 ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/port.h:
 Display/displayHandler.h:
-Display/../../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h:
+Display/oled_ssd130xDMA.h:
+../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h:
 Display/MenuManager.h:
 PSP/PlantConditioner.h:
 PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h:
