@@ -43,7 +43,7 @@ volatile bool plant_update_param = false;
 std::atomic<int32_t> global_inc(0);
 std::atomic<bool> global_clicked(false);
 
-volatile uint32_t display_period = 100; //(ms) => 10 fps
+volatile uint32_t display_period = 50; //(ms) => 25 fps
 
 // ============================================================================
 // INTERRUPT SERVICE ROUTINES AND AUDIO CALLBACK
@@ -264,6 +264,7 @@ int main() {
         // --- TASK 4: DISPLAY UPDATE ---
         // ====================================================================
         if (now - last >= display_period) {
+            Display_test_pin.Write(true);
             last = now; 
             ui_data = menu.GetData(); 
             
@@ -276,7 +277,7 @@ int main() {
             }
             
             // Blocking I2C operation
-            Display_test_pin.Write(true);
+            
             disp_handle.Update(); 
             Display_test_pin.Write(false);
         }

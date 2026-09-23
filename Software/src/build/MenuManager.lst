@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
   10:Display/MenuManager.cpp ****     _outData.curve = 1.0f;
   45              		.loc 1 10 20 view .LVU5
   46 0008 4FF07E51 		mov	r1, #1065353216
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 2
 
 
    9:Display/MenuManager.cpp ****     _outData.curve = 1.0f;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
   77 0022 2162     		str	r1, [r4, #32]
   16:Display/MenuManager.cpp ****     _outData.touchths_value = 1;
   78              		.loc 1 16 21 view .LVU25
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 3
 
 
   79 0024 E362     		str	r3, [r4, #44]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
   23:Display/MenuManager.cpp ****     
   24:Display/MenuManager.cpp ****     // 1. Uscita dal PLAYMODE
   25:Display/MenuManager.cpp ****     if (_current_state == PLAYMODE) {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 4
 
 
  125              		.loc 1 25 9 view .LVU38
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
   54:Display/MenuManager.cpp **** 
   55:Display/MenuManager.cpp ****     // 3. GESTIONE DEL TASTO BACK (Torna alla schermata precedente)
   56:Display/MenuManager.cpp ****     if (_cursor_state == BACK) {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 5
 
 
  150              		.loc 1 56 5 view .LVU46
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
   81:Display/MenuManager.cpp **** }
  179              		.loc 1 81 1 view .LVU58
  180 004c 10BD     		pop	{r4, pc}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 6
 
 
  181              	.LVL5:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
   43:Display/MenuManager.cpp ****         return;
  221              		.loc 1 43 24 is_stmt 0 view .LVU77
  222 0068 0523     		movs	r3, #5
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 7
 
 
  223 006a 2370     		strb	r3, [r4]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  266 0084 9A1E     		subs	r2, r3, #2
   61:Display/MenuManager.cpp ****             MenuState previous_hub = _current_state; 
  267              		.loc 1 61 14 view .LVU93
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 8
 
 
  268 0086 012A     		cmp	r2, #1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  312              		.loc 1 62 13 is_stmt 1 view .LVU106
   63:Display/MenuManager.cpp ****             _cursor_state = previous_hub; // Lascia il cursore sull'Hub da cui siamo appena usciti
  313              		.loc 1 63 13 view .LVU107
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 9
 
 
   63:Display/MenuManager.cpp ****             _cursor_state = previous_hub; // Lascia il cursore sull'Hub da cui siamo appena usciti
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  357 0008 0A28     		cmpne	r0, #10
  358 000a 94BF     		ite	ls
  359 000c 0120     		movls	r0, #1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 10
 
 
  360 000e 0020     		movhi	r0, #0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  408 001b 03       		.byte	(.L38-.L40)/2
  409 001c 6F       		.byte	(.L41-.L40)/2
  410 001d 33       		.byte	(.L39-.L40)/2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 11
 
 
  411              		.p2align 1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  148:Display/MenuManager.cpp ****             else if (_cursor_state == RELTHS_VALUE) _cursor_state = BACK;
  149:Display/MenuManager.cpp ****             else if (_cursor_state == BACK) _cursor_state = TOUCHTHS_VALUE;
  150:Display/MenuManager.cpp ****         } else {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 12
 
 
  151:Display/MenuManager.cpp ****             if (_cursor_state == TOUCHTHS_VALUE) _cursor_state = BACK;
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  151:Display/MenuManager.cpp ****             else if (_cursor_state == RELTHS_VALUE) _cursor_state = TOUCHTHS_VALUE;
  438              		.loc 1 151 13 is_stmt 1 view .LVU137
  439 0038 0E2A     		cmp	r2, #14
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 13
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 13
 
 
  440 003a 40F08E80 		bne	.L165
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  173:Display/MenuManager.cpp ****     if (_current_state == SAVE_CONFIG || _current_state == LOAD_CONFIG) _cursor_state = FLASH_HUB;
  480              		.loc 1 173 5 is_stmt 1 view .LVU153
  481 0062 A3F10E02 		sub	r2, r3, #14
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 14
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 14
 
 
  482 0066 012A     		cmp	r2, #1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  521              		.loc 1 160 18 view .LVU170
  522 008c 122A     		cmp	r2, #18
  523 008e E8D1     		bne	.L87
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 15
 
 
  524              	.L79:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  117:Display/MenuManager.cpp ****             else if (_cursor_state == CURVE)           _cursor_state = HYSTERESIS;
  563              		.loc 1 117 17 is_stmt 0 view .LVU186
  564 00b8 6278     		ldrb	r2, [r4, #1]	@ zero_extendqisi2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 16
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 16
 
 
  116:Display/MenuManager.cpp ****             if (_cursor_state == DELTA)                _cursor_state = CURVE;
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  604 00e6 35D0     		beq	.L72
  136:Display/MenuManager.cpp ****             else if (_cursor_state == BACK) _cursor_state = ROOT;
  605              		.loc 1 136 18 view .LVU202
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 17
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 17
 
 
  606 00e8 0D2A     		cmp	r2, #13
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  646 0114 2CD0     		beq	.L53
  110:Display/MenuManager.cpp ****             else if (_cursor_state == SCALES_HUB) _cursor_state = CALIBRATION_HUB;
  647              		.loc 1 110 18 view .LVU217
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 18
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 18
 
 
  648 0116 042A     		cmp	r2, #4
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  689              		.loc 1 141 18 view .LVU230
  690 014c 0D2A     		cmp	r2, #13
  691 014e 1BD0     		beq	.L71
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 19
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 19
 
 
  142:Display/MenuManager.cpp ****         }
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  102:Display/MenuManager.cpp ****             else if (_cursor_state == SCALES_HUB) _cursor_state = PRESETS_HUB;
  733              		.loc 1 102 51 is_stmt 1 discriminator 1 view .LVU244
  102:Display/MenuManager.cpp ****             else if (_cursor_state == SCALES_HUB) _cursor_state = PRESETS_HUB;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 20
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 20
 
 
  734              		.loc 1 102 65 is_stmt 0 discriminator 1 view .LVU245
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  780              		.cfi_offset 4, -12
  781              		.cfi_offset 5, -8
  782              		.cfi_offset 14, -4
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 21
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 21
 
 
  181:Display/MenuManager.cpp ****     _lastInteractionTime = daisy::System::GetNow(); 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  204:Display/MenuManager.cpp ****             if (_outData.filter_type < 0) _outData.filter_type = 0;
  205:Display/MenuManager.cpp ****             if (_outData.filter_type > 3) _outData.filter_type = 3;
  206:Display/MenuManager.cpp ****             break;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 22
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 22
 
 
  207:Display/MenuManager.cpp **** 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  825              		.loc 1 247 34 view .LVU266
  826 002c 2563     		str	r5, [r4, #48]
  827              	.L166:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 23
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 23
 
 
  249:Display/MenuManager.cpp ****             break;
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  858 0048 F8EEE76A 		vcvt.f32.s32	s13, s15
  191:Display/MenuManager.cpp ****             if (_outData.curve < 0.1f) _outData.curve = 0.1f;
  859              		.loc 1 191 28 view .LVU282
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 24
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 24
 
 
  860 004c D4ED037A 		vldr.32	s15, [r4, #12]
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  900              	.LVL31:
  901              	.L176:
  196:Display/MenuManager.cpp ****             _outData.hysteresis += (rotation * 1);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 25
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 25
 
 
  902              		.loc 1 196 9 is_stmt 1 view .LVU299
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  940              		.loc 1 208 9 is_stmt 1 view .LVU317
  209:Display/MenuManager.cpp ****             if (_outData.root < 0) _outData.root = 0;
  941              		.loc 1 209 13 view .LVU318
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 26
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 26
 
 
  210:Display/MenuManager.cpp ****             if (_outData.root > 11) _outData.root = 11;
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  221:Display/MenuManager.cpp ****             if (_outData.octave < 1) _outData.octave = 1;
  980              		.loc 1 221 29 is_stmt 0 view .LVU337
  981 00dc 216A     		ldr	r1, [r4, #32]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 27
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 27
 
 
  982 00de 0D44     		add	r5, r5, r1
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  1020              		.loc 1 234 35 is_stmt 0 view .LVU355
  1021 00fe A36A     		ldr	r3, [r4, #40]
  236:Display/MenuManager.cpp ****             if (_outData.relths_value > 255) _outData.relths_value = 255;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 28
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 28
 
 
  1022              		.loc 1 236 13 view .LVU356
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  1064              		.loc 1 242 54 is_stmt 0 discriminator 1 view .LVU372
  1065 0130 0023     		movs	r3, #0
  1066 0132 E362     		str	r3, [r4, #44]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 29
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 29
 
 
  243:Display/MenuManager.cpp ****             break;
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  236:Display/MenuManager.cpp ****             if (_outData.relths_value > 255) _outData.relths_value = 255;
  1108              		.loc 1 236 44 is_stmt 1 discriminator 1 view .LVU391
  236:Display/MenuManager.cpp ****             if (_outData.relths_value > 255) _outData.relths_value = 255;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 30
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 30
 
 
  1109              		.loc 1 236 66 is_stmt 0 discriminator 1 view .LVU392
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  1156              		.fpu fpv5-d16
  1158              	_ZN11MenuManager11MenuTimeoutEm:
  1159              	.LVL52:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 31
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 31
 
 
  1160              	.LFB2724:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  1202              	_ZN11MenuManager7GetDataEv:
  1203              	.LVL53:
  1204              	.LFB2725:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 32
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 32
 
 
  272:Display/MenuManager.cpp **** 
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  1250              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
  1251              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
  1252              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 33
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 33
 
 
  1253              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
@@ -1952,31 +1952,31 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 1
  1281              		.file 38 "../libs/PoliTeKDSP/libs/libDaisy/Middlewares/Third_Party/FatFs/src/ff.h"
  1282              		.file 39 "Display/MenuManager.h"
  1283              		.file 40 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s 			page 34
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s 			page 34
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 MenuManager.cpp
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:17     .text._ZN11MenuManager4InitEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:26     .text._ZN11MenuManager4InitEv:00000000 _ZN11MenuManager4InitEv
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:94     .text._ZN11MenuManager4InitEv:00000030 $d
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:99     .text._ZN11MenuManager11StateUpdateEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:107    .text._ZN11MenuManager11StateUpdateEv:00000000 _ZN11MenuManager11StateUpdateEv
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:332    .text._ZN11MenuManager11IsLeafStateEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:340    .text._ZN11MenuManager11IsLeafStateEv:00000000 _ZN11MenuManager11IsLeafStateEv
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:366    .text._ZN11MenuManager12CursorUpdateEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:374    .text._ZN11MenuManager12CursorUpdateEi:00000000 _ZN11MenuManager12CursorUpdateEi
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:405    .text._ZN11MenuManager12CursorUpdateEi:00000018 $d
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:411    .text._ZN11MenuManager12CursorUpdateEi:0000001e $t
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:760    .text._ZN11MenuManager11ValueUpdateEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:768    .text._ZN11MenuManager11ValueUpdateEi:00000000 _ZN11MenuManager11ValueUpdateEi
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:799    .text._ZN11MenuManager11ValueUpdateEi:00000018 $d
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:813    .text._ZN11MenuManager11ValueUpdateEi:00000026 $t
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:1144   .text._ZN11MenuManager11ValueUpdateEi:00000164 $d
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:1150   .text._ZN11MenuManager11MenuTimeoutEm:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:1158   .text._ZN11MenuManager11MenuTimeoutEm:00000000 _ZN11MenuManager11MenuTimeoutEm
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:1194   .text._ZN11MenuManager7GetDataEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccC30ed1.s:1202   .text._ZN11MenuManager7GetDataEv:00000000 _ZN11MenuManager7GetDataEv
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:17     .text._ZN11MenuManager4InitEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:26     .text._ZN11MenuManager4InitEv:00000000 _ZN11MenuManager4InitEv
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:94     .text._ZN11MenuManager4InitEv:00000030 $d
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:99     .text._ZN11MenuManager11StateUpdateEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:107    .text._ZN11MenuManager11StateUpdateEv:00000000 _ZN11MenuManager11StateUpdateEv
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:332    .text._ZN11MenuManager11IsLeafStateEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:340    .text._ZN11MenuManager11IsLeafStateEv:00000000 _ZN11MenuManager11IsLeafStateEv
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:366    .text._ZN11MenuManager12CursorUpdateEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:374    .text._ZN11MenuManager12CursorUpdateEi:00000000 _ZN11MenuManager12CursorUpdateEi
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:405    .text._ZN11MenuManager12CursorUpdateEi:00000018 $d
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:411    .text._ZN11MenuManager12CursorUpdateEi:0000001e $t
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:760    .text._ZN11MenuManager11ValueUpdateEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:768    .text._ZN11MenuManager11ValueUpdateEi:00000000 _ZN11MenuManager11ValueUpdateEi
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:799    .text._ZN11MenuManager11ValueUpdateEi:00000018 $d
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:813    .text._ZN11MenuManager11ValueUpdateEi:00000026 $t
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:1144   .text._ZN11MenuManager11ValueUpdateEi:00000164 $d
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:1150   .text._ZN11MenuManager11MenuTimeoutEm:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:1158   .text._ZN11MenuManager11MenuTimeoutEm:00000000 _ZN11MenuManager11MenuTimeoutEm
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:1194   .text._ZN11MenuManager7GetDataEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccGmAoDu.s:1202   .text._ZN11MenuManager7GetDataEv:00000000 _ZN11MenuManager7GetDataEv
 
 UNDEFINED SYMBOLS
 _ZN5daisy6System6GetNowEv
