@@ -40,8 +40,8 @@ void AudioEngine::SetActivePreset(const Preset_s& preset) {
 
     _filt.SetRes(_currentPreset.filter.Resonance);
 
-    _reverb.SetLpFreq(revLpFreq);
-    _reverb.SetFeedback(revFeedback);
+    _reverb.SetLpFreq(_currentPreset.reverb.revLpFreq);
+    _reverb.SetFeedback(_currentPreset.reverb.revFeedback);
 }
 
 
