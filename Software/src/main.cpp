@@ -29,7 +29,7 @@ AudioEngine      synth;
 // ============================================================================
 // GLOBAL VARIABLES & FLAGS
 // ============================================================================
-ControlsStruct audio_controls = {440.0f, false};
+Control_s audio_controls = {440.0f, false};
 
 TimerHandle enc_timer;
 TimerHandle plant_timer;
@@ -62,12 +62,12 @@ void PlantTimerCallback(void* data) {
 }
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size) {
-    synth.Update(audio_controls);
+    synth.UpdateControls(audio_controls);
 
-    for (size_t i = 0; i < size; i++) {
-        float sig = synth.Process();
-        disp_handle.pushAudioSample(sig);
-        out[0][i] = out[1][i] = sig;
+    for(size_t i = 0; i < size; i++) {
+
+        synth.Process(out[0][i], out[1][i]);
+        disp_handle.pushAudioSample(out[0][i]);  // Push left channel sample for display
     }
 }
 

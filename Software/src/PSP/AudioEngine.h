@@ -29,7 +29,9 @@ struct Filter_s {
     float Cutoff;
     float Resonance;
 };
-
+struct Reverb_s {
+    float DryWet;
+};
 // Il Preset racchiude lo stato di tutti i moduli
 struct Preset_s {
     uint8_t index;
@@ -41,6 +43,7 @@ struct Preset_s {
     Adsr_s amp_env;
     Adsr_s filt_env;
     Filter_s filter;
+    Reverb_s reverb;
 
     // Aggiungi l'operatore != necessario per PersistentStorage in libDaisy
     bool operator!=(const Preset_s& other) const {
@@ -62,7 +65,7 @@ public:
     void UpdateControls(const Control_s& controls);
 
     // Genera un singolo sample
-    float Process();
+    void Process(float& out_l, float& out_r);
 
 private:
     // Moduli DaisySP

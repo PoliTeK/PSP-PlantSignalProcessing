@@ -55,35 +55,44 @@ void AudioEngine::UpdateControls(const Control_s& controls) {
     _lastGate = controls.gate;
 }
 
-float AudioEngine::Process() {
+void AudioEngine::Process(float& out_l, float& out_r) {
+    // 1. Elaborazione LFO e Inviluppi
     float amp_env_out = _amp_env.Process(_lastGate);
     float filt_env_out = _filt_env.Process(_lastGate);
 
+    // 2. Aggiornamento Oscillatori
     _osc1.SetFreq(_currentFreq);
-    _osc2.SetFreq(_currentFreq);
-
+    _osc2.SetFreq(_currentFreq); 
+    
     _osc1.SetAmp(_currentPreset.osc1.Amp);
     _osc2.SetAmp(_currentPreset.osc2.Amp);
 
-    
     float sig_osc = _osc1.Process() + _osc2.Process();
 
+    // 3. Calcolo del Cutoff modulato
     float target_cutoff = _currentPreset.filter.Cutoff + (filt_env_out * _currentPreset.filt_env.Amp);
     if(target_cutoff > 20000.0f) target_cutoff = 20000.0f;
     if(target_cutoff < 20.0f) target_cutoff = 20.0f;
     
     _filt.SetFreq(target_cutoff);
 
-    float sig_filt = _filt.Process(sig_osc);
+    // 4. Filtraggio
+    float filtered_sig = _filt.Process(sig_osc);
 
-    _reverb.Process(final_sig, final_sig, &outL, &outR);
+    // 5. Applicazione VCA (Inviluppo di ampiezza, segnale mono)
+    float final_sig = filtered_sig * amp_env_out;
 
-    float final_sig = sig_filt * amp_env_out;
-
-    // NOTA: Il riverbero ReverbSc è stereo. Se Process() restituisce un solo float,
-    // dovrai gestire il riverbero fuori (nel callback principale) o cambiare il ritorno di Process().
-    // Per ora restituiamo il segnale dry.
+    // 6. Riverbero Stereo
+    float revL = 0.0f;
+    float revR = 0.0f;
     
-    return final_sig;
+    // Invia il segnale mono a entrambi gli ingressi del riverbero
+    _reverb.Process(final_sig, final_sig, &revL, &revR);
+    
+    float revDryWet = _currentPreset.reverb.DryWet;
+    
+    // 7. Calcolo del mix stereo
+    // Scrive direttamente le variabili passate per riferimento
+    out_l = (final_sig * (1.0f - revDryWet)) + (revL * revDryWet);
+    out_r = (final_sig * (1.0f - revDryWet)) + (revR * revDryWet);
 }
-
