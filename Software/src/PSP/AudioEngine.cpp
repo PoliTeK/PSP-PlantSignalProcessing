@@ -38,8 +38,10 @@ void AudioEngine::SetActivePreset(const Preset_s& preset) {
     _filt_env.SetSustainLevel(_currentPreset.filt_env.Sustain);
     _filt_env.SetTime(daisysp::ADSR_SEG_RELEASE, _currentPreset.filt_env.Release);
 
-
     _filt.SetRes(_currentPreset.filter.Resonance);
+
+    _reverb.SetLpFreq(revLpFreq);
+    _reverb.SetFeedback(revFeedback);
 }
 
 
@@ -73,6 +75,8 @@ float AudioEngine::Process() {
     _filt.SetFreq(target_cutoff);
 
     float sig_filt = _filt.Process(sig_osc);
+
+    _reverb.Process(final_sig, final_sig, &outL, &outR);
 
     float final_sig = sig_filt * amp_env_out;
 
