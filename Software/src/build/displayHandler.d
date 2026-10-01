@@ -104,7 +104,7 @@ build/displayHandler.o: Display/displayHandler.cpp \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
- Display/displayHandler.h Display/oled_ssd130xDMA.h \
+ Display/displayHandler.h Display/../Components/oled_ssd130xDMA.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h \
@@ -310,7 +310,7 @@ build/displayHandler.o: Display/displayHandler.cpp \
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
 Display/displayHandler.h:
-Display/oled_ssd130xDMA.h:
+Display/../Components/oled_ssd130xDMA.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h:

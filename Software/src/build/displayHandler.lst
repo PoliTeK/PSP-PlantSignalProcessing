@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -28,157 +28,157 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
   26              	_ZN5daisy16SSD1306DmaDriverILj128ELj64EE11DmaCallbackEPvNS_9I2CHandle6ResultE:
   27              	.LVL0:
   28              	.LFB2841:
-  29              		.file 1 "Display/oled_ssd130xDMA.h"
-   1:Display/oled_ssd130xDMA.h **** #pragma once
-   2:Display/oled_ssd130xDMA.h **** 
-   3:Display/oled_ssd130xDMA.h **** #include "daisy_seed.h"
-   4:Display/oled_ssd130xDMA.h **** #include "dev/oled_ssd130x.h"
-   5:Display/oled_ssd130xDMA.h **** 
-   6:Display/oled_ssd130xDMA.h **** namespace daisy {
-   7:Display/oled_ssd130xDMA.h **** 
-   8:Display/oled_ssd130xDMA.h **** class SSD1306I2cDmaTransport {
-   9:Display/oled_ssd130xDMA.h **** public:
-  10:Display/oled_ssd130xDMA.h ****     struct Config {
-  11:Display/oled_ssd130xDMA.h ****         Config() { Defaults(); }
-  12:Display/oled_ssd130xDMA.h ****         I2CHandle::Config i2c_config;
-  13:Display/oled_ssd130xDMA.h ****         uint8_t i2c_address;
-  14:Display/oled_ssd130xDMA.h ****         void Defaults() {
-  15:Display/oled_ssd130xDMA.h ****             i2c_config.periph = I2CHandle::Config::Peripheral::I2C_1;
-  16:Display/oled_ssd130xDMA.h ****             i2c_config.speed = I2CHandle::Config::Speed::I2C_1MHZ;
-  17:Display/oled_ssd130xDMA.h ****             i2c_config.mode = I2CHandle::Config::Mode::I2C_MASTER;
-  18:Display/oled_ssd130xDMA.h ****             i2c_config.pin_config.scl = daisy::Pin(PORTB, 8);
-  19:Display/oled_ssd130xDMA.h ****             i2c_config.pin_config.sda = daisy::Pin(PORTB, 9);
-  20:Display/oled_ssd130xDMA.h ****             i2c_address = 0x3C;
-  21:Display/oled_ssd130xDMA.h ****         }
-  22:Display/oled_ssd130xDMA.h ****     };
-  23:Display/oled_ssd130xDMA.h **** 
-  24:Display/oled_ssd130xDMA.h ****     void Init(const Config& config) {
-  25:Display/oled_ssd130xDMA.h ****         _i2c_address_ = config.i2c_address;
-  26:Display/oled_ssd130xDMA.h ****         i2c_.Init(config.i2c_config);
-  27:Display/oled_ssd130xDMA.h ****     }
-  28:Display/oled_ssd130xDMA.h **** 
-  29:Display/oled_ssd130xDMA.h ****     void SendCommand(uint8_t cmd) {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 2
+  29              		.file 1 "Display/../Components/oled_ssd130xDMA.h"
+   1:Display/../Components/oled_ssd130xDMA.h **** #pragma once
+   2:Display/../Components/oled_ssd130xDMA.h **** 
+   3:Display/../Components/oled_ssd130xDMA.h **** #include "daisy_seed.h"
+   4:Display/../Components/oled_ssd130xDMA.h **** #include "dev/oled_ssd130x.h"
+   5:Display/../Components/oled_ssd130xDMA.h **** 
+   6:Display/../Components/oled_ssd130xDMA.h **** namespace daisy {
+   7:Display/../Components/oled_ssd130xDMA.h **** 
+   8:Display/../Components/oled_ssd130xDMA.h **** class SSD1306I2cDmaTransport {
+   9:Display/../Components/oled_ssd130xDMA.h **** public:
+  10:Display/../Components/oled_ssd130xDMA.h ****     struct Config {
+  11:Display/../Components/oled_ssd130xDMA.h ****         Config() { Defaults(); }
+  12:Display/../Components/oled_ssd130xDMA.h ****         I2CHandle::Config i2c_config;
+  13:Display/../Components/oled_ssd130xDMA.h ****         uint8_t i2c_address;
+  14:Display/../Components/oled_ssd130xDMA.h ****         void Defaults() {
+  15:Display/../Components/oled_ssd130xDMA.h ****             i2c_config.periph = I2CHandle::Config::Peripheral::I2C_1;
+  16:Display/../Components/oled_ssd130xDMA.h ****             i2c_config.speed = I2CHandle::Config::Speed::I2C_1MHZ;
+  17:Display/../Components/oled_ssd130xDMA.h ****             i2c_config.mode = I2CHandle::Config::Mode::I2C_MASTER;
+  18:Display/../Components/oled_ssd130xDMA.h ****             i2c_config.pin_config.scl = daisy::Pin(PORTB, 8);
+  19:Display/../Components/oled_ssd130xDMA.h ****             i2c_config.pin_config.sda = daisy::Pin(PORTB, 9);
+  20:Display/../Components/oled_ssd130xDMA.h ****             i2c_address = 0x3C;
+  21:Display/../Components/oled_ssd130xDMA.h ****         }
+  22:Display/../Components/oled_ssd130xDMA.h ****     };
+  23:Display/../Components/oled_ssd130xDMA.h **** 
+  24:Display/../Components/oled_ssd130xDMA.h ****     void Init(const Config& config) {
+  25:Display/../Components/oled_ssd130xDMA.h ****         _i2c_address_ = config.i2c_address;
+  26:Display/../Components/oled_ssd130xDMA.h ****         i2c_.Init(config.i2c_config);
+  27:Display/../Components/oled_ssd130xDMA.h ****     }
+  28:Display/../Components/oled_ssd130xDMA.h **** 
+  29:Display/../Components/oled_ssd130xDMA.h ****     void SendCommand(uint8_t cmd) {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 2
 
 
-  30:Display/oled_ssd130xDMA.h ****         uint8_t buf[2] = {0x00, cmd};
-  31:Display/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
-  32:Display/oled_ssd130xDMA.h ****     }
-  33:Display/oled_ssd130xDMA.h **** 
-  34:Display/oled_ssd130xDMA.h ****     void SendCommands(uint8_t* cmds, size_t size) {
-  35:Display/oled_ssd130xDMA.h ****         for(size_t i = 0; i < size; i++) {
-  36:Display/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
-  37:Display/oled_ssd130xDMA.h ****         }
-  38:Display/oled_ssd130xDMA.h ****     }
-  39:Display/oled_ssd130xDMA.h **** 
-  40:Display/oled_ssd130xDMA.h ****     void SendDataDma(uint8_t* buff, size_t size, I2CHandle::CallbackFunctionPtr callback, void* con
-  41:Display/oled_ssd130xDMA.h ****         // 1. Prepara il pacchetto unendo il byte di comando (0x40) e i byte grafici
-  42:Display/oled_ssd130xDMA.h ****         _dma_buffer_[0] = 0x40;
-  43:Display/oled_ssd130xDMA.h ****         memcpy(&_dma_buffer_[1], buff, size);
-  44:Display/oled_ssd130xDMA.h ****         
-  45:Display/oled_ssd130xDMA.h ****         // 2. Forza la CPU a scrivere le modifiche (appena fatte col memcpy) nella RAM fisica
-  46:Display/oled_ssd130xDMA.h ****         // In questo modo il DMA hardware non leggerà dati obsoleti.
-  47:Display/oled_ssd130xDMA.h ****         dsy_dma_clear_cache_for_buffer(_dma_buffer_, size + 1);
-  48:Display/oled_ssd130xDMA.h ****         
-  49:Display/oled_ssd130xDMA.h ****         // 3. Avvia il trasferimento hardware in background
-  50:Display/oled_ssd130xDMA.h ****         i2c_.TransmitDma(_i2c_address_, _dma_buffer_, size + 1, callback, context);
-  51:Display/oled_ssd130xDMA.h ****     }
-  52:Display/oled_ssd130xDMA.h **** 
-  53:Display/oled_ssd130xDMA.h **** private:
-  54:Display/oled_ssd130xDMA.h ****     daisy::I2CHandle i2c_;
-  55:Display/oled_ssd130xDMA.h ****     uint8_t _i2c_address_;
-  56:Display/oled_ssd130xDMA.h ****     
-  57:Display/oled_ssd130xDMA.h ****     // Alloca 1025 byte nella zona di memoria D2, ottimizzata per il DMA
-  58:Display/oled_ssd130xDMA.h ****     uint8_t _dma_buffer_[1025];
-  59:Display/oled_ssd130xDMA.h **** };
-  60:Display/oled_ssd130xDMA.h **** 
-  61:Display/oled_ssd130xDMA.h **** 
-  62:Display/oled_ssd130xDMA.h **** // --- PARTE 2: Il Driver (Gestione Grafica) ---
-  63:Display/oled_ssd130xDMA.h **** template <size_t width, size_t height>
-  64:Display/oled_ssd130xDMA.h **** class SSD1306DmaDriver {
-  65:Display/oled_ssd130xDMA.h **** public:
-  66:Display/oled_ssd130xDMA.h ****     struct Config {
-  67:Display/oled_ssd130xDMA.h ****         typename SSD1306I2cDmaTransport::Config transport_config;
-  68:Display/oled_ssd130xDMA.h ****     };
-  69:Display/oled_ssd130xDMA.h **** 
-  70:Display/oled_ssd130xDMA.h ****     void Init(Config config) {
-  71:Display/oled_ssd130xDMA.h ****         transport_.Init(config.transport_config);
-  72:Display/oled_ssd130xDMA.h **** 
-  73:Display/oled_ssd130xDMA.h ****         // Sequenza di inizializzazione standard SSD1306
-  74:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0xAE); // Display Off
-  75:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0xD5); transport_.SendCommand(0x80); // Clock Divide
-  76:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0xA8); transport_.SendCommand(0x3F); // Multiplex Ratio (64 pixel)
-  77:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0xD3); transport_.SendCommand(0x00); // Display Offset
-  78:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0x40); // Start Line
-  79:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0x8D); transport_.SendCommand(0x14); // Charge Pump
-  80:Display/oled_ssd130xDMA.h ****         
-  81:Display/oled_ssd130xDMA.h ****         // COMANDO CHIAVE: Imposta l'Addressing Orizzontale
-  82:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0x20); transport_.SendCommand(0x00); 
-  83:Display/oled_ssd130xDMA.h ****         
-  84:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0xA1); // Segment Remap
-  85:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0xC8); // COM Direction
-  86:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0xDA); transport_.SendCommand(0x12); // COM Pins
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 3
+  30:Display/../Components/oled_ssd130xDMA.h ****         uint8_t buf[2] = {0x00, cmd};
+  31:Display/../Components/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
+  32:Display/../Components/oled_ssd130xDMA.h ****     }
+  33:Display/../Components/oled_ssd130xDMA.h **** 
+  34:Display/../Components/oled_ssd130xDMA.h ****     void SendCommands(uint8_t* cmds, size_t size) {
+  35:Display/../Components/oled_ssd130xDMA.h ****         for(size_t i = 0; i < size; i++) {
+  36:Display/../Components/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
+  37:Display/../Components/oled_ssd130xDMA.h ****         }
+  38:Display/../Components/oled_ssd130xDMA.h ****     }
+  39:Display/../Components/oled_ssd130xDMA.h **** 
+  40:Display/../Components/oled_ssd130xDMA.h ****     void SendDataDma(uint8_t* buff, size_t size, I2CHandle::CallbackFunctionPtr callback, void* con
+  41:Display/../Components/oled_ssd130xDMA.h ****         // 1. Prepara il pacchetto unendo il byte di comando (0x40) e i byte grafici
+  42:Display/../Components/oled_ssd130xDMA.h ****         _dma_buffer_[0] = 0x40;
+  43:Display/../Components/oled_ssd130xDMA.h ****         memcpy(&_dma_buffer_[1], buff, size);
+  44:Display/../Components/oled_ssd130xDMA.h ****         
+  45:Display/../Components/oled_ssd130xDMA.h ****         // 2. Forza la CPU a scrivere le modifiche (appena fatte col memcpy) nella RAM fisica
+  46:Display/../Components/oled_ssd130xDMA.h ****         // In questo modo il DMA hardware non leggerà dati obsoleti.
+  47:Display/../Components/oled_ssd130xDMA.h ****         dsy_dma_clear_cache_for_buffer(_dma_buffer_, size + 1);
+  48:Display/../Components/oled_ssd130xDMA.h ****         
+  49:Display/../Components/oled_ssd130xDMA.h ****         // 3. Avvia il trasferimento hardware in background
+  50:Display/../Components/oled_ssd130xDMA.h ****         i2c_.TransmitDma(_i2c_address_, _dma_buffer_, size + 1, callback, context);
+  51:Display/../Components/oled_ssd130xDMA.h ****     }
+  52:Display/../Components/oled_ssd130xDMA.h **** 
+  53:Display/../Components/oled_ssd130xDMA.h **** private:
+  54:Display/../Components/oled_ssd130xDMA.h ****     daisy::I2CHandle i2c_;
+  55:Display/../Components/oled_ssd130xDMA.h ****     uint8_t _i2c_address_;
+  56:Display/../Components/oled_ssd130xDMA.h ****     
+  57:Display/../Components/oled_ssd130xDMA.h ****     // Alloca 1025 byte nella zona di memoria D2, ottimizzata per il DMA
+  58:Display/../Components/oled_ssd130xDMA.h ****     uint8_t _dma_buffer_[1025];
+  59:Display/../Components/oled_ssd130xDMA.h **** };
+  60:Display/../Components/oled_ssd130xDMA.h **** 
+  61:Display/../Components/oled_ssd130xDMA.h **** 
+  62:Display/../Components/oled_ssd130xDMA.h **** // --- PARTE 2: Il Driver (Gestione Grafica) ---
+  63:Display/../Components/oled_ssd130xDMA.h **** template <size_t width, size_t height>
+  64:Display/../Components/oled_ssd130xDMA.h **** class SSD1306DmaDriver {
+  65:Display/../Components/oled_ssd130xDMA.h **** public:
+  66:Display/../Components/oled_ssd130xDMA.h ****     struct Config {
+  67:Display/../Components/oled_ssd130xDMA.h ****         typename SSD1306I2cDmaTransport::Config transport_config;
+  68:Display/../Components/oled_ssd130xDMA.h ****     };
+  69:Display/../Components/oled_ssd130xDMA.h **** 
+  70:Display/../Components/oled_ssd130xDMA.h ****     void Init(Config config) {
+  71:Display/../Components/oled_ssd130xDMA.h ****         transport_.Init(config.transport_config);
+  72:Display/../Components/oled_ssd130xDMA.h **** 
+  73:Display/../Components/oled_ssd130xDMA.h ****         // Sequenza di inizializzazione standard SSD1306
+  74:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0xAE); // Display Off
+  75:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0xD5); transport_.SendCommand(0x80); // Clock Divide
+  76:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0xA8); transport_.SendCommand(0x3F); // Multiplex Ratio (64 pixel)
+  77:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0xD3); transport_.SendCommand(0x00); // Display Offset
+  78:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0x40); // Start Line
+  79:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0x8D); transport_.SendCommand(0x14); // Charge Pump
+  80:Display/../Components/oled_ssd130xDMA.h ****         
+  81:Display/../Components/oled_ssd130xDMA.h ****         // COMANDO CHIAVE: Imposta l'Addressing Orizzontale
+  82:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0x20); transport_.SendCommand(0x00); 
+  83:Display/../Components/oled_ssd130xDMA.h ****         
+  84:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0xA1); // Segment Remap
+  85:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0xC8); // COM Direction
+  86:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0xDA); transport_.SendCommand(0x12); // COM Pins
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 3
 
 
-  87:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0x81); transport_.SendCommand(0xCF); // Contrast
-  88:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0xD9); transport_.SendCommand(0xF1); // Pre-charge
-  89:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0xDB); transport_.SendCommand(0x40); // VCOM Detect
-  90:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0xA4); // All On Resume
-  91:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0xA6); // Normal Display
-  92:Display/oled_ssd130xDMA.h ****         transport_.SendCommand(0xAF); // Display On
-  93:Display/oled_ssd130xDMA.h ****     }
-  94:Display/oled_ssd130xDMA.h **** 
-  95:Display/oled_ssd130xDMA.h ****     void DrawPixel(uint_fast8_t x, uint_fast8_t y, bool on) {
-  96:Display/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
-  97:Display/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
-  98:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
-  99:Display/oled_ssd130xDMA.h ****     }
- 100:Display/oled_ssd130xDMA.h **** 
- 101:Display/oled_ssd130xDMA.h ****     void Fill(bool on) {
- 102:Display/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
- 103:Display/oled_ssd130xDMA.h ****     }
- 104:Display/oled_ssd130xDMA.h **** 
- 105:Display/oled_ssd130xDMA.h ****     size_t Width() const { return width; }
- 106:Display/oled_ssd130xDMA.h ****     size_t Height() const { return height; }
- 107:Display/oled_ssd130xDMA.h ****     bool UpdateFinished() { return !updating_; }
- 108:Display/oled_ssd130xDMA.h **** 
- 109:Display/oled_ssd130xDMA.h ****     void Update() {
- 110:Display/oled_ssd130xDMA.h ****         if (!updating_) {
- 111:Display/oled_ssd130xDMA.h ****             updating_ = true;
- 112:Display/oled_ssd130xDMA.h ****             
- 113:Display/oled_ssd130xDMA.h ****             // Riposiziona il cursore dell'OLED in alto a sinistra (Colonna 0, Pagina 0)
- 114:Display/oled_ssd130xDMA.h ****             uint8_t reset_cmds[] = {0x21, 0, 127, 0x22, 0, 7}; 
- 115:Display/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
- 116:Display/oled_ssd130xDMA.h ****             
- 117:Display/oled_ssd130xDMA.h ****             transport_.SendDataDma(buffer_, sizeof(buffer_), DmaCallback, this);
- 118:Display/oled_ssd130xDMA.h ****         }
- 119:Display/oled_ssd130xDMA.h ****     }
- 120:Display/oled_ssd130xDMA.h **** 
- 121:Display/oled_ssd130xDMA.h **** private:
- 122:Display/oled_ssd130xDMA.h ****     SSD1306I2cDmaTransport transport_;
- 123:Display/oled_ssd130xDMA.h ****     uint8_t buffer_[width * height / 8];
- 124:Display/oled_ssd130xDMA.h ****     volatile bool updating_ = false;
- 125:Display/oled_ssd130xDMA.h **** 
- 126:Display/oled_ssd130xDMA.h ****     // Questa funzione viene chiamata automaticamente dall'hardware quando il DMA ha finito
- 127:Display/oled_ssd130xDMA.h ****     static void DmaCallback(void* context, daisy::I2CHandle::Result result) {
+  87:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0x81); transport_.SendCommand(0xCF); // Contrast
+  88:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0xD9); transport_.SendCommand(0xF1); // Pre-charge
+  89:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0xDB); transport_.SendCommand(0x40); // VCOM Detect
+  90:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0xA4); // All On Resume
+  91:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0xA6); // Normal Display
+  92:Display/../Components/oled_ssd130xDMA.h ****         transport_.SendCommand(0xAF); // Display On
+  93:Display/../Components/oled_ssd130xDMA.h ****     }
+  94:Display/../Components/oled_ssd130xDMA.h **** 
+  95:Display/../Components/oled_ssd130xDMA.h ****     void DrawPixel(uint_fast8_t x, uint_fast8_t y, bool on) {
+  96:Display/../Components/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
+  97:Display/../Components/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
+  98:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  99:Display/../Components/oled_ssd130xDMA.h ****     }
+ 100:Display/../Components/oled_ssd130xDMA.h **** 
+ 101:Display/../Components/oled_ssd130xDMA.h ****     void Fill(bool on) {
+ 102:Display/../Components/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
+ 103:Display/../Components/oled_ssd130xDMA.h ****     }
+ 104:Display/../Components/oled_ssd130xDMA.h **** 
+ 105:Display/../Components/oled_ssd130xDMA.h ****     size_t Width() const { return width; }
+ 106:Display/../Components/oled_ssd130xDMA.h ****     size_t Height() const { return height; }
+ 107:Display/../Components/oled_ssd130xDMA.h ****     bool UpdateFinished() { return !updating_; }
+ 108:Display/../Components/oled_ssd130xDMA.h **** 
+ 109:Display/../Components/oled_ssd130xDMA.h ****     void Update() {
+ 110:Display/../Components/oled_ssd130xDMA.h ****         if (!updating_) {
+ 111:Display/../Components/oled_ssd130xDMA.h ****             updating_ = true;
+ 112:Display/../Components/oled_ssd130xDMA.h ****             
+ 113:Display/../Components/oled_ssd130xDMA.h ****             // Riposiziona il cursore dell'OLED in alto a sinistra (Colonna 0, Pagina 0)
+ 114:Display/../Components/oled_ssd130xDMA.h ****             uint8_t reset_cmds[] = {0x21, 0, 127, 0x22, 0, 7}; 
+ 115:Display/../Components/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
+ 116:Display/../Components/oled_ssd130xDMA.h ****             
+ 117:Display/../Components/oled_ssd130xDMA.h ****             transport_.SendDataDma(buffer_, sizeof(buffer_), DmaCallback, this);
+ 118:Display/../Components/oled_ssd130xDMA.h ****         }
+ 119:Display/../Components/oled_ssd130xDMA.h ****     }
+ 120:Display/../Components/oled_ssd130xDMA.h **** 
+ 121:Display/../Components/oled_ssd130xDMA.h **** private:
+ 122:Display/../Components/oled_ssd130xDMA.h ****     SSD1306I2cDmaTransport transport_;
+ 123:Display/../Components/oled_ssd130xDMA.h ****     uint8_t buffer_[width * height / 8];
+ 124:Display/../Components/oled_ssd130xDMA.h ****     volatile bool updating_ = false;
+ 125:Display/../Components/oled_ssd130xDMA.h **** 
+ 126:Display/../Components/oled_ssd130xDMA.h ****     // Questa funzione viene chiamata automaticamente dall'hardware quando il DMA ha finito
+ 127:Display/../Components/oled_ssd130xDMA.h ****     static void DmaCallback(void* context, daisy::I2CHandle::Result result) {
   30              		.loc 1 127 17 view -0
   31              		.cfi_startproc
   32              		@ args = 0, pretend = 0, frame = 0
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		@ link register save eliminated.
- 128:Display/oled_ssd130xDMA.h ****         static_cast<SSD1306DmaDriver*>(context)->updating_ = false;
+ 128:Display/../Components/oled_ssd130xDMA.h ****         static_cast<SSD1306DmaDriver*>(context)->updating_ = false;
   35              		.loc 1 128 60 is_stmt 0 view .LVU1
   36 0000 0023     		movs	r3, #0
   37 0002 80F80838 		strb	r3, [r0, #2056]
- 129:Display/oled_ssd130xDMA.h ****     }
+ 129:Display/../Components/oled_ssd130xDMA.h ****     }
   38              		.loc 1 129 5 view .LVU2
   39 0006 7047     		bx	lr
   40              		.cfi_endproc
   41              	.LFE2841:
   43              		.section	.text._ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE4FillEb,"axG",%progbits,
   44              		.align	1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 4
 
 
   45              		.p2align 2,,3
@@ -232,29 +232,29 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
   60              		@ link register save eliminated.
   61              	.LBB19:
   62              	.LBI19:
- 101:Display/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
+ 101:Display/../Components/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
   63              		.loc 1 101 10 view .LVU4
   64              	.LBB20:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
   65              		.loc 1 102 15 is_stmt 0 view .LVU5
   66 0000 0029     		cmp	r1, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 5
 
 
   67 0002 4FF48062 		mov	r2, #1024
   68 0006 00F58260 		add	r0, r0, #1040
   69              	.LVL2:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
   70              		.loc 1 102 15 view .LVU6
   71 000a 14BF     		ite	ne
   72 000c FF21     		movne	r1, #255
   73              	.LVL3:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
   74              		.loc 1 102 15 view .LVU7
   75 000e 0021     		moveq	r1, #0
   76 0010 FFF7FEBF 		b	memset
   77              	.LVL4:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
   78              		.loc 1 102 15 view .LVU8
   79              	.LBE20:
   80              	.LBE19:
@@ -294,16 +294,16 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
   99              		@ frame_needed = 0, uses_anonymous_args = 0
  100              	.LBB38:
  101              	.LBI38:
- 109:Display/oled_ssd130xDMA.h ****         if (!updating_) {
+ 109:Display/../Components/oled_ssd130xDMA.h ****         if (!updating_) {
  102              		.loc 1 109 10 view .LVU10
  103              	.LBB39:
- 110:Display/oled_ssd130xDMA.h ****             updating_ = true;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 6
+ 110:Display/../Components/oled_ssd130xDMA.h ****             updating_ = true;
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 6
 
 
  104              		.loc 1 110 14 is_stmt 0 view .LVU11
  105 0000 90F81038 		ldrb	r3, [r0, #2064]	@ zero_extendqisi2
- 110:Display/oled_ssd130xDMA.h ****             updating_ = true;
+ 110:Display/../Components/oled_ssd130xDMA.h ****             updating_ = true;
  106              		.loc 1 110 9 view .LVU12
  107 0004 03B1     		cbz	r3, .L14
  108 0006 7047     		bx	lr
@@ -312,13 +312,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  111              	.LBB40:
  112              	.LBB41:
  113              	.LBB42:
- 114:Display/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
+ 114:Display/../Components/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
  114              		.loc 1 114 21 view .LVU13
  115 0008 224B     		ldr	r3, .L16
- 111:Display/oled_ssd130xDMA.h ****             
+ 111:Display/../Components/oled_ssd130xDMA.h ****             
  116              		.loc 1 111 23 view .LVU14
  117 000a 0122     		movs	r2, #1
- 114:Display/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
+ 114:Display/../Components/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
  118              		.loc 1 114 21 view .LVU15
  119 000c 4FF0210C 		mov	ip, #33
  120              	.LBE42:
@@ -343,22 +343,22 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  139              	.LBB56:
  140              	.LBB54:
  141              	.LBI40:
- 109:Display/oled_ssd130xDMA.h ****         if (!updating_) {
+ 109:Display/../Components/oled_ssd130xDMA.h ****         if (!updating_) {
  142              		.loc 1 109 10 is_stmt 1 view .LVU18
  143 001c 04AD     		add	r5, sp, #16
  144 001e 0DF11508 		add	r8, sp, #21
  145              	.LBB52:
  146              	.LBB50:
- 111:Display/oled_ssd130xDMA.h ****             
+ 111:Display/../Components/oled_ssd130xDMA.h ****             
  147              		.loc 1 111 23 is_stmt 0 view .LVU19
  148 0022 84F81028 		strb	r2, [r4, #2064]
- 114:Display/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
+ 114:Display/../Components/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
  149              		.loc 1 114 21 view .LVU20
  150 0026 93E80300 		ldm	r3, {r0, r1}
  151              	.LVL7:
- 114:Display/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
+ 114:Display/../Components/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
  152              		.loc 1 114 21 view .LVU21
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 7
 
 
  153 002a 0490     		str	r0, [sp, #16]
@@ -366,14 +366,14 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  155              	.LVL8:
  156              	.LBB43:
  157              	.LBI43:
-  34:Display/oled_ssd130xDMA.h ****         for(size_t i = 0; i < size; i++) {
+  34:Display/../Components/oled_ssd130xDMA.h ****         for(size_t i = 0; i < size; i++) {
  158              		.loc 1 34 10 is_stmt 1 view .LVU22
  159              	.LBE43:
  160              	.LBE50:
  161              	.LBE52:
  162              	.LBE54:
  163              	.LBE56:
-  35:Display/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
+  35:Display/../Components/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
  164              		.loc 1 35 9 view .LVU23
  165              	.LBB57:
  166              	.LBB55:
@@ -381,32 +381,32 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  168              	.LBB51:
  169              	.LBB47:
  170              	.LBB44:
-  35:Display/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
+  35:Display/../Components/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
  171              		.loc 1 35 29 view .LVU24
  172 0030 01E0     		b	.L9
  173              	.LVL9:
  174              	.L15:
-  36:Display/oled_ssd130xDMA.h ****         }
+  36:Display/../Components/oled_ssd130xDMA.h ****         }
  175              		.loc 1 36 24 is_stmt 0 view .LVU25
  176 0032 15F801CF 		ldrb	ip, [r5, #1]!	@ zero_extendqisi2
  177              	.LVL10:
  178              	.L9:
-  36:Display/oled_ssd130xDMA.h ****         }
+  36:Display/../Components/oled_ssd130xDMA.h ****         }
  179              		.loc 1 36 13 is_stmt 1 view .LVU26
  180              	.LBB45:
  181              	.LBI45:
-  29:Display/oled_ssd130xDMA.h ****         uint8_t buf[2] = {0x00, cmd};
+  29:Display/../Components/oled_ssd130xDMA.h ****         uint8_t buf[2] = {0x00, cmd};
  182              		.loc 1 29 10 view .LVU27
  183              	.LBB46:
-  30:Display/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
+  30:Display/../Components/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
  184              		.loc 1 30 9 view .LVU28
-  31:Display/oled_ssd130xDMA.h ****     }
+  31:Display/../Components/oled_ssd130xDMA.h ****     }
  185              		.loc 1 31 30 is_stmt 0 view .LVU29
  186 0036 6426     		movs	r6, #100
-  30:Display/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
+  30:Display/../Components/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
  187              		.loc 1 30 17 view .LVU30
  188 0038 4FF0000E 		mov	lr, #0
-  31:Display/oled_ssd130xDMA.h ****     }
+  31:Display/../Components/oled_ssd130xDMA.h ****     }
  189              		.loc 1 31 30 view .LVU31
  190 003c 217B     		ldrb	r1, [r4, #12]	@ zero_extendqisi2
  191 003e 0223     		movs	r3, #2
@@ -414,71 +414,71 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  193 0042 3846     		mov	r0, r7
  194 0044 0096     		str	r6, [sp]
  195              	.LVL11:
-  30:Display/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
+  30:Display/../Components/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
  196              		.loc 1 30 36 view .LVU32
  197 0046 8DF80DC0 		strb	ip, [sp, #13]
-  31:Display/oled_ssd130xDMA.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 8
+  31:Display/../Components/oled_ssd130xDMA.h ****     }
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 8
 
 
  198              		.loc 1 31 9 is_stmt 1 view .LVU33
-  30:Display/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
+  30:Display/../Components/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
  199              		.loc 1 30 17 is_stmt 0 view .LVU34
  200 004a 8DF80CE0 		strb	lr, [sp, #12]
-  31:Display/oled_ssd130xDMA.h ****     }
+  31:Display/../Components/oled_ssd130xDMA.h ****     }
  201              		.loc 1 31 30 view .LVU35
  202 004e FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
  203              	.LVL12:
-  31:Display/oled_ssd130xDMA.h ****     }
+  31:Display/../Components/oled_ssd130xDMA.h ****     }
  204              		.loc 1 31 30 view .LVU36
  205              	.LBE46:
  206              	.LBE45:
-  35:Display/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
+  35:Display/../Components/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
  207              		.loc 1 35 9 is_stmt 1 view .LVU37
-  35:Display/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
+  35:Display/../Components/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
  208              		.loc 1 35 29 view .LVU38
  209 0052 4545     		cmp	r5, r8
  210 0054 EDD1     		bne	.L15
  211              	.LVL13:
-  35:Display/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
+  35:Display/../Components/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
  212              		.loc 1 35 29 is_stmt 0 view .LVU39
  213              	.LBE44:
  214              	.LBE47:
  215              	.LBB48:
  216              	.LBI48:
-  40:Display/oled_ssd130xDMA.h ****         // 1. Prepara il pacchetto unendo il byte di comando (0x40) e i byte grafici
+  40:Display/../Components/oled_ssd130xDMA.h ****         // 1. Prepara il pacchetto unendo il byte di comando (0x40) e i byte grafici
  217              		.loc 1 40 10 is_stmt 1 view .LVU40
  218              	.LBB49:
-  42:Display/oled_ssd130xDMA.h ****         memcpy(&_dma_buffer_[1], buff, size);
+  42:Display/../Components/oled_ssd130xDMA.h ****         memcpy(&_dma_buffer_[1], buff, size);
  219              		.loc 1 42 9 view .LVU41
-  42:Display/oled_ssd130xDMA.h ****         memcpy(&_dma_buffer_[1], buff, size);
+  42:Display/../Components/oled_ssd130xDMA.h ****         memcpy(&_dma_buffer_[1], buff, size);
  220              		.loc 1 42 25 is_stmt 0 view .LVU42
  221 0056 4023     		movs	r3, #64
-  47:Display/oled_ssd130xDMA.h ****         
+  47:Display/../Components/oled_ssd130xDMA.h ****         
  222              		.loc 1 47 40 view .LVU43
  223 0058 04F10D05 		add	r5, r4, #13
-  43:Display/oled_ssd130xDMA.h ****         
+  43:Display/../Components/oled_ssd130xDMA.h ****         
  224              		.loc 1 43 15 view .LVU44
  225 005c 4FF48062 		mov	r2, #1024
  226 0060 04F58261 		add	r1, r4, #1040
  227              	.LVL14:
-  42:Display/oled_ssd130xDMA.h ****         memcpy(&_dma_buffer_[1], buff, size);
+  42:Display/../Components/oled_ssd130xDMA.h ****         memcpy(&_dma_buffer_[1], buff, size);
  228              		.loc 1 42 25 view .LVU45
  229 0064 6373     		strb	r3, [r4, #13]
-  43:Display/oled_ssd130xDMA.h ****         
+  43:Display/../Components/oled_ssd130xDMA.h ****         
  230              		.loc 1 43 9 is_stmt 1 view .LVU46
-  43:Display/oled_ssd130xDMA.h ****         
+  43:Display/../Components/oled_ssd130xDMA.h ****         
  231              		.loc 1 43 15 is_stmt 0 view .LVU47
  232 0066 04F10E00 		add	r0, r4, #14
  233 006a FFF7FEFF 		bl	memcpy
  234              	.LVL15:
-  47:Display/oled_ssd130xDMA.h ****         
+  47:Display/../Components/oled_ssd130xDMA.h ****         
  235              		.loc 1 47 9 is_stmt 1 view .LVU48
-  50:Display/oled_ssd130xDMA.h ****     }
+  50:Display/../Components/oled_ssd130xDMA.h ****     }
  236              		.loc 1 50 25 is_stmt 0 view .LVU49
  237 006e 0A4E     		ldr	r6, .L16+4
-  47:Display/oled_ssd130xDMA.h ****         
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 9
+  47:Display/../Components/oled_ssd130xDMA.h ****         
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 9
 
 
  238              		.loc 1 47 39 view .LVU50
@@ -486,9 +486,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  240 0072 40F20141 		movw	r1, #1025
  241 0076 FFF7FEFF 		bl	dsy_dma_clear_cache_for_buffer
  242              	.LVL16:
-  50:Display/oled_ssd130xDMA.h ****     }
+  50:Display/../Components/oled_ssd130xDMA.h ****     }
  243              		.loc 1 50 9 is_stmt 1 view .LVU51
-  50:Display/oled_ssd130xDMA.h ****     }
+  50:Display/../Components/oled_ssd130xDMA.h ****     }
  244              		.loc 1 50 25 is_stmt 0 view .LVU52
  245 007a 217B     		ldrb	r1, [r4, #12]	@ zero_extendqisi2
  246 007c 40F20143 		movw	r3, #1025
@@ -498,7 +498,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  250 0086 0096     		str	r6, [sp]
  251 0088 FFF7FEFF 		bl	_ZN5daisy9I2CHandle11TransmitDmaEtPhtPFvPvNS0_6ResultEES2_
  252              	.LVL17:
-  50:Display/oled_ssd130xDMA.h ****     }
+  50:Display/../Components/oled_ssd130xDMA.h ****     }
  253              		.loc 1 50 25 view .LVU53
  254              	.LBE49:
  255              	.LBE48:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
    4:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** #include <cmath>
    5:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** #include "util/oled_fonts.h"
    6:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** #include "daisy_core.h"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 10
 
 
    7:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** #include "graphics_common.h"
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
   61:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                           uint_fast8_t x2,
   62:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                           uint_fast8_t y2,
   63:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                           bool         on)
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 11
 
 
   64:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         = 0;
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  118:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     \param x           x Coordinate of the center of the circle
  119:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     \param y           y Coordinate of the center of the circle
  120:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     \param radius      radius of the circle
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 12
 
 
  121:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     \param on  on or off
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  175:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  176:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h **** 
  177:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     /** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 13
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 13
 
 
  178:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     Writes the current display buffer to the OLED device using SPI or I2C depending on 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  293 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
  294              		.cfi_def_cfa_offset 36
  295              		.cfi_offset 4, -36
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 14
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 14
 
 
  296              		.cfi_offset 5, -32
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  336 0034 52D8     		bhi	.L20
  337              	.LVL23:
  338              	.LBB74:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 15
 
 
  339              	.LBI74:
@@ -846,7 +846,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  340              		.loc 2 42 10 is_stmt 1 discriminator 4 view .LVU69
  341              	.LBB75:
  342              	.LBI75:
-  95:Display/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
+  95:Display/../Components/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
  343              		.loc 1 95 10 discriminator 4 view .LVU70
  344              	.LBE75:
  345              	.LBE74:
@@ -856,7 +856,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  348              	.LBB91:
  349              	.LBB85:
  350              	.LBB76:
-  96:Display/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
+  96:Display/../Components/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  351              		.loc 1 96 9 discriminator 4 view .LVU72
  352 003a 7F2B     		cmp	r3, #127
  353              	.LBE76:
@@ -868,44 +868,44 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  358              	.LBB92:
  359              	.LBB86:
  360              	.LBB81:
-  96:Display/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
+  96:Display/../Components/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  361              		.loc 1 96 9 discriminator 4 view .LVU74
  362 003e 13D8     		bhi	.L21
  363 0040 3F2E     		cmp	r6, #63
  364 0042 11D8     		bhi	.L21
  365              	.LVL24:
  366              	.L32:
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  367              		.loc 1 97 31 view .LVU75
  368 0044 F508     		lsrs	r5, r6, #3
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  369              		.loc 1 97 57 view .LVU76
  370 0046 06F0070E 		and	lr, r6, #7
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  371              		.loc 1 97 51 view .LVU77
  372 004a 0127     		movs	r7, #1
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  373              		.loc 1 97 45 view .LVU78
  374 004c 03EBC515 		add	r5, r3, r5, lsl #7
  375 0050 0544     		add	r5, r5, r0
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  376              		.loc 1 97 9 view .LVU79
  377 0052 B9F1000F 		cmp	r9, #0
  378 0056 48D0     		beq	.L22
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  379              		.loc 1 97 51 view .LVU80
  380 0058 07FA0EF7 		lsl	r7, r7, lr
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  381              		.loc 1 97 45 view .LVU81
  382 005c 95F810E4 		ldrb	lr, [r5, #1040]	@ zero_extendqisi2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 16
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 16
 
 
  383 0060 47EA0E07 		orr	r7, r7, lr
  384 0064 85F81074 		strb	r7, [r5, #1040]
  385              	.LVL25:
  386              	.L21:
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  387              		.loc 1 97 45 view .LVU82
  388              	.LBE81:
  389              	.LBE86:
@@ -941,46 +941,46 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  406              		.loc 2 42 10 is_stmt 1 view .LVU86
  407              	.LBB94:
  408              	.LBI94:
-  95:Display/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
+  95:Display/../Components/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
  409              		.loc 1 95 10 view .LVU87
  410              	.LBB95:
-  96:Display/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
+  96:Display/../Components/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  411              		.loc 1 96 9 is_stmt 0 view .LVU88
  412 0074 7F29     		cmp	r1, #127
  413 0076 14D8     		bhi	.L28
  414 0078 3F2A     		cmp	r2, #63
  415 007a 12D8     		bhi	.L28
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  416              		.loc 1 97 31 view .LVU89
  417 007c D508     		lsrs	r5, r2, #3
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  418              		.loc 1 97 57 view .LVU90
  419 007e 02F0070B 		and	fp, r2, #7
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  420              		.loc 1 97 51 view .LVU91
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 17
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 17
 
 
  421 0082 4FF0010E 		mov	lr, #1
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  422              		.loc 1 97 45 view .LVU92
  423 0086 01EBC515 		add	r5, r1, r5, lsl #7
  424 008a 0544     		add	r5, r5, r0
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  425              		.loc 1 97 9 view .LVU93
  426 008c B9F1000F 		cmp	r9, #0
  427 0090 1BD0     		beq	.L29
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  428              		.loc 1 97 51 view .LVU94
  429 0092 0EFA0BFE 		lsl	lr, lr, fp
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  430              		.loc 1 97 45 view .LVU95
  431 0096 95F810B4 		ldrb	fp, [r5, #1040]	@ zero_extendqisi2
  432 009a 4EEA0B0E 		orr	lr, lr, fp
  433 009e 85F810E4 		strb	lr, [r5, #1040]
  434              	.L28:
  435              	.LVL28:
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  436              		.loc 1 97 45 view .LVU96
  437              	.LBE95:
  438              	.LBE94:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  256:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****                 y1 += signY;
  460              		.loc 3 256 23 view .LVU104
  461 00b8 A444     		add	ip, ip, r4
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 18
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 18
 
 
  462              	.LVL33:
@@ -1052,13 +1052,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  485              	.LBB98:
  486              	.LBB96:
  487              	.LBI96:
-  95:Display/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
+  95:Display/../Components/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
  488              		.loc 1 95 10 is_stmt 1 view .LVU109
  489              	.LBB97:
-  98:Display/oled_ssd130xDMA.h ****     }
+  98:Display/../Components/oled_ssd130xDMA.h ****     }
  490              		.loc 1 98 52 is_stmt 0 view .LVU110
  491 00ca 0EFA0BFB 		lsl	fp, lr, fp
-  98:Display/oled_ssd130xDMA.h ****     }
+  98:Display/../Components/oled_ssd130xDMA.h ****     }
  492              		.loc 1 98 45 view .LVU111
  493 00ce 95F810E4 		ldrb	lr, [r5, #1040]	@ zero_extendqisi2
  494 00d2 2EEA0B0E 		bic	lr, lr, fp
@@ -1066,7 +1066,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  496 00da E2E7     		b	.L28
  497              	.LVL36:
  498              	.L20:
-  98:Display/oled_ssd130xDMA.h ****     }
+  98:Display/../Components/oled_ssd130xDMA.h ****     }
  499              		.loc 1 98 45 view .LVU112
  500              	.LBE97:
  501              	.LBE96:
@@ -1077,8 +1077,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
   42:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****     {
  506              		.loc 2 42 10 is_stmt 1 view .LVU113
  507              	.LBB87:
-  95:Display/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 19
+  95:Display/../Components/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 19
 
 
  508              		.loc 1 95 10 view .LVU114
@@ -1090,7 +1090,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  513              	.LBB102:
  514              	.LBB88:
  515              	.LBB82:
-  96:Display/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
+  96:Display/../Components/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  516              		.loc 1 96 9 view .LVU116
  517 00de 7F2B     		cmp	r3, #127
  518              	.LBE82:
@@ -1102,7 +1102,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  523              	.LBB103:
  524              	.LBB89:
  525              	.LBB83:
-  96:Display/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
+  96:Display/../Components/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  526              		.loc 1 96 9 view .LVU118
  527 00e2 C5D8     		bhi	.L25
  528 00e4 3F2E     		cmp	r6, #63
@@ -1112,13 +1112,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  532              	.L22:
  533              	.LBB77:
  534              	.LBI77:
-  95:Display/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
+  95:Display/../Components/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
  535              		.loc 1 95 10 is_stmt 1 view .LVU119
  536              	.LBB78:
-  98:Display/oled_ssd130xDMA.h ****     }
+  98:Display/../Components/oled_ssd130xDMA.h ****     }
  537              		.loc 1 98 52 is_stmt 0 view .LVU120
  538 00ea 07FA0EFE 		lsl	lr, r7, lr
-  98:Display/oled_ssd130xDMA.h ****     }
+  98:Display/../Components/oled_ssd130xDMA.h ****     }
  539              		.loc 1 98 45 view .LVU121
  540 00ee 95F81074 		ldrb	r7, [r5, #1040]	@ zero_extendqisi2
  541              	.LBE78:
@@ -1134,15 +1134,15 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  550              	.LBB84:
  551              	.LBB80:
  552              	.LBB79:
-  98:Display/oled_ssd130xDMA.h ****     }
+  98:Display/../Components/oled_ssd130xDMA.h ****     }
  553              		.loc 1 98 45 view .LVU123
  554 00f4 27EA0E07 		bic	r7, r7, lr
  555 00f8 85F81074 		strb	r7, [r5, #1040]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 20
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 20
 
 
  556              	.LVL38:
-  98:Display/oled_ssd130xDMA.h ****     }
+  98:Display/../Components/oled_ssd130xDMA.h ****     }
  557              		.loc 1 98 45 view .LVU124
  558              	.LBE79:
  559              	.LBE80:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  603              	.LBB106:
  604              		.loc 4 5 78 view .LVU129
  605 0006 0027     		movs	r7, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 21
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 21
 
 
  606 0008 4FF00108 		mov	r8, #1
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
   15:Display/displayHandler.cpp ****     _yscale = 20; // Default di sicurezza
  648              		.loc 4 15 13 is_stmt 0 view .LVU146
  649 003e 1423     		movs	r3, #20
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 22
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 22
 
 
  650              	.LBE108:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
   22:Display/displayHandler.cpp ****             break;
   23:Display/displayHandler.cpp **** 
   24:Display/displayHandler.cpp ****         case DisplayState::WAVEFORM_VIEWER:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 23
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 23
 
 
   25:Display/displayHandler.cpp ****             drawWaveForm();
@@ -1370,26 +1370,26 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  722              	.LBB115:
  723              	.LBB116:
  724              	.LBI116:
- 101:Display/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
+ 101:Display/../Components/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
  725              		.loc 1 101 10 view .LVU167
  726              	.LBB117:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  727              		.loc 1 102 15 is_stmt 0 view .LVU168
  728 0012 4FF48062 		mov	r2, #1024
  729 0016 0021     		movs	r1, #0
  730              	.LVL49:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 24
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 24
 
 
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  731              		.loc 1 102 15 view .LVU169
  732 0018 00F58260 		add	r0, r0, #1040
  733              	.LVL50:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  734              		.loc 1 102 15 view .LVU170
  735 001c FFF7FEFF 		bl	memset
  736              	.LVL51:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  737              		.loc 1 102 15 view .LVU171
  738              	.LBE117:
  739              	.LBE116:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  778              	_ZN14DisplayHandler14SetStandbyTextEPKc:
  779              	.LVL56:
  780              	.LFB2802:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 25
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 25
 
 
   39:Display/displayHandler.cpp **** 
@@ -1481,24 +1481,24 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  810              	.LBB123:
  811              	.LBB124:
  812              	.LBI124:
- 101:Display/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
+ 101:Display/../Components/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
  813              		.loc 1 101 10 view .LVU191
  814              	.LBB125:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  815              		.loc 1 102 15 is_stmt 0 view .LVU192
  816 0016 4FF48062 		mov	r2, #1024
  817 001a 1946     		mov	r1, r3
  818 001c 00F58260 		add	r0, r0, #1040
  819              	.LVL60:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  820              		.loc 1 102 15 view .LVU193
  821 0020 FFF7FEBF 		b	memset
  822              	.LVL61:
  823              	.L55:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  824              		.loc 1 102 15 view .LVU194
  825              	.LBE125:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 26
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 26
 
 
  826              	.LBE124:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  871              		.loc 4 50 33 view .LVU204
  872 000c 82ED020A 		vstr.32	s0, [r2, #8]
  873              		.loc 4 51 5 is_stmt 1 view .LVU205
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 27
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 27
 
 
  874              		.loc 4 51 35 is_stmt 0 view .LVU206
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
   71:Display/displayHandler.cpp ****     }           
   72:Display/displayHandler.cpp ****     return trigIdx;
  911              		.loc 4 72 5 view .LVU215
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 28
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 28
 
 
  912              		.loc 4 72 12 is_stmt 0 view .LVU216
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  956 0032 01E0     		b	.L65
  957              	.LVL69:
  958              	.L66:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 29
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 29
 
 
   62:Display/displayHandler.cpp ****             currVal = _circBuffer_ptr[i % BUFFER_SIZE];
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
   67:Display/displayHandler.cpp ****                 return trigIdx; 
  999              		.loc 4 67 25 view .LVU241
  1000 006e 054A     		ldr	r2, .L82
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 30
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 30
 
 
   63:Display/displayHandler.cpp ****             nextVal = _circBuffer_ptr[(i + 1) % BUFFER_SIZE];
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
   78:Display/displayHandler.cpp ****     int idx = 0;
  1047              		.loc 4 78 5 view .LVU253
   79:Display/displayHandler.cpp **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 31
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 31
 
 
   80:Display/displayHandler.cpp ****     _displayPtr->SetCursor(0, zeroOfScreen);
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1091 0018 2368     		ldr	r3, [r4]
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  1092              		.loc 3 173 43 view .LVU266
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 32
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 32
 
 
  1093 001a 2046     		mov	r0, r4
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  1135              		.loc 3 174 19 view .LVU279
  1136              	.LBE157:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 33
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 33
 
 
  1137              	.LBE160:
@@ -1937,21 +1937,21 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1149              	.LBB162:
  1150              	.LBB163:
  1151              	.LBI163:
- 101:Display/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
+ 101:Display/../Components/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
  1152              		.loc 1 101 10 view .LVU283
  1153              	.LBB164:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  1154              		.loc 1 102 15 is_stmt 0 view .LVU284
  1155 0050 4FF48062 		mov	r2, #1024
  1156 0054 0021     		movs	r1, #0
  1157 0056 00F58260 		add	r0, r0, #1040
  1158              	.LVL86:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  1159              		.loc 1 102 15 view .LVU285
  1160 005a FFF7FEFF 		bl	memset
  1161              	.LVL87:
  1162              	.L88:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  1163              		.loc 1 102 15 view .LVU286
  1164              	.LBE164:
  1165              	.LBE163:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1181              	.LBB192:
  1182              		.loc 4 85 25 view .LVU292
  1183 006a 002B     		cmp	r3, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 34
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 34
 
 
  1184 006c 7DDD     		ble	.L84
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1222              		.loc 4 94 67 view .LVU307
  1223 00a6 9D69     		ldr	r5, [r3, #24]
   86:Display/displayHandler.cpp ****         y2 = zeroOfScreen - (int)(_circBuffer_ptr[(i + 1) % BUFFER_SIZE] * _yscale);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 35
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 35
 
 
  1224              		.loc 4 86 66 view .LVU308
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1264 00ee 1446     		mov	r4, r2
  1265 00f0 58D1     		bne	.L91
  1266              	.LVL95:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 36
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 36
 
 
  1267              	.LBB166:
@@ -2131,7 +2131,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1287              		.loc 2 42 10 is_stmt 1 view .LVU331
  1288              	.LBB169:
  1289              	.LBI169:
-  95:Display/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
+  95:Display/../Components/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
  1290              		.loc 1 95 10 view .LVU332
  1291              	.LBE169:
  1292              	.LBE168:
@@ -2141,7 +2141,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1295              	.LBB179:
  1296              	.LBB174:
  1297              	.LBB170:
-  96:Display/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
+  96:Display/../Components/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  1298              		.loc 1 96 9 view .LVU334
  1299 010a 7F2F     		cmp	r7, #127
  1300              	.LBE170:
@@ -2153,15 +2153,15 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1305              	.LBB180:
  1306              	.LBB175:
  1307              	.LBB171:
-  96:Display/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
+  96:Display/../Components/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  1308              		.loc 1 96 9 view .LVU336
  1309 010e 38D9     		bls	.L101
  1310              	.LVL98:
  1311              	.L94:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 37
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 37
 
 
-  96:Display/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
+  96:Display/../Components/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  1312              		.loc 1 96 9 view .LVU337
  1313              	.LBE171:
  1314              	.LBE175:
@@ -2177,22 +2177,22 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1322              		.loc 2 42 10 is_stmt 1 view .LVU339
  1323              	.LBB182:
  1324              	.LBI182:
-  95:Display/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
+  95:Display/../Components/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
  1325              		.loc 1 95 10 view .LVU340
  1326              	.LBB183:
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1327              		.loc 1 97 51 is_stmt 0 view .LVU341
  1328 0114 4FF0010C 		mov	ip, #1
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1329              		.loc 1 97 31 view .LVU342
  1330 0118 E308     		lsrs	r3, r4, #3
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1331              		.loc 1 97 57 view .LVU343
  1332 011a 04F00702 		and	r2, r4, #7
-  96:Display/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
+  96:Display/../Components/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  1333              		.loc 1 96 9 view .LVU344
  1334 011e 7F29     		cmp	r1, #127
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1335              		.loc 1 97 45 view .LVU345
  1336 0120 01EBC313 		add	r3, r1, r3, lsl #7
  1337              	.LBE183:
@@ -2205,29 +2205,29 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1343              	.LBB186:
  1344              	.LBB185:
  1345              	.LBB184:
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1346              		.loc 1 97 51 view .LVU347
  1347 0128 0CFA02F2 		lsl	r2, ip, r2
-  96:Display/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
+  96:Display/../Components/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  1348              		.loc 1 96 9 view .LVU348
  1349 012c 08D8     		bhi	.L98
  1350 012e 3F2C     		cmp	r4, #63
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1351              		.loc 1 97 45 view .LVU349
  1352 0130 0344     		add	r3, r3, r0
-  96:Display/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
+  96:Display/../Components/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  1353              		.loc 1 96 9 view .LVU350
  1354 0132 05D8     		bhi	.L98
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 38
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 38
 
 
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1355              		.loc 1 97 45 view .LVU351
  1356 0134 93F810C4 		ldrb	ip, [r3, #1040]	@ zero_extendqisi2
  1357 0138 42EA0C02 		orr	r2, r2, ip
  1358 013c 83F81024 		strb	r2, [r3, #1040]
  1359              	.L98:
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1360              		.loc 1 97 45 view .LVU352
  1361              	.LBE184:
  1362              	.LBE185:
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1395 0162 059A     		ldr	r2, [sp, #20]
  1396 0164 1344     		add	r3, r3, r2
   85:Display/displayHandler.cpp ****         y1 = zeroOfScreen - (int)(_circBuffer_ptr[i % BUFFER_SIZE] * _yscale);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 39
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 39
 
 
  1397              		.loc 4 85 25 discriminator 1 view .LVU365
@@ -2323,7 +2323,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
   42:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/oled_display.h ****     {
  1429              		.loc 2 42 10 is_stmt 1 view .LVU372
  1430              	.LBB176:
-  95:Display/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
+  95:Display/../Components/oled_ssd130xDMA.h ****         if(x >= width || y >= height) return;
  1431              		.loc 1 95 10 view .LVU373
  1432              	.LBE176:
  1433              	.LBE187:
@@ -2333,12 +2333,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1436              	.LBB188:
  1437              	.LBB177:
  1438              	.LBB172:
-  96:Display/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
+  96:Display/../Components/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  1439              		.loc 1 96 9 view .LVU375
  1440 017c 7F2F     		cmp	r7, #127
  1441              	.LBE172:
  1442              	.LBE177:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 40
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 40
 
 
  1443              	.LBE188:
@@ -2348,28 +2348,28 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1446              	.LBB189:
  1447              	.LBB178:
  1448              	.LBB173:
-  96:Display/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
+  96:Display/../Components/oled_ssd130xDMA.h ****         if(on) buffer_[x + (y / 8) * width] |= (1 << (y % 8));
  1449              		.loc 1 96 9 view .LVU377
  1450 0180 C6D8     		bhi	.L94
  1451              	.LVL109:
  1452              	.L101:
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1453              		.loc 1 97 31 view .LVU378
  1454 0182 F308     		lsrs	r3, r6, #3
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1455              		.loc 1 97 51 view .LVU379
  1456 0184 4FF0010C 		mov	ip, #1
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1457              		.loc 1 97 57 view .LVU380
  1458 0188 06F00702 		and	r2, r6, #7
  1459              	.LVL110:
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1460              		.loc 1 97 45 view .LVU381
  1461 018c 07EBC313 		add	r3, r7, r3, lsl #7
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1462              		.loc 1 97 51 view .LVU382
  1463 0190 0CFA02F2 		lsl	r2, ip, r2
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1464              		.loc 1 97 45 view .LVU383
  1465 0194 0344     		add	r3, r3, r0
  1466 0196 93F810C4 		ldrb	ip, [r3, #1040]	@ zero_extendqisi2
@@ -2378,7 +2378,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1469 01a2 B5E7     		b	.L94
  1470              	.LVL111:
  1471              	.L91:
-  97:Display/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
+  97:Display/../Components/oled_ssd130xDMA.h ****         else   buffer_[x + (y / 8) * width] &= ~(1 << (y % 8));
  1472              		.loc 1 97 45 view .LVU384
  1473              	.LBE173:
  1474              	.LBE178:
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1486 01ae D5E7     		b	.L95
  1487              	.LVL113:
  1488              	.L103:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 41
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 41
 
 
   94:Display/displayHandler.cpp ****     }   
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1537 0000 C0F81818 		str	r1, [r0, #2072]
  100:Display/displayHandler.cpp **** }
  1538              		.loc 4 100 1 view .LVU395
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 42
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 42
 
 
  1539 0004 7047     		bx	lr
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1585              		.loc 3 173 32 view .LVU405
  1586 000a 2046     		mov	r0, r4
  1587              	.LVL119:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 43
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 43
 
 
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1628              	.L117:
  1629              	.LBE199:
  1630              	.LBE202:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 44
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 44
 
 
  104:Display/displayHandler.cpp ****     _displayPtr->WriteString(_standbyText, Font_11x18, true);
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1679              		.cfi_endproc
  1680              	.LFE2807:
  1682              		.section	.text._ZN14DisplayHandler6UpdateEv,"ax",%progbits
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 45
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 45
 
 
  1683              		.align	1
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1727              		.loc 4 32 5 is_stmt 0 view .LVU441
  1728 0016 2A4A     		ldr	r2, .L134
   32:Display/displayHandler.cpp **** }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 46
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 46
 
 
  1729              		.loc 4 32 25 view .LVU442
@@ -2713,13 +2713,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1738              	.LBB222:
  1739              	.LBB223:
  1740              	.LBI223:
- 109:Display/oled_ssd130xDMA.h ****         if (!updating_) {
+ 109:Display/../Components/oled_ssd130xDMA.h ****         if (!updating_) {
  1741              		.loc 1 109 10 view .LVU444
  1742              	.LBB224:
- 110:Display/oled_ssd130xDMA.h ****             updating_ = true;
+ 110:Display/../Components/oled_ssd130xDMA.h ****             updating_ = true;
  1743              		.loc 1 110 14 is_stmt 0 view .LVU445
  1744 0020 94F81038 		ldrb	r3, [r4, #2064]	@ zero_extendqisi2
- 110:Display/oled_ssd130xDMA.h ****             updating_ = true;
+ 110:Display/../Components/oled_ssd130xDMA.h ****             updating_ = true;
  1745              		.loc 1 110 9 view .LVU446
  1746 0024 2BB1     		cbz	r3, .L132
  1747              	.LBE224:
@@ -2755,13 +2755,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1772              	.LBB225:
  1773              	.LBB226:
  1774              	.LBB227:
- 114:Display/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
+ 114:Display/../Components/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
  1775              		.loc 1 114 21 is_stmt 0 view .LVU452
  1776 0032 244B     		ldr	r3, .L134+4
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 47
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 47
 
 
- 111:Display/oled_ssd130xDMA.h ****             
+ 111:Display/../Components/oled_ssd130xDMA.h ****             
  1777              		.loc 1 111 23 view .LVU453
  1778 0034 0122     		movs	r2, #1
  1779              	.LBE227:
@@ -2774,19 +2774,19 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1786              	.LBB242:
  1787              	.LBB239:
  1788              	.LBI225:
- 109:Display/oled_ssd130xDMA.h ****         if (!updating_) {
+ 109:Display/../Components/oled_ssd130xDMA.h ****         if (!updating_) {
  1789              		.loc 1 109 10 is_stmt 1 view .LVU455
  1790 003a 04AD     		add	r5, sp, #16
  1791 003c 0DF11508 		add	r8, sp, #21
  1792              	.LBB237:
  1793              	.LBB235:
- 114:Display/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
+ 114:Display/../Components/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
  1794              		.loc 1 114 21 is_stmt 0 view .LVU456
  1795 0040 4FF0210C 		mov	ip, #33
- 111:Display/oled_ssd130xDMA.h ****             
+ 111:Display/../Components/oled_ssd130xDMA.h ****             
  1796              		.loc 1 111 23 view .LVU457
  1797 0044 84F81028 		strb	r2, [r4, #2064]
- 114:Display/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
+ 114:Display/../Components/oled_ssd130xDMA.h ****             transport_.SendCommands(reset_cmds, 6);
  1798              		.loc 1 114 21 view .LVU458
  1799 0048 93E80300 		ldm	r3, {r0, r1}
  1800 004c 0490     		str	r0, [sp, #16]
@@ -2794,7 +2794,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1802              	.LVL135:
  1803              	.LBB228:
  1804              	.LBI228:
-  34:Display/oled_ssd130xDMA.h ****         for(size_t i = 0; i < size; i++) {
+  34:Display/../Components/oled_ssd130xDMA.h ****         for(size_t i = 0; i < size; i++) {
  1805              		.loc 1 34 10 is_stmt 1 view .LVU459
  1806              	.LBE228:
  1807              	.LBE235:
@@ -2803,7 +2803,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1810              	.LBE242:
  1811              	.LBE244:
  1812              	.LBE246:
-  35:Display/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
+  35:Display/../Components/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
  1813              		.loc 1 35 9 view .LVU460
  1814              	.LBB247:
  1815              	.LBB245:
@@ -2813,35 +2813,35 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1819              	.LBB236:
  1820              	.LBB232:
  1821              	.LBB229:
-  35:Display/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
+  35:Display/../Components/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
  1822              		.loc 1 35 29 view .LVU461
  1823 0052 01E0     		b	.L130
  1824              	.LVL136:
  1825              	.L133:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 48
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 48
 
 
-  36:Display/oled_ssd130xDMA.h ****         }
+  36:Display/../Components/oled_ssd130xDMA.h ****         }
  1826              		.loc 1 36 24 is_stmt 0 view .LVU462
  1827 0054 15F801CF 		ldrb	ip, [r5, #1]!	@ zero_extendqisi2
  1828              	.LVL137:
  1829              	.L130:
-  36:Display/oled_ssd130xDMA.h ****         }
+  36:Display/../Components/oled_ssd130xDMA.h ****         }
  1830              		.loc 1 36 13 is_stmt 1 view .LVU463
  1831              	.LBB230:
  1832              	.LBI230:
-  29:Display/oled_ssd130xDMA.h ****         uint8_t buf[2] = {0x00, cmd};
+  29:Display/../Components/oled_ssd130xDMA.h ****         uint8_t buf[2] = {0x00, cmd};
  1833              		.loc 1 29 10 view .LVU464
  1834              	.LBB231:
-  30:Display/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
+  30:Display/../Components/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
  1835              		.loc 1 30 9 view .LVU465
-  31:Display/oled_ssd130xDMA.h ****     }
+  31:Display/../Components/oled_ssd130xDMA.h ****     }
  1836              		.loc 1 31 30 is_stmt 0 view .LVU466
  1837 0058 6426     		movs	r6, #100
-  30:Display/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
+  30:Display/../Components/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
  1838              		.loc 1 30 17 view .LVU467
  1839 005a 4FF0000E 		mov	lr, #0
-  31:Display/oled_ssd130xDMA.h ****     }
+  31:Display/../Components/oled_ssd130xDMA.h ****     }
  1840              		.loc 1 31 30 view .LVU468
  1841 005e 217B     		ldrb	r1, [r4, #12]	@ zero_extendqisi2
  1842 0060 0223     		movs	r3, #2
@@ -2849,80 +2849,80 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1844 0064 3846     		mov	r0, r7
  1845 0066 0096     		str	r6, [sp]
  1846              	.LVL138:
-  30:Display/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
+  30:Display/../Components/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
  1847              		.loc 1 30 36 view .LVU469
  1848 0068 8DF80DC0 		strb	ip, [sp, #13]
-  31:Display/oled_ssd130xDMA.h ****     }
+  31:Display/../Components/oled_ssd130xDMA.h ****     }
  1849              		.loc 1 31 9 is_stmt 1 view .LVU470
-  30:Display/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
+  30:Display/../Components/oled_ssd130xDMA.h ****         i2c_.TransmitBlocking(_i2c_address_, buf, 2, 100);
  1850              		.loc 1 30 17 is_stmt 0 view .LVU471
  1851 006c 8DF80CE0 		strb	lr, [sp, #12]
-  31:Display/oled_ssd130xDMA.h ****     }
+  31:Display/../Components/oled_ssd130xDMA.h ****     }
  1852              		.loc 1 31 30 view .LVU472
  1853 0070 FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
  1854              	.LVL139:
-  31:Display/oled_ssd130xDMA.h ****     }
+  31:Display/../Components/oled_ssd130xDMA.h ****     }
  1855              		.loc 1 31 30 view .LVU473
  1856              	.LBE231:
  1857              	.LBE230:
-  35:Display/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
+  35:Display/../Components/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
  1858              		.loc 1 35 9 is_stmt 1 view .LVU474
-  35:Display/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
+  35:Display/../Components/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
  1859              		.loc 1 35 29 view .LVU475
  1860 0074 A845     		cmp	r8, r5
  1861 0076 EDD1     		bne	.L133
  1862              	.LVL140:
-  35:Display/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
+  35:Display/../Components/oled_ssd130xDMA.h ****             SendCommand(cmds[i]);
  1863              		.loc 1 35 29 is_stmt 0 view .LVU476
  1864              	.LBE229:
  1865              	.LBE232:
  1866              	.LBB233:
  1867              	.LBI233:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 49
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 49
 
 
-  40:Display/oled_ssd130xDMA.h ****         // 1. Prepara il pacchetto unendo il byte di comando (0x40) e i byte grafici
+  40:Display/../Components/oled_ssd130xDMA.h ****         // 1. Prepara il pacchetto unendo il byte di comando (0x40) e i byte grafici
  1868              		.loc 1 40 10 is_stmt 1 view .LVU477
  1869              	.LBB234:
-  42:Display/oled_ssd130xDMA.h ****         memcpy(&_dma_buffer_[1], buff, size);
+  42:Display/../Components/oled_ssd130xDMA.h ****         memcpy(&_dma_buffer_[1], buff, size);
  1870              		.loc 1 42 9 view .LVU478
-  42:Display/oled_ssd130xDMA.h ****         memcpy(&_dma_buffer_[1], buff, size);
+  42:Display/../Components/oled_ssd130xDMA.h ****         memcpy(&_dma_buffer_[1], buff, size);
  1871              		.loc 1 42 25 is_stmt 0 view .LVU479
  1872 0078 4023     		movs	r3, #64
-  47:Display/oled_ssd130xDMA.h ****         
+  47:Display/../Components/oled_ssd130xDMA.h ****         
  1873              		.loc 1 47 40 view .LVU480
  1874 007a 04F10D05 		add	r5, r4, #13
-  43:Display/oled_ssd130xDMA.h ****         
+  43:Display/../Components/oled_ssd130xDMA.h ****         
  1875              		.loc 1 43 15 view .LVU481
  1876 007e 4FF48062 		mov	r2, #1024
  1877 0082 04F58261 		add	r1, r4, #1040
  1878              	.LVL141:
-  42:Display/oled_ssd130xDMA.h ****         memcpy(&_dma_buffer_[1], buff, size);
+  42:Display/../Components/oled_ssd130xDMA.h ****         memcpy(&_dma_buffer_[1], buff, size);
  1879              		.loc 1 42 25 view .LVU482
  1880 0086 6373     		strb	r3, [r4, #13]
-  43:Display/oled_ssd130xDMA.h ****         
+  43:Display/../Components/oled_ssd130xDMA.h ****         
  1881              		.loc 1 43 9 is_stmt 1 view .LVU483
-  43:Display/oled_ssd130xDMA.h ****         
+  43:Display/../Components/oled_ssd130xDMA.h ****         
  1882              		.loc 1 43 15 is_stmt 0 view .LVU484
  1883 0088 04F10E00 		add	r0, r4, #14
  1884 008c FFF7FEFF 		bl	memcpy
  1885              	.LVL142:
-  47:Display/oled_ssd130xDMA.h ****         
+  47:Display/../Components/oled_ssd130xDMA.h ****         
  1886              		.loc 1 47 9 is_stmt 1 view .LVU485
-  47:Display/oled_ssd130xDMA.h ****         
+  47:Display/../Components/oled_ssd130xDMA.h ****         
  1887              		.loc 1 47 39 is_stmt 0 view .LVU486
  1888 0090 2846     		mov	r0, r5
  1889 0092 40F20141 		movw	r1, #1025
  1890 0096 FFF7FEFF 		bl	dsy_dma_clear_cache_for_buffer
  1891              	.LVL143:
-  50:Display/oled_ssd130xDMA.h ****     }
+  50:Display/../Components/oled_ssd130xDMA.h ****     }
  1892              		.loc 1 50 9 is_stmt 1 view .LVU487
-  50:Display/oled_ssd130xDMA.h ****     }
+  50:Display/../Components/oled_ssd130xDMA.h ****     }
  1893              		.loc 1 50 25 is_stmt 0 view .LVU488
  1894 009a 217B     		ldrb	r1, [r4, #12]	@ zero_extendqisi2
  1895 009c 0A4C     		ldr	r4, .L134+8
  1896              	.LVL144:
-  50:Display/oled_ssd130xDMA.h ****     }
+  50:Display/../Components/oled_ssd130xDMA.h ****     }
  1897              		.loc 1 50 25 view .LVU489
  1898 009e 40F20143 		movw	r3, #1025
  1899 00a2 2A46     		mov	r2, r5
@@ -2931,14 +2931,14 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1902 00a8 0094     		str	r4, [sp]
  1903 00aa FFF7FEFF 		bl	_ZN5daisy9I2CHandle11TransmitDmaEtPhtPFvPvNS0_6ResultEES2_
  1904              	.LVL145:
-  50:Display/oled_ssd130xDMA.h ****     }
+  50:Display/../Components/oled_ssd130xDMA.h ****     }
  1905              		.loc 1 50 25 view .LVU490
  1906              	.LBE234:
  1907              	.LBE233:
  1908              	.LBE236:
  1909              	.LBE238:
  1910              	.LBE240:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 50
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 50
 
 
  1911              	.LBE243:
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  1957              	.LC4:
  1958 001c 5363616C 		.ascii	"Scales\000"
  1958      657300
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 51
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 51
 
 
  1959 0023 00       		.align	2
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2000              		.loc 4 112 5 view .LVU499
  2001 0006 994A     		ldr	r2, .L167
  111:Display/displayHandler.cpp ****     _displayPtr->Fill(false);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 52
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 52
 
 
  2002              		.loc 4 111 52 view .LVU500
@@ -3081,24 +3081,24 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2017              	.LBB267:
  2018              	.LBB268:
  2019              	.LBI268:
- 101:Display/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
+ 101:Display/../Components/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
  2020              		.loc 1 101 10 view .LVU505
  2021              	.LBB269:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  2022              		.loc 1 102 15 is_stmt 0 view .LVU506
  2023 0016 4FF48062 		mov	r2, #1024
  2024 001a 0021     		movs	r1, #0
  2025              	.LVL151:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  2026              		.loc 1 102 15 view .LVU507
  2027 001c 00F58260 		add	r0, r0, #1040
  2028              	.LVL152:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  2029              		.loc 1 102 15 view .LVU508
  2030 0020 FFF7FEFF 		bl	memset
  2031              	.LVL153:
  2032              	.L138:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  2033              		.loc 1 102 15 view .LVU509
  2034              	.LBE269:
  2035              	.LBE268:
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2045              		.loc 3 173 9 view .LVU512
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  2046              		.loc 3 173 33 is_stmt 0 view .LVU513
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 53
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 53
 
 
  2047 0026 3368     		ldr	r3, [r6]
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2088 0058 0138     		subs	r0, r0, #1
  2089 005a 83B2     		uxth	r3, r0
  2090              	.L140:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 54
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 54
 
 
  2091              	.LBE271:
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2134              		.loc 3 173 44 view .LVU540
  2135 0082 3B68     		ldr	r3, [r7]
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 55
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 55
 
 
  2136              		.loc 3 173 43 view .LVU541
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2180 00b0 7149     		ldr	r1, .L167+12
  2181              		.loc 4 117 92 view .LVU556
  2182 00b2 0368     		ldr	r3, [r0]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 56
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 56
 
 
  2183              		.loc 4 117 61 view .LVU557
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2224 00de 3846     		mov	r0, r7
  2225 00e0 9B68     		ldr	r3, [r3, #8]
  2226 00e2 9847     		blx	r3
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 57
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 57
 
 
  2227              	.LVL171:
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  2272              		.loc 3 173 32 view .LVU586
  2273 010e 3846     		mov	r0, r7
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 58
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 58
 
 
  2274 0110 DB68     		ldr	r3, [r3, #12]
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2316              	.LVL180:
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  2317              		.loc 3 174 19 view .LVU599
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 59
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 59
 
 
  2318              	.LBE282:
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2363              	.L147:
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  2364              		.loc 3 174 34 view .LVU615
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 60
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 60
 
 
  2365 0170 3B68     		ldr	r3, [r7]
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2410              	.LVL189:
  2411              	.LBB287:
  2412              	.LBI287:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 61
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 61
 
 
  171:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     {
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2452              		.loc 3 174 45 view .LVU645
  2453 01c8 3846     		mov	r0, r7
  2454 01ca 9B68     		ldr	r3, [r3, #8]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 62
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 62
 
 
  2455 01cc 9847     		blx	r3
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  2499              		.loc 3 173 9 view .LVU662
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 63
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 63
 
 
  2500              		.loc 3 173 33 is_stmt 0 view .LVU663
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2541 021e 0138     		subs	r0, r0, #1
  2542 0220 85B2     		uxth	r5, r0
  2543              	.LVL202:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 64
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 64
 
 
  2544              	.L152:
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2591              	.LBB296:
  2592              	.LBB289:
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 65
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 65
 
 
  2593              		.loc 3 174 19 view .LVU689
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2638              	.L157:
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  2639              		.loc 3 173 19 view .LVU699
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 66
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 66
 
 
  2640 025a 0A20     		movs	r0, #10
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  112:Display/displayHandler.cpp ****     
  2687              		.loc 4 112 22 view .LVU707
  2688 0294 0021     		movs	r1, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 67
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 67
 
 
  2689              	.LVL214:
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  128:Display/displayHandler.cpp **** void DisplayHandler::DrawCalibrationHub(int cursorIndex) {
  2731              		.loc 4 128 58 is_stmt 1 view -0
  2732              		.cfi_startproc
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 68
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 68
 
 
  2733              		@ args = 0, pretend = 0, frame = 0
@@ -4061,27 +4061,27 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2765              	.LBB323:
  2766              	.LBB324:
  2767              	.LBI324:
- 101:Display/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
+ 101:Display/../Components/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
  2768              		.loc 1 101 10 view .LVU719
  2769              	.LBB325:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  2770              		.loc 1 102 15 is_stmt 0 view .LVU720
  2771 0016 4FF48062 		mov	r2, #1024
  2772 001a 0021     		movs	r1, #0
  2773              	.LVL219:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  2774              		.loc 1 102 15 view .LVU721
  2775 001c 00F58260 		add	r0, r0, #1040
  2776              	.LVL220:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  2777              		.loc 1 102 15 view .LVU722
  2778 0020 FFF7FEFF 		bl	memset
  2779              	.LVL221:
  2780              	.L171:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 69
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 69
 
 
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  2781              		.loc 1 102 15 view .LVU723
  2782              	.LBE325:
  2783              	.LBE324:
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  2820              		.loc 3 174 33 is_stmt 0 view .LVU736
  2821 0044 3046     		mov	r0, r6
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 70
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 70
 
 
  2822 0046 9B68     		ldr	r3, [r3, #8]
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2865              		.loc 4 137 9 is_stmt 0 view .LVU749
  2866 0072 2F68     		ldr	r7, [r5]
  2867              	.LVL229:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 71
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 71
 
 
  2868              	.LBB332:
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2909              		.loc 3 174 19 view .LVU763
  2910 0094 0D28     		cmp	r0, #13
  2911 0096 00F22E81 		bhi	.L193
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 72
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 72
 
 
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  2957              	.LVL236:
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  2958              		.loc 3 173 19 view .LVU779
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 73
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 73
 
 
  2959 00c4 0A28     		cmp	r0, #10
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3001              		.loc 4 138 41 is_stmt 1 view .LVU792
  3002              		.loc 4 138 65 is_stmt 0 view .LVU793
  3003 00f4 0122     		movs	r2, #1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 74
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 74
 
 
  3004              		.loc 4 138 41 view .LVU794
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3047              		.loc 3 173 19 view .LVU808
  3048 0124 B880     		strh	r0, [r7, #4]	@ movhi
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 75
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 75
 
 
  3049              		.loc 3 174 9 is_stmt 1 view .LVU809
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3095              	.LBB347:
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  3096              		.loc 3 173 9 view .LVU824
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 76
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 76
 
 
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  3138              		.loc 3 174 19 view .LVU838
  3139 0186 0138     		subs	r0, r0, #1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 77
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 77
 
 
  3140 0188 80B2     		uxth	r0, r0
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3185 01b4 9847     		blx	r3
  3186              	.LVL258:
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 78
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 78
 
 
  3187              		.loc 3 173 19 view .LVU854
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3232 01e4 96E80C00 		ldm	r6, {r2, r3}
  3233 01e8 B847     		blx	r7
  3234              	.LVL262:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 79
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 79
 
 
  3235 01ea 2CE0     		b	.L185
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3277 021e 9B68     		ldr	r3, [r3, #8]
  3278 0220 9847     		blx	r3
  3279              	.LVL266:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 80
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 80
 
 
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3325              	.LBB358:
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  3326              		.loc 3 173 32 view .LVU895
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 81
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 81
 
 
  3327 0250 3846     		mov	r0, r7
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3369 0270 3B68     		ldr	r3, [r7]
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  3370              		.loc 3 173 43 view .LVU909
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 82
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 82
 
 
  3371 0272 3846     		mov	r0, r7
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3413              		.loc 3 174 19 view .LVU922
  3414 029a FC80     		strh	r4, [r7, #6]	@ movhi
  3415              	.LVL277:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 83
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 83
 
 
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3462              		.loc 3 173 19 view .LVU933
  3463              	.LBE355:
  3464              	.LBE369:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 84
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 84
 
 
  3465              	.LBB370:
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3511              	.L199:
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  3512              		.loc 3 173 19 view .LVU942
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 85
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 85
 
 
  3513              	.LBE351:
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3558              	.LBB337:
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  3559              		.loc 3 174 19 view .LVU952
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 86
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 86
 
 
  3560 02f6 0D20     		movs	r0, #13
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3606              	.LVL293:
  3607              	.LFB2810:
  151:Display/displayHandler.cpp **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 87
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 87
 
 
  152:Display/displayHandler.cpp **** void DisplayHandler::DrawScalesHub(int cursorIndex) {
@@ -5204,27 +5204,27 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3642              	.LBB395:
  3643              	.LBB396:
  3644              	.LBI396:
- 101:Display/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
+ 101:Display/../Components/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
  3645              		.loc 1 101 10 view .LVU966
  3646              	.LBB397:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  3647              		.loc 1 102 15 is_stmt 0 view .LVU967
  3648 0016 4FF48062 		mov	r2, #1024
  3649 001a 0021     		movs	r1, #0
  3650              	.LVL296:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  3651              		.loc 1 102 15 view .LVU968
  3652 001c 00F58260 		add	r0, r0, #1040
  3653              	.LVL297:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  3654              		.loc 1 102 15 view .LVU969
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 88
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 88
 
 
  3655 0020 FFF7FEFF 		bl	memset
  3656              	.LVL298:
  3657              	.L214:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  3658              		.loc 1 102 15 view .LVU970
  3659              	.LBE397:
  3660              	.LBE396:
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  3696              		.loc 3 174 9 is_stmt 1 view .LVU982
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 89
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 89
 
 
  3697              		.loc 3 174 33 is_stmt 0 view .LVU983
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3742 0072 2F68     		ldr	r7, [r5]
  3743              	.LVL306:
  3744              	.LBB403:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 90
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 90
 
 
  3745              	.LBI403:
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  3785              		.loc 3 174 45 view .LVU1010
  3786 00a0 3846     		mov	r0, r7
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 91
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 91
 
 
  3787 00a2 9B68     		ldr	r3, [r3, #8]
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3832              		.loc 3 173 44 view .LVU1025
  3833 00ce 3B68     		ldr	r3, [r7]
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 92
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 92
 
 
  3834              		.loc 3 173 43 view .LVU1026
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3878 00fc 4C49     		ldr	r1, .L239+16
  3879              		.loc 4 159 91 view .LVU1041
  3880 00fe 0368     		ldr	r3, [r0]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 93
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 93
 
 
  3881              		.loc 4 159 61 view .LVU1042
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  3922 0128 3846     		mov	r0, r7
  3923 012a 9B68     		ldr	r3, [r3, #8]
  3924 012c 9847     		blx	r3
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 94
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 94
 
 
  3925              	.LVL323:
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  3970              		.loc 3 173 32 view .LVU1071
  3971 0156 3846     		mov	r0, r7
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 95
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 95
 
 
  3972 0158 DB68     		ldr	r3, [r3, #12]
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4014              	.LVL332:
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  4015              		.loc 3 174 19 view .LVU1084
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 96
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 96
 
 
  4016              	.LBE413:
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  4059              		.loc 3 173 19 view .LVU1102
  4060 01ae F0B9     		cbnz	r0, .L237
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 97
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 97
 
 
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4102              		.loc 4 165 29 view .LVU1116
  4103 01d8 0123     		movs	r3, #1
  4104              	.LBB419:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 98
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 98
 
 
  4105              	.LBB417:
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  4152              		.loc 3 173 19 view .LVU1127
  4153              	.LBE414:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 99
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 99
 
 
  4154              	.LBE421:
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  4199              		.loc 3 174 19 view .LVU1137
  4200 0212 0023     		movs	r3, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 100
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 100
 
 
  4201 0214 22E7     		b	.L216
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4241      647300
  4242              		.section	.text._ZN14DisplayHandler17DrawThresholdsHubEi,"ax",%progbits
  4243              		.align	1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 101
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 101
 
 
  4244              		.p2align 2,,3
@@ -6054,27 +6054,27 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4288              	.LBB441:
  4289              	.LBB442:
  4290              	.LBI442:
- 101:Display/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
+ 101:Display/../Components/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
  4291              		.loc 1 101 10 view .LVU1152
  4292              	.LBB443:
- 102:Display/oled_ssd130xDMA.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 102
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 102
 
 
  4293              		.loc 1 102 15 is_stmt 0 view .LVU1153
  4294 0016 4FF48062 		mov	r2, #1024
  4295 001a 0021     		movs	r1, #0
  4296              	.LVL355:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  4297              		.loc 1 102 15 view .LVU1154
  4298 001c 00F58260 		add	r0, r0, #1040
  4299              	.LVL356:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  4300              		.loc 1 102 15 view .LVU1155
  4301 0020 FFF7FEFF 		bl	memset
  4302              	.LVL357:
  4303              	.L243:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  4304              		.loc 1 102 15 view .LVU1156
  4305              	.LBE443:
  4306              	.LBE442:
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4334              		.loc 3 173 19 view .LVU1165
  4335 003c 0138     		subs	r0, r0, #1
  4336 003e 80B2     		uxth	r0, r0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 103
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 103
 
 
  4337              	.L244:
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4380 0064 5A4E     		ldr	r6, .L264+4
  4381 0066 0092     		str	r2, [sp]
  4382 0068 5A49     		ldr	r1, .L264+8
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 104
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 104
 
 
  4383 006a 9F6A     		ldr	r7, [r3, #40]
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4423 0094 9B68     		ldr	r3, [r3, #8]
  4424 0096 9847     		blx	r3
  4425              	.LVL368:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 105
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 105
 
 
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4470              		.loc 3 173 32 view .LVU1209
  4471 00c2 3846     		mov	r0, r7
  4472 00c4 DB68     		ldr	r3, [r3, #12]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 106
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 106
 
 
  4473 00c6 9847     		blx	r3
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  4515              		.loc 3 174 19 view .LVU1222
  4516              	.LBE453:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 107
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 107
 
 
  4517              	.LBE452:
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  4562              		.loc 3 174 34 view .LVU1238
  4563 0120 3B68     		ldr	r3, [r7]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 108
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 108
 
 
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4605              		.loc 4 176 61 view .LVU1254
  4606 014a 0092     		str	r2, [sp]
  4607 014c 9F6A     		ldr	r7, [r3, #40]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 109
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 109
 
 
  4608              		.loc 4 178 9 view .LVU1255
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4649              		.loc 3 174 9 is_stmt 1 view .LVU1270
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  4650              		.loc 3 174 33 is_stmt 0 view .LVU1271
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 110
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 110
 
 
  4651 0174 3846     		mov	r0, r7
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4696 019e 03B0     		add	sp, sp, #12
  4697              		.cfi_remember_state
  4698              		.cfi_def_cfa_offset 20
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 111
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 111
 
 
  4699              		@ sp needed
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4744              		.loc 3 174 19 view .LVU1293
  4745 01b6 0D20     		movs	r0, #13
  4746 01b8 77E7     		b	.L247
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 112
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 112
 
 
  4747              	.L256:
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4793      4F414420 
  4793      434F4E46 
  4793      49475320 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 113
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 113
 
 
  4794 0016 0000     		.align	2
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4837 000c 0C46     		mov	r4, r1
  4838              		.loc 4 184 28 view .LVU1309
  4839 000e 1B69     		ldr	r3, [r3, #16]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 114
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 114
 
 
  4840 0010 9342     		cmp	r3, r2
@@ -6791,24 +6791,24 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4846              	.LBB483:
  4847              	.LBB484:
  4848              	.LBI484:
- 101:Display/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
+ 101:Display/../Components/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
  4849              		.loc 1 101 10 view .LVU1311
  4850              	.LBB485:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  4851              		.loc 1 102 15 is_stmt 0 view .LVU1312
  4852 0016 4FF48062 		mov	r2, #1024
  4853 001a 0021     		movs	r1, #0
  4854              	.LVL406:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  4855              		.loc 1 102 15 view .LVU1313
  4856 001c 00F58260 		add	r0, r0, #1040
  4857              	.LVL407:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  4858              		.loc 1 102 15 view .LVU1314
  4859 0020 FFF7FEFF 		bl	memset
  4860              	.LVL408:
  4861              	.L268:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  4862              		.loc 1 102 15 view .LVU1315
  4863              	.LBE485:
  4864              	.LBE484:
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  4882              		.loc 3 173 19 view .LVU1321
  4883 002e 0028     		cmp	r0, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 115
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 115
 
 
  4884 0030 40F0C780 		bne	.L279
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4926              	.LBB490:
  4927              	.LBB488:
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 116
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 116
 
 
  4928              		.loc 3 174 19 view .LVU1335
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  4971 008a 0138     		subs	r0, r0, #1
  4972 008c 80B2     		uxth	r0, r0
  4973              	.L271:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 117
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 117
 
 
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5018              		.loc 4 190 5 is_stmt 1 view .LVU1364
  5019 00be 2F68     		ldr	r7, [r5]
  5020              	.LVL423:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 118
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 118
 
 
  5021              	.LBB494:
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5061 00e6 3B68     		ldr	r3, [r7]
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  5062              		.loc 3 174 45 view .LVU1379
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 119
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 119
 
 
  5063 00e8 3846     		mov	r0, r7
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  5109              		.loc 3 173 44 view .LVU1394
  5110 0114 3B68     		ldr	r3, [r7]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 120
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 120
 
 
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  192:Display/displayHandler.cpp **** 
  193:Display/displayHandler.cpp ****     int cursorY = 13 + (cursorIndex * 10);
  5154              		.loc 4 193 37 view .LVU1409
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 121
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 121
 
 
  5155 0140 04EB8404 		add	r4, r4, r4, lsl #2
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5197 016a 9847     		blx	r3
  5198              	.LVL440:
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 122
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 122
 
 
  5199              		.loc 3 173 19 view .LVU1426
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5241              	.LBE502:
  5242              	.LBE504:
  5243              		.loc 4 195 5 is_stmt 1 view .LVU1440
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 123
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 123
 
 
  5244              		.loc 4 195 50 is_stmt 0 view .LVU1441
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5290 01b0 9FE7     		b	.L274
  5291              	.L283:
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 124
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 124
 
 
  5292              		.loc 3 173 19 view .LVU1450
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5337              	.L289:
  5338 01cc 00000000 		.word	_ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE4FillEb
  5339 01d0 00000000 		.word	Font_7x10
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 125
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 125
 
 
  5340 01d4 00000000 		.word	.LC23
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5388 000a 0368     		ldr	r3, [r0]
  5389 000c 1B69     		ldr	r3, [r3, #16]
  5390 000e 9342     		cmp	r3, r2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 126
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 126
 
 
  200:Display/displayHandler.cpp ****     _displayPtr->Fill(false);
@@ -7519,24 +7519,24 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5404              	.LBB521:
  5405              	.LBB522:
  5406              	.LBI522:
- 101:Display/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
+ 101:Display/../Components/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
  5407              		.loc 1 101 10 view .LVU1469
  5408              	.LBB523:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  5409              		.loc 1 102 15 is_stmt 0 view .LVU1470
  5410 001e 4FF48062 		mov	r2, #1024
  5411 0022 0021     		movs	r1, #0
  5412              	.LVL457:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  5413              		.loc 1 102 15 view .LVU1471
  5414 0024 00F58260 		add	r0, r0, #1040
  5415              	.LVL458:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  5416              		.loc 1 102 15 view .LVU1472
  5417 0028 FFF7FEFF 		bl	memset
  5418              	.LVL459:
  5419              	.L293:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  5420              		.loc 1 102 15 view .LVU1473
  5421              	.LBE523:
  5422              	.LBE522:
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5433              		.loc 3 173 33 is_stmt 0 view .LVU1477
  5434 002e 2B68     		ldr	r3, [r5]
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 127
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 127
 
 
  5435              		.loc 3 173 32 view .LVU1478
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5477              	.L295:
  5478              	.LBE525:
  5479              	.LBE524:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 128
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 128
 
 
  204:Display/displayHandler.cpp ****     _displayPtr->WriteString("EDIT:", Font_7x10, true);
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  5523              		.loc 3 173 43 view .LVU1505
  5524 0084 2846     		mov	r0, r5
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 129
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 129
 
 
  5525 0086 DB68     		ldr	r3, [r3, #12]
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5567              		.loc 3 174 19 view .LVU1518
  5568              	.LBE532:
  5569              	.LBE534:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 130
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 130
 
 
  5570              		.loc 4 207 5 is_stmt 1 view .LVU1519
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5610              		.loc 4 213 5 view .LVU1536
  5611              		.loc 4 214 5 view .LVU1537
  5612              		.loc 4 214 12 is_stmt 0 view .LVU1538
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 131
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 131
 
 
  5613 00e2 002B     		cmp	r3, #0
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5653              		.loc 3 174 33 is_stmt 0 view .LVU1552
  5654 0108 2846     		mov	r0, r5
  5655 010a 9B68     		ldr	r3, [r3, #8]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 132
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 132
 
 
  5656 010c 9847     		blx	r3
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5702 0134 BDEC028B 		vldm	sp!, {d8}
  5703              		.cfi_restore 80
  5704              		.cfi_restore 81
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 133
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 133
 
 
  5705              		.cfi_def_cfa_offset 16
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5751              	.LBB528:
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  5752              		.loc 3 174 19 view .LVU1574
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 134
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 134
 
 
  5753 014e 0023     		movs	r3, #0
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5797              	.LC33:
  5798 0030 25642025 		.ascii	"%d %%\000"
  5798      2500
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 135
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 135
 
 
  5799 0036 0000     		.align	2
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5845 0010 0E46     		mov	r6, r1
  5846              		.loc 4 221 28 view .LVU1587
  5847 0012 1B69     		ldr	r3, [r3, #16]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 136
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 136
 
 
  5848 0014 9342     		cmp	r3, r2
@@ -8111,24 +8111,24 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5854              	.LBB564:
  5855              	.LBB565:
  5856              	.LBI565:
- 101:Display/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
+ 101:Display/../Components/oled_ssd130xDMA.h ****         memset(buffer_, on ? 0xFF : 0x00, sizeof(buffer_));
  5857              		.loc 1 101 10 view .LVU1589
  5858              	.LBB566:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  5859              		.loc 1 102 15 is_stmt 0 view .LVU1590
  5860 001a 4FF48062 		mov	r2, #1024
  5861 001e 00F58260 		add	r0, r0, #1040
  5862              	.LVL501:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  5863              		.loc 1 102 15 view .LVU1591
  5864 0022 0021     		movs	r1, #0
  5865              	.LVL502:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  5866              		.loc 1 102 15 view .LVU1592
  5867 0024 FFF7FEFF 		bl	memset
  5868              	.LVL503:
  5869              	.L311:
- 102:Display/oled_ssd130xDMA.h ****     }
+ 102:Display/../Components/oled_ssd130xDMA.h ****     }
  5870              		.loc 1 102 15 view .LVU1593
  5871              	.LBE566:
  5872              	.LBE565:
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  5890              		.loc 3 173 19 view .LVU1599
  5891 0032 0028     		cmp	r0, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 137
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 137
 
 
  5892 0034 6FD1     		bne	.L324
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5933              		.loc 4 224 5 is_stmt 1 view .LVU1612
  5934              		.loc 4 224 29 is_stmt 0 view .LVU1613
  5935 005e 0121     		movs	r1, #1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 138
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 138
 
 
  5936              		.loc 4 224 5 view .LVU1614
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  5979 008a 2B68     		ldr	r3, [r5]
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  5980              		.loc 3 173 19 view .LVU1628
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 139
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 139
 
 
  5981 008c A880     		strh	r0, [r5, #4]	@ movhi
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  231:Display/displayHandler.cpp ****     if (strcmp(paramName, "ROOT") == 0) {
  6024              		.loc 4 231 5 view .LVU1643
  6025              	.LBB574:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 140
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 140
 
 
  6026              		.loc 4 231 15 is_stmt 0 view .LVU1644
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6068 00de 4F49     		ldr	r1, .L335+24
  6069 00e0 3046     		mov	r0, r6
  6070 00e2 FFF7FEFF 		bl	strcmp
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 141
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 141
 
 
  6071              	.LVL521:
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6120              	.L324:
  6121              		.loc 4 248 16 view .LVU1668
  6122              	.LBE578:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 142
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 142
 
 
  6123              	.LBE581:
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6167 0126 404A     		ldr	r2, .L335+36
  6168 0128 FB17     		asrs	r3, r7, #31
  237:Display/displayHandler.cpp ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 143
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 143
 
 
  6169              		.loc 4 237 16 view .LVU1679
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
  6207              		.loc 3 173 19 view .LVU1690
  6208 0152 F8B9     		cbnz	r0, .L328
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 144
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 144
 
 
  173:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         currentY_ = (y >= Height()) ? Height() - 1 : y;
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6251              	.LBB605:
  174:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
  6252              		.loc 3 174 19 view .LVU1704
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 145
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 145
 
 
  6253 017e EB80     		strh	r3, [r5, #6]	@ movhi
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  233:Display/displayHandler.cpp ****     }
  6299              		.loc 4 233 16 view .LVU1716
  6300 01a0 02AE     		add	r6, sp, #8
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 146
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 146
 
 
  6301              	.LVL543:
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6344 01ce FFF7FEFF 		bl	sprintf
  6345              	.LVL550:
  6346 01d2 B9E7     		b	.L317
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 147
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 147
 
 
  6347              	.LVL551:
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6388 01fc FFF7FEFF 		bl	sprintf
  6389              	.LVL557:
  6390 0200 A2E7     		b	.L317
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 148
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 148
 
 
  6391              	.L336:
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6437 0038 53415645 		.ascii	"SAVE CFG\000"
  6437      20434647 
  6437      00
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 149
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 149
 
 
  6438 0041 000000   		.align	2
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6487 002a 6F       		.byte	(.L346-.L340)/2
  6488 002b 74       		.byte	(.L345-.L340)/2
  6489 002c 79       		.byte	(.L344-.L340)/2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 150
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 150
 
 
  6490 002d 7E       		.byte	(.L343-.L340)/2
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  310:Display/displayHandler.cpp ****         case MenuManager::DELTA:
  311:Display/displayHandler.cpp ****             DrawFloatParameter("DELTA", ui_data.delta);
  312:Display/displayHandler.cpp ****             break;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 151
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 151
 
 
  313:Display/displayHandler.cpp ****         case MenuManager::CURVE:
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6514              		.loc 4 264 18 view .LVU1754
  6515 0040 0329     		cmp	r1, #3
  6516 0042 00F08580 		beq	.L363
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 152
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 152
 
 
  265:Display/displayHandler.cpp ****             else if (ui_data.cursor_state == MenuManager::FLASH_HUB) cursor_idx = 3;
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6558 0072 7FD0     		beq	.L371
  277:Display/displayHandler.cpp ****             DrawCalibrationHub(cursor_idx);
  6559              		.loc 4 277 18 view .LVU1769
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 153
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 153
 
 
  277:Display/displayHandler.cpp ****             DrawCalibrationHub(cursor_idx);
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6602              		.cfi_remember_state
  6603              		.cfi_def_cfa_offset 0
  286:Display/displayHandler.cpp ****             break;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 154
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 154
 
 
  6604              		.loc 4 286 26 view .LVU1784
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6646              		.cfi_def_cfa_offset 0
  293:Display/displayHandler.cpp ****             break;
  6647              		.loc 4 293 30 view .LVU1799
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 155
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 155
 
 
  6648 00b8 FFF7FEBF 		b	_ZN14DisplayHandler17DrawThresholdsHubEi
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  314:Display/displayHandler.cpp ****             break;
  6690              		.loc 4 314 31 view .LVU1814
  6691 00da FFF7FEBF 		b	_ZN14DisplayHandler18DrawFloatParameterEPKcf
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 156
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 156
 
 
  6692              	.LVL581:
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6733              		.cfi_remember_state
  6734              		.cfi_def_cfa_offset 0
  320:Display/displayHandler.cpp ****             break;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 157
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 157
 
 
  6735              		.loc 4 320 29 view .LVU1831
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6776              		.loc 4 329 13 view .LVU1846
  329:Display/displayHandler.cpp ****             break;
  6777              		.loc 4 329 29 is_stmt 0 view .LVU1847
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 158
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 158
 
 
  6778 0112 089A     		ldr	r2, [sp, #32]
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6820              	.LVL597:
  6821              	.L341:
  6822              		.cfi_restore_state
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 159
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 159
 
 
  337:Display/displayHandler.cpp ****             DrawIntParameter("LOAD CFG", ui_data.configs_idx);
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  282:Display/displayHandler.cpp ****             else if (ui_data.cursor_state == MenuManager::SCALE) cursor_idx = 1;
  6865              		.loc 4 282 71 view .LVU1876
  6866 0148 0021     		movs	r1, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 160
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 160
 
 
  6867              	.LVL608:
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6909              	.LVL620:
  284:Display/displayHandler.cpp ****             else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 3;
  6910              		.loc 4 284 78 view .LVU1889
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 161
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 161
 
 
  6911 0162 98E7     		b	.L359
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  6955              	.L384:
  6956 017c 38000000 		.word	.LC41
  6957 0180 1C000000 		.word	.LC31
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 162
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 162
 
 
  6958 0184 28000000 		.word	.LC39
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  7001 0054 4D696E6F 		.ascii	"MinorA\000"
  7001      724100
  7002 005b 00       		.align	2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 163
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 163
 
 
  7003              	.LC53:
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  7053              	.LC0:
  7054 0000 21007F22 		.ascii	"!\000\177\"\000\007"
  7054      0007
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 164
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 164
 
 
  7055              		.section	.bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx,"aw",%nobits
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  7119              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
  7120              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
  7121              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 165
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 165
 
 
  7122              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
@@ -9876,100 +9876,100 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 1
  7154              		.file 45 "Display/displayHandler.h"
  7155              		.file 46 "../libs/PoliTeKDSP/libs/libDaisy/src/sys/dma.h"
  7156              		.file 47 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 166
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 166
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 displayHandler.cpp
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:17     .text._ZN5daisy16SSD1306DmaDriverILj128ELj64EE11DmaCallbackEPvNS_9I2CHandle6ResultE:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:26     .text._ZN5daisy16SSD1306DmaDriverILj128ELj64EE11DmaCallbackEPvNS_9I2CHandle6ResultE:00000000 _ZN5daisy16SSD1306DmaDriverILj128ELj64EE11DmaCallbackEPvNS_9I2CHandle6ResultE
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:44     .text._ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE4FillEb:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:52     .text._ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE4FillEb:00000000 _ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE4FillEb
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:85     .text._ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE6UpdateEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:93     .text._ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE6UpdateEv:00000000 _ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE6UpdateEv
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:270    .text._ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE6UpdateEv:00000094 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:276    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEEEE8DrawLineEjjjjb:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:284    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEEEE8DrawLineEjjjjb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEEEE8DrawLineEjjjjb
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:570    .rodata._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:574    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:582    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:00000000 _ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:674    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:00000054 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:582    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:00000000 _ZN14DisplayHandlerC1EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:681    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:689    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 _ZN14DisplayHandler8SetStateE12DisplayState
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:765    .text._ZN14DisplayHandler8SetStateE12DisplayState:0000002c $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:770    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:778    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 _ZN14DisplayHandler14SetStandbyTextEPKc
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:841    .text._ZN14DisplayHandler14SetStandbyTextEPKc:0000002c $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:846    .text._ZN14DisplayHandler15pushAudioSampleEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:854    .text._ZN14DisplayHandler15pushAudioSampleEf:00000000 _ZN14DisplayHandler15pushAudioSampleEf
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:887    .text._ZN14DisplayHandler11findTriggerEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:895    .text._ZN14DisplayHandler11findTriggerEv:00000000 _ZN14DisplayHandler11findTriggerEv
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1025   .text._ZN14DisplayHandler11findTriggerEv:00000084 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1030   .text._ZN14DisplayHandler12drawWaveFormEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1038   .text._ZN14DisplayHandler12drawWaveFormEv:00000000 _ZN14DisplayHandler12drawWaveFormEv
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1513   .text._ZN14DisplayHandler12drawWaveFormEv:000001c0 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1519   .text._ZN14DisplayHandler9SetYscaleEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1527   .text._ZN14DisplayHandler9SetYscaleEi:00000000 _ZN14DisplayHandler9SetYscaleEi
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1544   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1552   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 _ZN14DisplayHandler17drawStandbyScreenEv
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1676   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000058 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1683   .text._ZN14DisplayHandler6UpdateEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1691   .text._ZN14DisplayHandler6UpdateEv:00000000 _ZN14DisplayHandler6UpdateEv
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1943   .text._ZN14DisplayHandler6UpdateEv:000000c0 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1950   .rodata._ZN14DisplayHandler12DrawMainMenuEi.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1972   .text._ZN14DisplayHandler12DrawMainMenuEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:1980   .text._ZN14DisplayHandler12DrawMainMenuEi:00000000 _ZN14DisplayHandler12DrawMainMenuEi
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:2669   .text._ZN14DisplayHandler12DrawMainMenuEi:0000026c $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:2680   .text._ZN14DisplayHandler12DrawMainMenuEi:00000290 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:2698   .rodata._ZN14DisplayHandler18DrawCalibrationHubEi.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:2720   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:2728   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000000 _ZN14DisplayHandler18DrawCalibrationHubEi
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:3246   .text._ZN14DisplayHandler18DrawCalibrationHubEi:000001f0 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:3263   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000210 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:3577   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000300 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:3584   .rodata._ZN14DisplayHandler13DrawScalesHubEi.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:3597   .text._ZN14DisplayHandler13DrawScalesHubEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:3605   .text._ZN14DisplayHandler13DrawScalesHubEi:00000000 _ZN14DisplayHandler13DrawScalesHubEi
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:4221   .text._ZN14DisplayHandler13DrawScalesHubEi:00000220 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:4233   .rodata._ZN14DisplayHandler17DrawThresholdsHubEi.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:4243   .text._ZN14DisplayHandler17DrawThresholdsHubEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:4251   .text._ZN14DisplayHandler17DrawThresholdsHubEi:00000000 _ZN14DisplayHandler17DrawThresholdsHubEi
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:4780   .text._ZN14DisplayHandler17DrawThresholdsHubEi:000001cc $d
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s 			page 167
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:17     .text._ZN5daisy16SSD1306DmaDriverILj128ELj64EE11DmaCallbackEPvNS_9I2CHandle6ResultE:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:26     .text._ZN5daisy16SSD1306DmaDriverILj128ELj64EE11DmaCallbackEPvNS_9I2CHandle6ResultE:00000000 _ZN5daisy16SSD1306DmaDriverILj128ELj64EE11DmaCallbackEPvNS_9I2CHandle6ResultE
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:44     .text._ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE4FillEb:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:52     .text._ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE4FillEb:00000000 _ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE4FillEb
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:85     .text._ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE6UpdateEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:93     .text._ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE6UpdateEv:00000000 _ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE6UpdateEv
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:270    .text._ZN5daisy11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEE6UpdateEv:00000094 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:276    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEEEE8DrawLineEjjjjb:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:284    .text._ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEEEE8DrawLineEjjjjb:00000000 _ZN5daisy25OneBitGraphicsDisplayImplINS_11OledDisplayINS_16SSD1306DmaDriverILj128ELj64EEEEEE8DrawLineEjjjjb
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:570    .rodata._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:574    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:582    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:00000000 _ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:674    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:00000054 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:582    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:00000000 _ZN14DisplayHandlerC1EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:681    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:689    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 _ZN14DisplayHandler8SetStateE12DisplayState
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:765    .text._ZN14DisplayHandler8SetStateE12DisplayState:0000002c $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:770    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:778    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 _ZN14DisplayHandler14SetStandbyTextEPKc
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:841    .text._ZN14DisplayHandler14SetStandbyTextEPKc:0000002c $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:846    .text._ZN14DisplayHandler15pushAudioSampleEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:854    .text._ZN14DisplayHandler15pushAudioSampleEf:00000000 _ZN14DisplayHandler15pushAudioSampleEf
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:887    .text._ZN14DisplayHandler11findTriggerEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:895    .text._ZN14DisplayHandler11findTriggerEv:00000000 _ZN14DisplayHandler11findTriggerEv
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1025   .text._ZN14DisplayHandler11findTriggerEv:00000084 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1030   .text._ZN14DisplayHandler12drawWaveFormEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1038   .text._ZN14DisplayHandler12drawWaveFormEv:00000000 _ZN14DisplayHandler12drawWaveFormEv
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1513   .text._ZN14DisplayHandler12drawWaveFormEv:000001c0 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1519   .text._ZN14DisplayHandler9SetYscaleEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1527   .text._ZN14DisplayHandler9SetYscaleEi:00000000 _ZN14DisplayHandler9SetYscaleEi
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1544   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1552   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 _ZN14DisplayHandler17drawStandbyScreenEv
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1676   .text._ZN14DisplayHandler17drawStandbyScreenEv:00000058 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1683   .text._ZN14DisplayHandler6UpdateEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1691   .text._ZN14DisplayHandler6UpdateEv:00000000 _ZN14DisplayHandler6UpdateEv
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1943   .text._ZN14DisplayHandler6UpdateEv:000000c0 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1950   .rodata._ZN14DisplayHandler12DrawMainMenuEi.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1972   .text._ZN14DisplayHandler12DrawMainMenuEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:1980   .text._ZN14DisplayHandler12DrawMainMenuEi:00000000 _ZN14DisplayHandler12DrawMainMenuEi
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:2669   .text._ZN14DisplayHandler12DrawMainMenuEi:0000026c $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:2680   .text._ZN14DisplayHandler12DrawMainMenuEi:00000290 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:2698   .rodata._ZN14DisplayHandler18DrawCalibrationHubEi.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:2720   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:2728   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000000 _ZN14DisplayHandler18DrawCalibrationHubEi
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:3246   .text._ZN14DisplayHandler18DrawCalibrationHubEi:000001f0 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:3263   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000210 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:3577   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000300 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:3584   .rodata._ZN14DisplayHandler13DrawScalesHubEi.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:3597   .text._ZN14DisplayHandler13DrawScalesHubEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:3605   .text._ZN14DisplayHandler13DrawScalesHubEi:00000000 _ZN14DisplayHandler13DrawScalesHubEi
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:4221   .text._ZN14DisplayHandler13DrawScalesHubEi:00000220 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:4233   .rodata._ZN14DisplayHandler17DrawThresholdsHubEi.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:4243   .text._ZN14DisplayHandler17DrawThresholdsHubEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:4251   .text._ZN14DisplayHandler17DrawThresholdsHubEi:00000000 _ZN14DisplayHandler17DrawThresholdsHubEi
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:4780   .text._ZN14DisplayHandler17DrawThresholdsHubEi:000001cc $d
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc73exCk.s 			page 167
 
 
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:4791   .rodata._ZN14DisplayHandler12DrawFlashHubEi.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:4801   .text._ZN14DisplayHandler12DrawFlashHubEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:4809   .text._ZN14DisplayHandler12DrawFlashHubEi:00000000 _ZN14DisplayHandler12DrawFlashHubEi
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:5338   .text._ZN14DisplayHandler12DrawFlashHubEi:000001cc $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:5349   .rodata._ZN14DisplayHandler18DrawFloatParameterEPKcf.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:5356   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:5364   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000000 _ZN14DisplayHandler18DrawFloatParameterEPKcf
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:5771   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000158 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:5781   .rodata._ZN14DisplayHandler16DrawIntParameterEPKci.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:5806   .text._ZN14DisplayHandler16DrawIntParameterEPKci:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:5814   .text._ZN14DisplayHandler16DrawIntParameterEPKci:00000000 _ZN14DisplayHandler16DrawIntParameterEPKci
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:6394   .text._ZN14DisplayHandler16DrawIntParameterEPKci:00000204 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:6420   .rodata._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:6442   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:6450   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE:00000000 _ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:6477   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE:00000020 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:6956   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE:0000017c $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:6972   .rodata.str1.4:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:7051   .rodata:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:7056   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:7060   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 _ZZN14DisplayHandler11findTriggerEvE7trigIdx
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:7063   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE5notes:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:7067   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE5notes:00000000 _ZZN14DisplayHandler16DrawIntParameterEPKciE5notes
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:7081   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE6scales:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:7085   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE6scales:00000000 _ZZN14DisplayHandler16DrawIntParameterEPKciE6scales
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:7094   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE7filters:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:7098   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE7filters:00000000 _ZZN14DisplayHandler16DrawIntParameterEPKciE7filters
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:7104   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE7presets:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:7108   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE7presets:00000000 _ZZN14DisplayHandler16DrawIntParameterEPKciE7presets
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:6494   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE:00000031 $d
-C:\Users\skipi\AppData\Local\Temp\ccYxPfGG.s:6494   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE:00000032 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:4791   .rodata._ZN14DisplayHandler12DrawFlashHubEi.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:4801   .text._ZN14DisplayHandler12DrawFlashHubEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:4809   .text._ZN14DisplayHandler12DrawFlashHubEi:00000000 _ZN14DisplayHandler12DrawFlashHubEi
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:5338   .text._ZN14DisplayHandler12DrawFlashHubEi:000001cc $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:5349   .rodata._ZN14DisplayHandler18DrawFloatParameterEPKcf.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:5356   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:5364   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000000 _ZN14DisplayHandler18DrawFloatParameterEPKcf
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:5771   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000158 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:5781   .rodata._ZN14DisplayHandler16DrawIntParameterEPKci.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:5806   .text._ZN14DisplayHandler16DrawIntParameterEPKci:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:5814   .text._ZN14DisplayHandler16DrawIntParameterEPKci:00000000 _ZN14DisplayHandler16DrawIntParameterEPKci
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:6394   .text._ZN14DisplayHandler16DrawIntParameterEPKci:00000204 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:6420   .rodata._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:6442   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:6450   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE:00000000 _ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:6477   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE:00000020 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:6956   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE:0000017c $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:6972   .rodata.str1.4:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:7051   .rodata:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:7056   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:7060   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 _ZZN14DisplayHandler11findTriggerEvE7trigIdx
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:7063   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE5notes:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:7067   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE5notes:00000000 _ZZN14DisplayHandler16DrawIntParameterEPKciE5notes
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:7081   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE6scales:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:7085   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE6scales:00000000 _ZZN14DisplayHandler16DrawIntParameterEPKciE6scales
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:7094   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE7filters:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:7098   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE7filters:00000000 _ZZN14DisplayHandler16DrawIntParameterEPKciE7filters
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:7104   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE7presets:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:7108   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciE7presets:00000000 _ZZN14DisplayHandler16DrawIntParameterEPKciE7presets
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:6494   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE:00000031 $d
+C:\Users\skipi\AppData\Local\Temp\cc73exCk.s:6494   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataE:00000032 $t
 
 UNDEFINED SYMBOLS
 memset

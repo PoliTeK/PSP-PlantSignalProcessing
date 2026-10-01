@@ -13,8 +13,6 @@
 
 using namespace daisy;
 
-GPIO Sensing_test_pin;
-GPIO Display_test_pin;
 
 // ============================================================================
 // GLOBAL OBJECTS
@@ -80,13 +78,6 @@ int main() {
     
     // --- 0. HARDWARE & PERIPHERAL INITIALIZATION ---
     hw.Init();
-    
-    Sensing_test_pin.Init(hw.GetPin(15), GPIO::Mode::OUTPUT);
-    Display_test_pin.Init(hw.GetPin(16), GPIO::Mode::OUTPUT);
-    Sensing_test_pin.Write(false);
-    Display_test_pin.Write(false);
-    
-    
 
     enc.Init(hw.GetPin(14), hw.GetPin(13), hw.GetPin(10));
     menu.Init();
@@ -252,19 +243,16 @@ int main() {
         
         
         if (plant_update_param) {
-            Sensing_test_pin.Write(true);
             plant_update_param = false;
             PlantConditioner::PlantState plant_data = pc.Process();
             audio_controls.freq = plant_data._freq;
             audio_controls.gate = plant_data._gate;
-            Sensing_test_pin.Write(false);
         }
 
         // ====================================================================
         // --- TASK 4: DISPLAY UPDATE ---
         // ====================================================================
         if (now - last >= display_period) {
-            Display_test_pin.Write(true);
             last = now; 
             ui_data = menu.GetData(); 
             
@@ -275,11 +263,7 @@ int main() {
                 disp_handle.SetState(DisplayState::MENU_MODE);
                 disp_handle.DrawStateW(ui_data);
             }
-            
-            // Blocking I2C operation
-            
             disp_handle.Update(); 
-            Display_test_pin.Write(false);
         }
     }
 }
