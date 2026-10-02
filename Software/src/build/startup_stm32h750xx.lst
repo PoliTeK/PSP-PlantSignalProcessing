@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -9,7 +9,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
    6              		.eabi_attribute 24, 1
    7              		.eabi_attribute 25, 1
    8              		.eabi_attribute 26, 1
-   9              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 30, 4
   10              		.eabi_attribute 34, 1
   11              		.eabi_attribute 18, 4
   12              		.file	"startup_stm32h750xx.c"
@@ -18,16 +18,15 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
   15              		.cfi_sections	.debug_frame
   16              		.section	.text.Default_Handler,"ax",%progbits
   17              		.align	1
-  18              		.p2align 2,,3
-  19              		.global	Default_Handler
-  20              		.arch armv7e-m
-  21              		.syntax unified
-  22              		.thumb
-  23              		.thumb_func
-  24              		.fpu fpv5-d16
-  26              	Default_Handler:
-  27              	.LFB338:
-  28              		.file 1 "../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c"
+  18              		.global	Default_Handler
+  19              		.arch armv7e-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv5-d16
+  25              	Default_Handler:
+  26              	.LFB338:
+  27              		.file 1 "../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c"
    1:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** /*
    2:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	This file contains the entry point (Reset_Handler) of your firmware project.
    3:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	The reset handled initializes the RAM and calls system library initializers as well as
@@ -58,10 +57,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
   28:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
   29:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
   30:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) MemManage_Handler() 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 2
-
-
   31:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 2
+
+
   32:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
   33:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
   34:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void MemManage_Handler();
@@ -118,10 +117,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
   85:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
   86:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) WWDG_IRQHandler() 
   87:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 3
-
-
   88:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 3
+
+
   89:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
   90:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void WWDG_IRQHandler();
   91:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
@@ -178,10 +177,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  142:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) EXTI1_IRQHandler() 
  143:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
  144:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 4
-
-
  145:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 4
+
+
  146:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void EXTI1_IRQHandler();
  147:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
  148:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
@@ -238,10 +237,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  199:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
  200:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
  201:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 5
-
-
  202:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void DMA1_Stream3_IRQHandler();
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 5
+
+
  203:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
  204:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
  205:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
@@ -298,10 +297,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  256:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
  257:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
  258:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void FDCAN1_IT1_IRQHandler();
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 6
-
-
  259:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 6
+
+
  260:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
  261:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
  262:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) FDCAN2_IT1_IRQHandler() 
@@ -358,10 +357,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  313:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
  314:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void TIM2_IRQHandler();
  315:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 7
-
-
  316:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 7
+
+
  317:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
  318:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) TIM3_IRQHandler() 
  319:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
@@ -418,10 +417,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  370:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void SPI1_IRQHandler();
  371:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
  372:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 8
-
-
  373:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 8
+
+
  374:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) SPI2_IRQHandler() 
  375:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
  376:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
@@ -478,10 +477,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  427:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
  428:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
  429:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 9
-
-
  430:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) TIM8_UP_TIM13_IRQHandler() 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 9
+
+
  431:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
  432:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
  433:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
@@ -538,10 +537,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  484:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
  485:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
  486:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) SPI3_IRQHandler() 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 10
-
-
  487:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 10
+
+
  488:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
  489:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
  490:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void SPI3_IRQHandler();
@@ -598,10 +597,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  541:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
  542:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) DMA2_Stream2_IRQHandler() 
  543:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 11
-
-
  544:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 11
+
+
  545:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
  546:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void DMA2_Stream2_IRQHandler();
  547:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
@@ -658,10 +657,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  598:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) DMA2_Stream6_IRQHandler() 
  599:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
  600:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 12
-
-
  601:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 12
+
+
  602:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void DMA2_Stream6_IRQHandler();
  603:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
  604:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
@@ -718,10 +717,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  655:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
  656:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
  657:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 13
-
-
  658:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void OTG_HS_WKUP_IRQHandler();
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 13
+
+
  659:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
  660:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
  661:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
@@ -778,10 +777,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  712:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
  713:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
  714:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void UART8_IRQHandler();
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 14
-
-
  715:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 14
+
+
  716:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
  717:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
  718:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) SPI4_IRQHandler() 
@@ -838,10 +837,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  769:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
  770:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void DMA2D_IRQHandler();
  771:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 15
-
-
  772:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 15
+
+
  773:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
  774:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) SAI2_IRQHandler() 
  775:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
@@ -898,10 +897,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  826:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void SPDIF_RX_IRQHandler();
  827:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
  828:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 16
-
-
  829:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 16
+
+
  830:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) OTG_FS_EP1_OUT_IRQHandler() 
  831:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
  832:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
@@ -958,10 +957,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  883:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
  884:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
  885:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 17
-
-
  886:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) HRTIM1_TIMB_IRQHandler() 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 17
+
+
  887:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
  888:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
  889:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
@@ -1018,10 +1017,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  940:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
  941:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
  942:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) DFSDM1_FLT2_IRQHandler() 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 18
-
-
  943:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 18
+
+
  944:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
  945:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
  946:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void DFSDM1_FLT2_IRQHandler();
@@ -1078,10 +1077,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
  997:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
  998:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) MDIOS_WKUP_IRQHandler() 
  999:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 19
-
-
 1000:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 19
+
+
 1001:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
 1002:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void MDIOS_WKUP_IRQHandler();
 1003:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
@@ -1138,10 +1137,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
 1054:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) DMAMUX2_OVR_IRQHandler() 
 1055:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
 1056:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 20
-
-
 1057:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 20
+
+
 1058:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void DMAMUX2_OVR_IRQHandler();
 1059:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
 1060:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
@@ -1198,10 +1197,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
 1111:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
 1112:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
 1113:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 21
-
-
 1114:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void BDMA_Channel6_IRQHandler();
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 21
+
+
 1115:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
 1116:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
 1117:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
@@ -1258,10 +1257,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
 1168:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you hit the breakpoint below, one of the interrupts was unhandled in your code. 
 1169:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define the following function in your code to handle it:
 1170:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//	extern "C" void LPUART1_IRQHandler();
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 22
-
-
 1171:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	asm("bkpt 255");
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 22
+
+
 1172:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
 1173:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
 1174:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__ ((weak)) CRS_IRQHandler() 
@@ -1318,10 +1317,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
 1225:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void EXTI3_IRQHandler()               __attribute__ ((weak, alias ("Default_Handler")));
 1226:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void EXTI4_IRQHandler()               __attribute__ ((weak, alias ("Default_Handler")));
 1227:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void DMA1_Stream0_IRQHandler()        __attribute__ ((weak, alias ("Default_Handler")));
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 23
-
-
 1228:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void DMA1_Stream1_IRQHandler()        __attribute__ ((weak, alias ("Default_Handler")));
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 23
+
+
 1229:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void DMA1_Stream2_IRQHandler()        __attribute__ ((weak, alias ("Default_Handler")));
 1230:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void DMA1_Stream3_IRQHandler()        __attribute__ ((weak, alias ("Default_Handler")));
 1231:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void DMA1_Stream4_IRQHandler()        __attribute__ ((weak, alias ("Default_Handler")));
@@ -1378,10 +1377,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
 1282:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void USART6_IRQHandler()              __attribute__ ((weak, alias ("Default_Handler")));
 1283:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void I2C3_EV_IRQHandler()             __attribute__ ((weak, alias ("Default_Handler")));
 1284:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void I2C3_ER_IRQHandler()             __attribute__ ((weak, alias ("Default_Handler")));
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 24
-
-
 1285:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void OTG_HS_EP1_OUT_IRQHandler()      __attribute__ ((weak, alias ("Default_Handler")));
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 24
+
+
 1286:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void OTG_HS_EP1_IN_IRQHandler()       __attribute__ ((weak, alias ("Default_Handler")));
 1287:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void OTG_HS_WKUP_IRQHandler()         __attribute__ ((weak, alias ("Default_Handler")));
 1288:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void OTG_HS_IRQHandler()              __attribute__ ((weak, alias ("Default_Handler")));
@@ -1438,10 +1437,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
 1339:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void BDMA_Channel1_IRQHandler()       __attribute__ ((weak, alias ("Default_Handler")));
 1340:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void BDMA_Channel2_IRQHandler()       __attribute__ ((weak, alias ("Default_Handler")));
 1341:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void BDMA_Channel3_IRQHandler()       __attribute__ ((weak, alias ("Default_Handler")));
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 25
-
-
 1342:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void BDMA_Channel4_IRQHandler()       __attribute__ ((weak, alias ("Default_Handler")));
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 25
+
+
 1343:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void BDMA_Channel5_IRQHandler()       __attribute__ ((weak, alias ("Default_Handler")));
 1344:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void BDMA_Channel6_IRQHandler()       __attribute__ ((weak, alias ("Default_Handler")));
 1345:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void BDMA_Channel7_IRQHandler()       __attribute__ ((weak, alias ("Default_Handler")));
@@ -1498,10 +1497,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
 1396:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&FDCAN2_IT0_IRQHandler,
 1397:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&FDCAN1_IT1_IRQHandler,
 1398:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&FDCAN2_IT1_IRQHandler,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 26
-
-
 1399:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&EXTI9_5_IRQHandler,
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 26
+
+
 1400:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&TIM1_BRK_IRQHandler,
 1401:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&TIM1_UP_IRQHandler,
 1402:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&TIM1_TRG_COM_IRQHandler,
@@ -1558,10 +1557,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
 1453:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&OTG_HS_IRQHandler,
 1454:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&DCMI_IRQHandler,
 1455:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&CRYP_IRQHandler,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 27
-
-
 1456:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&HASH_RNG_IRQHandler,
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 27
+
+
 1457:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&FPU_IRQHandler,
 1458:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&UART7_IRQHandler,
 1459:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&UART8_IRQHandler,
@@ -1618,10 +1617,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
 1510:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&BDMA_Channel5_IRQHandler,
 1511:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&BDMA_Channel6_IRQHandler,
 1512:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&BDMA_Channel7_IRQHandler,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 28
-
-
 1513:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&COMP1_IRQHandler,
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 28
+
+
 1514:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&LPTIM2_IRQHandler,
 1515:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&LPTIM3_IRQHandler,
 1516:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	&LPTIM4_IRQHandler,
@@ -1670,802 +1669,775 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 1
 1559:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
 1560:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** void __attribute__((interrupt ("UNDEF"), noreturn)) Default_Handler()
 1561:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** {
-  29              		.loc 1 1561 1 view -0
-  30              		.cfi_startproc
-  31              		@ Volatile: function does not return.
-  32              		@ Stack Align: May be called with mis-aligned SP.
-  33              		@ args = 0, pretend = 0, frame = 0
-  34              		@ frame_needed = 0, uses_anonymous_args = 0
-  35              		@ link register save eliminated.
-  36 0000 6846     		mov	r0, sp
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 29
+  28              		.loc 1 1561 1 view -0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ Stack Align: May be called with mis-aligned SP.
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  35 0000 6846     		mov	r0, sp
+  36              		.cfi_register 13, 0
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 29
 
 
-  37              		.cfi_register 13, 0
-  38 0002 20F00701 		bic	r1, r0, #7
-  39 0006 8D46     		mov	sp, r1
-  40              	.L2:
+  37 0002 20F00701 		bic	r1, r0, #7
+  38 0006 8D46     		mov	sp, r1
+  39              	.L2:
 1562:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//If you get stuck here, your code is missing a handler for some interrupt.
 1563:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Define a 'DEBUG_DEFAULT_INTERRUPT_HANDLERS' macro via VisualGDB Project Properties and rebuild y
 1564:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//This will pinpoint a specific missing vector.
 1565:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	for (;;) ;
-  41              		.loc 1 1565 2 discriminator 1 view .LVU1
-  42              		.loc 1 1565 11 discriminator 1 view .LVU2
-  43              		.loc 1 1565 8 discriminator 1 view .LVU3
-  44              		.loc 1 1565 2 discriminator 1 view .LVU4
-  45              		.loc 1 1565 11 discriminator 1 view .LVU5
-  46              		.loc 1 1565 8 discriminator 1 view .LVU6
-  47 0008 FEE7     		b	.L2
-  48              		.cfi_endproc
-  49              	.LFE338:
-  51              		.weak	WAKEUP_PIN_IRQHandler
-  52              		.thumb_set WAKEUP_PIN_IRQHandler,Default_Handler
-  53              		.weak	SAI4_IRQHandler
-  54              		.thumb_set SAI4_IRQHandler,Default_Handler
-  55              		.weak	ECC_IRQHandler
-  56              		.thumb_set ECC_IRQHandler,Default_Handler
-  57              		.weak	CRS_IRQHandler
-  58              		.thumb_set CRS_IRQHandler,Default_Handler
-  59              		.weak	LPUART1_IRQHandler
-  60              		.thumb_set LPUART1_IRQHandler,Default_Handler
-  61              		.weak	LPTIM5_IRQHandler
-  62              		.thumb_set LPTIM5_IRQHandler,Default_Handler
-  63              		.weak	LPTIM4_IRQHandler
-  64              		.thumb_set LPTIM4_IRQHandler,Default_Handler
-  65              		.weak	LPTIM3_IRQHandler
-  66              		.thumb_set LPTIM3_IRQHandler,Default_Handler
-  67              		.weak	LPTIM2_IRQHandler
-  68              		.thumb_set LPTIM2_IRQHandler,Default_Handler
-  69              		.weak	COMP1_IRQHandler
-  70              		.thumb_set COMP1_IRQHandler,Default_Handler
-  71              		.weak	BDMA_Channel7_IRQHandler
-  72              		.thumb_set BDMA_Channel7_IRQHandler,Default_Handler
-  73              		.weak	BDMA_Channel6_IRQHandler
-  74              		.thumb_set BDMA_Channel6_IRQHandler,Default_Handler
-  75              		.weak	BDMA_Channel5_IRQHandler
-  76              		.thumb_set BDMA_Channel5_IRQHandler,Default_Handler
-  77              		.weak	BDMA_Channel4_IRQHandler
-  78              		.thumb_set BDMA_Channel4_IRQHandler,Default_Handler
-  79              		.weak	BDMA_Channel3_IRQHandler
-  80              		.thumb_set BDMA_Channel3_IRQHandler,Default_Handler
-  81              		.weak	BDMA_Channel2_IRQHandler
-  82              		.thumb_set BDMA_Channel2_IRQHandler,Default_Handler
-  83              		.weak	BDMA_Channel1_IRQHandler
-  84              		.thumb_set BDMA_Channel1_IRQHandler,Default_Handler
-  85              		.weak	BDMA_Channel0_IRQHandler
-  86              		.thumb_set BDMA_Channel0_IRQHandler,Default_Handler
-  87              		.weak	DMAMUX2_OVR_IRQHandler
-  88              		.thumb_set DMAMUX2_OVR_IRQHandler,Default_Handler
-  89              		.weak	ADC3_IRQHandler
-  90              		.thumb_set ADC3_IRQHandler,Default_Handler
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 30
+  40              		.loc 1 1565 2 discriminator 1 view .LVU1
+  41              		.loc 1 1565 11 discriminator 1 view .LVU2
+  42              		.loc 1 1565 8 discriminator 1 view .LVU3
+  43 0008 FEE7     		b	.L2
+  44              		.cfi_endproc
+  45              	.LFE338:
+  47              		.weak	WAKEUP_PIN_IRQHandler
+  48              		.thumb_set WAKEUP_PIN_IRQHandler,Default_Handler
+  49              		.weak	SAI4_IRQHandler
+  50              		.thumb_set SAI4_IRQHandler,Default_Handler
+  51              		.weak	ECC_IRQHandler
+  52              		.thumb_set ECC_IRQHandler,Default_Handler
+  53              		.weak	CRS_IRQHandler
+  54              		.thumb_set CRS_IRQHandler,Default_Handler
+  55              		.weak	LPUART1_IRQHandler
+  56              		.thumb_set LPUART1_IRQHandler,Default_Handler
+  57              		.weak	LPTIM5_IRQHandler
+  58              		.thumb_set LPTIM5_IRQHandler,Default_Handler
+  59              		.weak	LPTIM4_IRQHandler
+  60              		.thumb_set LPTIM4_IRQHandler,Default_Handler
+  61              		.weak	LPTIM3_IRQHandler
+  62              		.thumb_set LPTIM3_IRQHandler,Default_Handler
+  63              		.weak	LPTIM2_IRQHandler
+  64              		.thumb_set LPTIM2_IRQHandler,Default_Handler
+  65              		.weak	COMP1_IRQHandler
+  66              		.thumb_set COMP1_IRQHandler,Default_Handler
+  67              		.weak	BDMA_Channel7_IRQHandler
+  68              		.thumb_set BDMA_Channel7_IRQHandler,Default_Handler
+  69              		.weak	BDMA_Channel6_IRQHandler
+  70              		.thumb_set BDMA_Channel6_IRQHandler,Default_Handler
+  71              		.weak	BDMA_Channel5_IRQHandler
+  72              		.thumb_set BDMA_Channel5_IRQHandler,Default_Handler
+  73              		.weak	BDMA_Channel4_IRQHandler
+  74              		.thumb_set BDMA_Channel4_IRQHandler,Default_Handler
+  75              		.weak	BDMA_Channel3_IRQHandler
+  76              		.thumb_set BDMA_Channel3_IRQHandler,Default_Handler
+  77              		.weak	BDMA_Channel2_IRQHandler
+  78              		.thumb_set BDMA_Channel2_IRQHandler,Default_Handler
+  79              		.weak	BDMA_Channel1_IRQHandler
+  80              		.thumb_set BDMA_Channel1_IRQHandler,Default_Handler
+  81              		.weak	BDMA_Channel0_IRQHandler
+  82              		.thumb_set BDMA_Channel0_IRQHandler,Default_Handler
+  83              		.weak	DMAMUX2_OVR_IRQHandler
+  84              		.thumb_set DMAMUX2_OVR_IRQHandler,Default_Handler
+  85              		.weak	ADC3_IRQHandler
+  86              		.thumb_set ADC3_IRQHandler,Default_Handler
+  87              		.weak	HSEM1_IRQHandler
+  88              		.thumb_set HSEM1_IRQHandler,Default_Handler
+  89              		.weak	SDMMC2_IRQHandler
+  90              		.thumb_set SDMMC2_IRQHandler,Default_Handler
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 30
 
 
-  91              		.weak	HSEM1_IRQHandler
-  92              		.thumb_set HSEM1_IRQHandler,Default_Handler
-  93              		.weak	SDMMC2_IRQHandler
-  94              		.thumb_set SDMMC2_IRQHandler,Default_Handler
-  95              		.weak	MDMA_IRQHandler
-  96              		.thumb_set MDMA_IRQHandler,Default_Handler
-  97              		.weak	JPEG_IRQHandler
-  98              		.thumb_set JPEG_IRQHandler,Default_Handler
-  99              		.weak	MDIOS_IRQHandler
- 100              		.thumb_set MDIOS_IRQHandler,Default_Handler
- 101              		.weak	MDIOS_WKUP_IRQHandler
- 102              		.thumb_set MDIOS_WKUP_IRQHandler,Default_Handler
- 103              		.weak	TIM17_IRQHandler
- 104              		.thumb_set TIM17_IRQHandler,Default_Handler
- 105              		.weak	TIM16_IRQHandler
- 106              		.thumb_set TIM16_IRQHandler,Default_Handler
- 107              		.weak	TIM15_IRQHandler
- 108              		.thumb_set TIM15_IRQHandler,Default_Handler
- 109              		.weak	SWPMI1_IRQHandler
- 110              		.thumb_set SWPMI1_IRQHandler,Default_Handler
- 111              		.weak	SAI3_IRQHandler
- 112              		.thumb_set SAI3_IRQHandler,Default_Handler
- 113              		.weak	DFSDM1_FLT3_IRQHandler
- 114              		.thumb_set DFSDM1_FLT3_IRQHandler,Default_Handler
- 115              		.weak	DFSDM1_FLT2_IRQHandler
- 116              		.thumb_set DFSDM1_FLT2_IRQHandler,Default_Handler
- 117              		.weak	DFSDM1_FLT1_IRQHandler
- 118              		.thumb_set DFSDM1_FLT1_IRQHandler,Default_Handler
- 119              		.weak	DFSDM1_FLT0_IRQHandler
- 120              		.thumb_set DFSDM1_FLT0_IRQHandler,Default_Handler
- 121              		.weak	HRTIM1_FLT_IRQHandler
- 122              		.thumb_set HRTIM1_FLT_IRQHandler,Default_Handler
- 123              		.weak	HRTIM1_TIME_IRQHandler
- 124              		.thumb_set HRTIM1_TIME_IRQHandler,Default_Handler
- 125              		.weak	HRTIM1_TIMD_IRQHandler
- 126              		.thumb_set HRTIM1_TIMD_IRQHandler,Default_Handler
- 127              		.weak	HRTIM1_TIMC_IRQHandler
- 128              		.thumb_set HRTIM1_TIMC_IRQHandler,Default_Handler
- 129              		.weak	HRTIM1_TIMB_IRQHandler
- 130              		.thumb_set HRTIM1_TIMB_IRQHandler,Default_Handler
- 131              		.weak	HRTIM1_TIMA_IRQHandler
- 132              		.thumb_set HRTIM1_TIMA_IRQHandler,Default_Handler
- 133              		.weak	HRTIM1_Master_IRQHandler
- 134              		.thumb_set HRTIM1_Master_IRQHandler,Default_Handler
- 135              		.weak	DMAMUX1_OVR_IRQHandler
- 136              		.thumb_set DMAMUX1_OVR_IRQHandler,Default_Handler
- 137              		.weak	OTG_FS_IRQHandler
- 138              		.thumb_set OTG_FS_IRQHandler,Default_Handler
- 139              		.weak	OTG_FS_WKUP_IRQHandler
- 140              		.thumb_set OTG_FS_WKUP_IRQHandler,Default_Handler
- 141              		.weak	OTG_FS_EP1_IN_IRQHandler
- 142              		.thumb_set OTG_FS_EP1_IN_IRQHandler,Default_Handler
- 143              		.weak	OTG_FS_EP1_OUT_IRQHandler
- 144              		.thumb_set OTG_FS_EP1_OUT_IRQHandler,Default_Handler
- 145              		.weak	SPDIF_RX_IRQHandler
- 146              		.thumb_set SPDIF_RX_IRQHandler,Default_Handler
- 147              		.weak	I2C4_ER_IRQHandler
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 31
+  91              		.weak	MDMA_IRQHandler
+  92              		.thumb_set MDMA_IRQHandler,Default_Handler
+  93              		.weak	JPEG_IRQHandler
+  94              		.thumb_set JPEG_IRQHandler,Default_Handler
+  95              		.weak	MDIOS_IRQHandler
+  96              		.thumb_set MDIOS_IRQHandler,Default_Handler
+  97              		.weak	MDIOS_WKUP_IRQHandler
+  98              		.thumb_set MDIOS_WKUP_IRQHandler,Default_Handler
+  99              		.weak	TIM17_IRQHandler
+ 100              		.thumb_set TIM17_IRQHandler,Default_Handler
+ 101              		.weak	TIM16_IRQHandler
+ 102              		.thumb_set TIM16_IRQHandler,Default_Handler
+ 103              		.weak	TIM15_IRQHandler
+ 104              		.thumb_set TIM15_IRQHandler,Default_Handler
+ 105              		.weak	SWPMI1_IRQHandler
+ 106              		.thumb_set SWPMI1_IRQHandler,Default_Handler
+ 107              		.weak	SAI3_IRQHandler
+ 108              		.thumb_set SAI3_IRQHandler,Default_Handler
+ 109              		.weak	DFSDM1_FLT3_IRQHandler
+ 110              		.thumb_set DFSDM1_FLT3_IRQHandler,Default_Handler
+ 111              		.weak	DFSDM1_FLT2_IRQHandler
+ 112              		.thumb_set DFSDM1_FLT2_IRQHandler,Default_Handler
+ 113              		.weak	DFSDM1_FLT1_IRQHandler
+ 114              		.thumb_set DFSDM1_FLT1_IRQHandler,Default_Handler
+ 115              		.weak	DFSDM1_FLT0_IRQHandler
+ 116              		.thumb_set DFSDM1_FLT0_IRQHandler,Default_Handler
+ 117              		.weak	HRTIM1_FLT_IRQHandler
+ 118              		.thumb_set HRTIM1_FLT_IRQHandler,Default_Handler
+ 119              		.weak	HRTIM1_TIME_IRQHandler
+ 120              		.thumb_set HRTIM1_TIME_IRQHandler,Default_Handler
+ 121              		.weak	HRTIM1_TIMD_IRQHandler
+ 122              		.thumb_set HRTIM1_TIMD_IRQHandler,Default_Handler
+ 123              		.weak	HRTIM1_TIMC_IRQHandler
+ 124              		.thumb_set HRTIM1_TIMC_IRQHandler,Default_Handler
+ 125              		.weak	HRTIM1_TIMB_IRQHandler
+ 126              		.thumb_set HRTIM1_TIMB_IRQHandler,Default_Handler
+ 127              		.weak	HRTIM1_TIMA_IRQHandler
+ 128              		.thumb_set HRTIM1_TIMA_IRQHandler,Default_Handler
+ 129              		.weak	HRTIM1_Master_IRQHandler
+ 130              		.thumb_set HRTIM1_Master_IRQHandler,Default_Handler
+ 131              		.weak	DMAMUX1_OVR_IRQHandler
+ 132              		.thumb_set DMAMUX1_OVR_IRQHandler,Default_Handler
+ 133              		.weak	OTG_FS_IRQHandler
+ 134              		.thumb_set OTG_FS_IRQHandler,Default_Handler
+ 135              		.weak	OTG_FS_WKUP_IRQHandler
+ 136              		.thumb_set OTG_FS_WKUP_IRQHandler,Default_Handler
+ 137              		.weak	OTG_FS_EP1_IN_IRQHandler
+ 138              		.thumb_set OTG_FS_EP1_IN_IRQHandler,Default_Handler
+ 139              		.weak	OTG_FS_EP1_OUT_IRQHandler
+ 140              		.thumb_set OTG_FS_EP1_OUT_IRQHandler,Default_Handler
+ 141              		.weak	SPDIF_RX_IRQHandler
+ 142              		.thumb_set SPDIF_RX_IRQHandler,Default_Handler
+ 143              		.weak	I2C4_ER_IRQHandler
+ 144              		.thumb_set I2C4_ER_IRQHandler,Default_Handler
+ 145              		.weak	I2C4_EV_IRQHandler
+ 146              		.thumb_set I2C4_EV_IRQHandler,Default_Handler
+ 147              		.weak	CEC_IRQHandler
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 31
 
 
- 148              		.thumb_set I2C4_ER_IRQHandler,Default_Handler
- 149              		.weak	I2C4_EV_IRQHandler
- 150              		.thumb_set I2C4_EV_IRQHandler,Default_Handler
- 151              		.weak	CEC_IRQHandler
- 152              		.thumb_set CEC_IRQHandler,Default_Handler
- 153              		.weak	LPTIM1_IRQHandler
- 154              		.thumb_set LPTIM1_IRQHandler,Default_Handler
- 155              		.weak	QUADSPI_IRQHandler
- 156              		.thumb_set QUADSPI_IRQHandler,Default_Handler
- 157              		.weak	SAI2_IRQHandler
- 158              		.thumb_set SAI2_IRQHandler,Default_Handler
- 159              		.weak	DMA2D_IRQHandler
- 160              		.thumb_set DMA2D_IRQHandler,Default_Handler
- 161              		.weak	LTDC_ER_IRQHandler
- 162              		.thumb_set LTDC_ER_IRQHandler,Default_Handler
- 163              		.weak	LTDC_IRQHandler
- 164              		.thumb_set LTDC_IRQHandler,Default_Handler
- 165              		.weak	SAI1_IRQHandler
- 166              		.thumb_set SAI1_IRQHandler,Default_Handler
- 167              		.weak	SPI6_IRQHandler
- 168              		.thumb_set SPI6_IRQHandler,Default_Handler
- 169              		.weak	SPI5_IRQHandler
- 170              		.thumb_set SPI5_IRQHandler,Default_Handler
- 171              		.weak	SPI4_IRQHandler
- 172              		.thumb_set SPI4_IRQHandler,Default_Handler
- 173              		.weak	UART8_IRQHandler
- 174              		.thumb_set UART8_IRQHandler,Default_Handler
- 175              		.weak	UART7_IRQHandler
- 176              		.thumb_set UART7_IRQHandler,Default_Handler
- 177              		.weak	FPU_IRQHandler
- 178              		.thumb_set FPU_IRQHandler,Default_Handler
- 179              		.weak	HASH_RNG_IRQHandler
- 180              		.thumb_set HASH_RNG_IRQHandler,Default_Handler
- 181              		.weak	CRYP_IRQHandler
- 182              		.thumb_set CRYP_IRQHandler,Default_Handler
- 183              		.weak	DCMI_IRQHandler
- 184              		.thumb_set DCMI_IRQHandler,Default_Handler
- 185              		.weak	OTG_HS_IRQHandler
- 186              		.thumb_set OTG_HS_IRQHandler,Default_Handler
- 187              		.weak	OTG_HS_WKUP_IRQHandler
- 188              		.thumb_set OTG_HS_WKUP_IRQHandler,Default_Handler
- 189              		.weak	OTG_HS_EP1_IN_IRQHandler
- 190              		.thumb_set OTG_HS_EP1_IN_IRQHandler,Default_Handler
- 191              		.weak	OTG_HS_EP1_OUT_IRQHandler
- 192              		.thumb_set OTG_HS_EP1_OUT_IRQHandler,Default_Handler
- 193              		.weak	I2C3_ER_IRQHandler
- 194              		.thumb_set I2C3_ER_IRQHandler,Default_Handler
- 195              		.weak	I2C3_EV_IRQHandler
- 196              		.thumb_set I2C3_EV_IRQHandler,Default_Handler
- 197              		.weak	USART6_IRQHandler
- 198              		.thumb_set USART6_IRQHandler,Default_Handler
- 199              		.weak	DMA2_Stream7_IRQHandler
- 200              		.thumb_set DMA2_Stream7_IRQHandler,Default_Handler
- 201              		.weak	DMA2_Stream6_IRQHandler
- 202              		.thumb_set DMA2_Stream6_IRQHandler,Default_Handler
- 203              		.weak	DMA2_Stream5_IRQHandler
- 204              		.thumb_set DMA2_Stream5_IRQHandler,Default_Handler
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 32
+ 148              		.thumb_set CEC_IRQHandler,Default_Handler
+ 149              		.weak	LPTIM1_IRQHandler
+ 150              		.thumb_set LPTIM1_IRQHandler,Default_Handler
+ 151              		.weak	QUADSPI_IRQHandler
+ 152              		.thumb_set QUADSPI_IRQHandler,Default_Handler
+ 153              		.weak	SAI2_IRQHandler
+ 154              		.thumb_set SAI2_IRQHandler,Default_Handler
+ 155              		.weak	DMA2D_IRQHandler
+ 156              		.thumb_set DMA2D_IRQHandler,Default_Handler
+ 157              		.weak	LTDC_ER_IRQHandler
+ 158              		.thumb_set LTDC_ER_IRQHandler,Default_Handler
+ 159              		.weak	LTDC_IRQHandler
+ 160              		.thumb_set LTDC_IRQHandler,Default_Handler
+ 161              		.weak	SAI1_IRQHandler
+ 162              		.thumb_set SAI1_IRQHandler,Default_Handler
+ 163              		.weak	SPI6_IRQHandler
+ 164              		.thumb_set SPI6_IRQHandler,Default_Handler
+ 165              		.weak	SPI5_IRQHandler
+ 166              		.thumb_set SPI5_IRQHandler,Default_Handler
+ 167              		.weak	SPI4_IRQHandler
+ 168              		.thumb_set SPI4_IRQHandler,Default_Handler
+ 169              		.weak	UART8_IRQHandler
+ 170              		.thumb_set UART8_IRQHandler,Default_Handler
+ 171              		.weak	UART7_IRQHandler
+ 172              		.thumb_set UART7_IRQHandler,Default_Handler
+ 173              		.weak	FPU_IRQHandler
+ 174              		.thumb_set FPU_IRQHandler,Default_Handler
+ 175              		.weak	HASH_RNG_IRQHandler
+ 176              		.thumb_set HASH_RNG_IRQHandler,Default_Handler
+ 177              		.weak	CRYP_IRQHandler
+ 178              		.thumb_set CRYP_IRQHandler,Default_Handler
+ 179              		.weak	DCMI_IRQHandler
+ 180              		.thumb_set DCMI_IRQHandler,Default_Handler
+ 181              		.weak	OTG_HS_IRQHandler
+ 182              		.thumb_set OTG_HS_IRQHandler,Default_Handler
+ 183              		.weak	OTG_HS_WKUP_IRQHandler
+ 184              		.thumb_set OTG_HS_WKUP_IRQHandler,Default_Handler
+ 185              		.weak	OTG_HS_EP1_IN_IRQHandler
+ 186              		.thumb_set OTG_HS_EP1_IN_IRQHandler,Default_Handler
+ 187              		.weak	OTG_HS_EP1_OUT_IRQHandler
+ 188              		.thumb_set OTG_HS_EP1_OUT_IRQHandler,Default_Handler
+ 189              		.weak	I2C3_ER_IRQHandler
+ 190              		.thumb_set I2C3_ER_IRQHandler,Default_Handler
+ 191              		.weak	I2C3_EV_IRQHandler
+ 192              		.thumb_set I2C3_EV_IRQHandler,Default_Handler
+ 193              		.weak	USART6_IRQHandler
+ 194              		.thumb_set USART6_IRQHandler,Default_Handler
+ 195              		.weak	DMA2_Stream7_IRQHandler
+ 196              		.thumb_set DMA2_Stream7_IRQHandler,Default_Handler
+ 197              		.weak	DMA2_Stream6_IRQHandler
+ 198              		.thumb_set DMA2_Stream6_IRQHandler,Default_Handler
+ 199              		.weak	DMA2_Stream5_IRQHandler
+ 200              		.thumb_set DMA2_Stream5_IRQHandler,Default_Handler
+ 201              		.weak	FDCAN_CAL_IRQHandler
+ 202              		.thumb_set FDCAN_CAL_IRQHandler,Default_Handler
+ 203              		.weak	ETH_WKUP_IRQHandler
+ 204              		.thumb_set ETH_WKUP_IRQHandler,Default_Handler
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 32
 
 
- 205              		.weak	FDCAN_CAL_IRQHandler
- 206              		.thumb_set FDCAN_CAL_IRQHandler,Default_Handler
- 207              		.weak	ETH_WKUP_IRQHandler
- 208              		.thumb_set ETH_WKUP_IRQHandler,Default_Handler
- 209              		.weak	ETH_IRQHandler
- 210              		.thumb_set ETH_IRQHandler,Default_Handler
- 211              		.weak	DMA2_Stream4_IRQHandler
- 212              		.thumb_set DMA2_Stream4_IRQHandler,Default_Handler
- 213              		.weak	DMA2_Stream3_IRQHandler
- 214              		.thumb_set DMA2_Stream3_IRQHandler,Default_Handler
- 215              		.weak	DMA2_Stream2_IRQHandler
- 216              		.thumb_set DMA2_Stream2_IRQHandler,Default_Handler
- 217              		.weak	DMA2_Stream1_IRQHandler
- 218              		.thumb_set DMA2_Stream1_IRQHandler,Default_Handler
- 219              		.weak	DMA2_Stream0_IRQHandler
- 220              		.thumb_set DMA2_Stream0_IRQHandler,Default_Handler
- 221              		.weak	TIM7_IRQHandler
- 222              		.thumb_set TIM7_IRQHandler,Default_Handler
- 223              		.weak	TIM6_DAC_IRQHandler
- 224              		.thumb_set TIM6_DAC_IRQHandler,Default_Handler
- 225              		.weak	UART5_IRQHandler
- 226              		.thumb_set UART5_IRQHandler,Default_Handler
- 227              		.weak	UART4_IRQHandler
- 228              		.thumb_set UART4_IRQHandler,Default_Handler
- 229              		.weak	SPI3_IRQHandler
- 230              		.thumb_set SPI3_IRQHandler,Default_Handler
- 231              		.weak	TIM5_IRQHandler
- 232              		.thumb_set TIM5_IRQHandler,Default_Handler
- 233              		.weak	SDMMC1_IRQHandler
- 234              		.thumb_set SDMMC1_IRQHandler,Default_Handler
- 235              		.weak	FMC_IRQHandler
- 236              		.thumb_set FMC_IRQHandler,Default_Handler
- 237              		.weak	DMA1_Stream7_IRQHandler
- 238              		.thumb_set DMA1_Stream7_IRQHandler,Default_Handler
- 239              		.weak	TIM8_CC_IRQHandler
- 240              		.thumb_set TIM8_CC_IRQHandler,Default_Handler
- 241              		.weak	TIM8_TRG_COM_TIM14_IRQHandler
- 242              		.thumb_set TIM8_TRG_COM_TIM14_IRQHandler,Default_Handler
- 243              		.weak	TIM8_UP_TIM13_IRQHandler
- 244              		.thumb_set TIM8_UP_TIM13_IRQHandler,Default_Handler
- 245              		.weak	TIM8_BRK_TIM12_IRQHandler
- 246              		.thumb_set TIM8_BRK_TIM12_IRQHandler,Default_Handler
- 247              		.weak	RTC_Alarm_IRQHandler
- 248              		.thumb_set RTC_Alarm_IRQHandler,Default_Handler
- 249              		.weak	EXTI15_10_IRQHandler
- 250              		.thumb_set EXTI15_10_IRQHandler,Default_Handler
- 251              		.weak	USART3_IRQHandler
- 252              		.thumb_set USART3_IRQHandler,Default_Handler
- 253              		.weak	USART2_IRQHandler
- 254              		.thumb_set USART2_IRQHandler,Default_Handler
- 255              		.weak	USART1_IRQHandler
- 256              		.thumb_set USART1_IRQHandler,Default_Handler
- 257              		.weak	SPI2_IRQHandler
- 258              		.thumb_set SPI2_IRQHandler,Default_Handler
- 259              		.weak	SPI1_IRQHandler
- 260              		.thumb_set SPI1_IRQHandler,Default_Handler
- 261              		.weak	I2C2_ER_IRQHandler
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 33
+ 205              		.weak	ETH_IRQHandler
+ 206              		.thumb_set ETH_IRQHandler,Default_Handler
+ 207              		.weak	DMA2_Stream4_IRQHandler
+ 208              		.thumb_set DMA2_Stream4_IRQHandler,Default_Handler
+ 209              		.weak	DMA2_Stream3_IRQHandler
+ 210              		.thumb_set DMA2_Stream3_IRQHandler,Default_Handler
+ 211              		.weak	DMA2_Stream2_IRQHandler
+ 212              		.thumb_set DMA2_Stream2_IRQHandler,Default_Handler
+ 213              		.weak	DMA2_Stream1_IRQHandler
+ 214              		.thumb_set DMA2_Stream1_IRQHandler,Default_Handler
+ 215              		.weak	DMA2_Stream0_IRQHandler
+ 216              		.thumb_set DMA2_Stream0_IRQHandler,Default_Handler
+ 217              		.weak	TIM7_IRQHandler
+ 218              		.thumb_set TIM7_IRQHandler,Default_Handler
+ 219              		.weak	TIM6_DAC_IRQHandler
+ 220              		.thumb_set TIM6_DAC_IRQHandler,Default_Handler
+ 221              		.weak	UART5_IRQHandler
+ 222              		.thumb_set UART5_IRQHandler,Default_Handler
+ 223              		.weak	UART4_IRQHandler
+ 224              		.thumb_set UART4_IRQHandler,Default_Handler
+ 225              		.weak	SPI3_IRQHandler
+ 226              		.thumb_set SPI3_IRQHandler,Default_Handler
+ 227              		.weak	TIM5_IRQHandler
+ 228              		.thumb_set TIM5_IRQHandler,Default_Handler
+ 229              		.weak	SDMMC1_IRQHandler
+ 230              		.thumb_set SDMMC1_IRQHandler,Default_Handler
+ 231              		.weak	FMC_IRQHandler
+ 232              		.thumb_set FMC_IRQHandler,Default_Handler
+ 233              		.weak	DMA1_Stream7_IRQHandler
+ 234              		.thumb_set DMA1_Stream7_IRQHandler,Default_Handler
+ 235              		.weak	TIM8_CC_IRQHandler
+ 236              		.thumb_set TIM8_CC_IRQHandler,Default_Handler
+ 237              		.weak	TIM8_TRG_COM_TIM14_IRQHandler
+ 238              		.thumb_set TIM8_TRG_COM_TIM14_IRQHandler,Default_Handler
+ 239              		.weak	TIM8_UP_TIM13_IRQHandler
+ 240              		.thumb_set TIM8_UP_TIM13_IRQHandler,Default_Handler
+ 241              		.weak	TIM8_BRK_TIM12_IRQHandler
+ 242              		.thumb_set TIM8_BRK_TIM12_IRQHandler,Default_Handler
+ 243              		.weak	RTC_Alarm_IRQHandler
+ 244              		.thumb_set RTC_Alarm_IRQHandler,Default_Handler
+ 245              		.weak	EXTI15_10_IRQHandler
+ 246              		.thumb_set EXTI15_10_IRQHandler,Default_Handler
+ 247              		.weak	USART3_IRQHandler
+ 248              		.thumb_set USART3_IRQHandler,Default_Handler
+ 249              		.weak	USART2_IRQHandler
+ 250              		.thumb_set USART2_IRQHandler,Default_Handler
+ 251              		.weak	USART1_IRQHandler
+ 252              		.thumb_set USART1_IRQHandler,Default_Handler
+ 253              		.weak	SPI2_IRQHandler
+ 254              		.thumb_set SPI2_IRQHandler,Default_Handler
+ 255              		.weak	SPI1_IRQHandler
+ 256              		.thumb_set SPI1_IRQHandler,Default_Handler
+ 257              		.weak	I2C2_ER_IRQHandler
+ 258              		.thumb_set I2C2_ER_IRQHandler,Default_Handler
+ 259              		.weak	I2C2_EV_IRQHandler
+ 260              		.thumb_set I2C2_EV_IRQHandler,Default_Handler
+ 261              		.weak	I2C1_ER_IRQHandler
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 33
 
 
- 262              		.thumb_set I2C2_ER_IRQHandler,Default_Handler
- 263              		.weak	I2C2_EV_IRQHandler
- 264              		.thumb_set I2C2_EV_IRQHandler,Default_Handler
- 265              		.weak	I2C1_ER_IRQHandler
- 266              		.thumb_set I2C1_ER_IRQHandler,Default_Handler
- 267              		.weak	I2C1_EV_IRQHandler
- 268              		.thumb_set I2C1_EV_IRQHandler,Default_Handler
- 269              		.weak	TIM4_IRQHandler
- 270              		.thumb_set TIM4_IRQHandler,Default_Handler
- 271              		.weak	TIM3_IRQHandler
- 272              		.thumb_set TIM3_IRQHandler,Default_Handler
- 273              		.weak	TIM2_IRQHandler
- 274              		.thumb_set TIM2_IRQHandler,Default_Handler
- 275              		.weak	TIM1_CC_IRQHandler
- 276              		.thumb_set TIM1_CC_IRQHandler,Default_Handler
- 277              		.weak	TIM1_TRG_COM_IRQHandler
- 278              		.thumb_set TIM1_TRG_COM_IRQHandler,Default_Handler
- 279              		.weak	TIM1_UP_IRQHandler
- 280              		.thumb_set TIM1_UP_IRQHandler,Default_Handler
- 281              		.weak	TIM1_BRK_IRQHandler
- 282              		.thumb_set TIM1_BRK_IRQHandler,Default_Handler
- 283              		.weak	EXTI9_5_IRQHandler
- 284              		.thumb_set EXTI9_5_IRQHandler,Default_Handler
- 285              		.weak	FDCAN2_IT1_IRQHandler
- 286              		.thumb_set FDCAN2_IT1_IRQHandler,Default_Handler
- 287              		.weak	FDCAN1_IT1_IRQHandler
- 288              		.thumb_set FDCAN1_IT1_IRQHandler,Default_Handler
- 289              		.weak	FDCAN2_IT0_IRQHandler
- 290              		.thumb_set FDCAN2_IT0_IRQHandler,Default_Handler
- 291              		.weak	FDCAN1_IT0_IRQHandler
- 292              		.thumb_set FDCAN1_IT0_IRQHandler,Default_Handler
- 293              		.weak	ADC_IRQHandler
- 294              		.thumb_set ADC_IRQHandler,Default_Handler
- 295              		.weak	DMA1_Stream6_IRQHandler
- 296              		.thumb_set DMA1_Stream6_IRQHandler,Default_Handler
- 297              		.weak	DMA1_Stream5_IRQHandler
- 298              		.thumb_set DMA1_Stream5_IRQHandler,Default_Handler
- 299              		.weak	DMA1_Stream4_IRQHandler
- 300              		.thumb_set DMA1_Stream4_IRQHandler,Default_Handler
- 301              		.weak	DMA1_Stream3_IRQHandler
- 302              		.thumb_set DMA1_Stream3_IRQHandler,Default_Handler
- 303              		.weak	DMA1_Stream2_IRQHandler
- 304              		.thumb_set DMA1_Stream2_IRQHandler,Default_Handler
- 305              		.weak	DMA1_Stream1_IRQHandler
- 306              		.thumb_set DMA1_Stream1_IRQHandler,Default_Handler
- 307              		.weak	DMA1_Stream0_IRQHandler
- 308              		.thumb_set DMA1_Stream0_IRQHandler,Default_Handler
- 309              		.weak	EXTI4_IRQHandler
- 310              		.thumb_set EXTI4_IRQHandler,Default_Handler
- 311              		.weak	EXTI3_IRQHandler
- 312              		.thumb_set EXTI3_IRQHandler,Default_Handler
- 313              		.weak	EXTI2_IRQHandler
- 314              		.thumb_set EXTI2_IRQHandler,Default_Handler
- 315              		.weak	EXTI1_IRQHandler
- 316              		.thumb_set EXTI1_IRQHandler,Default_Handler
- 317              		.weak	EXTI0_IRQHandler
- 318              		.thumb_set EXTI0_IRQHandler,Default_Handler
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 34
+ 262              		.thumb_set I2C1_ER_IRQHandler,Default_Handler
+ 263              		.weak	I2C1_EV_IRQHandler
+ 264              		.thumb_set I2C1_EV_IRQHandler,Default_Handler
+ 265              		.weak	TIM4_IRQHandler
+ 266              		.thumb_set TIM4_IRQHandler,Default_Handler
+ 267              		.weak	TIM3_IRQHandler
+ 268              		.thumb_set TIM3_IRQHandler,Default_Handler
+ 269              		.weak	TIM2_IRQHandler
+ 270              		.thumb_set TIM2_IRQHandler,Default_Handler
+ 271              		.weak	TIM1_CC_IRQHandler
+ 272              		.thumb_set TIM1_CC_IRQHandler,Default_Handler
+ 273              		.weak	TIM1_TRG_COM_IRQHandler
+ 274              		.thumb_set TIM1_TRG_COM_IRQHandler,Default_Handler
+ 275              		.weak	TIM1_UP_IRQHandler
+ 276              		.thumb_set TIM1_UP_IRQHandler,Default_Handler
+ 277              		.weak	TIM1_BRK_IRQHandler
+ 278              		.thumb_set TIM1_BRK_IRQHandler,Default_Handler
+ 279              		.weak	EXTI9_5_IRQHandler
+ 280              		.thumb_set EXTI9_5_IRQHandler,Default_Handler
+ 281              		.weak	FDCAN2_IT1_IRQHandler
+ 282              		.thumb_set FDCAN2_IT1_IRQHandler,Default_Handler
+ 283              		.weak	FDCAN1_IT1_IRQHandler
+ 284              		.thumb_set FDCAN1_IT1_IRQHandler,Default_Handler
+ 285              		.weak	FDCAN2_IT0_IRQHandler
+ 286              		.thumb_set FDCAN2_IT0_IRQHandler,Default_Handler
+ 287              		.weak	FDCAN1_IT0_IRQHandler
+ 288              		.thumb_set FDCAN1_IT0_IRQHandler,Default_Handler
+ 289              		.weak	ADC_IRQHandler
+ 290              		.thumb_set ADC_IRQHandler,Default_Handler
+ 291              		.weak	DMA1_Stream6_IRQHandler
+ 292              		.thumb_set DMA1_Stream6_IRQHandler,Default_Handler
+ 293              		.weak	DMA1_Stream5_IRQHandler
+ 294              		.thumb_set DMA1_Stream5_IRQHandler,Default_Handler
+ 295              		.weak	DMA1_Stream4_IRQHandler
+ 296              		.thumb_set DMA1_Stream4_IRQHandler,Default_Handler
+ 297              		.weak	DMA1_Stream3_IRQHandler
+ 298              		.thumb_set DMA1_Stream3_IRQHandler,Default_Handler
+ 299              		.weak	DMA1_Stream2_IRQHandler
+ 300              		.thumb_set DMA1_Stream2_IRQHandler,Default_Handler
+ 301              		.weak	DMA1_Stream1_IRQHandler
+ 302              		.thumb_set DMA1_Stream1_IRQHandler,Default_Handler
+ 303              		.weak	DMA1_Stream0_IRQHandler
+ 304              		.thumb_set DMA1_Stream0_IRQHandler,Default_Handler
+ 305              		.weak	EXTI4_IRQHandler
+ 306              		.thumb_set EXTI4_IRQHandler,Default_Handler
+ 307              		.weak	EXTI3_IRQHandler
+ 308              		.thumb_set EXTI3_IRQHandler,Default_Handler
+ 309              		.weak	EXTI2_IRQHandler
+ 310              		.thumb_set EXTI2_IRQHandler,Default_Handler
+ 311              		.weak	EXTI1_IRQHandler
+ 312              		.thumb_set EXTI1_IRQHandler,Default_Handler
+ 313              		.weak	EXTI0_IRQHandler
+ 314              		.thumb_set EXTI0_IRQHandler,Default_Handler
+ 315              		.weak	RCC_IRQHandler
+ 316              		.thumb_set RCC_IRQHandler,Default_Handler
+ 317              		.weak	FLASH_IRQHandler
+ 318              		.thumb_set FLASH_IRQHandler,Default_Handler
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 34
 
 
- 319              		.weak	RCC_IRQHandler
- 320              		.thumb_set RCC_IRQHandler,Default_Handler
- 321              		.weak	FLASH_IRQHandler
- 322              		.thumb_set FLASH_IRQHandler,Default_Handler
- 323              		.weak	RTC_WKUP_IRQHandler
- 324              		.thumb_set RTC_WKUP_IRQHandler,Default_Handler
- 325              		.weak	TAMP_STAMP_IRQHandler
- 326              		.thumb_set TAMP_STAMP_IRQHandler,Default_Handler
- 327              		.weak	PVD_AVD_IRQHandler
- 328              		.thumb_set PVD_AVD_IRQHandler,Default_Handler
- 329              		.weak	WWDG_IRQHandler
- 330              		.thumb_set WWDG_IRQHandler,Default_Handler
- 331              		.weak	SysTick_Handler
- 332              		.thumb_set SysTick_Handler,Default_Handler
- 333              		.weak	PendSV_Handler
- 334              		.thumb_set PendSV_Handler,Default_Handler
- 335              		.weak	DebugMon_Handler
- 336              		.thumb_set DebugMon_Handler,Default_Handler
- 337              		.weak	SVC_Handler
- 338              		.thumb_set SVC_Handler,Default_Handler
- 339              		.weak	UsageFault_Handler
- 340              		.thumb_set UsageFault_Handler,Default_Handler
- 341              		.weak	BusFault_Handler
- 342              		.thumb_set BusFault_Handler,Default_Handler
- 343              		.weak	MemManage_Handler
- 344              		.thumb_set MemManage_Handler,Default_Handler
- 345              		.weak	HardFault_Handler
- 346              		.thumb_set HardFault_Handler,Default_Handler
- 347              		.weak	NMI_Handler
- 348              		.thumb_set NMI_Handler,Default_Handler
- 349 000a 00BF     		.section	.text.Reset_Handler,"ax",%progbits
- 350              		.align	1
- 351              		.p2align 2,,3
- 352              		.global	Reset_Handler
- 353              		.syntax unified
- 354              		.thumb
- 355              		.thumb_func
- 356              		.fpu fpv5-d16
- 358              	Reset_Handler:
- 359              	.LFB337:
+ 319              		.weak	RTC_WKUP_IRQHandler
+ 320              		.thumb_set RTC_WKUP_IRQHandler,Default_Handler
+ 321              		.weak	TAMP_STAMP_IRQHandler
+ 322              		.thumb_set TAMP_STAMP_IRQHandler,Default_Handler
+ 323              		.weak	PVD_AVD_IRQHandler
+ 324              		.thumb_set PVD_AVD_IRQHandler,Default_Handler
+ 325              		.weak	WWDG_IRQHandler
+ 326              		.thumb_set WWDG_IRQHandler,Default_Handler
+ 327              		.weak	SysTick_Handler
+ 328              		.thumb_set SysTick_Handler,Default_Handler
+ 329              		.weak	PendSV_Handler
+ 330              		.thumb_set PendSV_Handler,Default_Handler
+ 331              		.weak	DebugMon_Handler
+ 332              		.thumb_set DebugMon_Handler,Default_Handler
+ 333              		.weak	SVC_Handler
+ 334              		.thumb_set SVC_Handler,Default_Handler
+ 335              		.weak	UsageFault_Handler
+ 336              		.thumb_set UsageFault_Handler,Default_Handler
+ 337              		.weak	BusFault_Handler
+ 338              		.thumb_set BusFault_Handler,Default_Handler
+ 339              		.weak	MemManage_Handler
+ 340              		.thumb_set MemManage_Handler,Default_Handler
+ 341              		.weak	HardFault_Handler
+ 342              		.thumb_set HardFault_Handler,Default_Handler
+ 343              		.weak	NMI_Handler
+ 344              		.thumb_set NMI_Handler,Default_Handler
+ 345              		.section	.text.Reset_Handler,"ax",%progbits
+ 346              		.align	1
+ 347              		.global	Reset_Handler
+ 348              		.syntax unified
+ 349              		.thumb
+ 350              		.thumb_func
+ 351              		.fpu fpv5-d16
+ 353              	Reset_Handler:
+ 354              	.LFB337:
 1536:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Normally the CPU should will setup the based on the value from the first entry in the vector tab
- 360              		.loc 1 1536 1 view -0
- 361              		.cfi_startproc
- 362              		@ Volatile: function does not return.
- 363              		@ args = 0, pretend = 0, frame = 0
- 364              		@ frame_needed = 0, uses_anonymous_args = 0
+ 355              		.loc 1 1536 1 view -0
+ 356              		.cfi_startproc
+ 357              		@ Volatile: function does not return.
+ 358              		@ args = 0, pretend = 0, frame = 0
+ 359              		@ frame_needed = 0, uses_anonymous_args = 0
 1543:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	for (pSource = &_sidata, pDest = &_sdata; pDest != &_edata; pSource++, pDest++)
- 365              		.loc 1 1543 2 view .LVU8
+ 360              		.loc 1 1543 2 view .LVU5
 1544:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 		*pDest = *pSource;
- 366              		.loc 1 1544 2 view .LVU9
- 367              	.LVL0:
-1544:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 		*pDest = *pSource;
- 368              		.loc 1 1544 44 view .LVU10
-1544:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 		*pDest = *pSource;
- 369              		.loc 1 1544 2 is_stmt 0 view .LVU11
- 370 0000 0B48     		ldr	r0, .L9
- 371 0002 0C4A     		ldr	r2, .L9+4
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 35
-
-
- 372 0004 9042     		cmp	r0, r2
-1536:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Normally the CPU should will setup the based on the value from the first entry in the vector tab
- 373              		.loc 1 1536 1 view .LVU12
- 374 0006 08B5     		push	{r3, lr}
- 375              		.cfi_def_cfa_offset 8
- 376              		.cfi_offset 3, -8
- 377              		.cfi_offset 14, -4
-1544:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 		*pDest = *pSource;
- 378              		.loc 1 1544 2 view .LVU13
- 379 0008 03D0     		beq	.L5
+ 361              		.loc 1 1544 2 view .LVU6
+ 362              	.LVL0:
 1545:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
- 380              		.loc 1 1545 10 view .LVU14
- 381 000a 121A     		subs	r2, r2, r0
- 382 000c 0A49     		ldr	r1, .L9+8
- 383 000e FFF7FEFF 		bl	memcpy
- 384              	.LVL1:
- 385              	.L5:
-1547:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 		*pDest = 0;
- 386              		.loc 1 1547 23 is_stmt 1 view .LVU15
-1547:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 		*pDest = 0;
- 387              		.loc 1 1547 2 is_stmt 0 view .LVU16
- 388 0012 0A48     		ldr	r0, .L9+12
- 389 0014 0A4A     		ldr	r2, .L9+16
- 390 0016 9042     		cmp	r0, r2
- 391 0018 03D0     		beq	.L6
+ 363              		.loc 1 1545 10 is_stmt 0 view .LVU7
+ 364 0000 0948     		ldr	r0, .L5
+ 365 0002 0A4A     		ldr	r2, .L5+4
+ 366 0004 0A49     		ldr	r1, .L5+8
+ 367 0006 121A     		subs	r2, r2, r0
+1536:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	//Normally the CPU should will setup the based on the value from the first entry in the vector tab
+ 368              		.loc 1 1536 1 view .LVU8
+ 369 0008 08B5     		push	{r3, lr}
+ 370              		.cfi_def_cfa_offset 8
+ 371              		.cfi_offset 3, -8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 35
+
+
+ 372              		.cfi_offset 14, -4
+1545:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
+ 373              		.loc 1 1545 10 view .LVU9
+ 374 000a FFF7FEFF 		bl	memcpy
+ 375              	.LVL1:
 1548:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
- 392              		.loc 1 1548 10 view .LVU17
- 393 001a 121A     		subs	r2, r2, r0
- 394 001c 0021     		movs	r1, #0
- 395 001e FFF7FEFF 		bl	memset
- 396              	.LVL2:
- 397              	.L6:
+ 376              		.loc 1 1548 10 view .LVU10
+ 377 000e 0948     		ldr	r0, .L5+12
+ 378 0010 094A     		ldr	r2, .L5+16
+ 379 0012 0021     		movs	r1, #0
+ 380 0014 121A     		subs	r2, r2, r0
+ 381 0016 FFF7FEFF 		bl	memset
+ 382              	.LVL2:
 1551:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	#endif
- 398              		.loc 1 1551 2 is_stmt 1 view .LVU18
- 399 0022 FFF7FEFF 		bl	SystemInit
- 400              	.LVL3:
+ 383              		.loc 1 1551 2 is_stmt 1 view .LVU11
+ 384 001a FFF7FEFF 		bl	SystemInit
+ 385              	.LVL3:
 1553:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 
- 401              		.loc 1 1553 2 view .LVU19
- 402 0026 FFF7FEFF 		bl	__libc_init_array
- 403              	.LVL4:
+ 386              		.loc 1 1553 2 view .LVU12
+ 387 001e FFF7FEFF 		bl	__libc_init_array
+ 388              	.LVL4:
 1556:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	for (;;) ;
- 404              		.loc 1 1556 2 view .LVU20
+ 389              		.loc 1 1556 2 view .LVU13
 1556:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** 	for (;;) ;
- 405              		.loc 1 1556 8 is_stmt 0 view .LVU21
- 406 002a FFF7FEFF 		bl	main
- 407              	.LVL5:
- 408              	.L7:
+ 390              		.loc 1 1556 8 is_stmt 0 view .LVU14
+ 391 0022 FFF7FEFF 		bl	main
+ 392              	.LVL5:
+ 393              	.L4:
 1557:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
- 409              		.loc 1 1557 2 is_stmt 1 discriminator 1 view .LVU22
+ 394              		.loc 1 1557 2 is_stmt 1 discriminator 1 view .LVU15
 1557:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
- 410              		.loc 1 1557 11 discriminator 1 view .LVU23
+ 395              		.loc 1 1557 11 discriminator 1 view .LVU16
 1557:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
- 411              		.loc 1 1557 8 discriminator 1 view .LVU24
-1557:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
- 412              		.loc 1 1557 2 discriminator 1 view .LVU25
-1557:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
- 413              		.loc 1 1557 11 discriminator 1 view .LVU26
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 36
+ 396              		.loc 1 1557 8 discriminator 1 view .LVU17
+ 397 0026 FEE7     		b	.L4
+ 398              	.L6:
+ 399              		.align	2
+ 400              	.L5:
+ 401 0028 00000000 		.word	_sdata
+ 402 002c 00000000 		.word	_edata
+ 403 0030 00000000 		.word	_sidata
+ 404 0034 00000000 		.word	_sbss
+ 405 0038 00000000 		.word	_ebss
+ 406              		.cfi_endproc
+ 407              	.LFE337:
+ 409              		.global	g_pfnVectors
+ 410              		.section	.isr_vector,"aw"
+ 411              		.align	2
+ 414              	g_pfnVectors:
+ 415 0000 00000000 		.word	_estack
+ 416 0004 00000000 		.word	Reset_Handler
+ 417 0008 00000000 		.word	NMI_Handler
+ 418 000c 00000000 		.word	HardFault_Handler
+ 419 0010 00000000 		.word	MemManage_Handler
+ 420 0014 00000000 		.word	BusFault_Handler
+ 421 0018 00000000 		.word	UsageFault_Handler
+ 422 001c 00000000 		.word	0
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 36
 
 
-1557:../libs/PoliTeKDSP/libs/libDaisy/core/startup_stm32h750xx.c **** }
- 414              		.loc 1 1557 8 discriminator 1 view .LVU27
- 415 002e FEE7     		b	.L7
- 416              	.L10:
- 417              		.align	2
- 418              	.L9:
- 419 0030 00000000 		.word	_sdata
- 420 0034 00000000 		.word	_edata
- 421 0038 00000000 		.word	_sidata
- 422 003c 00000000 		.word	_sbss
- 423 0040 00000000 		.word	_ebss
- 424              		.cfi_endproc
- 425              	.LFE337:
- 427              		.global	g_pfnVectors
- 428              		.section	.isr_vector,"aw"
- 429              		.align	2
- 432              	g_pfnVectors:
- 433 0000 00000000 		.word	_estack
- 434 0004 00000000 		.word	Reset_Handler
- 435 0008 00000000 		.word	NMI_Handler
- 436 000c 00000000 		.word	HardFault_Handler
- 437 0010 00000000 		.word	MemManage_Handler
- 438 0014 00000000 		.word	BusFault_Handler
- 439 0018 00000000 		.word	UsageFault_Handler
- 440 001c 00000000 		.word	0
- 441 0020 00000000 		.word	0
- 442 0024 00000000 		.word	0
- 443 0028 00000000 		.word	0
- 444 002c 00000000 		.word	SVC_Handler
- 445 0030 00000000 		.word	DebugMon_Handler
- 446 0034 00000000 		.word	0
- 447 0038 00000000 		.word	PendSV_Handler
- 448 003c 00000000 		.word	SysTick_Handler
- 449 0040 00000000 		.word	WWDG_IRQHandler
- 450 0044 00000000 		.word	PVD_AVD_IRQHandler
- 451 0048 00000000 		.word	TAMP_STAMP_IRQHandler
- 452 004c 00000000 		.word	RTC_WKUP_IRQHandler
- 453 0050 00000000 		.word	FLASH_IRQHandler
- 454 0054 00000000 		.word	RCC_IRQHandler
- 455 0058 00000000 		.word	EXTI0_IRQHandler
- 456 005c 00000000 		.word	EXTI1_IRQHandler
- 457 0060 00000000 		.word	EXTI2_IRQHandler
- 458 0064 00000000 		.word	EXTI3_IRQHandler
- 459 0068 00000000 		.word	EXTI4_IRQHandler
- 460 006c 00000000 		.word	DMA1_Stream0_IRQHandler
- 461 0070 00000000 		.word	DMA1_Stream1_IRQHandler
- 462 0074 00000000 		.word	DMA1_Stream2_IRQHandler
- 463 0078 00000000 		.word	DMA1_Stream3_IRQHandler
- 464 007c 00000000 		.word	DMA1_Stream4_IRQHandler
- 465 0080 00000000 		.word	DMA1_Stream5_IRQHandler
- 466 0084 00000000 		.word	DMA1_Stream6_IRQHandler
- 467 0088 00000000 		.word	ADC_IRQHandler
- 468 008c 00000000 		.word	FDCAN1_IT0_IRQHandler
- 469 0090 00000000 		.word	FDCAN2_IT0_IRQHandler
- 470 0094 00000000 		.word	FDCAN1_IT1_IRQHandler
- 471 0098 00000000 		.word	FDCAN2_IT1_IRQHandler
- 472 009c 00000000 		.word	EXTI9_5_IRQHandler
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 37
+ 423 0020 00000000 		.word	0
+ 424 0024 00000000 		.word	0
+ 425 0028 00000000 		.word	0
+ 426 002c 00000000 		.word	SVC_Handler
+ 427 0030 00000000 		.word	DebugMon_Handler
+ 428 0034 00000000 		.word	0
+ 429 0038 00000000 		.word	PendSV_Handler
+ 430 003c 00000000 		.word	SysTick_Handler
+ 431 0040 00000000 		.word	WWDG_IRQHandler
+ 432 0044 00000000 		.word	PVD_AVD_IRQHandler
+ 433 0048 00000000 		.word	TAMP_STAMP_IRQHandler
+ 434 004c 00000000 		.word	RTC_WKUP_IRQHandler
+ 435 0050 00000000 		.word	FLASH_IRQHandler
+ 436 0054 00000000 		.word	RCC_IRQHandler
+ 437 0058 00000000 		.word	EXTI0_IRQHandler
+ 438 005c 00000000 		.word	EXTI1_IRQHandler
+ 439 0060 00000000 		.word	EXTI2_IRQHandler
+ 440 0064 00000000 		.word	EXTI3_IRQHandler
+ 441 0068 00000000 		.word	EXTI4_IRQHandler
+ 442 006c 00000000 		.word	DMA1_Stream0_IRQHandler
+ 443 0070 00000000 		.word	DMA1_Stream1_IRQHandler
+ 444 0074 00000000 		.word	DMA1_Stream2_IRQHandler
+ 445 0078 00000000 		.word	DMA1_Stream3_IRQHandler
+ 446 007c 00000000 		.word	DMA1_Stream4_IRQHandler
+ 447 0080 00000000 		.word	DMA1_Stream5_IRQHandler
+ 448 0084 00000000 		.word	DMA1_Stream6_IRQHandler
+ 449 0088 00000000 		.word	ADC_IRQHandler
+ 450 008c 00000000 		.word	FDCAN1_IT0_IRQHandler
+ 451 0090 00000000 		.word	FDCAN2_IT0_IRQHandler
+ 452 0094 00000000 		.word	FDCAN1_IT1_IRQHandler
+ 453 0098 00000000 		.word	FDCAN2_IT1_IRQHandler
+ 454 009c 00000000 		.word	EXTI9_5_IRQHandler
+ 455 00a0 00000000 		.word	TIM1_BRK_IRQHandler
+ 456 00a4 00000000 		.word	TIM1_UP_IRQHandler
+ 457 00a8 00000000 		.word	TIM1_TRG_COM_IRQHandler
+ 458 00ac 00000000 		.word	TIM1_CC_IRQHandler
+ 459 00b0 00000000 		.word	TIM2_IRQHandler
+ 460 00b4 00000000 		.word	TIM3_IRQHandler
+ 461 00b8 00000000 		.word	TIM4_IRQHandler
+ 462 00bc 00000000 		.word	I2C1_EV_IRQHandler
+ 463 00c0 00000000 		.word	I2C1_ER_IRQHandler
+ 464 00c4 00000000 		.word	I2C2_EV_IRQHandler
+ 465 00c8 00000000 		.word	I2C2_ER_IRQHandler
+ 466 00cc 00000000 		.word	SPI1_IRQHandler
+ 467 00d0 00000000 		.word	SPI2_IRQHandler
+ 468 00d4 00000000 		.word	USART1_IRQHandler
+ 469 00d8 00000000 		.word	USART2_IRQHandler
+ 470 00dc 00000000 		.word	USART3_IRQHandler
+ 471 00e0 00000000 		.word	EXTI15_10_IRQHandler
+ 472 00e4 00000000 		.word	RTC_Alarm_IRQHandler
+ 473 00e8 00000000 		.word	0
+ 474 00ec 00000000 		.word	TIM8_BRK_TIM12_IRQHandler
+ 475 00f0 00000000 		.word	TIM8_UP_TIM13_IRQHandler
+ 476 00f4 00000000 		.word	TIM8_TRG_COM_TIM14_IRQHandler
+ 477 00f8 00000000 		.word	TIM8_CC_IRQHandler
+ 478 00fc 00000000 		.word	DMA1_Stream7_IRQHandler
+ 479 0100 00000000 		.word	FMC_IRQHandler
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 37
 
 
- 473 00a0 00000000 		.word	TIM1_BRK_IRQHandler
- 474 00a4 00000000 		.word	TIM1_UP_IRQHandler
- 475 00a8 00000000 		.word	TIM1_TRG_COM_IRQHandler
- 476 00ac 00000000 		.word	TIM1_CC_IRQHandler
- 477 00b0 00000000 		.word	TIM2_IRQHandler
- 478 00b4 00000000 		.word	TIM3_IRQHandler
- 479 00b8 00000000 		.word	TIM4_IRQHandler
- 480 00bc 00000000 		.word	I2C1_EV_IRQHandler
- 481 00c0 00000000 		.word	I2C1_ER_IRQHandler
- 482 00c4 00000000 		.word	I2C2_EV_IRQHandler
- 483 00c8 00000000 		.word	I2C2_ER_IRQHandler
- 484 00cc 00000000 		.word	SPI1_IRQHandler
- 485 00d0 00000000 		.word	SPI2_IRQHandler
- 486 00d4 00000000 		.word	USART1_IRQHandler
- 487 00d8 00000000 		.word	USART2_IRQHandler
- 488 00dc 00000000 		.word	USART3_IRQHandler
- 489 00e0 00000000 		.word	EXTI15_10_IRQHandler
- 490 00e4 00000000 		.word	RTC_Alarm_IRQHandler
- 491 00e8 00000000 		.word	0
- 492 00ec 00000000 		.word	TIM8_BRK_TIM12_IRQHandler
- 493 00f0 00000000 		.word	TIM8_UP_TIM13_IRQHandler
- 494 00f4 00000000 		.word	TIM8_TRG_COM_TIM14_IRQHandler
- 495 00f8 00000000 		.word	TIM8_CC_IRQHandler
- 496 00fc 00000000 		.word	DMA1_Stream7_IRQHandler
- 497 0100 00000000 		.word	FMC_IRQHandler
- 498 0104 00000000 		.word	SDMMC1_IRQHandler
- 499 0108 00000000 		.word	TIM5_IRQHandler
- 500 010c 00000000 		.word	SPI3_IRQHandler
- 501 0110 00000000 		.word	UART4_IRQHandler
- 502 0114 00000000 		.word	UART5_IRQHandler
- 503 0118 00000000 		.word	TIM6_DAC_IRQHandler
- 504 011c 00000000 		.word	TIM7_IRQHandler
- 505 0120 00000000 		.word	DMA2_Stream0_IRQHandler
- 506 0124 00000000 		.word	DMA2_Stream1_IRQHandler
- 507 0128 00000000 		.word	DMA2_Stream2_IRQHandler
- 508 012c 00000000 		.word	DMA2_Stream3_IRQHandler
- 509 0130 00000000 		.word	DMA2_Stream4_IRQHandler
- 510 0134 00000000 		.word	ETH_IRQHandler
- 511 0138 00000000 		.word	ETH_WKUP_IRQHandler
- 512 013c 00000000 		.word	FDCAN_CAL_IRQHandler
- 513 0140 00000000 		.word	0
- 514 0144 00000000 		.word	0
- 515 0148 00000000 		.word	0
- 516 014c 00000000 		.word	0
- 517 0150 00000000 		.word	DMA2_Stream5_IRQHandler
- 518 0154 00000000 		.word	DMA2_Stream6_IRQHandler
- 519 0158 00000000 		.word	DMA2_Stream7_IRQHandler
- 520 015c 00000000 		.word	USART6_IRQHandler
- 521 0160 00000000 		.word	I2C3_EV_IRQHandler
- 522 0164 00000000 		.word	I2C3_ER_IRQHandler
- 523 0168 00000000 		.word	OTG_HS_EP1_OUT_IRQHandler
- 524 016c 00000000 		.word	OTG_HS_EP1_IN_IRQHandler
- 525 0170 00000000 		.word	OTG_HS_WKUP_IRQHandler
- 526 0174 00000000 		.word	OTG_HS_IRQHandler
- 527 0178 00000000 		.word	DCMI_IRQHandler
- 528 017c 00000000 		.word	CRYP_IRQHandler
- 529 0180 00000000 		.word	HASH_RNG_IRQHandler
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 38
+ 480 0104 00000000 		.word	SDMMC1_IRQHandler
+ 481 0108 00000000 		.word	TIM5_IRQHandler
+ 482 010c 00000000 		.word	SPI3_IRQHandler
+ 483 0110 00000000 		.word	UART4_IRQHandler
+ 484 0114 00000000 		.word	UART5_IRQHandler
+ 485 0118 00000000 		.word	TIM6_DAC_IRQHandler
+ 486 011c 00000000 		.word	TIM7_IRQHandler
+ 487 0120 00000000 		.word	DMA2_Stream0_IRQHandler
+ 488 0124 00000000 		.word	DMA2_Stream1_IRQHandler
+ 489 0128 00000000 		.word	DMA2_Stream2_IRQHandler
+ 490 012c 00000000 		.word	DMA2_Stream3_IRQHandler
+ 491 0130 00000000 		.word	DMA2_Stream4_IRQHandler
+ 492 0134 00000000 		.word	ETH_IRQHandler
+ 493 0138 00000000 		.word	ETH_WKUP_IRQHandler
+ 494 013c 00000000 		.word	FDCAN_CAL_IRQHandler
+ 495 0140 00000000 		.word	0
+ 496 0144 00000000 		.word	0
+ 497 0148 00000000 		.word	0
+ 498 014c 00000000 		.word	0
+ 499 0150 00000000 		.word	DMA2_Stream5_IRQHandler
+ 500 0154 00000000 		.word	DMA2_Stream6_IRQHandler
+ 501 0158 00000000 		.word	DMA2_Stream7_IRQHandler
+ 502 015c 00000000 		.word	USART6_IRQHandler
+ 503 0160 00000000 		.word	I2C3_EV_IRQHandler
+ 504 0164 00000000 		.word	I2C3_ER_IRQHandler
+ 505 0168 00000000 		.word	OTG_HS_EP1_OUT_IRQHandler
+ 506 016c 00000000 		.word	OTG_HS_EP1_IN_IRQHandler
+ 507 0170 00000000 		.word	OTG_HS_WKUP_IRQHandler
+ 508 0174 00000000 		.word	OTG_HS_IRQHandler
+ 509 0178 00000000 		.word	DCMI_IRQHandler
+ 510 017c 00000000 		.word	CRYP_IRQHandler
+ 511 0180 00000000 		.word	HASH_RNG_IRQHandler
+ 512 0184 00000000 		.word	FPU_IRQHandler
+ 513 0188 00000000 		.word	UART7_IRQHandler
+ 514 018c 00000000 		.word	UART8_IRQHandler
+ 515 0190 00000000 		.word	SPI4_IRQHandler
+ 516 0194 00000000 		.word	SPI5_IRQHandler
+ 517 0198 00000000 		.word	SPI6_IRQHandler
+ 518 019c 00000000 		.word	SAI1_IRQHandler
+ 519 01a0 00000000 		.word	LTDC_IRQHandler
+ 520 01a4 00000000 		.word	LTDC_ER_IRQHandler
+ 521 01a8 00000000 		.word	DMA2D_IRQHandler
+ 522 01ac 00000000 		.word	SAI2_IRQHandler
+ 523 01b0 00000000 		.word	QUADSPI_IRQHandler
+ 524 01b4 00000000 		.word	LPTIM1_IRQHandler
+ 525 01b8 00000000 		.word	CEC_IRQHandler
+ 526 01bc 00000000 		.word	I2C4_EV_IRQHandler
+ 527 01c0 00000000 		.word	I2C4_ER_IRQHandler
+ 528 01c4 00000000 		.word	SPDIF_RX_IRQHandler
+ 529 01c8 00000000 		.word	OTG_FS_EP1_OUT_IRQHandler
+ 530 01cc 00000000 		.word	OTG_FS_EP1_IN_IRQHandler
+ 531 01d0 00000000 		.word	OTG_FS_WKUP_IRQHandler
+ 532 01d4 00000000 		.word	OTG_FS_IRQHandler
+ 533 01d8 00000000 		.word	DMAMUX1_OVR_IRQHandler
+ 534 01dc 00000000 		.word	HRTIM1_Master_IRQHandler
+ 535 01e0 00000000 		.word	HRTIM1_TIMA_IRQHandler
+ 536 01e4 00000000 		.word	HRTIM1_TIMB_IRQHandler
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 38
 
 
- 530 0184 00000000 		.word	FPU_IRQHandler
- 531 0188 00000000 		.word	UART7_IRQHandler
- 532 018c 00000000 		.word	UART8_IRQHandler
- 533 0190 00000000 		.word	SPI4_IRQHandler
- 534 0194 00000000 		.word	SPI5_IRQHandler
- 535 0198 00000000 		.word	SPI6_IRQHandler
- 536 019c 00000000 		.word	SAI1_IRQHandler
- 537 01a0 00000000 		.word	LTDC_IRQHandler
- 538 01a4 00000000 		.word	LTDC_ER_IRQHandler
- 539 01a8 00000000 		.word	DMA2D_IRQHandler
- 540 01ac 00000000 		.word	SAI2_IRQHandler
- 541 01b0 00000000 		.word	QUADSPI_IRQHandler
- 542 01b4 00000000 		.word	LPTIM1_IRQHandler
- 543 01b8 00000000 		.word	CEC_IRQHandler
- 544 01bc 00000000 		.word	I2C4_EV_IRQHandler
- 545 01c0 00000000 		.word	I2C4_ER_IRQHandler
- 546 01c4 00000000 		.word	SPDIF_RX_IRQHandler
- 547 01c8 00000000 		.word	OTG_FS_EP1_OUT_IRQHandler
- 548 01cc 00000000 		.word	OTG_FS_EP1_IN_IRQHandler
- 549 01d0 00000000 		.word	OTG_FS_WKUP_IRQHandler
- 550 01d4 00000000 		.word	OTG_FS_IRQHandler
- 551 01d8 00000000 		.word	DMAMUX1_OVR_IRQHandler
- 552 01dc 00000000 		.word	HRTIM1_Master_IRQHandler
- 553 01e0 00000000 		.word	HRTIM1_TIMA_IRQHandler
- 554 01e4 00000000 		.word	HRTIM1_TIMB_IRQHandler
- 555 01e8 00000000 		.word	HRTIM1_TIMC_IRQHandler
- 556 01ec 00000000 		.word	HRTIM1_TIMD_IRQHandler
- 557 01f0 00000000 		.word	HRTIM1_TIME_IRQHandler
- 558 01f4 00000000 		.word	HRTIM1_FLT_IRQHandler
- 559 01f8 00000000 		.word	DFSDM1_FLT0_IRQHandler
- 560 01fc 00000000 		.word	DFSDM1_FLT1_IRQHandler
- 561 0200 00000000 		.word	DFSDM1_FLT2_IRQHandler
- 562 0204 00000000 		.word	DFSDM1_FLT3_IRQHandler
- 563 0208 00000000 		.word	SAI3_IRQHandler
- 564 020c 00000000 		.word	SWPMI1_IRQHandler
- 565 0210 00000000 		.word	TIM15_IRQHandler
- 566 0214 00000000 		.word	TIM16_IRQHandler
- 567 0218 00000000 		.word	TIM17_IRQHandler
- 568 021c 00000000 		.word	MDIOS_WKUP_IRQHandler
- 569 0220 00000000 		.word	MDIOS_IRQHandler
- 570 0224 00000000 		.word	JPEG_IRQHandler
- 571 0228 00000000 		.word	MDMA_IRQHandler
- 572 022c 00000000 		.word	0
- 573 0230 00000000 		.word	SDMMC2_IRQHandler
- 574 0234 00000000 		.word	HSEM1_IRQHandler
- 575 0238 00000000 		.word	0
- 576 023c 00000000 		.word	ADC3_IRQHandler
- 577 0240 00000000 		.word	DMAMUX2_OVR_IRQHandler
- 578 0244 00000000 		.word	BDMA_Channel0_IRQHandler
- 579 0248 00000000 		.word	BDMA_Channel1_IRQHandler
- 580 024c 00000000 		.word	BDMA_Channel2_IRQHandler
- 581 0250 00000000 		.word	BDMA_Channel3_IRQHandler
- 582 0254 00000000 		.word	BDMA_Channel4_IRQHandler
- 583 0258 00000000 		.word	BDMA_Channel5_IRQHandler
- 584 025c 00000000 		.word	BDMA_Channel6_IRQHandler
- 585 0260 00000000 		.word	BDMA_Channel7_IRQHandler
- 586 0264 00000000 		.word	COMP1_IRQHandler
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 39
-
-
- 587 0268 00000000 		.word	LPTIM2_IRQHandler
- 588 026c 00000000 		.word	LPTIM3_IRQHandler
- 589 0270 00000000 		.word	LPTIM4_IRQHandler
- 590 0274 00000000 		.word	LPTIM5_IRQHandler
- 591 0278 00000000 		.word	LPUART1_IRQHandler
- 592 027c 00000000 		.word	0
- 593 0280 00000000 		.word	CRS_IRQHandler
- 594 0284 00000000 		.word	ECC_IRQHandler
- 595 0288 00000000 		.word	SAI4_IRQHandler
- 596 028c 00000000 		.word	0
- 597 0290 00000000 		.word	0
- 598 0294 00000000 		.word	WAKEUP_PIN_IRQHandler
- 599              		.text
- 600              	.Letext0:
- 601              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
- 602              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
- 603              		.file 4 "<built-in>"
- 604              		.file 5 "../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/system_stm32h7
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 40
+ 537 01e8 00000000 		.word	HRTIM1_TIMC_IRQHandler
+ 538 01ec 00000000 		.word	HRTIM1_TIMD_IRQHandler
+ 539 01f0 00000000 		.word	HRTIM1_TIME_IRQHandler
+ 540 01f4 00000000 		.word	HRTIM1_FLT_IRQHandler
+ 541 01f8 00000000 		.word	DFSDM1_FLT0_IRQHandler
+ 542 01fc 00000000 		.word	DFSDM1_FLT1_IRQHandler
+ 543 0200 00000000 		.word	DFSDM1_FLT2_IRQHandler
+ 544 0204 00000000 		.word	DFSDM1_FLT3_IRQHandler
+ 545 0208 00000000 		.word	SAI3_IRQHandler
+ 546 020c 00000000 		.word	SWPMI1_IRQHandler
+ 547 0210 00000000 		.word	TIM15_IRQHandler
+ 548 0214 00000000 		.word	TIM16_IRQHandler
+ 549 0218 00000000 		.word	TIM17_IRQHandler
+ 550 021c 00000000 		.word	MDIOS_WKUP_IRQHandler
+ 551 0220 00000000 		.word	MDIOS_IRQHandler
+ 552 0224 00000000 		.word	JPEG_IRQHandler
+ 553 0228 00000000 		.word	MDMA_IRQHandler
+ 554 022c 00000000 		.word	0
+ 555 0230 00000000 		.word	SDMMC2_IRQHandler
+ 556 0234 00000000 		.word	HSEM1_IRQHandler
+ 557 0238 00000000 		.word	0
+ 558 023c 00000000 		.word	ADC3_IRQHandler
+ 559 0240 00000000 		.word	DMAMUX2_OVR_IRQHandler
+ 560 0244 00000000 		.word	BDMA_Channel0_IRQHandler
+ 561 0248 00000000 		.word	BDMA_Channel1_IRQHandler
+ 562 024c 00000000 		.word	BDMA_Channel2_IRQHandler
+ 563 0250 00000000 		.word	BDMA_Channel3_IRQHandler
+ 564 0254 00000000 		.word	BDMA_Channel4_IRQHandler
+ 565 0258 00000000 		.word	BDMA_Channel5_IRQHandler
+ 566 025c 00000000 		.word	BDMA_Channel6_IRQHandler
+ 567 0260 00000000 		.word	BDMA_Channel7_IRQHandler
+ 568 0264 00000000 		.word	COMP1_IRQHandler
+ 569 0268 00000000 		.word	LPTIM2_IRQHandler
+ 570 026c 00000000 		.word	LPTIM3_IRQHandler
+ 571 0270 00000000 		.word	LPTIM4_IRQHandler
+ 572 0274 00000000 		.word	LPTIM5_IRQHandler
+ 573 0278 00000000 		.word	LPUART1_IRQHandler
+ 574 027c 00000000 		.word	0
+ 575 0280 00000000 		.word	CRS_IRQHandler
+ 576 0284 00000000 		.word	ECC_IRQHandler
+ 577 0288 00000000 		.word	SAI4_IRQHandler
+ 578 028c 00000000 		.word	0
+ 579 0290 00000000 		.word	0
+ 580 0294 00000000 		.word	WAKEUP_PIN_IRQHandler
+ 581              		.text
+ 582              	.Letext0:
+ 583              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 584              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 585              		.file 4 "<built-in>"
+ 586              		.file 5 "../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/system_stm32h7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 39
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 startup_stm32h750xx.c
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:17     .text.Default_Handler:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 Default_Handler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 WAKEUP_PIN_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SAI4_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 ECC_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 CRS_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 LPUART1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 LPTIM5_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 LPTIM4_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 LPTIM3_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 LPTIM2_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 COMP1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 BDMA_Channel7_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 BDMA_Channel6_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 BDMA_Channel5_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 BDMA_Channel4_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 BDMA_Channel3_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 BDMA_Channel2_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 BDMA_Channel1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 BDMA_Channel0_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMAMUX2_OVR_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 ADC3_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 HSEM1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SDMMC2_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 MDMA_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 JPEG_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 MDIOS_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 MDIOS_WKUP_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM17_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM16_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM15_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SWPMI1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SAI3_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DFSDM1_FLT3_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DFSDM1_FLT2_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DFSDM1_FLT1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DFSDM1_FLT0_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 HRTIM1_FLT_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 HRTIM1_TIME_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 HRTIM1_TIMD_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 HRTIM1_TIMC_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 HRTIM1_TIMB_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 HRTIM1_TIMA_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 HRTIM1_Master_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMAMUX1_OVR_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 OTG_FS_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 OTG_FS_WKUP_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 OTG_FS_EP1_IN_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 OTG_FS_EP1_OUT_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SPDIF_RX_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 I2C4_ER_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 I2C4_EV_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 CEC_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 LPTIM1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 QUADSPI_IRQHandler
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 41
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:17     .text.Default_Handler:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 Default_Handler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 WAKEUP_PIN_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SAI4_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 ECC_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 CRS_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 LPUART1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 LPTIM5_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 LPTIM4_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 LPTIM3_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 LPTIM2_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 COMP1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 BDMA_Channel7_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 BDMA_Channel6_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 BDMA_Channel5_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 BDMA_Channel4_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 BDMA_Channel3_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 BDMA_Channel2_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 BDMA_Channel1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 BDMA_Channel0_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMAMUX2_OVR_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 ADC3_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 HSEM1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SDMMC2_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 MDMA_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 JPEG_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 MDIOS_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 MDIOS_WKUP_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM17_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM16_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM15_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SWPMI1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SAI3_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DFSDM1_FLT3_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DFSDM1_FLT2_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DFSDM1_FLT1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DFSDM1_FLT0_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 HRTIM1_FLT_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 HRTIM1_TIME_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 HRTIM1_TIMD_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 HRTIM1_TIMC_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 HRTIM1_TIMB_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 HRTIM1_TIMA_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 HRTIM1_Master_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMAMUX1_OVR_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 OTG_FS_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 OTG_FS_WKUP_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 OTG_FS_EP1_IN_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 OTG_FS_EP1_OUT_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SPDIF_RX_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 I2C4_ER_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 I2C4_EV_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 CEC_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 LPTIM1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 QUADSPI_IRQHandler
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 40
 
 
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SAI2_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA2D_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 LTDC_ER_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 LTDC_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SAI1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SPI6_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SPI5_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SPI4_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 UART8_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 UART7_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 FPU_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 HASH_RNG_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 CRYP_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DCMI_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 OTG_HS_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 OTG_HS_WKUP_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 OTG_HS_EP1_IN_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 OTG_HS_EP1_OUT_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 I2C3_ER_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 I2C3_EV_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 USART6_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA2_Stream7_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA2_Stream6_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA2_Stream5_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 FDCAN_CAL_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 ETH_WKUP_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 ETH_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA2_Stream4_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA2_Stream3_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA2_Stream2_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA2_Stream1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA2_Stream0_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM7_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM6_DAC_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 UART5_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 UART4_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SPI3_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM5_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SDMMC1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 FMC_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA1_Stream7_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM8_CC_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM8_TRG_COM_TIM14_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM8_UP_TIM13_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM8_BRK_TIM12_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 RTC_Alarm_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 EXTI15_10_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 USART3_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 USART2_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 USART1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SPI2_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SPI1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 I2C2_ER_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 I2C2_EV_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 I2C1_ER_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 I2C1_EV_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM4_IRQHandler
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 42
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SAI2_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA2D_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 LTDC_ER_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 LTDC_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SAI1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SPI6_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SPI5_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SPI4_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 UART8_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 UART7_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 FPU_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 HASH_RNG_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 CRYP_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DCMI_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 OTG_HS_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 OTG_HS_WKUP_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 OTG_HS_EP1_IN_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 OTG_HS_EP1_OUT_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 I2C3_ER_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 I2C3_EV_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 USART6_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA2_Stream7_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA2_Stream6_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA2_Stream5_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 FDCAN_CAL_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 ETH_WKUP_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 ETH_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA2_Stream4_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA2_Stream3_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA2_Stream2_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA2_Stream1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA2_Stream0_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM7_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM6_DAC_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 UART5_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 UART4_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SPI3_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM5_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SDMMC1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 FMC_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA1_Stream7_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM8_CC_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM8_TRG_COM_TIM14_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM8_UP_TIM13_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM8_BRK_TIM12_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 RTC_Alarm_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 EXTI15_10_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 USART3_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 USART2_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 USART1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SPI2_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SPI1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 I2C2_ER_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 I2C2_EV_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 I2C1_ER_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 I2C1_EV_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM4_IRQHandler
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 41
 
 
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM3_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM2_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM1_CC_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM1_TRG_COM_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM1_UP_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TIM1_BRK_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 EXTI9_5_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 FDCAN2_IT1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 FDCAN1_IT1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 FDCAN2_IT0_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 FDCAN1_IT0_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 ADC_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA1_Stream6_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA1_Stream5_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA1_Stream4_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA1_Stream3_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA1_Stream2_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA1_Stream1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DMA1_Stream0_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 EXTI4_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 EXTI3_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 EXTI2_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 EXTI1_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 EXTI0_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 RCC_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 FLASH_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 RTC_WKUP_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 TAMP_STAMP_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 PVD_AVD_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 WWDG_IRQHandler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SysTick_Handler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 PendSV_Handler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 DebugMon_Handler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 SVC_Handler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 UsageFault_Handler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 BusFault_Handler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 MemManage_Handler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 HardFault_Handler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:26     .text.Default_Handler:00000000 NMI_Handler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:350    .text.Reset_Handler:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:358    .text.Reset_Handler:00000000 Reset_Handler
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:419    .text.Reset_Handler:00000030 $d
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:432    .isr_vector:00000000 g_pfnVectors
-C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s:429    .isr_vector:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM3_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM2_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM1_CC_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM1_TRG_COM_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM1_UP_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TIM1_BRK_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 EXTI9_5_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 FDCAN2_IT1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 FDCAN1_IT1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 FDCAN2_IT0_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 FDCAN1_IT0_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 ADC_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA1_Stream6_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA1_Stream5_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA1_Stream4_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA1_Stream3_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA1_Stream2_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA1_Stream1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DMA1_Stream0_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 EXTI4_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 EXTI3_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 EXTI2_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 EXTI1_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 EXTI0_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 RCC_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 FLASH_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 RTC_WKUP_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 TAMP_STAMP_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 PVD_AVD_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 WWDG_IRQHandler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SysTick_Handler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 PendSV_Handler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 DebugMon_Handler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 SVC_Handler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 UsageFault_Handler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 BusFault_Handler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 MemManage_Handler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 HardFault_Handler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:25     .text.Default_Handler:00000000 NMI_Handler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:346    .text.Reset_Handler:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:353    .text.Reset_Handler:00000000 Reset_Handler
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:401    .text.Reset_Handler:00000028 $d
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:414    .isr_vector:00000000 g_pfnVectors
+C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s:411    .isr_vector:00000000 $d
 
 UNDEFINED SYMBOLS
 memcpy
@@ -2479,6 +2451,6 @@ _sidata
 _sbss
 _ebss
 _estack
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc2MIdvQ.s 			page 43
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc5ZuUis.s 			page 42
 
 

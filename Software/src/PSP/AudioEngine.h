@@ -12,9 +12,9 @@ struct Control_s {
 struct Oscillator_s {
     uint8_t Waveform;
     float Amp;
-    float Shape;
-    // Freq è omesso qui se è controllato globalmente da Control_s (pitch), 
-    // a meno che non serva come detune o offset.
+    //float Shape;
+    //float detune;
+
 };
 
 struct Adsr_s {
@@ -31,25 +31,28 @@ struct Filter_s {
 };
 struct Reverb_s {
     float DryWet;
+    float revLpFreq;
+    float revFeedback;
+    //others
 };
 // Il Preset racchiude lo stato di tutti i moduli
-struct Preset_s {
-    uint8_t index;
-    char name[16];
-    Oscillator_s osc1;
-    Oscillator_s osc2;
-    Oscillator_s lfo1;
-    Oscillator_s lfo2;
-    Adsr_s amp_env;
-    Adsr_s filt_env;
-    Filter_s filter;
-    Reverb_s reverb;
+    struct Preset_s {
+        uint8_t index;
+        char name[16];
+        Oscillator_s osc1;
+        Oscillator_s osc2;
+        Oscillator_s lfo1;
+        Oscillator_s lfo2;
+        Adsr_s amp_env;
+        Adsr_s filt_env;
+        Filter_s filter;
+        Reverb_s reverb;
 
-    // Aggiungi l'operatore != necessario per PersistentStorage in libDaisy
-    bool operator!=(const Preset_s& other) const {
-        return index != other.index; // Semplificato, in produzione confronta i parametri chiave
-    }
-};
+        bool operator!=(const Preset_s& other) const {
+            // Confronta l'intera struttura in memoria per rilevare qualsiasi modifica ai parametri
+            return memcmp(this, &other, sizeof(Preset_s)) != 0;
+        }
+    };
 
 class AudioEngine {
 public:
@@ -63,6 +66,9 @@ public:
 
     // Aggiorna controlli real-time (frequenza e gate)
     void UpdateControls(const Control_s& controls);
+
+    // Modifica un parametro del preset tramite MIDI CC e lo applica
+    void ProcessMidiCC(uint8_t cc_number, uint8_t cc_value, Preset_s& preset);
 
     // Genera un singolo sample
     void Process(float& out_l, float& out_r);
@@ -80,8 +86,21 @@ private:
 
     // Copia locale dei parametri attuali (per smoothing e lettura nel Process)
     Preset_s _currentPreset;
+    Preset_s _defaultPreset = {
+        0, "Default",
+        {daisysp::Oscillator::WAVE_SAW, 1.0f}, // osc1
+        {daisysp::Oscillator::WAVE_SAW, 1.0f}, // osc2
+        {daisysp::Oscillator::WAVE_SIN, 1.0f}, // lfo1
+        {daisysp::Oscillator::WAVE_SIN, 1.0f}, // lfo2
+        {0.01f, 0.1f, 0.8f, 0.5f, 1.0f},       // amp_env
+        {0.01f, 0.1f, 0.8f, 0.5f, 1.0f},       // filt_env
+        {1000.0f, 0.5f},                       // filter
+        {0.3f, 18000.0f, 0.85f}                // reverb
+    };
 
     // Stato controlli
     bool  _lastGate;
     float _currentFreq;
+
+
 };

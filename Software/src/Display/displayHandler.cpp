@@ -217,7 +217,7 @@ void DisplayHandler::DrawFloatParameter(const char* paramName, float value) {
     _displayPtr->WriteString(valBuffer, Font_11x18, true); 
 }
 
-void DisplayHandler::DrawIntParameter(const char* paramName, int value) {
+void DisplayHandler::DrawIntParameter(const char* paramName, int value, const char* dynamicString) {
     _displayPtr->Fill(false);
     
     _displayPtr->SetCursor(0, 0);
@@ -237,8 +237,11 @@ void DisplayHandler::DrawIntParameter(const char* paramName, int value) {
         sprintf(valBuffer, "%s", scales[value % 7]);
     }
     else if (strcmp(paramName, "PRESET") == 0) {
-        static const char* presets[] = {"Pad", "Pluck", "Roygbib"};
-        sprintf(valBuffer, "%s", presets[value % 3]);
+        if(dynamicString != nullptr) {
+            sprintf(valBuffer, "%s", dynamicString);
+        } else {
+            snprintf(valBuffer, sizeof(valBuffer), "Preset %d", value + 1);
+        }
     }
     else if (strcmp(paramName, "HYSTERESIS") == 0) {
         sprintf(valBuffer, "%d %%", value); 
@@ -256,7 +259,7 @@ void DisplayHandler::DrawIntParameter(const char* paramName, int value) {
     _displayPtr->WriteString(valBuffer, Font_11x18, true); 
 }
 
-void DisplayHandler::DrawStateW (MenuManager::MenuData ui_data) {
+void DisplayHandler::DrawStateW (MenuManager::MenuData ui_data, const Preset_s* presets_array) {
     int cursor_idx = 0;
     switch (ui_data.current_state) {
         case MenuManager::MAIN_MENU:
@@ -329,7 +332,11 @@ void DisplayHandler::DrawStateW (MenuManager::MenuData ui_data) {
             DrawIntParameter("OCTAVE", ui_data.octave);
             break;
         case MenuManager::PRESETS_HUB:
-            DrawIntParameter("PRESET", ui_data.preset);
+            if(presets_array != nullptr && ui_data.preset < PRESET_NUM) {
+                DrawIntParameter("PRESET", ui_data.preset, presets_array[ui_data.preset].name);
+            } else {
+                DrawIntParameter("PRESET", ui_data.preset);
+            }
             break;
         case MenuManager::SAVE_CONFIG:
             DrawIntParameter("SAVE CFG", ui_data.configs_idx);

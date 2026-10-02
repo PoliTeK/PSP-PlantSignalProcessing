@@ -13,7 +13,6 @@
 
 using namespace daisy;
 
-
 // ============================================================================
 // GLOBAL OBJECTS
 // ============================================================================
@@ -25,6 +24,23 @@ DisplayHandler disp_handle(&disp);
 
 PlantConditioner pc;
 AudioEngine      synth;
+
+MidiUsbHandler   midi;
+
+//============================================================================  
+// PERSISTENT STORAGE CONFIGURATION
+//============================================================================
+struct PresetBank {
+    Preset_s presets[PRESET_NUM];
+    
+    bool operator!=(const PresetBank& other) const {
+        for(int i = 0; i < PRESET_NUM; i++) {
+            if (presets[i] != other.presets[i]) return true;
+        }
+        return false;
+    }
+};
+PersistentStorage<PresetBank> storage(hw.qspi);
 
 // ============================================================================
 // GLOBAL VARIABLES & FLAGS
@@ -67,7 +83,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
     for(size_t i = 0; i < size; i++) {
 
         synth.Process(out[0][i], out[1][i]);
-        disp_handle.pushAudioSample(out[0][i]);  // Push left channel sample for display
+        disp_handle.pushAudioSample(out[0][i]); 
     }
 }
 
@@ -78,6 +94,11 @@ int main() {
     
     // --- 0. HARDWARE & PERIPHERAL INITIALIZATION ---
     hw.Init();
+
+    // --- MIDI USB INITIALIZATION ---
+    MidiUsbHandler::Config midi_cfg;
+    midi_cfg.transport_config.periph = MidiUsbTransport::Config::INTERNAL;
+    midi.Init(midi_cfg); // Tolto hw.
 
     enc.Init(hw.GetPin(14), hw.GetPin(13), hw.GetPin(10));
     menu.Init();
@@ -93,7 +114,28 @@ int main() {
 
     // --- 2. DSP INITIALIZATION ---
     synth.Init(hw.AudioSampleRate());
-    synth.SetPreset(PRESET_LEAD);
+
+    // --- 2.5 PERSISTENT STORAGE INIT ---
+    // Crea un oggetto PresetBank che conterrà i valori di fabbrica
+    PresetBank default_bank;
+    
+    // Popola tutti gli slot con valori validi
+    for(int i = 0; i < PRESET_NUM; i++) {
+        default_bank.presets[i].index = i;
+        sprintf(default_bank.presets[i].name, "Preset %d", i+1);
+        
+        default_bank.presets[i].osc1 = {daisysp::Oscillator::WAVE_SAW, 0.5f};
+        default_bank.presets[i].osc2 = {daisysp::Oscillator::WAVE_SQUARE, 0.5f};
+        default_bank.presets[i].lfo1 = {daisysp::Oscillator::WAVE_SIN, 1.0f};
+        default_bank.presets[i].lfo2 = {daisysp::Oscillator::WAVE_SIN, 1.0f};
+        default_bank.presets[i].amp_env = {0.05f, 0.1f, 0.8f, 0.5f, 1.0f};
+        default_bank.presets[i].filt_env = {0.01f, 0.2f, 0.0f, 0.2f, 3000.0f};
+        default_bank.presets[i].filter = {1000.0f, 0.1f};
+        default_bank.presets[i].reverb = {0.2f, 18000.0f, 0.85f};
+    }
+    
+    // Inizializza lo storage passandogli direttamente l'oggetto di default
+    storage.Init(default_bank);
 
     // --- 3. TIMERS CONFIGURATION ---
     // Timer Prescaler Calculation: scale core clock down to 1 MHz (1 tick = 1 us)
@@ -137,7 +179,6 @@ int main() {
     pc.setOctave(init_data.octave);
     pc.setScale((PlantConditioner::Notes)init_data.root, (PlantConditioner::ScaleType)init_data.scale);
     pc.SetFilter((IIR::FilterType)init_data.filter_type);
-    synth.SetPreset((SynthPreset) init_data.preset);
 
     // --- 4. START AUDIO ENGINE ---
     hw.StartAudio(AudioCallback);
@@ -224,13 +265,20 @@ int main() {
             new_params.curve      = ui_data.curve;
             new_params.hysteresis = ui_data.hysteresis;
             new_params.octave     = ui_data.octave;
-            new_params.root       = (PlantConditioner::Notes)ui_data.root;
-            new_params.scale      = (PlantConditioner::ScaleType)ui_data.scale;
-            new_params.filter     = (IIR::FilterType)ui_data.filter_type;
+            new_params.root       = static_cast<PlantConditioner::Notes>(ui_data.root);
+            new_params.scale      = static_cast<PlantConditioner::ScaleType>(ui_data.scale);
+            new_params.filter     = static_cast<IIR::FilterType>(ui_data.filter_type);
+
+            uint8_t selected_preset = ui_data.preset;
+
             __disable_irq(); 
+
             pc.SetAllParameters(new_params);
-            synth.SetPreset((SynthPreset) ui_data.preset);
+
+            synth.SetActivePreset(storage.GetSettings().presets[selected_preset]);
+
             __enable_irq();   
+
             if (local_clicked && ui_data.current_state == MenuManager::THRESHOLDS_HUB) {
                 pc.setThresholds(ui_data.touchths_value, ui_data.relths_value);
             }
@@ -261,9 +309,65 @@ int main() {
             } 
             else {
                 disp_handle.SetState(DisplayState::MENU_MODE);
-                disp_handle.DrawStateW(ui_data);
+                disp_handle.DrawStateW(ui_data, storage.GetSettings().presets);
             }
             disp_handle.Update(); 
+        }
+        // ====================================================================
+        // --- TASK 5: MIDI USB READ ---
+        // ====================================================================
+        midi.Listen();
+        
+        while (midi.HasEvents()) {
+            MidiEvent msg = midi.PopEvent();
+            
+            if (msg.type == ControlChange) {
+                ControlChangeEvent cc = msg.AsControlChange();
+                
+                // 1. Comando di salvataggio esplicito (es. CC 119)
+                // Usiamo un valore > 63 per simulare la pressione di un bottone
+                if (cc.control_number == 119 && cc.value > 63) {
+                    
+                    // Feedback visivo iniziale
+                    disp_handle.SetStandbyText("SAVING...");
+                    disp_handle.SetState(DisplayState::STANDBY);
+                    disp_handle.Update();
+                    
+                    // Ferma l'audio e disattiva gli interrupt per proteggere la QSPI e la USB
+                    __disable_irq();
+                    hw.StopAudio(); 
+                    
+                    storage.Save(); // Scrittura fisica sicura su memoria Flash
+                    
+                    hw.StartAudio(AudioCallback);
+                    __enable_irq();
+                    
+                    // Feedback visivo finale
+                    disp_handle.SetStandbyText("PRESET SAVED");
+                    disp_handle.Update();
+                    
+                    // Breve pausa per rendere leggibile il messaggio
+                    System::Delay(600); 
+                    
+                    // Ripristina lo stato precedente del display
+                    MenuManager::MenuData ui_data = menu.GetData();
+                    if (ui_data.current_state == MenuManager::PLAYMODE) {
+                        disp_handle.SetState(DisplayState::WAVEFORM_VIEWER);
+                    } else {
+                        disp_handle.SetState(DisplayState::MENU_MODE);
+                    }
+                    continue; // Passa al prossimo evento MIDI ignorando l'audio engine
+                }
+                
+                // 2. Modifica dei parametri audio in RAM (per tutti gli altri CC)
+                uint8_t p_idx = menu.GetData().preset;
+                
+                __disable_irq();
+                Preset_s current_preset = storage.GetSettings().presets[p_idx];
+                synth.ProcessMidiCC(cc.control_number, cc.value, current_preset);
+                storage.GetSettings().presets[p_idx] = current_preset;
+                __enable_irq();
+            }
         }
     }
 }

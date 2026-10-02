@@ -2,6 +2,9 @@
 #include <stdint.h>
 #include <daisy.h>
 
+#include "../PSP/AudioEngine.h"
+
+
 class MenuManager {
 public:
     enum MenuState {

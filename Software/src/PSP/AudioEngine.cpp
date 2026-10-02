@@ -1,8 +1,4 @@
 #include "AudioEngine.h"
-#include "AudioEngineConfig.h"
-
-AudioEngine::AudioEngine() {}
-AudioEngine::~AudioEngine() {}
 
 void AudioEngine::Init(float sample_rate) {
     _osc1.Init(sample_rate);
@@ -16,6 +12,8 @@ void AudioEngine::Init(float sample_rate) {
 
     _lastGate = false;
     _currentFreq = 440.0f;
+
+    SetActivePreset(_defaultPreset);
 }
 
 void AudioEngine::SetActivePreset(const Preset_s& preset) {
@@ -53,6 +51,46 @@ void AudioEngine::UpdateControls(const Control_s& controls) {
         _filt_env.Retrigger(false);
     }
     _lastGate = controls.gate;
+}
+
+void AudioEngine::ProcessMidiCC(uint8_t cc_number, uint8_t cc_value, Preset_s& preset) {
+    float val_norm = cc_value / 127.0f; 
+
+    switch (cc_number) {
+        case 74: // Cutoff
+            preset.filter.Cutoff = 20.0f + (val_norm * 10000.0f);
+            break;
+            
+        case 71: // Resonance
+            preset.filter.Resonance = val_norm;
+            break;
+            
+        case 73: // Attack
+            preset.amp_env.Attack = 0.01f + (val_norm * 2.0f);
+            break;
+            
+        case 72: // Release
+            preset.amp_env.Release = 0.01f + (val_norm * 5.0f);
+            break;
+            
+        case 91: // Reverb Dry/Wet
+            preset.reverb.DryWet = val_norm;
+            break;
+            
+        case 20: // Volume Osc 1
+            preset.osc1.Amp = val_norm;
+            break;
+            
+        case 21: // Volume Osc 2
+            preset.osc2.Amp = val_norm;
+            break;
+            
+        default:
+            return; // Se il CC non è mappato, esce senza fare nulla
+    }
+
+    // Applica le modifiche al motore in esecuzione
+    SetActivePreset(preset);
 }
 
 void AudioEngine::Process(float& out_l, float& out_r) {

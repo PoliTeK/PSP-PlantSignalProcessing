@@ -179,8 +179,7 @@ build/AudioEngine.o: PSP/AudioEngine.cpp \
  ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/PhysicalModeling/PolyPluck.h \
  ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Synthesis/blosc.h \
  ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/jitter.h \
- ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/port.h \
- PSP/AudioEngineConfig.h
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/port.h
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -363,4 +362,3 @@ PSP/AudioEngine.h:
 ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Synthesis/blosc.h:
 ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/jitter.h:
 ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/port.h:
-PSP/AudioEngineConfig.h:

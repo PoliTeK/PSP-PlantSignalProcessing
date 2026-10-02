@@ -8,6 +8,7 @@
 #include "../../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h"
 #include "MenuManager.h"
 
+
 #define BUFFER_SIZE 256
 #define WINDOW_SIZE 128
 
@@ -80,8 +81,8 @@ public:
 
     // Metodi generici per l'editing dei parametri (Foglie)
     void DrawFloatParameter(const char* paramName, float value);
-    void DrawIntParameter(const char* paramName, int value);
+    void DrawIntParameter(const char* paramName, int value, const char* dynamicString = nullptr);
 
-    void DrawStateW (MenuManager::MenuData ui_data);
+    void DrawStateW(MenuManager::MenuData ui_data, const Preset_s* presets_array);
 
 };

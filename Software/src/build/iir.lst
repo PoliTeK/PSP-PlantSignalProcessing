@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -9,7 +9,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 1
    6              		.eabi_attribute 24, 1
    7              		.eabi_attribute 25, 1
    8              		.eabi_attribute 26, 1
-   9              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 30, 4
   10              		.eabi_attribute 34, 1
   11              		.eabi_attribute 18, 4
   12              		.file	"iir.cpp"
@@ -18,239 +18,248 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 1
   15              		.cfi_sections	.debug_frame
   16              		.section	.text._ZN3IIRC2Ev,"ax",%progbits
   17              		.align	1
-  18              		.p2align 2,,3
-  19              		.global	_ZN3IIRC2Ev
-  20              		.arch armv7e-m
-  21              		.syntax unified
-  22              		.thumb
-  23              		.thumb_func
-  24              		.fpu fpv5-d16
-  26              	_ZN3IIRC2Ev:
-  27              	.LVL0:
-  28              	.LFB562:
-  29              		.file 1 "../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp"
+  18              		.global	_ZN3IIRC2Ev
+  19              		.arch armv7e-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv5-d16
+  25              	_ZN3IIRC2Ev:
+  26              	.LVL0:
+  27              	.LFB562:
+  28              		.file 1 "../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp"
    1:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** #include "iir.h"
    2:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** #include <string.h>
    3:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** 
    4:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** IIR::IIR() {}
-  30              		.loc 1 4 1 view -0
-  31              		.cfi_startproc
-  32              		@ args = 0, pretend = 0, frame = 16
-  33              		@ frame_needed = 0, uses_anonymous_args = 0
-  34              	.LBB2:
-  35              		.loc 1 4 10 is_stmt 0 view .LVU1
-  36 0000 364B     		ldr	r3, .L4
-  37              	.LBE2:
-  38              		.loc 1 4 1 view .LVU2
-  39 0002 8446     		mov	ip, r0
-  40              	.LBB3:
-  41              		.loc 1 4 10 view .LVU3
-  42 0004 DFED367A 		vldr.32	s15, .L4+4
-  43              	.LBE3:
-  44              		.loc 1 4 1 view .LVU4
-  45 0008 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
-  46              		.cfi_def_cfa_offset 36
-  47              		.cfi_offset 4, -36
-  48              		.cfi_offset 5, -32
-  49              		.cfi_offset 6, -28
-  50              		.cfi_offset 7, -24
-  51              		.cfi_offset 8, -20
-  52              		.cfi_offset 9, -16
-  53              		.cfi_offset 10, -12
-  54              		.cfi_offset 11, -8
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 2
+  29              		.loc 1 4 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		.loc 1 4 1 is_stmt 0 view .LVU1
+  34 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
+  35              		.cfi_def_cfa_offset 32
+  36              		.cfi_offset 3, -32
+  37              		.cfi_offset 4, -28
+  38              		.cfi_offset 5, -24
+  39              		.cfi_offset 6, -20
+  40              		.cfi_offset 7, -16
+  41              		.cfi_offset 8, -12
+  42              		.cfi_offset 9, -8
+  43              		.cfi_offset 14, -4
+  44              	.LBB2:
+  45              		.loc 1 4 10 view .LVU2
+  46 0004 2A4C     		ldr	r4, .L2
+  47              	.LBE2:
+  48              		.loc 1 4 1 view .LVU3
+  49 0006 0546     		mov	r5, r0
+  50              	.LBB3:
+  51              		.loc 1 4 10 view .LVU4
+  52 0008 031D     		adds	r3, r0, #4
+  53 000a 4FF00008 		mov	r8, #0
+  54 000e 04F11807 		add	r7, r4, #24
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s 			page 2
 
 
-  55              		.cfi_offset 14, -4
-  56              	.LBB4:
-  57              		.loc 1 4 10 view .LVU5
-  58 000c 041D     		adds	r4, r0, #4
-  59              	.LBE4:
-  60              		.loc 1 4 1 view .LVU6
-  61 000e 85B0     		sub	sp, sp, #20
-  62              		.cfi_def_cfa_offset 56
-  63              	.LBB5:
-  64              		.loc 1 4 10 view .LVU7
-  65 0010 03F1180A 		add	r10, r3, #24
-  66 0014 03F15807 		add	r7, r3, #88
-  67 0018 0CF12409 		add	r9, ip, #36
-  68 001c 03F12C08 		add	r8, r3, #44
-  69 0020 03F16C0E 		add	lr, r3, #108
-  70 0024 0CF1380B 		add	fp, ip, #56
-  71 0028 0CF17C06 		add	r6, ip, #124
-  72 002c 0CF19005 		add	r5, ip, #144
-  73 0030 93E80700 		ldm	r3, {r0, r1, r2}
-  74              	.LVL1:
-  75              		.loc 1 4 10 view .LVU8
-  76 0034 84E80700 		stm	r4, {r0, r1, r2}
-  77 0038 03F10C02 		add	r2, r3, #12
-  78 003c 0CF11004 		add	r4, ip, #16
-  79 0040 07CA     		ldm	r2, {r0, r1, r2}
-  80 0042 84E80700 		stm	r4, {r0, r1, r2}
-  81 0046 0CF15C01 		add	r1, ip, #92
-  82 004a 0CF14C02 		add	r2, ip, #76
-  83 004e 0CF16800 		add	r0, ip, #104
-  84 0052 CCED077A 		vstr.32	s15, [ip, #28]
-  85 0056 0191     		str	r1, [sp, #4]
-  86 0058 0CF1A401 		add	r1, ip, #164
-  87 005c 0092     		str	r2, [sp]
-  88 005e 0024     		movs	r4, #0
-  89 0060 0290     		str	r0, [sp, #8]
-  90 0062 0391     		str	r1, [sp, #12]
-  91 0064 CCED087A 		vstr.32	s15, [ip, #32]
-  92 0068 BAE80F00 		ldmia	r10!, {r0, r1, r2, r3}
-  93 006c A9E80F00 		stmia	r9!, {r0, r1, r2, r3}
-  94 0070 DAF80030 		ldr	r3, [r10]
-  95 0074 C9F80030 		str	r3, [r9]
-  96 0078 B8E80F00 		ldmia	r8!, {r0, r1, r2, r3}
-  97 007c ABE80F00 		stmia	fp!, {r0, r1, r2, r3}
-  98 0080 D8F80030 		ldr	r3, [r8]
-  99 0084 A7F11802 		sub	r2, r7, #24
- 100 0088 CBF80030 		str	r3, [fp]
- 101 008c 009B     		ldr	r3, [sp]
- 102 008e CCF84C40 		str	r4, [ip, #76]
- 103 0092 DC60     		str	r4, [r3, #12]
- 104 0094 C3E90144 		strd	r4, r4, [r3, #4]
- 105 0098 07CA     		ldm	r2, {r0, r1, r2}
- 106 009a 019B     		ldr	r3, [sp, #4]
- 107 009c 83E80700 		stm	r3, {r0, r1, r2}
- 108 00a0 A7F10C02 		sub	r2, r7, #12
- 109 00a4 029B     		ldr	r3, [sp, #8]
- 110 00a6 07CA     		ldm	r2, {r0, r1, r2}
- 111 00a8 83E80700 		stm	r3, {r0, r1, r2}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 3
+  55 0012 05F12406 		add	r6, r5, #36
+  56 0016 4FF01009 		mov	r9, #16
+  57 001a 94E80700 		ldm	r4, {r0, r1, r2}
+  58              	.LVL1:
+  59              		.loc 1 4 10 view .LVU5
+  60 001e 83E80700 		stm	r3, {r0, r1, r2}
+  61 0022 04F10C02 		add	r2, r4, #12
+  62 0026 05F11003 		add	r3, r5, #16
+  63 002a 07CA     		ldm	r2, {r0, r1, r2}
+  64 002c 83E80700 		stm	r3, {r0, r1, r2}
+  65 0030 0FCF     		ldmia	r7!, {r0, r1, r2, r3}
+  66 0032 C5F81C80 		str	r8, [r5, #28]	@ float
+  67 0036 C5F82080 		str	r8, [r5, #32]	@ float
+  68 003a 0FC6     		stmia	r6!, {r0, r1, r2, r3}
+  69 003c 3B68     		ldr	r3, [r7]
+  70 003e 04F12C07 		add	r7, r4, #44
+  71 0042 3360     		str	r3, [r6]
+  72 0044 05F13806 		add	r6, r5, #56
+  73 0048 0FCF     		ldmia	r7!, {r0, r1, r2, r3}
+  74 004a 0FC6     		stmia	r6!, {r0, r1, r2, r3}
+  75 004c 3B68     		ldr	r3, [r7]
+  76 004e 4A46     		mov	r2, r9
+  77 0050 0021     		movs	r1, #0
+  78 0052 05F14C00 		add	r0, r5, #76
+  79 0056 3360     		str	r3, [r6]
+  80 0058 04F15807 		add	r7, r4, #88
+  81 005c FFF7FEFF 		bl	memset
+  82              	.LVL2:
+  83 0060 04F14002 		add	r2, r4, #64
+  84 0064 05F15C03 		add	r3, r5, #92
+  85 0068 05F17C06 		add	r6, r5, #124
+  86 006c 07CA     		ldm	r2, {r0, r1, r2}
+  87 006e 83E80700 		stm	r3, {r0, r1, r2}
+  88 0072 04F14C02 		add	r2, r4, #76
+  89 0076 05F16803 		add	r3, r5, #104
+  90 007a 6C34     		adds	r4, r4, #108
+  91 007c 07CA     		ldm	r2, {r0, r1, r2}
+  92 007e 83E80700 		stm	r3, {r0, r1, r2}
+  93 0082 0FCF     		ldmia	r7!, {r0, r1, r2, r3}
+  94 0084 C5F87480 		str	r8, [r5, #116]	@ float
+  95 0088 C5F87880 		str	r8, [r5, #120]	@ float
+  96 008c 0FC6     		stmia	r6!, {r0, r1, r2, r3}
+  97 008e 3B68     		ldr	r3, [r7]
+  98 0090 3360     		str	r3, [r6]
+  99 0092 05F19006 		add	r6, r5, #144
+ 100 0096 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
+ 101 0098 0FC6     		stmia	r6!, {r0, r1, r2, r3}
+ 102 009a 2368     		ldr	r3, [r4]
+ 103 009c 4A46     		mov	r2, r9
+ 104 009e 0021     		movs	r1, #0
+ 105 00a0 05F1A400 		add	r0, r5, #164
+ 106 00a4 3360     		str	r3, [r6]
+ 107 00a6 FFF7FEFF 		bl	memset
+ 108              	.LVL3:
+ 109              	.LBE3:
+ 110              		.loc 1 4 13 view .LVU6
+ 111 00aa 2846     		mov	r0, r5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s 			page 3
 
 
- 112 00ac 0FCF     		ldmia	r7!, {r0, r1, r2, r3}
- 113 00ae CCED1D7A 		vstr.32	s15, [ip, #116]
- 114 00b2 CCED1E7A 		vstr.32	s15, [ip, #120]
- 115 00b6 0FC6     		stmia	r6!, {r0, r1, r2, r3}
- 116 00b8 3B68     		ldr	r3, [r7]
- 117 00ba 3360     		str	r3, [r6]
- 118 00bc BEE80F00 		ldmia	lr!, {r0, r1, r2, r3}
- 119 00c0 0FC5     		stmia	r5!, {r0, r1, r2, r3}
- 120 00c2 DEF80030 		ldr	r3, [lr]
- 121              	.LBE5:
- 122              		.loc 1 4 13 view .LVU9
- 123 00c6 6046     		mov	r0, ip
- 124              	.LBB6:
- 125              		.loc 1 4 10 view .LVU10
- 126 00c8 2B60     		str	r3, [r5]
- 127 00ca 039B     		ldr	r3, [sp, #12]
- 128 00cc CCF8A440 		str	r4, [ip, #164]
- 129 00d0 DC60     		str	r4, [r3, #12]
- 130 00d2 C3E90144 		strd	r4, r4, [r3, #4]
- 131              	.LBE6:
- 132              		.loc 1 4 13 view .LVU11
- 133 00d6 05B0     		add	sp, sp, #20
- 134              		.cfi_def_cfa_offset 36
- 135              		@ sp needed
- 136 00d8 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
- 137              	.L5:
- 138              		.align	2
- 139              	.L4:
- 140 00dc 00000000 		.word	.LANCHOR0
- 141 00e0 00000000 		.word	0
- 142              		.cfi_endproc
- 143              	.LFE562:
- 145              		.global	_ZN3IIRC1Ev
- 146              		.thumb_set _ZN3IIRC1Ev,_ZN3IIRC2Ev
- 147              		.section	.text._ZN3IIRD2Ev,"ax",%progbits
- 148              		.align	1
- 149              		.p2align 2,,3
- 150              		.global	_ZN3IIRD2Ev
- 151              		.syntax unified
- 152              		.thumb
- 153              		.thumb_func
- 154              		.fpu fpv5-d16
- 156              	_ZN3IIRD2Ev:
- 157              	.LVL2:
- 158              	.LFB565:
+ 112 00ac BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 113              	.LVL4:
+ 114              	.L3:
+ 115              		.loc 1 4 13 view .LVU7
+ 116              		.align	2
+ 117              	.L2:
+ 118 00b0 00000000 		.word	.LANCHOR0
+ 119              		.cfi_endproc
+ 120              	.LFE562:
+ 122              		.global	_ZN3IIRC1Ev
+ 123              		.thumb_set _ZN3IIRC1Ev,_ZN3IIRC2Ev
+ 124              		.section	.text._ZN3IIRD2Ev,"ax",%progbits
+ 125              		.align	1
+ 126              		.global	_ZN3IIRD2Ev
+ 127              		.syntax unified
+ 128              		.thumb
+ 129              		.thumb_func
+ 130              		.fpu fpv5-d16
+ 132              	_ZN3IIRD2Ev:
+ 133              	.LVL5:
+ 134              	.LFB565:
    5:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** IIR::~IIR() {}
- 159              		.loc 1 5 1 is_stmt 1 view -0
- 160              		.cfi_startproc
- 161              		@ args = 0, pretend = 0, frame = 0
- 162              		@ frame_needed = 0, uses_anonymous_args = 0
- 163              		@ link register save eliminated.
- 164              		.loc 1 5 14 is_stmt 0 view .LVU13
- 165 0000 7047     		bx	lr
- 166              		.cfi_endproc
- 167              	.LFE565:
- 169              		.global	_ZN3IIRD1Ev
- 170              		.thumb_set _ZN3IIRD1Ev,_ZN3IIRD2Ev
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 4
-
-
- 171 0002 00BF     		.section	.text._ZN3IIR4InitENS_10FilterTypeE,"ax",%progbits
- 172              		.align	1
- 173              		.p2align 2,,3
- 174              		.global	_ZN3IIR4InitENS_10FilterTypeE
- 175              		.syntax unified
- 176              		.thumb
- 177              		.thumb_func
- 178              		.fpu fpv5-d16
- 180              	_ZN3IIR4InitENS_10FilterTypeE:
- 181              	.LVL3:
- 182              	.LFB567:
+ 135              		.loc 1 5 1 is_stmt 1 view -0
+ 136              		.cfi_startproc
+ 137              		@ args = 0, pretend = 0, frame = 0
+ 138              		@ frame_needed = 0, uses_anonymous_args = 0
+ 139              		@ link register save eliminated.
+ 140              		.loc 1 5 14 is_stmt 0 view .LVU9
+ 141 0000 7047     		bx	lr
+ 142              		.cfi_endproc
+ 143              	.LFE565:
+ 145              		.global	_ZN3IIRD1Ev
+ 146              		.thumb_set _ZN3IIRD1Ev,_ZN3IIRD2Ev
+ 147              		.section	.text._ZN3IIR4InitENS_10FilterTypeE,"ax",%progbits
+ 148              		.align	1
+ 149              		.global	_ZN3IIR4InitENS_10FilterTypeE
+ 150              		.syntax unified
+ 151              		.thumb
+ 152              		.thumb_func
+ 153              		.fpu fpv5-d16
+ 155              	_ZN3IIR4InitENS_10FilterTypeE:
+ 156              	.LVL6:
+ 157              	.LFB567:
    6:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** 
    7:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** void IIR::Init(FilterType filter_type) {
- 183              		.loc 1 7 40 is_stmt 1 view -0
- 184              		.cfi_startproc
- 185              		@ args = 0, pretend = 0, frame = 0
- 186              		@ frame_needed = 0, uses_anonymous_args = 0
- 187              		@ link register save eliminated.
+ 158              		.loc 1 7 40 is_stmt 1 view -0
+ 159              		.cfi_startproc
+ 160              		@ args = 0, pretend = 0, frame = 0
+ 161              		@ frame_needed = 0, uses_anonymous_args = 0
    8:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     _filterType = filter_type;
- 188              		.loc 1 8 5 view .LVU15
+ 162              		.loc 1 8 5 view .LVU11
+   7:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     _filterType = filter_type;
+ 163              		.loc 1 7 40 is_stmt 0 view .LVU12
+ 164 0000 38B5     		push	{r3, r4, r5, lr}
+ 165              		.cfi_def_cfa_offset 16
+ 166              		.cfi_offset 3, -16
+ 167              		.cfi_offset 4, -12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s 			page 4
+
+
+ 168              		.cfi_offset 5, -8
+ 169              		.cfi_offset 14, -4
    9:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** 
   10:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     // Reset di tutti i buffer per sicurezza
   11:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     memset(_Butter_buff, 0, sizeof(_Butter_buff));
- 189              		.loc 1 11 11 is_stmt 0 view .LVU16
- 190 0000 0023     		movs	r3, #0
-   8:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     _filterType = filter_type;
- 191              		.loc 1 8 17 view .LVU17
- 192 0002 0246     		mov	r2, r0
- 193 0004 02F81C1B 		strb	r1, [r2], #28
- 194              		.loc 1 11 5 is_stmt 1 view .LVU18
- 195              		.loc 1 11 11 is_stmt 0 view .LVU19
- 196 0008 C361     		str	r3, [r0, #28]	@ unaligned
- 197 000a 5360     		str	r3, [r2, #4]	@ unaligned
+ 170              		.loc 1 11 11 view .LVU13
+ 171 0002 0025     		movs	r5, #0
+   8:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** 
+ 172              		.loc 1 8 17 view .LVU14
+ 173 0004 0346     		mov	r3, r0
+   7:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     _filterType = filter_type;
+ 174              		.loc 1 7 40 view .LVU15
+ 175 0006 0446     		mov	r4, r0
   12:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     memset(_Butter4_buff, 0, sizeof(_Butter4_buff));
- 198              		.loc 1 12 5 is_stmt 1 view .LVU20
- 199              		.loc 1 12 11 is_stmt 0 view .LVU21
- 200 000c C364     		str	r3, [r0, #76]	@ unaligned
- 201 000e 0365     		str	r3, [r0, #80]	@ unaligned
- 202 0010 4365     		str	r3, [r0, #84]	@ unaligned
- 203 0012 8365     		str	r3, [r0, #88]	@ unaligned
+ 176              		.loc 1 12 11 view .LVU16
+ 177 0008 1022     		movs	r2, #16
+   8:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** 
+ 178              		.loc 1 8 17 view .LVU17
+ 179 000a 03F81C1B 		strb	r1, [r3], #28
+  11:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     memset(_Butter4_buff, 0, sizeof(_Butter4_buff));
+ 180              		.loc 1 11 5 is_stmt 1 view .LVU18
+ 181              		.loc 1 12 11 is_stmt 0 view .LVU19
+ 182 000e 4C30     		adds	r0, r0, #76
+ 183              	.LVL7:
+  11:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     memset(_Butter4_buff, 0, sizeof(_Butter4_buff));
+ 184              		.loc 1 11 11 view .LVU20
+ 185 0010 40F8305C 		str	r5, [r0, #-48]	@ unaligned
+ 186              		.loc 1 12 11 view .LVU21
+ 187 0014 2946     		mov	r1, r5
+ 188              	.LVL8:
+  11:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     memset(_Butter4_buff, 0, sizeof(_Butter4_buff));
+ 189              		.loc 1 11 11 view .LVU22
+ 190 0016 5D60     		str	r5, [r3, #4]	@ unaligned
+ 191              		.loc 1 12 5 is_stmt 1 view .LVU23
+ 192              		.loc 1 12 11 is_stmt 0 view .LVU24
+ 193 0018 FFF7FEFF 		bl	memset
+ 194              	.LVL9:
   13:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     memset(_Bessel_buff, 0, sizeof(_Bessel_buff));
- 204              		.loc 1 13 5 is_stmt 1 view .LVU22
- 205              		.loc 1 13 11 is_stmt 0 view .LVU23
- 206 0014 4367     		str	r3, [r0, #116]	@ unaligned
- 207 0016 8367     		str	r3, [r0, #120]	@ unaligned
+ 195              		.loc 1 13 5 is_stmt 1 view .LVU25
   14:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     memset(_Bessel4_buff, 0, sizeof(_Bessel4_buff));
- 208              		.loc 1 14 5 is_stmt 1 view .LVU24
- 209              		.loc 1 14 11 is_stmt 0 view .LVU25
- 210 0018 C0F8A430 		str	r3, [r0, #164]	@ unaligned
- 211 001c C0F8A830 		str	r3, [r0, #168]	@ unaligned
- 212 0020 C0F8AC30 		str	r3, [r0, #172]	@ unaligned
- 213 0024 C0F8B030 		str	r3, [r0, #176]	@ unaligned
+ 196              		.loc 1 14 11 is_stmt 0 view .LVU26
+ 197 001c 2946     		mov	r1, r5
+ 198 001e 04F1A400 		add	r0, r4, #164
+  13:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     memset(_Bessel_buff, 0, sizeof(_Bessel_buff));
+ 199              		.loc 1 13 11 view .LVU27
+ 200 0022 6567     		str	r5, [r4, #116]	@ unaligned
+ 201 0024 A567     		str	r5, [r4, #120]	@ unaligned
+ 202              		.loc 1 14 5 is_stmt 1 view .LVU28
+ 203              		.loc 1 14 11 is_stmt 0 view .LVU29
+ 204 0026 1022     		movs	r2, #16
   15:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** }
- 214              		.loc 1 15 1 view .LVU26
- 215 0028 7047     		bx	lr
- 216              		.cfi_endproc
- 217              	.LFE567:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 5
+ 205              		.loc 1 15 1 view .LVU30
+ 206 0028 BDE83840 		pop	{r3, r4, r5, lr}
+ 207              		.cfi_restore 14
+ 208              		.cfi_restore 5
+ 209              		.cfi_restore 4
+ 210              		.cfi_restore 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s 			page 5
 
 
- 219 002a 00BF     		.section	.text._ZN3IIR7ProcessEf,"ax",%progbits
- 220              		.align	1
- 221              		.p2align 2,,3
+ 211              		.cfi_def_cfa_offset 0
+ 212              	.LVL10:
+  14:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     memset(_Bessel4_buff, 0, sizeof(_Bessel4_buff));
+ 213              		.loc 1 14 11 view .LVU31
+ 214 002c FFF7FEBF 		b	memset
+ 215              	.LVL11:
+  14:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     memset(_Bessel4_buff, 0, sizeof(_Bessel4_buff));
+ 216              		.loc 1 14 11 view .LVU32
+ 217              		.cfi_endproc
+ 218              	.LFE567:
+ 220              		.section	.text._ZN3IIR7ProcessEf,"ax",%progbits
+ 221              		.align	1
  222              		.global	_ZN3IIR7ProcessEf
  223              		.syntax unified
  224              		.thumb
  225              		.thumb_func
  226              		.fpu fpv5-d16
  228              	_ZN3IIR7ProcessEf:
- 229              	.LVL4:
+ 229              	.LVL12:
  230              	.LFB568:
   16:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** 
   17:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** float IIR::Process(float in) {
@@ -260,487 +269,435 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 1
  234              		@ frame_needed = 0, uses_anonymous_args = 0
  235              		@ link register save eliminated.
   18:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     float out = 0.0f;
- 236              		.loc 1 18 5 view .LVU28
+ 236              		.loc 1 18 5 view .LVU34
   19:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     float wn = 0.0f;
- 237              		.loc 1 19 5 view .LVU29
+ 237              		.loc 1 19 5 view .LVU35
   20:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** 
   21:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     switch (_filterType) {
- 238              		.loc 1 21 5 view .LVU30
+ 238              		.loc 1 21 5 view .LVU36
  239 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
  240 0002 032B     		cmp	r3, #3
- 241 0004 00F2B880 		bhi	.L15
+ 241 0004 00F2B080 		bhi	.L13
  242 0008 DFE803F0 		tbb	[pc, r3]
- 243              	.L11:
- 244 000c 95       		.byte	(.L14-.L11)/2
- 245 000d 5C       		.byte	(.L13-.L11)/2
- 246 000e 3B       		.byte	(.L12-.L11)/2
- 247 000f 02       		.byte	(.L10-.L11)/2
+ 243              	.L9:
+ 244 000c 58       		.byte	(.L12-.L9)/2
+ 245 000d 77       		.byte	(.L11-.L9)/2
+ 246 000e 02       		.byte	(.L10-.L9)/2
+ 247 000f 21       		.byte	(.L8-.L9)/2
  248              		.p2align 1
  249              	.L10:
   22:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****         case BUTTERWORTH2:
+ 250              		.loc 1 22 9 view .LVU37
   23:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             wn = in - (_butter_a[1] * _Butter_buff[0] + _butter_a[2] * _Butter_buff[1]);
+ 251              		.loc 1 23 13 view .LVU38
+ 252              		.loc 1 23 86 is_stmt 0 view .LVU39
+ 253 0010 D0ED086A 		vldr.32	s13, [r0, #32]
+ 254              		.loc 1 23 70 view .LVU40
+ 255 0014 D0ED067A 		vldr.32	s15, [r0, #24]
+ 256              		.loc 1 23 53 view .LVU41
+ 257 0018 90ED077A 		vldr.32	s14, [r0, #28]
+ 258              		.loc 1 23 70 view .LVU42
+ 259 001c 66EEA77A 		vmul.f32	s15, s13, s15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s 			page 6
+
+
+ 260              		.loc 1 23 55 view .LVU43
+ 261 0020 90ED056A 		vldr.32	s12, [r0, #20]
   24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
   25:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter_buff[1] = _Butter_buff[0];
+ 262              		.loc 1 25 29 view .LVU44
+ 263 0024 80ED087A 		vstr.32	s14, [r0, #32]
+  23:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             wn = in - (_butter_a[1] * _Butter_buff[0] + _butter_a[2] * _Butter_buff[1]);
+ 264              		.loc 1 23 55 view .LVU45
+ 265 0028 E6EE077A 		vfma.f32	s15, s12, s14
+  24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
+ 266              		.loc 1 24 37 view .LVU46
+ 267 002c 90ED016A 		vldr.32	s12, [r0, #4]
+  23:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             wn = in - (_butter_a[1] * _Butter_buff[0] + _butter_a[2] * _Butter_buff[1]);
+ 268              		.loc 1 23 16 view .LVU47
+ 269 0030 70EE677A 		vsub.f32	s15, s0, s15
+ 270              	.LVL13:
+  24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
+ 271              		.loc 1 24 13 is_stmt 1 view .LVU48
+  24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
+ 272              		.loc 1 24 52 is_stmt 0 view .LVU49
+ 273 0034 90ED020A 		vldr.32	s0, [r0, #8]
+ 274              	.LVL14:
+  24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
+ 275              		.loc 1 24 52 view .LVU50
+ 276 0038 27EE000A 		vmul.f32	s0, s14, s0
   26:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter_buff[0] = wn;
+ 277              		.loc 1 26 29 view .LVU51
+ 278 003c C0ED077A 		vstr.32	s15, [r0, #28]
+  24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
+ 279              		.loc 1 24 37 view .LVU52
+ 280 0040 A6EE270A 		vfma.f32	s0, s12, s15
+  24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
+ 281              		.loc 1 24 17 view .LVU53
+ 282 0044 90ED036A 		vldr.32	s12, [r0, #12]
+ 283 0048 A6EE860A 		vfma.f32	s0, s13, s12
+ 284              	.LVL15:
+  25:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter_buff[0] = wn;
+ 285              		.loc 1 25 13 is_stmt 1 view .LVU54
+ 286              		.loc 1 26 13 view .LVU55
   27:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             break;
+ 287              		.loc 1 27 13 view .LVU56
+ 288 004c 7047     		bx	lr
+ 289              	.LVL16:
+ 290              	.L8:
   28:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** 
   29:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****         case BUTTERWORTH4:
- 250              		.loc 1 29 9 view .LVU31
+ 291              		.loc 1 29 9 view .LVU57
   30:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             wn = in - (_butter4_a[1] * _Butter4_buff[0] + _butter4_a[2] * _Butter4_buff[1] + 
- 251              		.loc 1 30 13 view .LVU32
- 252              		.loc 1 30 90 is_stmt 0 view .LVU33
- 253 0010 D0ED145A 		vldr.32	s11, [r0, #80]
- 254              		.loc 1 30 73 view .LVU34
- 255 0014 D0ED106A 		vldr.32	s13, [r0, #64]
- 256              		.loc 1 30 55 view .LVU35
- 257 0018 90ED137A 		vldr.32	s14, [r0, #76]
- 258              		.loc 1 30 73 view .LVU36
- 259 001c 65EEA66A 		vmul.f32	s13, s11, s13
- 260              		.loc 1 30 57 view .LVU37
- 261 0020 D0ED0F4A 		vldr.32	s9, [r0, #60]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 6
+ 292              		.loc 1 30 13 view .LVU58
+ 293              		.loc 1 30 90 is_stmt 0 view .LVU59
+ 294 004e 90ED146A 		vldr.32	s12, [r0, #80]
+ 295              		.loc 1 30 73 view .LVU60
+ 296 0052 D0ED107A 		vldr.32	s15, [r0, #64]
+ 297              		.loc 1 30 55 view .LVU61
+ 298 0056 D0ED136A 		vldr.32	s13, [r0, #76]
+ 299              		.loc 1 30 73 view .LVU62
+ 300 005a 66EE277A 		vmul.f32	s15, s12, s15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s 			page 7
 
 
+ 301              		.loc 1 30 57 view .LVU63
+ 302 005e 90ED0F7A 		vldr.32	s14, [r0, #60]
   31:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                        _butter4_a[3] * _Butter4_buff[2] + _butter4_a[4] * _Butter4_buff[3]);
- 262              		.loc 1 31 55 view .LVU38
- 263 0024 90ED156A 		vldr.32	s12, [r0, #84]
+ 303              		.loc 1 31 55 view .LVU64
+ 304 0062 D0ED155A 		vldr.32	s11, [r0, #84]
+ 305              		.loc 1 31 90 view .LVU65
+ 306 0066 90ED165A 		vldr.32	s10, [r0, #88]
   30:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             wn = in - (_butter4_a[1] * _Butter4_buff[0] + _butter4_a[2] * _Butter4_buff[1] + 
- 264              		.loc 1 30 92 view .LVU39
- 265 0028 90ED112A 		vldr.32	s4, [r0, #68]
+ 307              		.loc 1 30 57 view .LVU66
+ 308 006a E7EE267A 		vfma.f32	s15, s14, s13
   30:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             wn = in - (_butter4_a[1] * _Butter4_buff[0] + _butter4_a[2] * _Butter4_buff[1] + 
- 266              		.loc 1 30 57 view .LVU40
- 267 002c E4EE876A 		vfma.f32	s13, s9, s14
- 268              		.loc 1 31 90 view .LVU41
- 269 0030 90ED165A 		vldr.32	s10, [r0, #88]
- 270              		.loc 1 31 57 view .LVU42
- 271 0034 D0ED122A 		vldr.32	s5, [r0, #72]
+ 309              		.loc 1 30 92 view .LVU67
+ 310 006e 90ED117A 		vldr.32	s14, [r0, #68]
+ 311              		.loc 1 31 57 view .LVU68
+ 312 0072 D0ED124A 		vldr.32	s9, [r0, #72]
   32:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter4_b[0] * wn + _butter4_b[1] * _Butter4_buff[0] + _butter4_b[2] * _Butter4_
- 272              		.loc 1 32 54 view .LVU43
- 273 0038 D0ED0A7A 		vldr.32	s15, [r0, #40]
   33:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _butter4_b[3] * _Butter4_buff[2] + _butter4_b[4] * _Butter4_buff[3];
   34:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter4_buff[3] = _Butter4_buff[2];
+ 313              		.loc 1 34 30 view .LVU69
+ 314 0076 C0ED165A 		vstr.32	s11, [r0, #88]
   35:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter4_buff[2] = _Butter4_buff[1];
+ 315              		.loc 1 35 30 view .LVU70
+ 316 007a 80ED156A 		vstr.32	s12, [r0, #84]
   36:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter4_buff[1] = _Butter4_buff[0];
- 274              		.loc 1 36 30 view .LVU44
- 275 003c 80ED147A 		vstr.32	s14, [r0, #80]
-  32:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter4_b[0] * wn + _butter4_b[1] * _Butter4_buff[0] + _butter4_b[2] * _Butter4_
- 276              		.loc 1 32 54 view .LVU45
- 277 0040 67EE277A 		vmul.f32	s15, s14, s15
-  32:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter4_b[0] * wn + _butter4_b[1] * _Butter4_buff[0] + _butter4_b[2] * _Butter4_
- 278              		.loc 1 32 38 view .LVU46
- 279 0044 90ED093A 		vldr.32	s6, [r0, #36]
-  32:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter4_b[0] * wn + _butter4_b[1] * _Butter4_buff[0] + _butter4_b[2] * _Butter4_
- 280              		.loc 1 32 73 view .LVU47
- 281 0048 D0ED0B3A 		vldr.32	s7, [r0, #44]
+ 317              		.loc 1 36 30 view .LVU71
+ 318 007e C0ED146A 		vstr.32	s13, [r0, #80]
   30:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                        _butter4_a[3] * _Butter4_buff[2] + _butter4_a[4] * _Butter4_buff[3]);
- 282              		.loc 1 30 92 view .LVU48
- 283 004c E2EE066A 		vfma.f32	s13, s4, s12
-  32:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter4_b[0] * wn + _butter4_b[1] * _Butter4_buff[0] + _butter4_b[2] * _Butter4_
- 284              		.loc 1 32 108 view .LVU49
- 285 0050 90ED0C4A 		vldr.32	s8, [r0, #48]
-  32:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter4_b[0] * wn + _butter4_b[1] * _Butter4_buff[0] + _butter4_b[2] * _Butter4_
- 286              		.loc 1 32 17 view .LVU50
- 287 0054 D0ED0D4A 		vldr.32	s9, [r0, #52]
-  34:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter4_buff[2] = _Butter4_buff[1];
- 288              		.loc 1 34 30 view .LVU51
- 289 0058 80ED166A 		vstr.32	s12, [r0, #88]
-  35:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter4_buff[1] = _Butter4_buff[0];
- 290              		.loc 1 35 30 view .LVU52
- 291 005c C0ED155A 		vstr.32	s11, [r0, #84]
+ 319              		.loc 1 30 92 view .LVU72
+ 320 0082 E7EE257A 		vfma.f32	s15, s14, s11
+  32:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _butter4_b[3] * _Butter4_buff[2] + _butter4_b[4] * _Butter4_buff[3];
+ 321              		.loc 1 32 38 view .LVU73
+ 322 0086 90ED097A 		vldr.32	s14, [r0, #36]
   31:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter4_b[0] * wn + _butter4_b[1] * _Butter4_buff[0] + _butter4_b[2] * _Butter4_
- 292              		.loc 1 31 57 view .LVU53
- 293 0060 E2EE856A 		vfma.f32	s13, s5, s10
+ 323              		.loc 1 31 57 view .LVU74
+ 324 008a E4EE857A 		vfma.f32	s15, s9, s10
   30:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                        _butter4_a[3] * _Butter4_buff[2] + _butter4_a[4] * _Butter4_buff[3]);
- 294              		.loc 1 30 16 view .LVU54
- 295 0064 30EE667A 		vsub.f32	s14, s0, s13
- 296              	.LVL5:
+ 325              		.loc 1 30 16 view .LVU75
+ 326 008e 70EE677A 		vsub.f32	s15, s0, s15
+ 327              	.LVL17:
   32:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _butter4_b[3] * _Butter4_buff[2] + _butter4_b[4] * _Butter4_buff[3];
- 297              		.loc 1 32 13 is_stmt 1 view .LVU55
+ 328              		.loc 1 32 13 is_stmt 1 view .LVU76
   32:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _butter4_b[3] * _Butter4_buff[2] + _butter4_b[4] * _Butter4_buff[3];
- 298              		.loc 1 32 38 is_stmt 0 view .LVU56
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 7
-
-
- 299 0068 E3EE077A 		vfma.f32	s15, s6, s14
+ 329              		.loc 1 32 54 is_stmt 0 view .LVU77
+ 330 0092 90ED0A0A 		vldr.32	s0, [r0, #40]
+ 331              	.LVL18:
+  32:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _butter4_b[3] * _Butter4_buff[2] + _butter4_b[4] * _Butter4_buff[3];
+ 332              		.loc 1 32 54 view .LVU78
+ 333 0096 26EE800A 		vmul.f32	s0, s13, s0
   37:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter4_buff[0] = wn;
- 300              		.loc 1 37 30 view .LVU57
- 301 006c 80ED137A 		vstr.32	s14, [r0, #76]
+ 334              		.loc 1 37 30 view .LVU79
+ 335 009a C0ED137A 		vstr.32	s15, [r0, #76]
   32:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _butter4_b[3] * _Butter4_buff[2] + _butter4_b[4] * _Butter4_buff[3];
- 302              		.loc 1 32 38 view .LVU58
- 303 0070 B0EE670A 		vmov.f32	s0, s15
- 304              	.LVL6:
+ 336              		.loc 1 32 38 view .LVU80
+ 337 009e A7EE270A 		vfma.f32	s0, s14, s15
   32:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _butter4_b[3] * _Butter4_buff[2] + _butter4_b[4] * _Butter4_buff[3];
- 305              		.loc 1 32 73 view .LVU59
- 306 0074 A5EEA30A 		vfma.f32	s0, s11, s7
+ 338              		.loc 1 32 73 view .LVU81
+ 339 00a2 90ED0B7A 		vldr.32	s14, [r0, #44]
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s 			page 8
+
+
+ 340 00a6 A6EE070A 		vfma.f32	s0, s12, s14
   32:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _butter4_b[3] * _Butter4_buff[2] + _butter4_b[4] * _Butter4_buff[3];
- 307              		.loc 1 32 108 view .LVU60
- 308 0078 A6EE040A 		vfma.f32	s0, s12, s8
+ 341              		.loc 1 32 108 view .LVU82
+ 342 00aa 90ED0C7A 		vldr.32	s14, [r0, #48]
+ 343 00ae A5EE870A 		vfma.f32	s0, s11, s14
   32:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _butter4_b[3] * _Butter4_buff[2] + _butter4_b[4] * _Butter4_buff[3];
- 309              		.loc 1 32 17 view .LVU61
- 310 007c A5EE240A 		vfma.f32	s0, s10, s9
- 311              	.LVL7:
+ 344              		.loc 1 32 17 view .LVU83
+ 345 00b2 90ED0D7A 		vldr.32	s14, [r0, #52]
+ 346 00b6 A5EE070A 		vfma.f32	s0, s10, s14
+ 347              	.LVL19:
   34:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter4_buff[2] = _Butter4_buff[1];
- 312              		.loc 1 34 13 is_stmt 1 view .LVU62
+ 348              		.loc 1 34 13 is_stmt 1 view .LVU84
   35:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter4_buff[1] = _Butter4_buff[0];
- 313              		.loc 1 35 13 view .LVU63
+ 349              		.loc 1 35 13 view .LVU85
   36:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter4_buff[0] = wn;
- 314              		.loc 1 36 13 view .LVU64
- 315              		.loc 1 37 13 view .LVU65
+ 350              		.loc 1 36 13 view .LVU86
+ 351              		.loc 1 37 13 view .LVU87
   38:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             break;
- 316              		.loc 1 38 13 view .LVU66
- 317 0080 7047     		bx	lr
- 318              	.LVL8:
- 319              	.L12:
-  22:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             wn = in - (_butter_a[1] * _Butter_buff[0] + _butter_a[2] * _Butter_buff[1]);
- 320              		.loc 1 22 9 view .LVU67
-  23:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
- 321              		.loc 1 23 13 view .LVU68
-  23:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
- 322              		.loc 1 23 86 is_stmt 0 view .LVU69
- 323 0082 90ED086A 		vldr.32	s12, [r0, #32]
-  23:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
- 324              		.loc 1 23 70 view .LVU70
- 325 0086 90ED067A 		vldr.32	s14, [r0, #24]
-  23:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
- 326              		.loc 1 23 53 view .LVU71
- 327 008a D0ED076A 		vldr.32	s13, [r0, #28]
-  23:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
- 328              		.loc 1 23 70 view .LVU72
- 329 008e 26EE077A 		vmul.f32	s14, s12, s14
-  23:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
- 330              		.loc 1 23 55 view .LVU73
- 331 0092 D0ED054A 		vldr.32	s9, [r0, #20]
-  24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter_buff[1] = _Butter_buff[0];
- 332              		.loc 1 24 52 view .LVU74
- 333 0096 D0ED027A 		vldr.32	s15, [r0, #8]
-  24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter_buff[1] = _Butter_buff[0];
- 334              		.loc 1 24 37 view .LVU75
- 335 009a 90ED015A 		vldr.32	s10, [r0, #4]
-  23:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
- 336              		.loc 1 23 55 view .LVU76
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 8
-
-
- 337 009e A4EEA67A 		vfma.f32	s14, s9, s13
-  24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter_buff[1] = _Butter_buff[0];
- 338              		.loc 1 24 17 view .LVU77
- 339 00a2 D0ED035A 		vldr.32	s11, [r0, #12]
-  24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter_buff[1] = _Butter_buff[0];
- 340              		.loc 1 24 52 view .LVU78
- 341 00a6 66EEA77A 		vmul.f32	s15, s13, s15
-  25:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter_buff[0] = wn;
- 342              		.loc 1 25 29 view .LVU79
- 343 00aa C0ED086A 		vstr.32	s13, [r0, #32]
-  23:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _butter_b[0] * wn + _butter_b[1] * _Butter_buff[0] + _butter_b[2] * _Butter_buff[
- 344              		.loc 1 23 16 view .LVU80
- 345 00ae 30EE477A 		vsub.f32	s14, s0, s14
- 346              	.LVL9:
-  24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter_buff[1] = _Butter_buff[0];
- 347              		.loc 1 24 13 is_stmt 1 view .LVU81
-  24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter_buff[1] = _Butter_buff[0];
- 348              		.loc 1 24 37 is_stmt 0 view .LVU82
- 349 00b2 E5EE077A 		vfma.f32	s15, s10, s14
-  26:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             break;
- 350              		.loc 1 26 29 view .LVU83
- 351 00b6 80ED077A 		vstr.32	s14, [r0, #28]
-  24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter_buff[1] = _Butter_buff[0];
- 352              		.loc 1 24 37 view .LVU84
- 353 00ba B0EE670A 		vmov.f32	s0, s15
- 354              	.LVL10:
-  24:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter_buff[1] = _Butter_buff[0];
- 355              		.loc 1 24 17 view .LVU85
- 356 00be A6EE250A 		vfma.f32	s0, s12, s11
- 357              	.LVL11:
-  25:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Butter_buff[0] = wn;
- 358              		.loc 1 25 13 is_stmt 1 view .LVU86
-  26:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             break;
- 359              		.loc 1 26 13 view .LVU87
-  27:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** 
- 360              		.loc 1 27 13 view .LVU88
- 361 00c2 7047     		bx	lr
- 362              	.LVL12:
- 363              	.L13:
+ 352              		.loc 1 38 13 view .LVU88
+ 353 00ba 7047     		bx	lr
+ 354              	.LVL20:
+ 355              	.L12:
   39:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** 
   40:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****         case BESSEL2:
+ 356              		.loc 1 40 9 view .LVU89
   41:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             wn = in - (_bessel_a[1] * _Bessel_buff[0] + _bessel_a[2] * _Bessel_buff[1]);
+ 357              		.loc 1 41 13 view .LVU90
+ 358              		.loc 1 41 86 is_stmt 0 view .LVU91
+ 359 00bc D0ED1E6A 		vldr.32	s13, [r0, #120]
+ 360              		.loc 1 41 70 view .LVU92
+ 361 00c0 D0ED1C7A 		vldr.32	s15, [r0, #112]
+ 362              		.loc 1 41 53 view .LVU93
+ 363 00c4 90ED1D7A 		vldr.32	s14, [r0, #116]
+ 364              		.loc 1 41 70 view .LVU94
+ 365 00c8 66EEA77A 		vmul.f32	s15, s13, s15
+ 366              		.loc 1 41 55 view .LVU95
+ 367 00cc 90ED1B6A 		vldr.32	s12, [r0, #108]
   42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
   43:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel_buff[1] = _Bessel_buff[0];
+ 368              		.loc 1 43 29 view .LVU96
+ 369 00d0 80ED1E7A 		vstr.32	s14, [r0, #120]
+  41:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             wn = in - (_bessel_a[1] * _Bessel_buff[0] + _bessel_a[2] * _Bessel_buff[1]);
+ 370              		.loc 1 41 55 view .LVU97
+ 371 00d4 E6EE077A 		vfma.f32	s15, s12, s14
+  42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
+ 372              		.loc 1 42 37 view .LVU98
+ 373 00d8 90ED176A 		vldr.32	s12, [r0, #92]
+  41:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             wn = in - (_bessel_a[1] * _Bessel_buff[0] + _bessel_a[2] * _Bessel_buff[1]);
+ 374              		.loc 1 41 16 view .LVU99
+ 375 00dc 70EE677A 		vsub.f32	s15, s0, s15
+ 376              	.LVL21:
+  42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
+ 377              		.loc 1 42 13 is_stmt 1 view .LVU100
+  42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
+ 378              		.loc 1 42 52 is_stmt 0 view .LVU101
+ 379 00e0 90ED180A 		vldr.32	s0, [r0, #96]
+ 380              	.LVL22:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s 			page 9
+
+
+  42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
+ 381              		.loc 1 42 52 view .LVU102
+ 382 00e4 27EE000A 		vmul.f32	s0, s14, s0
   44:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel_buff[0] = wn;
+ 383              		.loc 1 44 29 view .LVU103
+ 384 00e8 C0ED1D7A 		vstr.32	s15, [r0, #116]
+  42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
+ 385              		.loc 1 42 37 view .LVU104
+ 386 00ec A6EE270A 		vfma.f32	s0, s12, s15
+  42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
+ 387              		.loc 1 42 17 view .LVU105
+ 388 00f0 90ED196A 		vldr.32	s12, [r0, #100]
+ 389 00f4 A6EE860A 		vfma.f32	s0, s13, s12
+ 390              	.LVL23:
+  43:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel_buff[0] = wn;
+ 391              		.loc 1 43 13 is_stmt 1 view .LVU106
+ 392              		.loc 1 44 13 view .LVU107
   45:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             break;
+ 393              		.loc 1 45 13 view .LVU108
+ 394 00f8 7047     		bx	lr
+ 395              	.LVL24:
+ 396              	.L11:
   46:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** 
   47:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****         case BESSEL4:
- 364              		.loc 1 47 9 view .LVU89
+ 397              		.loc 1 47 9 view .LVU109
   48:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             wn = in - (_bessel4_a[1] * _Bessel4_buff[0] + _bessel4_a[2] * _Bessel4_buff[1] + 
- 365              		.loc 1 48 13 view .LVU90
- 366              		.loc 1 48 90 is_stmt 0 view .LVU91
- 367 00c4 D0ED2A5A 		vldr.32	s11, [r0, #168]
- 368              		.loc 1 48 73 view .LVU92
- 369 00c8 D0ED266A 		vldr.32	s13, [r0, #152]
- 370              		.loc 1 48 55 view .LVU93
- 371 00cc 90ED297A 		vldr.32	s14, [r0, #164]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 9
-
-
- 372              		.loc 1 48 73 view .LVU94
- 373 00d0 65EEA66A 		vmul.f32	s13, s11, s13
- 374              		.loc 1 48 57 view .LVU95
- 375 00d4 D0ED254A 		vldr.32	s9, [r0, #148]
+ 398              		.loc 1 48 13 view .LVU110
+ 399              		.loc 1 48 90 is_stmt 0 view .LVU111
+ 400 00fa D0ED2A6A 		vldr.32	s13, [r0, #168]
+ 401              		.loc 1 48 73 view .LVU112
+ 402 00fe D0ED267A 		vldr.32	s15, [r0, #152]
+ 403              		.loc 1 48 55 view .LVU113
+ 404 0102 90ED297A 		vldr.32	s14, [r0, #164]
+ 405              		.loc 1 48 73 view .LVU114
+ 406 0106 66EEA77A 		vmul.f32	s15, s13, s15
+ 407              		.loc 1 48 57 view .LVU115
+ 408 010a 90ED256A 		vldr.32	s12, [r0, #148]
+ 409              		.loc 1 48 92 view .LVU116
+ 410 010e D0ED275A 		vldr.32	s11, [r0, #156]
   49:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                        _bessel4_a[3] * _Bessel4_buff[2] + _bessel4_a[4] * _Bessel4_buff[3]);
- 376              		.loc 1 49 55 view .LVU96
- 377 00d8 90ED2B6A 		vldr.32	s12, [r0, #172]
+ 411              		.loc 1 49 57 view .LVU117
+ 412 0112 90ED285A 		vldr.32	s10, [r0, #160]
   48:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             wn = in - (_bessel4_a[1] * _Bessel4_buff[0] + _bessel4_a[2] * _Bessel4_buff[1] + 
- 378              		.loc 1 48 92 view .LVU97
- 379 00dc 90ED272A 		vldr.32	s4, [r0, #156]
-  48:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             wn = in - (_bessel4_a[1] * _Bessel4_buff[0] + _bessel4_a[2] * _Bessel4_buff[1] + 
- 380              		.loc 1 48 57 view .LVU98
- 381 00e0 E4EE876A 		vfma.f32	s13, s9, s14
- 382              		.loc 1 49 90 view .LVU99
- 383 00e4 90ED2C5A 		vldr.32	s10, [r0, #176]
- 384              		.loc 1 49 57 view .LVU100
- 385 00e8 D0ED282A 		vldr.32	s5, [r0, #160]
+ 413              		.loc 1 48 57 view .LVU118
+ 414 0116 E6EE077A 		vfma.f32	s15, s12, s14
+ 415              		.loc 1 49 55 view .LVU119
+ 416 011a 90ED2B6A 		vldr.32	s12, [r0, #172]
   50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel4_b[0] * wn + _bessel4_b[1] * _Bessel4_buff[0] + _bessel4_b[2] * _Bessel4_
- 386              		.loc 1 50 54 view .LVU101
- 387 00ec D0ED207A 		vldr.32	s15, [r0, #128]
   51:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
   52:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel4_buff[3] = _Bessel4_buff[2];
   53:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel4_buff[2] = _Bessel4_buff[1];
   54:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel4_buff[1] = _Bessel4_buff[0];
- 388              		.loc 1 54 30 view .LVU102
- 389 00f0 80ED2A7A 		vstr.32	s14, [r0, #168]
-  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel4_b[0] * wn + _bessel4_b[1] * _Bessel4_buff[0] + _bessel4_b[2] * _Bessel4_
- 390              		.loc 1 50 54 view .LVU103
- 391 00f4 67EE277A 		vmul.f32	s15, s14, s15
-  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel4_b[0] * wn + _bessel4_b[1] * _Bessel4_buff[0] + _bessel4_b[2] * _Bessel4_
- 392              		.loc 1 50 38 view .LVU104
- 393 00f8 90ED1F3A 		vldr.32	s6, [r0, #124]
-  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel4_b[0] * wn + _bessel4_b[1] * _Bessel4_buff[0] + _bessel4_b[2] * _Bessel4_
- 394              		.loc 1 50 73 view .LVU105
- 395 00fc D0ED213A 		vldr.32	s7, [r0, #132]
-  48:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                        _bessel4_a[3] * _Bessel4_buff[2] + _bessel4_a[4] * _Bessel4_buff[3]);
- 396              		.loc 1 48 92 view .LVU106
- 397 0100 E2EE066A 		vfma.f32	s13, s4, s12
-  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel4_b[0] * wn + _bessel4_b[1] * _Bessel4_buff[0] + _bessel4_b[2] * _Bessel4_
- 398              		.loc 1 50 108 view .LVU107
- 399 0104 90ED224A 		vldr.32	s8, [r0, #136]
-  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel4_b[0] * wn + _bessel4_b[1] * _Bessel4_buff[0] + _bessel4_b[2] * _Bessel4_
- 400              		.loc 1 50 17 view .LVU108
- 401 0108 D0ED234A 		vldr.32	s9, [r0, #140]
-  52:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel4_buff[2] = _Bessel4_buff[1];
- 402              		.loc 1 52 30 view .LVU109
- 403 010c 80ED2C6A 		vstr.32	s12, [r0, #176]
+ 417              		.loc 1 54 30 view .LVU120
+ 418 011e 80ED2A7A 		vstr.32	s14, [r0, #168]
   53:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel4_buff[1] = _Bessel4_buff[0];
- 404              		.loc 1 53 30 view .LVU110
- 405 0110 C0ED2B5A 		vstr.32	s11, [r0, #172]
+ 419              		.loc 1 53 30 view .LVU121
+ 420 0122 C0ED2B6A 		vstr.32	s13, [r0, #172]
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s 			page 10
+
+
+  48:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                        _bessel4_a[3] * _Bessel4_buff[2] + _bessel4_a[4] * _Bessel4_buff[3]);
+ 421              		.loc 1 48 92 view .LVU122
+ 422 0126 E5EE867A 		vfma.f32	s15, s11, s12
   49:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel4_b[0] * wn + _bessel4_b[1] * _Bessel4_buff[0] + _bessel4_b[2] * _Bessel4_
- 406              		.loc 1 49 57 view .LVU111
- 407 0114 E2EE856A 		vfma.f32	s13, s5, s10
-  48:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                        _bessel4_a[3] * _Bessel4_buff[2] + _bessel4_a[4] * _Bessel4_buff[3]);
- 408              		.loc 1 48 16 view .LVU112
- 409 0118 30EE667A 		vsub.f32	s14, s0, s13
- 410              	.LVL13:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 10
-
-
-  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
- 411              		.loc 1 50 13 is_stmt 1 view .LVU113
-  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
- 412              		.loc 1 50 38 is_stmt 0 view .LVU114
- 413 011c E3EE077A 		vfma.f32	s15, s6, s14
-  55:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel4_buff[0] = wn;
- 414              		.loc 1 55 30 view .LVU115
- 415 0120 80ED297A 		vstr.32	s14, [r0, #164]
-  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
- 416              		.loc 1 50 38 view .LVU116
- 417 0124 B0EE670A 		vmov.f32	s0, s15
- 418              	.LVL14:
-  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
- 419              		.loc 1 50 73 view .LVU117
- 420 0128 A5EEA30A 		vfma.f32	s0, s11, s7
-  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
- 421              		.loc 1 50 108 view .LVU118
- 422 012c A6EE040A 		vfma.f32	s0, s12, s8
-  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
- 423              		.loc 1 50 17 view .LVU119
- 424 0130 A5EE240A 		vfma.f32	s0, s10, s9
- 425              	.LVL15:
+ 423              		.loc 1 49 90 view .LVU123
+ 424 012a D0ED2C5A 		vldr.32	s11, [r0, #176]
   52:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel4_buff[2] = _Bessel4_buff[1];
- 426              		.loc 1 52 13 is_stmt 1 view .LVU120
+ 425              		.loc 1 52 30 view .LVU124
+ 426 012e 80ED2C6A 		vstr.32	s12, [r0, #176]
+  49:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel4_b[0] * wn + _bessel4_b[1] * _Bessel4_buff[0] + _bessel4_b[2] * _Bessel4_
+ 427              		.loc 1 49 57 view .LVU125
+ 428 0132 E5EE257A 		vfma.f32	s15, s10, s11
+  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
+ 429              		.loc 1 50 38 view .LVU126
+ 430 0136 90ED1F5A 		vldr.32	s10, [r0, #124]
+  48:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                        _bessel4_a[3] * _Bessel4_buff[2] + _bessel4_a[4] * _Bessel4_buff[3]);
+ 431              		.loc 1 48 16 view .LVU127
+ 432 013a 70EE677A 		vsub.f32	s15, s0, s15
+ 433              	.LVL25:
+  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
+ 434              		.loc 1 50 13 is_stmt 1 view .LVU128
+  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
+ 435              		.loc 1 50 54 is_stmt 0 view .LVU129
+ 436 013e 90ED200A 		vldr.32	s0, [r0, #128]
+ 437              	.LVL26:
+  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
+ 438              		.loc 1 50 54 view .LVU130
+ 439 0142 27EE000A 		vmul.f32	s0, s14, s0
+  55:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel4_buff[0] = wn;
+ 440              		.loc 1 55 30 view .LVU131
+ 441 0146 C0ED297A 		vstr.32	s15, [r0, #164]
+  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
+ 442              		.loc 1 50 38 view .LVU132
+ 443 014a A5EE270A 		vfma.f32	s0, s10, s15
+  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
+ 444              		.loc 1 50 73 view .LVU133
+ 445 014e 90ED215A 		vldr.32	s10, [r0, #132]
+ 446 0152 A6EE850A 		vfma.f32	s0, s13, s10
+  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
+ 447              		.loc 1 50 108 view .LVU134
+ 448 0156 90ED225A 		vldr.32	s10, [r0, #136]
+ 449 015a A6EE050A 		vfma.f32	s0, s12, s10
+  50:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****                   _bessel4_b[3] * _Bessel4_buff[2] + _bessel4_b[4] * _Bessel4_buff[3];
+ 450              		.loc 1 50 17 view .LVU135
+ 451 015e 90ED235A 		vldr.32	s10, [r0, #140]
+ 452 0162 A5EE850A 		vfma.f32	s0, s11, s10
+ 453              	.LVL27:
+  52:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel4_buff[2] = _Bessel4_buff[1];
+ 454              		.loc 1 52 13 is_stmt 1 view .LVU136
   53:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel4_buff[1] = _Bessel4_buff[0];
- 427              		.loc 1 53 13 view .LVU121
+ 455              		.loc 1 53 13 view .LVU137
   54:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel4_buff[0] = wn;
- 428              		.loc 1 54 13 view .LVU122
- 429              		.loc 1 55 13 view .LVU123
+ 456              		.loc 1 54 13 view .LVU138
+ 457              		.loc 1 55 13 view .LVU139
   56:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             break;
- 430              		.loc 1 56 13 view .LVU124
- 431 0134 7047     		bx	lr
- 432              	.LVL16:
- 433              	.L14:
-  40:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             wn = in - (_bessel_a[1] * _Bessel_buff[0] + _bessel_a[2] * _Bessel_buff[1]);
- 434              		.loc 1 40 9 view .LVU125
-  41:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
- 435              		.loc 1 41 13 view .LVU126
-  41:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
- 436              		.loc 1 41 86 is_stmt 0 view .LVU127
- 437 0136 90ED1E6A 		vldr.32	s12, [r0, #120]
-  41:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
- 438              		.loc 1 41 70 view .LVU128
- 439 013a 90ED1C7A 		vldr.32	s14, [r0, #112]
-  41:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
- 440              		.loc 1 41 53 view .LVU129
- 441 013e D0ED1D6A 		vldr.32	s13, [r0, #116]
-  41:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
- 442              		.loc 1 41 70 view .LVU130
- 443 0142 26EE077A 		vmul.f32	s14, s12, s14
-  41:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
- 444              		.loc 1 41 55 view .LVU131
- 445 0146 D0ED1B4A 		vldr.32	s9, [r0, #108]
-  42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel_buff[1] = _Bessel_buff[0];
- 446              		.loc 1 42 52 view .LVU132
- 447 014a D0ED187A 		vldr.32	s15, [r0, #96]
-  42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel_buff[1] = _Bessel_buff[0];
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 11
+ 458              		.loc 1 56 13 view .LVU140
+ 459 0166 7047     		bx	lr
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s 			page 11
 
 
- 448              		.loc 1 42 37 view .LVU133
- 449 014e 90ED175A 		vldr.32	s10, [r0, #92]
-  41:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
- 450              		.loc 1 41 55 view .LVU134
- 451 0152 A4EEA67A 		vfma.f32	s14, s9, s13
-  42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel_buff[1] = _Bessel_buff[0];
- 452              		.loc 1 42 17 view .LVU135
- 453 0156 D0ED195A 		vldr.32	s11, [r0, #100]
-  42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel_buff[1] = _Bessel_buff[0];
- 454              		.loc 1 42 52 view .LVU136
- 455 015a 66EEA77A 		vmul.f32	s15, s13, s15
-  43:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel_buff[0] = wn;
- 456              		.loc 1 43 29 view .LVU137
- 457 015e C0ED1E6A 		vstr.32	s13, [r0, #120]
-  41:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             out = _bessel_b[0] * wn + _bessel_b[1] * _Bessel_buff[0] + _bessel_b[2] * _Bessel_buff[
- 458              		.loc 1 41 16 view .LVU138
- 459 0162 30EE477A 		vsub.f32	s14, s0, s14
- 460              	.LVL17:
-  42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel_buff[1] = _Bessel_buff[0];
- 461              		.loc 1 42 13 is_stmt 1 view .LVU139
-  42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel_buff[1] = _Bessel_buff[0];
- 462              		.loc 1 42 37 is_stmt 0 view .LVU140
- 463 0166 E5EE077A 		vfma.f32	s15, s10, s14
-  44:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             break;
- 464              		.loc 1 44 29 view .LVU141
- 465 016a 80ED1D7A 		vstr.32	s14, [r0, #116]
-  42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel_buff[1] = _Bessel_buff[0];
- 466              		.loc 1 42 37 view .LVU142
- 467 016e B0EE670A 		vmov.f32	s0, s15
- 468              	.LVL18:
-  42:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel_buff[1] = _Bessel_buff[0];
- 469              		.loc 1 42 17 view .LVU143
- 470 0172 A6EE250A 		vfma.f32	s0, s12, s11
- 471              	.LVL19:
-  43:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             _Bessel_buff[0] = wn;
- 472              		.loc 1 43 13 is_stmt 1 view .LVU144
-  44:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****             break;
- 473              		.loc 1 44 13 view .LVU145
-  45:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** 
- 474              		.loc 1 45 13 view .LVU146
- 475 0176 7047     		bx	lr
- 476              	.LVL20:
- 477              	.L15:
+ 460              	.LVL28:
+ 461              	.L13:
   21:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****         case BUTTERWORTH2:
- 478              		.loc 1 21 13 is_stmt 0 view .LVU147
- 479 0178 9FED010A 		vldr.32	s0, .L16
- 480              	.LVL21:
+ 462              		.loc 1 21 13 is_stmt 0 view .LVU141
+ 463 0168 9FED010A 		vldr.32	s0, .L14
+ 464              	.LVL29:
   57:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     }
   58:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp ****     return out;
- 481              		.loc 1 58 5 is_stmt 1 view .LVU148
+ 465              		.loc 1 58 5 is_stmt 1 view .LVU142
   59:../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp **** }...
- 482              		.loc 1 59 1 is_stmt 0 view .LVU149
- 483 017c 7047     		bx	lr
- 484              	.L17:
- 485 017e 00BF     		.align	2
- 486              	.L16:
- 487 0180 00000000 		.word	0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 12
+ 466              		.loc 1 59 1 is_stmt 0 view .LVU143
+ 467 016c 7047     		bx	lr
+ 468              	.L15:
+ 469 016e 00BF     		.align	2
+ 470              	.L14:
+ 471 0170 00000000 		.word	0
+ 472              		.cfi_endproc
+ 473              	.LFE568:
+ 475              		.section	.rodata
+ 476              		.align	2
+ 477              		.set	.LANCHOR0,. + 0
+ 478              	.LC0:
+ 479 0000 35607A3F 		.word	1064984629
+ 480 0004 3560FA3F 		.word	1073373237
+ 481 0008 35607A3F 		.word	1064984629
+ 482              	.LC1:
+ 483 000c 0000803F 		.word	1065353216
+ 484 0010 6350FA3F 		.word	1073369187
+ 485 0014 0CE0743F 		.word	1064624140
+ 486              	.LC2:
+ 487 0018 4AB4753F 		.word	1064678474
+ 488 001c 4AB47540 		.word	1081455690
+ 489 0020 3747B840 		.word	1085818679
+ 490 0024 4AB47540 		.word	1081455690
+ 491 0028 4AB4753F 		.word	1064678474
+ 492              	.LC3:
+ 493 002c 0000803F 		.word	1065353216
+ 494 0030 01BF7A40 		.word	1081786113
+ 495 0034 F839B840 		.word	1085815288
+ 496 0038 91A97040 		.word	1081125265
+ 497 003c 94D26B3F 		.word	1064030868
+ 498              	.LC4:
+ 499 0040 4596CA3E 		.word	1053464133
+ 500 0044 45964A3F 		.word	1061852741
+ 501 0048 4596CA3E 		.word	1053464133
+ 502              	.LC5:
+ 503 004c 0000803F 		.word	1065353216
+ 504 0050 06A1ED3E 		.word	1055760646
+ 505 0054 35E0F23D 		.word	1039327285
+ 506              	.LC6:
+ 507 0058 DB432E3E 		.word	1043219419
+ 508 005c DC432E3F 		.word	1059996636
+ 509 0060 E5B2823F 		.word	1065530085
+ 510 0064 DC432E3F 		.word	1059996636
+ 511 0068 DB432E3E 		.word	1043219419
+ 512              	.LC7:
+ 513 006c 0000803F 		.word	1065353216
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s 			page 12
 
 
- 488              		.cfi_endproc
- 489              	.LFE568:
- 491              		.section	.rodata
- 492              		.align	2
- 493              		.set	.LANCHOR0,. + 0
- 494              	.LC0:
- 495 0000 35607A3F 		.word	1064984629
- 496 0004 3560FA3F 		.word	1073373237
- 497 0008 35607A3F 		.word	1064984629
- 498              	.LC1:
- 499 000c 0000803F 		.word	1065353216
- 500 0010 6350FA3F 		.word	1073369187
- 501 0014 0CE0743F 		.word	1064624140
- 502              	.LC2:
- 503 0018 4AB4753F 		.word	1064678474
- 504 001c 4AB47540 		.word	1081455690
- 505 0020 3747B840 		.word	1085818679
- 506 0024 4AB47540 		.word	1081455690
- 507 0028 4AB4753F 		.word	1064678474
- 508              	.LC3:
- 509 002c 0000803F 		.word	1065353216
- 510 0030 01BF7A40 		.word	1081786113
- 511 0034 F839B840 		.word	1085815288
- 512 0038 91A97040 		.word	1081125265
- 513 003c 94D26B3F 		.word	1064030868
- 514              	.LC4:
- 515 0040 4596CA3E 		.word	1053464133
- 516 0044 45964A3F 		.word	1061852741
- 517 0048 4596CA3E 		.word	1053464133
- 518              	.LC5:
- 519 004c 0000803F 		.word	1065353216
- 520 0050 06A1ED3E 		.word	1055760646
- 521 0054 35E0F23D 		.word	1039327285
- 522              	.LC6:
- 523 0058 DB432E3E 		.word	1043219419
- 524 005c DC432E3F 		.word	1059996636
- 525 0060 E5B2823F 		.word	1065530085
- 526 0064 DC432E3F 		.word	1059996636
- 527 0068 DB432E3E 		.word	1043219419
- 528              	.LC7:
- 529 006c 0000803F 		.word	1065353216
- 530 0070 1D727B3F 		.word	1065054749
- 531 0074 7DDD133F 		.word	1058266493
- 532 0078 B0F3153E 		.word	1041626032
- 533 007c 165D883C 		.word	1015569686
- 534              		.text
- 535              	.Letext0:
- 536              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
- 537              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
- 538              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
- 539              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
- 540              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
- 541              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
- 542              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\th
- 543              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
- 544              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
- 545              		.file 11 "../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 13
-
-
- 546              		.file 12 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s 			page 14
+ 514 0070 1D727B3F 		.word	1065054749
+ 515 0074 7DDD133F 		.word	1058266493
+ 516 0078 B0F3153E 		.word	1041626032
+ 517 007c 165D883C 		.word	1015569686
+ 518              		.text
+ 519              	.Letext0:
+ 520              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 521              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 522              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 523              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 524              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 525              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 526              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\th
+ 527              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 528              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 529              		.file 11 "../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h"
+ 530              		.file 12 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 iir.cpp
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:17     .text._ZN3IIRC2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:26     .text._ZN3IIRC2Ev:00000000 _ZN3IIRC2Ev
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:140    .text._ZN3IIRC2Ev:000000dc $d
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:26     .text._ZN3IIRC2Ev:00000000 _ZN3IIRC1Ev
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:148    .text._ZN3IIRD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:156    .text._ZN3IIRD2Ev:00000000 _ZN3IIRD2Ev
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:156    .text._ZN3IIRD2Ev:00000000 _ZN3IIRD1Ev
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:172    .text._ZN3IIR4InitENS_10FilterTypeE:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:180    .text._ZN3IIR4InitENS_10FilterTypeE:00000000 _ZN3IIR4InitENS_10FilterTypeE
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:220    .text._ZN3IIR7ProcessEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:228    .text._ZN3IIR7ProcessEf:00000000 _ZN3IIR7ProcessEf
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:244    .text._ZN3IIR7ProcessEf:0000000c $d
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:248    .text._ZN3IIR7ProcessEf:00000010 $t
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:487    .text._ZN3IIR7ProcessEf:00000180 $d
-C:\Users\skipi\AppData\Local\Temp\ccAeic5x.s:492    .rodata:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:17     .text._ZN3IIRC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:25     .text._ZN3IIRC2Ev:00000000 _ZN3IIRC2Ev
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:118    .text._ZN3IIRC2Ev:000000b0 $d
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:25     .text._ZN3IIRC2Ev:00000000 _ZN3IIRC1Ev
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:125    .text._ZN3IIRD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:132    .text._ZN3IIRD2Ev:00000000 _ZN3IIRD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:132    .text._ZN3IIRD2Ev:00000000 _ZN3IIRD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:148    .text._ZN3IIR4InitENS_10FilterTypeE:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:155    .text._ZN3IIR4InitENS_10FilterTypeE:00000000 _ZN3IIR4InitENS_10FilterTypeE
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:221    .text._ZN3IIR7ProcessEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:228    .text._ZN3IIR7ProcessEf:00000000 _ZN3IIR7ProcessEf
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:244    .text._ZN3IIR7ProcessEf:0000000c $d
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:248    .text._ZN3IIR7ProcessEf:00000010 $t
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:471    .text._ZN3IIR7ProcessEf:00000170 $d
+C:\Users\skipi\AppData\Local\Temp\ccTBw4CL.s:476    .rodata:00000000 $d
 
-NO UNDEFINED SYMBOLS
+UNDEFINED SYMBOLS
+memset

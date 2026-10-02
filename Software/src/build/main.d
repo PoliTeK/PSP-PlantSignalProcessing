@@ -279,9 +279,10 @@ build/main.o: main.cpp \
  ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/port.h \
  Display/displayHandler.h Display/../Components/oled_ssd130xDMA.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h \
- Display/MenuManager.h PSP/PlantConditioner.h \
+ Display/MenuManager.h Display/../PSP/AudioEngine.h \
+ PSP/PlantConditioner.h \
  PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h \
- PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h PSP/AudioEngine.h
+ PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -564,7 +565,7 @@ Display/displayHandler.h:
 Display/../Components/oled_ssd130xDMA.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h:
 Display/MenuManager.h:
+Display/../PSP/AudioEngine.h:
 PSP/PlantConditioner.h:
 PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h:
 PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h:
-PSP/AudioEngine.h:

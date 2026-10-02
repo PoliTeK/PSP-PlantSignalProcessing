@@ -1,5 +1,6 @@
 # Nome del progetto (questo sarà il nome del file .bin finale)
 TARGET = PlantSynth
+OPT = -Os
 
 # I file sorgente C++ del tuo progetto
 # (NESSUN file di libDaisy o DaisySP deve essere inserito qui)

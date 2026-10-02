@@ -1,5 +1,6 @@
 #include "MenuManager.h"
 
+
 void MenuManager::Init() {
     _lastInteractionTime = daisy::System::GetNow();
 
@@ -240,7 +241,7 @@ void MenuManager::ValueUpdate(int rotation){
         case PRESETS_HUB:
             _outData.preset += rotation;
             if (_outData.preset < 0) _outData.preset = 0;
-            if (_outData.preset > 2) _outData.preset = 2; // TODO variable number of presets, currently 3
+            if (_outData.preset > PRESET_NUM - 1 ) _outData.preset = PRESET_NUM - 1; 
             break;
 
         case SAVE_CONFIG:
