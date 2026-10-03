@@ -11,7 +11,8 @@ Display/MenuManager.cpp \
 PSP/PlantConditioner.cpp \
 PSP/AudioEngine.cpp\
 ../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.cpp \
-../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp
+../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp \
+../libs/PoliTeKDSP/Oscillators/oscillator.cpp 
 
 
 

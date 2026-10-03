@@ -280,6 +280,7 @@ build/main.o: main.cpp \
  Display/displayHandler.h Display/../Components/oled_ssd130xDMA.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h \
  Display/MenuManager.h Display/../PSP/AudioEngine.h \
+ Display/../PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h \
  PSP/PlantConditioner.h \
  PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h \
  PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h
@@ -566,6 +567,7 @@ Display/../Components/oled_ssd130xDMA.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h:
 Display/MenuManager.h:
 Display/../PSP/AudioEngine.h:
+Display/../PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h:
 PSP/PlantConditioner.h:
 PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h:
 PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h:

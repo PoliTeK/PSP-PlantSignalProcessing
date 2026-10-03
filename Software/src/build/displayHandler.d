@@ -204,13 +204,14 @@ build/displayHandler.o: Display/displayHandler.cpp \
  ../libs/PoliTeKDSP/libs/libDaisy/src/util/WavWriter.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h \
  Display/MenuManager.h Display/../PSP/AudioEngine.h \
+ Display/../PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h \
+ ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/daisysp.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adenv.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Control/phasor.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Drums/analogbassdrum.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h \
- ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Drums/analogsnaredrum.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Drums/hihat.h \
@@ -487,13 +488,14 @@ Display/../Components/oled_ssd130xDMA.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h:
 Display/MenuManager.h:
 Display/../PSP/AudioEngine.h:
+Display/../PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h:
+../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/daisysp.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adenv.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Control/phasor.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Drums/analogbassdrum.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h:
-../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/svf.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Drums/analogsnaredrum.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Drums/hihat.h:
