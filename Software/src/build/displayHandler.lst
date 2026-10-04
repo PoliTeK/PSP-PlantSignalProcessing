@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
   28:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     Rectangle GetBounds() const
   29:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     {
   30:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****         return Rectangle(int16_t(Width()), int16_t(Height()));
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 2
 
 
   31:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     }
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
   85:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     \param rect the rectangle
   86:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     \param on   on or off
   87:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     \param fill fill the rectangle or draw only the outline
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 3
 
 
   88:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  142:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     of the string must be kept within the dimensions of the screen.
  143:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     \param str string to be written
  144:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     \param font font to use
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 4
 
 
  145:../libs/PoliTeKDSP/libs/libDaisy/src/hid/disp/display.h ****     \param on  on or off
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
   51 000c 9847     		blx	r3
   52              	.LVL1:
   53              		.loc 1 173 19 view .LVU8
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 5
 
 
   54 000e B042     		cmp	r0, r6
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  104              		.align	1
  105              		.global	_ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb
  106              		.syntax unified
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 6
 
 
  107              		.thumb
@@ -306,7 +306,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  109              		.fpu fpv5-d16
  111              	_ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:
  112              	.LVL5:
- 113              	.LFB5158:
+ 113              	.LFB5159:
  114              		.file 2 "Display/displayHandler.cpp"
    1:Display/displayHandler.cpp **** #include "displayHandler.h"
    2:Display/displayHandler.cpp **** #include <string.h>
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
    5:Display/displayHandler.cpp ****     memset((void*) _circBuffer_ptr, 0, BUFFER_SIZE * sizeof(float));
  156              		.loc 2 5 78 view .LVU35
  157 001c C0F81438 		str	r3, [r0, #2068]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 7
 
 
  158              		.loc 2 6 11 view .LVU36
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  193              		.loc 2 15 13 is_stmt 0 view .LVU54
  194 0044 C4F81838 		str	r3, [r4, #2072]
  195              	.LBE16:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 8
 
 
  196              		.loc 2 16 1 view .LVU55
@@ -430,7 +430,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  202              	.L5:
  203 004c 00000000 		.word	.LC0
  204              		.cfi_endproc
- 205              	.LFE5158:
+ 205              	.LFE5159:
  207              		.global	_ZN14DisplayHandlerC1EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb
  208              		.thumb_set _ZN14DisplayHandlerC1EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb,_ZN
  209              		.section	.text._ZN14DisplayHandler8SetStateE12DisplayState,"ax",%progbits
@@ -442,7 +442,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  215              		.fpu fpv5-d16
  217              	_ZN14DisplayHandler8SetStateE12DisplayState:
  218              	.LVL12:
- 219              	.LFB5161:
+ 219              	.LFB5162:
   17:Display/displayHandler.cpp **** 
   18:Display/displayHandler.cpp **** void DisplayHandler::Update() {
   19:Display/displayHandler.cpp ****     switch (_currentState) {
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  231              		.cfi_offset 14, -4
   35:Display/displayHandler.cpp ****     _displayPtr->Fill(false);
  232              		.loc 2 35 54 view .LVU60
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 9
 
 
  233 0002 0446     		mov	r4, r0
@@ -506,7 +506,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  252 0012 38BD     		pop	{r3, r4, r5, pc}
  253              		.loc 2 38 1 view .LVU69
  254              		.cfi_endproc
- 255              	.LFE5161:
+ 255              	.LFE5162:
  257              		.section	.text._ZN14DisplayHandler14SetStandbyTextEPKc,"ax",%progbits
  258              		.align	1
  259              		.global	_ZN14DisplayHandler14SetStandbyTextEPKc
@@ -516,7 +516,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  263              		.fpu fpv5-d16
  265              	_ZN14DisplayHandler14SetStandbyTextEPKc:
  266              	.LVL16:
- 267              	.LFB5162:
+ 267              	.LFB5163:
   39:Display/displayHandler.cpp **** 
   40:Display/displayHandler.cpp **** void DisplayHandler::SetStandbyText(const char* text) {
  268              		.loc 2 40 55 is_stmt 1 view -0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  281              		.loc 2 43 9 is_stmt 0 view .LVU75
  282 0008 19B9     		cbnz	r1, .L8
   44:Display/displayHandler.cpp ****             _displayPtr->Fill(false);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 10
 
 
  283              		.loc 2 44 13 is_stmt 1 view .LVU76
@@ -557,7 +557,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  293              		.loc 2 47 1 view .LVU79
  294 0012 7047     		bx	lr
  295              		.cfi_endproc
- 296              	.LFE5162:
+ 296              	.LFE5163:
  298              		.section	.text._ZN14DisplayHandler15pushAudioSampleEf,"ax",%progbits
  299              		.align	1
  300              		.global	_ZN14DisplayHandler15pushAudioSampleEf
@@ -567,7 +567,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  304              		.fpu fpv5-d16
  306              	_ZN14DisplayHandler15pushAudioSampleEf:
  307              	.LVL20:
- 308              	.LFB5163:
+ 308              	.LFB5164:
   48:Display/displayHandler.cpp **** 
   49:Display/displayHandler.cpp **** void DisplayHandler::pushAudioSample(float sample) {
  309              		.loc 2 49 52 is_stmt 1 view -0
@@ -598,12 +598,12 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  331 0018 C0F80C38 		str	r3, [r0, #2060]
   52:Display/displayHandler.cpp **** }
  332              		.loc 2 52 1 view .LVU89
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 11
 
 
  333 001c 7047     		bx	lr
  334              		.cfi_endproc
- 335              	.LFE5163:
+ 335              	.LFE5164:
  337              		.section	.text._ZN14DisplayHandler11findTriggerEv,"ax",%progbits
  338              		.align	1
  339              		.global	_ZN14DisplayHandler11findTriggerEv
@@ -613,7 +613,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  343              		.fpu fpv5-d16
  345              	_ZN14DisplayHandler11findTriggerEv:
  346              	.LVL21:
- 347              	.LFB5164:
+ 347              	.LFB5165:
   53:Display/displayHandler.cpp **** 
   54:Display/displayHandler.cpp **** int DisplayHandler::findTrigger() {
  348              		.loc 2 54 35 is_stmt 1 view -0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  377              	.LBE21:
   59:Display/displayHandler.cpp **** 
  378              		.loc 2 59 9 view .LVU100
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 12
 
 
  379 0010 0133     		adds	r3, r3, #1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  424              		.loc 2 67 25 is_stmt 0 view .LVU115
  425 0054 034B     		ldr	r3, .L26
  426              	.LVL25:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 13
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 13
 
 
  427              		.loc 2 67 25 view .LVU116
@@ -754,7 +754,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  449              	.L26:
  450 0064 00000000 		.word	.LANCHOR0
  451              		.cfi_endproc
- 452              	.LFE5164:
+ 452              	.LFE5165:
  454              		.section	.text._ZN14DisplayHandler12drawWaveFormEv,"ax",%progbits
  455              		.align	1
  456              		.global	_ZN14DisplayHandler12drawWaveFormEv
@@ -764,7 +764,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  460              		.fpu fpv5-d16
  462              	_ZN14DisplayHandler12drawWaveFormEv:
  463              	.LVL29:
- 464              	.LFB5165:
+ 464              	.LFB5166:
   74:Display/displayHandler.cpp **** 
   75:Display/displayHandler.cpp **** void DisplayHandler::drawWaveForm() {
  465              		.loc 2 75 37 is_stmt 1 view -0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
   78:Display/displayHandler.cpp ****     int idx = 0;
  471              		.loc 2 78 5 view .LVU126
   79:Display/displayHandler.cpp **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 14
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 14
 
 
   80:Display/displayHandler.cpp ****     _displayPtr->SetCursor(0, zeroOfScreen);
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  518 0026 D5F80838 		ldr	r3, [r5, #2056]
  519              		.loc 2 85 25 discriminator 1 view .LVU142
  520 002a 01F10108 		add	r8, r1, #1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 15
 
 
  521              		.loc 2 85 31 discriminator 1 view .LVU143
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  556 005e 7342     		rsbs	r3, r6, #0
   86:Display/displayHandler.cpp ****         y1 = zeroOfScreen - (int)(_circBuffer_ptr[i % BUFFER_SIZE] * _yscale);
  557              		.loc 2 86 68 view .LVU160
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 16
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 16
 
 
  558 0060 27EE877A 		vmul.f32	s14, s15, s14
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  600              		.loc 2 94 30 view .LVU179
  601 00a0 4346     		mov	r3, r8
  602 00a2 A047     		blx	r4
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 17
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 17
 
 
  603              	.LVL42:
@@ -981,7 +981,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  615 00aa BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
  616              		.loc 2 96 1 view .LVU184
  617              		.cfi_endproc
- 618              	.LFE5165:
+ 618              	.LFE5166:
  620              		.section	.text._ZN14DisplayHandler9SetYscaleEi,"ax",%progbits
  621              		.align	1
  622              		.global	_ZN14DisplayHandler9SetYscaleEi
@@ -991,7 +991,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  626              		.fpu fpv5-d16
  628              	_ZN14DisplayHandler9SetYscaleEi:
  629              	.LVL43:
- 630              	.LFB5166:
+ 630              	.LFB5167:
   97:Display/displayHandler.cpp **** 
   98:Display/displayHandler.cpp **** void DisplayHandler::SetYscale(int yscale){
  631              		.loc 2 98 43 is_stmt 1 view -0
@@ -1007,7 +1007,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  639              		.loc 2 100 1 view .LVU188
  640 0004 7047     		bx	lr
  641              		.cfi_endproc
- 642              	.LFE5166:
+ 642              	.LFE5167:
  644              		.section	.text._ZN14DisplayHandler17drawStandbyScreenEv,"ax",%progbits
  645              		.align	1
  646              		.global	_ZN14DisplayHandler17drawStandbyScreenEv
@@ -1017,8 +1017,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  650              		.fpu fpv5-d16
  652              	_ZN14DisplayHandler17drawStandbyScreenEv:
  653              	.LVL44:
- 654              	.LFB5167:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 18
+ 654              	.LFB5168:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 18
 
 
  101:Display/displayHandler.cpp **** 
@@ -1076,9 +1076,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  700              	.L33:
  701 0028 00000000 		.word	Font_11x18
  702              		.cfi_endproc
- 703              	.LFE5167:
+ 703              	.LFE5168:
  705              		.section	.text._ZN14DisplayHandler6UpdateEv,"ax",%progbits
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 19
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 19
 
 
  706              		.align	1
@@ -1089,7 +1089,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  711              		.fpu fpv5-d16
  713              	_ZN14DisplayHandler6UpdateEv:
  714              	.LVL49:
- 715              	.LFB5160:
+ 715              	.LFB5161:
   18:Display/displayHandler.cpp ****     switch (_currentState) {
  716              		.loc 2 18 31 is_stmt 1 view -0
  717              		.cfi_startproc
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  751              	.L36:
  752              		.cfi_restore_state
   20:Display/displayHandler.cpp ****             drawStandbyScreen();
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 20
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 20
 
 
  753              		.loc 2 20 9 is_stmt 1 view .LVU212
@@ -1165,7 +1165,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  767              		.loc 2 26 13 is_stmt 1 view .LVU219
  768 0022 F3E7     		b	.L38
  769              		.cfi_endproc
- 770              	.LFE5160:
+ 770              	.LFE5161:
  772              		.section	.rodata._ZN14DisplayHandler12DrawMainMenuEi.str1.1,"aMS",%progbits,1
  773              	.LC1:
  774 0000 2D204D41 		.ascii	"- MAIN MENU -\000"
@@ -1198,14 +1198,14 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  789              		.global	_ZN14DisplayHandler12DrawMainMenuEi
  790              		.syntax unified
  791              		.thumb
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 21
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 21
 
 
  792              		.thumb_func
  793              		.fpu fpv5-d16
  795              	_ZN14DisplayHandler12DrawMainMenuEi:
  796              	.LVL56:
- 797              	.LFB5168:
+ 797              	.LFB5169:
  106:Display/displayHandler.cpp **** 
  107:Display/displayHandler.cpp **** // ============================================================================
  108:Display/displayHandler.cpp **** // METODI PUBBLICI PER IL MENU (SPAZIATURA OTTIMIZZATA PER 64PX)
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  114:Display/displayHandler.cpp ****     _displayPtr->WriteString("- MAIN MENU -", Font_7x10, true);
  832              		.loc 2 114 27 is_stmt 0 view .LVU231
  833 0016 0022     		movs	r2, #0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 22
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 22
 
 
  834 0018 2068     		ldr	r0, [r4]
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  885 0064 95E80C00 		ldm	r5, {r2, r3}
  886 0068 C047     		blx	r8
  887              	.LVL65:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 23
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 23
 
 
  119:Display/displayHandler.cpp ****     _displayPtr->SetCursor(10, 33); _displayPtr->WriteString("Presets", Font_7x10, true);
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  939              		.loc 2 121 61 view .LVU265
  940 00b2 0096     		str	r6, [sp]
  941 00b4 D3F82880 		ldr	r8, [r3, #40]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 24
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 24
 
 
  942 00b8 95E80C00 		ldm	r5, {r2, r3}
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  988 00e8 00000000 		.word	.LC1
  989 00ec 0E000000 		.word	.LC2
  990 00f0 1A000000 		.word	.LC3
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 25
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 25
 
 
  991 00f4 21000000 		.word	.LC4
@@ -1446,7 +1446,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  993 00fc 3B000000 		.word	.LC6
  994 0100 40000000 		.word	.LC7
  995              		.cfi_endproc
- 996              	.LFE5168:
+ 996              	.LFE5169:
  998              		.section	.rodata._ZN14DisplayHandler18DrawCalibrationHubEi.str1.1,"aMS",%progbits,1
  999              	.LC8:
  1000 0000 2D204341 		.ascii	"- CALIBRATION -\000"
@@ -1483,7 +1483,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1019              		.fpu fpv5-d16
  1021              	_ZN14DisplayHandler18DrawCalibrationHubEi:
  1022              	.LVL78:
- 1023              	.LFB5169:
+ 1023              	.LFB5170:
  127:Display/displayHandler.cpp **** 
  128:Display/displayHandler.cpp **** void DisplayHandler::DrawCalibrationHub(int cursorIndex) {
  1024              		.loc 2 128 58 is_stmt 1 view -0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1031              		.cfi_def_cfa_offset 32
  1032              		.cfi_offset 4, -24
  1033              		.cfi_offset 5, -20
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 26
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 26
 
 
  1034              		.cfi_offset 6, -16
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1076              		.loc 2 136 5 is_stmt 1 view .LVU297
  1077 0032 042E     		cmp	r6, #4
  137:Display/displayHandler.cpp ****         _displayPtr->SetCursor(10, 13); _displayPtr->WriteString("Delta", Font_7x10, true);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 27
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 27
 
 
  1078              		.loc 2 137 31 is_stmt 0 view .LVU298
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1129 007e 2749     		ldr	r1, .L46+16
  1130              		.loc 2 139 95 view .LVU316
  1131 0080 0368     		ldr	r3, [r0]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 28
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 28
 
 
  1132              		.loc 2 139 65 view .LVU317
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1178              		.loc 2 147 5 is_stmt 1 view .LVU331
  148:Display/displayHandler.cpp ****     _displayPtr->SetCursor(0, cursorY);
  1179              		.loc 2 148 5 view .LVU332
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 29
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 29
 
 
  147:Display/displayHandler.cpp ****     _displayPtr->SetCursor(0, cursorY);
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1225              		.loc 2 145 31 is_stmt 0 view .LVU347
  1226 00f8 FFF7FEFF 		bl	_ZN5daisy21OneBitGraphicsDisplay9SetCursorEtt
  1227              	.LVL99:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 30
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 30
 
 
  145:Display/displayHandler.cpp ****     }
@@ -1769,7 +1769,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1249 0128 40000000 		.word	.LC7
  1250 012c 3E000000 		.word	.LC14
  1251              		.cfi_endproc
- 1252              	.LFE5169:
+ 1252              	.LFE5170:
  1254              		.section	.rodata._ZN14DisplayHandler13DrawScalesHubEi.str1.1,"aMS",%progbits,1
  1255              	.LC15:
  1256 0000 2D205343 		.ascii	"- SCALES -\000"
@@ -1795,10 +1795,10 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1269              		.fpu fpv5-d16
  1271              	_ZN14DisplayHandler13DrawScalesHubEi:
  1272              	.LVL100:
- 1273              	.LFB5170:
+ 1273              	.LFB5171:
  151:Display/displayHandler.cpp **** 
  152:Display/displayHandler.cpp **** void DisplayHandler::DrawScalesHub(int cursorIndex) {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 31
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 31
 
 
  1274              		.loc 2 152 53 is_stmt 1 view -0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1318              		.loc 2 156 59 view .LVU366
  1319 0024 0368     		ldr	r3, [r0]
  1320              		.loc 2 156 29 view .LVU367
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 32
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 32
 
 
  1321 0026 0097     		str	r7, [sp]
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1371              		.loc 2 160 37 is_stmt 1 view .LVU382
  1372 0074 2068     		ldr	r0, [r4]
  1373              		.loc 2 160 61 is_stmt 0 view .LVU383
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 33
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 33
 
 
  1374 0076 1849     		ldr	r1, .L49+16
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1420              		.loc 2 165 5 is_stmt 1 view .LVU400
  1421 00b2 2068     		ldr	r0, [r4]
  1422              		.loc 2 165 29 is_stmt 0 view .LVU401
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 34
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 34
 
 
  1423 00b4 0A49     		ldr	r1, .L49+24
@@ -2011,7 +2011,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1449 00dc 3E000000 		.word	.LC14
  1450 00e0 40000000 		.word	.LC7
  1451              		.cfi_endproc
- 1452              	.LFE5170:
+ 1452              	.LFE5171:
  1454              		.section	.rodata._ZN14DisplayHandler17DrawThresholdsHubEi.str1.1,"aMS",%progbits,1
  1455              	.LC19:
  1456 0000 2D205448 		.ascii	"- THRESHOLDS -\000"
@@ -2038,11 +2038,11 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1466              		.thumb_func
  1467              		.fpu fpv5-d16
  1469              	_ZN14DisplayHandler17DrawThresholdsHubEi:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 35
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 35
 
 
  1470              	.LVL120:
- 1471              	.LFB5171:
+ 1471              	.LFB5172:
  167:Display/displayHandler.cpp **** 
  168:Display/displayHandler.cpp **** void DisplayHandler::DrawThresholdsHub (int cursorIndex) {
  1472              		.loc 2 168 58 is_stmt 1 view -0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1512              		.loc 2 172 5 is_stmt 1 view .LVU419
  1513 0020 2068     		ldr	r0, [r4]
  1514              		.loc 2 172 29 is_stmt 0 view .LVU420
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 36
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 36
 
 
  1515 0022 2349     		ldr	r1, .L52+4
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1565 006c 2122     		movs	r2, #33
  1566 006e 0A21     		movs	r1, #10
  1567 0070 FFF7FEFF 		bl	_ZN5daisy21OneBitGraphicsDisplay9SetCursorEtt
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 37
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 37
 
 
  1568              	.LVL130:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1614 00a6 02B0     		add	sp, sp, #8
  1615              		.cfi_def_cfa_offset 24
  1616              		@ sp needed
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 38
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 38
 
 
  1617 00a8 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
@@ -2234,7 +2234,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1627 00bc 3E000000 		.word	.LC14
  1628 00c0 40000000 		.word	.LC7
  1629              		.cfi_endproc
- 1630              	.LFE5171:
+ 1630              	.LFE5172:
  1632              		.section	.rodata._ZN14DisplayHandler12DrawFlashHubEi.str1.1,"aMS",%progbits,1
  1633              	.LC22:
  1634 0000 2D205341 		.ascii	"- SAVE/LOAD CONFIGS -\000"
@@ -2261,7 +2261,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1645              		.fpu fpv5-d16
  1647              	_ZN14DisplayHandler12DrawFlashHubEi:
  1648              	.LVL138:
- 1649              	.LFB5172:
+ 1649              	.LFB5173:
  182:Display/displayHandler.cpp **** 
  183:Display/displayHandler.cpp **** void DisplayHandler::DrawFlashHub (int cursorIndex) {
  1650              		.loc 2 183 53 is_stmt 1 view -0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1659              		.cfi_offset 5, -20
  1660              		.cfi_offset 6, -16
  1661              		.cfi_offset 7, -12
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 39
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 39
 
 
  1662              		.cfi_offset 8, -8
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1706 0036 0A21     		movs	r1, #10
  1707 0038 FFF7FEFF 		bl	_ZN5daisy21OneBitGraphicsDisplay9SetCursorEtt
  1708              	.LVL144:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 40
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 40
 
 
  1709              		.loc 2 189 37 is_stmt 1 view .LVU474
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1759              		.loc 2 193 5 is_stmt 1 view .LVU490
  194:Display/displayHandler.cpp ****     _displayPtr->SetCursor(0, cursorY);
  1760              		.loc 2 194 5 view .LVU491
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 41
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 41
 
 
  193:Display/displayHandler.cpp ****     _displayPtr->SetCursor(0, cursorY);
@@ -2454,11 +2454,11 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1805 00bc 3E000000 		.word	.LC14
  1806 00c0 40000000 		.word	.LC7
  1807              		.cfi_endproc
- 1808              	.LFE5172:
+ 1808              	.LFE5173:
  1810              		.section	.rodata._ZN14DisplayHandler18DrawFloatParameterEPKcf.str1.1,"aMS",%progbits,1
  1811              	.LC25:
  1812 0000 45444954 		.ascii	"EDIT:\000"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 42
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 42
 
 
  1812      3A00
@@ -2474,7 +2474,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1821              		.fpu fpv5-d16
  1823              	_ZN14DisplayHandler18DrawFloatParameterEPKcf:
  1824              	.LVL156:
- 1825              	.LFB5173:
+ 1825              	.LFB5174:
  198:Display/displayHandler.cpp **** 
  199:Display/displayHandler.cpp **** 
  200:Display/displayHandler.cpp **** void DisplayHandler::DrawFloatParameter(const char* paramName, float value) {
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1856              		.cfi_offset 80, -32
  1857              		.cfi_offset 81, -28
  201:Display/displayHandler.cpp ****     
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 43
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 43
 
 
  1858              		.loc 2 201 22 view .LVU514
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1904 004c D3F82880 		ldr	r8, [r3, #40]
  1905 0050 95E80C00 		ldm	r5, {r2, r3}
  1906 0054 C047     		blx	r8
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 44
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 44
 
 
  1907              	.LVL163:
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1946 008a FFF7FEFF 		bl	_ZN5daisy21OneBitGraphicsDisplay9SetCursorEtt
  1947              	.LVL169:
  217:Display/displayHandler.cpp ****     _displayPtr->WriteString(valBuffer, Font_11x18, true); 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 45
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 45
 
 
  1948              		.loc 2 217 5 is_stmt 1 view .LVU546
@@ -2678,7 +2678,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1981 00b4 06000000 		.word	.LC26
  1982 00b8 0000C842 		.word	1120403456
  1983              		.cfi_endproc
- 1984              	.LFE5173:
+ 1984              	.LFE5174:
  1986              		.section	.rodata._ZN14DisplayHandler16DrawIntParameterEPKciS1_.str1.1,"aMS",%progbits,1
  1987              	.LC27:
  1988 0000 45444954 		.ascii	"EDITING:\000"
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  1996      65742025 
  1996      6400
  1997              	.LC32:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 46
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 46
 
 
  1998 0025 48595354 		.ascii	"HYSTERESIS\000"
@@ -2722,7 +2722,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2011              		.fpu fpv5-d16
  2013              	_ZN14DisplayHandler16DrawIntParameterEPKciS1_:
  2014              	.LVL174:
- 2015              	.LFB5174:
+ 2015              	.LFB5175:
  219:Display/displayHandler.cpp **** 
  220:Display/displayHandler.cpp **** void DisplayHandler::DrawIntParameter(const char* paramName, int value, const char* dynamicString) 
  2016              		.loc 2 220 100 is_stmt 1 view -0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2042              		.loc 2 220 100 view .LVU560
  2043 000e 0E46     		mov	r6, r1
  2044              		.loc 2 221 22 view .LVU561
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 47
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 47
 
 
  2045 0010 0021     		movs	r1, #0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2089 0048 0368     		ldr	r3, [r0]
  2090              		.loc 2 227 29 view .LVU577
  2091 004a CDF80090 		str	r9, [sp]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 48
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 48
 
 
  2092 004e D3F82890 		ldr	r9, [r3, #40]
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  251:Display/displayHandler.cpp ****         sprintf(valBuffer, "%s", filters[value % 4]);
  2123              		.loc 2 251 16 view .LVU586
  2124 006e 53F82410 		ldr	r1, [r3, r4, lsl #2]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 49
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 49
 
 
  2125 0072 15E0     		b	.L68
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2168              	.LBB37:
  239:Display/displayHandler.cpp ****         if(dynamicString != nullptr) {
  2169              		.loc 2 239 20 is_stmt 0 view .LVU599
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 50
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 50
 
 
  2170 008e 2749     		ldr	r1, .L71+28
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2211              	.LVL193:
  260:Display/displayHandler.cpp **** }
  2212              		.loc 2 260 1 view .LVU611
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 51
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 51
 
 
  2213 00c2 07B0     		add	sp, sp, #28
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2258 00e4 02A8     		add	r0, sp, #8
  2259 00e6 FFF7FEFF 		bl	sprintf
  2260              	.LVL198:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 52
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 52
 
 
  255:Display/displayHandler.cpp ****     }
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2303 010a 0E49     		ldr	r1, .L71+52
  2304 010c EAE7     		b	.L69
  2305              	.L72:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 53
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 53
 
 
  2306 010e 00BF     		.align	2
@@ -3143,7 +3143,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2325              	.LBE45:
  2326              	.LBE50:
  2327              		.cfi_endproc
- 2328              	.LFE5174:
+ 2328              	.LFE5175:
  2330              		.section	.rodata._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s.str1.1,"aMS",
  2331              	.LC36:
  2332 0000 544F5543 		.ascii	"TOUCHTHS_VALUE\000"
@@ -3178,13 +3178,13 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2348              		.syntax unified
  2349              		.thumb
  2350              		.thumb_func
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 54
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 54
 
 
  2351              		.fpu fpv5-d16
  2353              	_ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s:
  2354              	.LVL202:
- 2355              	.LFB5175:
+ 2355              	.LFB5176:
  261:Display/displayHandler.cpp **** 
  262:Display/displayHandler.cpp **** void DisplayHandler::DrawStateW (MenuManager::MenuData ui_data, const Preset_s* presets_array) {
  2356              		.loc 2 262 96 is_stmt 1 view -0
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2402              	.L92:
  265:Display/displayHandler.cpp ****         case MenuManager::MAIN_MENU:
  2403              		.loc 2 265 9 view .LVU639
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 55
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 55
 
 
  266:Display/displayHandler.cpp ****             if (ui_data.cursor_state == MenuManager::CALIBRATION_HUB) cursor_idx = 0;
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  297:Display/displayHandler.cpp ****             break;
  298:Display/displayHandler.cpp **** 
  299:Display/displayHandler.cpp ****         case MenuManager::FLASH_HUB:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 56
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 56
 
 
  300:Display/displayHandler.cpp ****             if (ui_data.cursor_state == MenuManager::SAVE_CONFIG) cursor_idx = 0;
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2429              		.cfi_remember_state
  2430              		.cfi_restore 4
  2431              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 57
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 57
 
 
  2432 0050 04B0     		add	sp, sp, #16
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  277:Display/displayHandler.cpp ****             else if (ui_data.cursor_state == MenuManager::FILTER_TYPE) cursor_idx = 3; 
  2474              		.loc 2 277 18 view .LVU661
  2475 006e 0929     		cmp	r1, #9
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 58
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 58
 
 
  2476 0070 10D0     		beq	.L106
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2519              	.L106:
  277:Display/displayHandler.cpp ****             else if (ui_data.cursor_state == MenuManager::FILTER_TYPE) cursor_idx = 3; 
  2520              		.loc 2 277 82 view .LVU674
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 59
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 59
 
 
  2521 0094 0221     		movs	r1, #2
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2562              		.loc 2 351 1 is_stmt 0 view .LVU688
  2563 00b4 5DF8044B 		ldr	r4, [sp], #4
  2564              		.cfi_remember_state
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 60
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 60
 
 
  2565              		.cfi_restore 4
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2607              	.LVL238:
  295:Display/displayHandler.cpp ****             DrawThresholdsHub(cursor_idx);
  2608              		.loc 2 295 76 view .LVU701
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 61
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 61
 
 
  2609 00d8 0221     		moveq	r1, #2
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  302:Display/displayHandler.cpp ****             DrawFlashHub(cursor_idx);
  2652              		.loc 2 302 76 view .LVU714
  2653 00fa 0221     		moveq	r1, #2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 62
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 62
 
 
  2654              	.L97:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2698              		.loc 2 345 29 view .LVU726
  2699 011a FFF7FEBF 		b	_ZN14DisplayHandler16DrawIntParameterEPKciS1_
  2700              	.LVL253:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 63
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 63
 
 
  2701              	.L78:
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  319:Display/displayHandler.cpp ****             DrawIntParameter("HYSTERESIS", ui_data.hysteresis);
  2743              		.loc 2 319 9 is_stmt 1 view .LVU740
  320:Display/displayHandler.cpp ****             break;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 64
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 64
 
 
  2744              		.loc 2 320 13 view .LVU741
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2784 015c DAE7     		b	.L123
  2785              	.LVL267:
  2786              	.L80:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 65
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 65
 
 
  331:Display/displayHandler.cpp ****             DrawIntParameter("OCTAVE", ui_data.octave);
@@ -3872,7 +3872,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2806              		.loc 2 336 17 is_stmt 1 view .LVU764
  336:Display/displayHandler.cpp ****             } else {
  2807              		.loc 2 336 88 is_stmt 0 view .LVU765
- 2808 016e 9421     		movs	r1, #148
+ 2808 016e 9C21     		movs	r1, #156
  2809              	.LVL270:
  336:Display/displayHandler.cpp ****             } else {
  2810              		.loc 2 336 88 view .LVU766
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2825              		.loc 2 341 9 is_stmt 1 view .LVU771
  342:Display/displayHandler.cpp ****             break;
  2826              		.loc 2 342 13 view .LVU772
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 66
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 66
 
 
  342:Display/displayHandler.cpp ****             break;
@@ -3948,7 +3948,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2865 01bc 2F000000 		.word	.LC41
  2866 01c0 38000000 		.word	.LC42
  2867              		.cfi_endproc
- 2868              	.LFE5175:
+ 2868              	.LFE5176:
  2870              		.section	.rodata.str1.1,"aMS",%progbits,1
  2871              	.LC43:
  2872 0000 42747277 		.ascii	"Btrwth 2nd\000"
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2874 000b 42747277 		.ascii	"Btrwth 4th\000"
  2874      74682034 
  2874      746800
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 67
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 67
 
 
  2875              	.LC45:
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2918              		.align	2
  2919              		.set	.LANCHOR0,. + 0
  2922              	_ZZN14DisplayHandler11findTriggerEvE7trigIdx:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 68
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 68
 
 
  2923 0000 00000000 		.space	4
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  2983              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
  2984              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstddef"
  2985              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 69
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 69
 
 
  2986              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
@@ -4115,73 +4115,73 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 1
  3017              		.file 53 "Display/MenuManager.h"
  3018              		.file 54 "Display/displayHandler.h"
  3019              		.file 55 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 70
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 70
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 displayHandler.cpp
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:17     .text._ZN5daisy21OneBitGraphicsDisplay9SetCursorEtt:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:25     .text._ZN5daisy21OneBitGraphicsDisplay9SetCursorEtt:00000000 _ZN5daisy21OneBitGraphicsDisplay9SetCursorEtt
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:104    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:111    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:00000000 _ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:203    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:0000004c $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:111    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:00000000 _ZN14DisplayHandlerC1EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:210    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:217    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 _ZN14DisplayHandler8SetStateE12DisplayState
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:258    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:265    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 _ZN14DisplayHandler14SetStandbyTextEPKc
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:299    .text._ZN14DisplayHandler15pushAudioSampleEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:306    .text._ZN14DisplayHandler15pushAudioSampleEf:00000000 _ZN14DisplayHandler15pushAudioSampleEf
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:338    .text._ZN14DisplayHandler11findTriggerEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:345    .text._ZN14DisplayHandler11findTriggerEv:00000000 _ZN14DisplayHandler11findTriggerEv
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:450    .text._ZN14DisplayHandler11findTriggerEv:00000064 $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:455    .text._ZN14DisplayHandler12drawWaveFormEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:462    .text._ZN14DisplayHandler12drawWaveFormEv:00000000 _ZN14DisplayHandler12drawWaveFormEv
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:621    .text._ZN14DisplayHandler9SetYscaleEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:628    .text._ZN14DisplayHandler9SetYscaleEi:00000000 _ZN14DisplayHandler9SetYscaleEi
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:645    .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:652    .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 _ZN14DisplayHandler17drawStandbyScreenEv
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:701    .text._ZN14DisplayHandler17drawStandbyScreenEv:00000028 $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:706    .text._ZN14DisplayHandler6UpdateEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:713    .text._ZN14DisplayHandler6UpdateEv:00000000 _ZN14DisplayHandler6UpdateEv
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:788    .text._ZN14DisplayHandler12DrawMainMenuEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:795    .text._ZN14DisplayHandler12DrawMainMenuEi:00000000 _ZN14DisplayHandler12DrawMainMenuEi
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:987    .text._ZN14DisplayHandler12DrawMainMenuEi:000000e4 $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1014   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1021   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000000 _ZN14DisplayHandler18DrawCalibrationHubEi
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1242   .text._ZN14DisplayHandler18DrawCalibrationHubEi:0000010c $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1264   .text._ZN14DisplayHandler13DrawScalesHubEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1271   .text._ZN14DisplayHandler13DrawScalesHubEi:00000000 _ZN14DisplayHandler13DrawScalesHubEi
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1444   .text._ZN14DisplayHandler13DrawScalesHubEi:000000c8 $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1462   .text._ZN14DisplayHandler17DrawThresholdsHubEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1469   .text._ZN14DisplayHandler17DrawThresholdsHubEi:00000000 _ZN14DisplayHandler17DrawThresholdsHubEi
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1623   .text._ZN14DisplayHandler17DrawThresholdsHubEi:000000ac $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1640   .text._ZN14DisplayHandler12DrawFlashHubEi:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1647   .text._ZN14DisplayHandler12DrawFlashHubEi:00000000 _ZN14DisplayHandler12DrawFlashHubEi
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1801   .text._ZN14DisplayHandler12DrawFlashHubEi:000000ac $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1816   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1823   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000000 _ZN14DisplayHandler18DrawFloatParameterEPKcf
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:1978   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:000000a8 $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2006   .text._ZN14DisplayHandler16DrawIntParameterEPKciS1_:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2013   .text._ZN14DisplayHandler16DrawIntParameterEPKciS1_:00000000 _ZN14DisplayHandler16DrawIntParameterEPKciS1_
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2308   .text._ZN14DisplayHandler16DrawIntParameterEPKciS1_:00000110 $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2346   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2353   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s:00000000 _ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2384   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s:00000022 $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2855   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s:00000194 $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2918   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2922   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 _ZZN14DisplayHandler11findTriggerEvE7trigIdx
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2925   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciS1_E5notes:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2929   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciS1_E5notes:00000000 _ZZN14DisplayHandler16DrawIntParameterEPKciS1_E5notes
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2943   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciS1_E6scales:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2947   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciS1_E6scales:00000000 _ZZN14DisplayHandler16DrawIntParameterEPKciS1_E6scales
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s 			page 71
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:17     .text._ZN5daisy21OneBitGraphicsDisplay9SetCursorEtt:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:25     .text._ZN5daisy21OneBitGraphicsDisplay9SetCursorEtt:00000000 _ZN5daisy21OneBitGraphicsDisplay9SetCursorEtt
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:104    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:111    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:00000000 _ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:203    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:0000004c $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:111    .text._ZN14DisplayHandlerC2EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb:00000000 _ZN14DisplayHandlerC1EPN5daisy11OledDisplayINS0_16SSD1306DmaDriverILj128ELj64EEEEEb
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:210    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:217    .text._ZN14DisplayHandler8SetStateE12DisplayState:00000000 _ZN14DisplayHandler8SetStateE12DisplayState
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:258    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:265    .text._ZN14DisplayHandler14SetStandbyTextEPKc:00000000 _ZN14DisplayHandler14SetStandbyTextEPKc
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:299    .text._ZN14DisplayHandler15pushAudioSampleEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:306    .text._ZN14DisplayHandler15pushAudioSampleEf:00000000 _ZN14DisplayHandler15pushAudioSampleEf
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:338    .text._ZN14DisplayHandler11findTriggerEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:345    .text._ZN14DisplayHandler11findTriggerEv:00000000 _ZN14DisplayHandler11findTriggerEv
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:450    .text._ZN14DisplayHandler11findTriggerEv:00000064 $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:455    .text._ZN14DisplayHandler12drawWaveFormEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:462    .text._ZN14DisplayHandler12drawWaveFormEv:00000000 _ZN14DisplayHandler12drawWaveFormEv
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:621    .text._ZN14DisplayHandler9SetYscaleEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:628    .text._ZN14DisplayHandler9SetYscaleEi:00000000 _ZN14DisplayHandler9SetYscaleEi
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:645    .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:652    .text._ZN14DisplayHandler17drawStandbyScreenEv:00000000 _ZN14DisplayHandler17drawStandbyScreenEv
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:701    .text._ZN14DisplayHandler17drawStandbyScreenEv:00000028 $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:706    .text._ZN14DisplayHandler6UpdateEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:713    .text._ZN14DisplayHandler6UpdateEv:00000000 _ZN14DisplayHandler6UpdateEv
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:788    .text._ZN14DisplayHandler12DrawMainMenuEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:795    .text._ZN14DisplayHandler12DrawMainMenuEi:00000000 _ZN14DisplayHandler12DrawMainMenuEi
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:987    .text._ZN14DisplayHandler12DrawMainMenuEi:000000e4 $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1014   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1021   .text._ZN14DisplayHandler18DrawCalibrationHubEi:00000000 _ZN14DisplayHandler18DrawCalibrationHubEi
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1242   .text._ZN14DisplayHandler18DrawCalibrationHubEi:0000010c $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1264   .text._ZN14DisplayHandler13DrawScalesHubEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1271   .text._ZN14DisplayHandler13DrawScalesHubEi:00000000 _ZN14DisplayHandler13DrawScalesHubEi
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1444   .text._ZN14DisplayHandler13DrawScalesHubEi:000000c8 $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1462   .text._ZN14DisplayHandler17DrawThresholdsHubEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1469   .text._ZN14DisplayHandler17DrawThresholdsHubEi:00000000 _ZN14DisplayHandler17DrawThresholdsHubEi
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1623   .text._ZN14DisplayHandler17DrawThresholdsHubEi:000000ac $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1640   .text._ZN14DisplayHandler12DrawFlashHubEi:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1647   .text._ZN14DisplayHandler12DrawFlashHubEi:00000000 _ZN14DisplayHandler12DrawFlashHubEi
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1801   .text._ZN14DisplayHandler12DrawFlashHubEi:000000ac $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1816   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1823   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:00000000 _ZN14DisplayHandler18DrawFloatParameterEPKcf
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:1978   .text._ZN14DisplayHandler18DrawFloatParameterEPKcf:000000a8 $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2006   .text._ZN14DisplayHandler16DrawIntParameterEPKciS1_:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2013   .text._ZN14DisplayHandler16DrawIntParameterEPKciS1_:00000000 _ZN14DisplayHandler16DrawIntParameterEPKciS1_
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2308   .text._ZN14DisplayHandler16DrawIntParameterEPKciS1_:00000110 $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2346   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2353   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s:00000000 _ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2384   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s:00000022 $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2855   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s:00000194 $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2918   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2922   .bss._ZZN14DisplayHandler11findTriggerEvE7trigIdx:00000000 _ZZN14DisplayHandler11findTriggerEvE7trigIdx
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2925   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciS1_E5notes:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2929   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciS1_E5notes:00000000 _ZZN14DisplayHandler16DrawIntParameterEPKciS1_E5notes
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2943   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciS1_E6scales:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2947   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciS1_E6scales:00000000 _ZZN14DisplayHandler16DrawIntParameterEPKciS1_E6scales
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccoShVck.s 			page 71
 
 
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2956   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciS1_E7filters:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2960   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciS1_E7filters:00000000 _ZZN14DisplayHandler16DrawIntParameterEPKciS1_E7filters
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2401   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s:00000033 $d
-C:\Users\skipi\AppData\Local\Temp\ccrgSPSa.s:2401   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s:00000034 $t
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2956   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciS1_E7filters:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2960   .rodata._ZZN14DisplayHandler16DrawIntParameterEPKciS1_E7filters:00000000 _ZZN14DisplayHandler16DrawIntParameterEPKciS1_E7filters
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2401   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s:00000033 $d
+C:\Users\skipi\AppData\Local\Temp\ccoShVck.s:2401   .text._ZN14DisplayHandler10DrawStateWEN11MenuManager8MenuDataEPK8Preset_s:00000034 $t
 
 UNDEFINED SYMBOLS
 memset

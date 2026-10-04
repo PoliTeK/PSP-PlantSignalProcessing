@@ -9,12 +9,14 @@ void AudioEngine::Init(float sample_rate) {
     _amp_env.Init(sample_rate);
     _filt_env.Init(sample_rate);
     _filt.Init(sample_rate);
+    _filt.SetFilterMode(daisysp::LadderFilter::FilterMode::LP24);
     _reverb.Init(sample_rate);
 
     _lastGate = false;
     _currentFreq = 440.0f;
 
     SetActivePreset(_defaultPreset);
+    _smoothedPreset = _currentPreset;
 }
 
 void AudioEngine::SetActivePreset(const Preset_s& preset) {
@@ -66,6 +68,8 @@ void AudioEngine::UpdateControls(const Control_s& controls) {
     if(controls.gate && !_lastGate) {
         _amp_env.Retrigger(false);
         _filt_env.Retrigger(false);
+        _osc1.SetFreq(_currentFreq);
+        _osc2.SetFreq(_currentFreq);
     }
     _lastGate = controls.gate;
 }
@@ -76,7 +80,7 @@ void AudioEngine::ProcessMidiCC(uint8_t cc_number, uint8_t cc_value, Preset_s& p
 
     // Helper per le forme d'onda (mappa 0-127 su 8 valori interi: 0-7)
     uint8_t lfo_wave_sel = static_cast<uint8_t>(val_norm * 3.999f); 
-    uint8_t osc_wave_sel = static_cast<uint8_t>(val_norm * 2.999f); 
+    uint8_t osc_wave_sel = static_cast<uint8_t>(val_norm * 2.999f) + 1; 
     switch (cc_number) {
         
         // ==========================================
@@ -118,8 +122,8 @@ void AudioEngine::ProcessMidiCC(uint8_t cc_number, uint8_t cc_value, Preset_s& p
         // ==========================================
         // FILTER (CC 74, 71)
         // ==========================================
-        case 74: preset.filter.cutoff = 20.0f + (val_norm * val_norm) * 18000.0f; break;
-        case 71: preset.filter.resonance = val_norm * 0.95f; break; // Limite di sicurezza 0.95
+        case 74: preset.filter.cutoff = 20.0f + (val_norm * val_norm) * 20000.0f; break;
+        case 71: preset.filter.resonance = val_norm * 1.8f; break; // Limite di sicurezza 0.95
 
         // ==========================================
         // AMP ENVELOPE (CC 73, 75, 79, 72, 80)
@@ -128,7 +132,7 @@ void AudioEngine::ProcessMidiCC(uint8_t cc_number, uint8_t cc_value, Preset_s& p
         case 75: preset.amp_env.decay   = 0.01f + (val_norm * 4.0f); break;
         case 79: preset.amp_env.sustain = val_norm; break;
         case 72: preset.amp_env.release = 0.01f + (val_norm * 5.0f); break;
-        case 80: preset.amp_env.amp     = val_norm; break;
+        //case 80: preset.amp_env.amp     = val_norm; break;
 
         // ==========================================
         // FILTER ENVELOPE (CC 81 - 85)
@@ -151,6 +155,12 @@ void AudioEngine::ProcessMidiCC(uint8_t cc_number, uint8_t cc_value, Preset_s& p
         // ==========================================
         case 100: cc_value < 64 ? preset.sync = false : preset.sync = true; break;
         case 101: cc_value < 64 ? preset.ring = false : preset.ring = true; break;
+        
+        // ==========================================
+        // LFO DIRECTION (CC 102, 103)
+        // ==========================================
+        case 102: preset.lfo1.direction = static_cast<Direction_e>(cc_value % 25); break;
+        case 103: preset.lfo2.direction = static_cast<Direction_e>(cc_value % 25); break;
 
         // CC non mappato -> esci senza richiamare SetActivePreset
         default: return; 
@@ -161,65 +171,76 @@ void AudioEngine::ProcessMidiCC(uint8_t cc_number, uint8_t cc_value, Preset_s& p
 }
 
 void AudioEngine::Process(float& out_l, float& out_r) {
+    const float s = 0.0001f;
+
+    Smooth(_smoothedPreset.filter.cutoff, _currentPreset.filter.cutoff, s);
+    Smooth(_smoothedPreset.filter.resonance, _currentPreset.filter.resonance, s);
+    Smooth(_smoothedPreset.osc1.amp, _currentPreset.osc1.amp, s);
+    Smooth(_smoothedPreset.osc2.amp, _currentPreset.osc2.amp, s);
+    Smooth(_smoothedPreset.noise.amp, _currentPreset.noise.amp, s);
+    Smooth(_smoothedPreset.reverb.dryWet, _currentPreset.reverb.dryWet, s);
     // 1. Elaborazione LFO e Inviluppi
     float amp_env_out = _amp_env.Process(_lastGate);
     float filt_env_out = _filt_env.Process(_lastGate);
 
-    // 2. Aggiornamento Oscillatori
-    _osc1.SetWaveform(_currentPreset.osc1.waveform);
-    _osc2.SetWaveform(_currentPreset.osc2.waveform);
+    float lfo1_out = _lfo1.Process() * _currentPreset.lfo1.amp;
+    float lfo2_out = _lfo2.Process() * _currentPreset.lfo2.amp;
 
-    _osc1.SetDetune(_currentPreset.osc1.detune);
-    _osc2.SetDetune(_currentPreset.osc2.detune);
-    _osc1.SetFreq(_currentFreq);
-    _osc2.SetFreq(_currentFreq); 
-    
-    _osc1.SetAmp(_currentPreset.osc1.amp);
-    _osc2.SetAmp(_currentPreset.osc2.amp);
-
-    _osc1.SetShape(_currentPreset.osc1.shape);
-    _osc2.SetShape(_currentPreset.osc2.shape);
-
-    _lfo1.SetWaveform(_currentPreset.lfo1.waveform);
-    _lfo2.SetWaveform(_currentPreset.lfo2.waveform);
-
-    _lfo1.SetAmp(_currentPreset.lfo1.amp);
-    _lfo2.SetAmp(_currentPreset.lfo2.amp);
-
-    _lfo1.SetFreq(_currentPreset.lfo1.freq);
-    _lfo2.SetFreq(_currentPreset.lfo2.freq);
-
-    _dust.SetDensity(_currentPreset.noise.color);
-    
-    // Gestione della sincronizzazione degli oscillatori
     if (_currentPreset.sync) {
         if (_osc1.IsEOC()) _osc2.Reset();
     }
+    if (_currentPreset.lfo1.direction == Direction_e::SHAPE) {
+        _osc1.SetShape(lfo1_out);
+    }
+    if (_currentPreset.lfo2.direction == Direction_e::SHAPE) {
+        _osc2.SetShape(lfo2_out);
+    }
+    if (_currentPreset.lfo1.direction == Direction_e::DETUNE) {
+        _osc1.SetDetune(lfo1_out* 50.0f); 
+    }
+    if (_currentPreset.lfo2.direction == Direction_e::DETUNE) {
+        _osc2.SetDetune(lfo2_out* 50.0f); 
+    }
     
-    float s_osc1 = _osc1.Process() * _currentPreset.osc1.amp;
-    float s_osc2 = _osc2.Process() * _currentPreset.osc2.amp;
+    float s_osc1 = _osc1.Process() * _smoothedPreset.osc1.amp;
+    float s_osc2 = _osc2.Process() * _smoothedPreset.osc2.amp;
 
-    float sNoise = _dust.Process() * _currentPreset.noise.amp;
+    if (_currentPreset.lfo1.direction == Direction_e::NOISE){
+        _dust.SetDensity((lfo1_out+1)/2); 
+    }
+    if (_currentPreset.lfo2.direction == Direction_e::NOISE){
+        _dust.SetDensity((lfo2_out+1)/2); 
+    }
+
+    float sNoise = _dust.Process() * _smoothedPreset.noise.amp;
     // Gestione della modulazione ad anello
     float sMix = s_osc1 + s_osc2 + sNoise;
     if (_currentPreset.ring) {
         sMix = s_osc1 * s_osc2 + sNoise; 
     }         
     
-
     // 3. Calcolo del Cutoff modulato e applicazione al filtro
     float target_cutoff = _currentPreset.filter.cutoff + (filt_env_out * _currentPreset.filt_env.amp * 10000.0f);
-    //TODO : LFO
+    if (_currentPreset.lfo1.direction == Direction_e::VCF) {
+        target_cutoff += lfo1_out * 10000.0f;
+    }
+    if (_currentPreset.lfo2.direction == Direction_e::VCF) {
+        target_cutoff += lfo2_out * 10000.0f;
+    }
     target_cutoff = daisysp::fclamp(target_cutoff, 20.0f, 20000.0f);
     
     _filt.SetFreq(target_cutoff);
-    _filt.SetRes(_currentPreset.filter.resonance);
 
     float sFilt = _filt.Process(sMix);
 
     // 5. Applicazione VCA (Inviluppo di ampiezza, segnale mono)
-    float sDry = sFilt * amp_env_out * _currentPreset.amp_env.amp ;
-    //TODO : LFO
+    float sDry = sFilt * amp_env_out * _currentPreset.amp_env.amp;
+    if (_currentPreset.lfo1.direction == Direction_e::VCA) {
+        sDry *= lfo1_out;
+    }
+    if (_currentPreset.lfo2.direction == Direction_e::VCA) {
+        sDry *= lfo2_out;
+    }
 
     // 6. Riverbero Stereo
     float revL = 0.0f;

@@ -117,25 +117,31 @@ int main() {
 
     // --- 2.5 PERSISTENT STORAGE INIT ---
     // Crea un oggetto PresetBank che conterrà i valori di fabbrica
-    PresetBank default_bank;
-    
+    PresetBank default_bank = {};
+
     // Popola tutti gli slot con valori validi
     for(int i = 0; i < PRESET_NUM; i++) {
         default_bank.presets[i].index = i;
         sprintf(default_bank.presets[i].name, "Preset %d", i+1);
+        // Assegna esplicitamente tutti i campi della struttura
+        default_bank.presets[i].osc1 = {daisysp::Oscillator::WAVE_TRI, 1.0f, 0.0f, 0.0f};
+        default_bank.presets[i].osc2 = {daisysp::Oscillator::WAVE_TRI, 0.0f, 0.0f, 0.0f};
+        default_bank.presets[i].lfo1 = {daisysp::Oscillator::WAVE_SIN, 0.0f, 0.0f, Direction_e::NONE}; 
+        default_bank.presets[i].lfo2 = {daisysp::Oscillator::WAVE_SIN, 0.0f, 0.0f, Direction_e::NONE};
+        default_bank.presets[i].noise = {0.0f, 0.5f}; // Rumore mutato
         
-        default_bank.presets[i].osc1 = {daisysp::Oscillator::WAVE_SAW, 0.5f};
-        default_bank.presets[i].osc2 = {daisysp::Oscillator::WAVE_SQUARE, 0.5f};
-        default_bank.presets[i].lfo1 = {daisysp::Oscillator::WAVE_SIN, 1.0f};
-        default_bank.presets[i].lfo2 = {daisysp::Oscillator::WAVE_SIN, 1.0f};
-        default_bank.presets[i].amp_env = {0.05f, 0.1f, 0.8f, 0.5f, 1.0f};
-        default_bank.presets[i].filt_env = {0.01f, 0.2f, 0.0f, 0.2f, 3000.0f};
-        default_bank.presets[i].filter = {1000.0f, 0.1f};
-        default_bank.presets[i].reverb = {0.2f, 18000.0f, 0.85f};
+        default_bank.presets[i].amp_env = {0.01f, 0.1f, 0.8f, 0.1f, 1.0f};
+        default_bank.presets[i].filt_env = {0.01f, 0.1f, 0.8f, 0.1f, 0.0f};
+        default_bank.presets[i].filter = {20000.0f, 0.0f};
+        default_bank.presets[i].reverb = {0.0f, 18000.0f, 0.5f};
+        
+        default_bank.presets[i].sync = false;
+        default_bank.presets[i].ring = false;
     }
     
     // Inizializza lo storage passandogli direttamente l'oggetto di default
     storage.Init(default_bank);
+    //torage.RestoreDefaults(); // Uncomment this line to reset to factory defaults/ update flash struct
 
     // --- 3. TIMERS CONFIGURATION ---
     // Timer Prescaler Calculation: scale core clock down to 1 MHz (1 tick = 1 us)
@@ -180,8 +186,10 @@ int main() {
     pc.setScale((PlantConditioner::Notes)init_data.root, (PlantConditioner::ScaleType)init_data.scale);
     pc.SetFilter((IIR::FilterType)init_data.filter_type);
 
+    synth.SetActivePreset(storage.GetSettings().presets[init_data.preset]);
     // --- 4. START AUDIO ENGINE ---
     hw.StartAudio(AudioCallback);
+    
     uint32_t last = System::GetNow();
     
     // ========================================================================

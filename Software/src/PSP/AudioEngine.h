@@ -1,3 +1,11 @@
+//TODO: fixare LFO
+//TODO: aggiungere ottave
+//TODO: aggiungere effetti
+//TODO: calibrare range ADRS
+//TODO: migliorare shape SAW
+//TODO: migliorare range noise
+//TODO: migliorare smoothing
+
 #pragma once
 #include "../../libs/PoliTeKDSP/Oscillators/oscillator.h"
 #include "daisysp.h"
@@ -5,7 +13,16 @@
 
 #define PRESET_NUM 16
 
-// Strutture dei parametri
+enum Direction_e {
+    NONE = 0,
+    VCA,
+    VCF,
+    SHAPE,
+    DETUNE,
+    NOISE,
+    FX
+};
+
 struct Control_s {
     float freq;      // Frequenza in Hz (es. dalla "pianta" o tastiera)
     bool gate;       // Stato del gate (on/off)
@@ -23,6 +40,7 @@ struct Lfo_s {
     uint8_t waveform;
     float amp;
     float freq;
+    Direction_e direction;
 };
 
 struct Noise_s {
@@ -89,6 +107,11 @@ public:
     // Genera un singolo sample
     void Process(float& out_l, float& out_r);
 
+    // Formula iper-leggera per lo smoothing
+    inline void Smooth(float& current, float target, float coeff = 0.001f) {
+        current += coeff * (target - current);
+    }
+
 private:
     // Moduli DaisySP
     politekdsp::Oscillator   _osc1;
@@ -104,17 +127,18 @@ private:
 
     // Copia locale dei parametri attuali (per smoothing e lettura nel Process)
     Preset_s _currentPreset;
+    Preset_s _smoothedPreset;
     Preset_s _defaultPreset = {
         0, "Default",
-        {politekdsp::Oscillator::WAVE_SAW, 1.0f}, // osc1
-        {politekdsp::Oscillator::WAVE_SAW, 1.0f}, // osc2
-        {daisysp::Oscillator::WAVE_SIN, 1.0f}, // lfo1
-        {daisysp::Oscillator::WAVE_SIN, 1.0f}, // lfo2
-        {1.0f, 0.5f},                           // noise
-        {0.01f, 0.1f, 0.8f, 0.5f, 1.0f},       // amp_env
-        {0.01f, 0.1f, 0.8f, 0.5f, 1.0f},       // filt_env
-        {1000.0f, 0.5f},                       // filter
-        {0.3f, 18000.0f, 0.85f},                // reverb
+        {politekdsp::Oscillator::WAVE_TRI, 1.0f, 0.0f, 0.0f}, 
+        {politekdsp::Oscillator::WAVE_TRI, 0.0f, 0.0f, 0.0f},
+        {daisysp::Oscillator::WAVE_SIN, 0.0f, 0.0f, Direction_e::NONE}, 
+        {daisysp::Oscillator::WAVE_SIN, 0.0f, 0.0f, Direction_e::NONE}, 
+        {0.0f, 0.0f},
+        {0.01f, 0.1f, 0.8f, 0.1f, 1.0f},       // amp_env
+        {0.01f, 0.1f, 0.8f, 0.1f, 0.0f},       // filt_env
+        {20000.0f, 0.0f},                       // filter
+        {0.0f, 18000.0f, 0.5f},                // reverb
         false, 
         false                            // sync, ring
     };
@@ -122,6 +146,8 @@ private:
     // Stato controlli
     bool  _lastGate;
     float _currentFreq;
+
+    
 
 
 };
