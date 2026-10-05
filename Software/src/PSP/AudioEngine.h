@@ -95,6 +95,7 @@ public:
 
     void Init(float sample_rate);
 
+    void SetMasterVolume(float volume); 
     // Aggiorna i parametri interni ricevendo il preset attivo
     void SetActivePreset(const Preset_s& preset);
 
@@ -146,6 +147,7 @@ private:
     // Stato controlli
     bool  _lastGate;
     float _currentFreq;
+    float _masterVolume = 1.0f; // Volume master globale (0.0 a 1.0)
 
     
 

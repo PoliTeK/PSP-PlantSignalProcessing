@@ -50,6 +50,9 @@ Control_s audio_controls = {440.0f, false};
 TimerHandle enc_timer;
 TimerHandle plant_timer;
 
+// Master volume (0.0 to 1.0) for audio output
+float master_volume = 1.0f;
+
 // Flag to trigger sensor reading outside the ISR
 volatile bool plant_update_param = false; 
 
@@ -58,6 +61,7 @@ std::atomic<int32_t> global_inc(0);
 std::atomic<bool> global_clicked(false);
 
 volatile uint32_t display_period = 50; //(ms) => 25 fps
+volatile uint32_t master_volume_period = 10; //(ms) => 100 Hz
 
 // ============================================================================
 // INTERRUPT SERVICE ROUTINES AND AUDIO CALLBACK
@@ -94,6 +98,12 @@ int main() {
     
     // --- 0. HARDWARE & PERIPHERAL INITIALIZATION ---
     hw.Init();
+
+    // --- ADC INITIALIZATION (MASTER VOLUME) ---
+    AdcChannelConfig adc_config;
+    adc_config.InitSingle(hw.GetPin(22)); 
+    hw.adc.Init(&adc_config, 1);
+    hw.adc.Start();
 
     // --- MIDI USB INITIALIZATION ---
     MidiUsbHandler::Config midi_cfg;
@@ -190,7 +200,8 @@ int main() {
     // --- 4. START AUDIO ENGINE ---
     hw.StartAudio(AudioCallback);
     
-    uint32_t last = System::GetNow();
+    uint32_t display_last = System::GetNow();
+    uint32_t master_volume_last = System::GetNow();
     
     // ========================================================================
     // MAIN LOOP
@@ -304,12 +315,20 @@ int main() {
             audio_controls.freq = plant_data._freq;
             audio_controls.gate = plant_data._gate;
         }
+        // ====================================================================
+        // --- 3.5: MASTER VOLUME READ ---
+        // ====================================================================
+        if (now - master_volume_last >= master_volume_period) {
+            master_volume_last = now;
+            master_volume = hw.adc.GetFloat(0); // Read ADC value (0.0 to 1.0)
+            synth.SetMasterVolume(master_volume); // Update the audio engine with the new master volume
+        }
 
         // ====================================================================
         // --- TASK 4: DISPLAY UPDATE ---
         // ====================================================================
-        if (now - last >= display_period) {
-            last = now; 
+        if (now - display_last >= display_period) {
+            display_last = now; 
             ui_data = menu.GetData(); 
             
             if (ui_data.current_state == MenuManager::PLAYMODE) {

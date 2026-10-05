@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
   29:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 out = 2.0f - out;
   30:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             } 
   31:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             else if(out < -1.0f) {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 2
 
 
   32:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 out = -2.0f - out;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
   86:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
   87:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             
   88:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_POLYBLEP_SQUARE:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 3
 
 
   89:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             t   = phase_;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
   45 0012 F0EE006A 		vmov.f32	s13, #2.0e+0
   46 0016 27EE470A 		vnmul.f32	s0, s14, s14
   47              	.LVL2:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 4
 
 
   48              		.loc 1 125 22 view .LVU7
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
  136:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
   91              		.loc 1 136 1 view .LVU23
   92 0050 7047     		bx	lr
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 5
 
 
   93              	.L12:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
  143 0025 35       		.byte	(.L22-.L16)/2
  144 0026 7A       		.byte	(.L21-.L16)/2
  145 0027 5F       		.byte	(.L20-.L16)/2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 6
 
 
  146 0028 73       		.byte	(.L19-.L16)/2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
  107:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
  184              		.loc 1 107 9 view .LVU46
  109:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 7
 
 
  185              		.loc 1 109 13 is_stmt 0 view .LVU47
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
  227              	.LBB16:
   17:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = 2.0f * (fabsf(t) - 0.5f);
  228              		.loc 1 17 13 view .LVU60
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 8
 
 
   17:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = 2.0f * (fabsf(t) - 0.5f);
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
  266              	.LVL17:
   29:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             } 
  267              		.loc 1 29 21 view .LVU78
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 9
 
 
  268 00cc B4E7     		b	.L14
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
  306 00fc B0EE680A 		vmovmi.f32	s0, s17
   53:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
  307              		.loc 1 53 17 is_stmt 1 view .LVU95
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 10
 
 
   53:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
  346              		.loc 1 66 39 view .LVU111
  347 0134 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  348 0138 30FE270A 		vselgt.f32	s0, s0, s15
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 11
 
 
  349 013c 7CE7     		b	.L14
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
   10:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** */
   11:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #pragma once
   12:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifndef DSY_CORE_DSP
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 12
 
 
   13:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #define DSY_CORE_DSP
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
   67:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
   68:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** 
   69:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** /** From Musicdsp.org "Fast power and root estimates for 32bit floats)
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 13
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 13
 
 
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** Original code by Stefan Stenzel
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
  400              	.LVL33:
   76:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             last_out_ = out;
  401              		.loc 1 76 13 is_stmt 1 view .LVU131
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 14
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 14
 
 
   76:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             last_out_ = out;
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
  439 01b2 FFF7FEFF 		bl	_ZL8Polyblepff
  440              	.LVL39:
   84:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= -1.0f;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 15
 
 
  441              		.loc 1 84 17 view .LVU149
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
  478              		.loc 1 91 17 view .LVU166
  479 01ec 75EE805A 		vadd.f32	s11, s11, s0
  480              	.LVL45:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 16
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 16
 
 
   92:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 0.707f; 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
  526              		.cfi_endproc
  527              	.LFE2823:
  529              		.section	.text._ZN10politekdsp10Oscillator12CalcPhaseIncEf,"ax",%progbits
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 17
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 17
 
 
  530              		.align	1
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
  581              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
  582              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
  583              		.file 28 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 18
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 18
 
 
  584              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
@@ -1026,21 +1026,21 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 1
  586              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
  587              		.file 32 "../libs/PoliTeKDSP/Oscillators/oscillator.h"
  588              		.file 33 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s 			page 19
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 oscillator.cpp
-C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s:17     .text._ZL8Polyblepff:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s:24     .text._ZL8Polyblepff:00000000 _ZL8Polyblepff
-C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s:96     .text._ZL8Polyblepff:00000054 $d
-C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s:101    .text._ZN10politekdsp10Oscillator7ProcessEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s:108    .text._ZN10politekdsp10Oscillator7ProcessEv:00000000 _ZN10politekdsp10Oscillator7ProcessEv
-C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s:142    .text._ZN10politekdsp10Oscillator7ProcessEv:00000024 $d
-C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s:150    .text._ZN10politekdsp10Oscillator7ProcessEv:0000002c $t
-C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s:521    .text._ZN10politekdsp10Oscillator7ProcessEv:00000214 $d
-C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s:530    .text._ZN10politekdsp10Oscillator12CalcPhaseIncEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccknOHQz.s:537    .text._ZN10politekdsp10Oscillator12CalcPhaseIncEf:00000000 _ZN10politekdsp10Oscillator12CalcPhaseIncEf
+C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s:17     .text._ZL8Polyblepff:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s:24     .text._ZL8Polyblepff:00000000 _ZL8Polyblepff
+C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s:96     .text._ZL8Polyblepff:00000054 $d
+C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s:101    .text._ZN10politekdsp10Oscillator7ProcessEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s:108    .text._ZN10politekdsp10Oscillator7ProcessEv:00000000 _ZN10politekdsp10Oscillator7ProcessEv
+C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s:142    .text._ZN10politekdsp10Oscillator7ProcessEv:00000024 $d
+C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s:150    .text._ZN10politekdsp10Oscillator7ProcessEv:0000002c $t
+C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s:521    .text._ZN10politekdsp10Oscillator7ProcessEv:00000214 $d
+C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s:530    .text._ZN10politekdsp10Oscillator12CalcPhaseIncEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccpdjqqD.s:537    .text._ZN10politekdsp10Oscillator12CalcPhaseIncEf:00000000 _ZN10politekdsp10Oscillator12CalcPhaseIncEf
 
 UNDEFINED SYMBOLS
 sinf

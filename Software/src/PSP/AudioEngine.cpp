@@ -19,6 +19,10 @@ void AudioEngine::Init(float sample_rate) {
     _smoothedPreset = _currentPreset;
 }
 
+void AudioEngine::SetMasterVolume(float volume) {
+    _masterVolume = daisysp::fclamp(volume, 0.0f, 1.0f);
+}
+
 void AudioEngine::SetActivePreset(const Preset_s& preset) {
     _currentPreset = preset;
     
@@ -253,6 +257,6 @@ void AudioEngine::Process(float& out_l, float& out_r) {
     
     // 7. Calcolo del mix stereo
     // Scrive direttamente le variabili passate per riferimento
-    out_l = (sDry * (1.0f - revDryWet)) + (revL * revDryWet);
-    out_r = (sDry * (1.0f - revDryWet)) + (revR * revDryWet);
+    out_l = ((sDry * (1.0f - revDryWet)) + (revL * revDryWet)) * _masterVolume;
+    out_r = ((sDry * (1.0f - revDryWet)) + (revR * revDryWet)) * _masterVolume;
 }
