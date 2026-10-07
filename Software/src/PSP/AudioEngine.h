@@ -1,7 +1,6 @@
-//TODO: fixare LFO
+
 //TODO: aggiungere ottave
-//TODO: aggiungere effetti
-//TODO: calibrare range ADRS
+//TODO: aggiungere effetti + LFO
 //TODO: migliorare shape SAW
 //TODO: migliorare range noise
 //TODO: migliorare smoothing
@@ -19,7 +18,6 @@ enum Direction_e {
     VCF,
     SHAPE,
     DETUNE,
-    NOISE,
     FX
 };
 
@@ -33,6 +31,7 @@ struct Oscillator_s {
     float amp;
     float shape;
     float detune;
+    uint8_t octave; 
 
 };
 
@@ -131,8 +130,8 @@ private:
     Preset_s _smoothedPreset;
     Preset_s _defaultPreset = {
         0, "Default",
-        {politekdsp::Oscillator::WAVE_TRI, 1.0f, 0.0f, 0.0f}, 
-        {politekdsp::Oscillator::WAVE_TRI, 0.0f, 0.0f, 0.0f},
+        {politekdsp::Oscillator::WAVE_TRI, 1.0f, 0.0f, 0.0f, 2}, 
+        {politekdsp::Oscillator::WAVE_TRI, 0.0f, 0.0f, 2},
         {daisysp::Oscillator::WAVE_SIN, 0.0f, 0.0f, Direction_e::NONE}, 
         {daisysp::Oscillator::WAVE_SIN, 0.0f, 0.0f, Direction_e::NONE}, 
         {0.0f, 0.0f},

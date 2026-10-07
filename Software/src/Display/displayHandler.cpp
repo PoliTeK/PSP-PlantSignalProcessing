@@ -117,8 +117,7 @@ void DisplayHandler::DrawMainMenu(int cursorIndex) {
     _displayPtr->SetCursor(10, 13); _displayPtr->WriteString("Calibration", Font_7x10, true);
     _displayPtr->SetCursor(10, 23); _displayPtr->WriteString("Scales", Font_7x10, true);
     _displayPtr->SetCursor(10, 33); _displayPtr->WriteString("Presets", Font_7x10, true);
-    _displayPtr->SetCursor(10, 43); _displayPtr->WriteString("Save/load configs", Font_7x10, true);
-    _displayPtr->SetCursor(10, 53); _displayPtr->WriteString("Exit", Font_7x10, true);
+    _displayPtr->SetCursor(10, 43); _displayPtr->WriteString("Exit", Font_7x10, true);
 
     int cursorY = 13 + (cursorIndex * 10);
     _displayPtr->SetCursor(0, cursorY);
@@ -266,8 +265,7 @@ void DisplayHandler::DrawStateW (MenuManager::MenuData ui_data, const Preset_s* 
             if (ui_data.cursor_state == MenuManager::CALIBRATION_HUB) cursor_idx = 0;
             else if (ui_data.cursor_state == MenuManager::SCALES_HUB) cursor_idx = 1;
             else if (ui_data.cursor_state == MenuManager::PRESETS_HUB) cursor_idx = 2;
-            else if (ui_data.cursor_state == MenuManager::FLASH_HUB) cursor_idx = 3;
-            else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 4;
+            else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 3;
             DrawMainMenu(cursor_idx);
             break;
 
@@ -294,13 +292,6 @@ void DisplayHandler::DrawStateW (MenuManager::MenuData ui_data, const Preset_s* 
             else if (ui_data.cursor_state == MenuManager::RELTHS_VALUE) cursor_idx = 1;
             else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 2;
             DrawThresholdsHub(cursor_idx);
-            break;
-
-        case MenuManager::FLASH_HUB:
-            if (ui_data.cursor_state == MenuManager::SAVE_CONFIG) cursor_idx = 0;
-            else if (ui_data.cursor_state == MenuManager::LOAD_CONFIG) cursor_idx = 1;
-            else if (ui_data.cursor_state == MenuManager::BACK) cursor_idx = 2;
-            DrawFlashHub(cursor_idx);
             break;
 
         // --- LEAFS ---
@@ -337,12 +328,6 @@ void DisplayHandler::DrawStateW (MenuManager::MenuData ui_data, const Preset_s* 
             } else {
                 DrawIntParameter("PRESET", ui_data.preset);
             }
-            break;
-        case MenuManager::SAVE_CONFIG:
-            DrawIntParameter("SAVE CFG", ui_data.configs_idx);
-            break;
-        case MenuManager::LOAD_CONFIG:
-            DrawIntParameter("LOAD CFG", ui_data.configs_idx);
             break;
         
         default:

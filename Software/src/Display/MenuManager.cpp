@@ -44,10 +44,6 @@ void MenuManager::StateUpdate() {
         _current_state = THRESHOLDS_HUB;
         return;
     }
-    if (_current_state == SAVE_CONFIG || _current_state == LOAD_CONFIG) {
-        _current_state = FLASH_HUB;
-        return;
-    }
     if (_current_state == PRESETS_HUB) { // Gestito come foglia del Main Menu
         _current_state = MAIN_MENU;
         return;
@@ -59,7 +55,7 @@ void MenuManager::StateUpdate() {
             _current_state = PLAYMODE;
             _cursor_state = PLAYMODE;
         } 
-        else if (_current_state == CALIBRATION_HUB || _current_state == SCALES_HUB || _current_state == FLASH_HUB) {
+        else if (_current_state == CALIBRATION_HUB || _current_state == SCALES_HUB) {
             MenuState previous_hub = _current_state; 
             _current_state = MAIN_MENU;
             _cursor_state = previous_hub; // Lascia il cursore sull'Hub da cui siamo appena usciti
@@ -78,7 +74,6 @@ void MenuManager::StateUpdate() {
     if (_current_state == CALIBRATION_HUB) _cursor_state = DELTA;
     else if (_current_state == SCALES_HUB) _cursor_state = ROOT;
     else if (_current_state == THRESHOLDS_HUB) _cursor_state = TOUCHTHS_VALUE;
-    else if (_current_state == FLASH_HUB) _cursor_state = SAVE_CONFIG;
 }
 
 bool MenuManager::IsLeafState() {
@@ -86,8 +81,7 @@ bool MenuManager::IsLeafState() {
             _current_state == HYSTERESIS || _current_state == FILTER_TYPE ||
             _current_state == ROOT || _current_state == SCALE || 
             _current_state == OCTAVE || _current_state == TOUCHTHS_VALUE || 
-            _current_state == RELTHS_VALUE || _current_state == PRESETS_HUB ||
-            _current_state == SAVE_CONFIG || _current_state == LOAD_CONFIG);
+            _current_state == RELTHS_VALUE || _current_state == PRESETS_HUB );
 }
 
 
@@ -102,12 +96,10 @@ MenuManager::MenuState MenuManager::CursorUpdate(int rotation) {
         if (rotation > 0) {
             if (_cursor_state == CALIBRATION_HUB) _cursor_state = SCALES_HUB;
             else if (_cursor_state == SCALES_HUB) _cursor_state = PRESETS_HUB;
-            else if (_cursor_state == PRESETS_HUB) _cursor_state = FLASH_HUB;
-            else if (_cursor_state == FLASH_HUB) _cursor_state = BACK;
+            else if (_cursor_state == PRESETS_HUB) _cursor_state = BACK;
             else if (_cursor_state == BACK) _cursor_state = CALIBRATION_HUB;
         } else {
-            if (_cursor_state == BACK) _cursor_state = FLASH_HUB;
-            else if (_cursor_state == FLASH_HUB)  _cursor_state = PRESETS_HUB;                    
+            if (_cursor_state == BACK) _cursor_state = PRESETS_HUB;                  
             else if (_cursor_state == PRESETS_HUB) _cursor_state = SCALES_HUB;                                       
             else if (_cursor_state == SCALES_HUB) _cursor_state = CALIBRATION_HUB;
             else if (_cursor_state == CALIBRATION_HUB) _cursor_state = BACK;
@@ -154,17 +146,6 @@ MenuManager::MenuState MenuManager::CursorUpdate(int rotation) {
             else if (_cursor_state == BACK) _cursor_state = RELTHS_VALUE;
         }
         break;
-    case FLASH_HUB:
-        if (rotation > 0) {
-            if (_cursor_state == SAVE_CONFIG) _cursor_state = LOAD_CONFIG;
-            else if (_cursor_state == LOAD_CONFIG) _cursor_state = BACK;
-            else if (_cursor_state == BACK)  _cursor_state = SAVE_CONFIG;
-        } else {
-            if (_cursor_state == SAVE_CONFIG) _cursor_state = BACK;
-            else if (_cursor_state == LOAD_CONFIG) _cursor_state = SAVE_CONFIG;
-            else if (_cursor_state == BACK) _cursor_state = LOAD_CONFIG;
-        }
-        break;
     default:
         break;
     }
@@ -172,7 +153,6 @@ MenuManager::MenuState MenuManager::CursorUpdate(int rotation) {
     if (_current_state == DELTA || _current_state == CURVE || _current_state == HYSTERESIS || _current_state == FILTER_TYPE) _cursor_state = CALIBRATION_HUB;
     if (_current_state == ROOT || _current_state == SCALE || _current_state == OCTAVE) _cursor_state = SCALES_HUB;
     if (_current_state == TOUCHTHS_VALUE || _current_state == RELTHS_VALUE) _cursor_state = THRESHOLDS_HUB;
-    if (_current_state == SAVE_CONFIG || _current_state == LOAD_CONFIG) _cursor_state = FLASH_HUB;
     if (_current_state == PRESETS_HUB) _cursor_state = MAIN_MENU; 
 
 
@@ -242,16 +222,6 @@ void MenuManager::ValueUpdate(int rotation){
             _outData.preset += rotation;
             if (_outData.preset < 0) _outData.preset = 0;
             if (_outData.preset > PRESET_NUM - 1 ) _outData.preset = PRESET_NUM - 1; 
-            break;
-
-        case SAVE_CONFIG:
-            _outData.configs_idx += rotation;
-            if (_outData.configs_idx < 0) _outData.configs_idx = 0;
-            break;
-
-        case LOAD_CONFIG:
-            _outData.configs_idx += rotation;
-            if (_outData.configs_idx < 0) _outData.configs_idx = 0;
             break;
 
         default:

@@ -34,7 +34,7 @@ struct PresetBank {
     Preset_s presets[PRESET_NUM];
     
     bool operator!=(const PresetBank& other) const {
-        for(int i = 0; i < PRESET_NUM; i++) {
+        for(uint8_t i = 0; i < PRESET_NUM; i++) {
             if (presets[i] != other.presets[i]) return true;
         }
         return false;
@@ -130,12 +130,12 @@ int main() {
     PresetBank default_bank = {};
 
     // Popola tutti gli slot con valori validi
-    for(int i = 0; i < PRESET_NUM; i++) {
+    for(uint8_t i = 0; i < PRESET_NUM; i++) {
         default_bank.presets[i].index = i;
         sprintf(default_bank.presets[i].name, "Preset %d", i+1);
         // Assegna esplicitamente tutti i campi della struttura
-        default_bank.presets[i].osc1 = {daisysp::Oscillator::WAVE_TRI, 1.0f, 0.0f, 0.0f};
-        default_bank.presets[i].osc2 = {daisysp::Oscillator::WAVE_TRI, 0.0f, 0.0f, 0.0f};
+        default_bank.presets[i].osc1 = {daisysp::Oscillator::WAVE_TRI, 1.0f, 0.0f, 0.0f, 2};
+        default_bank.presets[i].osc2 = {daisysp::Oscillator::WAVE_TRI, 0.0f, 0.0f, 0.0f, 2};
         default_bank.presets[i].lfo1 = {daisysp::Oscillator::WAVE_SIN, 0.0f, 0.0f, Direction_e::NONE}; 
         default_bank.presets[i].lfo2 = {daisysp::Oscillator::WAVE_SIN, 0.0f, 0.0f, Direction_e::NONE};
         default_bank.presets[i].noise = {0.0f, 0.5f}; // Rumore mutato
@@ -151,7 +151,7 @@ int main() {
     
     // Inizializza lo storage passandogli direttamente l'oggetto di default
     storage.Init(default_bank);
-    //torage.RestoreDefaults(); // Uncomment this line to reset to factory defaults/ update flash struct
+    storage.RestoreDefaults(); // Uncomment this line to reset to factory defaults/ update flash struct
 
     // --- 3. TIMERS CONFIGURATION ---
     // Timer Prescaler Calculation: scale core clock down to 1 MHz (1 tick = 1 us)

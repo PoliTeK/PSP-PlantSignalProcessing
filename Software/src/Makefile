@@ -1,22 +1,25 @@
 # Nome del progetto (questo sarà il nome del file .bin finale)
 TARGET = PlantSynth
 OPT = -Os
+#APP_TYPE = BOOT_QSPI
+
+# Flag di ottimizzazione e riduzione dimensione
+C_FLAGS += -flto
+CXX_FLAGS += -flto -fno-exceptions -fno-rtti
+LDFLAGS += -flto
 
 # I file sorgente C++ del tuo progetto
-# (NESSUN file di libDaisy o DaisySP deve essere inserito qui)
 CPP_SOURCES = \
 main.cpp \
 Display/displayHandler.cpp \
 Display/MenuManager.cpp \
 PSP/PlantConditioner.cpp \
-PSP/AudioEngine.cpp\
+PSP/AudioEngine.cpp \
 ../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.cpp \
 ../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp \
 ../libs/PoliTeKDSP/Oscillators/oscillator.cpp 
 
-
-
-# Percorsi alle librerie (basati sui tuoi #include)
+# Percorsi alle librerie
 LIBDAISY_DIR = ../libs/PoliTeKDSP/libs/libDaisy
 DAISYSP_DIR = ../libs/PoliTeKDSP/libs/DaisySP
 

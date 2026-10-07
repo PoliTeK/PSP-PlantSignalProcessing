@@ -11,13 +11,13 @@ public:
         PLAYMODE, MAIN_MENU,
         
         // Main Hubs
-        CALIBRATION_HUB, SCALES_HUB, PRESETS_HUB, THRESHOLDS_HUB, FLASH_HUB,
+        CALIBRATION_HUB, SCALES_HUB, PRESETS_HUB, THRESHOLDS_HUB,
 
         // Leafs
         CURVE, DELTA, HYSTERESIS, FILTER_TYPE, //Calibration
         ROOT, SCALE, OCTAVE,                   //Scales
         TOUCHTHS_VALUE, RELTHS_VALUE,          //Thresholds
-        LOAD_CONFIG, SAVE_CONFIG,              //Flash
+        
 
         BACK
     };
@@ -35,7 +35,6 @@ public:
         int touchths_value; // Value of touch hresholds
         int relths_value;   // Value of release hresholds
         int preset;         // Indice per il synth
-        int configs_idx;    // indexes of flash configs
     };
 
     void Init();
