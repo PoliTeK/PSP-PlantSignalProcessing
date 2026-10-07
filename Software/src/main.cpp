@@ -151,7 +151,7 @@ int main() {
     
     // Inizializza lo storage passandogli direttamente l'oggetto di default
     storage.Init(default_bank);
-    storage.RestoreDefaults(); // Uncomment this line to reset to factory defaults/ update flash struct
+    //storage.RestoreDefaults(); // Uncomment this line to reset to factory defaults/ update flash struct
 
     // --- 3. TIMERS CONFIGURATION ---
     // Timer Prescaler Calculation: scale core clock down to 1 MHz (1 tick = 1 us)

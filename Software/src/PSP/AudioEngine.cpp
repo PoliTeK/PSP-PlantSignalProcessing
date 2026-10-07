@@ -180,7 +180,7 @@ void AudioEngine::ProcessMidiCC(uint8_t cc_number, uint8_t cc_value, Preset_s& p
 }
 
 void AudioEngine::Process(float& out_l, float& out_r) {
-    const float s = 0.0001f;
+    const float s = 0.001f;
 
     Smooth(_smoothedPreset.filter.cutoff, _currentPreset.filter.cutoff, s);
     Smooth(_smoothedPreset.filter.resonance, _currentPreset.filter.resonance, s);

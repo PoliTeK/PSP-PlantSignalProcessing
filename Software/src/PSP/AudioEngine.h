@@ -1,9 +1,8 @@
 
-//TODO: aggiungere ottave
 //TODO: aggiungere effetti + LFO
 //TODO: migliorare shape SAW
 //TODO: migliorare range noise
-//TODO: migliorare smoothing
+
 
 #pragma once
 #include "../../libs/PoliTeKDSP/Oscillators/oscillator.h"
