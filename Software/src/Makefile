@@ -17,7 +17,9 @@ PSP/PlantConditioner.cpp \
 PSP/AudioEngine.cpp \
 ../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.cpp \
 ../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.cpp \
-../libs/PoliTeKDSP/Oscillators/oscillator.cpp 
+../libs/PoliTeKDSP/Oscillators/oscillator.cpp \
+../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp\
+../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp
 
 # Percorsi alle librerie
 LIBDAISY_DIR = ../libs/PoliTeKDSP/libs/libDaisy

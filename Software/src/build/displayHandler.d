@@ -206,6 +206,7 @@ build/displayHandler.o: Display/displayHandler.cpp \
  Display/MenuManager.h Display/../PSP/AudioEngine.h \
  Display/../PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h \
+ Display/../PSP/../../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/daisysp.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adenv.h \
  ../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h \
@@ -280,7 +281,8 @@ build/displayHandler.o: Display/displayHandler.cpp \
  ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/PhysicalModeling/PolyPluck.h \
  ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Synthesis/blosc.h \
  ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/jitter.h \
- ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/port.h
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/port.h \
+ Display/../PSP/../../libs/PoliTeKDSP/Modulators/XorM/XorM.h
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -490,6 +492,7 @@ Display/MenuManager.h:
 Display/../PSP/AudioEngine.h:
 Display/../PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h:
+Display/../PSP/../../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/daisysp.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adenv.h:
 ../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h:
@@ -565,3 +568,4 @@ Display/../PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h:
 ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Synthesis/blosc.h:
 ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/jitter.h:
 ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/port.h:
+Display/../PSP/../../libs/PoliTeKDSP/Modulators/XorM/XorM.h:

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
   29:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 out = 2.0f - out;
   30:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             } 
   31:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             else if(out < -1.0f) {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 2
 
 
   32:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 out = -2.0f - out;
@@ -69,178 +69,168 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
   37:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         
   38:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_SAW:
   39:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         {
-  40:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // shape_ (0.0 -> 1.0) trasforma gradualmente una Saw normale (1x)
-  41:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // in una Double Saw (2x, un'ottava sopra) creando un reset a metà fase.
-  42:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             
-  43:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             if (phase_ < 0.5f) {
-  44:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 // Prima metà dell'onda
-  45:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 // A shape 0: scende linearmente da 1.0 a 0.0
-  46:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 // A shape 1: scende linearmente da 1.0 a -1.0 (ciclo completo)
-  47:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 out = 1.0f - 2.0f * phase_ * (1.0f + shape_);
-  48:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             } 
-  49:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             else {
-  50:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 // Seconda metà dell'onda
-  51:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 // A shape 0: scende da 0.0 a -1.0
-  52:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 // A shape 1: riparte da 1.0 e scende a -1.0 (secondo ciclo completo)
-  53:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 out = shape_ - 2.0f * (phase_ - 0.5f) * (1.0f + shape_);
-  54:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
-  55:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
-  56:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         }
-  57:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         
-  58:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_RAMP: out = ((phase_ * 2.0f)) - 1.0f; break;
-  59:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_SQUARE:
-  60:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         {
-  61:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // shape_ (0.0 -> 1.0)
-  62:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Se shape_ = 1.0 -> duty_cycle = 0.5 (50%, onda quadra perfetta)
-  63:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Se shape_ = 0.0 -> duty_cycle = 0.05 (5%, impulso strettissimo e nasale)
-  64:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             float duty_cycle = 0.5f - (shape_ * 0.45f);
-  65:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
-  66:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = phase_ < duty_cycle ? 1.0f : -1.0f;
-  67:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
-  68:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         }
-  69:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         
-  70:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_POLYBLEP_TRI:
-  71:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             t   = phase_;
-  72:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = phase_ < 0.5f ? 1.0f : -1.0f;
-  73:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
-  74:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + 0.5f));
-  75:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Leaky Integrator:
-  76:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out       = phase_inc_ * out + (1.0f - phase_inc_) * last_out_;
-  77:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             last_out_ = out;
-  78:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 4.f; 
+  40:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             if ((phase_ > (c_ - 0.05f) && phase_ < (0.95f - c_)) || c_ == 0.0f)
+  41:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             {
+  42:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 out = -1.0f + (phase_ * 2.0f); // Corretto l'=- ambiguo
+  43:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
+  44:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             else
+  45:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             {
+  46:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 out = 1.0f - (phase_ * 2.0f);
+  47:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
+  48:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
+  49:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         }
+  50:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         
+  51:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_RAMP: out = ((phase_ * 2.0f)) - 1.0f; break;
+  52:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_SQUARE:
+  53:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         {
+  54:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // shape_ (0.0 -> 1.0)
+  55:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Se shape_ = 1.0 -> duty_cycle = 0.5 (50%, onda quadra perfetta)
+  56:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Se shape_ = 0.0 -> duty_cycle = 0.05 (5%, impulso strettissimo e nasale)
+  57:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             float duty_cycle = 0.5f - (shape_ * 0.45f);
+  58:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+  59:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = phase_ < duty_cycle ? 1.0f : -1.0f;
+  60:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
+  61:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         }
+  62:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         
+  63:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_POLYBLEP_TRI:
+  64:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             t   = phase_;
+  65:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = phase_ < 0.5f ? 1.0f : -1.0f;
+  66:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
+  67:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + 0.5f));
+  68:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Leaky Integrator:
+  69:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out       = phase_inc_ * out + (1.0f - phase_inc_) * last_out_;
+  70:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             last_out_ = out;
+  71:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 4.f; 
+  72:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
+  73:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             
+  74:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_POLYBLEP_SAW:
+  75:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             t   = phase_;
+  76:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = (2.0f * t) - 1.0f;
+  77:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, t);
+  78:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= -1.0f;
   79:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
   80:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             
-  81:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_POLYBLEP_SAW:
+  81:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_POLYBLEP_SQUARE:
   82:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             t   = phase_;
-  83:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = (2.0f * t) - 1.0f;
-  84:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, t);
-  85:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= -1.0f;
-  86:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
-  87:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             
-  88:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_POLYBLEP_SQUARE:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 3
+  83:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = phase_ < shape_ ? 1.0f : -1.0f;
+  84:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
+  85:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + (1.0f - shape_)));
+  86:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 0.707f; 
+  87:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
+  88:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 3
 
 
-  89:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             t   = phase_;
-  90:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = phase_ < shape_ ? 1.0f : -1.0f;
-  91:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
-  92:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + (1.0f - shape_)));
-  93:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 0.707f; 
-  94:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
-  95:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             
-  96:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         default: out = 0.0f; break;
+  89:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         default: out = 0.0f; break;
+  90:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
+  91:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     
+  92:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     phase_ += phase_inc_;
+  93:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     if(phase_ > 1.0f)
+  94:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     {
+  95:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         phase_ -= 1.0f;
+  96:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         eoc_ = true;
   97:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
-  98:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     
-  99:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     phase_ += phase_inc_;
- 100:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     if(phase_ > 1.0f)
- 101:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     {
- 102:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         phase_ -= 1.0f;
- 103:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         eoc_ = true;
- 104:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
- 105:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     else
- 106:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     {
- 107:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         eoc_ = false;
- 108:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
- 109:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     eor_ = (phase_ - phase_inc_ < 0.5f && phase_ >= 0.5f);
- 110:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 111:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     return out * amp_;
- 112:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
- 113:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 114:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** float Oscillator::CalcPhaseInc(float f)
- 115:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** {
- 116:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     return f * sr_recip_;
- 117:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
- 118:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 119:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** static float Polyblep(float phase_inc, float t)
- 120:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** {
-  28              		.loc 1 120 1 view -0
+  98:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     else
+  99:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     {
+ 100:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         eoc_ = false;
+ 101:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
+ 102:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     eor_ = (phase_ - phase_inc_ < 0.5f && phase_ >= 0.5f);
+ 103:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 104:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     return out * amp_;
+ 105:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
+ 106:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 107:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** float Oscillator::CalcPhaseInc(float f)
+ 108:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** {
+ 109:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     return f * sr_recip_;
+ 110:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
+ 111:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 112:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** static float Polyblep(float phase_inc, float t)
+ 113:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** {
+  28              		.loc 1 113 1 view -0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   32              		@ link register save eliminated.
- 121:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     float dt = phase_inc;
-  33              		.loc 1 121 5 view .LVU1
- 122:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     if(t < dt)
-  34              		.loc 1 122 5 view .LVU2
+ 114:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     float dt = phase_inc;
+  33              		.loc 1 114 5 view .LVU1
+ 115:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     if(t < dt)
+  34              		.loc 1 115 5 view .LVU2
   35 0000 B4EEE00A 		vcmpe.f32	s0, s1
   36 0004 F7EE007A 		vmov.f32	s15, #1.0e+0
   37 0008 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
   38 000c 0ADD     		ble	.L9
- 123:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     {
- 124:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         t /= dt;
-  39              		.loc 1 124 9 view .LVU3
-  40              		.loc 1 124 11 is_stmt 0 view .LVU4
+ 116:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     {
+ 117:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         t /= dt;
+  39              		.loc 1 117 9 view .LVU3
+  40              		.loc 1 117 11 is_stmt 0 view .LVU4
   41 000e 80EE807A 		vdiv.f32	s14, s1, s0
   42              	.LVL1:
- 125:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         return t + t - t * t - 1.0f;
-  43              		.loc 1 125 9 is_stmt 1 view .LVU5
-  44              		.loc 1 125 22 is_stmt 0 view .LVU6
+ 118:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         return t + t - t * t - 1.0f;
+  43              		.loc 1 118 9 is_stmt 1 view .LVU5
+  44              		.loc 1 118 22 is_stmt 0 view .LVU6
   45 0012 F0EE006A 		vmov.f32	s13, #2.0e+0
   46 0016 27EE470A 		vnmul.f32	s0, s14, s14
   47              	.LVL2:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 4
-
-
-  48              		.loc 1 125 22 view .LVU7
+  48              		.loc 1 118 22 view .LVU7
   49 001a A7EE260A 		vfma.f32	s0, s14, s13
-  50              		.loc 1 125 32 view .LVU8
+  50              		.loc 1 118 32 view .LVU8
   51 001e 30EE670A 		vsub.f32	s0, s0, s15
   52 0022 7047     		bx	lr
   53              	.LVL3:
   54              	.L9:
- 126:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
- 127:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     else if(t > 1.0f - dt)
-  55              		.loc 1 127 10 is_stmt 1 view .LVU9
-  56              		.loc 1 127 22 is_stmt 0 view .LVU10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 4
+
+
+ 119:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
+ 120:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     else if(t > 1.0f - dt)
+  55              		.loc 1 120 10 is_stmt 1 view .LVU9
+  56              		.loc 1 120 22 is_stmt 0 view .LVU10
   57 0024 37EEC07A 		vsub.f32	s14, s15, s0
-  58              		.loc 1 127 10 view .LVU11
+  58              		.loc 1 120 10 view .LVU11
   59 0028 B4EEE07A 		vcmpe.f32	s14, s1
   60 002c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
   61              	.LVL4:
   62              	.LBB4:
   63              	.LBI4:
- 119:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** {
-  64              		.loc 1 119 14 is_stmt 1 view .LVU12
+ 112:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** {
+  64              		.loc 1 112 14 is_stmt 1 view .LVU12
   65              	.LBB5:
- 128:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     {
- 129:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         t = (t - 1.0f) / dt;
-  66              		.loc 1 129 9 view .LVU13
-  67              		.loc 1 129 16 is_stmt 0 view .LVU14
+ 121:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     {
+ 122:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         t = (t - 1.0f) / dt;
+  66              		.loc 1 122 9 view .LVU13
+  67              		.loc 1 122 16 is_stmt 0 view .LVU14
   68 0030 41BF     		itttt	mi
   69 0032 70EEE70A 		vsubmi.f32	s1, s1, s15
   70              	.LVL5:
-  71              		.loc 1 129 11 view .LVU15
+  71              		.loc 1 122 11 view .LVU15
   72 0036 80EE807A 		vdivmi.f32	s14, s1, s0
   73              	.LVL6:
- 130:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         return t * t + t + t + 1.0f;
-  74              		.loc 1 130 9 is_stmt 1 view .LVU16
-  75              		.loc 1 130 22 is_stmt 0 view .LVU17
+ 123:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         return t * t + t + t + 1.0f;
+  74              		.loc 1 123 9 is_stmt 1 view .LVU16
+  75              		.loc 1 123 22 is_stmt 0 view .LVU17
   76 003a B0EE470A 		vmovmi.f32	s0, s14
   77              	.LVL7:
-  78              		.loc 1 130 22 view .LVU18
+  78              		.loc 1 123 22 view .LVU18
   79 003e A7EE070A 		vfmami.f32	s0, s14, s14
-  80              		.loc 1 130 26 view .LVU19
+  80              		.loc 1 123 26 view .LVU19
   81 0042 46BF     		itte	mi
   82 0044 37EE000A 		vaddmi.f32	s0, s14, s0
-  83              		.loc 1 130 32 view .LVU20
+  83              		.loc 1 123 32 view .LVU20
   84 0048 30EE270A 		vaddmi.f32	s0, s0, s15
   85              	.LVL8:
-  86              		.loc 1 130 32 view .LVU21
+  86              		.loc 1 123 32 view .LVU21
   87              	.LBE5:
   88              	.LBE4:
- 131:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
- 132:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     else
- 133:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     {
- 134:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         return 0.0f;
-  89              		.loc 1 134 16 view .LVU22
+ 124:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
+ 125:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     else
+ 126:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     {
+ 127:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         return 0.0f;
+  89              		.loc 1 127 16 view .LVU22
   90 004c 9FED010A 		vldrpl.32	s0, .L11
- 135:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
- 136:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
-  91              		.loc 1 136 1 view .LVU23
+ 128:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
+ 129:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
+  91              		.loc 1 129 1 view .LVU23
   92 0050 7047     		bx	lr
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 5
-
-
   93              	.L12:
   94 0052 00BF     		.align	2
   95              	.L11:
@@ -248,6 +238,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
   97              		.cfi_endproc
   98              	.LFE2826:
  100              		.section	.text._ZN10politekdsp10Oscillator7ProcessEv,"ax",%progbits
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 5
+
+
  101              		.align	1
  102              		.global	_ZN10politekdsp10Oscillator7ProcessEv
  103              		.syntax unified
@@ -280,40 +273,40 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
  127              		.cfi_offset 81, -20
  128              		.cfi_offset 82, -16
  129              		.cfi_offset 83, -12
- 130 000a B6EE008A 		vmov.f32	s16, #5.0e-1
+ 130 000a F6EE008A 		vmov.f32	s17, #5.0e-1
  131              	.LBB14:
  132              	.LBB15:
-  73:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + 0.5f));
- 133              		.loc 1 73 28 view .LVU28
- 134 000e D0ED089A 		vldr.32	s19, [r0, #32]
- 135 0012 F7EE008A 		vmov.f32	s17, #1.0e+0
+  66:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + 0.5f));
+ 133              		.loc 1 66 28 view .LVU28
+ 134 000e D0ED099A 		vldr.32	s19, [r0, #36]
+ 135 0012 B7EE008A 		vmov.f32	s16, #1.0e+0
   12:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         
  136              		.loc 1 12 35 view .LVU29
- 137 0016 90ED079A 		vldr.32	s18, [r0, #28]
+ 137 0016 90ED089A 		vldr.32	s18, [r0, #32]
  138 001a 072B     		cmp	r3, #7
- 139 001c 00F2F580 		bhi	.L36
+ 139 001c 00F20681 		bhi	.L38
  140 0020 DFE803F0 		tbb	[pc, r3]
  141              	.L16:
  142 0024 04       		.byte	(.L23-.L16)/2
  143 0025 35       		.byte	(.L22-.L16)/2
- 144 0026 7A       		.byte	(.L21-.L16)/2
+ 144 0026 8B       		.byte	(.L21-.L16)/2
  145 0027 5F       		.byte	(.L20-.L16)/2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 6
-
-
- 146 0028 73       		.byte	(.L19-.L16)/2
- 147 0029 8D       		.byte	(.L18-.L16)/2
- 148 002a BD       		.byte	(.L17-.L16)/2
- 149 002b CE       		.byte	(.L15-.L16)/2
+ 146 0028 84       		.byte	(.L19-.L16)/2
+ 147 0029 9E       		.byte	(.L18-.L16)/2
+ 148 002a CE       		.byte	(.L17-.L16)/2
+ 149 002b DF       		.byte	(.L15-.L16)/2
  150              		.p2align 1
  151              	.L23:
   12:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 6
+
+
  152              		.loc 1 12 9 is_stmt 1 view .LVU30
   12:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         
  153              		.loc 1 12 24 view .LVU31
   12:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         
  154              		.loc 1 12 34 is_stmt 0 view .LVU32
- 155 002c 9FED790A 		vldr.32	s0, .L53
+ 155 002c 9FED820A 		vldr.32	s0, .L53
  156 0030 29EE000A 		vmul.f32	s0, s18, s0
  157 0034 FFF7FEFF 		bl	sinf
  158              	.LVL10:
@@ -324,80 +317,80 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
  161              		.loc 1 12 54 is_stmt 0 view .LVU34
  162              	.LBE15:
  163              	.LBE14:
-  99:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     if(phase_ > 1.0f)
- 164              		.loc 1 99 5 is_stmt 1 view .LVU35
-  99:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     if(phase_ > 1.0f)
- 165              		.loc 1 99 12 is_stmt 0 view .LVU36
+  92:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     if(phase_ > 1.0f)
+ 164              		.loc 1 92 5 is_stmt 1 view .LVU35
+  92:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     if(phase_ > 1.0f)
+ 165              		.loc 1 92 12 is_stmt 0 view .LVU36
  166 0038 39EE899A 		vadd.f32	s18, s19, s18
- 100:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     {
- 167              		.loc 1 100 5 view .LVU37
- 168 003c B4EEE89A 		vcmpe.f32	s18, s17
-  99:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     if(phase_ > 1.0f)
- 169              		.loc 1 99 12 view .LVU38
- 170 0040 84ED079A 		vstr.32	s18, [r4, #28]
- 100:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     {
- 171              		.loc 1 100 5 is_stmt 1 view .LVU39
+  93:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     {
+ 167              		.loc 1 93 5 view .LVU37
+ 168 003c B4EEC89A 		vcmpe.f32	s18, s16
+  92:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     if(phase_ > 1.0f)
+ 169              		.loc 1 92 12 view .LVU38
+ 170 0040 84ED089A 		vstr.32	s18, [r4, #32]
+  93:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     {
+ 171              		.loc 1 93 5 is_stmt 1 view .LVU39
  172 0044 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 102:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         eoc_ = true;
- 173              		.loc 1 102 9 view .LVU40
- 102:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         eoc_ = true;
- 174              		.loc 1 102 16 is_stmt 0 view .LVU41
+  95:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         eoc_ = true;
+ 173              		.loc 1 95 9 view .LVU40
+  95:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         eoc_ = true;
+ 174              		.loc 1 95 16 is_stmt 0 view .LVU41
  175 0048 C5BF     		ittet	gt
- 176 004a 39EE689A 		vsubgt.f32	s18, s18, s17
- 103:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
- 177              		.loc 1 103 14 view .LVU42
+ 176 004a 39EE489A 		vsubgt.f32	s18, s18, s16
+  96:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
+ 177              		.loc 1 96 14 view .LVU42
  178 004e 0123     		movgt	r3, #1
- 107:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
- 179              		.loc 1 107 14 view .LVU43
+ 100:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
+ 179              		.loc 1 100 14 view .LVU43
  180 0050 0023     		movle	r3, #0
- 102:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         eoc_ = true;
- 181              		.loc 1 102 16 view .LVU44
- 182 0052 84ED079A 		vstrgt.32	s18, [r4, #28]
- 103:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
- 183              		.loc 1 103 9 is_stmt 1 view .LVU45
- 107:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
- 184              		.loc 1 107 9 view .LVU46
- 109:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 7
+  95:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         eoc_ = true;
+ 181              		.loc 1 95 16 view .LVU44
+ 182 0052 84ED089A 		vstrgt.32	s18, [r4, #32]
+  96:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
+ 183              		.loc 1 96 9 is_stmt 1 view .LVU45
+ 100:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
+ 184              		.loc 1 100 9 view .LVU46
+ 102:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 185              		.loc 1 102 13 is_stmt 0 view .LVU47
+ 186 0056 D4ED087A 		vldr.32	s15, [r4, #32]
+ 100:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
+ 187              		.loc 1 100 14 view .LVU48
+ 188 005a 84F83130 		strb	r3, [r4, #49]
+ 102:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 189              		.loc 1 102 5 is_stmt 1 view .LVU49
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 7
 
 
- 185              		.loc 1 109 13 is_stmt 0 view .LVU47
- 186 0056 D4ED077A 		vldr.32	s15, [r4, #28]
- 107:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     }
- 187              		.loc 1 107 14 view .LVU48
- 188 005a 84F82D30 		strb	r3, [r4, #45]
- 109:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 189              		.loc 1 109 5 is_stmt 1 view .LVU49
- 109:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 190              		.loc 1 109 20 is_stmt 0 view .LVU50
+ 102:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 190              		.loc 1 102 20 is_stmt 0 view .LVU50
  191 005e 77EEE99A 		vsub.f32	s19, s15, s19
- 109:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 192              		.loc 1 109 40 view .LVU51
- 193 0062 F4EEC89A 		vcmpe.f32	s19, s16
+ 102:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 192              		.loc 1 102 40 view .LVU51
+ 193 0062 F4EEE89A 		vcmpe.f32	s19, s17
  194 0066 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 195 006a 40F1D180 		bpl	.L49
- 109:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 196              		.loc 1 109 40 discriminator 1 view .LVU52
- 197 006e F4EEC87A 		vcmpe.f32	s15, s16
+ 195 006a 40F1E280 		bpl	.L50
+ 102:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 196              		.loc 1 102 40 discriminator 1 view .LVU52
+ 197 006e F4EEE87A 		vcmpe.f32	s15, s17
  198 0072 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  199 0076 ACBF     		ite	ge
  200 0078 0123     		movge	r3, #1
  201 007a 0023     		movlt	r3, #0
- 202              	.L34:
- 111:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
- 203              		.loc 1 111 18 discriminator 6 view .LVU53
+ 202              	.L36:
+ 104:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
+ 203              		.loc 1 104 18 discriminator 6 view .LVU53
  204 007c D4ED017A 		vldr.32	s15, [r4, #4]
- 109:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 205              		.loc 1 109 10 discriminator 6 view .LVU54
- 206 0080 84F82C30 		strb	r3, [r4, #44]
- 111:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
- 207              		.loc 1 111 5 is_stmt 1 discriminator 6 view .LVU55
- 112:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 208              		.loc 1 112 1 is_stmt 0 discriminator 6 view .LVU56
+ 102:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 205              		.loc 1 102 10 discriminator 6 view .LVU54
+ 206 0080 84F83030 		strb	r3, [r4, #48]
+ 104:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
+ 207              		.loc 1 104 5 is_stmt 1 discriminator 6 view .LVU55
+ 105:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 208              		.loc 1 105 1 is_stmt 0 discriminator 6 view .LVU56
  209 0084 20EE270A 		vmul.f32	s0, s0, s15
  210              	.LVL11:
- 112:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 211              		.loc 1 112 1 discriminator 6 view .LVU57
+ 105:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 211              		.loc 1 105 1 discriminator 6 view .LVU57
  212 0088 BDEC048B 		vldm	sp!, {d8-d9}
  213              		.cfi_remember_state
  214              		.cfi_restore 82
@@ -409,8 +402,8 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
  220              	.LVL12:
  221              	.L22:
  222              		.cfi_restore_state
- 223              	.LBB24:
- 224              	.LBB23:
+ 223              	.LBB23:
+ 224              	.LBB22:
   14:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         {
  225              		.loc 1 14 9 is_stmt 1 view .LVU58
   15:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Generazione del Triangolo base
@@ -418,9 +411,6 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
  227              	.LBB16:
   17:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = 2.0f * (fabsf(t) - 0.5f);
  228              		.loc 1 17 13 view .LVU60
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 8
-
-
   17:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = 2.0f * (fabsf(t) - 0.5f);
  229              		.loc 1 17 17 is_stmt 0 view .LVU61
  230 008e FFEE007A 		vmov.f32	s15, #-1.0e+0
@@ -428,12 +418,15 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
  231              		.loc 1 23 19 view .LVU62
  232 0092 D0ED035A 		vldr.32	s11, [r0, #12]
   17:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = 2.0f * (fabsf(t) - 0.5f);
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 8
+
+
  233              		.loc 1 17 17 view .LVU63
  234 0096 B0EE007A 		vmov.f32	s14, #2.0e+0
   23:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= fold_gain;
  235              		.loc 1 23 19 view .LVU64
- 236 009a 9FED5F6A 		vldr.32	s12, .L53+4
- 237 009e F0EE686A 		vmov.f32	s13, s17
+ 236 009a 9FED686A 		vldr.32	s12, .L53+4
+ 237 009e F0EE486A 		vmov.f32	s13, s16
   17:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = 2.0f * (fabsf(t) - 0.5f);
  238              		.loc 1 17 17 view .LVU65
  239 00a2 B0EE670A 		vmov.f32	s0, s15
@@ -452,7 +445,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
  248              	.LVL14:
   18:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             
  249              		.loc 1 18 36 view .LVU70
- 250 00b2 30EE480A 		vsub.f32	s0, s0, s16
+ 250 00b2 30EE680A 		vsub.f32	s0, s0, s17
   18:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             
  251              		.loc 1 18 17 view .LVU71
  252 00b6 30EE000A 		vadd.f32	s0, s0, s0
@@ -467,9 +460,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
  258              	.LVL16:
   28:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 out = 2.0f - out;
  259              		.loc 1 28 13 is_stmt 1 view .LVU75
- 260 00be B4EEE80A 		vcmpe.f32	s0, s17
+ 260 00be B4EEC80A 		vcmpe.f32	s0, s16
  261 00c2 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 262 00c6 02DD     		ble	.L46
+ 262 00c6 02DD     		ble	.L48
   29:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             } 
  263              		.loc 1 29 17 view .LVU76
   29:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             } 
@@ -478,16 +471,16 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
  266              	.LVL17:
   29:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             } 
  267              		.loc 1 29 21 view .LVU78
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 9
-
-
  268 00cc B4E7     		b	.L14
- 269              	.L46:
+ 269              	.L48:
   31:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 out = -2.0f - out;
  270              		.loc 1 31 18 is_stmt 1 view .LVU79
  271 00ce B4EEE70A 		vcmpe.f32	s0, s15
  272 00d2 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  273 00d6 AFD5     		bpl	.L14
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 9
+
+
   32:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
  274              		.loc 1 32 17 view .LVU80
   32:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
@@ -508,148 +501,166 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
  286              	.LBE16:
   38:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         {
  287              		.loc 1 38 9 is_stmt 1 view .LVU85
-  39:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // shape_ (0.0 -> 1.0) trasforma gradualmente una Saw normale (1x)
+  39:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             if ((phase_ > (c_ - 0.05f) && phase_ < (0.95f - c_)) || c_ == 0.0f)
  288              		.loc 1 39 9 view .LVU86
-  43:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 // Prima metà dell'onda
- 289              		.loc 1 43 13 view .LVU87
- 290 00e2 B4EEC89A 		vcmpe.f32	s18, s16
- 291              	.LBB17:
-  23:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= fold_gain;
- 292              		.loc 1 23 39 is_stmt 0 view .LVU88
- 293 00e6 90ED030A 		vldr.32	s0, [r0, #12]
- 294              	.LBE17:
-  47:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             } 
- 295              		.loc 1 47 52 view .LVU89
- 296 00ea 30EE287A 		vadd.f32	s14, s0, s17
-  43:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****                 // Prima metà dell'onda
- 297              		.loc 1 43 13 view .LVU90
- 298 00ee F1EE10FA 		vmrs	APSR_nzcv, FPSCR
-  47:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             } 
- 299              		.loc 1 47 17 is_stmt 1 view .LVU91
-  53:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
- 300              		.loc 1 53 47 is_stmt 0 view .LVU92
- 301 00f2 53BF     		iteet	pl
- 302 00f4 79EE487A 		vsubpl.f32	s15, s18, s16
-  47:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             } 
- 303              		.loc 1 47 35 view .LVU93
- 304 00f8 79EE097A 		vaddmi.f32	s15, s18, s18
-  47:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             } 
- 305              		.loc 1 47 21 view .LVU94
- 306 00fc B0EE680A 		vmovmi.f32	s0, s17
-  53:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
- 307              		.loc 1 53 17 is_stmt 1 view .LVU95
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 10
+  40:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             {
+ 289              		.loc 1 40 13 view .LVU87
+  40:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             {
+ 290              		.loc 1 40 28 is_stmt 0 view .LVU88
+ 291 00e2 D0ED057A 		vldr.32	s15, [r0, #20]
+ 292 00e6 F0EE006A 		vmov.f32	s13, #2.0e+0
+  40:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             {
+ 293              		.loc 1 40 31 view .LVU89
+ 294 00ea 9FED557A 		vldr.32	s14, .L53+8
+ 295 00ee 37EEC77A 		vsub.f32	s14, s15, s14
+  40:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             {
+ 296              		.loc 1 40 13 view .LVU90
+ 297 00f2 B4EEC97A 		vcmpe.f32	s14, s18
+ 298 00f6 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 299 00fa 08D5     		bpl	.L27
+  40:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             {
+ 300              		.loc 1 40 59 discriminator 1 view .LVU91
+ 301 00fc 9FED517A 		vldr.32	s14, .L53+12
+ 302 0100 37EE677A 		vsub.f32	s14, s14, s15
+  40:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             {
+ 303              		.loc 1 40 40 discriminator 1 view .LVU92
+ 304 0104 B4EEC97A 		vcmpe.f32	s14, s18
+ 305 0108 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 306 010c 04DC     		bgt	.L29
+ 307              	.L27:
+  40:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             {
+ 308              		.loc 1 40 66 discriminator 3 view .LVU93
+ 309 010e F5EE407A 		vcmp.f32	s15, #0
+ 310 0112 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 311 0116 04D1     		bne	.L30
+ 312              	.L29:
+  42:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
+ 313              		.loc 1 42 17 is_stmt 1 view .LVU94
+  42:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
+ 314              		.loc 1 42 21 is_stmt 0 view .LVU95
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 10
 
 
-  53:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
- 308              		.loc 1 53 37 is_stmt 0 view .LVU96
- 309 0100 77EEA77A 		vaddpl.f32	s15, s15, s15
-  53:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
- 310              		.loc 1 53 21 view .LVU97
- 311 0104 A7EEC70A 		vfms.f32	s0, s15, s14
- 312              	.LVL21:
-  53:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
- 313              		.loc 1 53 21 view .LVU98
- 314 0108 96E7     		b	.L14
- 315              	.LVL22:
- 316              	.L19:
-  58:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_SQUARE:
- 317              		.loc 1 58 9 is_stmt 1 view .LVU99
-  58:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_SQUARE:
- 318              		.loc 1 58 25 view .LVU100
-  58:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_SQUARE:
- 319              		.loc 1 58 29 is_stmt 0 view .LVU101
- 320 010a F0EE007A 		vmov.f32	s15, #2.0e+0
- 321 010e BFEE000A 		vmov.f32	s0, #-1.0e+0
- 322 0112 A9EE270A 		vfma.f32	s0, s18, s15
- 323              	.LVL23:
-  58:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_SQUARE:
- 324              		.loc 1 58 57 is_stmt 1 view .LVU102
- 325 0116 8FE7     		b	.L14
- 326              	.LVL24:
- 327              	.L21:
-  59:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         {
- 328              		.loc 1 59 9 view .LVU103
-  60:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // shape_ (0.0 -> 1.0)
- 329              		.loc 1 60 9 view .LVU104
- 330              	.LBB18:
-  64:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 331              		.loc 1 64 13 view .LVU105
-  64:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 332              		.loc 1 64 19 is_stmt 0 view .LVU106
- 333 0118 F0EE487A 		vmov.f32	s15, s16
- 334 011c D0ED036A 		vldr.32	s13, [r0, #12]
- 335 0120 9FED3E7A 		vldr.32	s14, .L53+8
-  66:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
- 336              		.loc 1 66 39 view .LVU107
- 337 0124 B7EE000A 		vmov.f32	s0, #1.0e+0
-  64:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 338              		.loc 1 64 19 view .LVU108
- 339 0128 E6EEC77A 		vfms.f32	s15, s13, s14
- 340              	.LVL25:
-  66:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
- 341              		.loc 1 66 13 is_stmt 1 view .LVU109
-  66:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
- 342              		.loc 1 66 39 is_stmt 0 view .LVU110
- 343 012c F4EEC97A 		vcmpe.f32	s15, s18
- 344 0130 FFEE007A 		vmov.f32	s15, #-1.0e+0
- 345              	.LVL26:
-  66:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
- 346              		.loc 1 66 39 view .LVU111
- 347 0134 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 348 0138 30FE270A 		vselgt.f32	s0, s0, s15
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 11
+ 315 0118 BFEE000A 		vmov.f32	s0, #-1.0e+0
+ 316 011c A9EE260A 		vfma.f32	s0, s18, s13
+ 317              	.LVL21:
+  42:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
+ 318              		.loc 1 42 21 view .LVU96
+ 319 0120 8AE7     		b	.L14
+ 320              	.LVL22:
+ 321              	.L30:
+  46:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
+ 322              		.loc 1 46 17 is_stmt 1 view .LVU97
+  46:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
+ 323              		.loc 1 46 21 is_stmt 0 view .LVU98
+ 324 0122 B0EE480A 		vmov.f32	s0, s16
+ 325 0126 A9EE660A 		vfms.f32	s0, s18, s13
+ 326              	.LVL23:
+  46:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             }
+ 327              		.loc 1 46 21 view .LVU99
+ 328 012a 85E7     		b	.L14
+ 329              	.LVL24:
+ 330              	.L19:
+  51:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_SQUARE:
+ 331              		.loc 1 51 9 is_stmt 1 view .LVU100
+  51:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_SQUARE:
+ 332              		.loc 1 51 25 view .LVU101
+  51:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_SQUARE:
+ 333              		.loc 1 51 29 is_stmt 0 view .LVU102
+ 334 012c F0EE007A 		vmov.f32	s15, #2.0e+0
+ 335 0130 BFEE000A 		vmov.f32	s0, #-1.0e+0
+ 336 0134 A9EE270A 		vfma.f32	s0, s18, s15
+ 337              	.LVL25:
+  51:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         case WAVE_SQUARE:
+ 338              		.loc 1 51 57 is_stmt 1 view .LVU103
+ 339 0138 7EE7     		b	.L14
+ 340              	.LVL26:
+ 341              	.L21:
+  52:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         {
+ 342              		.loc 1 52 9 view .LVU104
+  53:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // shape_ (0.0 -> 1.0)
+ 343              		.loc 1 53 9 view .LVU105
+ 344              	.LBB17:
+  57:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 345              		.loc 1 57 13 view .LVU106
+  57:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 346              		.loc 1 57 19 is_stmt 0 view .LVU107
+ 347 013a F0EE687A 		vmov.f32	s15, s17
+ 348 013e D0ED036A 		vldr.32	s13, [r0, #12]
+ 349 0142 9FED417A 		vldr.32	s14, .L53+16
+  59:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
+ 350              		.loc 1 59 39 view .LVU108
+ 351 0146 B7EE000A 		vmov.f32	s0, #1.0e+0
+  57:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 352              		.loc 1 57 19 view .LVU109
+ 353 014a E6EEC77A 		vfms.f32	s15, s13, s14
+ 354              	.LVL27:
+  59:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
+ 355              		.loc 1 59 13 is_stmt 1 view .LVU110
+  59:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 11
 
 
- 349 013c 7CE7     		b	.L14
- 350              	.LVL27:
- 351              	.L18:
-  66:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
- 352              		.loc 1 66 39 view .LVU112
- 353              	.LBE18:
-  70:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             t   = phase_;
- 354              		.loc 1 70 9 is_stmt 1 view .LVU113
-  71:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = phase_ < 0.5f ? 1.0f : -1.0f;
- 355              		.loc 1 71 13 view .LVU114
-  72:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
- 356              		.loc 1 72 13 view .LVU115
-  72:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
- 357              		.loc 1 72 33 is_stmt 0 view .LVU116
- 358 013e B4EEC89A 		vcmpe.f32	s18, s16
- 359 0142 B7EE006A 		vmov.f32	s12, #1.0e+0
- 360 0146 FFEE005A 		vmov.f32	s11, #-1.0e+0
- 361 014a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
-  73:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + 0.5f));
- 362              		.loc 1 73 28 view .LVU117
- 363 014e F0EE490A 		vmov.f32	s1, s18
- 364 0152 B0EE690A 		vmov.f32	s0, s19
-  72:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
- 365              		.loc 1 72 33 view .LVU118
- 366 0156 58BF     		it	pl
- 367 0158 B0EE656A 		vmovpl.f32	s12, s11
- 368              	.LVL28:
-  73:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + 0.5f));
- 369              		.loc 1 73 13 is_stmt 1 view .LVU119
-  73:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + 0.5f));
- 370              		.loc 1 73 28 is_stmt 0 view .LVU120
- 371 015c FFF7FEFF 		bl	_ZL8Polyblepff
- 372              	.LVL29:
-  74:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Leaky Integrator:
- 373              		.loc 1 74 28 view .LVU121
- 374 0160 79EE087A 		vadd.f32	s15, s18, s16
-  73:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + 0.5f));
- 375              		.loc 1 73 17 view .LVU122
- 376 0164 36EE006A 		vadd.f32	s12, s12, s0
- 377              	.LVL30:
-  74:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Leaky Integrator:
- 378              		.loc 1 74 13 is_stmt 1 view .LVU123
- 379              	.LBB19:
- 380              	.LBI19:
- 381              		.file 2 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h"
+ 356              		.loc 1 59 39 is_stmt 0 view .LVU111
+ 357 014e F4EEC97A 		vcmpe.f32	s15, s18
+ 358 0152 FFEE007A 		vmov.f32	s15, #-1.0e+0
+ 359              	.LVL28:
+  59:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
+ 360              		.loc 1 59 39 view .LVU112
+ 361 0156 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 362 015a 30FE270A 		vselgt.f32	s0, s0, s15
+ 363 015e 6BE7     		b	.L14
+ 364              	.LVL29:
+ 365              	.L18:
+  59:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
+ 366              		.loc 1 59 39 view .LVU113
+ 367              	.LBE17:
+  63:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             t   = phase_;
+ 368              		.loc 1 63 9 is_stmt 1 view .LVU114
+  64:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = phase_ < 0.5f ? 1.0f : -1.0f;
+ 369              		.loc 1 64 13 view .LVU115
+  65:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
+ 370              		.loc 1 65 13 view .LVU116
+  65:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
+ 371              		.loc 1 65 33 is_stmt 0 view .LVU117
+ 372 0160 B4EEE89A 		vcmpe.f32	s18, s17
+ 373 0164 B7EE006A 		vmov.f32	s12, #1.0e+0
+ 374 0168 FFEE005A 		vmov.f32	s11, #-1.0e+0
+ 375 016c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+  66:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + 0.5f));
+ 376              		.loc 1 66 28 view .LVU118
+ 377 0170 F0EE490A 		vmov.f32	s1, s18
+ 378 0174 B0EE690A 		vmov.f32	s0, s19
+  65:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
+ 379              		.loc 1 65 33 view .LVU119
+ 380 0178 58BF     		it	pl
+ 381 017a B0EE656A 		vmovpl.f32	s12, s11
+ 382              	.LVL30:
+  66:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + 0.5f));
+ 383              		.loc 1 66 13 is_stmt 1 view .LVU120
+  66:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + 0.5f));
+ 384              		.loc 1 66 28 is_stmt 0 view .LVU121
+ 385 017e FFF7FEFF 		bl	_ZL8Polyblepff
+ 386              	.LVL31:
+  67:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Leaky Integrator:
+ 387              		.loc 1 67 28 view .LVU122
+ 388 0182 79EE287A 		vadd.f32	s15, s18, s17
+  66:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + 0.5f));
+ 389              		.loc 1 66 17 view .LVU123
+ 390 0186 36EE006A 		vadd.f32	s12, s12, s0
+ 391              	.LVL32:
+  67:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Leaky Integrator:
+ 392              		.loc 1 67 13 is_stmt 1 view .LVU124
+ 393              	.LBB18:
+ 394              	.LBI18:
+ 395              		.file 2 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h"
    1:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** /*
    2:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** Copyright (c) 2020 Electrosmith, Corp, Emilie Gillet
    3:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** 
    4:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** Use of this source code is governed by an MIT-style
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 12
+
+
    5:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** license that can be found in the LICENSE file or at
    6:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** https://opensource.org/licenses/MIT.
    7:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** */
@@ -658,9 +669,6 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
   10:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** */
   11:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #pragma once
   12:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifndef DSY_CORE_DSP
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 12
-
-
   13:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #define DSY_CORE_DSP
   14:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #include <cassert>
   15:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #include <cstdint>
@@ -710,6 +718,9 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h ****     return r;
   60:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
   61:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** 
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 13
+
+
   62:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** /** quick fp clamp
   63:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** */
   64:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** inline float fclamp(float in, float min, float max)
@@ -718,9 +729,6 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
   67:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
   68:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** 
   69:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** /** From Musicdsp.org "Fast power and root estimates for 32bit floats)
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 13
-
-
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** Original code by Stefan Stenzel
   71:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** These are approximations
   72:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** */
@@ -752,295 +760,297 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 1
   98:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h ****  *  the decimal part of a floating point value.
   99:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h ****  */
  100:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** inline float fastmod1f(float x)
- 382              		.loc 2 100 14 view .LVU124
- 383              	.LBB20:
+ 396              		.loc 2 100 14 view .LVU125
+ 397              	.LBB19:
  101:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
  102:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h ****     return x - floorf(x);
- 384              		.loc 2 102 5 view .LVU125
- 385              		.loc 2 102 22 is_stmt 0 view .LVU126
- 386 0168 FBFE670A 		vrintm.f32	s1, s15
- 387              	.LVL31:
- 388              		.loc 2 102 22 view .LVU127
- 389              	.LBE20:
- 390              	.LBE19:
-  74:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Leaky Integrator:
- 391              		.loc 1 74 28 view .LVU128
- 392 016c B0EE690A 		vmov.f32	s0, s19
- 393 0170 77EEE00A 		vsub.f32	s1, s15, s1
- 394 0174 FFF7FEFF 		bl	_ZL8Polyblepff
- 395              	.LVL32:
-  76:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             last_out_ = out;
- 396              		.loc 1 76 50 view .LVU129
- 397 0178 78EEE97A 		vsub.f32	s15, s17, s19
-  74:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Leaky Integrator:
- 398              		.loc 1 74 17 view .LVU130
- 399 017c 36EE406A 		vsub.f32	s12, s12, s0
- 400              	.LVL33:
-  76:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             last_out_ = out;
- 401              		.loc 1 76 13 is_stmt 1 view .LVU131
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 14
+ 398              		.loc 2 102 5 view .LVU126
+ 399              		.loc 2 102 22 is_stmt 0 view .LVU127
+ 400 018a FBFE670A 		vrintm.f32	s1, s15
+ 401              	.LVL33:
+ 402              		.loc 2 102 22 view .LVU128
+ 403              	.LBE19:
+ 404              	.LBE18:
+  67:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Leaky Integrator:
+ 405              		.loc 1 67 28 view .LVU129
+ 406 018e B0EE690A 		vmov.f32	s0, s19
+ 407 0192 77EEE00A 		vsub.f32	s1, s15, s1
+ 408 0196 FFF7FEFF 		bl	_ZL8Polyblepff
+ 409              	.LVL34:
+  69:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             last_out_ = out;
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 14
 
 
-  76:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             last_out_ = out;
- 402              		.loc 1 76 64 is_stmt 0 view .LVU132
- 403 0180 90ED090A 		vldr.32	s0, [r0, #36]
- 404 0184 27EE800A 		vmul.f32	s0, s15, s0
-  76:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             last_out_ = out;
- 405              		.loc 1 76 23 view .LVU133
- 406 0188 F0EE407A 		vmov.f32	s15, s0
+ 410              		.loc 1 69 50 view .LVU130
+ 411 019a 78EE697A 		vsub.f32	s15, s16, s19
+  67:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             // Leaky Integrator:
+ 412              		.loc 1 67 17 view .LVU131
+ 413 019e 36EE406A 		vsub.f32	s12, s12, s0
+ 414              	.LVL35:
+  69:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             last_out_ = out;
+ 415              		.loc 1 69 13 is_stmt 1 view .LVU132
+  69:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             last_out_ = out;
+ 416              		.loc 1 69 64 is_stmt 0 view .LVU133
+ 417 01a2 90ED0A0A 		vldr.32	s0, [r0, #40]
+ 418 01a6 27EE800A 		vmul.f32	s0, s15, s0
+  69:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             last_out_ = out;
+ 419              		.loc 1 69 23 view .LVU134
+ 420 01aa F0EE407A 		vmov.f32	s15, s0
+  71:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
+ 421              		.loc 1 71 17 view .LVU135
+ 422 01ae B1EE000A 		vmov.f32	s0, #4.0e+0
+  69:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             last_out_ = out;
+ 423              		.loc 1 69 23 view .LVU136
+ 424 01b2 E6EE297A 		vfma.f32	s15, s12, s19
+ 425              	.LVL36:
+  70:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 4.f; 
+ 426              		.loc 1 70 13 is_stmt 1 view .LVU137
+  70:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 4.f; 
+ 427              		.loc 1 70 23 is_stmt 0 view .LVU138
+ 428 01b6 C0ED0A7A 		vstr.32	s15, [r0, #40]
+  71:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
+ 429              		.loc 1 71 13 is_stmt 1 view .LVU139
+ 430              	.LVL37:
+ 431              	.L51:
+  86:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
+ 432              		.loc 1 86 17 is_stmt 0 view .LVU140
+ 433 01ba 20EE270A 		vmul.f32	s0, s0, s15
+ 434              	.LVL38:
+  87:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             
+ 435              		.loc 1 87 13 is_stmt 1 view .LVU141
+ 436 01be 3BE7     		b	.L14
+ 437              	.LVL39:
+ 438              	.L17:
+  74:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             t   = phase_;
+ 439              		.loc 1 74 9 view .LVU142
+  75:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = (2.0f * t) - 1.0f;
+ 440              		.loc 1 75 13 view .LVU143
+  76:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, t);
+ 441              		.loc 1 76 13 view .LVU144
+  76:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, t);
+ 442              		.loc 1 76 17 is_stmt 0 view .LVU145
+ 443 01c0 F0EE007A 		vmov.f32	s15, #2.0e+0
+ 444 01c4 BFEE006A 		vmov.f32	s12, #-1.0e+0
+  77:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= -1.0f;
+ 445              		.loc 1 77 28 view .LVU146
+ 446 01c8 F0EE490A 		vmov.f32	s1, s18
+ 447 01cc B0EE690A 		vmov.f32	s0, s19
+  76:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, t);
+ 448              		.loc 1 76 17 view .LVU147
+ 449 01d0 A9EE276A 		vfma.f32	s12, s18, s15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 15
+
+
+ 450              	.LVL40:
+  77:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= -1.0f;
+ 451              		.loc 1 77 13 is_stmt 1 view .LVU148
+  77:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= -1.0f;
+ 452              		.loc 1 77 28 is_stmt 0 view .LVU149
+ 453 01d4 FFF7FEFF 		bl	_ZL8Polyblepff
+ 454              	.LVL41:
+  77:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= -1.0f;
+ 455              		.loc 1 77 17 view .LVU150
+ 456 01d8 36EE400A 		vsub.f32	s0, s12, s0
+ 457              	.LVL42:
   78:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
- 407              		.loc 1 78 17 view .LVU134
- 408 018c B1EE000A 		vmov.f32	s0, #4.0e+0
-  76:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             last_out_ = out;
- 409              		.loc 1 76 23 view .LVU135
- 410 0190 E6EE297A 		vfma.f32	s15, s12, s19
- 411              	.LVL34:
-  77:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 4.f; 
- 412              		.loc 1 77 13 is_stmt 1 view .LVU136
-  77:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 4.f; 
- 413              		.loc 1 77 23 is_stmt 0 view .LVU137
- 414 0194 C0ED097A 		vstr.32	s15, [r0, #36]
+ 458              		.loc 1 78 13 is_stmt 1 view .LVU151
   78:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
- 415              		.loc 1 78 13 is_stmt 1 view .LVU138
- 416              	.LVL35:
- 417              	.L51:
-  93:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
- 418              		.loc 1 93 17 is_stmt 0 view .LVU139
- 419 0198 20EE270A 		vmul.f32	s0, s0, s15
- 420              	.LVL36:
-  94:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             
- 421              		.loc 1 94 13 is_stmt 1 view .LVU140
- 422 019c 4CE7     		b	.L14
- 423              	.LVL37:
- 424              	.L17:
+ 459              		.loc 1 78 17 is_stmt 0 view .LVU152
+ 460 01dc B1EE400A 		vneg.f32	s0, s0
+ 461              	.LVL43:
+  79:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             
+ 462              		.loc 1 79 13 is_stmt 1 view .LVU153
+ 463 01e0 2AE7     		b	.L14
+ 464              	.LVL44:
+ 465              	.L15:
   81:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             t   = phase_;
- 425              		.loc 1 81 9 view .LVU141
-  82:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = (2.0f * t) - 1.0f;
- 426              		.loc 1 82 13 view .LVU142
-  83:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, t);
- 427              		.loc 1 83 13 view .LVU143
-  83:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, t);
- 428              		.loc 1 83 17 is_stmt 0 view .LVU144
- 429 019e F0EE007A 		vmov.f32	s15, #2.0e+0
- 430 01a2 BFEE006A 		vmov.f32	s12, #-1.0e+0
-  84:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= -1.0f;
- 431              		.loc 1 84 28 view .LVU145
- 432 01a6 F0EE490A 		vmov.f32	s1, s18
- 433 01aa B0EE690A 		vmov.f32	s0, s19
-  83:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, t);
- 434              		.loc 1 83 17 view .LVU146
- 435 01ae A9EE276A 		vfma.f32	s12, s18, s15
- 436              	.LVL38:
-  84:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= -1.0f;
- 437              		.loc 1 84 13 is_stmt 1 view .LVU147
-  84:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= -1.0f;
- 438              		.loc 1 84 28 is_stmt 0 view .LVU148
- 439 01b2 FFF7FEFF 		bl	_ZL8Polyblepff
- 440              	.LVL39:
-  84:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= -1.0f;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 15
+ 466              		.loc 1 81 9 view .LVU154
+  82:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = phase_ < shape_ ? 1.0f : -1.0f;
+ 467              		.loc 1 82 13 view .LVU155
+  83:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
+ 468              		.loc 1 83 13 view .LVU156
+  83:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
+ 469              		.loc 1 83 28 is_stmt 0 view .LVU157
+ 470 01e2 90ED035A 		vldr.32	s10, [r0, #12]
+  83:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
+ 471              		.loc 1 83 35 view .LVU158
+ 472 01e6 B7EE006A 		vmov.f32	s12, #1.0e+0
+ 473 01ea FFEE005A 		vmov.f32	s11, #-1.0e+0
+ 474 01ee B4EEC95A 		vcmpe.f32	s10, s18
+  85:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 0.707f; 
+ 475              		.loc 1 85 70 view .LVU159
+ 476 01f2 38EE455A 		vsub.f32	s10, s16, s10
+  84:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + (1.0f - shape_)));
+ 477              		.loc 1 84 28 view .LVU160
+ 478 01f6 F0EE490A 		vmov.f32	s1, s18
+  83:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
+ 479              		.loc 1 83 35 view .LVU161
+ 480 01fa F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+  85:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 0.707f; 
+ 481              		.loc 1 85 28 view .LVU162
+ 482 01fe 35EE095A 		vadd.f32	s10, s10, s18
+  84:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + (1.0f - shape_)));
+ 483              		.loc 1 84 28 view .LVU163
+ 484 0202 B0EE690A 		vmov.f32	s0, s19
+  83:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
+ 485              		.loc 1 83 35 view .LVU164
+ 486 0206 76FE255A 		vselgt.f32	s11, s12, s11
+ 487              	.LVL45:
+  84:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + (1.0f - shape_)));
+ 488              		.loc 1 84 13 is_stmt 1 view .LVU165
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 16
 
 
- 441              		.loc 1 84 17 view .LVU149
- 442 01b6 36EE400A 		vsub.f32	s0, s12, s0
- 443              	.LVL40:
-  85:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
- 444              		.loc 1 85 13 is_stmt 1 view .LVU150
-  85:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
- 445              		.loc 1 85 17 is_stmt 0 view .LVU151
- 446 01ba B1EE400A 		vneg.f32	s0, s0
- 447              	.LVL41:
-  86:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             
- 448              		.loc 1 86 13 is_stmt 1 view .LVU152
- 449 01be 3BE7     		b	.L14
- 450              	.LVL42:
- 451              	.L15:
-  88:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             t   = phase_;
- 452              		.loc 1 88 9 view .LVU153
-  89:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out = phase_ < shape_ ? 1.0f : -1.0f;
- 453              		.loc 1 89 13 view .LVU154
-  90:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
- 454              		.loc 1 90 13 view .LVU155
-  90:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
- 455              		.loc 1 90 28 is_stmt 0 view .LVU156
- 456 01c0 90ED035A 		vldr.32	s10, [r0, #12]
-  90:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
- 457              		.loc 1 90 35 view .LVU157
- 458 01c4 B7EE006A 		vmov.f32	s12, #1.0e+0
- 459 01c8 FFEE005A 		vmov.f32	s11, #-1.0e+0
- 460 01cc B4EEC95A 		vcmpe.f32	s10, s18
-  92:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 0.707f; 
- 461              		.loc 1 92 70 view .LVU158
- 462 01d0 38EEC55A 		vsub.f32	s10, s17, s10
-  91:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + (1.0f - shape_)));
- 463              		.loc 1 91 28 view .LVU159
- 464 01d4 F0EE490A 		vmov.f32	s1, s18
-  90:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
- 465              		.loc 1 90 35 view .LVU160
- 466 01d8 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
-  92:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 0.707f; 
- 467              		.loc 1 92 28 view .LVU161
- 468 01dc 35EE095A 		vadd.f32	s10, s10, s18
-  91:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + (1.0f - shape_)));
- 469              		.loc 1 91 28 view .LVU162
- 470 01e0 B0EE690A 		vmov.f32	s0, s19
-  90:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out += Polyblep(phase_inc_, t);
- 471              		.loc 1 90 35 view .LVU163
- 472 01e4 76FE255A 		vselgt.f32	s11, s12, s11
- 473              	.LVL43:
-  91:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + (1.0f - shape_)));
- 474              		.loc 1 91 13 is_stmt 1 view .LVU164
-  91:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + (1.0f - shape_)));
- 475              		.loc 1 91 28 is_stmt 0 view .LVU165
- 476 01e8 FFF7FEFF 		bl	_ZL8Polyblepff
- 477              	.LVL44:
-  91:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + (1.0f - shape_)));
- 478              		.loc 1 91 17 view .LVU166
- 479 01ec 75EE805A 		vadd.f32	s11, s11, s0
- 480              	.LVL45:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 16
-
-
-  92:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 0.707f; 
- 481              		.loc 1 92 13 is_stmt 1 view .LVU167
- 482              	.LBB21:
- 483              	.LBI21:
+  84:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + (1.0f - shape_)));
+ 489              		.loc 1 84 28 is_stmt 0 view .LVU166
+ 490 020a FFF7FEFF 		bl	_ZL8Polyblepff
+ 491              	.LVL46:
+  84:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out -= Polyblep(phase_inc_, daisysp::fastmod1f(t + (1.0f - shape_)));
+ 492              		.loc 1 84 17 view .LVU167
+ 493 020e 75EE805A 		vadd.f32	s11, s11, s0
+ 494              	.LVL47:
+  85:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 0.707f; 
+ 495              		.loc 1 85 13 is_stmt 1 view .LVU168
+ 496              	.LBB20:
+ 497              	.LBI20:
  100:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 484              		.loc 2 100 14 view .LVU168
- 485              	.LBB22:
- 486              		.loc 2 102 5 view .LVU169
- 487              		.loc 2 102 22 is_stmt 0 view .LVU170
- 488 01f0 FBFE450A 		vrintm.f32	s1, s10
- 489              	.LVL46:
- 490              		.loc 2 102 22 view .LVU171
- 491              	.LBE22:
- 492              	.LBE21:
-  92:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 0.707f; 
- 493              		.loc 1 92 28 view .LVU172
- 494 01f4 B0EE690A 		vmov.f32	s0, s19
- 495 01f8 75EE600A 		vsub.f32	s1, s10, s1
- 496 01fc FFF7FEFF 		bl	_ZL8Polyblepff
- 497              	.LVL47:
-  93:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
- 498              		.loc 1 93 17 view .LVU173
- 499 0200 DFED077A 		vldr.32	s15, .L53+12
-  92:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 0.707f; 
- 500              		.loc 1 92 17 view .LVU174
- 501 0204 35EEC00A 		vsub.f32	s0, s11, s0
- 502              	.LVL48:
-  93:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
- 503              		.loc 1 93 13 is_stmt 1 view .LVU175
- 504 0208 C6E7     		b	.L51
- 505              	.LVL49:
- 506              	.L36:
+ 498              		.loc 2 100 14 view .LVU169
+ 499              	.LBB21:
+ 500              		.loc 2 102 5 view .LVU170
+ 501              		.loc 2 102 22 is_stmt 0 view .LVU171
+ 502 0212 FBFE450A 		vrintm.f32	s1, s10
+ 503              	.LVL48:
+ 504              		.loc 2 102 22 view .LVU172
+ 505              	.LBE21:
+ 506              	.LBE20:
+  85:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 0.707f; 
+ 507              		.loc 1 85 28 view .LVU173
+ 508 0216 B0EE690A 		vmov.f32	s0, s19
+ 509 021a 75EE600A 		vsub.f32	s1, s10, s1
+ 510 021e FFF7FEFF 		bl	_ZL8Polyblepff
+ 511              	.LVL49:
+  86:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
+ 512              		.loc 1 86 17 view .LVU174
+ 513 0222 DFED0A7A 		vldr.32	s15, .L53+20
+  85:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             out *= 0.707f; 
+ 514              		.loc 1 85 17 view .LVU175
+ 515 0226 35EEC00A 		vsub.f32	s0, s11, s0
+ 516              	.LVL50:
+  86:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****             break;
+ 517              		.loc 1 86 13 is_stmt 1 view .LVU176
+ 518 022a C6E7     		b	.L51
+ 519              	.LVL51:
+ 520              	.L38:
   12:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         
- 507              		.loc 1 12 35 is_stmt 0 view .LVU176
- 508 020a 9FED060A 		vldr.32	s0, .L53+16
- 509 020e 13E7     		b	.L14
- 510              	.LVL50:
- 511              	.L49:
+ 521              		.loc 1 12 35 is_stmt 0 view .LVU177
+ 522 022c 9FED080A 		vldr.32	s0, .L53+24
+ 523 0230 02E7     		b	.L14
+ 524              	.LVL52:
+ 525              	.L50:
   12:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****         
- 512              		.loc 1 12 35 view .LVU177
- 513              	.LBE23:
- 514              	.LBE24:
- 109:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 515              		.loc 1 109 40 view .LVU178
- 516 0210 0023     		movs	r3, #0
- 517 0212 33E7     		b	.L34
- 518              	.L54:
- 519              		.align	2
- 520              	.L53:
- 521 0214 DB0FC940 		.word	1086918619
- 522 0218 6666663F 		.word	1063675494
- 523 021c 6666E63E 		.word	1055286886
- 524 0220 F4FD343F 		.word	1060437492
- 525 0224 00000000 		.word	0
- 526              		.cfi_endproc
- 527              	.LFE2824:
- 529              		.section	.text._ZN10politekdsp10Oscillator12CalcPhaseIncEf,"ax",%progbits
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 17
+ 526              		.loc 1 12 35 view .LVU178
+ 527              	.LBE22:
+ 528              	.LBE23:
+ 102:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 529              		.loc 1 102 40 view .LVU179
+ 530 0232 0023     		movs	r3, #0
+ 531 0234 22E7     		b	.L36
+ 532              	.L54:
+ 533 0236 00BF     		.align	2
+ 534              	.L53:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 17
 
 
- 530              		.align	1
- 531              		.global	_ZN10politekdsp10Oscillator12CalcPhaseIncEf
- 532              		.syntax unified
- 533              		.thumb
- 534              		.thumb_func
- 535              		.fpu fpv5-d16
- 537              	_ZN10politekdsp10Oscillator12CalcPhaseIncEf:
- 538              	.LVL51:
- 539              	.LFB2825:
- 115:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     return f * sr_recip_;
- 540              		.loc 1 115 1 is_stmt 1 view -0
- 541              		.cfi_startproc
- 542              		@ args = 0, pretend = 0, frame = 0
- 543              		@ frame_needed = 0, uses_anonymous_args = 0
- 544              		@ link register save eliminated.
- 116:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
- 545              		.loc 1 116 5 view .LVU180
- 116:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
- 546              		.loc 1 116 16 is_stmt 0 view .LVU181
- 547 0000 D0ED067A 		vldr.32	s15, [r0, #24]
- 117:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 548              		.loc 1 117 1 view .LVU182
- 549 0004 20EE270A 		vmul.f32	s0, s0, s15
- 550              	.LVL52:
- 117:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
- 551              		.loc 1 117 1 view .LVU183
- 552 0008 7047     		bx	lr
- 553              		.cfi_endproc
- 554              	.LFE2825:
- 556              		.text
- 557              	.Letext0:
- 558              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
- 559              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
- 560              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
- 561              		.file 6 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
- 562              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
- 563              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
- 564              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
- 565              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
- 566              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
- 567              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
- 568              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
- 569              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
- 570              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
- 571              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
- 572              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
- 573              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
- 574              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
- 575              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\charconv.h
- 576              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
- 577              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
- 578              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
- 579              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
- 580              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
- 581              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
- 582              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
- 583              		.file 28 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 18
+ 535 0238 DB0FC940 		.word	1086918619
+ 536 023c 6666663F 		.word	1063675494
+ 537 0240 CDCC4C3D 		.word	1028443341
+ 538 0244 3333733F 		.word	1064514355
+ 539 0248 6666E63E 		.word	1055286886
+ 540 024c F4FD343F 		.word	1060437492
+ 541 0250 00000000 		.word	0
+ 542              		.cfi_endproc
+ 543              	.LFE2824:
+ 545              		.section	.text._ZN10politekdsp10Oscillator12CalcPhaseIncEf,"ax",%progbits
+ 546              		.align	1
+ 547              		.global	_ZN10politekdsp10Oscillator12CalcPhaseIncEf
+ 548              		.syntax unified
+ 549              		.thumb
+ 550              		.thumb_func
+ 551              		.fpu fpv5-d16
+ 553              	_ZN10politekdsp10Oscillator12CalcPhaseIncEf:
+ 554              	.LVL53:
+ 555              	.LFB2825:
+ 108:../libs/PoliTeKDSP/Oscillators/oscillator.cpp ****     return f * sr_recip_;
+ 556              		.loc 1 108 1 is_stmt 1 view -0
+ 557              		.cfi_startproc
+ 558              		@ args = 0, pretend = 0, frame = 0
+ 559              		@ frame_needed = 0, uses_anonymous_args = 0
+ 560              		@ link register save eliminated.
+ 109:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
+ 561              		.loc 1 109 5 view .LVU181
+ 109:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** }
+ 562              		.loc 1 109 16 is_stmt 0 view .LVU182
+ 563 0000 D0ED077A 		vldr.32	s15, [r0, #28]
+ 110:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 564              		.loc 1 110 1 view .LVU183
+ 565 0004 20EE270A 		vmul.f32	s0, s0, s15
+ 566              	.LVL54:
+ 110:../libs/PoliTeKDSP/Oscillators/oscillator.cpp **** 
+ 567              		.loc 1 110 1 view .LVU184
+ 568 0008 7047     		bx	lr
+ 569              		.cfi_endproc
+ 570              	.LFE2825:
+ 572              		.text
+ 573              	.Letext0:
+ 574              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 575              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 576              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 577              		.file 6 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 578              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 579              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 580              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 581              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 582              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 583              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 584              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 585              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 586              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 587              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 588              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 589              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 18
 
 
- 584              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
- 585              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
- 586              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
- 587              		.file 32 "../libs/PoliTeKDSP/Oscillators/oscillator.h"
- 588              		.file 33 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s 			page 19
+ 590              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 591              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\charconv.h
+ 592              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 593              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 594              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 595              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 596              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 597              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 598              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 599              		.file 28 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 600              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 601              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 602              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 603              		.file 32 "../libs/PoliTeKDSP/Oscillators/oscillator.h"
+ 604              		.file 33 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 oscillator.cpp
-C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s:17     .text._ZL8Polyblepff:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s:24     .text._ZL8Polyblepff:00000000 _ZL8Polyblepff
-C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s:96     .text._ZL8Polyblepff:00000054 $d
-C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s:101    .text._ZN10politekdsp10Oscillator7ProcessEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s:108    .text._ZN10politekdsp10Oscillator7ProcessEv:00000000 _ZN10politekdsp10Oscillator7ProcessEv
-C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s:142    .text._ZN10politekdsp10Oscillator7ProcessEv:00000024 $d
-C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s:150    .text._ZN10politekdsp10Oscillator7ProcessEv:0000002c $t
-C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s:521    .text._ZN10politekdsp10Oscillator7ProcessEv:00000214 $d
-C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s:530    .text._ZN10politekdsp10Oscillator12CalcPhaseIncEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccCABp6p.s:537    .text._ZN10politekdsp10Oscillator12CalcPhaseIncEf:00000000 _ZN10politekdsp10Oscillator12CalcPhaseIncEf
+C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s:17     .text._ZL8Polyblepff:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s:24     .text._ZL8Polyblepff:00000000 _ZL8Polyblepff
+C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s:96     .text._ZL8Polyblepff:00000054 $d
+C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s:101    .text._ZN10politekdsp10Oscillator7ProcessEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s:108    .text._ZN10politekdsp10Oscillator7ProcessEv:00000000 _ZN10politekdsp10Oscillator7ProcessEv
+C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s:142    .text._ZN10politekdsp10Oscillator7ProcessEv:00000024 $d
+C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s:150    .text._ZN10politekdsp10Oscillator7ProcessEv:0000002c $t
+C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s:535    .text._ZN10politekdsp10Oscillator7ProcessEv:00000238 $d
+C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s:546    .text._ZN10politekdsp10Oscillator12CalcPhaseIncEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccmPBZrS.s:553    .text._ZN10politekdsp10Oscillator12CalcPhaseIncEf:00000000 _ZN10politekdsp10Oscillator12CalcPhaseIncEf
 
 UNDEFINED SYMBOLS
 sinf

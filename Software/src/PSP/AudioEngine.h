@@ -1,11 +1,12 @@
 
 //TODO: aggiungere effetti + LFO
-//TODO: migliorare shape SAW
-//TODO: migliorare range noise
+
 
 
 #pragma once
 #include "../../libs/PoliTeKDSP/Oscillators/oscillator.h"
+#include "../../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.h"
+#include "../../libs/PoliTeKDSP/Modulators/XorM/XorM.h"
 #include "daisysp.h"
 
 
@@ -17,7 +18,7 @@ enum Direction_e {
     VCF,
     SHAPE,
     DETUNE,
-    FX
+    XOR
 };
 
 struct Control_s {
@@ -64,6 +65,12 @@ struct Reverb_s {
     float feedback;
     //others
 };
+
+struct XorMod_s{
+    bool isActive;
+    float amount;
+};
+
 // Il Preset racchiude lo stato di tutti i moduli
     struct Preset_s {
         uint8_t index;
@@ -77,6 +84,7 @@ struct Reverb_s {
         Adsr_s filt_env;
         Filter_s filter;
         Reverb_s reverb;
+        XorMod_s xor_m;
         bool sync;
         bool ring;
 
@@ -122,6 +130,7 @@ private:
     daisysp::Adsr         _filt_env;
     daisysp::LadderFilter _filt; 
     daisysp::ReverbSc     _reverb;
+    politekdsp::XorM      _xorMod;
     
 
     // Copia locale dei parametri attuali (per smoothing e lettura nel Process)
@@ -138,8 +147,9 @@ private:
         {0.01f, 0.1f, 0.8f, 0.1f, 0.0f},       // filt_env
         {20000.0f, 0.0f},                       // filter
         {0.0f, 18000.0f, 0.5f},                // reverb
-        false, 
-        false                            // sync, ring
+        {false, 0.0f},
+        false,                                  // sync
+        false,                                   //ring
     };
 
     // Stato controlli

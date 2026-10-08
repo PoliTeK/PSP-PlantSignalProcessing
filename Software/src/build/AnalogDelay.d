@@ -1,4 +1,5 @@
-build/main.o: main.cpp \
+build/AnalogDelay.o: \
+ ../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h \
@@ -104,6 +105,7 @@ build/main.o: main.cpp \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
  ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
+ ../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h \
  ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h \
@@ -276,16 +278,7 @@ build/main.o: main.cpp \
  ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/PhysicalModeling/PolyPluck.h \
  ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Synthesis/blosc.h \
  ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/jitter.h \
- ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/port.h \
- Display/displayHandler.h Display/../Components/oled_ssd130xDMA.h \
- ../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h \
- Display/MenuManager.h Display/../PSP/AudioEngine.h \
- Display/../PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h \
- Display/../PSP/../../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.h \
- Display/../PSP/../../libs/PoliTeKDSP/Modulators/XorM/XorM.h \
- PSP/PlantConditioner.h \
- PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h \
- PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h
+ ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/port.h
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/CMSIS_5/CMSIS/Core/Include/core_cm7.h:
@@ -391,6 +384,7 @@ build/main.o: main.cpp \
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
 ../libs/PoliTeKDSP/libs/libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
+../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/daisy.h:
 ../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h:
@@ -564,14 +558,3 @@ build/main.o: main.cpp \
 ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Synthesis/blosc.h:
 ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/jitter.h:
 ../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Utility/port.h:
-Display/displayHandler.h:
-Display/../Components/oled_ssd130xDMA.h:
-../libs/PoliTeKDSP/libs/libDaisy/src/dev/oled_ssd130x.h:
-Display/MenuManager.h:
-Display/../PSP/AudioEngine.h:
-Display/../PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h:
-Display/../PSP/../../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.h:
-Display/../PSP/../../libs/PoliTeKDSP/Modulators/XorM/XorM.h:
-PSP/PlantConditioner.h:
-PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/IIR/iir.h:
-PSP/../../libs/PoliTeKDSP/Utilities/DataFilter/MF/MF.h:

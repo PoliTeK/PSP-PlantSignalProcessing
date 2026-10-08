@@ -1,0 +1,258 @@
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"XorM.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN10politekdsp4XorMC2Ev,"ax",%progbits
+  17              		.align	1
+  18              		.global	_ZN10politekdsp4XorMC2Ev
+  19              		.arch armv7e-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv5-d16
+  25              	_ZN10politekdsp4XorMC2Ev:
+  26              	.LVL0:
+  27              	.LFB563:
+  28              		.file 1 "../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp"
+   1:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** 
+   2:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** #include "XorM.h"
+   3:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** 
+   4:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** using namespace politekdsp;
+   5:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** XorM::XorM() {}
+  29              		.loc 1 5 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34              		.loc 1 5 15 is_stmt 0 view .LVU1
+  35 0000 7047     		bx	lr
+  36              		.cfi_endproc
+  37              	.LFE563:
+  39              		.global	_ZN10politekdsp4XorMC1Ev
+  40              		.thumb_set _ZN10politekdsp4XorMC1Ev,_ZN10politekdsp4XorMC2Ev
+  41              		.section	.text._ZN10politekdsp4XorMD2Ev,"ax",%progbits
+  42              		.align	1
+  43              		.global	_ZN10politekdsp4XorMD2Ev
+  44              		.syntax unified
+  45              		.thumb
+  46              		.thumb_func
+  47              		.fpu fpv5-d16
+  49              	_ZN10politekdsp4XorMD2Ev:
+  50              	.LVL1:
+  51              	.LFB566:
+   6:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** XorM::~XorM() {}
+  52              		.loc 1 6 1 is_stmt 1 view -0
+  53              		.cfi_startproc
+  54              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s 			page 2
+
+
+  55              		@ frame_needed = 0, uses_anonymous_args = 0
+  56              		@ link register save eliminated.
+  57              		.loc 1 6 16 is_stmt 0 view .LVU3
+  58 0000 7047     		bx	lr
+  59              		.cfi_endproc
+  60              	.LFE566:
+  62              		.global	_ZN10politekdsp4XorMD1Ev
+  63              		.thumb_set _ZN10politekdsp4XorMD1Ev,_ZN10politekdsp4XorMD2Ev
+  64              		.section	.text._ZN10politekdsp4XorM4initEv,"ax",%progbits
+  65              		.align	1
+  66              		.global	_ZN10politekdsp4XorM4initEv
+  67              		.syntax unified
+  68              		.thumb
+  69              		.thumb_func
+  70              		.fpu fpv5-d16
+  72              	_ZN10politekdsp4XorM4initEv:
+  73              	.LVL2:
+  74              	.LFB568:
+   7:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** 
+   8:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** void XorM::init()
+   9:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** {
+  75              		.loc 1 9 1 is_stmt 1 view -0
+  76              		.cfi_startproc
+  77              		@ args = 0, pretend = 0, frame = 0
+  78              		@ frame_needed = 0, uses_anonymous_args = 0
+  79              		@ link register save eliminated.
+  10:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp ****     _mask = 0;
+  80              		.loc 1 10 5 view .LVU5
+  81              		.loc 1 10 11 is_stmt 0 view .LVU6
+  82 0000 0023     		movs	r3, #0
+  83 0002 0380     		strh	r3, [r0]	@ movhi
+  11:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** }
+  84              		.loc 1 11 1 view .LVU7
+  85 0004 7047     		bx	lr
+  86              		.cfi_endproc
+  87              	.LFE568:
+  89              		.section	.text._ZN10politekdsp4XorM7processEff,"ax",%progbits
+  90              		.align	1
+  91              		.global	_ZN10politekdsp4XorM7processEff
+  92              		.syntax unified
+  93              		.thumb
+  94              		.thumb_func
+  95              		.fpu fpv5-d16
+  97              	_ZN10politekdsp4XorM7processEff:
+  98              	.LVL3:
+  99              	.LFB569:
+  12:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** 
+  13:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** float XorM::process(float input, float carrier)
+  14:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** {
+ 100              		.loc 1 14 1 is_stmt 1 view -0
+ 101              		.cfi_startproc
+ 102              		@ args = 0, pretend = 0, frame = 0
+ 103              		@ frame_needed = 0, uses_anonymous_args = 0
+ 104              		@ link register save eliminated.
+  15:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** 
+  16:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp ****     if (_mask == 0 && carrier == 0)
+ 105              		.loc 1 16 5 view .LVU9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s 			page 3
+
+
+ 106              		.loc 1 16 9 is_stmt 0 view .LVU10
+ 107 0000 B0F90030 		ldrsh	r3, [r0]
+ 108              		.loc 1 16 5 view .LVU11
+ 109 0004 23B9     		cbnz	r3, .L5
+ 110              		.loc 1 16 20 discriminator 1 view .LVU12
+ 111 0006 F5EE400A 		vcmp.f32	s1, #0
+ 112 000a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 113 000e 19D0     		beq	.L6
+ 114              	.L5:
+  17:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp ****         return input;
+  18:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** 
+  19:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp ****     int16_t intInput = (int16_t)(input * 32767.0f);
+ 115              		.loc 1 19 5 is_stmt 1 view .LVU13
+ 116              	.LVL4:
+  20:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp ****     int16_t intCarrier = (int16_t)(carrier * 32767.0f);
+ 117              		.loc 1 20 5 view .LVU14
+  21:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp ****     _masked = (float)(intInput ^ (_mask + intCarrier));
+ 118              		.loc 1 21 5 view .LVU15
+  20:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp ****     int16_t intCarrier = (int16_t)(carrier * 32767.0f);
+ 119              		.loc 1 20 44 is_stmt 0 view .LVU16
+ 120 0010 9FED0D7A 		vldr.32	s14, .L7
+ 121 0014 60EE870A 		vmul.f32	s1, s1, s14
+ 122              	.LVL5:
+  19:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp ****     int16_t intCarrier = (int16_t)(carrier * 32767.0f);
+ 123              		.loc 1 19 40 view .LVU17
+ 124 0018 20EE070A 		vmul.f32	s0, s0, s14
+ 125              	.LVL6:
+  20:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp ****     int16_t intCarrier = (int16_t)(carrier * 32767.0f);
+ 126              		.loc 1 20 13 view .LVU18
+ 127 001c FDEEE00A 		vcvt.s32.f32	s1, s1
+  19:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp ****     int16_t intCarrier = (int16_t)(carrier * 32767.0f);
+ 128              		.loc 1 19 13 view .LVU19
+ 129 0020 BDEEC00A 		vcvt.s32.f32	s0, s0
+ 130              		.loc 1 21 41 view .LVU20
+ 131 0024 10EE902A 		vmov	r2, s1	@ int
+ 132 0028 03FA82F3 		sxtah	r3, r3, r2
+ 133              		.loc 1 21 23 view .LVU21
+ 134 002c 10EE102A 		vmov	r2, s0	@ int
+ 135 0030 12B2     		sxth	r2, r2
+ 136              		.loc 1 21 32 view .LVU22
+ 137 0032 5340     		eors	r3, r3, r2
+ 138              		.loc 1 21 15 view .LVU23
+ 139 0034 07EE903A 		vmov	s15, r3	@ int
+ 140 0038 F8EEE77A 		vcvt.f32.s32	s15, s15
+  22:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** 
+  23:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp ****     return _masked / 32767.0f;
+ 141              		.loc 1 23 22 view .LVU24
+ 142 003c 87EE870A 		vdiv.f32	s0, s15, s14
+  21:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** 
+ 143              		.loc 1 21 13 view .LVU25
+ 144 0040 C0ED017A 		vstr.32	s15, [r0, #4]
+ 145              		.loc 1 23 5 is_stmt 1 view .LVU26
+ 146              	.LVL7:
+ 147              	.L6:
+  24:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** }
+ 148              		.loc 1 24 1 is_stmt 0 view .LVU27
+ 149 0044 7047     		bx	lr
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s 			page 4
+
+
+ 150              	.L8:
+ 151 0046 00BF     		.align	2
+ 152              	.L7:
+ 153 0048 00FEFF46 		.word	1191181824
+ 154              		.cfi_endproc
+ 155              	.LFE569:
+ 157              		.section	.text._ZN10politekdsp4XorM7setMaskEf,"ax",%progbits
+ 158              		.align	1
+ 159              		.global	_ZN10politekdsp4XorM7setMaskEf
+ 160              		.syntax unified
+ 161              		.thumb
+ 162              		.thumb_func
+ 163              		.fpu fpv5-d16
+ 165              	_ZN10politekdsp4XorM7setMaskEf:
+ 166              	.LVL8:
+ 167              	.LFB570:
+  25:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** 
+  26:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** void XorM::setMask(float mask)
+  27:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** {
+ 168              		.loc 1 27 1 is_stmt 1 view -0
+ 169              		.cfi_startproc
+ 170              		@ args = 0, pretend = 0, frame = 0
+ 171              		@ frame_needed = 0, uses_anonymous_args = 0
+ 172              		@ link register save eliminated.
+  28:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp ****     _mask = (int16_t)(mask * 32767.0f);
+ 173              		.loc 1 28 5 view .LVU29
+ 174              		.loc 1 28 28 is_stmt 0 view .LVU30
+ 175 0000 DFED047A 		vldr.32	s15, .L10
+ 176 0004 20EE270A 		vmul.f32	s0, s0, s15
+ 177              	.LVL9:
+ 178              		.loc 1 28 13 view .LVU31
+ 179 0008 BDEEC00A 		vcvt.s32.f32	s0, s0
+ 180 000c 10EE103A 		vmov	r3, s0	@ int
+ 181 0010 0380     		strh	r3, [r0]	@ movhi
+  29:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** }...
+ 182              		.loc 1 29 1 view .LVU32
+ 183 0012 7047     		bx	lr
+ 184              	.L11:
+ 185              		.align	2
+ 186              	.L10:
+ 187 0014 00FEFF46 		.word	1191181824
+ 188              		.cfi_endproc
+ 189              	.LFE570:
+ 191              		.text
+ 192              	.Letext0:
+ 193              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 194              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 195              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 196              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 197              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\th
+ 198              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 199              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 200              		.file 9 "../libs/PoliTeKDSP/Modulators/XorM/XorM.h"
+ 201              		.file 10 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 XorM.cpp
+C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s:17     .text._ZN10politekdsp4XorMC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s:25     .text._ZN10politekdsp4XorMC2Ev:00000000 _ZN10politekdsp4XorMC2Ev
+C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s:25     .text._ZN10politekdsp4XorMC2Ev:00000000 _ZN10politekdsp4XorMC1Ev
+C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s:42     .text._ZN10politekdsp4XorMD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s:49     .text._ZN10politekdsp4XorMD2Ev:00000000 _ZN10politekdsp4XorMD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s:49     .text._ZN10politekdsp4XorMD2Ev:00000000 _ZN10politekdsp4XorMD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s:65     .text._ZN10politekdsp4XorM4initEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s:72     .text._ZN10politekdsp4XorM4initEv:00000000 _ZN10politekdsp4XorM4initEv
+C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s:90     .text._ZN10politekdsp4XorM7processEff:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s:97     .text._ZN10politekdsp4XorM7processEff:00000000 _ZN10politekdsp4XorM7processEff
+C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s:153    .text._ZN10politekdsp4XorM7processEff:00000048 $d
+C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s:158    .text._ZN10politekdsp4XorM7setMaskEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s:165    .text._ZN10politekdsp4XorM7setMaskEf:00000000 _ZN10politekdsp4XorM7setMaskEf
+C:\Users\skipi\AppData\Local\Temp\ccFgP5w2.s:187    .text._ZN10politekdsp4XorM7setMaskEf:00000014 $d
+
+NO UNDEFINED SYMBOLS

@@ -11,6 +11,8 @@ void AudioEngine::Init(float sample_rate) {
     _filt.Init(sample_rate);
     _filt.SetFilterMode(daisysp::LadderFilter::FilterMode::LP24);
     _reverb.Init(sample_rate);
+    _xorMod.init();
+    _xorMod.setMask(0.0f); 
 
     _lastGate = false;
     _currentFreq = 440.0f;
@@ -30,14 +32,14 @@ void AudioEngine::SetActivePreset(const Preset_s& preset) {
     _osc1.SetAmp(_currentPreset.osc1.amp);
     _osc1.SetShape(_currentPreset.osc1.shape);
     _osc1.SetDetune(_currentPreset.osc1.detune);
-    _osc1.SetOcctave(_currentPreset.osc1.octave);
+    _osc1.SetOctave(_currentPreset.osc1.octave);
 
 
     _osc2.SetWaveform(_currentPreset.osc2.waveform);
     _osc2.SetAmp(_currentPreset.osc2.amp);
     _osc2.SetShape(_currentPreset.osc2.shape);
     _osc2.SetDetune(_currentPreset.osc2.detune);
-    _osc2.SetOcctave(_currentPreset.osc2.octave);
+    _osc2.SetOctave(_currentPreset.osc2.octave);
 
 
     _lfo1.SetWaveform(_currentPreset.lfo1.waveform);
@@ -63,6 +65,8 @@ void AudioEngine::SetActivePreset(const Preset_s& preset) {
 
     _filt.SetRes(_currentPreset.filter.resonance);
     _filt.SetFreq(_currentPreset.filter.cutoff);
+
+    _xorMod.setMask(_currentPreset.xor_m.amount);
 
     _reverb.SetLpFreq(_currentPreset.reverb.lpFreq);
     _reverb.SetFeedback(_currentPreset.reverb.feedback);
@@ -159,17 +163,23 @@ void AudioEngine::ProcessMidiCC(uint8_t cc_number, uint8_t cc_value, Preset_s& p
         case 93: preset.reverb.feedback = val_norm * 0.99f; break; // Mai oltre 0.99
         case 94: preset.reverb.lpFreq   = 500.0f + (val_norm * 17500.0f); break;
 
+        //===========================================
+        // XOR_MOD (CC 95)
+        //===========================================
+        case 95: preset.xor_m.amount = val_norm;
+
         // ==========================================
         // SWITCH (CC 100, 101)
         // ==========================================
         case 100: cc_value < 64 ? preset.sync = false : preset.sync = true; break;
         case 101: cc_value < 64 ? preset.ring = false : preset.ring = true; break;
+        case 102: cc_value <64  ? preset.xor_m.isActive  = false : preset.xor_m.isActive  = true; break;
         
         // ==========================================
         // LFO DIRECTION (CC 102, 103)
         // ==========================================
-        case 102: preset.lfo1.direction = static_cast<Direction_e>(cc_value / 21); break;
-        case 103: preset.lfo2.direction = static_cast<Direction_e>(cc_value / 21); break;
+        case 110: preset.lfo1.direction = static_cast<Direction_e>(cc_value / 21); break;
+        case 111: preset.lfo2.direction = static_cast<Direction_e>(cc_value / 21); break;
 
         // CC non mappato -> esci senza richiamare SetActivePreset
         default: return; 
@@ -209,15 +219,19 @@ void AudioEngine::Process(float& out_l, float& out_r) {
     float target_detune1 = _currentPreset.osc1.detune;
     float target_detune2 = _currentPreset.osc2.detune;
     float target_noise = _currentPreset.noise.color;
+    float target_xor_ampunt = _currentPreset.xor_m.amount;
 
     // LFO 1 Routing
     if (_currentPreset.lfo1.direction == Direction_e::SHAPE) target_shape1 += lfo1_out;
     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
+    if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_out);
+    
 
     // LFO 2 Routing
     if (_currentPreset.lfo2.direction == Direction_e::SHAPE) target_shape2 += lfo2_out;
     if (_currentPreset.lfo2.direction == Direction_e::DETUNE) target_detune2 += lfo2_out * 50.0f;
-
+    if (_currentPreset.lfo2.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo2_out);
+    
     // Applica i limiti (Clamp) per evitare instabilità DSP e assegna
     _osc1.SetShape(daisysp::fclamp(target_shape1, 0.0f, 1.0f));
     _osc2.SetShape(daisysp::fclamp(target_shape2, 0.0f, 1.0f));
@@ -230,11 +244,23 @@ void AudioEngine::Process(float& out_l, float& out_r) {
     float s_osc2 = _osc2.Process() * _smoothedPreset.osc2.amp;
     float sNoise = _dust.Process() * _smoothedPreset.noise.amp;
 
-    // Gestione della modulazione ad anello
-    float sMix = s_osc1 + s_osc2 + sNoise;
+    // Gestione delle modulazioni
+    float sMix;
+    float sXor;
     if (_currentPreset.ring) {
-        sMix = s_osc1 * s_osc2 + sNoise; 
-    }         
+        sMix = s_osc1 * s_osc2;
+        sXor =            0.0f;
+    } 
+    else if (_currentPreset.xor_m.isActive) {
+        sMix = s_osc1;
+        sXor = s_osc2;
+    } 
+    else {
+        sMix = s_osc1 + s_osc2;
+        sXor =            0.0f;
+    }
+    sMix  = _xorMod.process(sMix, sXor);
+    sMix +=                      sNoise;
     
     // 3. Calcolo del Cutoff modulato e applicazione al filtro
     float target_cutoff = _smoothedPreset.filter.cutoff + (filt_env_out * _currentPreset.filt_env.amp * 10000.0f);

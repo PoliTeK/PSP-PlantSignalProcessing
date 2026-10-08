@@ -144,9 +144,12 @@ int main() {
         default_bank.presets[i].filt_env = {0.01f, 0.1f, 0.8f, 0.1f, 0.0f};
         default_bank.presets[i].filter = {20000.0f, 0.0f};
         default_bank.presets[i].reverb = {0.0f, 18000.0f, 0.5f};
-        
+        default_bank.presets[i].xor_m.isActive  = false;
+        default_bank.presets[i].xor_m.amount = 0.0f;
+
         default_bank.presets[i].sync = false;
         default_bank.presets[i].ring = false;
+        
     }
     
     // Inizializza lo storage passandogli direttamente l'oggetto di default
