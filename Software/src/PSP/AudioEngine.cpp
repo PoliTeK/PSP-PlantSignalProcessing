@@ -218,8 +218,6 @@ void AudioEngine::Process(float& out_l, float& out_r) {
     float target_shape2 = _currentPreset.osc2.shape;
     float target_detune1 = _currentPreset.osc1.detune;
     float target_detune2 = _currentPreset.osc2.detune;
-    float target_noise = _currentPreset.noise.color;
-    float target_xor_ampunt = _currentPreset.xor_m.amount;
 
     // LFO 1 Routing
     if (_currentPreset.lfo1.direction == Direction_e::SHAPE) target_shape1 += lfo1_out;
@@ -237,7 +235,7 @@ void AudioEngine::Process(float& out_l, float& out_r) {
     _osc2.SetShape(daisysp::fclamp(target_shape2, 0.0f, 1.0f));
     _osc1.SetDetune(daisysp::fclamp(target_detune1, -50.0f, 50.0f));
     _osc2.SetDetune(daisysp::fclamp(target_detune2, -50.0f, 50.0f));
-    _dust.SetDensity(daisysp::fclamp(target_noise, 0.0f, 1.0f));
+    _dust.SetDensity(daisysp::fclamp(_currentPreset.noise.color, 0.0f, 1.0f));
 
     // Generazione del suono
     float s_osc1 = _osc1.Process() * _smoothedPreset.osc1.amp;

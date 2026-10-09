@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   28:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****         WAVE_SQUARE,
   29:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****         WAVE_SAW,
   30:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****         WAVE_RAMP,
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 2
 
 
   31:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****         WAVE_POLYBLEP_TRI,
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   52              		.loc 1 51 20 view .LVU11
   53 001a 80ED020A 		vstr.32	s0, [r0, #8]
   53:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****         shape_        = 0.5f;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 3
 
 
   54              		.loc 1 53 20 view .LVU12
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   94              	.L2:
   95 0040 0000C842 		.word	1120403456
   96              		.cfi_endproc
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 4
 
 
   97              	.LFE2811:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  136              	.LVL5:
  137              		.loc 1 74 39 view .LVU42
  138 001c FFF7FEFF 		bl	powf
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 5
 
 
  139              	.LVL6:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  186              	.LFE2813:
  188              		.section	.text._ZN11AudioEngine15SetMasterVolumeEf,"ax",%progbits
  189              		.align	1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 6
 
 
  190              		.global	_ZN11AudioEngine15SetMasterVolumeEf
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   12:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifndef DSY_CORE_DSP
   13:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #define DSY_CORE_DSP
   14:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #include <cassert>
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 7
 
 
   15:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #include <cstdint>
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  211              		.loc 3 66 5 view .LVU62
  212              	.LBB117:
  213              	.LBB109:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 8
 
 
  214              	.LBI109:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  258              		.syntax unified
  259              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
  260 0014 80FE670A 		vminnm.f32 s0, s0, s15
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 9
 
 
  261              	@ 0 "" 2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  309 000a 05F6CC40 		addw	r0, r5, #3276
  310              	.LVL20:
   28:PSP/AudioEngine.cpp ****     _currentPreset = preset;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 10
 
 
  311              		.loc 2 28 59 view .LVU85
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  341              	.LBB206:
  342              	.LBB189:
  343              	.LBB190:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 11
 
 
  344              	.LBB191:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  391              	.LVL24:
   91:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
  392              		.loc 1 91 19 view .LVU99
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 12
 
 
  393              	.LBE213:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  437              	.LBB192:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
  438              		.loc 3 42 5 view .LVU113
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 13
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 13
 
 
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  484              	.LVL29:
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
  485              		.loc 3 59 5 is_stmt 1 view .LVU124
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 14
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 14
 
 
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  528              	.LBE245:
  529              		.loc 3 66 5 view .LVU141
  530              	.LBB246:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 15
 
 
  531              	.LBB234:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  575              		.loc 3 51 14 is_stmt 1 view .LVU151
  576              	.LBB224:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 16
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 16
 
 
  577              		.loc 3 53 5 view .LVU152
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  618              	.LBE251:
   39:PSP/AudioEngine.cpp ****     _osc2.SetAmp(_currentPreset.osc2.amp);
  619              		.loc 2 39 5 is_stmt 1 view .LVU165
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 17
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 17
 
 
  620              	.LBB253:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  663              		.loc 3 44 5 view .LVU179
  664              	.LBE261:
  665              	.LBE260:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 18
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 18
 
 
  666              	.LBE268:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  710              		.loc 3 59 5 is_stmt 0 view .LVU190
  711              		.thumb
  712              		.syntax unified
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 19
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 19
 
 
  713              	.LBE266:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  756              	.LBB285:
  757              	.LBB279:
  758              	.LBI279:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 20
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 20
 
 
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   37:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         WAVE_LAST,
   38:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     };
   39:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 21
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 21
 
 
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  792              		.loc 3 48 5 is_stmt 0 view .LVU215
  793              		.thumb
  794              		.syntax unified
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 22
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 22
 
 
  795              	.LBE281:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  830              	.LBB295:
   80:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
   81:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_ = wf < WAVE_LAST ? wf : WAVE_SIN;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 23
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 23
 
 
  831              		.loc 4 81 9 view .LVU226
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   70:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
  875              		.loc 4 70 34 is_stmt 0 view .LVU241
  876 0110 FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 24
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 24
 
 
  877              	.LVL52:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   51:PSP/AudioEngine.cpp ****     _lfo2.SetAmp(1.0f); // Fisso a 1
  922              		.loc 2 51 5 is_stmt 1 view .LVU254
  923              	.LBB314:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 25
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 25
 
 
  924              	.LBI310:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   16:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h **** 
   17:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h **** /** @file dust.h */
   18:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 26
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 26
 
 
   19:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h **** namespace daisysp
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  968              	.LBB336:
  969              	.LBI316:
   50:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****     {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 27
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 27
 
 
  970              		.loc 5 50 10 view .LVU271
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
  1016              		.loc 3 44 5 view .LVU281
  1017              		.syntax unified
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 28
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 28
 
 
  1018              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1065              	.LVL64:
   57:PSP/AudioEngine.cpp ****     _amp_env.SetTime(daisysp::ADSR_SEG_DECAY, _currentPreset.amp_env.decay);
  1066              		.loc 2 57 5 is_stmt 1 view .LVU296
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 29
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 29
 
 
  1067              		.loc 2 57 21 is_stmt 0 view .LVU297
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   41:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** class Adsr
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h **** {
   43:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****   public:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 30
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 30
 
 
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     Adsr() {}
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1099 01a0 78FE277A 		vselgt.f32	s15, s16, s15
  1100              	.LVL67:
  1101              	.L15:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 31
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 31
 
 
   78:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****         sus_level_ = sus_level;
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1149              	.LVL72:
  1150              	.LBB353:
  1151              	.LBI348:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 32
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 32
 
 
   74:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/adsr.h ****     {
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1198 022e FFF7FEFF 		bl	_ZN7daisysp12LadderFilter7SetFreqEf
  1199              	.LVL77:
   68:PSP/AudioEngine.cpp **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 33
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 33
 
 
   69:PSP/AudioEngine.cpp ****     _xorMod.setMask(_currentPreset.xor_m.amount);
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   40:../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Effects/reverbsc.h ****         Returns 0 if all good, or 1 if it runs out of delay times exceed maximum allowed.
   41:../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Effects/reverbsc.h ****     */
   42:../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Effects/reverbsc.h ****     int Init(float sample_rate);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 34
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 34
 
 
   43:../libs/PoliTeKDSP/libs/DaisySP/DaisySP-LGPL/Source/Effects/reverbsc.h **** 
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   73:PSP/AudioEngine.cpp **** }
  1247              		.loc 2 73 1 view .LVU348
  1248 025a 03B0     		add	sp, sp, #12
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 35
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 35
 
 
  1249              		.cfi_remember_state
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1301              	.LVL85:
  1302              	.LFB5097:
    4:PSP/AudioEngine.cpp ****     _osc1.Init(sample_rate);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 36
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 36
 
 
  1303              		.loc 2 4 43 is_stmt 1 view -0
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1348              		.loc 2 7 5 is_stmt 1 view .LVU362
  1349              	.LBB379:
  1350              	.LBI371:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 37
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 37
 
 
   50:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     {
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1385              		.loc 4 57 9 view .LVU382
   58:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
  1386              		.loc 4 58 9 view .LVU383
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 38
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 38
 
 
   58:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   60:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eor_       = true;
  1431              		.loc 4 60 9 is_stmt 1 view .LVU394
   61:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 39
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 39
 
 
  1432              		.loc 4 61 9 view .LVU395
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1468 0090 84ED2C0A 		vstr.32	s0, [r4, #176]
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
  1469              		.loc 4 59 9 is_stmt 1 view .LVU414
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 40
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 40
 
 
  1470              	.LBE385:
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
    1:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h **** /* Ported from Audio Library for Teensy, Ladder Filter
    2:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h ****  * Copyright (c) 2021, Richard van Hoesel
    3:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h ****  * Copyright (c) 2024, Infrasonic Audio LLC
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 41
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 41
 
 
    4:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h ****  *
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   58:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h ****   public:
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h ****     enum class FilterMode
   60:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h ****     {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 42
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 42
 
 
   61:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h ****         LP24,
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  115:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h ****      */
  116:../libs/PoliTeKDSP/libs/DaisySP/Source/Filters/ladder.h ****     inline void SetFilterMode(FilterMode mode) { mode_ = mode; }
  1510              		.loc 8 116 17 view .LVU429
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 43
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 43
 
 
  1511              	.LBB396:
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1552              		.loc 2 18 18 is_stmt 0 view .LVU445
  1553 00f8 1A60     		str	r2, [r3]	@ float
   20:PSP/AudioEngine.cpp ****     _smoothedPreset = _currentPreset;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 44
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 44
 
 
  1554              		.loc 2 20 5 is_stmt 1 view .LVU446
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1601              		.cfi_startproc
  1602              		@ args = 0, pretend = 0, frame = 8
  1603              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 45
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 45
 
 
   77:PSP/AudioEngine.cpp ****     _currentFreq = controls.freq;
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1650              	.LVL109:
   83:PSP/AudioEngine.cpp ****         _osc2.SetFreq(_currentFreq);
  1651              		.loc 2 83 9 is_stmt 1 view .LVU470
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 46
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 46
 
 
  1652              		.loc 2 83 22 is_stmt 0 view .LVU471
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1700              		.loc 2 90 11 view .LVU483
  1701 000e C6EE877A 		vdiv.f32	s15, s13, s14
  1702              	.LVL112:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 47
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 47
 
 
   91:PSP/AudioEngine.cpp **** 
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1751 006a 6101     		.2byte	(.L31-.L34)/2
  1752 006c 6101     		.2byte	(.L31-.L34)/2
  1753 006e 6101     		.2byte	(.L31-.L34)/2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 48
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 48
 
 
  1754 0070 6101     		.2byte	(.L31-.L34)/2
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1808 00dc 6101     		.2byte	(.L31-.L34)/2
  1809 00de 6101     		.2byte	(.L31-.L34)/2
  1810 00e0 1401     		.2byte	(.L42-.L34)/2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 49
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 49
 
 
  1811 00e2 6101     		.2byte	(.L31-.L34)/2
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  121:PSP/AudioEngine.cpp ****         // OSCILLATOR 2 (CC 24 - 27)
  122:PSP/AudioEngine.cpp ****         // ==========================================
  123:PSP/AudioEngine.cpp ****         case 24: preset.osc2.waveform = osc_wave_sel; break;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 50
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 50
 
 
  124:PSP/AudioEngine.cpp ****         case 25: preset.osc2.amp = val_norm; break;
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  178:PSP/AudioEngine.cpp ****         // ==========================================
  179:PSP/AudioEngine.cpp ****         // LFO DIRECTION (CC 102, 103)
  180:PSP/AudioEngine.cpp ****         // ==========================================
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 51
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 51
 
 
  181:PSP/AudioEngine.cpp ****         case 110: preset.lfo1.direction = static_cast<Direction_e>(cc_value / 21); break;
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1874 012e EEE7     		b	.L72
  1875              	.L68:
  107:PSP/AudioEngine.cpp ****         case 18: preset.lfo2.amp = val_norm; break;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 52
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 52
 
 
  1876              		.loc 2 107 9 view .LVU512
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1911 0152 C3ED067A 		vstr.32	s15, [r3, #24]
  115:PSP/AudioEngine.cpp ****         case 22: preset.osc1.shape = val_norm; break;
  1912              		.loc 2 115 46 is_stmt 1 view .LVU532
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 53
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 53
 
 
  1913 0156 DAE7     		b	.L72
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1950              		.loc 2 123 18 view .LVU549
  123:PSP/AudioEngine.cpp ****         case 25: preset.osc2.amp = val_norm; break;
  1951              		.loc 2 123 39 is_stmt 0 view .LVU550
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 54
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 54
 
 
  1952 0186 83F82840 		strb	r4, [r3, #40]
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  1988 01b2 FCEEE77A 		vcvt.u32.f32	s15, s15
  1989 01b6 17EE902A 		vmov	r2, s15	@ int
  1990              	.LVL123:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 55
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 55
 
 
  127:PSP/AudioEngine.cpp **** 
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  139:PSP/AudioEngine.cpp **** 
  2028              		.loc 2 139 9 view .LVU586
  139:PSP/AudioEngine.cpp **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 56
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 56
 
 
  2029              		.loc 2 139 18 view .LVU587
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  2066              		.loc 2 146 53 is_stmt 1 view .LVU604
  2067 0218 79E7     		b	.L72
  2068              	.L52:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 57
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 57
 
 
  147:PSP/AudioEngine.cpp ****         //case 80: preset.amp_env.amp     = val_norm; break;
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  2105 0250 C3ED207A 		vstr.32	s15, [r3, #128]
  155:PSP/AudioEngine.cpp ****         case 84: preset.filt_env.release = 0.01f + (val_norm * 3.0f); break;
  2106              		.loc 2 155 54 is_stmt 1 view .LVU623
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 58
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 58
 
 
  2107 0254 5BE7     		b	.L72
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  2143 0280 45E7     		b	.L72
  2144              	.LVL131:
  2145              	.L40:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 59
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 59
 
 
  164:PSP/AudioEngine.cpp **** 
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  2183              	.LVL134:
  175:PSP/AudioEngine.cpp ****         case 102: cc_value <64  ? preset.xor_m.isActive  = false : preset.xor_m.isActive  = true; b
  2184              		.loc 2 175 69 view .LVU659
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 60
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 60
 
 
  2185 02ac 0122     		movhi	r2, #1
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  2229              	.L33:
  182:PSP/AudioEngine.cpp **** 
  2230              		.loc 2 182 9 view .LVU670
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 61
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 61
 
 
  182:PSP/AudioEngine.cpp **** 
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
    3:PSP/AudioEngine.h **** 
    4:PSP/AudioEngine.h **** 
    5:PSP/AudioEngine.h **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 62
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 62
 
 
    6:PSP/AudioEngine.h **** #pragma once
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
   60:PSP/AudioEngine.h ****     float resonance;
   61:PSP/AudioEngine.h **** };
   62:PSP/AudioEngine.h **** struct Reverb_s {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 63
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 63
 
 
   63:PSP/AudioEngine.h ****     float dryWet;
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  117:PSP/AudioEngine.h ****     // Formula iper-leggera per lo smoothing
  118:PSP/AudioEngine.h ****     inline void Smooth(float& current, float target, float coeff = 0.001f) {
  2276              		.loc 9 118 17 view .LVU680
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 64
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 64
 
 
  2277              	.LBB477:
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  192:PSP/AudioEngine.cpp ****     const float s = 0.001f;
  2319              		.loc 2 192 55 view .LVU690
  2320 001a 8846     		mov	r8, r1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 65
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 65
 
 
  2321              	.LBB488:
@@ -3863,271 +3863,269 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  2339              	.LBE489:
  192:PSP/AudioEngine.cpp ****     const float s = 0.001f;
  2340              		.loc 2 192 55 view .LVU696
- 2341 0030 2DED0E8B 		vpush.64	{d8, d9, d10, d11, d12, d13, d14}
- 2342              		.cfi_def_cfa_offset 84
- 2343              		.cfi_offset 80, -84
- 2344              		.cfi_offset 81, -80
- 2345              		.cfi_offset 82, -76
- 2346              		.cfi_offset 83, -72
- 2347              		.cfi_offset 84, -68
- 2348              		.cfi_offset 85, -64
- 2349              		.cfi_offset 86, -60
- 2350              		.cfi_offset 87, -56
- 2351              		.cfi_offset 88, -52
- 2352              		.cfi_offset 89, -48
- 2353              		.cfi_offset 90, -44
- 2354              		.cfi_offset 91, -40
- 2355              		.cfi_offset 92, -36
- 2356              		.cfi_offset 93, -32
- 2357              	.LBB490:
- 2358              	.LBB483:
- 2359              		.loc 9 119 17 view .LVU697
- 2360 0034 A6EEA77A 		vfma.f32	s14, s13, s15
- 2361              	.LBE483:
- 2362              	.LBE490:
+ 2341 0030 2DED0C8B 		vpush.64	{d8, d9, d10, d11, d12, d13}
+ 2342              		.cfi_def_cfa_offset 76
+ 2343              		.cfi_offset 80, -76
+ 2344              		.cfi_offset 81, -72
+ 2345              		.cfi_offset 82, -68
+ 2346              		.cfi_offset 83, -64
+ 2347              		.cfi_offset 84, -60
+ 2348              		.cfi_offset 85, -56
+ 2349              		.cfi_offset 86, -52
+ 2350              		.cfi_offset 87, -48
+ 2351              		.cfi_offset 88, -44
+ 2352              		.cfi_offset 89, -40
+ 2353              		.cfi_offset 90, -36
+ 2354              		.cfi_offset 91, -32
+ 2355              	.LBB490:
+ 2356              	.LBB483:
+ 2357              		.loc 9 119 17 view .LVU697
+ 2358 0034 A6EEA77A 		vfma.f32	s14, s13, s15
+ 2359              	.LBE483:
+ 2360              	.LBE490:
  192:PSP/AudioEngine.cpp ****     const float s = 0.001f;
- 2363              		.loc 2 192 55 view .LVU698
- 2364 0038 89B0     		sub	sp, sp, #36
- 2365              		.cfi_def_cfa_offset 120
- 2366 003a 9FEDE0AA 		vldr.32	s20, .L109+4
- 2367              	.LBB491:
- 2368              	.LBB484:
- 2369              		.loc 9 119 17 view .LVU699
- 2370 003e 83ED007A 		vstr.32	s14, [r3]
- 2371              	.LVL147:
- 2372              		.loc 9 119 17 view .LVU700
- 2373              	.LBE484:
- 2374              	.LBE491:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 66
-
-
+ 2361              		.loc 2 192 55 view .LVU698
+ 2362 0038 89B0     		sub	sp, sp, #36
+ 2363              		.cfi_def_cfa_offset 112
+ 2364 003a DFEDE09A 		vldr.32	s19, .L109+4
+ 2365              	.LBB491:
+ 2366              	.LBB484:
+ 2367              		.loc 9 119 17 view .LVU699
+ 2368 003e 83ED007A 		vstr.32	s14, [r3]
+ 2369              	.LVL147:
+ 2370              		.loc 9 119 17 view .LVU700
+ 2371              	.LBE484:
+ 2372              	.LBE491:
  196:PSP/AudioEngine.cpp ****     Smooth(_smoothedPreset.filter.resonance, _currentPreset.filter.resonance, s);
- 2375              		.loc 2 196 5 is_stmt 1 view .LVU701
- 2376              	.LBB492:
- 2377              	.LBI492:
+ 2373              		.loc 2 196 5 is_stmt 1 view .LVU701
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 66
+
+
+ 2374              	.LBB492:
+ 2375              	.LBI492:
  118:PSP/AudioEngine.h ****         current += coeff * (target - current);
- 2378              		.loc 9 118 17 view .LVU702
- 2379              	.LBB493:
- 2380              		.loc 9 119 9 view .LVU703
- 2381              		.loc 9 119 17 is_stmt 0 view .LVU704
- 2382 0042 04F60863 		addw	r3, r4, #3592
- 2383              		.loc 9 119 36 view .LVU705
- 2384 0046 D2ED006A 		vldr.32	s13, [r2]
- 2385              	.LBE493:
- 2386              	.LBE492:
+ 2376              		.loc 9 118 17 view .LVU702
+ 2377              	.LBB493:
+ 2378              		.loc 9 119 9 view .LVU703
+ 2379              		.loc 9 119 17 is_stmt 0 view .LVU704
+ 2380 0042 04F60863 		addw	r3, r4, #3592
+ 2381              		.loc 9 119 36 view .LVU705
+ 2382 0046 D2ED006A 		vldr.32	s13, [r2]
+ 2383              	.LBE493:
+ 2384              	.LBE492:
  197:PSP/AudioEngine.cpp ****     Smooth(_smoothedPreset.osc2.amp, _currentPreset.osc2.amp, s);
- 2387              		.loc 2 197 11 view .LVU706
- 2388 004a 04F6E442 		addw	r2, r4, #3300
- 2389              	.LBB495:
- 2390              	.LBB494:
- 2391              		.loc 9 119 17 view .LVU707
- 2392 004e 93ED007A 		vldr.32	s14, [r3]
- 2393              		.loc 9 119 36 view .LVU708
- 2394 0052 76EEC76A 		vsub.f32	s13, s13, s14
- 2395              		.loc 9 119 17 view .LVU709
- 2396 0056 A6EEA77A 		vfma.f32	s14, s13, s15
- 2397 005a 83ED007A 		vstr.32	s14, [r3]
- 2398              	.LVL148:
- 2399              		.loc 9 119 17 view .LVU710
- 2400              	.LBE494:
- 2401              	.LBE495:
+ 2385              		.loc 2 197 11 view .LVU706
+ 2386 004a 04F6E442 		addw	r2, r4, #3300
+ 2387              	.LBB495:
+ 2388              	.LBB494:
+ 2389              		.loc 9 119 17 view .LVU707
+ 2390 004e 93ED007A 		vldr.32	s14, [r3]
+ 2391              		.loc 9 119 36 view .LVU708
+ 2392 0052 76EEC76A 		vsub.f32	s13, s13, s14
+ 2393              		.loc 9 119 17 view .LVU709
+ 2394 0056 A6EEA77A 		vfma.f32	s14, s13, s15
+ 2395 005a 83ED007A 		vstr.32	s14, [r3]
+ 2396              	.LVL148:
+ 2397              		.loc 9 119 17 view .LVU710
+ 2398              	.LBE494:
+ 2399              	.LBE495:
  197:PSP/AudioEngine.cpp ****     Smooth(_smoothedPreset.osc2.amp, _currentPreset.osc2.amp, s);
- 2402              		.loc 2 197 5 is_stmt 1 view .LVU711
- 2403              	.LBB496:
- 2404              	.LBI496:
+ 2400              		.loc 2 197 5 is_stmt 1 view .LVU711
+ 2401              	.LBB496:
+ 2402              	.LBI496:
  118:PSP/AudioEngine.h ****         current += coeff * (target - current);
- 2405              		.loc 9 118 17 view .LVU712
- 2406              	.LBB497:
- 2407              		.loc 9 119 9 view .LVU713
- 2408              		.loc 9 119 17 is_stmt 0 view .LVU714
- 2409 005e 04F55963 		add	r3, r4, #3472
- 2410              		.loc 9 119 36 view .LVU715
- 2411 0062 D2ED006A 		vldr.32	s13, [r2]
- 2412              	.LBE497:
- 2413              	.LBE496:
+ 2403              		.loc 9 118 17 view .LVU712
+ 2404              	.LBB497:
+ 2405              		.loc 9 119 9 view .LVU713
+ 2406              		.loc 9 119 17 is_stmt 0 view .LVU714
+ 2407 005e 04F55963 		add	r3, r4, #3472
+ 2408              		.loc 9 119 36 view .LVU715
+ 2409 0062 D2ED006A 		vldr.32	s13, [r2]
+ 2410              	.LBE497:
+ 2411              	.LBE496:
  198:PSP/AudioEngine.cpp ****     Smooth(_smoothedPreset.noise.amp, _currentPreset.noise.amp, s);
- 2414              		.loc 2 198 11 view .LVU716
- 2415 0066 04F6F842 		addw	r2, r4, #3320
- 2416              	.LBB499:
- 2417              	.LBB498:
- 2418              		.loc 9 119 17 view .LVU717
- 2419 006a 93ED007A 		vldr.32	s14, [r3]
- 2420              		.loc 9 119 36 view .LVU718
- 2421 006e 76EEC76A 		vsub.f32	s13, s13, s14
- 2422              		.loc 9 119 17 view .LVU719
- 2423 0072 A6EEA77A 		vfma.f32	s14, s13, s15
- 2424 0076 83ED007A 		vstr.32	s14, [r3]
- 2425              	.LVL149:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 67
+ 2412              		.loc 2 198 11 view .LVU716
+ 2413 0066 04F6F842 		addw	r2, r4, #3320
+ 2414              	.LBB499:
+ 2415              	.LBB498:
+ 2416              		.loc 9 119 17 view .LVU717
+ 2417 006a 93ED007A 		vldr.32	s14, [r3]
+ 2418              		.loc 9 119 36 view .LVU718
+ 2419 006e 76EEC76A 		vsub.f32	s13, s13, s14
+ 2420              		.loc 9 119 17 view .LVU719
+ 2421 0072 A6EEA77A 		vfma.f32	s14, s13, s15
+ 2422 0076 83ED007A 		vstr.32	s14, [r3]
+ 2423              	.LVL149:
+ 2424              		.loc 9 119 17 view .LVU720
+ 2425              	.LBE498:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 67
 
 
- 2426              		.loc 9 119 17 view .LVU720
- 2427              	.LBE498:
- 2428              	.LBE499:
+ 2426              	.LBE499:
  198:PSP/AudioEngine.cpp ****     Smooth(_smoothedPreset.noise.amp, _currentPreset.noise.amp, s);
- 2429              		.loc 2 198 5 is_stmt 1 view .LVU721
- 2430              	.LBB500:
- 2431              	.LBI500:
+ 2427              		.loc 2 198 5 is_stmt 1 view .LVU721
+ 2428              	.LBB500:
+ 2429              	.LBI500:
  118:PSP/AudioEngine.h ****         current += coeff * (target - current);
- 2432              		.loc 9 118 17 view .LVU722
- 2433              	.LBB501:
- 2434              		.loc 9 119 9 view .LVU723
- 2435              		.loc 9 119 17 is_stmt 0 view .LVU724
- 2436 007a 04F6A453 		addw	r3, r4, #3492
- 2437              		.loc 9 119 36 view .LVU725
- 2438 007e D2ED006A 		vldr.32	s13, [r2]
- 2439              	.LBE501:
- 2440              	.LBE500:
+ 2430              		.loc 9 118 17 view .LVU722
+ 2431              	.LBB501:
+ 2432              		.loc 9 119 9 view .LVU723
+ 2433              		.loc 9 119 17 is_stmt 0 view .LVU724
+ 2434 007a 04F6A453 		addw	r3, r4, #3492
+ 2435              		.loc 9 119 36 view .LVU725
+ 2436 007e D2ED006A 		vldr.32	s13, [r2]
+ 2437              	.LBE501:
+ 2438              	.LBE500:
  199:PSP/AudioEngine.cpp ****     Smooth(_smoothedPreset.reverb.dryWet, _currentPreset.reverb.dryWet, s);
- 2441              		.loc 2 199 11 view .LVU726
- 2442 0082 04F62852 		addw	r2, r4, #3368
- 2443              	.LBB503:
- 2444              	.LBB502:
- 2445              		.loc 9 119 17 view .LVU727
- 2446 0086 93ED007A 		vldr.32	s14, [r3]
- 2447              		.loc 9 119 36 view .LVU728
- 2448 008a 76EEC76A 		vsub.f32	s13, s13, s14
- 2449              		.loc 9 119 17 view .LVU729
- 2450 008e A6EEA77A 		vfma.f32	s14, s13, s15
- 2451 0092 83ED007A 		vstr.32	s14, [r3]
- 2452              	.LVL150:
- 2453              		.loc 9 119 17 view .LVU730
- 2454              	.LBE502:
- 2455              	.LBE503:
+ 2439              		.loc 2 199 11 view .LVU726
+ 2440 0082 04F62852 		addw	r2, r4, #3368
+ 2441              	.LBB503:
+ 2442              	.LBB502:
+ 2443              		.loc 9 119 17 view .LVU727
+ 2444 0086 93ED007A 		vldr.32	s14, [r3]
+ 2445              		.loc 9 119 36 view .LVU728
+ 2446 008a 76EEC76A 		vsub.f32	s13, s13, s14
+ 2447              		.loc 9 119 17 view .LVU729
+ 2448 008e A6EEA77A 		vfma.f32	s14, s13, s15
+ 2449 0092 83ED007A 		vstr.32	s14, [r3]
+ 2450              	.LVL150:
+ 2451              		.loc 9 119 17 view .LVU730
+ 2452              	.LBE502:
+ 2453              	.LBE503:
  199:PSP/AudioEngine.cpp ****     Smooth(_smoothedPreset.reverb.dryWet, _currentPreset.reverb.dryWet, s);
- 2456              		.loc 2 199 5 is_stmt 1 view .LVU731
- 2457              	.LBB504:
- 2458              	.LBI504:
+ 2454              		.loc 2 199 5 is_stmt 1 view .LVU731
+ 2455              	.LBB504:
+ 2456              	.LBI504:
  118:PSP/AudioEngine.h ****         current += coeff * (target - current);
- 2459              		.loc 9 118 17 view .LVU732
- 2460              	.LBB505:
- 2461              		.loc 9 119 9 view .LVU733
- 2462              		.loc 9 119 17 is_stmt 0 view .LVU734
- 2463 0096 04F6D453 		addw	r3, r4, #3540
- 2464              		.loc 9 119 36 view .LVU735
- 2465 009a D2ED006A 		vldr.32	s13, [r2]
- 2466              	.LBE505:
- 2467              	.LBE504:
+ 2457              		.loc 9 118 17 view .LVU732
+ 2458              	.LBB505:
+ 2459              		.loc 9 119 9 view .LVU733
+ 2460              		.loc 9 119 17 is_stmt 0 view .LVU734
+ 2461 0096 04F6D453 		addw	r3, r4, #3540
+ 2462              		.loc 9 119 36 view .LVU735
+ 2463 009a D2ED006A 		vldr.32	s13, [r2]
+ 2464              	.LBE505:
+ 2465              	.LBE504:
  200:PSP/AudioEngine.cpp **** 
- 2468              		.loc 2 200 11 view .LVU736
- 2469 009e 04F55662 		add	r2, r4, #3424
- 2470              	.LBB507:
- 2471              	.LBB506:
- 2472              		.loc 9 119 17 view .LVU737
- 2473 00a2 93ED007A 		vldr.32	s14, [r3]
- 2474              		.loc 9 119 36 view .LVU738
- 2475 00a6 76EEC76A 		vsub.f32	s13, s13, s14
- 2476              		.loc 9 119 17 view .LVU739
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 68
+ 2466              		.loc 2 200 11 view .LVU736
+ 2467 009e 04F55662 		add	r2, r4, #3424
+ 2468              	.LBB507:
+ 2469              	.LBB506:
+ 2470              		.loc 9 119 17 view .LVU737
+ 2471 00a2 93ED007A 		vldr.32	s14, [r3]
+ 2472              		.loc 9 119 36 view .LVU738
+ 2473 00a6 76EEC76A 		vsub.f32	s13, s13, s14
+ 2474              		.loc 9 119 17 view .LVU739
+ 2475 00aa A6EEA77A 		vfma.f32	s14, s13, s15
+ 2476 00ae 83ED007A 		vstr.32	s14, [r3]
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 68
 
 
- 2477 00aa A6EEA77A 		vfma.f32	s14, s13, s15
- 2478 00ae 83ED007A 		vstr.32	s14, [r3]
- 2479              	.LVL151:
- 2480              		.loc 9 119 17 view .LVU740
- 2481              	.LBE506:
- 2482              	.LBE507:
+ 2477              	.LVL151:
+ 2478              		.loc 9 119 17 view .LVU740
+ 2479              	.LBE506:
+ 2480              	.LBE507:
  200:PSP/AudioEngine.cpp **** 
- 2483              		.loc 2 200 5 is_stmt 1 view .LVU741
- 2484              	.LBB508:
- 2485              	.LBI508:
+ 2481              		.loc 2 200 5 is_stmt 1 view .LVU741
+ 2482              	.LBB508:
+ 2483              	.LBI508:
  118:PSP/AudioEngine.h ****         current += coeff * (target - current);
- 2486              		.loc 9 118 17 view .LVU742
- 2487              	.LBB509:
- 2488              		.loc 9 119 9 view .LVU743
- 2489              		.loc 9 119 17 is_stmt 0 view .LVU744
- 2490 00b2 04F60C63 		addw	r3, r4, #3596
- 2491              		.loc 9 119 36 view .LVU745
- 2492 00b6 D2ED006A 		vldr.32	s13, [r2]
- 2493              		.loc 9 119 17 view .LVU746
- 2494 00ba 93ED007A 		vldr.32	s14, [r3]
- 2495              		.loc 9 119 36 view .LVU747
- 2496 00be 76EEC76A 		vsub.f32	s13, s13, s14
- 2497              		.loc 9 119 17 view .LVU748
- 2498 00c2 A6EEA77A 		vfma.f32	s14, s13, s15
- 2499 00c6 83ED007A 		vstr.32	s14, [r3]
- 2500              	.LVL152:
- 2501              		.loc 9 119 17 view .LVU749
- 2502              	.LBE509:
- 2503              	.LBE508:
- 2504              		.loc 2 203 5 is_stmt 1 view .LVU750
- 2505              		.loc 2 203 41 is_stmt 0 view .LVU751
- 2506 00ca FFF7FEFF 		bl	_ZN7daisysp4Adsr7ProcessEb
- 2507              	.LVL153:
+ 2484              		.loc 9 118 17 view .LVU742
+ 2485              	.LBB509:
+ 2486              		.loc 9 119 9 view .LVU743
+ 2487              		.loc 9 119 17 is_stmt 0 view .LVU744
+ 2488 00b2 04F60C63 		addw	r3, r4, #3596
+ 2489              		.loc 9 119 36 view .LVU745
+ 2490 00b6 D2ED006A 		vldr.32	s13, [r2]
+ 2491              		.loc 9 119 17 view .LVU746
+ 2492 00ba 93ED007A 		vldr.32	s14, [r3]
+ 2493              		.loc 9 119 36 view .LVU747
+ 2494 00be 76EEC76A 		vsub.f32	s13, s13, s14
+ 2495              		.loc 9 119 17 view .LVU748
+ 2496 00c2 A6EEA77A 		vfma.f32	s14, s13, s15
+ 2497 00c6 83ED007A 		vstr.32	s14, [r3]
+ 2498              	.LVL152:
+ 2499              		.loc 9 119 17 view .LVU749
+ 2500              	.LBE509:
+ 2501              	.LBE508:
+ 2502              		.loc 2 203 5 is_stmt 1 view .LVU750
+ 2503              		.loc 2 203 41 is_stmt 0 view .LVU751
+ 2504 00ca FFF7FEFF 		bl	_ZN7daisysp4Adsr7ProcessEb
+ 2505              	.LVL153:
  204:PSP/AudioEngine.cpp ****     float filt_env_out = _filt_env.Process(_lastGate);
- 2508              		.loc 2 204 43 view .LVU752
- 2509 00ce 94F8D01E 		ldrb	r1, [r4, #3792]	@ zero_extendqisi2
- 2510 00d2 05F1F400 		add	r0, r5, #244
+ 2506              		.loc 2 204 43 view .LVU752
+ 2507 00ce 94F8D01E 		ldrb	r1, [r4, #3792]	@ zero_extendqisi2
+ 2508 00d2 05F1F400 		add	r0, r5, #244
  203:PSP/AudioEngine.cpp ****     float filt_env_out = _filt_env.Process(_lastGate);
- 2511              		.loc 2 203 41 view .LVU753
- 2512 00d6 B0EE409A 		vmov.f32	s18, s0
- 2513              	.LVL154:
- 2514              		.loc 2 204 5 is_stmt 1 view .LVU754
- 2515              		.loc 2 204 43 is_stmt 0 view .LVU755
- 2516 00da FFF7FEFF 		bl	_ZN7daisysp4Adsr7ProcessEb
- 2517              	.LVL155:
+ 2509              		.loc 2 203 41 view .LVU753
+ 2510 00d6 F0EE408A 		vmov.f32	s17, s0
+ 2511              	.LVL154:
+ 2512              		.loc 2 204 5 is_stmt 1 view .LVU754
+ 2513              		.loc 2 204 43 is_stmt 0 view .LVU755
+ 2514 00da FFF7FEFF 		bl	_ZN7daisysp4Adsr7ProcessEb
+ 2515              	.LVL155:
  205:PSP/AudioEngine.cpp **** 
  206:PSP/AudioEngine.cpp ****     // Salva sia il valore grezzo (-1 a 1) che quello scalato dall'ampiezza
  207:PSP/AudioEngine.cpp ****     float lfo1_raw = _lfo1.Process();
- 2518              		.loc 2 207 35 view .LVU756
- 2519 00de 05F16800 		add	r0, r5, #104
+ 2516              		.loc 2 207 35 view .LVU756
+ 2517 00de 05F16800 		add	r0, r5, #104
  204:PSP/AudioEngine.cpp **** 
- 2520              		.loc 2 204 43 view .LVU757
- 2521 00e2 F0EE40CA 		vmov.f32	s25, s0
- 2522              	.LVL156:
- 2523              		.loc 2 207 5 is_stmt 1 view .LVU758
- 2524              		.loc 2 207 35 is_stmt 0 view .LVU759
- 2525 00e6 FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 69
-
-
- 2526              	.LVL157:
+ 2518              		.loc 2 204 43 view .LVU757
+ 2519 00e2 B0EE40CA 		vmov.f32	s24, s0
+ 2520              	.LVL156:
+ 2521              		.loc 2 207 5 is_stmt 1 view .LVU758
+ 2522              		.loc 2 207 35 is_stmt 0 view .LVU759
+ 2523 00e6 FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
+ 2524              	.LVL157:
  208:PSP/AudioEngine.cpp ****     float lfo2_raw = _lfo2.Process();
- 2527              		.loc 2 208 35 view .LVU760
- 2528 00ea 05F19400 		add	r0, r5, #148
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 69
+
+
+ 2525              		.loc 2 208 35 view .LVU760
+ 2526 00ea 05F19400 		add	r0, r5, #148
  207:PSP/AudioEngine.cpp ****     float lfo2_raw = _lfo2.Process();
- 2529              		.loc 2 207 35 view .LVU761
- 2530 00ee B0EE40BA 		vmov.f32	s22, s0
- 2531              	.LVL158:
- 2532              		.loc 2 208 5 is_stmt 1 view .LVU762
- 2533              		.loc 2 208 35 is_stmt 0 view .LVU763
- 2534 00f2 FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
- 2535              	.LVL159:
+ 2527              		.loc 2 207 35 view .LVU761
+ 2528 00ee F0EE40AA 		vmov.f32	s21, s0
+ 2529              	.LVL158:
+ 2530              		.loc 2 208 5 is_stmt 1 view .LVU762
+ 2531              		.loc 2 208 35 is_stmt 0 view .LVU763
+ 2532 00f2 FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
+ 2533              	.LVL159:
  209:PSP/AudioEngine.cpp ****     float lfo1_out = lfo1_raw * _currentPreset.lfo1.amp;
- 2536              		.loc 2 209 53 view .LVU764
- 2537 00f6 04F60C53 		addw	r3, r4, #3340
+ 2534              		.loc 2 209 53 view .LVU764
+ 2535 00f6 04F60C53 		addw	r3, r4, #3340
  208:PSP/AudioEngine.cpp ****     float lfo2_raw = _lfo2.Process();
- 2538              		.loc 2 208 35 view .LVU765
- 2539 00fa F0EE40AA 		vmov.f32	s21, s0
- 2540              	.LVL160:
- 2541              		.loc 2 209 5 is_stmt 1 view .LVU766
- 2542              		.loc 2 209 11 is_stmt 0 view .LVU767
- 2543 00fe 93ED00CA 		vldr.32	s24, [r3]
+ 2536              		.loc 2 208 35 view .LVU765
+ 2537 00fa B0EE40AA 		vmov.f32	s20, s0
+ 2538              	.LVL160:
+ 2539              		.loc 2 209 5 is_stmt 1 view .LVU766
+ 2540              		.loc 2 209 11 is_stmt 0 view .LVU767
+ 2541 00fe D3ED00BA 		vldr.32	s23, [r3]
  210:PSP/AudioEngine.cpp ****     float lfo2_out = lfo2_raw * _currentPreset.lfo2.amp;
- 2544              		.loc 2 210 53 view .LVU768
- 2545 0102 04F61C53 		addw	r3, r4, #3356
- 2546              		.loc 2 210 11 view .LVU769
- 2547 0106 D3ED00BA 		vldr.32	s23, [r3]
+ 2542              		.loc 2 210 53 view .LVU768
+ 2543 0102 04F61C53 		addw	r3, r4, #3356
+ 2544              		.loc 2 210 11 view .LVU769
+ 2545 0106 93ED00BA 		vldr.32	s22, [r3]
  209:PSP/AudioEngine.cpp ****     float lfo1_out = lfo1_raw * _currentPreset.lfo1.amp;
- 2548              		.loc 2 209 11 view .LVU770
- 2549 010a 2BEE0CCA 		vmul.f32	s24, s22, s24
- 2550              	.LVL161:
- 2551              		.loc 2 210 5 is_stmt 1 view .LVU771
+ 2546              		.loc 2 209 11 view .LVU770
+ 2547 010a 6AEEABBA 		vmul.f32	s23, s21, s23
+ 2548              	.LVL161:
+ 2549              		.loc 2 210 5 is_stmt 1 view .LVU771
  211:PSP/AudioEngine.cpp **** 
  212:PSP/AudioEngine.cpp ****     if (_currentPreset.sync) {
- 2552              		.loc 2 212 5 is_stmt 0 view .LVU772
- 2553 010e 94F8743D 		ldrb	r3, [r4, #3444]	@ zero_extendqisi2
+ 2550              		.loc 2 212 5 is_stmt 0 view .LVU772
+ 2551 010e 94F8743D 		ldrb	r3, [r4, #3444]	@ zero_extendqisi2
  210:PSP/AudioEngine.cpp ****     float lfo2_out = lfo2_raw * _currentPreset.lfo2.amp;
- 2554              		.loc 2 210 11 view .LVU773
- 2555 0112 60EE2BBA 		vmul.f32	s23, s0, s23
- 2556              	.LVL162:
- 2557              		.loc 2 212 5 is_stmt 1 view .LVU774
- 2558 0116 23B1     		cbz	r3, .L82
+ 2552              		.loc 2 210 11 view .LVU773
+ 2553 0112 20EE0BBA 		vmul.f32	s22, s0, s22
+ 2554              	.LVL162:
+ 2555              		.loc 2 212 5 is_stmt 1 view .LVU774
+ 2556 0116 23B1     		cbz	r3, .L82
  213:PSP/AudioEngine.cpp ****         if (_osc1.IsEOC()) _osc2.Reset();
- 2559              		.loc 2 213 9 view .LVU775
- 2560              	.LVL163:
- 2561              	.LBB510:
- 2562              	.LBI510:
+ 2557              		.loc 2 213 9 view .LVU775
+ 2558              	.LVL163:
+ 2559              	.LBB510:
+ 2560              	.LBI510:
   99:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
  100:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h **** 
  101:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     /** Returns true if cycle is at end of rise. Set during call to Process.
@@ -4137,22 +4135,22 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  105:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     /** Returns true if cycle is at end of cycle. Set during call to Process.
  106:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     */
  107:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     inline bool IsEOC() { return eoc_; }
- 2563              		.loc 1 107 17 view .LVU776
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 70
+ 2561              		.loc 1 107 17 view .LVU776
+ 2562              	.LBB511:
+ 2563              		.loc 1 107 27 view .LVU777
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 70
 
 
- 2564              	.LBB511:
- 2565              		.loc 1 107 27 view .LVU777
- 2566              		.loc 1 107 27 is_stmt 0 view .LVU778
- 2567              	.LBE511:
- 2568              	.LBE510:
- 2569              		.loc 2 213 9 view .LVU779
- 2570 0118 95F83130 		ldrb	r3, [r5, #49]	@ zero_extendqisi2
- 2571 011c 0BB1     		cbz	r3, .L82
- 2572              		.loc 2 213 28 is_stmt 1 discriminator 1 view .LVU780
- 2573              	.LVL164:
- 2574              	.LBB512:
- 2575              	.LBI512:
+ 2564              		.loc 1 107 27 is_stmt 0 view .LVU778
+ 2565              	.LBE511:
+ 2566              	.LBE510:
+ 2567              		.loc 2 213 9 view .LVU779
+ 2568 0118 95F83130 		ldrb	r3, [r5, #49]	@ zero_extendqisi2
+ 2569 011c 0BB1     		cbz	r3, .L82
+ 2570              		.loc 2 213 28 is_stmt 1 discriminator 1 view .LVU780
+ 2571              	.LVL164:
+ 2572              	.LBB512:
+ 2573              	.LBI512:
  108:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h **** 
  109:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     /** Returns true if cycle rising.
  110:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     */
@@ -4173,1501 +4171,1482 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 1
  125:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     /** Resets the phase to the input argument. If no argumeNt is present, it will reset phase to 0
  126:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     */
  127:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     void Reset(float _phase = 0.0f) { phase_ = _phase; }
- 2576              		.loc 1 127 10 discriminator 1 view .LVU781
- 2577              	.LBB513:
- 2578              		.loc 1 127 39 discriminator 1 view .LVU782
- 2579              		.loc 1 127 46 is_stmt 0 discriminator 1 view .LVU783
- 2580 011e 85ED15AA 		vstr.32	s20, [r5, #84]
- 2581              	.LVL165:
- 2582              	.L82:
- 2583              		.loc 1 127 46 discriminator 1 view .LVU784
- 2584              	.LBE513:
- 2585              	.LBE512:
+ 2574              		.loc 1 127 10 discriminator 1 view .LVU781
+ 2575              	.LBB513:
+ 2576              		.loc 1 127 39 discriminator 1 view .LVU782
+ 2577              		.loc 1 127 46 is_stmt 0 discriminator 1 view .LVU783
+ 2578 011e C5ED159A 		vstr.32	s19, [r5, #84]
+ 2579              	.LVL165:
+ 2580              	.L82:
+ 2581              		.loc 1 127 46 discriminator 1 view .LVU784
+ 2582              	.LBE513:
+ 2583              	.LBE512:
  214:PSP/AudioEngine.cpp ****     }
  215:PSP/AudioEngine.cpp **** 
  216:PSP/AudioEngine.cpp ****     // 2. Calcolo dei target per gli oscillatori (Valore Base + Modulazione)
  217:PSP/AudioEngine.cpp ****     float target_shape1 = _currentPreset.osc1.shape;
- 2586              		.loc 2 217 5 is_stmt 1 view .LVU785
- 2587              		.loc 2 217 11 is_stmt 0 view .LVU786
- 2588 0122 04F6E843 		addw	r3, r4, #3304
+ 2584              		.loc 2 217 5 is_stmt 1 view .LVU785
+ 2585              		.loc 2 217 11 is_stmt 0 view .LVU786
+ 2586 0122 04F6E843 		addw	r3, r4, #3304
  218:PSP/AudioEngine.cpp ****     float target_shape2 = _currentPreset.osc2.shape;
  219:PSP/AudioEngine.cpp ****     float target_detune1 = _currentPreset.osc1.detune;
  220:PSP/AudioEngine.cpp ****     float target_detune2 = _currentPreset.osc2.detune;
- 221:PSP/AudioEngine.cpp ****     float target_noise = _currentPreset.noise.color;
- 222:PSP/AudioEngine.cpp ****     float target_xor_ampunt = _currentPreset.xor_m.amount;
- 223:PSP/AudioEngine.cpp **** 
- 224:PSP/AudioEngine.cpp ****     // LFO 1 Routing
- 225:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::SHAPE) target_shape1 += lfo1_out;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 71
+ 221:PSP/AudioEngine.cpp **** 
+ 222:PSP/AudioEngine.cpp ****     // LFO 1 Routing
+ 223:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::SHAPE) target_shape1 += lfo1_out;
+ 224:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
+ 225:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
+ 2587              		.loc 2 225 63 view .LVU787
+ 2588 0126 05F5C126 		add	r6, r5, #395264
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 71
 
 
- 226:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
- 227:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
- 2589              		.loc 2 227 63 view .LVU787
- 2590 0126 05F5C126 		add	r6, r5, #395264
- 2591 012a DFEDA5DA 		vldr.32	s27, .L109+8
+ 2589 012a 9FEDA5DA 		vldr.32	s26, .L109+8
  217:PSP/AudioEngine.cpp ****     float target_shape2 = _currentPreset.osc2.shape;
- 2592              		.loc 2 217 11 view .LVU788
- 2593 012e 93ED008A 		vldr.32	s16, [r3]
- 2594              	.LVL166:
+ 2590              		.loc 2 217 11 view .LVU788
+ 2591 012e 93ED008A 		vldr.32	s16, [r3]
+ 2592              	.LVL166:
  218:PSP/AudioEngine.cpp ****     float target_shape2 = _currentPreset.osc2.shape;
- 2595              		.loc 2 218 5 is_stmt 1 view .LVU789
+ 2593              		.loc 2 218 5 is_stmt 1 view .LVU789
  218:PSP/AudioEngine.cpp ****     float target_shape2 = _currentPreset.osc2.shape;
- 2596              		.loc 2 218 11 is_stmt 0 view .LVU790
- 2597 0132 04F6FC43 		addw	r3, r4, #3324
- 2598              		.loc 2 227 63 view .LVU791
- 2599 0136 06F2C446 		addw	r6, r6, #1220
+ 2594              		.loc 2 218 11 is_stmt 0 view .LVU790
+ 2595 0132 04F6FC43 		addw	r3, r4, #3324
+ 2596              		.loc 2 225 63 view .LVU791
+ 2597 0136 06F2C446 		addw	r6, r6, #1220
  218:PSP/AudioEngine.cpp ****     float target_shape2 = _currentPreset.osc2.shape;
- 2600              		.loc 2 218 11 view .LVU792
- 2601 013a D3ED009A 		vldr.32	s19, [r3]
- 2602              	.LVL167:
+ 2598              		.loc 2 218 11 view .LVU792
+ 2599 013a 93ED009A 		vldr.32	s18, [r3]
+ 2600              	.LVL167:
  219:PSP/AudioEngine.cpp ****     float target_detune2 = _currentPreset.osc2.detune;
- 2603              		.loc 2 219 5 is_stmt 1 view .LVU793
+ 2601              		.loc 2 219 5 is_stmt 1 view .LVU793
  219:PSP/AudioEngine.cpp ****     float target_detune2 = _currentPreset.osc2.detune;
- 2604              		.loc 2 219 11 is_stmt 0 view .LVU794
- 2605 013e 04F6EC43 		addw	r3, r4, #3308
- 2606 0142 93ED00EA 		vldr.32	s28, [r3]
- 2607              	.LVL168:
- 220:PSP/AudioEngine.cpp ****     float target_noise = _currentPreset.noise.color;
- 2608              		.loc 2 220 5 is_stmt 1 view .LVU795
- 220:PSP/AudioEngine.cpp ****     float target_noise = _currentPreset.noise.color;
- 2609              		.loc 2 220 11 is_stmt 0 view .LVU796
- 2610 0146 04F55063 		add	r3, r4, #3328
- 2611 014a 93ED00DA 		vldr.32	s26, [r3]
- 2612              	.LVL169:
- 221:PSP/AudioEngine.cpp ****     float target_xor_ampunt = _currentPreset.xor_m.amount;
- 2613              		.loc 2 221 5 is_stmt 1 view .LVU797
- 221:PSP/AudioEngine.cpp ****     float target_xor_ampunt = _currentPreset.xor_m.amount;
- 2614              		.loc 2 221 11 is_stmt 0 view .LVU798
- 2615 014e 04F62C53 		addw	r3, r4, #3372
- 2616 0152 D3ED008A 		vldr.32	s17, [r3]
- 2617              	.LVL170:
- 222:PSP/AudioEngine.cpp **** 
- 2618              		.loc 2 222 5 is_stmt 1 view .LVU799
- 225:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
- 2619              		.loc 2 225 5 view .LVU800
- 225:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
- 2620              		.loc 2 225 29 is_stmt 0 view .LVU801
- 2621 0156 94F8143D 		ldrb	r3, [r4, #3348]	@ zero_extendqisi2
- 225:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
- 2622              		.loc 2 225 5 view .LVU802
- 2623 015a 032B     		cmp	r3, #3
- 2624 015c 40F03A81 		bne	.L83
- 225:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
- 2625              		.loc 2 225 62 is_stmt 1 discriminator 1 view .LVU803
- 225:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
- 2626              		.loc 2 225 76 is_stmt 0 discriminator 1 view .LVU804
- 2627 0160 38EE0C8A 		vadd.f32	s16, s16, s24
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 72
+ 2602              		.loc 2 219 11 is_stmt 0 view .LVU794
+ 2603 013e 04F6EC43 		addw	r3, r4, #3308
+ 2604 0142 D3ED00DA 		vldr.32	s27, [r3]
+ 2605              	.LVL168:
+ 220:PSP/AudioEngine.cpp **** 
+ 2606              		.loc 2 220 5 is_stmt 1 view .LVU795
+ 220:PSP/AudioEngine.cpp **** 
+ 2607              		.loc 2 220 11 is_stmt 0 view .LVU796
+ 2608 0146 04F55063 		add	r3, r4, #3328
+ 2609 014a D3ED00CA 		vldr.32	s25, [r3]
+ 2610              	.LVL169:
+ 223:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
+ 2611              		.loc 2 223 5 is_stmt 1 view .LVU797
+ 223:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
+ 2612              		.loc 2 223 29 is_stmt 0 view .LVU798
+ 2613 014e 94F8143D 		ldrb	r3, [r4, #3348]	@ zero_extendqisi2
+ 223:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
+ 2614              		.loc 2 223 5 view .LVU799
+ 2615 0152 032B     		cmp	r3, #3
+ 2616 0154 40F03E81 		bne	.L83
+ 223:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
+ 2617              		.loc 2 223 62 is_stmt 1 discriminator 1 view .LVU800
+ 223:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
+ 2618              		.loc 2 223 76 is_stmt 0 discriminator 1 view .LVU801
+ 2619 0158 38EE2B8A 		vadd.f32	s16, s16, s23
+ 2620              	.LVL170:
+ 224:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
+ 2621              		.loc 2 224 5 is_stmt 1 discriminator 1 view .LVU802
+ 2622              		.loc 2 225 5 discriminator 1 view .LVU803
+ 2623              	.L84:
+ 226:PSP/AudioEngine.cpp ****     
+ 227:PSP/AudioEngine.cpp **** 
+ 228:PSP/AudioEngine.cpp ****     // LFO 2 Routing
+ 229:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::SHAPE) target_shape2 += lfo2_out;
+ 2624              		.loc 2 229 5 view .LVU804
+ 2625              		.loc 2 229 29 is_stmt 0 view .LVU805
+ 2626 015c 94F8243D 		ldrb	r3, [r4, #3364]	@ zero_extendqisi2
+ 2627              		.loc 2 229 5 view .LVU806
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 72
 
 
- 2628              	.LVL171:
- 226:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
- 2629              		.loc 2 226 5 is_stmt 1 discriminator 1 view .LVU805
- 2630              		.loc 2 227 5 discriminator 1 view .LVU806
- 2631              	.L84:
- 228:PSP/AudioEngine.cpp ****     
- 229:PSP/AudioEngine.cpp **** 
- 230:PSP/AudioEngine.cpp ****     // LFO 2 Routing
- 231:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::SHAPE) target_shape2 += lfo2_out;
- 2632              		.loc 2 231 5 view .LVU807
- 2633              		.loc 2 231 29 is_stmt 0 view .LVU808
- 2634 0164 94F8243D 		ldrb	r3, [r4, #3364]	@ zero_extendqisi2
- 2635              		.loc 2 231 5 view .LVU809
- 2636 0168 032B     		cmp	r3, #3
- 2637 016a 40F04581 		bne	.L87
- 2638              		.loc 2 231 62 is_stmt 1 discriminator 1 view .LVU810
- 2639              		.loc 2 231 76 is_stmt 0 discriminator 1 view .LVU811
- 2640 016e 79EEAB9A 		vadd.f32	s19, s19, s23
- 2641              	.LVL172:
- 232:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::DETUNE) target_detune2 += lfo2_out * 50.0f;
- 2642              		.loc 2 232 5 is_stmt 1 discriminator 1 view .LVU812
- 233:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo2_o
- 2643              		.loc 2 233 5 discriminator 1 view .LVU813
- 2644              	.L88:
- 234:PSP/AudioEngine.cpp ****     
- 235:PSP/AudioEngine.cpp ****     // Applica i limiti (Clamp) per evitare instabilità DSP e assegna
- 236:PSP/AudioEngine.cpp ****     _osc1.SetShape(daisysp::fclamp(target_shape1, 0.0f, 1.0f));
- 2645              		.loc 2 236 5 view .LVU814
- 2646              	.LBB514:
- 2647              	.LBI514:
+ 2628 0160 032B     		cmp	r3, #3
+ 2629 0162 40F04981 		bne	.L87
+ 2630              		.loc 2 229 62 is_stmt 1 discriminator 1 view .LVU807
+ 2631              		.loc 2 229 76 is_stmt 0 discriminator 1 view .LVU808
+ 2632 0166 39EE0B9A 		vadd.f32	s18, s18, s22
+ 2633              	.LVL171:
+ 230:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::DETUNE) target_detune2 += lfo2_out * 50.0f;
+ 2634              		.loc 2 230 5 is_stmt 1 discriminator 1 view .LVU809
+ 231:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo2_o
+ 2635              		.loc 2 231 5 discriminator 1 view .LVU810
+ 2636              	.L88:
+ 232:PSP/AudioEngine.cpp ****     
+ 233:PSP/AudioEngine.cpp ****     // Applica i limiti (Clamp) per evitare instabilità DSP e assegna
+ 234:PSP/AudioEngine.cpp ****     _osc1.SetShape(daisysp::fclamp(target_shape1, 0.0f, 1.0f));
+ 2637              		.loc 2 234 5 view .LVU811
+ 2638              	.LBB514:
+ 2639              	.LBI514:
   64:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2648              		.loc 3 64 14 view .LVU815
- 2649              	.LBE514:
- 2650              		.loc 3 66 5 view .LVU816
- 2651              	.LBB521:
- 2652              	.LBB515:
- 2653              	.LBI515:
+ 2640              		.loc 3 64 14 view .LVU812
+ 2641              	.LBE514:
+ 2642              		.loc 3 66 5 view .LVU813
+ 2643              	.LBB521:
+ 2644              	.LBB515:
+ 2645              	.LBI515:
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2654              		.loc 3 40 14 view .LVU817
- 2655              	.LBB516:
+ 2646              		.loc 3 40 14 view .LVU814
+ 2647              	.LBB516:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 2656              		.loc 3 42 5 view .LVU818
+ 2648              		.loc 3 42 5 view .LVU815
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2657              		.loc 3 44 5 view .LVU819
+ 2649              		.loc 3 44 5 view .LVU816
+ 2650              		.syntax unified
+ 2651              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 2652 016a C8FE297A 		vmaxnm.f32 s15, s16, s19
+ 2653              	@ 0 "" 2
+ 2654              	.LVL172:
+  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2655              		.loc 3 48 5 view .LVU817
+  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2656              		.loc 3 48 5 is_stmt 0 view .LVU818
+ 2657              		.thumb
  2658              		.syntax unified
- 2659              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 2660 0172 C8FE0A7A 		vmaxnm.f32 s15, s16, s20
- 2661              	@ 0 "" 2
- 2662              	.LVL173:
-  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2663              		.loc 3 48 5 view .LVU820
-  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2664              		.loc 3 48 5 is_stmt 0 view .LVU821
- 2665              		.thumb
- 2666              		.syntax unified
- 2667              	.LBE516:
- 2668              	.LBE515:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 73
-
-
- 2669              	.LBB517:
- 2670              	.LBI517:
+ 2659              	.LBE516:
+ 2660              	.LBE515:
+ 2661              	.LBB517:
+ 2662              	.LBI517:
   51:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2671              		.loc 3 51 14 is_stmt 1 view .LVU822
- 2672              	.LBB518:
+ 2663              		.loc 3 51 14 is_stmt 1 view .LVU819
+ 2664              	.LBB518:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 2673              		.loc 3 53 5 view .LVU823
+ 2665              		.loc 3 53 5 view .LVU820
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2674              		.loc 3 55 5 view .LVU824
- 2675 0176 B7EE008A 		vmov.f32	s16, #1.0e+0
- 2676              	.LVL174:
+ 2666              		.loc 3 55 5 view .LVU821
+ 2667 016e B7EE008A 		vmov.f32	s16, #1.0e+0
+ 2668              	.LVL173:
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2677              		.loc 3 55 5 is_stmt 0 view .LVU825
- 2678              	.LBE518:
- 2679              	.LBE517:
- 2680              	.LBE521:
- 237:PSP/AudioEngine.cpp ****     _osc2.SetShape(daisysp::fclamp(target_shape2, 0.0f, 1.0f));
- 2681              		.loc 2 237 19 view .LVU826
- 2682 017a 05F13409 		add	r9, r5, #52
- 2683              	.LBB522:
- 2684              	.LBB520:
- 2685              	.LBB519:
+ 2669              		.loc 3 55 5 is_stmt 0 view .LVU822
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 73
+
+
+ 2670              	.LBE518:
+ 2671              	.LBE517:
+ 2672              	.LBE521:
+ 235:PSP/AudioEngine.cpp ****     _osc2.SetShape(daisysp::fclamp(target_shape2, 0.0f, 1.0f));
+ 2673              		.loc 2 235 19 view .LVU823
+ 2674 0172 05F13409 		add	r9, r5, #52
+ 2675              	.LBB522:
+ 2676              	.LBB520:
+ 2677              	.LBB519:
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2686              		.loc 3 55 5 view .LVU827
+ 2678              		.loc 3 55 5 view .LVU824
+ 2679              		.syntax unified
+ 2680              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 2681 0176 C7FEC87A 		vminnm.f32 s15, s15, s16
+ 2682              	@ 0 "" 2
+ 2683              	.LVL174:
+  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2684              		.loc 3 59 5 is_stmt 1 view .LVU825
+  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2685              		.loc 3 59 5 is_stmt 0 view .LVU826
+ 2686              		.thumb
  2687              		.syntax unified
- 2688              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 2689 017e C7FEC87A 		vminnm.f32 s15, s15, s16
- 2690              	@ 0 "" 2
- 2691              	.LVL175:
-  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2692              		.loc 3 59 5 is_stmt 1 view .LVU828
-  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2693              		.loc 3 59 5 is_stmt 0 view .LVU829
- 2694              		.thumb
- 2695              		.syntax unified
- 2696              	.LBE519:
- 2697              	.LBE520:
- 2698              	.LBE522:
- 2699              	.LBB523:
- 2700              	.LBI523:
+ 2688              	.LBE519:
+ 2689              	.LBE520:
+ 2690              	.LBE522:
+ 2691              	.LBB523:
+ 2692              	.LBI523:
   95:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     { 
- 2701              		.loc 1 95 17 is_stmt 1 view .LVU830
- 2702              	.LBB524:
+ 2693              		.loc 1 95 17 is_stmt 1 view .LVU827
+ 2694              	.LBB524:
   97:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****         c_ = shape* 0.25;
- 2703              		.loc 1 97 9 view .LVU831
- 2704              	.LBB525:
- 2705              	.LBI525:
+ 2695              		.loc 1 97 9 view .LVU828
+ 2696              	.LBB525:
+ 2697              	.LBI525:
   64:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2706              		.loc 3 64 14 view .LVU832
- 2707              	.LBE525:
- 2708              	.LBE524:
- 2709              	.LBE523:
- 2710              		.loc 3 66 5 view .LVU833
- 2711              	.LBB534:
- 2712              	.LBB531:
- 2713              	.LBB530:
- 2714              	.LBB526:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 74
-
-
- 2715              	.LBI526:
+ 2698              		.loc 3 64 14 view .LVU829
+ 2699              	.LBE525:
+ 2700              	.LBE524:
+ 2701              	.LBE523:
+ 2702              		.loc 3 66 5 view .LVU830
+ 2703              	.LBB534:
+ 2704              	.LBB531:
+ 2705              	.LBB530:
+ 2706              	.LBB526:
+ 2707              	.LBI526:
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2716              		.loc 3 40 14 view .LVU834
- 2717              	.LBB527:
+ 2708              		.loc 3 40 14 view .LVU831
+ 2709              	.LBB527:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 2718              		.loc 3 42 5 view .LVU835
+ 2710              		.loc 3 42 5 view .LVU832
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2719              		.loc 3 44 5 view .LVU836
+ 2711              		.loc 3 44 5 view .LVU833
+ 2712              		.syntax unified
+ 2713              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 2714 017a 87FEA97A 		vmaxnm.f32 s14, s15, s19
+ 2715              	@ 0 "" 2
+ 2716              	.LVL175:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 74
+
+
+  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2717              		.loc 3 48 5 view .LVU834
+  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2718              		.loc 3 48 5 is_stmt 0 view .LVU835
+ 2719              		.thumb
  2720              		.syntax unified
- 2721              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 2722 0182 87FE8A7A 		vmaxnm.f32 s14, s15, s20
- 2723              	@ 0 "" 2
- 2724              	.LVL176:
-  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2725              		.loc 3 48 5 view .LVU837
-  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2726              		.loc 3 48 5 is_stmt 0 view .LVU838
- 2727              		.thumb
- 2728              		.syntax unified
- 2729              	.LBE527:
- 2730              	.LBE526:
- 2731              	.LBB528:
- 2732              	.LBI528:
+ 2721              	.LBE527:
+ 2722              	.LBE526:
+ 2723              	.LBB528:
+ 2724              	.LBI528:
   51:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2733              		.loc 3 51 14 is_stmt 1 view .LVU839
- 2734              	.LBB529:
+ 2725              		.loc 3 51 14 is_stmt 1 view .LVU836
+ 2726              	.LBB529:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 2735              		.loc 3 53 5 view .LVU840
+ 2727              		.loc 3 53 5 view .LVU837
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2736              		.loc 3 55 5 view .LVU841
+ 2728              		.loc 3 55 5 view .LVU838
+ 2729              		.syntax unified
+ 2730              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 2731 017e 87FE487A 		vminnm.f32 s14, s14, s16
+ 2732              	@ 0 "" 2
+ 2733              	.LVL176:
+  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2734              		.loc 3 59 5 view .LVU839
+  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2735              		.loc 3 59 5 is_stmt 0 view .LVU840
+ 2736              		.thumb
  2737              		.syntax unified
- 2738              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 2739 0186 87FE487A 		vminnm.f32 s14, s14, s16
- 2740              	@ 0 "" 2
- 2741              	.LVL177:
-  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2742              		.loc 3 59 5 view .LVU842
-  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2743              		.loc 3 59 5 is_stmt 0 view .LVU843
- 2744              		.thumb
- 2745              		.syntax unified
- 2746              	.LBE529:
- 2747              	.LBE528:
- 2748              	.LBE530:
+ 2738              	.LBE529:
+ 2739              	.LBE528:
+ 2740              	.LBE530:
   97:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****         c_ = shape* 0.25;
- 2749              		.loc 1 97 16 view .LVU844
- 2750 018a 85ED037A 		vstr.32	s14, [r5, #12]
+ 2741              		.loc 1 97 16 view .LVU841
+ 2742 0182 85ED037A 		vstr.32	s14, [r5, #12]
   98:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
- 2751              		.loc 1 98 9 is_stmt 1 view .LVU845
+ 2743              		.loc 1 98 9 is_stmt 1 view .LVU842
   98:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
- 2752              		.loc 1 98 19 is_stmt 0 view .LVU846
- 2753 018e B5EE007A 		vmov.f32	s14, #2.5e-1
- 2754              	.LBE531:
- 2755              	.LBE534:
- 2756              	.LBB535:
- 2757              	.LBB536:
- 2758              	.LBB537:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 75
+ 2744              		.loc 1 98 19 is_stmt 0 view .LVU843
+ 2745 0186 B5EE007A 		vmov.f32	s14, #2.5e-1
+ 2746              	.LBE531:
+ 2747              	.LBE534:
+ 2748              	.LBB535:
+ 2749              	.LBB536:
+ 2750              	.LBB537:
+  44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
+ 2751              		.loc 3 44 5 view .LVU844
+ 2752              		.syntax unified
+ 2753              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 2754 018a 89FE299A 		vmaxnm.f32 s18, s18, s19
+ 2755              	@ 0 "" 2
+ 2756              	.LVL177:
+  44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
+ 2757              		.loc 3 44 5 view .LVU845
+ 2758              		.thumb
+ 2759              		.syntax unified
+ 2760              	.LBE537:
+ 2761              	.LBE536:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 75
 
 
-  44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2759              		.loc 3 44 5 view .LVU847
- 2760              		.syntax unified
- 2761              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 2762 0192 C9FE8A9A 		vmaxnm.f32 s19, s19, s20
- 2763              	@ 0 "" 2
- 2764              	.LVL178:
-  44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2765              		.loc 3 44 5 view .LVU848
- 2766              		.thumb
- 2767              		.syntax unified
- 2768              	.LBE537:
- 2769              	.LBE536:
- 2770              	.LBB539:
- 2771              	.LBB540:
+ 2762              	.LBB539:
+ 2763              	.LBB540:
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2772              		.loc 3 55 5 view .LVU849
- 2773              		.syntax unified
- 2774              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 2775 0196 C9FEC89A 		vminnm.f32 s19, s19, s16
- 2776              	@ 0 "" 2
- 2777              		.thumb
- 2778              		.syntax unified
- 2779              	.LBE540:
- 2780              	.LBE539:
- 2781              	.LBE535:
- 2782              	.LBB544:
- 2783              	.LBB532:
+ 2764              		.loc 3 55 5 view .LVU846
+ 2765              		.syntax unified
+ 2766              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 2767 018e 89FE489A 		vminnm.f32 s18, s18, s16
+ 2768              	@ 0 "" 2
+ 2769              		.thumb
+ 2770              		.syntax unified
+ 2771              	.LBE540:
+ 2772              	.LBE539:
+ 2773              	.LBE535:
+ 2774              	.LBB544:
+ 2775              	.LBB532:
   98:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
- 2784              		.loc 1 98 19 view .LVU850
- 2785 019a 67EE877A 		vmul.f32	s15, s15, s14
- 2786              	.LVL179:
+ 2776              		.loc 1 98 19 view .LVU847
+ 2777 0192 67EE877A 		vmul.f32	s15, s15, s14
+ 2778              	.LVL178:
   98:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
- 2787              		.loc 1 98 19 view .LVU851
- 2788              	.LBE532:
- 2789              	.LBE544:
- 2790              	.LBB545:
- 2791              	.LBB546:
+ 2779              		.loc 1 98 19 view .LVU848
+ 2780              	.LBE532:
+ 2781              	.LBE544:
+ 2782              	.LBB545:
+ 2783              	.LBB546:
   66:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****    }
- 2792              		.loc 1 66 15 view .LVU852
- 2793 019e 95ED020A 		vldr.32	s0, [r5, #8]
- 2794 01a2 2846     		mov	r0, r5
- 2795              	.LBE546:
- 2796              	.LBE545:
- 2797              	.LBB548:
- 2798              	.LBB533:
+ 2784              		.loc 1 66 15 view .LVU849
+ 2785 0196 95ED020A 		vldr.32	s0, [r5, #8]
+ 2786 019a 2846     		mov	r0, r5
+ 2787              	.LBE546:
+ 2788              	.LBE545:
+ 2789              	.LBB548:
+ 2790              	.LBB533:
   98:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
- 2799              		.loc 1 98 12 view .LVU853
- 2800 01a4 C5ED057A 		vstr.32	s15, [r5, #20]
- 2801              	.LVL180:
+ 2791              		.loc 1 98 12 view .LVU850
+ 2792 019c C5ED057A 		vstr.32	s15, [r5, #20]
+ 2793              	.LVL179:
   98:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
- 2802              		.loc 1 98 12 view .LVU854
- 2803              	.LBE533:
- 2804              	.LBE548:
- 2805              		.loc 2 237 5 is_stmt 1 view .LVU855
- 2806              	.LBB549:
- 2807              	.LBI535:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 76
-
-
+ 2794              		.loc 1 98 12 view .LVU851
+ 2795              	.LBE533:
+ 2796              	.LBE548:
+ 2797              		.loc 2 235 5 is_stmt 1 view .LVU852
+ 2798              	.LBB549:
+ 2799              	.LBI535:
   64:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2808              		.loc 3 64 14 view .LVU856
- 2809              	.LBE549:
- 2810              		.loc 3 66 5 view .LVU857
- 2811              	.LBB550:
- 2812              	.LBB542:
- 2813              	.LBI536:
+ 2800              		.loc 3 64 14 view .LVU853
+ 2801              	.LBE549:
+ 2802              		.loc 3 66 5 view .LVU854
+ 2803              	.LBB550:
+ 2804              	.LBB542:
+ 2805              	.LBI536:
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2814              		.loc 3 40 14 view .LVU858
- 2815              	.LBB538:
+ 2806              		.loc 3 40 14 view .LVU855
+ 2807              	.LBB538:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 2816              		.loc 3 42 5 view .LVU859
+ 2808              		.loc 3 42 5 view .LVU856
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2817              		.loc 3 44 5 view .LVU860
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 76
+
+
+ 2809              		.loc 3 44 5 view .LVU857
   48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2818              		.loc 3 48 5 view .LVU861
+ 2810              		.loc 3 48 5 view .LVU858
   48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2819              		.loc 3 48 5 is_stmt 0 view .LVU862
- 2820              	.LBE538:
- 2821              	.LBE542:
- 2822              	.LBB543:
- 2823              	.LBI539:
+ 2811              		.loc 3 48 5 is_stmt 0 view .LVU859
+ 2812              	.LBE538:
+ 2813              	.LBE542:
+ 2814              	.LBB543:
+ 2815              	.LBI539:
   51:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2824              		.loc 3 51 14 is_stmt 1 view .LVU863
- 2825              	.LBB541:
+ 2816              		.loc 3 51 14 is_stmt 1 view .LVU860
+ 2817              	.LBB541:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 2826              		.loc 3 53 5 view .LVU864
+ 2818              		.loc 3 53 5 view .LVU861
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2827              		.loc 3 55 5 view .LVU865
+ 2819              		.loc 3 55 5 view .LVU862
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2828              		.loc 3 59 5 view .LVU866
+ 2820              		.loc 3 59 5 view .LVU863
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2829              		.loc 3 59 5 is_stmt 0 view .LVU867
- 2830              	.LBE541:
- 2831              	.LBE543:
- 2832              	.LBE550:
- 2833              	.LBB551:
- 2834              	.LBI551:
+ 2821              		.loc 3 59 5 is_stmt 0 view .LVU864
+ 2822              	.LBE541:
+ 2823              	.LBE543:
+ 2824              	.LBE550:
+ 2825              	.LBB551:
+ 2826              	.LBI551:
   95:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     { 
- 2835              		.loc 1 95 17 is_stmt 1 view .LVU868
- 2836              	.LBB552:
+ 2827              		.loc 1 95 17 is_stmt 1 view .LVU865
+ 2828              	.LBB552:
   97:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****         c_ = shape* 0.25;
- 2837              		.loc 1 97 9 view .LVU869
- 2838              	.LBB553:
- 2839              	.LBI553:
+ 2829              		.loc 1 97 9 view .LVU866
+ 2830              	.LBB553:
+ 2831              	.LBI553:
   64:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2840              		.loc 3 64 14 view .LVU870
- 2841              	.LBE553:
- 2842              	.LBE552:
- 2843              	.LBE551:
- 2844              		.loc 3 66 5 view .LVU871
- 2845              	.LBB563:
- 2846              	.LBB562:
- 2847              	.LBB560:
- 2848              	.LBB554:
- 2849              	.LBI554:
+ 2832              		.loc 3 64 14 view .LVU867
+ 2833              	.LBE553:
+ 2834              	.LBE552:
+ 2835              	.LBE551:
+ 2836              		.loc 3 66 5 view .LVU868
+ 2837              	.LBB563:
+ 2838              	.LBB562:
+ 2839              	.LBB560:
+ 2840              	.LBB554:
+ 2841              	.LBI554:
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 77
-
-
- 2850              		.loc 3 40 14 view .LVU872
- 2851              	.LBB555:
+ 2842              		.loc 3 40 14 view .LVU869
+ 2843              	.LBB555:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 2852              		.loc 3 42 5 view .LVU873
+ 2844              		.loc 3 42 5 view .LVU870
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2853              		.loc 3 44 5 view .LVU874
+ 2845              		.loc 3 44 5 view .LVU871
+ 2846              		.syntax unified
+ 2847              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 2848 01a0 C9FE297A 		vmaxnm.f32 s15, s18, s19
+ 2849              	@ 0 "" 2
+ 2850              	.LVL180:
+  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2851              		.loc 3 48 5 view .LVU872
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 77
+
+
+  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2852              		.loc 3 48 5 is_stmt 0 view .LVU873
+ 2853              		.thumb
  2854              		.syntax unified
- 2855              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 2856 01a8 C9FE8A7A 		vmaxnm.f32 s15, s19, s20
- 2857              	@ 0 "" 2
- 2858              	.LVL181:
-  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2859              		.loc 3 48 5 view .LVU875
-  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2860              		.loc 3 48 5 is_stmt 0 view .LVU876
- 2861              		.thumb
- 2862              		.syntax unified
- 2863              	.LBE555:
- 2864              	.LBE554:
- 2865              	.LBB556:
- 2866              	.LBI556:
+ 2855              	.LBE555:
+ 2856              	.LBE554:
+ 2857              	.LBB556:
+ 2858              	.LBI556:
   51:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2867              		.loc 3 51 14 is_stmt 1 view .LVU877
- 2868              	.LBB557:
+ 2859              		.loc 3 51 14 is_stmt 1 view .LVU874
+ 2860              	.LBB557:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 2869              		.loc 3 53 5 view .LVU878
+ 2861              		.loc 3 53 5 view .LVU875
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2870              		.loc 3 55 5 view .LVU879
- 2871              	.LBE557:
- 2872              	.LBE556:
- 2873              	.LBE560:
+ 2862              		.loc 3 55 5 view .LVU876
+ 2863              	.LBE557:
+ 2864              	.LBE556:
+ 2865              	.LBE560:
   98:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
- 2874              		.loc 1 98 19 is_stmt 0 view .LVU880
- 2875 01ac 69EE879A 		vmul.f32	s19, s19, s14
- 2876              	.LVL182:
- 2877              	.LBB561:
- 2878              	.LBB559:
- 2879              	.LBB558:
+ 2866              		.loc 1 98 19 is_stmt 0 view .LVU877
+ 2867 01a4 29EE079A 		vmul.f32	s18, s18, s14
+ 2868              	.LVL181:
+ 2869              	.LBB561:
+ 2870              	.LBB559:
+ 2871              	.LBB558:
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2880              		.loc 3 55 5 view .LVU881
+ 2872              		.loc 3 55 5 view .LVU878
+ 2873              		.syntax unified
+ 2874              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 2875 01a8 C7FEC87A 		vminnm.f32 s15, s15, s16
+ 2876              	@ 0 "" 2
+ 2877              	.LVL182:
+  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2878              		.loc 3 59 5 is_stmt 1 view .LVU879
+  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2879              		.loc 3 59 5 is_stmt 0 view .LVU880
+ 2880              		.thumb
  2881              		.syntax unified
- 2882              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 2883 01b0 C7FEC87A 		vminnm.f32 s15, s15, s16
- 2884              	@ 0 "" 2
- 2885              	.LVL183:
-  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2886              		.loc 3 59 5 is_stmt 1 view .LVU882
-  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2887              		.loc 3 59 5 is_stmt 0 view .LVU883
- 2888              		.thumb
- 2889              		.syntax unified
- 2890              	.LBE558:
- 2891              	.LBE559:
- 2892              	.LBE561:
+ 2882              	.LBE558:
+ 2883              	.LBE559:
+ 2884              	.LBE561:
   97:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****         c_ = shape* 0.25;
- 2893              		.loc 1 97 16 view .LVU884
- 2894 01b4 C5ED107A 		vstr.32	s15, [r5, #64]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 78
+ 2885              		.loc 1 97 16 view .LVU881
+ 2886 01ac C5ED107A 		vstr.32	s15, [r5, #64]
+  98:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
+ 2887              		.loc 1 98 9 is_stmt 1 view .LVU882
+  98:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
+ 2888              		.loc 1 98 12 is_stmt 0 view .LVU883
+ 2889 01b0 85ED129A 		vstr.32	s18, [r5, #72]
+  98:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
+ 2890              		.loc 1 98 12 view .LVU884
+ 2891              	.LBE562:
+ 2892              	.LBE563:
+ 236:PSP/AudioEngine.cpp ****     _osc1.SetDetune(daisysp::fclamp(target_detune1, -50.0f, 50.0f));
+ 2893              		.loc 2 236 5 is_stmt 1 view .LVU885
+ 2894              	.LVL183:
+ 2895              	.LBB564:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 78
 
 
-  98:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
- 2895              		.loc 1 98 9 is_stmt 1 view .LVU885
-  98:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
- 2896              		.loc 1 98 12 is_stmt 0 view .LVU886
- 2897 01b8 C5ED129A 		vstr.32	s19, [r5, #72]
-  98:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****     }
- 2898              		.loc 1 98 12 view .LVU887
- 2899              	.LBE562:
- 2900              	.LBE563:
- 238:PSP/AudioEngine.cpp ****     _osc1.SetDetune(daisysp::fclamp(target_detune1, -50.0f, 50.0f));
- 2901              		.loc 2 238 5 is_stmt 1 view .LVU888
- 2902              	.LVL184:
- 2903              	.LBB564:
- 2904              	.LBI564:
+ 2896              	.LBI564:
   64:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2905              		.loc 3 64 14 view .LVU889
- 2906              	.LBE564:
- 2907              		.loc 3 66 5 view .LVU890
- 2908              	.LBB569:
- 2909              	.LBB565:
- 2910              	.LBI565:
+ 2897              		.loc 3 64 14 view .LVU886
+ 2898              	.LBE564:
+ 2899              		.loc 3 66 5 view .LVU887
+ 2900              	.LBB569:
+ 2901              	.LBB565:
+ 2902              	.LBI565:
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2911              		.loc 3 40 14 view .LVU891
- 2912              	.LBB566:
+ 2903              		.loc 3 40 14 view .LVU888
+ 2904              	.LBB566:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 2913              		.loc 3 42 5 view .LVU892
+ 2905              		.loc 3 42 5 view .LVU889
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2914              		.loc 3 44 5 view .LVU893
- 2915 01bc DFED819A 		vldr.32	s19, .L109+12
+ 2906              		.loc 3 44 5 view .LVU890
+ 2907 01b4 9FED839A 		vldr.32	s18, .L109+12
+ 2908              		.syntax unified
+ 2909              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 2910 01b8 CDFE89DA 		vmaxnm.f32 s27, s27, s18
+ 2911              	@ 0 "" 2
+ 2912              	.LVL184:
+  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2913              		.loc 3 48 5 view .LVU891
+  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2914              		.loc 3 48 5 is_stmt 0 view .LVU892
+ 2915              		.thumb
  2916              		.syntax unified
- 2917              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 2918 01c0 8EFE29EA 		vmaxnm.f32 s28, s28, s19
- 2919              	@ 0 "" 2
- 2920              	.LVL185:
-  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2921              		.loc 3 48 5 view .LVU894
-  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2922              		.loc 3 48 5 is_stmt 0 view .LVU895
- 2923              		.thumb
- 2924              		.syntax unified
- 2925              	.LBE566:
- 2926              	.LBE565:
- 2927              	.LBB567:
- 2928              	.LBI567:
+ 2917              	.LBE566:
+ 2918              	.LBE565:
+ 2919              	.LBB567:
+ 2920              	.LBI567:
   51:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2929              		.loc 3 51 14 is_stmt 1 view .LVU896
- 2930              	.LBB568:
+ 2921              		.loc 3 51 14 is_stmt 1 view .LVU893
+ 2922              	.LBB568:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 2931              		.loc 3 53 5 view .LVU897
+ 2923              		.loc 3 53 5 view .LVU894
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2932              		.loc 3 55 5 view .LVU898
+ 2924              		.loc 3 55 5 view .LVU895
+ 2925              		.syntax unified
+ 2926              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 2927 01bc CDFECDDA 		vminnm.f32 s27, s27, s26
+ 2928              	@ 0 "" 2
+ 2929              	.LVL185:
+  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2930              		.loc 3 59 5 view .LVU896
+  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2931              		.loc 3 59 5 is_stmt 0 view .LVU897
+ 2932              		.thumb
  2933              		.syntax unified
- 2934              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 2935 01c4 8EFE6DEA 		vminnm.f32 s28, s28, s27
- 2936              	@ 0 "" 2
- 2937              	.LVL186:
-  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 79
-
-
- 2938              		.loc 3 59 5 view .LVU899
-  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2939              		.loc 3 59 5 is_stmt 0 view .LVU900
- 2940              		.thumb
- 2941              		.syntax unified
- 2942              	.LBE568:
- 2943              	.LBE567:
- 2944              	.LBE569:
- 2945              	.LBB570:
- 2946              	.LBI545:
+ 2934              	.LBE568:
+ 2935              	.LBE567:
+ 2936              	.LBE569:
+ 2937              	.LBB570:
+ 2938              	.LBI545:
   63:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****    {
- 2947              		.loc 1 63 9 is_stmt 1 view .LVU901
- 2948              	.LBB547:
+ 2939              		.loc 1 63 9 is_stmt 1 view .LVU898
+ 2940              	.LBB547:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 79
+
+
   65:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****        SetFreq(freq_); 
- 2949              		.loc 1 65 8 view .LVU902
+ 2941              		.loc 1 65 8 view .LVU899
   65:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****        SetFreq(freq_); 
- 2950              		.loc 1 65 22 is_stmt 0 view .LVU903
- 2951 01c8 85ED04EA 		vstr.32	s28, [r5, #16]
+ 2942              		.loc 1 65 22 is_stmt 0 view .LVU900
+ 2943 01c0 C5ED04DA 		vstr.32	s27, [r5, #16]
   66:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****    }
- 2952              		.loc 1 66 8 is_stmt 1 view .LVU904
+ 2944              		.loc 1 66 8 is_stmt 1 view .LVU901
   66:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****    }
- 2953              		.loc 1 66 15 is_stmt 0 view .LVU905
- 2954 01cc FFF7FEFF 		bl	_ZN10politekdsp10Oscillator7SetFreqEf
- 2955              	.LVL187:
+ 2945              		.loc 1 66 15 is_stmt 0 view .LVU902
+ 2946 01c4 FFF7FEFF 		bl	_ZN10politekdsp10Oscillator7SetFreqEf
+ 2947              	.LVL186:
   66:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****    }
- 2956              		.loc 1 66 15 view .LVU906
- 2957              	.LBE547:
- 2958              	.LBE570:
- 239:PSP/AudioEngine.cpp ****     _osc2.SetDetune(daisysp::fclamp(target_detune2, -50.0f, 50.0f));
- 2959              		.loc 2 239 5 is_stmt 1 view .LVU907
- 2960              	.LBB571:
- 2961              	.LBI571:
+ 2948              		.loc 1 66 15 view .LVU903
+ 2949              	.LBE547:
+ 2950              	.LBE570:
+ 237:PSP/AudioEngine.cpp ****     _osc2.SetDetune(daisysp::fclamp(target_detune2, -50.0f, 50.0f));
+ 2951              		.loc 2 237 5 is_stmt 1 view .LVU904
+ 2952              	.LBB571:
+ 2953              	.LBI571:
   64:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2962              		.loc 3 64 14 view .LVU908
- 2963              	.LBE571:
- 2964              		.loc 3 66 5 view .LVU909
- 2965              	.LBB580:
- 2966              	.LBB572:
- 2967              	.LBI572:
+ 2954              		.loc 3 64 14 view .LVU905
+ 2955              	.LBE571:
+ 2956              		.loc 3 66 5 view .LVU906
+ 2957              	.LBB580:
+ 2958              	.LBB572:
+ 2959              	.LBI572:
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2968              		.loc 3 40 14 view .LVU910
- 2969              	.LBB573:
+ 2960              		.loc 3 40 14 view .LVU907
+ 2961              	.LBB573:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 2970              		.loc 3 42 5 view .LVU911
+ 2962              		.loc 3 42 5 view .LVU908
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2971              		.loc 3 44 5 view .LVU912
- 2972              	.LBE573:
- 2973              	.LBE572:
- 2974              	.LBE580:
- 2975              	.LBB581:
- 2976              	.LBB582:
+ 2963              		.loc 3 44 5 view .LVU909
+ 2964              	.LBE573:
+ 2965              	.LBE572:
+ 2966              	.LBE580:
+ 2967              	.LBB581:
+ 2968              	.LBB582:
   66:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****    }
- 2977              		.loc 1 66 15 is_stmt 0 view .LVU913
- 2978 01d0 95ED0F0A 		vldr.32	s0, [r5, #60]
- 2979              	.LBE582:
- 2980              	.LBE581:
- 2981              	.LBB585:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 80
-
-
- 2982              	.LBB575:
- 2983              	.LBB574:
+ 2969              		.loc 1 66 15 is_stmt 0 view .LVU910
+ 2970 01c8 95ED0F0A 		vldr.32	s0, [r5, #60]
+ 2971              	.LBE582:
+ 2972              	.LBE581:
+ 2973              	.LBB585:
+ 2974              	.LBB575:
+ 2975              	.LBB574:
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 2984              		.loc 3 44 5 view .LVU914
+ 2976              		.loc 3 44 5 view .LVU911
+ 2977              		.syntax unified
+ 2978              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 2979 01cc CCFE89CA 		vmaxnm.f32 s25, s25, s18
+ 2980              	@ 0 "" 2
+ 2981              	.LVL187:
+  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2982              		.loc 3 48 5 is_stmt 1 view .LVU912
+  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 2983              		.loc 3 48 5 is_stmt 0 view .LVU913
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 80
+
+
+ 2984              		.thumb
  2985              		.syntax unified
- 2986              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 2987 01d4 8DFE29DA 		vmaxnm.f32 s26, s26, s19
- 2988              	@ 0 "" 2
- 2989              	.LVL188:
-  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2990              		.loc 3 48 5 is_stmt 1 view .LVU915
-  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 2991              		.loc 3 48 5 is_stmt 0 view .LVU916
- 2992              		.thumb
- 2993              		.syntax unified
- 2994              	.LBE574:
- 2995              	.LBE575:
- 2996              	.LBB576:
- 2997              	.LBI576:
+ 2986              	.LBE574:
+ 2987              	.LBE575:
+ 2988              	.LBB576:
+ 2989              	.LBI576:
   51:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 2998              		.loc 3 51 14 is_stmt 1 view .LVU917
- 2999              	.LBB577:
+ 2990              		.loc 3 51 14 is_stmt 1 view .LVU914
+ 2991              	.LBB577:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 3000              		.loc 3 53 5 view .LVU918
+ 2992              		.loc 3 53 5 view .LVU915
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 3001              		.loc 3 55 5 view .LVU919
- 3002              	.LBE577:
- 3003              	.LBE576:
- 3004              	.LBE585:
- 3005              	.LBB586:
- 3006              	.LBB583:
+ 2993              		.loc 3 55 5 view .LVU916
+ 2994              	.LBE577:
+ 2995              	.LBE576:
+ 2996              	.LBE585:
+ 2997              	.LBB586:
+ 2998              	.LBB583:
   66:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****    }
- 3007              		.loc 1 66 15 is_stmt 0 view .LVU920
- 3008 01d8 4846     		mov	r0, r9
- 3009              	.LBE583:
- 3010              	.LBE586:
- 3011              	.LBB587:
- 3012              	.LBB579:
- 3013              	.LBB578:
+ 2999              		.loc 1 66 15 is_stmt 0 view .LVU917
+ 3000 01d0 4846     		mov	r0, r9
+ 3001              	.LBE583:
+ 3002              	.LBE586:
+ 3003              	.LBB587:
+ 3004              	.LBB579:
+ 3005              	.LBB578:
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 3014              		.loc 3 55 5 view .LVU921
+ 3006              		.loc 3 55 5 view .LVU918
+ 3007              		.syntax unified
+ 3008              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 3009 01d2 8CFECDDA 		vminnm.f32 s26, s25, s26
+ 3010              	@ 0 "" 2
+ 3011              	.LVL188:
+  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 3012              		.loc 3 59 5 is_stmt 1 view .LVU919
+  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 3013              		.loc 3 59 5 is_stmt 0 view .LVU920
+ 3014              		.thumb
  3015              		.syntax unified
- 3016              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 3017 01da CDFE6DDA 		vminnm.f32 s27, s26, s27
- 3018              	@ 0 "" 2
- 3019              	.LVL189:
-  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 3020              		.loc 3 59 5 is_stmt 1 view .LVU922
-  59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 3021              		.loc 3 59 5 is_stmt 0 view .LVU923
- 3022              		.thumb
- 3023              		.syntax unified
- 3024              	.LBE578:
- 3025              	.LBE579:
- 3026              	.LBE587:
- 3027              	.LBB588:
- 3028              	.LBI581:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 81
-
-
+ 3016              	.LBE578:
+ 3017              	.LBE579:
+ 3018              	.LBE587:
+ 3019              	.LBB588:
+ 3020              	.LBI581:
   63:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****    {
- 3029              		.loc 1 63 9 is_stmt 1 view .LVU924
- 3030              	.LBB584:
+ 3021              		.loc 1 63 9 is_stmt 1 view .LVU921
+ 3022              	.LBB584:
   65:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****        SetFreq(freq_); 
- 3031              		.loc 1 65 8 view .LVU925
+ 3023              		.loc 1 65 8 view .LVU922
   65:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****        SetFreq(freq_); 
- 3032              		.loc 1 65 22 is_stmt 0 view .LVU926
- 3033 01de C5ED11DA 		vstr.32	s27, [r5, #68]
+ 3024              		.loc 1 65 22 is_stmt 0 view .LVU923
+ 3025 01d6 85ED11DA 		vstr.32	s26, [r5, #68]
   66:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****    }
- 3034              		.loc 1 66 8 is_stmt 1 view .LVU927
+ 3026              		.loc 1 66 8 is_stmt 1 view .LVU924
   66:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****    }
- 3035              		.loc 1 66 15 is_stmt 0 view .LVU928
- 3036 01e2 FFF7FEFF 		bl	_ZN10politekdsp10Oscillator7SetFreqEf
- 3037              	.LVL190:
+ 3027              		.loc 1 66 15 is_stmt 0 view .LVU925
+ 3028 01da FFF7FEFF 		bl	_ZN10politekdsp10Oscillator7SetFreqEf
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 81
+
+
+ 3029              	.LVL189:
   66:PSP/../../libs/PoliTeKDSP/Oscillators/oscillator.h ****    }
- 3038              		.loc 1 66 15 view .LVU929
- 3039              	.LBE584:
- 3040              	.LBE588:
- 240:PSP/AudioEngine.cpp ****     _dust.SetDensity(daisysp::fclamp(target_noise, 0.0f, 1.0f));
- 3041              		.loc 2 240 5 is_stmt 1 view .LVU930
- 3042              	.LBB589:
- 3043              	.LBI589:
+ 3030              		.loc 1 66 15 view .LVU926
+ 3031              	.LBE584:
+ 3032              	.LBE588:
+ 238:PSP/AudioEngine.cpp ****     _dust.SetDensity(daisysp::fclamp(_currentPreset.noise.color, 0.0f, 1.0f));
+ 3033              		.loc 2 238 5 is_stmt 1 view .LVU927
+ 3034              	.LBB589:
+ 3035              	.LBI589:
   64:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 3044              		.loc 3 64 14 view .LVU931
- 3045              	.LBE589:
- 3046              		.loc 3 66 5 view .LVU932
- 3047              	.LBB596:
- 3048              	.LBB590:
- 3049              	.LBI590:
+ 3036              		.loc 3 64 14 view .LVU928
+ 3037              	.LBE589:
+ 3038              		.loc 3 66 5 view .LVU929
+ 3039              	.LBB596:
+ 3040              	.LBB590:
+ 3041              	.LBI590:
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 3050              		.loc 3 40 14 view .LVU933
- 3051              	.LBB591:
+ 3042              		.loc 3 40 14 view .LVU930
+ 3043              	.LBB591:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 3052              		.loc 3 42 5 view .LVU934
+ 3044              		.loc 3 42 5 view .LVU931
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 3053              		.loc 3 44 5 view .LVU935
- 3054              	.LBE591:
- 3055              	.LBE590:
- 3056              	.LBE596:
- 3057              	.LBB597:
- 3058              	.LBB598:
- 3059              		.loc 5 53 29 is_stmt 0 view .LVU936
- 3060 01e6 9FED787A 		vldr.32	s14, .L109+16
- 3061              	.LBE598:
- 3062              	.LBE597:
- 3063              	.LBB608:
- 3064              	.LBB593:
- 3065              	.LBB592:
+ 3045              		.loc 3 44 5 view .LVU932
+ 3046              	.LBE591:
+ 3047              	.LBE590:
+ 3048              	.LBE596:
+ 3049              	.LBB597:
+ 3050              	.LBB598:
+ 3051              		.loc 5 53 29 is_stmt 0 view .LVU933
+ 3052 01de 9FED7A7A 		vldr.32	s14, .L109+16
+ 3053              	.LBE598:
+ 3054              	.LBE597:
+ 3055              		.loc 2 238 21 view .LVU934
+ 3056 01e2 04F62C53 		addw	r3, r4, #3372
+ 239:PSP/AudioEngine.cpp **** 
+ 240:PSP/AudioEngine.cpp ****     // Generazione del suono
+ 241:PSP/AudioEngine.cpp ****     float s_osc1 = _osc1.Process() * _smoothedPreset.osc1.amp;
+ 3057              		.loc 2 241 33 view .LVU935
+ 3058 01e6 2846     		mov	r0, r5
+ 3059              	.LBB607:
+ 3060              	.LBB593:
+ 3061              	.LBB592:
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 3066              		.loc 3 44 5 view .LVU937
- 3067              		.syntax unified
- 3068              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 3069 01ea C8FE8A7A 		vmaxnm.f32 s15, s17, s20
- 3070              	@ 0 "" 2
- 3071              	.LVL191:
+ 3062              		.loc 3 44 5 view .LVU936
+ 3063 01e8 D3ED007A 		vldr.32	s15, [r3]
+ 3064              		.syntax unified
+ 3065              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 3066 01ec C7FEA97A 		vmaxnm.f32 s15, s15, s19
+ 3067              	@ 0 "" 2
+ 3068              	.LVL190:
   48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 3072              		.loc 3 48 5 is_stmt 1 view .LVU938
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 82
+ 3069              		.loc 3 48 5 is_stmt 1 view .LVU937
+  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ 3070              		.loc 3 48 5 is_stmt 0 view .LVU938
+ 3071              		.thumb
+ 3072              		.syntax unified
+ 3073              	.LBE592:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 82
 
 
-  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 3073              		.loc 3 48 5 is_stmt 0 view .LVU939
- 3074              		.thumb
- 3075              		.syntax unified
- 3076              	.LBE592:
- 3077              	.LBE593:
- 3078              	.LBB594:
- 3079              	.LBI594:
+ 3074              	.LBE593:
+ 3075              	.LBB594:
+ 3076              	.LBI594:
   51:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 3080              		.loc 3 51 14 is_stmt 1 view .LVU940
- 3081              	.LBB595:
+ 3077              		.loc 3 51 14 is_stmt 1 view .LVU939
+ 3078              	.LBB595:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 3082              		.loc 3 53 5 view .LVU941
+ 3079              		.loc 3 53 5 view .LVU940
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 3083              		.loc 3 55 5 view .LVU942
- 3084              		.syntax unified
- 3085              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 3086 01ee C7FEC87A 		vminnm.f32 s15, s15, s16
- 3087              	@ 0 "" 2
- 3088              	.LVL192:
+ 3080              		.loc 3 55 5 view .LVU941
+ 3081              		.syntax unified
+ 3082              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 3083 01f0 C7FEC87A 		vminnm.f32 s15, s15, s16
+ 3084              	@ 0 "" 2
+ 3085              	.LVL191:
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 3089              		.loc 3 59 5 view .LVU943
+ 3086              		.loc 3 59 5 view .LVU942
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 3090              		.loc 3 59 5 is_stmt 0 view .LVU944
- 3091              		.thumb
- 3092              		.syntax unified
- 3093              	.LBE595:
- 3094              	.LBE594:
- 3095              	.LBE608:
- 3096              	.LBB609:
- 3097              	.LBI597:
+ 3087              		.loc 3 59 5 is_stmt 0 view .LVU943
+ 3088              		.thumb
+ 3089              		.syntax unified
+ 3090              	.LBE595:
+ 3091              	.LBE594:
+ 3092              	.LBE607:
+ 3093              	.LBB608:
+ 3094              	.LBI597:
   50:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****     {
- 3098              		.loc 5 50 10 is_stmt 1 view .LVU945
- 3099              	.LBB605:
+ 3095              		.loc 5 50 10 is_stmt 1 view .LVU944
+ 3096              	.LBB605:
   52:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****         density_ = density_ * .3f;
- 3100              		.loc 5 52 9 view .LVU946
- 3101              	.LBB599:
- 3102              	.LBI599:
+ 3097              		.loc 5 52 9 view .LVU945
+ 3098              	.LBB599:
+ 3099              	.LBI599:
   64:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 3103              		.loc 3 64 14 view .LVU947
- 3104              	.LBE599:
- 3105              	.LBE605:
- 3106              	.LBE609:
- 3107              		.loc 3 66 5 view .LVU948
- 3108              	.LBB610:
- 3109              	.LBB606:
- 3110              	.LBB604:
- 3111              	.LBB600:
- 3112              	.LBI600:
+ 3100              		.loc 3 64 14 view .LVU946
+ 3101              	.LBE599:
+ 3102              	.LBE605:
+ 3103              	.LBE608:
+ 3104              		.loc 3 66 5 view .LVU947
+ 3105              	.LBB609:
+ 3106              	.LBB606:
+ 3107              	.LBB604:
+ 3108              	.LBB600:
+ 3109              	.LBI600:
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 3113              		.loc 3 40 14 view .LVU949
- 3114              	.LBB601:
+ 3110              		.loc 3 40 14 view .LVU948
+ 3111              	.LBB601:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 3115              		.loc 3 42 5 view .LVU950
+ 3112              		.loc 3 42 5 view .LVU949
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 3116              		.loc 3 44 5 view .LVU951
- 3117              		.syntax unified
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 83
+ 3113              		.loc 3 44 5 view .LVU950
+ 3114              		.syntax unified
+ 3115              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 3116 01f4 C7FEA97A 		vmaxnm.f32 s15, s15, s19
+ 3117              	@ 0 "" 2
+ 3118              	.LVL192:
+  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 83
 
 
- 3118              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 3119 01f2 C7FE8A7A 		vmaxnm.f32 s15, s15, s20
- 3120              	@ 0 "" 2
- 3121              	.LVL193:
+ 3119              		.loc 3 48 5 view .LVU951
   48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 3122              		.loc 3 48 5 view .LVU952
-  48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 3123              		.loc 3 48 5 is_stmt 0 view .LVU953
- 3124              		.thumb
- 3125              		.syntax unified
- 3126              	.LBE601:
- 3127              	.LBE600:
- 3128              	.LBB602:
- 3129              	.LBI602:
+ 3120              		.loc 3 48 5 is_stmt 0 view .LVU952
+ 3121              		.thumb
+ 3122              		.syntax unified
+ 3123              	.LBE601:
+ 3124              	.LBE600:
+ 3125              	.LBB602:
+ 3126              	.LBI602:
   51:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 3130              		.loc 3 51 14 is_stmt 1 view .LVU954
- 3131              	.LBB603:
+ 3127              		.loc 3 51 14 is_stmt 1 view .LVU953
+ 3128              	.LBB603:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 3132              		.loc 3 53 5 view .LVU955
+ 3129              		.loc 3 53 5 view .LVU954
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 3133              		.loc 3 55 5 view .LVU956
- 3134              		.syntax unified
- 3135              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 3136 01f6 C7FEC87A 		vminnm.f32 s15, s15, s16
- 3137              	@ 0 "" 2
- 3138              	.LVL194:
+ 3130              		.loc 3 55 5 view .LVU955
+ 3131              		.syntax unified
+ 3132              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 3133 01f8 C7FEC87A 		vminnm.f32 s15, s15, s16
+ 3134              	@ 0 "" 2
+ 3135              	.LVL193:
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 3139              		.loc 3 59 5 view .LVU957
+ 3136              		.loc 3 59 5 view .LVU956
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 3140              		.loc 3 59 5 is_stmt 0 view .LVU958
- 3141              		.thumb
- 3142              		.syntax unified
- 3143              	.LBE603:
- 3144              	.LBE602:
- 3145              	.LBE604:
- 3146              		.loc 5 53 9 is_stmt 1 view .LVU959
- 3147              		.loc 5 53 29 is_stmt 0 view .LVU960
- 3148 01fa 67EE877A 		vmul.f32	s15, s15, s14
- 3149              	.LBE606:
- 3150              	.LBE610:
- 241:PSP/AudioEngine.cpp **** 
- 242:PSP/AudioEngine.cpp ****     // Generazione del suono
- 243:PSP/AudioEngine.cpp ****     float s_osc1 = _osc1.Process() * _smoothedPreset.osc1.amp;
- 3151              		.loc 2 243 33 view .LVU961
- 3152 01fe 2846     		mov	r0, r5
- 3153              	.LBB611:
- 3154              	.LBB607:
- 3155              		.loc 5 53 18 view .LVU962
- 3156 0200 C5ED307A 		vstr.32	s15, [r5, #192]
- 3157              	.LVL195:
- 3158              		.loc 5 53 18 view .LVU963
- 3159              	.LBE607:
- 3160              	.LBE611:
- 3161              		.loc 2 243 5 is_stmt 1 view .LVU964
- 3162              		.loc 2 243 33 is_stmt 0 view .LVU965
- 3163 0204 FFF7FEFF 		bl	_ZN10politekdsp10Oscillator7ProcessEv
- 3164              	.LVL196:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 84
+ 3137              		.loc 3 59 5 is_stmt 0 view .LVU957
+ 3138              		.thumb
+ 3139              		.syntax unified
+ 3140              	.LBE603:
+ 3141              	.LBE602:
+ 3142              	.LBE604:
+ 3143              		.loc 5 53 9 is_stmt 1 view .LVU958
+ 3144              		.loc 5 53 29 is_stmt 0 view .LVU959
+ 3145 01fc 67EE877A 		vmul.f32	s15, s15, s14
+ 3146              		.loc 5 53 18 view .LVU960
+ 3147 0200 C5ED307A 		vstr.32	s15, [r5, #192]
+ 3148              	.LVL194:
+ 3149              		.loc 5 53 18 view .LVU961
+ 3150              	.LBE606:
+ 3151              	.LBE609:
+ 3152              		.loc 2 241 5 is_stmt 1 view .LVU962
+ 3153              		.loc 2 241 33 is_stmt 0 view .LVU963
+ 3154 0204 FFF7FEFF 		bl	_ZN10politekdsp10Oscillator7ProcessEv
+ 3155              	.LVL195:
+ 3156              		.loc 2 241 59 view .LVU964
+ 3157 0208 04F55963 		add	r3, r4, #3472
+ 242:PSP/AudioEngine.cpp ****     float s_osc2 = _osc2.Process() * _smoothedPreset.osc2.amp;
+ 3158              		.loc 2 242 33 view .LVU965
+ 3159 020c 4846     		mov	r0, r9
+ 241:PSP/AudioEngine.cpp ****     float s_osc2 = _osc2.Process() * _smoothedPreset.osc2.amp;
+ 3160              		.loc 2 241 59 view .LVU966
+ 3161 020e D3ED00CA 		vldr.32	s25, [r3]
+ 3162 0212 60EE2CCA 		vmul.f32	s25, s0, s25
+ 3163              	.LVL196:
+ 3164              		.loc 2 242 5 is_stmt 1 view .LVU967
+ 3165              		.loc 2 242 33 is_stmt 0 view .LVU968
+ 3166 0216 FFF7FEFF 		bl	_ZN10politekdsp10Oscillator7ProcessEv
+ 3167              	.LVL197:
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 84
 
 
- 3165              		.loc 2 243 59 view .LVU966
- 3166 0208 04F55963 		add	r3, r4, #3472
- 244:PSP/AudioEngine.cpp ****     float s_osc2 = _osc2.Process() * _smoothedPreset.osc2.amp;
- 3167              		.loc 2 244 33 view .LVU967
- 3168 020c 4846     		mov	r0, r9
- 243:PSP/AudioEngine.cpp ****     float s_osc2 = _osc2.Process() * _smoothedPreset.osc2.amp;
- 3169              		.loc 2 243 59 view .LVU968
- 3170 020e D3ED009A 		vldr.32	s19, [r3]
- 3171 0212 60EE299A 		vmul.f32	s19, s0, s19
- 3172              	.LVL197:
- 3173              		.loc 2 244 5 is_stmt 1 view .LVU969
- 3174              		.loc 2 244 33 is_stmt 0 view .LVU970
- 3175 0216 FFF7FEFF 		bl	_ZN10politekdsp10Oscillator7ProcessEv
- 3176              	.LVL198:
- 3177              		.loc 2 244 59 view .LVU971
- 3178 021a 04F6A453 		addw	r3, r4, #3492
- 3179              	.LBB612:
- 3180              	.LBB613:
+ 3168              		.loc 2 242 59 view .LVU969
+ 3169 021a 04F6A453 		addw	r3, r4, #3492
+ 3170              	.LBB610:
+ 3171              	.LBB611:
   41:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****         float u           = rand() * kRandFrac;
- 3181              		.loc 5 41 36 view .LVU972
- 3182 021e D5ED308A 		vldr.32	s17, [r5, #192]
- 3183              	.LVL199:
-  41:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****         float u           = rand() * kRandFrac;
- 3184              		.loc 5 41 36 view .LVU973
- 3185              	.LBE613:
- 3186              	.LBE612:
- 3187              		.loc 2 244 59 view .LVU974
- 3188 0222 93ED00DA 		vldr.32	s26, [r3]
- 3189 0226 20EE0DDA 		vmul.f32	s26, s0, s26
- 3190              	.LVL200:
- 245:PSP/AudioEngine.cpp ****     float sNoise = _dust.Process() * _smoothedPreset.noise.amp;
- 3191              		.loc 2 245 5 is_stmt 1 view .LVU975
- 3192              	.LBB617:
- 3193              	.LBI612:
+ 3172              		.loc 5 41 36 view .LVU970
+ 3173 021e 95ED309A 		vldr.32	s18, [r5, #192]
+ 3174              	.LBE611:
+ 3175              	.LBE610:
+ 3176              		.loc 2 242 59 view .LVU971
+ 3177 0222 93ED00DA 		vldr.32	s26, [r3]
+ 3178 0226 20EE0DDA 		vmul.f32	s26, s0, s26
+ 3179              	.LVL198:
+ 243:PSP/AudioEngine.cpp ****     float sNoise = _dust.Process() * _smoothedPreset.noise.amp;
+ 3180              		.loc 2 243 5 is_stmt 1 view .LVU972
+ 3181              	.LBB615:
+ 3182              	.LBI610:
   39:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****     {
- 3194              		.loc 5 39 11 view .LVU976
- 3195              	.LBB614:
+ 3183              		.loc 5 39 11 view .LVU973
+ 3184              	.LBB612:
   41:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****         float u           = rand() * kRandFrac;
- 3196              		.loc 5 41 9 view .LVU977
+ 3185              		.loc 5 41 9 view .LVU974
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****         if(u < density_)
- 3197              		.loc 5 42 9 view .LVU978
+ 3186              		.loc 5 42 9 view .LVU975
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****         if(u < density_)
- 3198              		.loc 5 42 33 is_stmt 0 view .LVU979
- 3199 022a FFF7FEFF 		bl	rand
- 3200              	.LVL201:
+ 3187              		.loc 5 42 33 is_stmt 0 view .LVU976
+ 3188 022a FFF7FEFF 		bl	rand
+ 3189              	.LVL199:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****         if(u < density_)
- 3201              		.loc 5 42 38 view .LVU980
- 3202 022e 07EE900A 		vmov	s15, r0	@ int
+ 3190              		.loc 5 42 38 view .LVU977
+ 3191 022e 07EE900A 		vmov	s15, r0	@ int
   43:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****         {
- 3203              		.loc 5 43 9 view .LVU981
- 3204 0232 95ED307A 		vldr.32	s14, [r5, #192]
- 3205              	.LBE614:
- 3206              	.LBE617:
- 3207              		.loc 2 245 60 view .LVU982
- 3208 0236 04F6D453 		addw	r3, r4, #3540
- 3209              	.LBB618:
- 3210              	.LBB615:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 85
-
-
+ 3192              		.loc 5 43 9 view .LVU978
+ 3193 0232 95ED307A 		vldr.32	s14, [r5, #192]
+ 3194              	.LBE612:
+ 3195              	.LBE615:
+ 3196              		.loc 2 243 60 view .LVU979
+ 3197 0236 04F6D453 		addw	r3, r4, #3540
+ 3198              	.LBB616:
+ 3199              	.LBB613:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****         if(u < density_)
- 3211              		.loc 5 42 38 view .LVU983
- 3212 023a FAEEE07A 		vcvt.f32.s32	s15, s15, #31
- 3213              	.LVL202:
+ 3200              		.loc 5 42 38 view .LVU980
+ 3201 023a FAEEE07A 		vcvt.f32.s32	s15, s15, #31
+ 3202              	.LVL200:
   43:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****         {
- 3214              		.loc 5 43 9 is_stmt 1 view .LVU984
- 3215 023e F4EEC77A 		vcmpe.f32	s15, s14
- 3216 0242 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 3203              		.loc 5 43 9 is_stmt 1 view .LVU981
+ 3204 023e F4EEC77A 		vcmpe.f32	s15, s14
+ 3205 0242 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
   45:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****         }
- 3217              		.loc 5 45 13 view .LVU985
+ 3206              		.loc 5 45 13 view .LVU982
   41:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****         float u           = rand() * kRandFrac;
- 3218              		.loc 5 41 15 is_stmt 0 view .LVU986
- 3219 0246 4CBF     		ite	mi
- 3220 0248 88EE287A 		vdivmi.f32	s14, s16, s17
+ 3207              		.loc 5 41 15 is_stmt 0 view .LVU983
+ 3208 0246 4CBF     		ite	mi
+ 3209 0248 88EE097A 		vdivmi.f32	s14, s16, s18
   47:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****     }
- 3221              		.loc 5 47 16 view .LVU987
- 3222 024c DFED5B7A 		vldrpl.32	s15, .L109+4
- 3223              	.LVL203:
+ 3210              		.loc 5 47 16 view .LVU984
+ 3211 024c DFED5B7A 		vldrpl.32	s15, .L109+4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 85
+
+
+ 3212              	.LVL201:
   47:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****     }
- 3224              		.loc 5 47 16 view .LVU988
- 3225              	.LBE615:
- 3226              	.LBE618:
- 3227              		.loc 2 245 60 view .LVU989
- 3228 0250 D3ED008A 		vldr.32	s17, [r3]
- 246:PSP/AudioEngine.cpp **** 
- 247:PSP/AudioEngine.cpp ****     // Gestione delle modulazioni
- 248:PSP/AudioEngine.cpp ****     float sMix;
- 249:PSP/AudioEngine.cpp ****     float sXor;
- 250:PSP/AudioEngine.cpp ****     if (_currentPreset.ring) {
- 3229              		.loc 2 250 5 view .LVU990
- 3230 0254 94F8753D 		ldrb	r3, [r4, #3445]	@ zero_extendqisi2
- 3231              	.LBB619:
- 3232              	.LBB616:
+ 3213              		.loc 5 47 16 view .LVU985
+ 3214              	.LBE613:
+ 3215              	.LBE616:
+ 3216              		.loc 2 243 60 view .LVU986
+ 3217 0250 93ED009A 		vldr.32	s18, [r3]
+ 244:PSP/AudioEngine.cpp **** 
+ 245:PSP/AudioEngine.cpp ****     // Gestione delle modulazioni
+ 246:PSP/AudioEngine.cpp ****     float sMix;
+ 247:PSP/AudioEngine.cpp ****     float sXor;
+ 248:PSP/AudioEngine.cpp ****     if (_currentPreset.ring) {
+ 3218              		.loc 2 248 5 view .LVU987
+ 3219 0254 94F8753D 		ldrb	r3, [r4, #3445]	@ zero_extendqisi2
+ 3220              	.LBB617:
+ 3221              	.LBB614:
   45:../libs/PoliTeKDSP/libs/DaisySP/Source/Noise/dust.h ****         }
- 3233              		.loc 5 45 24 view .LVU991
- 3234 0258 48BF     		it	mi
- 3235 025a 67EE277A 		vmulmi.f32	s15, s14, s15
- 3236              	.LBE616:
- 3237              	.LBE619:
- 245:PSP/AudioEngine.cpp **** 
- 3238              		.loc 2 245 60 view .LVU992
- 3239 025e 67EEA88A 		vmul.f32	s17, s15, s17
- 3240              	.LVL204:
- 248:PSP/AudioEngine.cpp ****     float sXor;
- 3241              		.loc 2 248 5 is_stmt 1 view .LVU993
- 249:PSP/AudioEngine.cpp ****     if (_currentPreset.ring) {
- 3242              		.loc 2 249 5 view .LVU994
- 3243              		.loc 2 250 5 view .LVU995
- 3244 0262 002B     		cmp	r3, #0
- 3245 0264 00F0DA80 		beq	.L93
- 251:PSP/AudioEngine.cpp ****         sMix = s_osc1 * s_osc2;
- 3246              		.loc 2 251 9 view .LVU996
- 3247              		.loc 2 251 14 is_stmt 0 view .LVU997
- 3248 0268 69EE8D9A 		vmul.f32	s19, s19, s26
- 3249              	.LVL205:
- 252:PSP/AudioEngine.cpp ****         sXor =            0.0f;
- 3250              		.loc 2 252 9 is_stmt 1 view .LVU998
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 86
+ 3222              		.loc 5 45 24 view .LVU988
+ 3223 0258 48BF     		it	mi
+ 3224 025a 67EE277A 		vmulmi.f32	s15, s14, s15
+ 3225              	.LBE614:
+ 3226              	.LBE617:
+ 243:PSP/AudioEngine.cpp **** 
+ 3227              		.loc 2 243 60 view .LVU989
+ 3228 025e 27EE899A 		vmul.f32	s18, s15, s18
+ 3229              	.LVL202:
+ 246:PSP/AudioEngine.cpp ****     float sXor;
+ 3230              		.loc 2 246 5 is_stmt 1 view .LVU990
+ 247:PSP/AudioEngine.cpp ****     if (_currentPreset.ring) {
+ 3231              		.loc 2 247 5 view .LVU991
+ 3232              		.loc 2 248 5 view .LVU992
+ 3233 0262 002B     		cmp	r3, #0
+ 3234 0264 00F0DA80 		beq	.L93
+ 249:PSP/AudioEngine.cpp ****         sMix = s_osc1 * s_osc2;
+ 3235              		.loc 2 249 9 view .LVU993
+ 3236              		.loc 2 249 14 is_stmt 0 view .LVU994
+ 3237 0268 6CEE8DCA 		vmul.f32	s25, s25, s26
+ 3238              	.LVL203:
+ 250:PSP/AudioEngine.cpp ****         sXor =            0.0f;
+ 3239              		.loc 2 250 9 is_stmt 1 view .LVU995
+ 3240              	.L108:
+ 251:PSP/AudioEngine.cpp ****     } 
+ 252:PSP/AudioEngine.cpp ****     else if (_currentPreset.xor_m.isActive) {
+ 253:PSP/AudioEngine.cpp ****         sMix = s_osc1;
+ 254:PSP/AudioEngine.cpp ****         sXor = s_osc2;
+ 255:PSP/AudioEngine.cpp ****     } 
+ 256:PSP/AudioEngine.cpp ****     else {
+ 257:PSP/AudioEngine.cpp ****         sMix = s_osc1 + s_osc2;
+ 258:PSP/AudioEngine.cpp ****         sXor =            0.0f;
+ 3241              		.loc 2 258 9 view .LVU996
+ 3242              		.loc 2 258 14 is_stmt 0 view .LVU997
+ 3243 026c 9FED53DA 		vldr.32	s26, .L109+4
+ 3244              	.LVL204:
+ 3245              	.L94:
+ 259:PSP/AudioEngine.cpp ****     }
+ 260:PSP/AudioEngine.cpp ****     sMix  = _xorMod.process(sMix, sXor);
+ 3246              		.loc 2 260 5 is_stmt 1 view .LVU998
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 86
 
 
- 3251              	.L108:
- 253:PSP/AudioEngine.cpp ****     } 
- 254:PSP/AudioEngine.cpp ****     else if (_currentPreset.xor_m.isActive) {
- 255:PSP/AudioEngine.cpp ****         sMix = s_osc1;
- 256:PSP/AudioEngine.cpp ****         sXor = s_osc2;
- 257:PSP/AudioEngine.cpp ****     } 
- 258:PSP/AudioEngine.cpp ****     else {
- 259:PSP/AudioEngine.cpp ****         sMix = s_osc1 + s_osc2;
- 260:PSP/AudioEngine.cpp ****         sXor =            0.0f;
- 3252              		.loc 2 260 9 view .LVU999
- 3253              		.loc 2 260 14 is_stmt 0 view .LVU1000
- 3254 026c 9FED53DA 		vldr.32	s26, .L109+4
- 3255              	.LVL206:
- 3256              	.L94:
- 261:PSP/AudioEngine.cpp ****     }
- 262:PSP/AudioEngine.cpp ****     sMix  = _xorMod.process(sMix, sXor);
- 3257              		.loc 2 262 5 is_stmt 1 view .LVU1001
- 3258              		.loc 2 262 28 is_stmt 0 view .LVU1002
- 3259 0270 F0EE4D0A 		vmov.f32	s1, s26
- 3260 0274 3046     		mov	r0, r6
- 3261 0276 B0EE690A 		vmov.f32	s0, s19
- 3262 027a FFF7FEFF 		bl	_ZN10politekdsp4XorM7processEff
- 3263              	.LVL207:
- 263:PSP/AudioEngine.cpp ****     sMix +=                      sNoise;
- 3264              		.loc 2 263 5 is_stmt 1 view .LVU1003
- 264:PSP/AudioEngine.cpp ****     
- 265:PSP/AudioEngine.cpp ****     // 3. Calcolo del Cutoff modulato e applicazione al filtro
- 266:PSP/AudioEngine.cpp ****     float target_cutoff = _smoothedPreset.filter.cutoff + (filt_env_out * _currentPreset.filt_env.a
- 3265              		.loc 2 266 99 is_stmt 0 view .LVU1004
- 3266 027e 04F65453 		addw	r3, r4, #3412
- 263:PSP/AudioEngine.cpp ****     sMix +=                      sNoise;
- 3267              		.loc 2 263 10 view .LVU1005
- 3268 0282 78EE808A 		vadd.f32	s17, s17, s0
- 3269              	.LVL208:
- 3270              		.loc 2 266 5 is_stmt 1 view .LVU1006
- 3271              		.loc 2 266 11 is_stmt 0 view .LVU1007
- 3272 0286 9FED517A 		vldr.32	s14, .L109+20
- 3273              		.loc 2 266 73 view .LVU1008
- 3274 028a 93ED000A 		vldr.32	s0, [r3]
- 3275              		.loc 2 266 50 view .LVU1009
- 3276 028e 04F60463 		addw	r3, r4, #3588
- 267:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCF) target_cutoff += lfo1_out * 10000.0f;
- 268:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::VCF) target_cutoff += lfo2_out * 10000.0f;
- 269:PSP/AudioEngine.cpp ****     
- 270:PSP/AudioEngine.cpp ****     _filt.SetFreq(daisysp::fclamp(target_cutoff, 20.0f, 20000.0f));
- 3277              		.loc 2 270 18 view .LVU1010
- 3278 0292 05F59270 		add	r0, r5, #292
- 266:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCF) target_cutoff += lfo1_out * 10000.0f;
- 3279              		.loc 2 266 73 view .LVU1011
- 3280 0296 6CEE80CA 		vmul.f32	s25, s25, s0
- 3281              	.LVL209:
- 266:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCF) target_cutoff += lfo1_out * 10000.0f;
- 3282              		.loc 2 266 11 view .LVU1012
- 3283 029a D3ED007A 		vldr.32	s15, [r3]
- 267:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCF) target_cutoff += lfo1_out * 10000.0f;
- 3284              		.loc 2 267 5 view .LVU1013
- 3285 029e 94F8143D 		ldrb	r3, [r4, #3348]	@ zero_extendqisi2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 87
-
-
- 3286              	.LBB620:
- 3287              	.LBB621:
- 3288              	.LBB622:
+ 3247              		.loc 2 260 28 is_stmt 0 view .LVU999
+ 3248 0270 F0EE4D0A 		vmov.f32	s1, s26
+ 3249 0274 3046     		mov	r0, r6
+ 3250 0276 B0EE6C0A 		vmov.f32	s0, s25
+ 3251 027a FFF7FEFF 		bl	_ZN10politekdsp4XorM7processEff
+ 3252              	.LVL205:
+ 261:PSP/AudioEngine.cpp ****     sMix +=                      sNoise;
+ 3253              		.loc 2 261 5 is_stmt 1 view .LVU1000
+ 262:PSP/AudioEngine.cpp ****     
+ 263:PSP/AudioEngine.cpp ****     // 3. Calcolo del Cutoff modulato e applicazione al filtro
+ 264:PSP/AudioEngine.cpp ****     float target_cutoff = _smoothedPreset.filter.cutoff + (filt_env_out * _currentPreset.filt_env.a
+ 3254              		.loc 2 264 99 is_stmt 0 view .LVU1001
+ 3255 027e 04F65453 		addw	r3, r4, #3412
+ 261:PSP/AudioEngine.cpp ****     sMix +=                      sNoise;
+ 3256              		.loc 2 261 10 view .LVU1002
+ 3257 0282 39EE009A 		vadd.f32	s18, s18, s0
+ 3258              	.LVL206:
+ 3259              		.loc 2 264 5 is_stmt 1 view .LVU1003
+ 3260              		.loc 2 264 11 is_stmt 0 view .LVU1004
+ 3261 0286 9FED517A 		vldr.32	s14, .L109+20
+ 3262              		.loc 2 264 73 view .LVU1005
+ 3263 028a 93ED000A 		vldr.32	s0, [r3]
+ 3264              		.loc 2 264 50 view .LVU1006
+ 3265 028e 04F60463 		addw	r3, r4, #3588
+ 265:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCF) target_cutoff += lfo1_out * 10000.0f;
+ 266:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::VCF) target_cutoff += lfo2_out * 10000.0f;
+ 267:PSP/AudioEngine.cpp ****     
+ 268:PSP/AudioEngine.cpp ****     _filt.SetFreq(daisysp::fclamp(target_cutoff, 20.0f, 20000.0f));
+ 3266              		.loc 2 268 18 view .LVU1007
+ 3267 0292 05F59270 		add	r0, r5, #292
+ 264:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCF) target_cutoff += lfo1_out * 10000.0f;
+ 3268              		.loc 2 264 73 view .LVU1008
+ 3269 0296 2CEE00CA 		vmul.f32	s24, s24, s0
+ 3270              	.LVL207:
+ 264:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCF) target_cutoff += lfo1_out * 10000.0f;
+ 3271              		.loc 2 264 11 view .LVU1009
+ 3272 029a D3ED007A 		vldr.32	s15, [r3]
+ 265:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCF) target_cutoff += lfo1_out * 10000.0f;
+ 3273              		.loc 2 265 5 view .LVU1010
+ 3274 029e 94F8143D 		ldrb	r3, [r4, #3348]	@ zero_extendqisi2
+ 3275              	.LBB618:
+ 3276              	.LBB619:
+ 3277              	.LBB620:
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 3289              		.loc 3 44 5 view .LVU1014
- 3290 02a2 B3EE040A 		vmov.f32	s0, #2.0e+1
- 3291              	.LBE622:
- 3292              	.LBE621:
- 3293              	.LBE620:
- 3294              		.loc 2 270 18 view .LVU1015
- 3295 02a6 0390     		str	r0, [sp, #12]
- 266:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCF) target_cutoff += lfo1_out * 10000.0f;
- 3296              		.loc 2 266 11 view .LVU1016
- 3297 02a8 ECEE877A 		vfma.f32	s15, s25, s14
- 3298              	.LVL210:
- 267:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCF) target_cutoff += lfo1_out * 10000.0f;
- 3299              		.loc 2 267 5 is_stmt 1 view .LVU1017
- 3300 02ac 022B     		cmp	r3, #2
- 267:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCF) target_cutoff += lfo1_out * 10000.0f;
- 3301              		.loc 2 267 60 view .LVU1018
- 268:PSP/AudioEngine.cpp ****     
- 3302              		.loc 2 268 5 is_stmt 0 view .LVU1019
- 3303 02ae 94F8243D 		ldrb	r3, [r4, #3364]	@ zero_extendqisi2
- 267:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::VCF) target_cutoff += lfo2_out * 10000.0f;
- 3304              		.loc 2 267 74 view .LVU1020
- 3305 02b2 08BF     		it	eq
- 3306 02b4 ECEE077A 		vfmaeq.f32	s15, s24, s14
- 3307              	.LVL211:
- 268:PSP/AudioEngine.cpp ****     
- 3308              		.loc 2 268 5 is_stmt 1 view .LVU1021
- 3309 02b8 022B     		cmp	r3, #2
- 268:PSP/AudioEngine.cpp ****     
- 3310              		.loc 2 268 60 view .LVU1022
- 268:PSP/AudioEngine.cpp ****     
- 3311              		.loc 2 268 74 is_stmt 0 view .LVU1023
- 3312 02ba 08BF     		it	eq
- 3313 02bc EBEE877A 		vfmaeq.f32	s15, s23, s14
- 3314              	.LVL212:
- 3315              		.loc 2 270 5 is_stmt 1 view .LVU1024
- 3316              	.LBB627:
- 3317              	.LBI620:
+ 3278              		.loc 3 44 5 view .LVU1011
+ 3279 02a2 B3EE040A 		vmov.f32	s0, #2.0e+1
+ 3280              	.LBE620:
+ 3281              	.LBE619:
+ 3282              	.LBE618:
+ 3283              		.loc 2 268 18 view .LVU1012
+ 3284 02a6 0390     		str	r0, [sp, #12]
+ 264:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCF) target_cutoff += lfo1_out * 10000.0f;
+ 3285              		.loc 2 264 11 view .LVU1013
+ 3286 02a8 ECEE077A 		vfma.f32	s15, s24, s14
+ 3287              	.LVL208:
+ 265:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCF) target_cutoff += lfo1_out * 10000.0f;
+ 3288              		.loc 2 265 5 is_stmt 1 view .LVU1014
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 87
+
+
+ 3289 02ac 022B     		cmp	r3, #2
+ 265:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCF) target_cutoff += lfo1_out * 10000.0f;
+ 3290              		.loc 2 265 60 view .LVU1015
+ 266:PSP/AudioEngine.cpp ****     
+ 3291              		.loc 2 266 5 is_stmt 0 view .LVU1016
+ 3292 02ae 94F8243D 		ldrb	r3, [r4, #3364]	@ zero_extendqisi2
+ 265:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::VCF) target_cutoff += lfo2_out * 10000.0f;
+ 3293              		.loc 2 265 74 view .LVU1017
+ 3294 02b2 08BF     		it	eq
+ 3295 02b4 EBEE877A 		vfmaeq.f32	s15, s23, s14
+ 3296              	.LVL209:
+ 266:PSP/AudioEngine.cpp ****     
+ 3297              		.loc 2 266 5 is_stmt 1 view .LVU1018
+ 3298 02b8 022B     		cmp	r3, #2
+ 266:PSP/AudioEngine.cpp ****     
+ 3299              		.loc 2 266 60 view .LVU1019
+ 266:PSP/AudioEngine.cpp ****     
+ 3300              		.loc 2 266 74 is_stmt 0 view .LVU1020
+ 3301 02ba 08BF     		it	eq
+ 3302 02bc EBEE077A 		vfmaeq.f32	s15, s22, s14
+ 3303              	.LVL210:
+ 3304              		.loc 2 268 5 is_stmt 1 view .LVU1021
+ 3305              	.LBB625:
+ 3306              	.LBI618:
   64:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 3318              		.loc 3 64 14 view .LVU1025
- 3319              	.LBE627:
- 3320              		.loc 3 66 5 view .LVU1026
- 3321              	.LBB628:
- 3322              	.LBB624:
- 3323              	.LBI621:
+ 3307              		.loc 3 64 14 view .LVU1022
+ 3308              	.LBE625:
+ 3309              		.loc 3 66 5 view .LVU1023
+ 3310              	.LBB626:
+ 3311              	.LBB622:
+ 3312              	.LBI619:
   40:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 3324              		.loc 3 40 14 view .LVU1027
- 3325              	.LBB623:
+ 3313              		.loc 3 40 14 view .LVU1024
+ 3314              	.LBB621:
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 3326              		.loc 3 42 5 view .LVU1028
+ 3315              		.loc 3 42 5 view .LVU1025
   44:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 3327              		.loc 3 44 5 view .LVU1029
- 3328              		.syntax unified
- 3329              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 88
-
-
- 3330 02c0 C7FE807A 		vmaxnm.f32 s15, s15, s0
- 3331              	@ 0 "" 2
- 3332              	.LVL213:
+ 3316              		.loc 3 44 5 view .LVU1026
+ 3317              		.syntax unified
+ 3318              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 3319 02c0 C7FE807A 		vmaxnm.f32 s15, s15, s0
+ 3320              	@ 0 "" 2
+ 3321              	.LVL211:
   48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 3333              		.loc 3 48 5 view .LVU1030
+ 3322              		.loc 3 48 5 view .LVU1027
   48:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 3334              		.loc 3 48 5 is_stmt 0 view .LVU1031
- 3335              		.thumb
- 3336              		.syntax unified
- 3337              	.LBE623:
- 3338              	.LBE624:
- 3339              	.LBB625:
- 3340              	.LBI625:
+ 3323              		.loc 3 48 5 is_stmt 0 view .LVU1028
+ 3324              		.thumb
+ 3325              		.syntax unified
+ 3326              	.LBE621:
+ 3327              	.LBE622:
+ 3328              	.LBB623:
+ 3329              	.LBI623:
   51:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** {
- 3341              		.loc 3 51 14 is_stmt 1 view .LVU1032
- 3342              	.LBB626:
+ 3330              		.loc 3 51 14 is_stmt 1 view .LVU1029
+ 3331              	.LBB624:
   53:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
- 3343              		.loc 3 53 5 view .LVU1033
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 88
+
+
+ 3332              		.loc 3 53 5 view .LVU1030
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #else
- 3344              		.loc 3 55 5 view .LVU1034
- 3345 02c4 9FED420A 		vldr.32	s0, .L109+24
- 3346              		.syntax unified
- 3347              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
- 3348 02c8 87FEC00A 		vminnm.f32 s0, s15, s0
- 3349              	@ 0 "" 2
- 3350              	.LVL214:
+ 3333              		.loc 3 55 5 view .LVU1031
+ 3334 02c4 9FED420A 		vldr.32	s0, .L109+24
+ 3335              		.syntax unified
+ 3336              	@ 55 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
+ 3337 02c8 87FEC00A 		vminnm.f32 s0, s15, s0
+ 3338              	@ 0 "" 2
+ 3339              	.LVL212:
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 3351              		.loc 3 59 5 view .LVU1035
+ 3340              		.loc 3 59 5 view .LVU1032
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
- 3352              		.loc 3 59 5 is_stmt 0 view .LVU1036
- 3353              		.thumb
- 3354              		.syntax unified
- 3355              	.LBE626:
- 3356              	.LBE625:
- 3357              	.LBE628:
- 3358              		.loc 2 270 18 view .LVU1037
- 3359 02cc FFF7FEFF 		bl	_ZN7daisysp12LadderFilter7SetFreqEf
- 3360              	.LVL215:
+ 3341              		.loc 3 59 5 is_stmt 0 view .LVU1033
+ 3342              		.thumb
+ 3343              		.syntax unified
+ 3344              	.LBE624:
+ 3345              	.LBE623:
+ 3346              	.LBE626:
+ 3347              		.loc 2 268 18 view .LVU1034
+ 3348 02cc FFF7FEFF 		bl	_ZN7daisysp12LadderFilter7SetFreqEf
+ 3349              	.LVL213:
+ 269:PSP/AudioEngine.cpp **** 
+ 270:PSP/AudioEngine.cpp ****     float sFilt = _filt.Process(sMix);
+ 3350              		.loc 2 270 5 is_stmt 1 view .LVU1035
+ 3351              		.loc 2 270 32 is_stmt 0 view .LVU1036
+ 3352 02d0 B0EE490A 		vmov.f32	s0, s18
+ 3353 02d4 0398     		ldr	r0, [sp, #12]
+ 3354 02d6 FFF7FEFF 		bl	_ZN7daisysp12LadderFilter7ProcessEf
+ 3355              	.LVL214:
  271:PSP/AudioEngine.cpp **** 
- 272:PSP/AudioEngine.cpp ****     float sFilt = _filt.Process(sMix);
- 3361              		.loc 2 272 5 is_stmt 1 view .LVU1038
- 3362              		.loc 2 272 32 is_stmt 0 view .LVU1039
- 3363 02d0 B0EE680A 		vmov.f32	s0, s17
- 3364 02d4 0398     		ldr	r0, [sp, #12]
- 3365 02d6 FFF7FEFF 		bl	_ZN7daisysp12LadderFilter7ProcessEf
- 3366              	.LVL216:
- 273:PSP/AudioEngine.cpp **** 
- 274:PSP/AudioEngine.cpp ****     // 5. Applicazione VCA (Inviluppo di ampiezza + Tremolo corretto)
- 275:PSP/AudioEngine.cpp ****     float sDry = sFilt * amp_env_out * _currentPreset.amp_env.amp;
- 3367              		.loc 2 275 5 is_stmt 1 view .LVU1040
- 3368              		.loc 2 275 63 is_stmt 0 view .LVU1041
- 3369 02da 04F55463 		add	r3, r4, #3392
- 3370              		.loc 2 275 24 view .LVU1042
- 3371 02de 29EE000A 		vmul.f32	s0, s18, s0
- 3372              	.LVL217:
- 3373              		.loc 2 275 38 view .LVU1043
- 3374 02e2 93ED009A 		vldr.32	s18, [r3]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 89
+ 272:PSP/AudioEngine.cpp ****     // 5. Applicazione VCA (Inviluppo di ampiezza + Tremolo corretto)
+ 273:PSP/AudioEngine.cpp ****     float sDry = sFilt * amp_env_out * _currentPreset.amp_env.amp;
+ 3356              		.loc 2 273 5 is_stmt 1 view .LVU1037
+ 3357              		.loc 2 273 63 is_stmt 0 view .LVU1038
+ 3358 02da 04F55463 		add	r3, r4, #3392
+ 3359              		.loc 2 273 24 view .LVU1039
+ 3360 02de 28EE800A 		vmul.f32	s0, s17, s0
+ 3361              	.LVL215:
+ 3362              		.loc 2 273 38 view .LVU1040
+ 3363 02e2 D3ED008A 		vldr.32	s17, [r3]
+ 3364              	.LVL216:
+ 3365              	.LBB627:
+ 274:PSP/AudioEngine.cpp ****     
+ 275:PSP/AudioEngine.cpp ****     // Correzione LFO su VCA: converte da bipolare (-1 a +1) a unipolare (0 a 1)
+ 276:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCA) {
+ 3366              		.loc 2 276 5 view .LVU1041
+ 3367 02e6 94F8143D 		ldrb	r3, [r4, #3348]	@ zero_extendqisi2
+ 3368              	.LBE627:
+ 273:PSP/AudioEngine.cpp ****     
+ 3369              		.loc 2 273 38 view .LVU1042
+ 3370 02ea 20EE280A 		vmul.f32	s0, s0, s17
+ 3371              	.LBB629:
+ 3372              		.loc 2 276 5 view .LVU1043
+ 3373 02ee 012B     		cmp	r3, #1
+ 3374              	.LBE629:
+ 273:PSP/AudioEngine.cpp ****     
+ 3375              		.loc 2 273 11 view .LVU1044
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 89
 
 
- 3375              	.LVL218:
- 3376              	.LBB629:
- 276:PSP/AudioEngine.cpp ****     
- 277:PSP/AudioEngine.cpp ****     // Correzione LFO su VCA: converte da bipolare (-1 a +1) a unipolare (0 a 1)
- 278:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::VCA) {
- 3377              		.loc 2 278 5 view .LVU1044
- 3378 02e6 94F8143D 		ldrb	r3, [r4, #3348]	@ zero_extendqisi2
- 3379              	.LBE629:
- 275:PSP/AudioEngine.cpp ****     
- 3380              		.loc 2 275 38 view .LVU1045
- 3381 02ea 20EE090A 		vmul.f32	s0, s0, s18
- 3382              	.LBB631:
- 3383              		.loc 2 278 5 view .LVU1046
- 3384 02ee 012B     		cmp	r3, #1
- 3385              	.LBE631:
- 275:PSP/AudioEngine.cpp ****     
- 3386              		.loc 2 275 11 view .LVU1047
- 3387 02f0 8DED050A 		vstr.32	s0, [sp, #20]
- 3388              		.loc 2 278 5 is_stmt 1 view .LVU1048
- 3389              	.LBB632:
- 3390 02f4 11D1     		bne	.L97
- 3391              	.LBB630:
- 279:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo1_raw + 1.0f) * 0.5f;
- 3392              		.loc 2 279 9 view .LVU1049
- 3393              	.LVL219:
- 280:PSP/AudioEngine.cpp ****         sDry *= (1.0f - _currentPreset.lfo1.amp) + (unipolar_lfo * _currentPreset.lfo1.amp);
- 3394              		.loc 2 280 9 view .LVU1050
- 3395              		.loc 2 280 45 is_stmt 0 view .LVU1051
- 3396 02f6 04F60C53 		addw	r3, r4, #3340
- 279:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo1_raw + 1.0f) * 0.5f;
- 3397              		.loc 2 279 40 view .LVU1052
- 3398 02fa 3BEE08BA 		vadd.f32	s22, s22, s16
- 3399              	.LVL220:
- 279:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo1_raw + 1.0f) * 0.5f;
- 3400              		.loc 2 279 15 view .LVU1053
- 3401 02fe B6EE007A 		vmov.f32	s14, #5.0e-1
- 3402              		.loc 2 280 45 view .LVU1054
- 3403 0302 D3ED007A 		vldr.32	s15, [r3]
- 279:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo1_raw + 1.0f) * 0.5f;
- 3404              		.loc 2 279 15 view .LVU1055
- 3405 0306 2BEE07BA 		vmul.f32	s22, s22, s14
- 3406              		.loc 2 280 23 view .LVU1056
- 3407 030a 38EE679A 		vsub.f32	s18, s16, s15
- 3408              		.loc 2 280 50 view .LVU1057
- 3409 030e A7EE8B9A 		vfma.f32	s18, s15, s22
- 3410              		.loc 2 280 14 view .LVU1058
- 3411 0312 20EE090A 		vmul.f32	s0, s0, s18
- 3412 0316 8DED050A 		vstr.32	s0, [sp, #20]
- 3413              	.L97:
- 3414              		.loc 2 280 14 view .LVU1059
- 3415              	.LBE630:
- 3416              	.LBE632:
- 281:PSP/AudioEngine.cpp ****     }
- 282:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::VCA) {
- 3417              		.loc 2 282 5 is_stmt 1 view .LVU1060
- 3418              	.LBB633:
- 3419 031a 94F8243D 		ldrb	r3, [r4, #3364]	@ zero_extendqisi2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 90
+ 3376 02f0 8DED050A 		vstr.32	s0, [sp, #20]
+ 3377              		.loc 2 276 5 is_stmt 1 view .LVU1045
+ 3378              	.LBB630:
+ 3379 02f4 11D1     		bne	.L97
+ 3380              	.LBB628:
+ 277:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo1_raw + 1.0f) * 0.5f;
+ 3381              		.loc 2 277 9 view .LVU1046
+ 3382              	.LVL217:
+ 278:PSP/AudioEngine.cpp ****         sDry *= (1.0f - _currentPreset.lfo1.amp) + (unipolar_lfo * _currentPreset.lfo1.amp);
+ 3383              		.loc 2 278 9 view .LVU1047
+ 3384              		.loc 2 278 45 is_stmt 0 view .LVU1048
+ 3385 02f6 04F60C53 		addw	r3, r4, #3340
+ 277:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo1_raw + 1.0f) * 0.5f;
+ 3386              		.loc 2 277 40 view .LVU1049
+ 3387 02fa 7AEE88AA 		vadd.f32	s21, s21, s16
+ 3388              	.LVL218:
+ 277:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo1_raw + 1.0f) * 0.5f;
+ 3389              		.loc 2 277 15 view .LVU1050
+ 3390 02fe B6EE007A 		vmov.f32	s14, #5.0e-1
+ 3391              		.loc 2 278 45 view .LVU1051
+ 3392 0302 D3ED007A 		vldr.32	s15, [r3]
+ 277:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo1_raw + 1.0f) * 0.5f;
+ 3393              		.loc 2 277 15 view .LVU1052
+ 3394 0306 6AEE87AA 		vmul.f32	s21, s21, s14
+ 3395              		.loc 2 278 23 view .LVU1053
+ 3396 030a 78EE678A 		vsub.f32	s17, s16, s15
+ 3397              		.loc 2 278 50 view .LVU1054
+ 3398 030e E7EEAA8A 		vfma.f32	s17, s15, s21
+ 3399              		.loc 2 278 14 view .LVU1055
+ 3400 0312 20EE280A 		vmul.f32	s0, s0, s17
+ 3401 0316 8DED050A 		vstr.32	s0, [sp, #20]
+ 3402              	.L97:
+ 3403              		.loc 2 278 14 view .LVU1056
+ 3404              	.LBE628:
+ 3405              	.LBE630:
+ 279:PSP/AudioEngine.cpp ****     }
+ 280:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::VCA) {
+ 3406              		.loc 2 280 5 is_stmt 1 view .LVU1057
+ 3407              	.LBB631:
+ 3408 031a 94F8243D 		ldrb	r3, [r4, #3364]	@ zero_extendqisi2
+ 3409 031e 012B     		cmp	r3, #1
+ 3410 0320 15D1     		bne	.L98
+ 3411              	.LBB632:
+ 281:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo2_raw + 1.0f) * 0.5f;
+ 3412              		.loc 2 281 9 view .LVU1058
+ 3413              	.LVL219:
+ 282:PSP/AudioEngine.cpp ****         sDry *= (1.0f - _currentPreset.lfo2.amp) + (unipolar_lfo * _currentPreset.lfo2.amp);
+ 3414              		.loc 2 282 9 view .LVU1059
+ 3415              		.loc 2 282 45 is_stmt 0 view .LVU1060
+ 3416 0322 04F61C53 		addw	r3, r4, #3356
+ 281:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo2_raw + 1.0f) * 0.5f;
+ 3417              		.loc 2 281 40 view .LVU1061
+ 3418 0326 3AEE08AA 		vadd.f32	s20, s20, s16
+ 3419              	.LVL220:
+ 281:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo2_raw + 1.0f) * 0.5f;
+ 3420              		.loc 2 281 15 view .LVU1062
+ 3421 032a B6EE000A 		vmov.f32	s0, #5.0e-1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 90
 
 
- 3420 031e 012B     		cmp	r3, #1
- 3421 0320 15D1     		bne	.L98
- 3422              	.LBB634:
- 283:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo2_raw + 1.0f) * 0.5f;
- 3423              		.loc 2 283 9 view .LVU1061
- 3424              	.LVL221:
- 284:PSP/AudioEngine.cpp ****         sDry *= (1.0f - _currentPreset.lfo2.amp) + (unipolar_lfo * _currentPreset.lfo2.amp);
- 3425              		.loc 2 284 9 view .LVU1062
- 3426              		.loc 2 284 45 is_stmt 0 view .LVU1063
- 3427 0322 04F61C53 		addw	r3, r4, #3356
- 283:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo2_raw + 1.0f) * 0.5f;
- 3428              		.loc 2 283 40 view .LVU1064
- 3429 0326 7AEE88AA 		vadd.f32	s21, s21, s16
- 3430              	.LVL222:
- 283:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo2_raw + 1.0f) * 0.5f;
- 3431              		.loc 2 283 15 view .LVU1065
- 3432 032a B6EE000A 		vmov.f32	s0, #5.0e-1
- 3433              		.loc 2 284 45 view .LVU1066
- 3434 032e D3ED006A 		vldr.32	s13, [r3]
- 283:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo2_raw + 1.0f) * 0.5f;
- 3435              		.loc 2 283 15 view .LVU1067
- 3436 0332 6AEE80AA 		vmul.f32	s21, s21, s0
- 3437              		.loc 2 284 23 view .LVU1068
- 3438 0336 78EE667A 		vsub.f32	s15, s16, s13
- 3439              		.loc 2 284 50 view .LVU1069
- 3440 033a E6EEAA7A 		vfma.f32	s15, s13, s21
- 3441 033e B0EE677A 		vmov.f32	s14, s15
- 3442              		.loc 2 284 14 view .LVU1070
- 3443 0342 DDED057A 		vldr.32	s15, [sp, #20]
- 3444 0346 67EE877A 		vmul.f32	s15, s15, s14
- 3445 034a CDED057A 		vstr.32	s15, [sp, #20]
- 3446              	.L98:
- 3447              		.loc 2 284 14 view .LVU1071
- 3448              	.LBE634:
- 3449              	.LBE633:
- 285:PSP/AudioEngine.cpp ****     }
- 286:PSP/AudioEngine.cpp **** 
- 287:PSP/AudioEngine.cpp ****     // 6. Riverbero Stereo
- 288:PSP/AudioEngine.cpp ****     float revL = 0.0f;
- 3450              		.loc 2 288 5 is_stmt 1 view .LVU1072
- 289:PSP/AudioEngine.cpp ****     float revR = 0.0f;
+ 3422              		.loc 2 282 45 view .LVU1063
+ 3423 032e D3ED006A 		vldr.32	s13, [r3]
+ 281:PSP/AudioEngine.cpp ****         float unipolar_lfo = (lfo2_raw + 1.0f) * 0.5f;
+ 3424              		.loc 2 281 15 view .LVU1064
+ 3425 0332 2AEE00AA 		vmul.f32	s20, s20, s0
+ 3426              		.loc 2 282 23 view .LVU1065
+ 3427 0336 78EE667A 		vsub.f32	s15, s16, s13
+ 3428              		.loc 2 282 50 view .LVU1066
+ 3429 033a E6EE8A7A 		vfma.f32	s15, s13, s20
+ 3430 033e B0EE677A 		vmov.f32	s14, s15
+ 3431              		.loc 2 282 14 view .LVU1067
+ 3432 0342 DDED057A 		vldr.32	s15, [sp, #20]
+ 3433 0346 67EE877A 		vmul.f32	s15, s15, s14
+ 3434 034a CDED057A 		vstr.32	s15, [sp, #20]
+ 3435              	.L98:
+ 3436              		.loc 2 282 14 view .LVU1068
+ 3437              	.LBE632:
+ 3438              	.LBE631:
+ 283:PSP/AudioEngine.cpp ****     }
+ 284:PSP/AudioEngine.cpp **** 
+ 285:PSP/AudioEngine.cpp ****     // 6. Riverbero Stereo
+ 286:PSP/AudioEngine.cpp ****     float revL = 0.0f;
+ 3439              		.loc 2 286 5 is_stmt 1 view .LVU1069
+ 287:PSP/AudioEngine.cpp ****     float revR = 0.0f;
+ 288:PSP/AudioEngine.cpp ****     
+ 289:PSP/AudioEngine.cpp ****     _reverb.Process(sDry, sDry, &revL, &revR);
+ 3440              		.loc 2 289 20 is_stmt 0 view .LVU1070
+ 3441 034e 07AB     		add	r3, sp, #28
+ 3442 0350 05AA     		add	r2, sp, #20
+ 3443 0352 05F5C070 		add	r0, r5, #384
+ 286:PSP/AudioEngine.cpp ****     float revR = 0.0f;
+ 3444              		.loc 2 286 11 view .LVU1071
+ 3445 0356 CDED069A 		vstr.32	s19, [sp, #24]
+ 287:PSP/AudioEngine.cpp ****     float revR = 0.0f;
+ 3446              		.loc 2 287 5 is_stmt 1 view .LVU1072
+ 3447              		.loc 2 289 20 is_stmt 0 view .LVU1073
+ 3448 035a 0093     		str	r3, [sp]
+ 3449 035c 1146     		mov	r1, r2
+ 3450 035e 06AB     		add	r3, sp, #24
+ 287:PSP/AudioEngine.cpp ****     float revR = 0.0f;
+ 3451              		.loc 2 287 11 view .LVU1074
+ 3452 0360 CDED079A 		vstr.32	s19, [sp, #28]
+ 3453              		.loc 2 289 5 is_stmt 1 view .LVU1075
+ 3454              		.loc 2 289 20 is_stmt 0 view .LVU1076
+ 3455 0364 FFF7FEFF 		bl	_ZN7daisysp8ReverbSc7ProcessERKfS2_PfS3_
+ 3456              	.LVL221:
  290:PSP/AudioEngine.cpp ****     
- 291:PSP/AudioEngine.cpp ****     _reverb.Process(sDry, sDry, &revL, &revR);
- 3451              		.loc 2 291 20 is_stmt 0 view .LVU1073
- 3452 034e 07AB     		add	r3, sp, #28
- 3453 0350 05AA     		add	r2, sp, #20
- 3454 0352 05F5C070 		add	r0, r5, #384
- 288:PSP/AudioEngine.cpp ****     float revR = 0.0f;
- 3455              		.loc 2 288 11 view .LVU1074
- 3456 0356 8DED06AA 		vstr.32	s20, [sp, #24]
- 289:PSP/AudioEngine.cpp ****     float revR = 0.0f;
- 3457              		.loc 2 289 5 is_stmt 1 view .LVU1075
- 3458              		.loc 2 291 20 is_stmt 0 view .LVU1076
- 3459 035a 0093     		str	r3, [sp]
- 3460 035c 1146     		mov	r1, r2
- 3461 035e 06AB     		add	r3, sp, #24
- 289:PSP/AudioEngine.cpp ****     float revR = 0.0f;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 91
-
-
- 3462              		.loc 2 289 11 view .LVU1077
- 3463 0360 8DED07AA 		vstr.32	s20, [sp, #28]
- 3464              		.loc 2 291 5 is_stmt 1 view .LVU1078
- 3465              		.loc 2 291 20 is_stmt 0 view .LVU1079
- 3466 0364 FFF7FEFF 		bl	_ZN7daisysp8ReverbSc7ProcessERKfS2_PfS3_
- 3467              	.LVL223:
+ 291:PSP/AudioEngine.cpp ****     float revDryWet = _currentPreset.reverb.dryWet;
+ 3457              		.loc 2 291 5 is_stmt 1 view .LVU1077
+ 3458              		.loc 2 291 11 is_stmt 0 view .LVU1078
+ 3459 0368 04F55663 		add	r3, r4, #3424
  292:PSP/AudioEngine.cpp ****     
- 293:PSP/AudioEngine.cpp ****     float revDryWet = _currentPreset.reverb.dryWet;
- 3468              		.loc 2 293 5 is_stmt 1 view .LVU1080
- 3469              		.loc 2 293 11 is_stmt 0 view .LVU1081
- 3470 0368 04F55663 		add	r3, r4, #3424
- 294:PSP/AudioEngine.cpp ****     
- 295:PSP/AudioEngine.cpp ****     // 7. Calcolo del mix stereo
- 296:PSP/AudioEngine.cpp ****     out_l = ((sDry * (1.0f - revDryWet)) + (revL * revDryWet)) * _masterVolume;
- 3471              		.loc 2 296 50 view .LVU1082
- 3472 036c 9DED067A 		vldr.32	s14, [sp, #24]
- 3473              		.loc 2 296 66 view .LVU1083
- 3474 0370 04F6D864 		addw	r4, r4, #3800
- 293:PSP/AudioEngine.cpp ****     
- 3475              		.loc 2 293 11 view .LVU1084
- 3476 0374 D3ED007A 		vldr.32	s15, [r3]
- 3477              	.LVL224:
- 3478              		.loc 2 296 5 is_stmt 1 view .LVU1085
- 3479              		.loc 2 296 20 is_stmt 0 view .LVU1086
- 3480 0378 9DED056A 		vldr.32	s12, [sp, #20]
- 3481              		.loc 2 296 28 view .LVU1087
- 3482 037c 38EE678A 		vsub.f32	s16, s16, s15
- 3483              		.loc 2 296 64 view .LVU1088
- 3484 0380 D4ED006A 		vldr.32	s13, [r4]
- 3485              		.loc 2 296 50 view .LVU1089
- 3486 0384 27EE877A 		vmul.f32	s14, s15, s14
- 3487              		.loc 2 296 42 view .LVU1090
- 3488 0388 A8EE067A 		vfma.f32	s14, s16, s12
- 3489              		.loc 2 296 64 view .LVU1091
- 3490 038c 26EE877A 		vmul.f32	s14, s13, s14
- 3491              		.loc 2 296 11 view .LVU1092
- 3492 0390 88ED007A 		vstr.32	s14, [r8]
- 297:PSP/AudioEngine.cpp ****     out_r = ((sDry * (1.0f - revDryWet)) + (revR * revDryWet)) * _masterVolume;
- 3493              		.loc 2 297 5 is_stmt 1 view .LVU1093
- 3494              		.loc 2 297 50 is_stmt 0 view .LVU1094
- 3495 0394 9DED077A 		vldr.32	s14, [sp, #28]
- 3496 0398 67EE877A 		vmul.f32	s15, s15, s14
- 3497              	.LVL225:
- 3498              		.loc 2 297 64 view .LVU1095
- 3499 039c 94ED007A 		vldr.32	s14, [r4]
- 3500              		.loc 2 297 42 view .LVU1096
- 3501 03a0 E8EE067A 		vfma.f32	s15, s16, s12
- 3502              		.loc 2 297 64 view .LVU1097
- 3503 03a4 67EE277A 		vmul.f32	s15, s14, s15
- 3504              		.loc 2 297 11 view .LVU1098
- 3505 03a8 C7ED007A 		vstr.32	s15, [r7]
- 298:PSP/AudioEngine.cpp **** }...
- 3506              		.loc 2 298 1 view .LVU1099
- 3507 03ac 09B0     		add	sp, sp, #36
- 3508              		.cfi_remember_state
- 3509              		.cfi_def_cfa_offset 84
- 3510              		@ sp needed
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 92
+ 293:PSP/AudioEngine.cpp ****     // 7. Calcolo del mix stereo
+ 294:PSP/AudioEngine.cpp ****     out_l = ((sDry * (1.0f - revDryWet)) + (revL * revDryWet)) * _masterVolume;
+ 3460              		.loc 2 294 50 view .LVU1079
+ 3461 036c 9DED067A 		vldr.32	s14, [sp, #24]
+ 3462              		.loc 2 294 66 view .LVU1080
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 91
 
 
- 3511 03ae BDEC0E8B 		vldm	sp!, {d8-d14}
- 3512              		.cfi_restore 92
- 3513              		.cfi_restore 93
- 3514              		.cfi_restore 90
- 3515              		.cfi_restore 91
- 3516              		.cfi_restore 88
- 3517              		.cfi_restore 89
- 3518              		.cfi_restore 86
- 3519              		.cfi_restore 87
- 3520              		.cfi_restore 84
- 3521              		.cfi_restore 85
- 3522              		.cfi_restore 82
- 3523              		.cfi_restore 83
- 3524              		.cfi_restore 80
- 3525              		.cfi_restore 81
- 3526              		.cfi_def_cfa_offset 28
- 3527              	.LVL226:
- 3528              		.loc 2 298 1 view .LVU1100
- 3529 03b2 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
- 3530              	.LVL227:
- 3531              	.L110:
- 3532              		.loc 2 298 1 view .LVU1101
- 3533 03b6 00BF     		.align	2
- 3534              	.L109:
- 3535 03b8 6F12833A 		.word	981668463
- 3536 03bc 00000000 		.word	0
- 3537 03c0 00004842 		.word	1112014848
- 3538 03c4 000048C2 		.word	-1035468800
- 3539 03c8 9A99993E 		.word	1050253722
- 3540 03cc 00401C46 		.word	1176256512
- 3541 03d0 00409C46 		.word	1184645120
- 3542              	.LVL228:
- 3543              	.L83:
- 3544              		.cfi_restore_state
- 226:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
- 3545              		.loc 2 226 5 is_stmt 1 view .LVU1102
- 3546 03d4 042B     		cmp	r3, #4
- 3547 03d6 0CD0     		beq	.L85
- 227:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
- 3548              		.loc 2 227 5 view .LVU1103
- 3549 03d8 052B     		cmp	r3, #5
- 3550 03da 7FF4C3AE 		bne	.L84
- 227:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
- 3551              		.loc 2 227 48 discriminator 1 view .LVU1104
- 222:PSP/AudioEngine.cpp ****     float target_xor_ampunt = _currentPreset.xor_m.amount;
- 3552              		.loc 2 222 11 is_stmt 0 discriminator 1 view .LVU1105
- 3553 03de 04F55763 		add	r3, r4, #3440
- 227:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
- 3554              		.loc 2 227 63 discriminator 1 view .LVU1106
- 3555 03e2 3046     		mov	r0, r6
- 3556 03e4 93ED000A 		vldr.32	s0, [r3]
- 3557              	.LVL229:
- 227:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
- 3558              		.loc 2 227 63 discriminator 1 view .LVU1107
- 3559 03e8 3CEE000A 		vadd.f32	s0, s24, s0
- 3560 03ec FFF7FEFF 		bl	_ZN10politekdsp4XorM7setMaskEf
- 3561              	.LVL230:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 93
+ 3463 0370 04F6D864 		addw	r4, r4, #3800
+ 291:PSP/AudioEngine.cpp ****     
+ 3464              		.loc 2 291 11 view .LVU1081
+ 3465 0374 D3ED007A 		vldr.32	s15, [r3]
+ 3466              	.LVL222:
+ 3467              		.loc 2 294 5 is_stmt 1 view .LVU1082
+ 3468              		.loc 2 294 20 is_stmt 0 view .LVU1083
+ 3469 0378 9DED056A 		vldr.32	s12, [sp, #20]
+ 3470              		.loc 2 294 28 view .LVU1084
+ 3471 037c 38EE678A 		vsub.f32	s16, s16, s15
+ 3472              		.loc 2 294 64 view .LVU1085
+ 3473 0380 D4ED006A 		vldr.32	s13, [r4]
+ 3474              		.loc 2 294 50 view .LVU1086
+ 3475 0384 27EE877A 		vmul.f32	s14, s15, s14
+ 3476              		.loc 2 294 42 view .LVU1087
+ 3477 0388 A8EE067A 		vfma.f32	s14, s16, s12
+ 3478              		.loc 2 294 64 view .LVU1088
+ 3479 038c 26EE877A 		vmul.f32	s14, s13, s14
+ 3480              		.loc 2 294 11 view .LVU1089
+ 3481 0390 88ED007A 		vstr.32	s14, [r8]
+ 295:PSP/AudioEngine.cpp ****     out_r = ((sDry * (1.0f - revDryWet)) + (revR * revDryWet)) * _masterVolume;
+ 3482              		.loc 2 295 5 is_stmt 1 view .LVU1090
+ 3483              		.loc 2 295 50 is_stmt 0 view .LVU1091
+ 3484 0394 9DED077A 		vldr.32	s14, [sp, #28]
+ 3485 0398 67EE877A 		vmul.f32	s15, s15, s14
+ 3486              	.LVL223:
+ 3487              		.loc 2 295 64 view .LVU1092
+ 3488 039c 94ED007A 		vldr.32	s14, [r4]
+ 3489              		.loc 2 295 42 view .LVU1093
+ 3490 03a0 E8EE067A 		vfma.f32	s15, s16, s12
+ 3491              		.loc 2 295 64 view .LVU1094
+ 3492 03a4 67EE277A 		vmul.f32	s15, s14, s15
+ 3493              		.loc 2 295 11 view .LVU1095
+ 3494 03a8 C7ED007A 		vstr.32	s15, [r7]
+ 296:PSP/AudioEngine.cpp **** }...
+ 3495              		.loc 2 296 1 view .LVU1096
+ 3496 03ac 09B0     		add	sp, sp, #36
+ 3497              		.cfi_remember_state
+ 3498              		.cfi_def_cfa_offset 76
+ 3499              		@ sp needed
+ 3500 03ae BDEC0C8B 		vldm	sp!, {d8-d13}
+ 3501              		.cfi_restore 90
+ 3502              		.cfi_restore 91
+ 3503              		.cfi_restore 88
+ 3504              		.cfi_restore 89
+ 3505              		.cfi_restore 86
+ 3506              		.cfi_restore 87
+ 3507              		.cfi_restore 84
+ 3508              		.cfi_restore 85
+ 3509              		.cfi_restore 82
+ 3510              		.cfi_restore 83
+ 3511              		.cfi_restore 80
+ 3512              		.cfi_restore 81
+ 3513              		.cfi_def_cfa_offset 28
+ 3514              	.LVL224:
+ 3515              		.loc 2 296 1 view .LVU1097
+ 3516 03b2 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 92
 
 
- 227:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
- 3562              		.loc 2 227 63 discriminator 1 view .LVU1108
- 3563 03f0 B8E6     		b	.L84
- 3564              	.LVL231:
- 3565              	.L85:
- 226:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
- 3566              		.loc 2 226 63 is_stmt 1 discriminator 1 view .LVU1109
- 226:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
- 3567              		.loc 2 226 78 is_stmt 0 discriminator 1 view .LVU1110
- 3568 03f2 ACEE2DEA 		vfma.f32	s28, s24, s27
- 3569              	.LVL232:
- 227:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
- 3570              		.loc 2 227 5 is_stmt 1 discriminator 1 view .LVU1111
- 3571 03f6 B5E6     		b	.L84
- 3572              	.LVL233:
- 3573              	.L87:
- 232:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::DETUNE) target_detune2 += lfo2_out * 50.0f;
- 3574              		.loc 2 232 5 view .LVU1112
- 3575 03f8 042B     		cmp	r3, #4
- 3576 03fa 0CD0     		beq	.L89
- 233:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo2_o
- 3577              		.loc 2 233 5 view .LVU1113
- 3578 03fc 052B     		cmp	r3, #5
- 3579 03fe 7FF4B8AE 		bne	.L88
- 233:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo2_o
- 3580              		.loc 2 233 48 discriminator 1 view .LVU1114
- 233:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo2_o
- 3581              		.loc 2 233 85 is_stmt 0 discriminator 1 view .LVU1115
- 3582 0402 04F55763 		add	r3, r4, #3440
- 233:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo2_o
- 3583              		.loc 2 233 63 discriminator 1 view .LVU1116
- 3584 0406 3046     		mov	r0, r6
- 3585 0408 93ED000A 		vldr.32	s0, [r3]
- 3586 040c 3BEE800A 		vadd.f32	s0, s23, s0
- 3587 0410 FFF7FEFF 		bl	_ZN10politekdsp4XorM7setMaskEf
- 3588              	.LVL234:
- 3589 0414 ADE6     		b	.L88
- 3590              	.L89:
- 232:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::DETUNE) target_detune2 += lfo2_out * 50.0f;
- 3591              		.loc 2 232 63 is_stmt 1 discriminator 1 view .LVU1117
- 232:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::DETUNE) target_detune2 += lfo2_out * 50.0f;
- 3592              		.loc 2 232 78 is_stmt 0 discriminator 1 view .LVU1118
- 3593 0416 ABEEADDA 		vfma.f32	s26, s23, s27
- 3594              	.LVL235:
- 233:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo2_o
- 3595              		.loc 2 233 5 is_stmt 1 discriminator 1 view .LVU1119
- 3596 041a AAE6     		b	.L88
- 3597              	.LVL236:
- 3598              	.L93:
- 254:PSP/AudioEngine.cpp ****     else if (_currentPreset.xor_m.isActive) {
- 3599              		.loc 2 254 10 view .LVU1120
- 3600 041c 94F86C3D 		ldrb	r3, [r4, #3436]	@ zero_extendqisi2
- 3601 0420 002B     		cmp	r3, #0
- 3602 0422 7FF425AF 		bne	.L94
- 259:PSP/AudioEngine.cpp ****         sMix = s_osc1 + s_osc2;
- 3603              		.loc 2 259 9 view .LVU1121
- 259:PSP/AudioEngine.cpp ****         sMix = s_osc1 + s_osc2;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 94
+ 3517              	.LVL225:
+ 3518              	.L110:
+ 3519              		.loc 2 296 1 view .LVU1098
+ 3520 03b6 00BF     		.align	2
+ 3521              	.L109:
+ 3522 03b8 6F12833A 		.word	981668463
+ 3523 03bc 00000000 		.word	0
+ 3524 03c0 00004842 		.word	1112014848
+ 3525 03c4 000048C2 		.word	-1035468800
+ 3526 03c8 9A99993E 		.word	1050253722
+ 3527 03cc 00401C46 		.word	1176256512
+ 3528 03d0 00409C46 		.word	1184645120
+ 3529              	.LVL226:
+ 3530              	.L83:
+ 3531              		.cfi_restore_state
+ 224:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
+ 3532              		.loc 2 224 5 is_stmt 1 view .LVU1099
+ 3533 03d4 042B     		cmp	r3, #4
+ 3534 03d6 0CD0     		beq	.L85
+ 225:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
+ 3535              		.loc 2 225 5 view .LVU1100
+ 3536 03d8 052B     		cmp	r3, #5
+ 3537 03da 7FF4BFAE 		bne	.L84
+ 225:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
+ 3538              		.loc 2 225 48 discriminator 1 view .LVU1101
+ 225:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
+ 3539              		.loc 2 225 85 is_stmt 0 discriminator 1 view .LVU1102
+ 3540 03de 04F55763 		add	r3, r4, #3440
+ 225:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
+ 3541              		.loc 2 225 63 discriminator 1 view .LVU1103
+ 3542 03e2 3046     		mov	r0, r6
+ 3543 03e4 93ED000A 		vldr.32	s0, [r3]
+ 3544              	.LVL227:
+ 225:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
+ 3545              		.loc 2 225 63 discriminator 1 view .LVU1104
+ 3546 03e8 3BEE800A 		vadd.f32	s0, s23, s0
+ 3547 03ec FFF7FEFF 		bl	_ZN10politekdsp4XorM7setMaskEf
+ 3548              	.LVL228:
+ 3549 03f0 B4E6     		b	.L84
+ 3550              	.LVL229:
+ 3551              	.L85:
+ 224:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
+ 3552              		.loc 2 224 63 is_stmt 1 discriminator 1 view .LVU1105
+ 224:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == Direction_e::DETUNE) target_detune1 += lfo1_out * 50.0f;
+ 3553              		.loc 2 224 78 is_stmt 0 discriminator 1 view .LVU1106
+ 3554 03f2 EBEE8DDA 		vfma.f32	s27, s23, s26
+ 3555              	.LVL230:
+ 225:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo1.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo1_o
+ 3556              		.loc 2 225 5 is_stmt 1 discriminator 1 view .LVU1107
+ 3557 03f6 B1E6     		b	.L84
+ 3558              	.LVL231:
+ 3559              	.L87:
+ 230:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::DETUNE) target_detune2 += lfo2_out * 50.0f;
+ 3560              		.loc 2 230 5 view .LVU1108
+ 3561 03f8 042B     		cmp	r3, #4
+ 3562 03fa 0CD0     		beq	.L89
+ 231:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo2_o
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 93
 
 
- 3604              		.loc 2 259 14 is_stmt 0 view .LVU1122
- 3605 0426 79EE8D9A 		vadd.f32	s19, s19, s26
- 3606              	.LVL237:
- 259:PSP/AudioEngine.cpp ****         sMix = s_osc1 + s_osc2;
- 3607              		.loc 2 259 14 view .LVU1123
- 3608 042a 1FE7     		b	.L108
- 3609              		.cfi_endproc
- 3610              	.LFE5102:
- 3612              		.text
- 3613              	.Letext0:
- 3614              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
- 3615              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
- 3616              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
- 3617              		.file 13 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
- 3618              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
- 3619              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
- 3620              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
- 3621              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
- 3622              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
- 3623              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
- 3624              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
- 3625              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
- 3626              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
- 3627              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
- 3628              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
- 3629              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
- 3630              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
- 3631              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\charconv.h
- 3632              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
- 3633              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
- 3634              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
- 3635              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstddef"
- 3636              		.file 32 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
- 3637              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
- 3638              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
- 3639              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
- 3640              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
- 3641              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
- 3642              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
- 3643              		.file 39 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
- 3644              		.file 40 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
- 3645              		.file 41 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
- 3646              		.file 42 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
- 3647              		.file 43 "PSP/../../libs/PoliTeKDSP/Modulators/XorM/XorM.h"
- 3648              		.file 44 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
- 3649              		.file 45 "../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h"
- 3650              		.file 46 "../libs/PoliTeKDSP/libs/libDaisy/src/dev/max11300.h"
- 3651              		.file 47 "../libs/PoliTeKDSP/libs/libDaisy/src/dev/sr_595.h"
- 3652              		.file 48 "../libs/PoliTeKDSP/libs/libDaisy/src/util/wav_format.h"
- 3653              		.file 49 "../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h"
- 3654              		.file 50 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
- 3655              		.file 51 "../libs/PoliTeKDSP/libs/libDaisy/Middlewares/Third_Party/FatFs/src/integer.h"
- 3656              		.file 52 "../libs/PoliTeKDSP/libs/libDaisy/Middlewares/Third_Party/FatFs/src/ff.h"
- 3657              		.file 53 "PSP/../../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.h"
- 3658              		.file 54 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s 			page 95
+ 3563              		.loc 2 231 5 view .LVU1109
+ 3564 03fc 052B     		cmp	r3, #5
+ 3565 03fe 7FF4B4AE 		bne	.L88
+ 231:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo2_o
+ 3566              		.loc 2 231 48 discriminator 1 view .LVU1110
+ 231:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo2_o
+ 3567              		.loc 2 231 85 is_stmt 0 discriminator 1 view .LVU1111
+ 3568 0402 04F55763 		add	r3, r4, #3440
+ 231:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo2_o
+ 3569              		.loc 2 231 63 discriminator 1 view .LVU1112
+ 3570 0406 3046     		mov	r0, r6
+ 3571 0408 93ED000A 		vldr.32	s0, [r3]
+ 3572 040c 3BEE000A 		vadd.f32	s0, s22, s0
+ 3573 0410 FFF7FEFF 		bl	_ZN10politekdsp4XorM7setMaskEf
+ 3574              	.LVL232:
+ 3575 0414 A9E6     		b	.L88
+ 3576              	.L89:
+ 230:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::DETUNE) target_detune2 += lfo2_out * 50.0f;
+ 3577              		.loc 2 230 63 is_stmt 1 discriminator 1 view .LVU1113
+ 230:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == Direction_e::DETUNE) target_detune2 += lfo2_out * 50.0f;
+ 3578              		.loc 2 230 78 is_stmt 0 discriminator 1 view .LVU1114
+ 3579 0416 EBEE0DCA 		vfma.f32	s25, s22, s26
+ 3580              	.LVL233:
+ 231:PSP/AudioEngine.cpp ****     if (_currentPreset.lfo2.direction == XOR)  _xorMod.setMask(_currentPreset.xor_m.amount + lfo2_o
+ 3581              		.loc 2 231 5 is_stmt 1 discriminator 1 view .LVU1115
+ 3582 041a A6E6     		b	.L88
+ 3583              	.LVL234:
+ 3584              	.L93:
+ 252:PSP/AudioEngine.cpp ****     else if (_currentPreset.xor_m.isActive) {
+ 3585              		.loc 2 252 10 view .LVU1116
+ 3586 041c 94F86C3D 		ldrb	r3, [r4, #3436]	@ zero_extendqisi2
+ 3587 0420 002B     		cmp	r3, #0
+ 3588 0422 7FF425AF 		bne	.L94
+ 257:PSP/AudioEngine.cpp ****         sMix = s_osc1 + s_osc2;
+ 3589              		.loc 2 257 9 view .LVU1117
+ 257:PSP/AudioEngine.cpp ****         sMix = s_osc1 + s_osc2;
+ 3590              		.loc 2 257 14 is_stmt 0 view .LVU1118
+ 3591 0426 7CEE8DCA 		vadd.f32	s25, s25, s26
+ 3592              	.LVL235:
+ 257:PSP/AudioEngine.cpp ****         sMix = s_osc1 + s_osc2;
+ 3593              		.loc 2 257 14 view .LVU1119
+ 3594 042a 1FE7     		b	.L108
+ 3595              		.cfi_endproc
+ 3596              	.LFE5102:
+ 3598              		.text
+ 3599              	.Letext0:
+ 3600              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 3601              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 3602              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 3603              		.file 13 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 3604              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 3605              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 3606              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 3607              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 3608              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 3609              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 3610              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 94
+
+
+ 3611              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 3612              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 3613              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 3614              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 3615              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 3616              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 3617              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\charconv.h
+ 3618              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 3619              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 3620              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 3621              		.file 31 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstddef"
+ 3622              		.file 32 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 3623              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 3624              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 3625              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 3626              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 3627              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 3628              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 3629              		.file 39 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 3630              		.file 40 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 3631              		.file 41 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 3632              		.file 42 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 3633              		.file 43 "PSP/../../libs/PoliTeKDSP/Modulators/XorM/XorM.h"
+ 3634              		.file 44 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 3635              		.file 45 "../libs/PoliTeKDSP/libs/libDaisy/src/daisy_core.h"
+ 3636              		.file 46 "../libs/PoliTeKDSP/libs/libDaisy/src/dev/max11300.h"
+ 3637              		.file 47 "../libs/PoliTeKDSP/libs/libDaisy/src/dev/sr_595.h"
+ 3638              		.file 48 "../libs/PoliTeKDSP/libs/libDaisy/src/util/wav_format.h"
+ 3639              		.file 49 "../libs/PoliTeKDSP/libs/libDaisy/src/daisy_seed.h"
+ 3640              		.file 50 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 3641              		.file 51 "../libs/PoliTeKDSP/libs/libDaisy/Middlewares/Third_Party/FatFs/src/integer.h"
+ 3642              		.file 52 "../libs/PoliTeKDSP/libs/libDaisy/Middlewares/Third_Party/FatFs/src/ff.h"
+ 3643              		.file 53 "PSP/../../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.h"
+ 3644              		.file 54 "<built-in>"
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s 			page 95
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 AudioEngine.cpp
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:17     .text._ZN10politekdsp10Oscillator4InitEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:25     .text._ZN10politekdsp10Oscillator4InitEf:00000000 _ZN10politekdsp10Oscillator4InitEf
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:95     .text._ZN10politekdsp10Oscillator4InitEf:00000040 $d
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:100    .text._ZN10politekdsp10Oscillator7SetFreqEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:107    .text._ZN10politekdsp10Oscillator7SetFreqEf:00000000 _ZN10politekdsp10Oscillator7SetFreqEf
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:184    .text._ZN10politekdsp10Oscillator7SetFreqEf:00000058 $d
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:189    .text._ZN11AudioEngine15SetMasterVolumeEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:196    .text._ZN11AudioEngine15SetMasterVolumeEf:00000000 _ZN11AudioEngine15SetMasterVolumeEf
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:277    .text._ZN11AudioEngine15SetMasterVolumeEf:00000020 $d
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:282    .text._ZN11AudioEngine15SetActivePresetERK8Preset_s:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:289    .text._ZN11AudioEngine15SetActivePresetERK8Preset_s:00000000 _ZN11AudioEngine15SetActivePresetERK8Preset_s
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:1283   .text._ZN11AudioEngine15SetActivePresetERK8Preset_s:00000270 $d
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:1293   .text._ZN11AudioEngine4InitEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:1300   .text._ZN11AudioEngine4InitEf:00000000 _ZN11AudioEngine4InitEf
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:1583   .text._ZN11AudioEngine4InitEf:00000114 $d
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:1590   .text._ZN11AudioEngine14UpdateControlsERK9Control_s:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:1597   .text._ZN11AudioEngine14UpdateControlsERK9Control_s:00000000 _ZN11AudioEngine14UpdateControlsERK9Control_s
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:1673   .text._ZN11AudioEngine13ProcessMidiCCEhhR8Preset_s:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:1680   .text._ZN11AudioEngine13ProcessMidiCCEhhR8Preset_s:00000000 _ZN11AudioEngine13ProcessMidiCCEhhR8Preset_s
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:1733   .text._ZN11AudioEngine13ProcessMidiCCEhhR8Preset_s:00000046 $d
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:1831   .text._ZN11AudioEngine13ProcessMidiCCEhhR8Preset_s:0000010a $t
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:2217   .text._ZN11AudioEngine13ProcessMidiCCEhhR8Preset_s:000002d0 $d
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:2233   .text._ZN11AudioEngine13ProcessMidiCCEhhR8Preset_s:000002fc $t
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:2257   .text._ZN11AudioEngine7ProcessERfS0_:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:2264   .text._ZN11AudioEngine7ProcessERfS0_:00000000 _ZN11AudioEngine7ProcessERfS0_
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:3535   .text._ZN11AudioEngine7ProcessERfS0_:000003b8 $d
-C:\Users\skipi\AppData\Local\Temp\ccUgUngK.s:3546   .text._ZN11AudioEngine7ProcessERfS0_:000003d4 $t
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:17     .text._ZN10politekdsp10Oscillator4InitEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:25     .text._ZN10politekdsp10Oscillator4InitEf:00000000 _ZN10politekdsp10Oscillator4InitEf
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:95     .text._ZN10politekdsp10Oscillator4InitEf:00000040 $d
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:100    .text._ZN10politekdsp10Oscillator7SetFreqEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:107    .text._ZN10politekdsp10Oscillator7SetFreqEf:00000000 _ZN10politekdsp10Oscillator7SetFreqEf
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:184    .text._ZN10politekdsp10Oscillator7SetFreqEf:00000058 $d
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:189    .text._ZN11AudioEngine15SetMasterVolumeEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:196    .text._ZN11AudioEngine15SetMasterVolumeEf:00000000 _ZN11AudioEngine15SetMasterVolumeEf
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:277    .text._ZN11AudioEngine15SetMasterVolumeEf:00000020 $d
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:282    .text._ZN11AudioEngine15SetActivePresetERK8Preset_s:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:289    .text._ZN11AudioEngine15SetActivePresetERK8Preset_s:00000000 _ZN11AudioEngine15SetActivePresetERK8Preset_s
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:1283   .text._ZN11AudioEngine15SetActivePresetERK8Preset_s:00000270 $d
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:1293   .text._ZN11AudioEngine4InitEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:1300   .text._ZN11AudioEngine4InitEf:00000000 _ZN11AudioEngine4InitEf
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:1583   .text._ZN11AudioEngine4InitEf:00000114 $d
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:1590   .text._ZN11AudioEngine14UpdateControlsERK9Control_s:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:1597   .text._ZN11AudioEngine14UpdateControlsERK9Control_s:00000000 _ZN11AudioEngine14UpdateControlsERK9Control_s
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:1673   .text._ZN11AudioEngine13ProcessMidiCCEhhR8Preset_s:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:1680   .text._ZN11AudioEngine13ProcessMidiCCEhhR8Preset_s:00000000 _ZN11AudioEngine13ProcessMidiCCEhhR8Preset_s
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:1733   .text._ZN11AudioEngine13ProcessMidiCCEhhR8Preset_s:00000046 $d
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:1831   .text._ZN11AudioEngine13ProcessMidiCCEhhR8Preset_s:0000010a $t
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:2217   .text._ZN11AudioEngine13ProcessMidiCCEhhR8Preset_s:000002d0 $d
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:2233   .text._ZN11AudioEngine13ProcessMidiCCEhhR8Preset_s:000002fc $t
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:2257   .text._ZN11AudioEngine7ProcessERfS0_:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:2264   .text._ZN11AudioEngine7ProcessERfS0_:00000000 _ZN11AudioEngine7ProcessERfS0_
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:3522   .text._ZN11AudioEngine7ProcessERfS0_:000003b8 $d
+C:\Users\skipi\AppData\Local\Temp\ccjAjO3C.s:3533   .text._ZN11AudioEngine7ProcessERfS0_:000003d4 $t
 
 UNDEFINED SYMBOLS
 _ZN10politekdsp10Oscillator12CalcPhaseIncEf

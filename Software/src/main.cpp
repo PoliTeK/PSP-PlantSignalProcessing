@@ -176,10 +176,10 @@ int main() {
     HAL_NVIC_SetPriority(TIM5_IRQn, 4, 0); // Lower priority to avoid interrupting audio
     enc_timer.Start();
 
-    // --- PLANT SENSOR TIMER INTERRUPT CONFIGURATION (200 Hz) ---
+    // --- PLANT SENSOR TIMER INTERRUPT CONFIGURATION (60 Hz) ---
     TimerHandle::Config tim3_cfg;
     tim3_cfg.periph        = TimerHandle::Config::Peripheral::TIM_3;
-    auto tim3_target_freq  = 200; 
+    auto tim3_target_freq  = 60; 
     auto tim3_period       = timer_base_freq / tim3_target_freq;
     tim3_cfg.period        = tim3_period - 1; 
     tim3_cfg.enable_irq    = true;
@@ -201,7 +201,9 @@ int main() {
 
     synth.SetActivePreset(storage.GetSettings().presets[init_data.preset]);
     // --- 4. START AUDIO ENGINE ---
+    hw.SetAudioBlockSize(128);
     hw.StartAudio(AudioCallback);
+    
     
     uint32_t display_last = System::GetNow();
     uint32_t master_volume_last = System::GetNow();
