@@ -103,39 +103,47 @@ void PlantConditioner::SetAllParameters(const PlantParams& params) {
 
 PlantConditioner::PlantState PlantConditioner::Process() {
     float out = _lastFreq;
-    if (_cap.Touched() & _BV(0))
+    
+    // Lettura dei dati crudi
+    int baseline = _cap.BaselineData(0);
+    int filtered = _cap.FilteredData(0);
+    float current_delta = (float)baseline - (float)filtered;
+    
+    if (current_delta > _touchThreshold) 
     {
-        if (!_isTouched) _isTouched = true; // New touch detected
-        // 1. Calcolo Delta grezzo (Baseline - Filtered - Offset)
-        _delta = (float)_cap.BaselineData(0) - (float)_cap.FilteredData(0) - (float)_touchThreshold;
-        // 2. Pre-filtraggio Mediano (rimozione spike elettromagnetici)
+        _delta = current_delta - _touchThreshold;
+
+        if (!_isTouched){
+            _isTouched = true;
+            
+            // Pre-caricamento dei filtri con il valore _delta corretto appena calcolato
+            for(int k = 0; k < 30; k++) {
+                float temp_mf = _deltaFilterMF.Process(_delta);
+                switch (_currentFilter) {
+                    case IIR::BUTTERWORTH2: _Butterworth2.Process(temp_mf); break;
+                    case IIR::BUTTERWORTH4: _Butterworth4.Process(temp_mf); break;
+                    case IIR::BESSEL2:      _Bessel2.Process(temp_mf);      break;
+                    case IIR::BESSEL4:      _Bessel4.Process(temp_mf);      break;
+                    default:                _Butterworth2.Process(temp_mf); break;
+                }
+            }
+        }  
+        
+        // Elaborazione standard
         float mf_out = _deltaFilterMF.Process(_delta);
-        // 3. Selezione dinamica del filtro IIR in base all'ordine/tipo scelto
-        // Nota: Uso i nomi delle istanze definiti nel tuo ultimo header
         switch (_currentFilter) {
-            case IIR::BUTTERWORTH2:
-                _deltaFilt = _Butterworth2.Process(mf_out);
-                break;
-            case IIR::BUTTERWORTH4:
-                _deltaFilt = _Butterworth4.Process(mf_out);
-                break;
-            case IIR::BESSEL2:
-                _deltaFilt = _Bessel2.Process(mf_out);
-                break;
-            case IIR::BESSEL4:
-                _deltaFilt = _Bessel4.Process(mf_out);
-                break;
-            default:
-                _deltaFilt = _Butterworth2.Process(mf_out);
-                break;
+            case IIR::BUTTERWORTH2: _deltaFilt = _Butterworth2.Process(mf_out); break;
+            case IIR::BUTTERWORTH4: _deltaFilt = _Butterworth4.Process(mf_out); break;
+            case IIR::BESSEL2:      _deltaFilt = _Bessel2.Process(mf_out);      break;
+            case IIR::BESSEL4:      _deltaFilt = _Bessel4.Process(mf_out);      break;
+            default:                _deltaFilt = _Butterworth2.Process(mf_out); break;
         }
 
-// 4. Clamping finale per evitare che il valore esca dai limiti delle soglie note
-_deltaFilt = fclamp(_deltaFilt, _deltaMin, _deltaMax - 0.001f);
+        // 4. Clamping finale
+        _deltaFilt = daisysp::fclamp(_deltaFilt, _deltaMin, _deltaMax - 0.001f);
         
         // ---------------------------------------------------------
         // STICKY CHECK (Current Note has the priority)
-        // Controlliamo subito se possiamo rimanere sulla nota attuale
         // ---------------------------------------------------------
         if (_lastNoteIndex >= 0 && _lastNoteIndex < _scaleLength) {
             int i = _lastNoteIndex;
@@ -143,7 +151,6 @@ _deltaFilt = fclamp(_deltaFilt, _deltaMin, _deltaMax - 0.001f);
             float lower = _noteThresholds[i];
             float upper = _noteThresholds[i+1];
             
-            // L'isteresi può essere una percentuale fissa del range totale
             float hyst = _histeresis * (_range / 100.0f); 
 
             if (_deltaFilt >= (lower - hyst) && _deltaFilt < (upper + hyst)) {
@@ -158,7 +165,6 @@ _deltaFilt = fclamp(_deltaFilt, _deltaMin, _deltaMax - 0.001f);
             float lower = _noteThresholds[i];
             float upper = _noteThresholds[i+1];
             
-            // Controllo standard + sicurezza per l'ultimo bin
             if ((_deltaFilt >= lower && _deltaFilt < upper) || (i == _scaleLength - 1 && _deltaFilt >= upper)) {
                 out = _scale[i] * (1 << _octave);
                 _lastNoteIndex = i; 
@@ -166,9 +172,8 @@ _deltaFilt = fclamp(_deltaFilt, _deltaMin, _deltaMax - 0.001f);
                 break;
             }
         }
-    } else {
-        if (_isTouched) _isTouched = false; 
-    }
+    } 
+    else if(_isTouched) _isTouched = false;
 
     return {out, _isTouched};
 }
