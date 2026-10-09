@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
   29:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h **** namespace daisysp
   30:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h **** {
   31:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h **** static inline uint32_t hash_xs32(uint32_t x)
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 2
 
 
   32:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h **** {
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
   86:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****         fun_ = 0.0f;
   87:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****     }
   88:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 3
 
 
   89:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****     /** process pitch shifter
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  143:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****     }
  144:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h **** 
  145:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****     /** sets transposition in semitones
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 4
 
 
  146:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****     */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  158:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****             {
  159:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****                 shift_up_ = true;
  160:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****             }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 5
 
 
  161:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****             else
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  169:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****             }
  170:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****             phs_[0].SetFreq(mod_freq_);
  101              		.loc 1 170 28 view .LVU30
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 6
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 6
 
 
  102 0070 04F13000 		add	r0, r4, #48
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  144              	.L1:
  175:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****             }
  176:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****         }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 7
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 7
 
 
  177:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****     }
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  191              	.LVL10:
   35:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****     return x;
  192              		.loc 1 35 5 is_stmt 1 view .LVU57
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 8
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 8
 
 
   35:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****     return x;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  230              		.loc 2 13 28 is_stmt 0 view .LVU65
  231 0000 064A     		ldr	r2, .L16
  232 0002 0749     		ldr	r1, .L16+4
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 9
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 9
 
 
  233 0004 0260     		str	r2, [r0]	@ float
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
    5:../libs/PoliTeKDSP/libs/DaisySP/Source/Dynamics/crossfade.h **** license that can be found in the LICENSE file or at
    6:../libs/PoliTeKDSP/libs/DaisySP/Source/Dynamics/crossfade.h **** https://opensource.org/licenses/MIT.
    7:../libs/PoliTeKDSP/libs/DaisySP/Source/Dynamics/crossfade.h **** */
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 10
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 10
 
 
    8:../libs/PoliTeKDSP/libs/DaisySP/Source/Dynamics/crossfade.h **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
    1:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** /*
    2:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** Copyright (c) 2020 Electrosmith, Corp
    3:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** 
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 11
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 11
 
 
    4:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h **** Use of this source code is governed by an MIT-style
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  299              	.LBB150:
  300              	.LBI150:
   24:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****     ~Oscillator() {}
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 12
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 12
 
 
  301              		.loc 5 24 5 view .LVU77
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  348              		.cfi_offset 6, -28
  349              		.cfi_offset 7, -24
  350              		.cfi_offset 8, -20
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 13
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 13
 
 
  351              		.cfi_offset 9, -16
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  384              		.loc 4 53 16 view .LVU93
  385 000e 04F53836 		add	r6, r4, #188416
  386 0012 4FF07C5B 		mov	fp, #1056964608
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 14
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 14
 
 
  387              	.LBE201:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  429 0036 0123     		movs	r3, #1
  430              	.LBE192:
  431              	.LBE196:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 15
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 15
 
 
  432              	.LBE207:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  473              	.LBE263:
  474              	.LBB264:
  475              	.LBB205:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 16
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 16
 
 
  476              	.LBB203:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  504              	.LBB211:
  194:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****     {
  195:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****         for(size_t i = 0; i < 12; i++)
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 17
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 17
 
 
  505              		.loc 1 195 29 view .LVU128
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
   42:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/delayline.h ****         }
  548              		.loc 3 42 22 view .LVU145
  549 008a 0AF50E70 		add	r0, r10, #568
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 18
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 18
 
 
  550              	.LBE216:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
    3:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/phasor.h **** 
    4:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/phasor.h **** Use of this source code is governed by an MIT-style
    5:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/phasor.h **** license that can be found in the LICENSE file or at
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 19
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 19
 
 
    6:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/phasor.h **** https://opensource.org/licenses/MIT.
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  609              		.loc 6 38 9 is_stmt 1 view .LVU166
  610              		.loc 6 38 16 is_stmt 0 view .LVU167
  611 00bc FFF7FEFF 		bl	_ZN7daisysp6Phasor7SetFreqEf
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 20
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 20
 
 
  612              	.LVL30:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  654              	.LBB235:
  655              		.loc 6 38 16 view .LVU181
  656 00da 06F14000 		add	r0, r6, #64
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 21
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 21
 
 
  657 00de 9FED2B0A 		vldr.32	s0, .L23+8
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  703 00f4 85ED9C8A 		vstr.32	s16, [r5, #624]
   37:../libs/PoliTeKDSP/libs/DaisySP/Source/Control/phasor.h ****         SetFreq(freq);
  704              		.loc 6 37 9 is_stmt 1 view .LVU192
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 22
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 22
 
 
  705              	.LBE237:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  748              	.LBB253:
  183:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****         force_recalc_ = true;
  749              		.loc 1 183 9 view .LVU208
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 23
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 23
 
 
  184:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****         SetTransposition(transpose_);
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  768              		.loc 5 53 27 is_stmt 0 view .LVU216
  769 0122 B7EE007A 		vmov.f32	s14, #1.0e+0
   54:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 24
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 24
 
 
  770              		.loc 5 54 20 view .LVU217
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
   54:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
  807              		.loc 5 54 9 is_stmt 1 view .LVU233
   55:../libs/PoliTeKDSP/libs/DaisySP/Source/Synthesis/oscillator.h ****         pw_        = 0.5f;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 25
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 25
 
 
  808              		.loc 5 55 9 view .LVU234
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  840              	.LBE271:
  841              	.LBE277:
   25:../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp ****     _lfo.SetFreq(0.2f);       // Imposta la frequenza dell'LFO a 0.5 Hz
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 26
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 26
 
 
  842              		.loc 2 25 5 is_stmt 1 view .LVU249
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  880              	.LVL45:
  881              	.L24:
  882              		.loc 2 27 1 view .LVU264
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 27
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 27
 
 
  883 0182 00BF     		.align	2
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
   22:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #define TWOPI_F (2.0f * PI_F)
   23:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #define HALFPI_F (PI_F * 0.5f)
   24:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #define DSY_MIN(in, mn) (in < mn ? in : mn)
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 28
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 28
 
 
   25:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** #define DSY_MAX(in, mx) (in > mx ? in : mx)
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  923              		.loc 7 44 5 view .LVU271
  924 0000 DFED057A 		vldr.32	s15, .L26
  925              		.syntax unified
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 29
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 29
 
 
  926              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  973              		.fpu fpv5-d16
  975              	_ZN11AnalogDelay6setMixEf:
  976              	.LVL49:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 30
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 30
 
 
  977              	.LFB5074:
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1018              	@ 0 "" 2
  1019              	.LVL51:
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 31
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 31
 
 
  1020              		.loc 7 59 5 view .LVU293
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1064              	.LFB5075:
   39:../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp **** 
   40:../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp **** // Imposta il tempo di delay in secondi
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 32
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 32
 
 
   41:../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp **** void AnalogDelay::setDelayTime(float delayTime) {
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1107              		.loc 7 59 5 view .LVU315
   59:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** }
  1108              		.loc 7 59 5 is_stmt 0 view .LVU316
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 33
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 33
 
 
  1109              		.thumb
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1156              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
  1157 0004 80FE270A 		vmaxnm.f32 s0, s0, s15
  1158              	@ 0 "" 2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 34
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 34
 
 
  1159              	.LVL59:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
   49:../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp **** 
   50:../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp **** // Imposta il fattore di smoothing per il tempo di delay
   51:../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp **** void AnalogDelay::setSmoothFactor(float smooth_factor) {
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 35
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 35
 
 
  1207              		.loc 2 51 56 is_stmt 1 view -0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  112:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** 
  113:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** /* Original code for fastlog2f by Dr. Paul Beckmann from the ARM community forum, adapted from the 
  114:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** About 25% performance increase over std::log10f
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 36
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 36
 
 
  115:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h **** */
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  169:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h ****  *  \param curve a Mapping Value to adjust the response curve of the transformation
  170:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h ****  *               defaults to Linear. @see Mapping
  171:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h ****  *
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 37
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 37
 
 
  172:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h ****  *  When using the log curve min and max, must be greater than zero.
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1246              	@ 44 "../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/dsp.h" 1
  1247 0010 C7FE877A 		vmaxnm.f32 s15, s15, s14
  1248              	@ 0 "" 2
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 38
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 38
 
 
  1249              	.LVL63:
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1295              		.syntax unified
  1296              		.thumb
  1297              		.thumb_func
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 39
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 39
 
 
  1298              		.fpu fpv5-d16
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1329              	.LFE5357:
  1331              		.section	.text._ZNK7daisysp9DelayLineIfLj16384EE4ReadEv,"axG",%progbits,_ZNK7daisysp9DelayLineIfLj
  1332              		.align	1
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 40
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 40
 
 
  1333              		.weak	_ZNK7daisysp9DelayLineIfLj16384EE4ReadEv
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1365              	.LVL70:
  1366              		.loc 3 82 23 view .LVU376
  1367 0020 D3ED037A 		vldr.32	s15, [r3, #12]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 41
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 41
 
 
  1368 0024 77EEC07A 		vsub.f32	s15, s15, s0
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1415              		.cfi_offset 81, -44
  1416              		.cfi_offset 82, -40
  1417              		.cfi_offset 83, -36
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 42
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 42
 
 
  1418              		.cfi_offset 84, -32
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1457 0050 F8EEE77A 		vcvt.f32.s32	s15, s15
   99:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****                          * (del_size_ * 0.5f);
  1458              		.loc 1 99 58 view .LVU402
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 43
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 43
 
 
  1459 0054 87EE897A 		vdiv.f32	s14, s15, s18
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  106:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****                          * (del_size_ * 0.5f);
  1498              		.loc 1 106 26 view .LVU418
  1499 00a6 D4ED199A 		vldr.32	s19, [r4, #100]
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 44
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 44
 
 
  106:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****                          * (del_size_ * 0.5f);
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1538              		.loc 1 109 27 view .LVU434
  1539 00fa DFED4B7A 		vldr.32	s15, .L53+8
  1540 00fe E6EE877A 		vfma.f32	s15, s13, s14
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 45
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 45
 
 
  109:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****         }
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1576              		.loc 1 114 9 view .LVU453
  115:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****         {
  1577              		.loc 1 115 9 view .LVU454
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 46
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 46
 
 
  1578 0142 2BB1     		cbz	r3, .L47
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  127:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h **** #endif
  1615              		.loc 1 127 9 is_stmt 1 view .LVU472
  127:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h **** #endif
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 47
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 47
 
 
  1616              		.loc 1 127 24 is_stmt 0 view .LVU473
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1656              		.loc 3 73 27 view .LVU487
  1657 01a4 6A60     		str	r2, [r5, #4]
  1658              	.LVL88:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 48
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 48
 
 
   73:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/delayline.h ****     }
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1699              		.loc 1 135 9 is_stmt 1 view .LVU501
  135:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****         d_[1].SetDelay(mod_[1] + mod_b_amt_);
  1700              		.loc 1 135 23 is_stmt 0 view .LVU502
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 49
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 49
 
 
  1701 01c0 FFF7FEFF 		bl	_ZN7daisysp9DelayLineIfLj16384EE8SetDelayEf
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1741              		.loc 1 141 27 is_stmt 0 view .LVU516
  1742 020a FFF7FEFF 		bl	_ZNK7daisysp9DelayLineIfLj16384EE4ReadEv
  1743              	.LVL98:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 50
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 50
 
 
  141:../libs/PoliTeKDSP/libs/DaisySP/Source/Effects/pitchshifter.h ****         return val;
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1791              		@ frame_needed = 0, uses_anonymous_args = 0
   57:../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp ****     // Applica smoothing al tempo di delay usando fonepole
   58:../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp ****     fonepole(currentDelayTime, _delayTime, _smooth_factor);
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 51
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 51
 
 
  1792              		.loc 2 58 5 view .LVU524
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
   88:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/delayline.h ****         int32_t delay_integral   = static_cast<int32_t>(delay);
   89:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/delayline.h ****         float   delay_fractional = delay - static_cast<float>(delay_integral);
   90:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/delayline.h ****         const T a = line_[(write_ptr_ + delay_integral) % max_size];
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 52
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 52
 
 
  1832              		.loc 3 90 57 view .LVU534
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1873              	.LBB352:
   88:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/delayline.h ****         float   delay_fractional = delay - static_cast<float>(delay_integral);
  1874              		.loc 3 88 17 view .LVU548
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 53
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 53
 
 
  1875 0042 FDEEE76A 		vcvt.s32.f32	s13, s15
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1921              		.loc 5 69 20 view .LVU562
  1922 0078 86ED020A 		vstr.32	s0, [r6, #8]
  1923              	.LBE360:
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 54
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 54
 
 
  1924              	.LBE364:
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  1967 0096 D4ED047A 		vldr.32	s15, [r4, #16]
  1968              		.loc 2 68 25 view .LVU580
  1969 009a 04F53B36 		add	r6, r4, #191488
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 55
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 55
 
 
   67:../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.cpp ****     float lfo = _lfo.Process() * _depth; // Processa l'LFO per il pitch shifter
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  2013              		.loc 3 70 17 is_stmt 1 view .LVU594
  2014              	.LBB370:
   72:../libs/PoliTeKDSP/libs/DaisySP/Source/Utility/delayline.h ****         write_ptr_        = (write_ptr_ - 1 + max_size) % max_size;
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 56
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 56
 
 
  2015              		.loc 3 72 27 is_stmt 0 view .LVU595
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  2066              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
  2067              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
  2068              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 57
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 57
 
 
  2069              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
@@ -3399,56 +3399,56 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 1
  2104              		.file 50 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
  2105              		.file 51 "../libs/PoliTeKDSP/Effects/AnalogDelay/src/AnalogDelay.h"
  2106              		.file 52 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 58
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 58
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 AnalogDelay.cpp
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:17     .text._ZN7daisysp12PitchShifter16SetTranspositionERKf.isra.0:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:24     .text._ZN7daisysp12PitchShifter16SetTranspositionERKf.isra.0:00000000 _ZN7daisysp12PitchShifter16SetTranspositionERKf.isra.0
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:155    .text._ZN7daisysp12PitchShifter16SetTranspositionERKf.isra.0:000000d0 $d
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:160    .text._ZN7daisysp6myrandEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:167    .text._ZN7daisysp6myrandEv:00000000 _ZN7daisysp6myrandEv
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:208    .text._ZN7daisysp6myrandEv:00000014 $d
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:2051   .data._ZZN7daisysp6myrandEvE4seed:00000000 _ZZN7daisysp6myrandEvE4seed
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:213    .text._ZN11AnalogDelayC2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:220    .text._ZN11AnalogDelayC2Ev:00000000 _ZN11AnalogDelayC2Ev
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:275    .text._ZN11AnalogDelayC2Ev:0000001c $d
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:220    .text._ZN11AnalogDelayC2Ev:00000000 _ZN11AnalogDelayC1Ev
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:284    .text._ZN11AnalogDelayD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:291    .text._ZN11AnalogDelayD2Ev:00000000 _ZN11AnalogDelayD2Ev
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:291    .text._ZN11AnalogDelayD2Ev:00000000 _ZN11AnalogDelayD1Ev
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:327    .text._ZN11AnalogDelay4InitEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:334    .text._ZN11AnalogDelay4InitEf:00000000 _ZN11AnalogDelay4InitEf
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:885    .text._ZN11AnalogDelay4InitEf:00000184 $d
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:895    .text._ZN11AnalogDelay11setFeedbackEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:902    .text._ZN11AnalogDelay11setFeedbackEf:00000000 _ZN11AnalogDelay11setFeedbackEf
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:962    .text._ZN11AnalogDelay11setFeedbackEf:00000018 $d
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:968    .text._ZN11AnalogDelay6setMixEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:975    .text._ZN11AnalogDelay6setMixEf:00000000 _ZN11AnalogDelay6setMixEf
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1050   .text._ZN11AnalogDelay6setMixEf:00000020 $d
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1055   .text._ZN11AnalogDelay12setDelayTimeEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1062   .text._ZN11AnalogDelay12setDelayTimeEf:00000000 _ZN11AnalogDelay12setDelayTimeEf
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1121   .text._ZN11AnalogDelay12setDelayTimeEf:00000018 $d
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1126   .text._ZN11AnalogDelay8setDepthEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1133   .text._ZN11AnalogDelay8setDepthEf:00000000 _ZN11AnalogDelay8setDepthEf
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1192   .text._ZN11AnalogDelay8setDepthEf:00000018 $d
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1197   .text._ZN11AnalogDelay15setSmoothFactorEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1204   .text._ZN11AnalogDelay15setSmoothFactorEf:00000000 _ZN11AnalogDelay15setSmoothFactorEf
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1286   .text._ZN11AnalogDelay15setSmoothFactorEf:00000024 $d
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1293   .text._ZN7daisysp9DelayLineIfLj16384EE8SetDelayEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1300   .text._ZN7daisysp9DelayLineIfLj16384EE8SetDelayEf:00000000 _ZN7daisysp9DelayLineIfLj16384EE8SetDelayEf
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1332   .text._ZNK7daisysp9DelayLineIfLj16384EE4ReadEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1339   .text._ZNK7daisysp9DelayLineIfLj16384EE4ReadEv:00000000 _ZNK7daisysp9DelayLineIfLj16384EE4ReadEv
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1378   .text._ZN7daisysp12PitchShifter7ProcessERf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1385   .text._ZN7daisysp12PitchShifter7ProcessERf:00000000 _ZN7daisysp12PitchShifter7ProcessERf
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1769   .text._ZN7daisysp12PitchShifter7ProcessERf:00000220 $d
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1778   .text._ZN11AnalogDelay7ProcessEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:1785   .text._ZN11AnalogDelay7ProcessEf:00000000 _ZN11AnalogDelay7ProcessEf
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:2042   .text._ZN11AnalogDelay7ProcessEf:000000f8 $d
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:2048   .data._ZZN7daisysp6myrandEvE4seed:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:2054   .bss._ZL16currentDelayTime:00000000 $d
-C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s:2058   .bss._ZL16currentDelayTime:00000000 _ZL16currentDelayTime
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:17     .text._ZN7daisysp12PitchShifter16SetTranspositionERKf.isra.0:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:24     .text._ZN7daisysp12PitchShifter16SetTranspositionERKf.isra.0:00000000 _ZN7daisysp12PitchShifter16SetTranspositionERKf.isra.0
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:155    .text._ZN7daisysp12PitchShifter16SetTranspositionERKf.isra.0:000000d0 $d
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:160    .text._ZN7daisysp6myrandEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:167    .text._ZN7daisysp6myrandEv:00000000 _ZN7daisysp6myrandEv
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:208    .text._ZN7daisysp6myrandEv:00000014 $d
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:2051   .data._ZZN7daisysp6myrandEvE4seed:00000000 _ZZN7daisysp6myrandEvE4seed
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:213    .text._ZN11AnalogDelayC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:220    .text._ZN11AnalogDelayC2Ev:00000000 _ZN11AnalogDelayC2Ev
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:275    .text._ZN11AnalogDelayC2Ev:0000001c $d
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:220    .text._ZN11AnalogDelayC2Ev:00000000 _ZN11AnalogDelayC1Ev
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:284    .text._ZN11AnalogDelayD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:291    .text._ZN11AnalogDelayD2Ev:00000000 _ZN11AnalogDelayD2Ev
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:291    .text._ZN11AnalogDelayD2Ev:00000000 _ZN11AnalogDelayD1Ev
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:327    .text._ZN11AnalogDelay4InitEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:334    .text._ZN11AnalogDelay4InitEf:00000000 _ZN11AnalogDelay4InitEf
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:885    .text._ZN11AnalogDelay4InitEf:00000184 $d
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:895    .text._ZN11AnalogDelay11setFeedbackEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:902    .text._ZN11AnalogDelay11setFeedbackEf:00000000 _ZN11AnalogDelay11setFeedbackEf
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:962    .text._ZN11AnalogDelay11setFeedbackEf:00000018 $d
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:968    .text._ZN11AnalogDelay6setMixEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:975    .text._ZN11AnalogDelay6setMixEf:00000000 _ZN11AnalogDelay6setMixEf
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1050   .text._ZN11AnalogDelay6setMixEf:00000020 $d
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1055   .text._ZN11AnalogDelay12setDelayTimeEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1062   .text._ZN11AnalogDelay12setDelayTimeEf:00000000 _ZN11AnalogDelay12setDelayTimeEf
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1121   .text._ZN11AnalogDelay12setDelayTimeEf:00000018 $d
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1126   .text._ZN11AnalogDelay8setDepthEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1133   .text._ZN11AnalogDelay8setDepthEf:00000000 _ZN11AnalogDelay8setDepthEf
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1192   .text._ZN11AnalogDelay8setDepthEf:00000018 $d
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1197   .text._ZN11AnalogDelay15setSmoothFactorEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1204   .text._ZN11AnalogDelay15setSmoothFactorEf:00000000 _ZN11AnalogDelay15setSmoothFactorEf
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1286   .text._ZN11AnalogDelay15setSmoothFactorEf:00000024 $d
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1293   .text._ZN7daisysp9DelayLineIfLj16384EE8SetDelayEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1300   .text._ZN7daisysp9DelayLineIfLj16384EE8SetDelayEf:00000000 _ZN7daisysp9DelayLineIfLj16384EE8SetDelayEf
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1332   .text._ZNK7daisysp9DelayLineIfLj16384EE4ReadEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1339   .text._ZNK7daisysp9DelayLineIfLj16384EE4ReadEv:00000000 _ZNK7daisysp9DelayLineIfLj16384EE4ReadEv
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1378   .text._ZN7daisysp12PitchShifter7ProcessERf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1385   .text._ZN7daisysp12PitchShifter7ProcessERf:00000000 _ZN7daisysp12PitchShifter7ProcessERf
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1769   .text._ZN7daisysp12PitchShifter7ProcessERf:00000220 $d
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1778   .text._ZN11AnalogDelay7ProcessEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:1785   .text._ZN11AnalogDelay7ProcessEf:00000000 _ZN11AnalogDelay7ProcessEf
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:2042   .text._ZN11AnalogDelay7ProcessEf:000000f8 $d
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:2048   .data._ZZN7daisysp6myrandEvE4seed:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:2054   .bss._ZL16currentDelayTime:00000000 $d
+C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s:2058   .bss._ZL16currentDelayTime:00000000 _ZL16currentDelayTime
 
 UNDEFINED SYMBOLS
 _ZN7daisysp6Phasor7SetFreqEf
@@ -3459,6 +3459,6 @@ _ZN7daisysp6Phasor7ProcessEv
 sinf
 _ZN7daisysp10Oscillator7ProcessEv
 _ZN7daisysp9CrossFade7ProcessERfS1_
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccLMo0NH.s 			page 59
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\cc09pqTg.s 			page 59
 
 

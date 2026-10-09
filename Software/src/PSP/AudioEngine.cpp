@@ -76,7 +76,7 @@ void AudioEngine::SetActivePreset(const Preset_s& preset) {
 void AudioEngine::UpdateControls(const Control_s& controls) {
     _currentFreq = controls.freq;
     
-    if(controls.gate && !_lastGate) {
+    if(controls.gate ) {
         _amp_env.Retrigger(false);
         _filt_env.Retrigger(false);
         _osc1.SetFreq(_currentFreq);

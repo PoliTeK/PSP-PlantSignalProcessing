@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s 			page 1
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s 			page 1
   52              		.loc 1 6 1 is_stmt 1 view -0
   53              		.cfi_startproc
   54              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s 			page 2
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s 			page 2
 
 
   55              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s 			page 1
   15:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** 
   16:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp ****     if (_mask == 0 && carrier == 0)
  105              		.loc 1 16 5 view .LVU9
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s 			page 3
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s 			page 3
 
 
  106              		.loc 1 16 9 is_stmt 0 view .LVU10
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s 			page 1
   24:../libs/PoliTeKDSP/Modulators/XorM/XorM.cpp **** }
  148              		.loc 1 24 1 is_stmt 0 view .LVU27
  149 0044 7047     		bx	lr
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s 			page 4
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s 			page 4
 
 
  150              	.L8:
@@ -235,24 +235,24 @@ ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s 			page 1
  199              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
  200              		.file 9 "../libs/PoliTeKDSP/Modulators/XorM/XorM.h"
  201              		.file 10 "<built-in>"
-ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s 			page 5
+ARM GAS  C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 XorM.cpp
-C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s:17     .text._ZN10politekdsp4XorMC2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s:25     .text._ZN10politekdsp4XorMC2Ev:00000000 _ZN10politekdsp4XorMC2Ev
-C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s:25     .text._ZN10politekdsp4XorMC2Ev:00000000 _ZN10politekdsp4XorMC1Ev
-C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s:42     .text._ZN10politekdsp4XorMD2Ev:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s:49     .text._ZN10politekdsp4XorMD2Ev:00000000 _ZN10politekdsp4XorMD2Ev
-C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s:49     .text._ZN10politekdsp4XorMD2Ev:00000000 _ZN10politekdsp4XorMD1Ev
-C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s:65     .text._ZN10politekdsp4XorM4initEv:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s:72     .text._ZN10politekdsp4XorM4initEv:00000000 _ZN10politekdsp4XorM4initEv
-C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s:90     .text._ZN10politekdsp4XorM7processEff:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s:97     .text._ZN10politekdsp4XorM7processEff:00000000 _ZN10politekdsp4XorM7processEff
-C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s:153    .text._ZN10politekdsp4XorM7processEff:00000048 $d
-C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s:158    .text._ZN10politekdsp4XorM7setMaskEf:00000000 $t
-C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s:165    .text._ZN10politekdsp4XorM7setMaskEf:00000000 _ZN10politekdsp4XorM7setMaskEf
-C:\Users\skipi\AppData\Local\Temp\ccSFyos2.s:187    .text._ZN10politekdsp4XorM7setMaskEf:00000014 $d
+C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s:17     .text._ZN10politekdsp4XorMC2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s:25     .text._ZN10politekdsp4XorMC2Ev:00000000 _ZN10politekdsp4XorMC2Ev
+C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s:25     .text._ZN10politekdsp4XorMC2Ev:00000000 _ZN10politekdsp4XorMC1Ev
+C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s:42     .text._ZN10politekdsp4XorMD2Ev:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s:49     .text._ZN10politekdsp4XorMD2Ev:00000000 _ZN10politekdsp4XorMD2Ev
+C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s:49     .text._ZN10politekdsp4XorMD2Ev:00000000 _ZN10politekdsp4XorMD1Ev
+C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s:65     .text._ZN10politekdsp4XorM4initEv:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s:72     .text._ZN10politekdsp4XorM4initEv:00000000 _ZN10politekdsp4XorM4initEv
+C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s:90     .text._ZN10politekdsp4XorM7processEff:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s:97     .text._ZN10politekdsp4XorM7processEff:00000000 _ZN10politekdsp4XorM7processEff
+C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s:153    .text._ZN10politekdsp4XorM7processEff:00000048 $d
+C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s:158    .text._ZN10politekdsp4XorM7setMaskEf:00000000 $t
+C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s:165    .text._ZN10politekdsp4XorM7setMaskEf:00000000 _ZN10politekdsp4XorM7setMaskEf
+C:\Users\skipi\AppData\Local\Temp\ccNkqN1B.s:187    .text._ZN10politekdsp4XorM7setMaskEf:00000014 $d
 
 NO UNDEFINED SYMBOLS
